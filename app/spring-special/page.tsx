@@ -14,6 +14,8 @@ export const metadata: Metadata = {
 
 const PHONE = "(815) 246-2113";
 const PHONE_HREF = "tel:+18152462113";
+const BOOK_URL = "https://dsmcleaningsolutions.com/booknow";
+const COUPON = "SPRING75";
 
 export default function SpringSpecialPage() {
   return (
@@ -76,16 +78,39 @@ export default function SpringSpecialPage() {
             &bull; Serving Naperville, Plainfield, Bolingbrook &amp; surrounding suburbs
           </p>
 
-          {/* CTA */}
-          <a
-            href="#form"
-            className="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-bold text-lg py-4 px-8 rounded-2xl shadow-xl shadow-orange-500/30 transition-all duration-200 w-full sm:w-auto"
-          >
-            Claim My $75 Off Now
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </a>
+          {/* Coupon code display */}
+          <div className="flex items-center gap-3 bg-gray-900 border border-orange-500/40 rounded-2xl px-4 py-3 mb-5">
+            <span className="text-2xl">🎟️</span>
+            <div>
+              <p className="text-gray-400 text-xs font-medium uppercase tracking-wider mb-0.5">Your coupon code</p>
+              <p className="text-white font-bold text-xl tracking-widest">{COUPON}</p>
+            </div>
+            <div className="ml-auto bg-orange-500/20 border border-orange-500/40 rounded-xl px-3 py-1">
+              <span className="text-orange-400 font-bold text-sm">$75 OFF</span>
+            </div>
+          </div>
+
+          {/* Dual CTAs */}
+          <div className="flex flex-col gap-3">
+            <a
+              href="#form"
+              className="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-bold text-lg py-4 px-8 rounded-2xl shadow-xl shadow-orange-500/30 transition-all duration-200 w-full"
+            >
+              Claim My $75 Off Now
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+            <a
+              href={BOOK_URL}
+              className="inline-flex items-center justify-center gap-2 bg-white hover:bg-orange-50 active:scale-95 text-orange-600 font-bold text-base py-4 px-8 rounded-2xl border-2 border-orange-200 shadow-md transition-all duration-200 w-full"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              Ready to Book? Use Code {COUPON}
+            </a>
+          </div>
           <p className="text-gray-500 text-sm mt-3 font-medium">⚡ Limited April spots — filling fast</p>
 
           {/* Hero Image */}
@@ -181,18 +206,41 @@ export default function SpringSpecialPage() {
                 </div>
               </div>
             </div>
+
+            {/* Coupon code inside breakdown box */}
+            <div className="border-t border-gray-700 mt-4 pt-4 flex items-center justify-between">
+              <div>
+                <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">Coupon Code</p>
+                <p className="text-orange-400 font-bold text-xl tracking-widest">{COUPON}</p>
+              </div>
+              <span className="bg-orange-500/20 border border-orange-500/40 text-orange-300 text-xs font-bold px-3 py-1.5 rounded-xl">
+                Apply at checkout
+              </span>
+            </div>
           </div>
 
           <p className="text-orange-500 font-bold text-sm sm:text-base text-center">
             Your $75 discount is automatically confirmed when we call you.
           </p>
 
-          <a
-            href="#form"
-            className="mt-6 flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-bold text-base py-4 px-6 rounded-2xl shadow-lg shadow-orange-200 transition-all duration-200 w-full"
-          >
-            Claim My $75 Off Now ↓
-          </a>
+          {/* Dual CTAs */}
+          <div className="mt-6 flex flex-col gap-3">
+            <a
+              href="#form"
+              className="flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-bold text-base py-4 px-6 rounded-2xl shadow-lg shadow-orange-200 transition-all duration-200 w-full"
+            >
+              Get a Free Quote First ↓
+            </a>
+            <a
+              href={BOOK_URL}
+              className="flex items-center justify-center gap-2 bg-gray-800 hover:bg-gray-700 active:scale-95 text-white font-bold text-base py-4 px-6 rounded-2xl border border-gray-700 transition-all duration-200 w-full"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              Book Now — Use Code {COUPON}
+            </a>
+          </div>
         </div>
       </section>
 
@@ -212,12 +260,26 @@ export default function SpringSpecialPage() {
           </div>
 
           {/* Urgency row */}
-          <div className="flex flex-wrap justify-center gap-3 mb-6">
+          <div className="flex flex-wrap justify-center gap-3 mb-4">
             {["✓ No commitment", "✓ Fast callback", "✓ $75 off locked in"].map((item) => (
               <span key={item} className="bg-orange-500/15 border border-orange-500/30 text-orange-300 text-xs font-semibold px-3 py-1.5 rounded-full">
                 {item}
               </span>
             ))}
+          </div>
+
+          {/* Ready to book now option */}
+          <div className="bg-gray-900 border border-gray-700 rounded-2xl p-4 mb-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div>
+              <p className="text-white font-semibold text-sm">Ready to book right now?</p>
+              <p className="text-gray-400 text-xs mt-0.5">Use code <span className="text-orange-400 font-bold tracking-widest">{COUPON}</span> at checkout for $75 off</p>
+            </div>
+            <a
+              href={BOOK_URL}
+              className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-bold text-sm py-2.5 px-5 rounded-xl transition-all duration-200 whitespace-nowrap flex-shrink-0"
+            >
+              Book Now →
+            </a>
           </div>
 
           {/* Form card */}
@@ -336,15 +398,29 @@ export default function SpringSpecialPage() {
       {/* ─── SECTION 7: FINAL CTA ─── */}
       <section className="bg-orange-500 py-12 px-4">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 tracking-tight leading-tight">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2 tracking-tight leading-tight">
             Spring doesn&apos;t wait.<br />Neither should your home.
           </h2>
-          <a
-            href="#form"
-            className="inline-flex items-center justify-center gap-2 bg-white text-orange-600 font-bold text-lg py-4 px-8 rounded-2xl shadow-xl hover:bg-orange-50 active:scale-95 transition-all duration-200 mb-6 w-full sm:w-auto"
-          >
-            Get My $75 Off Now
-          </a>
+          <p className="text-white/80 text-sm mb-6">
+            Coupon code: <span className="font-bold tracking-widest bg-white/20 px-2 py-0.5 rounded-lg">{COUPON}</span>
+          </p>
+          <div className="flex flex-col gap-3 mb-7">
+            <a
+              href="#form"
+              className="inline-flex items-center justify-center gap-2 bg-white text-orange-600 font-bold text-lg py-4 px-8 rounded-2xl shadow-xl hover:bg-orange-50 active:scale-95 transition-all duration-200 w-full"
+            >
+              Get a Free Quote First
+            </a>
+            <a
+              href={BOOK_URL}
+              className="inline-flex items-center justify-center gap-2 bg-orange-700 hover:bg-orange-800 active:scale-95 text-white font-bold text-base py-4 px-8 rounded-2xl border border-orange-400/40 transition-all duration-200 w-full"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              Book Now — Use Code {COUPON}
+            </a>
+          </div>
           <div>
             <a
               href={PHONE_HREF}
