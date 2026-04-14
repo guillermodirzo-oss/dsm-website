@@ -10,15 +10,19 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          green: "#2d7a3a",
-          "green-light": "#4caf63",
-          "green-dark": "#1e5628",
-          "green-50": "#f0faf2",
-          "green-100": "#dcf5e2",
+          green: "#F97316",
+          "green-light": "#FB923C",
+          "green-dark": "#EA580C",
+          "green-darker": "#C2410C",
+          "green-50": "#FFF7ED",
+          "green-100": "#FFEDD5",
         },
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
+      },
+      backgroundImage: {
+        "hero-cleaning": "url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1920&q=80&auto=format&fit=crop')",
       },
     },
   },

@@ -2,78 +2,93 @@ import Link from "next/link";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-
   return (
-    <footer className="bg-gray-900 text-gray-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Business Info */}
+    <footer className="bg-gray-950 text-gray-400">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+          {/* Brand */}
           <div>
-            <h3 className="text-white font-bold text-lg mb-4">DSM Cleaning Solutions</h3>
-            <p className="text-sm mb-3">Family-owned, eco-friendly house cleaning serving the southwest Chicago suburbs.</p>
-            <p className="text-sm mb-1">Romeoville & Plainfield, IL</p>
-            <a href="tel:+18152462113" className="text-brand-green-light font-bold text-lg hover:text-white transition-colors block mt-3">
+            <div className="flex items-center gap-2.5 mb-5">
+              <div className="w-8 h-8 bg-gradient-to-br from-brand-green to-brand-green-dark rounded-xl flex items-center justify-center shadow-md">
+                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/>
+                </svg>
+              </div>
+              <span className="font-bold text-white text-base tracking-tight">DSM Cleaning Solutions</span>
+            </div>
+            <p className="text-sm leading-relaxed mb-4">Family-owned, eco-friendly house cleaning serving the southwest Chicago suburbs.</p>
+            <p className="text-sm mb-1 text-gray-500">Romeoville &amp; Plainfield, IL</p>
+            <a href="tel:+18152462113" className="text-brand-green font-bold text-lg hover:text-orange-400 transition-colors block mt-3">
               (815) 246-2113
             </a>
-            <p className="text-sm mt-1">Free estimates available</p>
+            <p className="text-xs text-gray-600 mt-1">Free estimates available</p>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="text-white font-bold text-lg mb-4">Our Services</h3>
-            <ul className="space-y-2 text-sm">
-              <li><Link href="/deep-cleaning" className="hover:text-white transition-colors">Deep Cleaning</Link></li>
-              <li><Link href="/move-out-cleaning" className="hover:text-white transition-colors">Move-Out / Move-In Cleaning</Link></li>
-              <li><Link href="/recurring-cleaning" className="hover:text-white transition-colors">Recurring Maid Service</Link></li>
-              <li><Link href="/#services" className="hover:text-white transition-colors">Standard House Cleaning</Link></li>
-              <li><Link href="/#services" className="hover:text-white transition-colors">Eco-Friendly Green Cleaning</Link></li>
-              <li><Link href="/#services" className="hover:text-white transition-colors">Apartment Cleaning</Link></li>
-              <li><Link href="/#services" className="hover:text-white transition-colors">Post-Construction Cleaning</Link></li>
-              <li><Link href="/#services" className="hover:text-white transition-colors">Airbnb / Short-Term Rental Cleaning</Link></li>
+            <h3 className="text-white font-bold text-sm uppercase tracking-widest mb-5">Services</h3>
+            <ul className="space-y-2.5 text-sm">
+              {[
+                { label: "Deep Cleaning", href: "/deep-cleaning" },
+                { label: "Move-Out / Move-In Cleaning", href: "/move-out-cleaning" },
+                { label: "Recurring Maid Service", href: "/recurring-cleaning" },
+                { label: "Standard House Cleaning", href: "https://dsmcleaningsolutions.com/booknow" },
+                { label: "Eco-Friendly Green Cleaning", href: "https://dsmcleaningsolutions.com/booknow" },
+                { label: "Apartment Cleaning", href: "https://dsmcleaningsolutions.com/booknow" },
+                { label: "Post-Construction Cleaning", href: "https://dsmcleaningsolutions.com/booknow" },
+                { label: "Airbnb / Short-Term Rental", href: "https://dsmcleaningsolutions.com/booknow" },
+              ].map((item) => (
+                <li key={item.label}><Link href={item.href} className="hover:text-white transition-colors">{item.label}</Link></li>
+              ))}
             </ul>
           </div>
 
-          {/* Service Areas */}
+          {/* Areas */}
           <div>
-            <h3 className="text-white font-bold text-lg mb-4">Service Areas</h3>
-            <ul className="space-y-2 text-sm">
-              <li><Link href="/" className="hover:text-white transition-colors">Romeoville, IL</Link></li>
-              <li><Link href="/plainfield-il" className="hover:text-white transition-colors">Plainfield, IL</Link></li>
-              <li><span className="hover:text-white transition-colors">Naperville, IL</span></li>
-              <li><span className="hover:text-white transition-colors">Bolingbrook, IL</span></li>
-              <li><span className="hover:text-white transition-colors">Joliet, IL</span></li>
-              <li><span className="hover:text-white transition-colors">Westmont, IL</span></li>
-              <li><span className="text-gray-500 text-xs">& Surrounding Suburbs</span></li>
+            <h3 className="text-white font-bold text-sm uppercase tracking-widest mb-5">Service Areas</h3>
+            <ul className="space-y-2.5 text-sm">
+              {[
+                { label: "Romeoville, IL", href: "/" },
+                { label: "Plainfield, IL", href: "/plainfield-il" },
+                { label: "Naperville, IL", href: "#" },
+                { label: "Bolingbrook, IL", href: "#" },
+                { label: "Joliet, IL", href: "#" },
+                { label: "Westmont, IL", href: "#" },
+              ].map((item) => (
+                <li key={item.label}><Link href={item.href} className="hover:text-white transition-colors">{item.label}</Link></li>
+              ))}
+              <li className="text-gray-600 text-xs pt-1">& Surrounding Suburbs</li>
             </ul>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick links */}
           <div>
-            <h3 className="text-white font-bold text-lg mb-4">Quick Links</h3>
-            <ul className="space-y-2 text-sm mb-6">
-              <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
-              <li><Link href="/#about" className="hover:text-white transition-colors">About Us</Link></li>
-              <li><Link href="/#reviews" className="hover:text-white transition-colors">Reviews</Link></li>
-              <li><Link href="/#faq" className="hover:text-white transition-colors">FAQ</Link></li>
-              <li><Link href="https://dsmcleaningsolutions.com/booknow" className="hover:text-white transition-colors">Contact / Book Now</Link></li>
+            <h3 className="text-white font-bold text-sm uppercase tracking-widest mb-5">Company</h3>
+            <ul className="space-y-2.5 text-sm mb-7">
+              {[
+                { label: "Home", href: "/" },
+                { label: "About Us", href: "/#about" },
+                { label: "Reviews", href: "/#reviews" },
+                { label: "FAQ", href: "/#faq" },
+                { label: "Book Online", href: "https://dsmcleaningsolutions.com/booknow" },
+              ].map((item) => (
+                <li key={item.label}><Link href={item.href} className="hover:text-white transition-colors">{item.label}</Link></li>
+              ))}
             </ul>
-            <div className="flex items-center gap-2 mt-4">
-              <span className="text-yellow-400">★★★★★</span>
-              <span className="text-sm">5-Star Rated</span>
-            </div>
-            <div className="mt-2 flex flex-wrap gap-2 text-xs">
-              <span className="bg-gray-800 px-2 py-1 rounded">Fully Insured</span>
-              <span className="bg-gray-800 px-2 py-1 rounded">Eco-Friendly</span>
-              <span className="bg-gray-800 px-2 py-1 rounded">Family Owned</span>
+            <div className="flex flex-wrap gap-2">
+              {["Fully Insured", "Eco-Friendly", "Family Owned"].map((badge) => (
+                <span key={badge} className="bg-gray-900 border border-gray-800 text-gray-400 text-xs px-3 py-1.5 rounded-full">{badge}</span>
+              ))}
             </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+        <div className="border-t border-gray-900 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600">
           <p>© {currentYear} DSM Cleaning Solutions. All rights reserved. Romeoville, IL.</p>
           <div className="flex gap-4">
-            <Link href="/sitemap.xml" className="hover:text-white transition-colors">Sitemap</Link>
-            <span className="text-gray-600">|</span>
+            <Link href="/sitemap.xml" className="hover:text-gray-400 transition-colors">Sitemap</Link>
+            <span>·</span>
             <span>Licensed &amp; Insured</span>
           </div>
         </div>

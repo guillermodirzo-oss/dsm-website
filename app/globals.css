@@ -7,24 +7,33 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply text-gray-800 bg-white;
+    @apply text-gray-800 bg-white antialiased;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply inline-block bg-brand-green text-white font-bold py-3 px-6 rounded-lg hover:bg-brand-green-dark transition-colors duration-200 text-center;
+    @apply inline-block bg-brand-green text-white font-semibold py-3 px-7 rounded-full hover:bg-brand-green-dark active:scale-95 transition-all duration-200 text-center shadow-lg shadow-orange-200;
   }
   .btn-secondary {
-    @apply inline-block bg-white text-brand-green font-bold py-3 px-6 rounded-lg border-2 border-brand-green hover:bg-brand-green-50 transition-colors duration-200 text-center;
+    @apply inline-block bg-white text-brand-green font-semibold py-3 px-7 rounded-full border border-brand-green-100 hover:bg-brand-green-50 active:scale-95 transition-all duration-200 text-center;
+  }
+  .btn-white {
+    @apply inline-block bg-white text-brand-green font-bold py-3 px-7 rounded-full hover:bg-orange-50 active:scale-95 transition-all duration-200 text-center shadow-lg;
+  }
+  .btn-outline-white {
+    @apply inline-block bg-transparent text-white font-semibold py-3 px-7 rounded-full border-2 border-white/60 hover:border-white hover:bg-white/10 active:scale-95 transition-all duration-200 text-center backdrop-blur-sm;
   }
   .btn-lg {
-    @apply py-4 px-8 text-lg;
+    @apply py-4 px-9 text-lg;
   }
   .section-heading {
-    @apply text-3xl md:text-4xl font-bold text-gray-900 mb-4;
+    @apply text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-tight;
   }
   .section-subheading {
-    @apply text-lg text-gray-600 mb-8 max-w-2xl;
+    @apply text-lg text-gray-500 mb-8 max-w-2xl leading-relaxed;
+  }
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/60 shadow-xl rounded-2xl;
   }
 }
