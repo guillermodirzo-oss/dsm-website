@@ -73,7 +73,7 @@ export default function HomePage() {
       <section
         className="relative min-h-[92vh] flex items-center justify-center overflow-hidden"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1920&q=80&auto=format&fit=crop')",
+          backgroundImage: "url('https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=1920photo-1581578731548-c64695cc6952?w=1920&q=80&auto=format&fit=cropq=80photo-1581578731548-c64695cc6952?w=1920&q=80&auto=format&fit=cropauto=formatphoto-1581578731548-c64695cc6952?w=1920&q=80&auto=format&fit=cropfit=crop')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -279,7 +279,7 @@ export default function HomePage() {
               {/* Image with overlay card */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-orange-100 h-[500px]"
                 style={{
-                  backgroundImage: "url('https://images.unsplash.com/photo-1527515637462-cff94ade27d0?w=800&q=80&auto=format&fit=crop')",
+                  backgroundImage: "url('https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=800photo-1527515637462-cff94ade27d0?w=800&q=80&auto=format&fit=cropq=80photo-1527515637462-cff94ade27d0?w=800&q=80&auto=format&fit=cropauto=formatphoto-1527515637462-cff94ade27d0?w=800&q=80&auto=format&fit=cropfit=crop')",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}>

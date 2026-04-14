@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,13 +10,14 @@ export default function Footer() {
 
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2.5 mb-5">
-              <div className="w-8 h-8 bg-gradient-to-br from-brand-green to-brand-green-dark rounded-xl flex items-center justify-center shadow-md">
-                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/>
-                </svg>
-              </div>
-              <span className="font-bold text-white text-base tracking-tight">DSM Cleaning Solutions</span>
+            <div className="mb-5">
+              <Image
+                src="/logo.png"
+                alt="DSM Cleaning Solutions"
+                width={160}
+                height={50}
+                className="h-14 w-auto object-contain brightness-0 invert"
+              />
             </div>
             <p className="text-sm leading-relaxed mb-4">Family-owned, eco-friendly house cleaning serving the southwest Chicago suburbs.</p>
             <p className="text-sm mb-1 text-gray-500">Romeoville &amp; Plainfield, IL</p>

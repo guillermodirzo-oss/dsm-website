@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function Navigation() {
@@ -21,16 +22,15 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5">
-            <div className="w-8 h-8 bg-gradient-to-br from-brand-green to-brand-green-dark rounded-xl flex items-center justify-center shadow-md shadow-orange-200">
-              <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/>
-              </svg>
-            </div>
-            <div className="leading-tight">
-              <span className="font-bold text-gray-900 text-base tracking-tight block">DSM Cleaning</span>
-              <span className="text-[10px] text-gray-400 tracking-widest uppercase block -mt-0.5">Solutions</span>
-            </div>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo.png"
+              alt="DSM Cleaning Solutions"
+              width={160}
+              height={50}
+              className="h-12 w-auto object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop nav */}
