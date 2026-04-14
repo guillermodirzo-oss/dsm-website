@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,11 +11,10 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="mb-5">
-              <Image
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src="/Logo.png"
                 alt="DSM Cleaning Solutions"
-                width={160}
-                height={50}
                 className="h-14 w-auto object-contain brightness-0 invert"
               />
             </div>

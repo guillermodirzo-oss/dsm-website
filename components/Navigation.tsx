@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+
 import { useState, useEffect } from "react";
 
 export default function Navigation() {
@@ -23,13 +23,11 @@ export default function Navigation() {
 
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="/Logo.png"
               alt="DSM Cleaning Solutions"
-              width={160}
-              height={50}
               className="h-12 w-auto object-contain"
-              priority
             />
           </Link>
 
