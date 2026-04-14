@@ -38,11 +38,11 @@ const faqs = [
 
 const serviceAreas = [
   { city: "Romeoville", slug: "/" }, { city: "Plainfield", slug: "/plainfield-il" },
-  { city: "Naperville", slug: "https://dsmcleaningsolutions.com/booknow" }, { city: "Bolingbrook", slug: "https://dsmcleaningsolutions.com/booknow" },
-  { city: "Joliet", slug: "https://dsmcleaningsolutions.com/booknow" }, { city: "Westmont", slug: "https://dsmcleaningsolutions.com/booknow" },
-  { city: "Lockport", slug: "https://dsmcleaningsolutions.com/booknow" }, { city: "Lemont", slug: "https://dsmcleaningsolutions.com/booknow" },
-  { city: "Homer Glen", slug: "https://dsmcleaningsolutions.com/booknow" }, { city: "New Lenox", slug: "https://dsmcleaningsolutions.com/booknow" },
-  { city: "Shorewood", slug: "https://dsmcleaningsolutions.com/booknow" }, { city: "Minooka", slug: "https://dsmcleaningsolutions.com/booknow" },
+  { city: "Naperville", slug: "/naperville-il" }, { city: "Bolingbrook", slug: "/bolingbrook-il" },
+  { city: "Joliet", slug: "/joliet-il" }, { city: "Westmont", slug: "/westmont-il" },
+  { city: "Lockport", slug: "/lockport-il" }, { city: "Lemont", slug: "/lemont-il" },
+  { city: "Homer Glen", slug: "/homer-glen-il" }, { city: "New Lenox", slug: "/new-lenox-il" },
+  { city: "Shorewood", slug: "/shorewood-il" }, { city: "Minooka", slug: "/minooka-il" },
 ];
 
 const localBusinessSchema = {

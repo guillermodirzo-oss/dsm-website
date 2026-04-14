@@ -57,14 +57,19 @@ export default function Footer() {
               {[
                 { label: "Romeoville, IL", href: "/" },
                 { label: "Plainfield, IL", href: "/plainfield-il" },
-                { label: "Naperville, IL", href: "#" },
-                { label: "Bolingbrook, IL", href: "#" },
-                { label: "Joliet, IL", href: "#" },
-                { label: "Westmont, IL", href: "#" },
+                { label: "Naperville, IL", href: "/naperville-il" },
+                { label: "Bolingbrook, IL", href: "/bolingbrook-il" },
+                { label: "Joliet, IL", href: "/joliet-il" },
+                { label: "Westmont, IL", href: "/westmont-il" },
+                { label: "Lockport, IL", href: "/lockport-il" },
+                { label: "Lemont, IL", href: "/lemont-il" },
+                { label: "Homer Glen, IL", href: "/homer-glen-il" },
+                { label: "New Lenox, IL", href: "/new-lenox-il" },
+                { label: "Shorewood, IL", href: "/shorewood-il" },
+                { label: "Minooka, IL", href: "/minooka-il" },
               ].map((item) => (
                 <li key={item.label}><Link href={item.href} className="hover:text-white transition-colors">{item.label}</Link></li>
               ))}
-              <li className="text-gray-600 text-xs pt-1">& Surrounding Suburbs</li>
             </ul>
           </div>
 
@@ -74,7 +79,7 @@ export default function Footer() {
             <ul className="space-y-2.5 text-sm mb-7">
               {[
                 { label: "Home", href: "/" },
-                { label: "About Us", href: "/#about" },
+                { label: "About Us", href: "/about" },
                 { label: "Reviews", href: "/#reviews" },
                 { label: "FAQ", href: "/#faq" },
                 { label: "Book Online", href: "https://dsmcleaningsolutions.com/booknow" },

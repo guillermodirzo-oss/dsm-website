@@ -24,7 +24,8 @@
       "Bash(sed -i 's|import ContactForm from \"@/components/ContactForm\";|import BookingForm from \"@/components/BookingForm\";|g' /c/Users/DSM/Desktop/dsm-website/__TRACKED_VAR__)",
       "Bash(sed -i 's|<ContactForm />|<BookingForm />|g' /c/Users/DSM/Desktop/dsm-website/__TRACKED_VAR__)",
       "Bash(sed -i 's|<div className=\"bg-white rounded-2xl p-8 shadow-xl\">|<div className=\"bg-white rounded-2xl overflow-hidden shadow-xl\">|g' /c/Users/DSM/Desktop/dsm-website/__TRACKED_VAR__)",
-      "Bash(sed -i 's|<div className=\"bg-white rounded-3xl p-8 shadow-xl\">|<div className=\"bg-white rounded-3xl overflow-hidden shadow-xl\">|g' /c/Users/DSM/Desktop/dsm-website/__TRACKED_VAR__)"
+      "Bash(sed -i 's|<div className=\"bg-white rounded-3xl p-8 shadow-xl\">|<div className=\"bg-white rounded-3xl overflow-hidden shadow-xl\">|g' /c/Users/DSM/Desktop/dsm-website/__TRACKED_VAR__)",
+      "Bash(ls C:/Users/DSM/Desktop/dsm-website/public/spring-ad-*.png)"
     ]
   }
 }
