@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import ContactForm from "@/components/ContactForm";
+import BookingForm from "@/components/BookingForm";
 import ReviewCard from "@/components/ReviewCard";
 
 export const metadata: Metadata = {
@@ -352,51 +352,45 @@ export default function HomePage() {
       </section>
 
       {/* ─── CONTACT / CTA ─── */}
-      <section id="contact" className="py-24 bg-gradient-to-br from-orange-500 via-orange-500 to-orange-600 relative overflow-hidden">
-        {/* Background image overlay */}
+      <section id="contact" className="py-20 bg-gradient-to-br from-orange-500 via-orange-500 to-orange-600 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10"
           style={{
             backgroundImage: "url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80&auto=format&fit=crop')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }} />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            {/* Left */}
-            <div className="text-white">
-              <p className="text-white/70 font-semibold text-sm uppercase tracking-widest mb-4">Get in Touch</p>
-              <h2 className="text-4xl md:text-5xl font-bold mb-5 leading-tight tracking-tight">
-                Ready for a Spotlessly<br />Clean Home?
-              </h2>
-              <p className="text-white/80 text-lg mb-8 leading-relaxed">
-                Get a free, no-obligation quote in minutes. Serving Romeoville, Plainfield, Naperville,
-                Bolingbrook, and all surrounding southwest suburbs.
-              </p>
-              <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-2xl hover:bg-orange-50 transition-colors shadow-xl mb-8">
-                <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-                </svg>
-                (815) 246-2113
-              </a>
-              <div className="space-y-2.5 text-white/80 text-sm">
-                {["Free estimates — no obligation", "100% satisfaction guarantee", "Fully insured and bonded", "Eco-friendly products", "Family-owned and operated"].map((item) => (
-                  <div key={item} className="flex items-center gap-2.5">
-                    <div className="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                      <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </div>
-            {/* Right — form */}
-            <div className="bg-white rounded-3xl p-8 shadow-2xl shadow-black/20">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2 tracking-tight">Get Your Free Quote</h3>
-              <p className="text-gray-400 text-sm mb-6">We respond within 1 business day.</p>
-              <ContactForm />
-            </div>
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Header */}
+          <div className="text-center mb-10">
+            <p className="text-white/70 font-semibold text-sm uppercase tracking-widest mb-3">Get in Touch</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight tracking-tight">
+              Ready for a Spotlessly Clean Home?
+            </h2>
+            <p className="text-white/80 text-lg max-w-2xl mx-auto leading-relaxed mb-6">
+              Fill out the form below or call us directly. Serving Romeoville, Plainfield, Naperville,
+              Bolingbrook, and all surrounding southwest suburbs.
+            </p>
+            <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-xl px-6 py-3 rounded-2xl hover:bg-orange-50 transition-colors shadow-xl">
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+              </svg>
+              (815) 246-2113
+            </a>
+          </div>
+
+          {/* Trust badges */}
+          <div className="flex flex-wrap justify-center gap-3 mb-10">
+            {["✓ Free Estimates", "✓ 100% Satisfaction Guarantee", "✓ Fully Insured & Bonded", "✓ Eco-Friendly", "✓ Family-Owned"].map((item) => (
+              <span key={item} className="bg-white/15 backdrop-blur-sm border border-white/20 text-white text-sm font-medium px-4 py-1.5 rounded-full">
+                {item}
+              </span>
+            ))}
+          </div>
+
+          {/* BookingKoala Embedded Form */}
+          <div className="bg-white rounded-3xl shadow-2xl shadow-black/20 overflow-hidden">
+            <BookingForm />
           </div>
         </div>
       </section>

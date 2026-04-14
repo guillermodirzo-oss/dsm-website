@@ -20,7 +20,11 @@
       "Bash(sed -i \"s|photo-1581578731548-c64695cc6952?w=1920&q=80&auto=format&fit=crop|photo-1584820927498-cfe5211fd8bf?w=1920&q=80&auto=format&fit=crop|g\" /c/Users/DSM/Desktop/dsm-website/app/page.tsx)",
       "Bash(sed -i \"s|photo-1527515637462-cff94ade27d0?w=800&q=80&auto=format&fit=crop|photo-1556909172-54557c7e4fb7?w=800&q=80&auto=format&fit=crop|g\" /c/Users/DSM/Desktop/dsm-website/app/page.tsx)",
       "Bash(sed -i 's|import Image from \"next/image\";||g' /c/Users/DSM/Desktop/dsm-website/components/Navigation.tsx /c/Users/DSM/Desktop/dsm-website/components/Footer.tsx)",
-      "Bash(sed -i 's|<Image\\\\n.*src=\"/Logo.png\"||g' /c/Users/DSM/Desktop/dsm-website/components/Navigation.tsx)"
+      "Bash(sed -i 's|<Image\\\\n.*src=\"/Logo.png\"||g' /c/Users/DSM/Desktop/dsm-website/components/Navigation.tsx)",
+      "Bash(sed -i 's|import ContactForm from \"@/components/ContactForm\";|import BookingForm from \"@/components/BookingForm\";|g' /c/Users/DSM/Desktop/dsm-website/__TRACKED_VAR__)",
+      "Bash(sed -i 's|<ContactForm />|<BookingForm />|g' /c/Users/DSM/Desktop/dsm-website/__TRACKED_VAR__)",
+      "Bash(sed -i 's|<div className=\"bg-white rounded-2xl p-8 shadow-xl\">|<div className=\"bg-white rounded-2xl overflow-hidden shadow-xl\">|g' /c/Users/DSM/Desktop/dsm-website/__TRACKED_VAR__)",
+      "Bash(sed -i 's|<div className=\"bg-white rounded-3xl p-8 shadow-xl\">|<div className=\"bg-white rounded-3xl overflow-hidden shadow-xl\">|g' /c/Users/DSM/Desktop/dsm-website/__TRACKED_VAR__)"
     ]
   }
 }

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import ContactForm from "@/components/ContactForm";
+import BookingForm from "@/components/BookingForm";
 import ReviewCard from "@/components/ReviewCard";
 
 export const metadata: Metadata = {
@@ -457,9 +457,9 @@ export default function RecurringCleaningPage() {
               </a>
               <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Flexible plans</p>
             </div>
-            <div className="bg-white rounded-2xl p-8 shadow-xl">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Get a Free Estimate</h3>
-              <ContactForm />
+              <BookingForm />
             </div>
           </div>
         </div>
