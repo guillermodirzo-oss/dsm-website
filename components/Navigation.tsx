@@ -41,12 +41,18 @@ export default function Navigation() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              <div className="absolute top-full left-0 mt-2 w-60 bg-white/95 backdrop-blur-xl shadow-2xl rounded-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 overflow-hidden">
+              <div className="absolute top-full left-0 mt-2 w-64 bg-white/95 backdrop-blur-xl shadow-2xl rounded-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 overflow-hidden">
                 <div className="p-2">
                   {[
+                    { label: "Standard Cleaning", href: "/standard-cleaning", icon: "🏠" },
                     { label: "Deep Cleaning", href: "/deep-cleaning", icon: "🧹" },
                     { label: "Move-Out / Move-In", href: "/move-out-cleaning", icon: "📦" },
                     { label: "Recurring Maid Service", href: "/recurring-cleaning", icon: "📅" },
+                    { label: "Eco-Friendly Cleaning", href: "/eco-friendly-cleaning", icon: "🌿" },
+                    { label: "Apartment Cleaning", href: "/apartment-cleaning", icon: "🏢" },
+                    { label: "Post-Construction", href: "/post-construction-cleaning", icon: "🔨" },
+                    { label: "Airbnb / Short-Term Rental", href: "/airbnb-cleaning", icon: "🛏️" },
+                    { label: "One-Time Cleaning", href: "/one-time-cleaning", icon: "✨" },
                     { label: "Plainfield, IL", href: "/plainfield-il", icon: "📍" },
                   ].map((item) => (
                     <Link key={item.href} href={item.href} className="flex items-center gap-3 px-3 py-2.5 text-sm text-gray-700 hover:bg-brand-green-50 hover:text-brand-green rounded-xl transition-colors">
@@ -89,9 +95,15 @@ export default function Navigation() {
           <div className="md:hidden border-t border-gray-100 py-3 space-y-1">
             {[
               { label: "Home", href: "/" },
+              { label: "Standard Cleaning", href: "/standard-cleaning" },
               { label: "Deep Cleaning", href: "/deep-cleaning" },
               { label: "Move-Out / Move-In", href: "/move-out-cleaning" },
               { label: "Recurring Maid Service", href: "/recurring-cleaning" },
+              { label: "Eco-Friendly Cleaning", href: "/eco-friendly-cleaning" },
+              { label: "Apartment Cleaning", href: "/apartment-cleaning" },
+              { label: "Post-Construction Cleaning", href: "/post-construction-cleaning" },
+              { label: "Airbnb / Short-Term Rental", href: "/airbnb-cleaning" },
+              { label: "One-Time Cleaning", href: "/one-time-cleaning" },
               { label: "Plainfield, IL", href: "/plainfield-il" },
               { label: "About Us", href: "/#about" },
               { label: "FAQ", href: "/#faq" },

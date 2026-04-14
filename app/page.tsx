@@ -16,15 +16,15 @@ export const metadata: Metadata = {
 };
 
 const services = [
-  { icon: "🏠", title: "Standard House Cleaning", description: "Recurring or one-time residential cleaning tailored to your home and schedule.", slug: "https://dsmcleaningsolutions.com/booknow" },
+  { icon: "🏠", title: "Standard House Cleaning", description: "Recurring or one-time residential cleaning tailored to your home and schedule.", slug: "/standard-cleaning" },
   { icon: "🧹", title: "Deep Cleaning", description: "Thorough top-to-bottom cleaning of every surface, corner, and fixture in your home.", slug: "/deep-cleaning" },
   { icon: "📦", title: "Move-Out / Move-In Cleaning", description: "Get your full deposit back or start fresh in your new home with our detail-focused cleaning.", slug: "/move-out-cleaning" },
   { icon: "📅", title: "Recurring Maid Service", description: "Weekly, biweekly, or monthly cleaning plans to keep your home consistently spotless.", slug: "/recurring-cleaning" },
-  { icon: "🌿", title: "Eco-Friendly Green Cleaning", description: "Safe for kids and pets — we use non-toxic, environmentally responsible products.", slug: "https://dsmcleaningsolutions.com/booknow" },
-  { icon: "🏢", title: "Apartment Cleaning", description: "Specialized apartment cleaning for renters and property managers in the southwest suburbs.", slug: "https://dsmcleaningsolutions.com/booknow" },
-  { icon: "🔨", title: "Post-Construction Cleaning", description: "Dust, debris, and residue removal after renovations or new construction projects.", slug: "https://dsmcleaningsolutions.com/booknow" },
-  { icon: "🛏️", title: "Airbnb / Short-Term Rental", description: "Fast, reliable turnover cleaning between guests to maintain your 5-star rating.", slug: "https://dsmcleaningsolutions.com/booknow" },
-  { icon: "✨", title: "One-Time Cleaning", description: "No commitment required. Perfect for special occasions or giving your home a reset.", slug: "https://dsmcleaningsolutions.com/booknow" },
+  { icon: "🌿", title: "Eco-Friendly Green Cleaning", description: "Safe for kids and pets — we use non-toxic, environmentally responsible products.", slug: "/eco-friendly-cleaning" },
+  { icon: "🏢", title: "Apartment Cleaning", description: "Specialized apartment cleaning for renters and property managers in the southwest suburbs.", slug: "/apartment-cleaning" },
+  { icon: "🔨", title: "Post-Construction Cleaning", description: "Dust, debris, and residue removal after renovations or new construction projects.", slug: "/post-construction-cleaning" },
+  { icon: "🛏️", title: "Airbnb / Short-Term Rental", description: "Fast, reliable turnover cleaning between guests to maintain your 5-star rating.", slug: "/airbnb-cleaning" },
+  { icon: "✨", title: "One-Time Cleaning", description: "No commitment required. Perfect for special occasions or giving your home a reset.", slug: "/one-time-cleaning" },
 ];
 
 const faqs = [
