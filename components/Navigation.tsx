@@ -3,8 +3,10 @@
 import Link from "next/link";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Navigation() {
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -13,6 +15,8 @@ export default function Navigation() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  if (pathname === "/spring-special") return null;
 
   return (
     <nav className={`sticky top-0 z-50 transition-all duration-300 ${
