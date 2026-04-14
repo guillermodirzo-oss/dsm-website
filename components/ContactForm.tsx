@@ -30,7 +30,7 @@ export default function ContactForm({ dark = false }: ContactFormProps) {
         <h3 className={`text-xl font-bold mb-2 ${dark ? "text-white" : "text-gray-900"}`}>Thank You!</h3>
         <p className={dark ? "text-white/80" : "text-gray-600"}>
           We received your request and will contact you within 1 business day. Or call us now at{" "}
-          <a href="tel:+16302484536" className="font-bold text-brand-green hover:underline">(630) 248-4536</a>.
+          <a href="tel:+18152462113" className="font-bold text-brand-green hover:underline">(815) 246-2113</a>.
         </p>
       </div>
     );
@@ -60,7 +60,7 @@ export default function ContactForm({ dark = false }: ContactFormProps) {
             id="phone"
             name="phone"
             required
-            placeholder="(630) 555-0100"
+            placeholder="(815) 555-0100"
             className={inputClass}
           />
         </div>
@@ -112,7 +112,7 @@ export default function ContactForm({ dark = false }: ContactFormProps) {
       </button>
       <p className={`text-xs text-center ${dark ? "text-white/60" : "text-gray-500"}`}>
         No obligation. We respond within 1 business day. Or call{" "}
-        <a href="tel:+16302484536" className={`font-semibold ${dark ? "text-white" : "text-brand-green"} hover:underline`}>(630) 248-4536</a>.
+        <a href="tel:+18152462113" className={`font-semibold ${dark ? "text-white" : "text-brand-green"} hover:underline`}>(815) 246-2113</a>.
       </p>
     </form>
   );

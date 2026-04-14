@@ -94,7 +94,7 @@ const faqs = [
   {
     question: "Can I book cleaning online?",
     answer:
-      "Yes! You can request a free estimate or book a cleaning using the contact form on this page, or call us directly at (630) 248-4536. We respond within 1 business day.",
+      "Yes! You can request a free estimate or book a cleaning using the contact form on this page, or call us directly at (815) 246-2113. We respond within 1 business day.",
   },
   {
     question: "What areas do you serve?",
@@ -131,7 +131,7 @@ const localBusinessSchema = {
   description:
     "Family-owned, eco-friendly professional house cleaning service serving Romeoville, Plainfield, and the southwest Chicago suburbs. Fully insured and bonded.",
   url: "https://www.dsmcleaningsolutions.com",
-  telephone: "+16302484536",
+  telephone: "+18152462113",
   priceRange: "$$",
   image: "https://www.dsmcleaningsolutions.com/og-image.jpg",
   address: {
@@ -268,16 +268,16 @@ export default function HomePage() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="#contact"
+                href="https://dsmcleaningsolutions.com/booknow"
                 className="inline-block bg-white text-brand-green font-bold py-4 px-8 rounded-lg hover:bg-brand-green-50 transition-colors text-lg text-center"
               >
                 Get a Free Quote
               </Link>
               <a
-                href="tel:+16302484536"
+                href="tel:+18152462113"
                 className="inline-block bg-transparent text-white font-bold py-4 px-8 rounded-lg border-2 border-white hover:bg-white/10 transition-colors text-lg text-center"
               >
-                📞 Call (630) 248-4536
+                📞 Call (815) 246-2113
               </a>
             </div>
           </div>
@@ -384,7 +384,7 @@ export default function HomePage() {
           </div>
 
           <div className="text-center mt-10">
-            <Link href="#contact" className="btn-primary btn-lg">
+            <Link href="https://dsmcleaningsolutions.com/booknow" className="btn-primary btn-lg">
               Book Your Cleaning Today
             </Link>
           </div>
@@ -424,7 +424,7 @@ export default function HomePage() {
           </div>
 
           <div className="text-center mt-8">
-            <Link href="#contact" className="btn-primary">
+            <Link href="https://dsmcleaningsolutions.com/booknow" className="btn-primary">
               Join Our Happy Customers — Get a Free Quote
             </Link>
           </div>
@@ -464,7 +464,7 @@ export default function HomePage() {
                   </div>
                 ))}
               </div>
-              <Link href="#contact" className="btn-primary">
+              <Link href="https://dsmcleaningsolutions.com/booknow" className="btn-primary">
                 Get Your Free Estimate
               </Link>
             </div>
@@ -518,8 +518,8 @@ export default function HomePage() {
 
           <p className="text-center text-gray-500 mt-6 text-sm">
             Not sure if we serve your area?{" "}
-            <a href="tel:+16302484536" className="text-brand-green font-semibold hover:underline">
-              Call (630) 248-4536
+            <a href="tel:+18152462113" className="text-brand-green font-semibold hover:underline">
+              Call (815) 246-2113
             </a>{" "}
             and we&apos;ll let you know!
           </p>
@@ -575,13 +575,13 @@ export default function HomePage() {
 
               <div className="mb-6">
                 <a
-                  href="tel:+16302484536"
+                  href="tel:+18152462113"
                   className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-brand-green-50 transition-colors"
                 >
                   <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
                   </svg>
-                  (630) 248-4536
+                  (815) 246-2113
                 </a>
               </div>
 

@@ -46,18 +46,18 @@ export default function Navigation() {
 
           {/* CTA + Phone */}
           <div className="hidden md:flex items-center gap-3">
-            <a href="tel:+16302484536" className="text-brand-green font-bold hover:text-brand-green-dark transition-colors">
-              (630) 248-4536
+            <a href="tel:+18152462113" className="text-brand-green font-bold hover:text-brand-green-dark transition-colors">
+              (815) 246-2113
             </a>
-            <Link href="/#contact" className="btn-primary">
+            <Link href="https://dsmcleaningsolutions.com/booknow" className="btn-primary">
               Get a Free Quote
             </Link>
           </div>
 
           {/* Mobile hamburger */}
           <div className="md:hidden flex items-center gap-3">
-            <a href="tel:+16302484536" className="text-brand-green font-bold text-sm">
-              (630) 248-4536
+            <a href="tel:+18152462113" className="text-brand-green font-bold text-sm">
+              (815) 246-2113
             </a>
             <button
               onClick={() => setMenuOpen(!menuOpen)}
@@ -86,7 +86,7 @@ export default function Navigation() {
             <Link href="/#about" onClick={() => setMenuOpen(false)} className="block px-4 py-2.5 text-gray-700 hover:bg-brand-green-50 hover:text-brand-green font-medium rounded-md">About Us</Link>
             <Link href="/#faq" onClick={() => setMenuOpen(false)} className="block px-4 py-2.5 text-gray-700 hover:bg-brand-green-50 hover:text-brand-green font-medium rounded-md">FAQ</Link>
             <div className="px-4 pt-2">
-              <Link href="/#contact" onClick={() => setMenuOpen(false)} className="btn-primary w-full block text-center">
+              <Link href="https://dsmcleaningsolutions.com/booknow" onClick={() => setMenuOpen(false)} className="btn-primary w-full block text-center">
                 Get a Free Quote
               </Link>
             </div>

@@ -12,8 +12,8 @@ export default function Footer() {
             <h3 className="text-white font-bold text-lg mb-4">DSM Cleaning Solutions</h3>
             <p className="text-sm mb-3">Family-owned, eco-friendly house cleaning serving the southwest Chicago suburbs.</p>
             <p className="text-sm mb-1">Romeoville & Plainfield, IL</p>
-            <a href="tel:+16302484536" className="text-brand-green-light font-bold text-lg hover:text-white transition-colors block mt-3">
-              (630) 248-4536
+            <a href="tel:+18152462113" className="text-brand-green-light font-bold text-lg hover:text-white transition-colors block mt-3">
+              (815) 246-2113
             </a>
             <p className="text-sm mt-1">Free estimates available</p>
           </div>
@@ -55,7 +55,7 @@ export default function Footer() {
               <li><Link href="/#about" className="hover:text-white transition-colors">About Us</Link></li>
               <li><Link href="/#reviews" className="hover:text-white transition-colors">Reviews</Link></li>
               <li><Link href="/#faq" className="hover:text-white transition-colors">FAQ</Link></li>
-              <li><Link href="/#contact" className="hover:text-white transition-colors">Contact / Book Now</Link></li>
+              <li><Link href="https://dsmcleaningsolutions.com/booknow" className="hover:text-white transition-colors">Contact / Book Now</Link></li>
             </ul>
             <div className="flex items-center gap-2 mt-4">
               <span className="text-yellow-400">★★★★★</span>

@@ -37,7 +37,7 @@ const serviceSchema = {
   provider: {
     "@type": "LocalBusiness",
     name: "DSM Cleaning Solutions",
-    telephone: "+16302484536",
+    telephone: "+18152462113",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Romeoville",
@@ -226,16 +226,16 @@ export default function RecurringCleaningPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="#contact"
+                href="https://dsmcleaningsolutions.com/booknow"
                 className="inline-block bg-white text-brand-green font-bold py-4 px-8 rounded-lg hover:bg-brand-green-50 transition-colors text-lg text-center"
               >
                 Start My Cleaning Plan
               </Link>
               <a
-                href="tel:+16302484536"
+                href="tel:+18152462113"
                 className="inline-block bg-transparent text-white font-bold py-4 px-8 rounded-lg border-2 border-white hover:bg-white/10 transition-colors text-lg text-center"
               >
-                📞 (630) 248-4536
+                📞 (815) 246-2113
               </a>
             </div>
           </div>
@@ -292,7 +292,7 @@ export default function RecurringCleaningPage() {
                     </li>
                   ))}
                 </ul>
-                <Link href="#contact" className={`block text-center font-bold py-3 px-6 rounded-lg transition-colors ${plan.highlight ? "btn-primary" : "btn-secondary"}`}>
+                <Link href="https://dsmcleaningsolutions.com/booknow" className={`block text-center font-bold py-3 px-6 rounded-lg transition-colors ${plan.highlight ? "btn-primary" : "btn-secondary"}`}>
                   Get a Free Estimate
                 </Link>
               </div>
@@ -301,7 +301,7 @@ export default function RecurringCleaningPage() {
 
           <p className="text-center text-gray-500 mt-8 text-sm">
             All plans are fully customizable. Prices vary by home size. Call{" "}
-            <a href="tel:+16302484536" className="text-brand-green font-semibold hover:underline">(630) 248-4536</a>{" "}
+            <a href="tel:+18152462113" className="text-brand-green font-semibold hover:underline">(815) 246-2113</a>{" "}
             for a personalized quote.
           </p>
         </div>
@@ -452,8 +452,8 @@ export default function RecurringCleaningPage() {
                 Ready to enjoy a consistently clean home without lifting a finger? Get a free estimate
                 for weekly, biweekly, or monthly maid service in Romeoville, Plainfield, and surrounding suburbs.
               </p>
-              <a href="tel:+16302484536" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-brand-green-50 transition-colors mb-6">
-                📞 (630) 248-4536
+              <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-brand-green-50 transition-colors mb-6">
+                📞 (815) 246-2113
               </a>
               <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Flexible plans</p>
             </div>

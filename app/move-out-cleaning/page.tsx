@@ -38,7 +38,7 @@ const serviceSchema = {
   provider: {
     "@type": "LocalBusiness",
     name: "DSM Cleaning Solutions",
-    telephone: "+16302484536",
+    telephone: "+18152462113",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Romeoville",
@@ -76,7 +76,7 @@ const faqSchema = {
       name: "How far in advance should I book a move-out cleaning?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We recommend booking at least 3–5 days before your move-out date to ensure availability. For last-minute needs, call us directly at (630) 248-4536 and we'll do our best to accommodate you.",
+        text: "We recommend booking at least 3–5 days before your move-out date to ensure availability. For last-minute needs, call us directly at (815) 246-2113 and we'll do our best to accommodate you.",
       },
     },
     {
@@ -104,7 +104,7 @@ const faqs = [
   {
     question: "How far in advance should I book a move-out cleaning?",
     answer:
-      "We recommend booking at least 3–5 days before your move-out date to ensure availability. For last-minute needs, call us directly at (630) 248-4536 and we'll do our best to accommodate you.",
+      "We recommend booking at least 3–5 days before your move-out date to ensure availability. For last-minute needs, call us directly at (815) 246-2113 and we'll do our best to accommodate you.",
   },
   {
     question: "Do you clean empty apartments in Romeoville?",
@@ -202,16 +202,16 @@ export default function MoveOutCleaningPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="#contact"
+                href="https://dsmcleaningsolutions.com/booknow"
                 className="inline-block bg-white text-brand-green font-bold py-4 px-8 rounded-lg hover:bg-brand-green-50 transition-colors text-lg text-center"
               >
                 Book Move-Out Cleaning
               </Link>
               <a
-                href="tel:+16302484536"
+                href="tel:+18152462113"
                 className="inline-block bg-transparent text-white font-bold py-4 px-8 rounded-lg border-2 border-white hover:bg-white/10 transition-colors text-lg text-center"
               >
-                📞 (630) 248-4536
+                📞 (815) 246-2113
               </a>
             </div>
           </div>
@@ -381,8 +381,8 @@ export default function MoveOutCleaningPage() {
                 Get a free quote for move-out or move-in cleaning in Romeoville, Plainfield, and surrounding
                 southwest suburbs. We&apos;re fast, thorough, and landlord-approved.
               </p>
-              <a href="tel:+16302484536" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-brand-green-50 transition-colors mb-6">
-                📞 (630) 248-4536
+              <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-brand-green-50 transition-colors mb-6">
+                📞 (815) 246-2113
               </a>
               <p className="text-white/80">Family-owned · Fully insured · Deposit-back cleaning · Eco-friendly</p>
             </div>

@@ -76,7 +76,7 @@ const serviceSchema = {
   provider: {
     "@type": "LocalBusiness",
     name: "DSM Cleaning Solutions",
-    telephone: "+16302484536",
+    telephone: "+18152462113",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Romeoville",
@@ -206,16 +206,16 @@ export default function DeepCleaningPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="#contact"
+                href="https://dsmcleaningsolutions.com/booknow"
                 className="inline-block bg-white text-brand-green font-bold py-4 px-8 rounded-lg hover:bg-brand-green-50 transition-colors text-lg text-center"
               >
                 Get a Free Deep Cleaning Quote
               </Link>
               <a
-                href="tel:+16302484536"
+                href="tel:+18152462113"
                 className="inline-block bg-transparent text-white font-bold py-4 px-8 rounded-lg border-2 border-white hover:bg-white/10 transition-colors text-lg text-center"
               >
-                📞 (630) 248-4536
+                📞 (815) 246-2113
               </a>
             </div>
           </div>
@@ -460,8 +460,8 @@ export default function DeepCleaningPage() {
                 Ready for a truly clean home? Get a free quote for deep cleaning in Romeoville, Plainfield,
                 and all surrounding southwest suburbs. No obligation — we respond within 1 business day.
               </p>
-              <a href="tel:+16302484536" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-brand-green-50 transition-colors mb-6">
-                📞 (630) 248-4536
+              <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-brand-green-50 transition-colors mb-6">
+                📞 (815) 246-2113
               </a>
               <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
             </div>

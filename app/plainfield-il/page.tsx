@@ -35,7 +35,7 @@ const localBusinessSchema = {
   description:
     "Professional house cleaning service serving Plainfield, IL and surrounding southwest Chicago suburbs. Family-owned, eco-friendly, fully insured.",
   url: "https://www.dsmcleaningsolutions.com/plainfield-il",
-  telephone: "+16302484536",
+  telephone: "+18152462113",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Plainfield",
@@ -174,16 +174,16 @@ export default function PlainfieldPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="#contact"
+                href="https://dsmcleaningsolutions.com/booknow"
                 className="inline-block bg-white text-brand-green font-bold py-4 px-8 rounded-lg hover:bg-brand-green-50 transition-colors text-lg text-center"
               >
                 Get a Free Quote in Plainfield
               </Link>
               <a
-                href="tel:+16302484536"
+                href="tel:+18152462113"
                 className="inline-block bg-transparent text-white font-bold py-4 px-8 rounded-lg border-2 border-white hover:bg-white/10 transition-colors text-lg text-center"
               >
-                📞 (630) 248-4536
+                📞 (815) 246-2113
               </a>
             </div>
           </div>
@@ -221,7 +221,7 @@ export default function PlainfieldPage() {
                 We use only eco-friendly, non-toxic cleaning products — because Plainfield families deserve
                 a clean home that&apos;s also safe for their kids and pets.
               </p>
-              <Link href="#contact" className="btn-primary">
+              <Link href="https://dsmcleaningsolutions.com/booknow" className="btn-primary">
                 Book Cleaning in Plainfield
               </Link>
             </div>
@@ -378,8 +378,8 @@ export default function PlainfieldPage() {
                 Get a free, no-obligation estimate for professional house cleaning in Plainfield. We respond
                 within 1 business day and offer flexible scheduling to fit your life.
               </p>
-              <a href="tel:+16302484536" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-brand-green-50 transition-colors mb-6">
-                📞 (630) 248-4536
+              <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-brand-green-50 transition-colors mb-6">
+                📞 (815) 246-2113
               </a>
               <p className="text-white/80">Local · Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
             </div>
