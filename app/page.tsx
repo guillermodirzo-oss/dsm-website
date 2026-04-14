@@ -75,13 +75,13 @@ export default function HomePage() {
         style={{
           backgroundImage: "url('/hero-image.png')",
           backgroundSize: "cover",
-          backgroundPosition: "center top",
+          backgroundPosition: "center 60%",
         }}
       >
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/40" />
+        {/* Dark overlay — lightened so image shows clearly */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/30" />
         {/* Orange tint */}
-        <div className="absolute inset-0 bg-gradient-to-t from-orange-900/30 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-orange-900/20 via-transparent to-transparent" />
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           {/* Badge */}
