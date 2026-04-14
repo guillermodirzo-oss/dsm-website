@@ -12,7 +12,7 @@ export default function Footer() {
           <div>
             <div className="mb-5">
               <Image
-                src="/logo.png"
+                src="/Logo.png"
                 alt="DSM Cleaning Solutions"
                 width={160}
                 height={50}

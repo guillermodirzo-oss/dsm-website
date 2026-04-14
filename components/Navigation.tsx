@@ -24,7 +24,7 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/logo.png"
+              src="/Logo.png"
               alt="DSM Cleaning Solutions"
               width={160}
               height={50}
