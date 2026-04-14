@@ -76,7 +76,7 @@ export default function Navigation() {
             <a href="tel:+18152462113" className="text-sm text-gray-600 font-semibold hover:text-brand-green transition-colors">
               (815) 246-2113
             </a>
-            <Link href="https://dsmcleaningsolutions.com/booknow" className="btn-primary text-sm">
+            <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" className="btn-primary text-sm">
               Book Now
             </Link>
           </div>
@@ -118,7 +118,7 @@ export default function Navigation() {
               </Link>
             ))}
             <div className="px-4 pt-2">
-              <Link href="https://dsmcleaningsolutions.com/booknow" onClick={() => setMenuOpen(false)} className="btn-primary w-full block text-center text-sm">
+              <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" onClick={() => setMenuOpen(false)} className="btn-primary w-full block text-center text-sm">
                 Book Now
               </Link>
             </div>

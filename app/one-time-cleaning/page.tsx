@@ -44,7 +44,7 @@ export default function OneTimeCleaningPage() {
             <p className="text-xl text-white/80 mb-8 leading-relaxed">No contracts, no commitments — just a thorough professional clean when you need it. Perfect for special occasions, seasonal resets, or whenever life calls for a spotless home.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="#contact" className="btn-white btn-lg text-base font-bold">Get a Free Estimate</Link>
-              <Link href="https://dsmcleaningsolutions.com/booknow" className="btn-outline-white btn-lg text-base">Book Now Online</Link>
+              <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" className="btn-outline-white btn-lg text-base">Book Now Online</Link>
             </div>
           </div>
         </div>

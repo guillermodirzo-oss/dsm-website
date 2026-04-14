@@ -35,7 +35,7 @@ export default function EcoFriendlyCleaningPage() {
             <p className="text-xl text-white/80 mb-8 leading-relaxed">Non-toxic, biodegradable cleaning products that are safe for your children, pets, and the planet — without sacrificing a single bit of cleaning power.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="#contact" className="btn-white btn-lg text-base font-bold">Get a Free Estimate</Link>
-              <Link href="https://dsmcleaningsolutions.com/booknow" className="btn-outline-white btn-lg text-base">Book Now Online</Link>
+              <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" className="btn-outline-white btn-lg text-base">Book Now Online</Link>
             </div>
           </div>
         </div>
@@ -75,7 +75,7 @@ export default function EcoFriendlyCleaningPage() {
               </div>
               <div className="flex gap-3">
                 <Link href="#contact" className="btn-primary">Get a Free Estimate</Link>
-                <Link href="https://dsmcleaningsolutions.com/booknow" className="btn-secondary">Book Now</Link>
+                <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" className="btn-secondary">Book Now</Link>
               </div>
             </div>
             <div className="space-y-4">

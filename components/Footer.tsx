@@ -39,11 +39,11 @@ export default function Footer() {
                 { label: "Deep Cleaning", href: "/deep-cleaning" },
                 { label: "Move-Out / Move-In Cleaning", href: "/move-out-cleaning" },
                 { label: "Recurring Maid Service", href: "/recurring-cleaning" },
-                { label: "Standard House Cleaning", href: "https://dsmcleaningsolutions.com/booknow" },
-                { label: "Eco-Friendly Green Cleaning", href: "https://dsmcleaningsolutions.com/booknow" },
-                { label: "Apartment Cleaning", href: "https://dsmcleaningsolutions.com/booknow" },
-                { label: "Post-Construction Cleaning", href: "https://dsmcleaningsolutions.com/booknow" },
-                { label: "Airbnb / Short-Term Rental", href: "https://dsmcleaningsolutions.com/booknow" },
+                { label: "Standard House Cleaning", href: "https://dsmcleaningsolutions.bookingkoala.com/booknow" },
+                { label: "Eco-Friendly Green Cleaning", href: "https://dsmcleaningsolutions.bookingkoala.com/booknow" },
+                { label: "Apartment Cleaning", href: "https://dsmcleaningsolutions.bookingkoala.com/booknow" },
+                { label: "Post-Construction Cleaning", href: "https://dsmcleaningsolutions.bookingkoala.com/booknow" },
+                { label: "Airbnb / Short-Term Rental", href: "https://dsmcleaningsolutions.bookingkoala.com/booknow" },
               ].map((item) => (
                 <li key={item.label}><Link href={item.href} className="hover:text-white transition-colors">{item.label}</Link></li>
               ))}
@@ -82,7 +82,7 @@ export default function Footer() {
                 { label: "About Us", href: "/about" },
                 { label: "Reviews", href: "/#reviews" },
                 { label: "FAQ", href: "/#faq" },
-                { label: "Book Online", href: "https://dsmcleaningsolutions.com/booknow" },
+                { label: "Book Online", href: "https://dsmcleaningsolutions.bookingkoala.com/booknow" },
               ].map((item) => (
                 <li key={item.label}><Link href={item.href} className="hover:text-white transition-colors">{item.label}</Link></li>
               ))}

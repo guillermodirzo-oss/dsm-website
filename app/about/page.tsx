@@ -122,7 +122,7 @@ export default function AboutPage() {
               <p className="text-gray-500 leading-relaxed mb-8">
                 Over the years, we&apos;ve grown from a small local operation to a trusted name across Romeoville, Plainfield, Naperville, Bolingbrook, and over a dozen southwest suburban communities. That growth has come entirely from word of mouth — from homeowners who trusted us enough to tell their friends and family.
               </p>
-              <Link href="https://dsmcleaningsolutions.com/booknow" className="btn-primary">
+              <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" className="btn-primary">
                 Book a Cleaning
               </Link>
             </div>

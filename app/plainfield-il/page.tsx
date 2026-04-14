@@ -174,7 +174,7 @@ export default function PlainfieldPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="https://dsmcleaningsolutions.com/booknow"
+                href="https://dsmcleaningsolutions.bookingkoala.com/booknow"
                 className="inline-block bg-white text-brand-green font-bold py-4 px-8 rounded-lg hover:bg-brand-green-50 transition-colors text-lg text-center"
               >
                 Get a Free Quote in Plainfield
@@ -221,7 +221,7 @@ export default function PlainfieldPage() {
                 We use only eco-friendly, non-toxic cleaning products — because Plainfield families deserve
                 a clean home that&apos;s also safe for their kids and pets.
               </p>
-              <Link href="https://dsmcleaningsolutions.com/booknow" className="btn-primary">
+              <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" className="btn-primary">
                 Book Cleaning in Plainfield
               </Link>
             </div>

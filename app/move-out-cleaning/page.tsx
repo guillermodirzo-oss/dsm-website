@@ -202,7 +202,7 @@ export default function MoveOutCleaningPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="https://dsmcleaningsolutions.com/booknow"
+                href="https://dsmcleaningsolutions.bookingkoala.com/booknow"
                 className="inline-block bg-white text-brand-green font-bold py-4 px-8 rounded-lg hover:bg-brand-green-50 transition-colors text-lg text-center"
               >
                 Book Move-Out Cleaning

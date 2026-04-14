@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 const PHONE = "(815) 246-2113";
 const PHONE_HREF = "tel:+18152462113";
-const BOOK_URL = "https://dsmcleaningsolutions.com/booknow";
+const BOOK_URL = "https://dsmcleaningsolutions.bookingkoala.com/booknow";
 const COUPON = "SPRING75";
 
 export default function SpringSpecialPage() {

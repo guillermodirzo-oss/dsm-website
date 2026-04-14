@@ -102,7 +102,7 @@ export default function HomePage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="https://dsmcleaningsolutions.com/booknow" className="btn-white btn-lg text-base font-bold">
+            <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" className="btn-white btn-lg text-base font-bold">
               Book Online Now
             </Link>
             <a href="tel:+18152462113" className="btn-outline-white btn-lg text-base">
@@ -207,7 +207,7 @@ export default function HomePage() {
           </div>
 
           <div className="text-center mt-14">
-            <Link href="https://dsmcleaningsolutions.com/booknow" className="btn-primary btn-lg">
+            <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" className="btn-primary btn-lg">
               Book Your Cleaning Today
             </Link>
           </div>
@@ -270,7 +270,7 @@ export default function HomePage() {
                 ))}
               </div>
 
-              <Link href="https://dsmcleaningsolutions.com/booknow" className="btn-primary">
+              <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" className="btn-primary">
                 Get Your Free Estimate
               </Link>
             </div>
