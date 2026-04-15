@@ -42,11 +42,13 @@ export default function SpringSpecialPage() {
         <div className="max-w-5xl mx-auto flex items-center justify-between gap-3">
           {/* Logo — links back to home page */}
           <a href="/" aria-label="DSM Cleaning Solutions — Home">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/Logo.png"
-              alt="DSM Cleaning Solutions"
+              alt="DSM Cleaning Solutions — house cleaning Plainfield and Romeoville IL"
+              width={150}
+              height={40}
               className="h-10 w-auto object-contain"
+              priority
             />
           </a>
           <a
