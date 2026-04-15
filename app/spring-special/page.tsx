@@ -27,8 +27,7 @@ export default function SpringSpecialPage() {
         [class*="bk-brand"],
         [class*="powered-by"],
         img[alt*="BookingKoala"],
-        img[src*="bookingkoala"],
-        a[href*="bookingkoala"] {
+        img[src*="bookingkoala"] {
           display: none !important;
           visibility: hidden !important;
           opacity: 0 !important;
