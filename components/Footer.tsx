@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export default function Footer() {
@@ -16,10 +17,11 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="mb-5">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src="/Logo.png"
-                alt="DSM Cleaning Solutions"
+                alt="DSM Cleaning Solutions logo — professional house cleaning service"
+                width={180}
+                height={56}
                 className="h-14 w-auto object-contain brightness-0 invert"
               />
             </div>
@@ -45,7 +47,7 @@ export default function Footer() {
                 { label: "Post-Construction Cleaning", href: "https://dsmcleaningsolutions.bookingkoala.com/booknow" },
                 { label: "Airbnb / Short-Term Rental", href: "https://dsmcleaningsolutions.bookingkoala.com/booknow" },
               ].map((item) => (
-                <li key={item.label}><Link href={item.href} className="hover:text-white transition-colors">{item.label}</Link></li>
+                <li key={item.label}><Link href={item.href} {...(item.href.startsWith("https://") ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="hover:text-white transition-colors">{item.label}</Link></li>
               ))}
             </ul>
           </div>
@@ -84,7 +86,7 @@ export default function Footer() {
                 { label: "FAQ", href: "/#faq" },
                 { label: "Book Online", href: "https://dsmcleaningsolutions.bookingkoala.com/booknow" },
               ].map((item) => (
-                <li key={item.label}><Link href={item.href} className="hover:text-white transition-colors">{item.label}</Link></li>
+                <li key={item.label}><Link href={item.href} {...(item.href.startsWith("https://") ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="hover:text-white transition-colors">{item.label}</Link></li>
               ))}
             </ul>
             <div className="flex flex-wrap gap-2">

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Disallow: /spring-special
+
+Sitemap: https://www.dsmcleaningsolutions.com/sitemap.xml

@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     index: false,
     follow: false,
   },
+  alternates: { canonical: "https://www.dsmcleaningsolutions.com/spring-special" },
 };
 
 const PHONE = "(815) 246-2113";
@@ -113,6 +114,8 @@ export default function SpringSpecialPage() {
             <a
               id="book-now-btn"
               href={BOOK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-gray-100 hover:bg-white active:scale-95 text-gray-900 font-bold text-base py-4 px-8 rounded-2xl border-2 border-gray-300 shadow-md transition-all duration-200 w-full"
             >
               <svg className="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -244,6 +247,8 @@ export default function SpringSpecialPage() {
             <a
               id="book-now-btn-2"
               href={BOOK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-bold text-base py-4 px-6 rounded-2xl shadow-lg transition-all duration-200 w-full border-2 border-white/30"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -287,6 +292,8 @@ export default function SpringSpecialPage() {
             </div>
             <a
               href={BOOK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-bold text-sm py-2.5 px-5 rounded-xl transition-all duration-200 whitespace-nowrap flex-shrink-0"
             >
               Book Now →
@@ -425,6 +432,8 @@ export default function SpringSpecialPage() {
             <a
               id="book-now-btn-3"
               href={BOOK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-gray-800 active:scale-95 text-white font-bold text-base py-4 px-8 rounded-2xl border-2 border-white/20 transition-all duration-200 w-full"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

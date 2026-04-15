@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import BookingForm from "@/components/BookingForm";
 import ReviewCard from "@/components/ReviewCard";
 
@@ -72,7 +73,7 @@ export default function ApartmentCleaningPage() {
             <p className="text-xl text-white/80 mb-8 leading-relaxed">Professional, affordable apartment cleaning for renters, condo owners, and property managers across Romeoville and the southwest suburbs.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="#contact" className="btn-white btn-lg text-base font-bold">Get a Free Estimate</Link>
-              <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" className="btn-outline-white btn-lg text-base">Book Now Online</Link>
+              <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn-outline-white btn-lg text-base">Book Now Online</Link>
             </div>
           </div>
         </div>
@@ -160,27 +161,30 @@ export default function ApartmentCleaningPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
-              <img
+              <Image
                 src="/Work%20Pictures/IMG_0220.jpg"
                 alt="Clean apartment bathroom with bidet — professional apartment cleaning service in Romeoville IL"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
-              <img
+              <Image
                 src="/Work%20Pictures/IMG_0224.jpg"
                 alt="Clean apartment with parquet hardwood floors — apartment cleaning in Plainfield IL"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
-              <img
+              <Image
                 src="/Work%20Pictures/IMG_1610.jpg"
                 alt="Clean bedroom maintained with recurring apartment cleaning service in the southwest suburbs"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
           </div>

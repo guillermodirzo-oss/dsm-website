@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import BookingForm from "@/components/BookingForm";
 import ReviewCard from "@/components/ReviewCard";
 
@@ -72,7 +73,7 @@ export default function AirbnbCleaningPage() {
             <p className="text-xl text-white/80 mb-8 leading-relaxed">Fast, reliable turnover cleaning for Airbnb, VRBO & short-term rental properties. We get your space guest-ready between every booking — every time.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="#contact" className="btn-white btn-lg text-base font-bold">Get a Free Estimate</Link>
-              <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" className="btn-outline-white btn-lg text-base">Book Now Online</Link>
+              <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn-outline-white btn-lg text-base">Book Now Online</Link>
             </div>
           </div>
         </div>
@@ -116,7 +117,7 @@ export default function AirbnbCleaningPage() {
               </div>
               <div className="flex gap-3">
                 <Link href="#contact" className="btn-primary">Get a Free Estimate</Link>
-                <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" className="btn-secondary">Book Now</Link>
+                <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn-secondary">Book Now</Link>
               </div>
             </div>
             <div className="space-y-4">
@@ -184,27 +185,30 @@ export default function AirbnbCleaningPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
-              <img
+              <Image
                 src="/Work%20Pictures/IMG_2038.jpg"
                 alt="Clean furnished bedroom guest-ready after Airbnb turnover cleaning in Romeoville IL"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
-              <img
+              <Image
                 src="/Work%20Pictures/IMG_2033.jpg"
                 alt="Sparkling clean glass shower — Airbnb bathroom turnover cleaning in Plainfield IL"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
-              <img
+              <Image
                 src="/Work%20Pictures/IMG_1601.jpg"
                 alt="Spotless living room after short-term rental turnover cleaning in the southwest Chicago suburbs"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
           </div>

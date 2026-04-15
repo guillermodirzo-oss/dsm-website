@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import BookingForm from "@/components/BookingForm";
 import ReviewCard from "@/components/ReviewCard";
 
@@ -220,6 +221,8 @@ export default function DeepCleaningPage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="https://dsmcleaningsolutions.bookingkoala.com/booknow"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block bg-white text-brand-green font-bold py-4 px-8 rounded-lg hover:bg-brand-green-50 transition-colors text-lg text-center"
               >
                 Get a Free Deep Cleaning Quote
@@ -367,51 +370,57 @@ export default function DeepCleaningPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
-              <img
+              <Image
                 src="/Work%20Pictures/IMG_2033.jpg"
                 alt="Glass shower with stone tile grout scrubbed spotless after deep cleaning service in Romeoville IL"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
-              <img
+              <Image
                 src="/Work%20Pictures/IMG_2035.jpg"
                 alt="Full bathroom with walk-in shower and tub professionally deep cleaned in Plainfield IL"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
-              <img
+              <Image
                 src="/Work%20Pictures/IMG_2036.jpg"
                 alt="Elegant modern double vanity cleaned and polished to perfection — deep cleaning by DSM Cleaning Solutions"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
-              <img
+              <Image
                 src="/Work%20Pictures/IMG_1721.jpg"
                 alt="Clean green-tiled shower and tub after deep cleaning service in the southwest Chicago suburbs"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
-              <img
+              <Image
                 src="/Work%20Pictures/IMG_1722.jpg"
                 alt="Double vanity bathroom deep cleaned and sanitized by DSM Cleaning Solutions in Romeoville IL"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
-              <img
+              <Image
                 src="/Work%20Pictures/IMG_1601.jpg"
                 alt="Spotless living room with hardwood floors after deep cleaning service in Plainfield IL"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
           </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import BookingForm from "@/components/BookingForm";
 import ReviewCard from "@/components/ReviewCard";
 
@@ -159,7 +160,7 @@ export default function AboutPage() {
               <p className="text-gray-500 leading-relaxed mb-8">
                 Over the years, we&apos;ve grown from a small local operation to a trusted name across Romeoville, Plainfield, Naperville, Bolingbrook, and over a dozen southwest suburban communities. That growth has come entirely from word of mouth — from homeowners who trusted us enough to tell their friends and family.
               </p>
-              <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" className="btn-primary">
+              <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn-primary">
                 Book a Cleaning
               </Link>
             </div>
@@ -189,35 +190,39 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="relative aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
-              <img
+              <Image
                 src="/Work%20Pictures/Google Post Image - Cleaning Service (25).png"
                 alt="DSM Cleaning Solutions professional cleaner at work in a Plainfield IL home"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
+                fill
+                sizes="(max-width: 768px) 50vw, 25vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
             <div className="relative aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
-              <img
+              <Image
                 src="/Work%20Pictures/IMG_2033.jpg"
                 alt="Glass shower deep cleaned to sparkling perfection by DSM Cleaning Solutions in Romeoville IL"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
+                fill
+                sizes="(max-width: 768px) 50vw, 25vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
             <div className="relative aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
-              <img
+              <Image
                 src="/Work%20Pictures/IMG_1601.jpg"
                 alt="Clean living room with hardwood floors after house cleaning by DSM Cleaning Solutions"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
+                fill
+                sizes="(max-width: 768px) 50vw, 25vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
             <div className="relative aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
-              <img
+              <Image
                 src="/Work%20Pictures/Google Post Image - Cleaning Service (1).png"
                 alt="Clean modern kitchen with granite island after professional cleaning in Plainfield IL"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
+                fill
+                sizes="(max-width: 768px) 50vw, 25vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
           </div>

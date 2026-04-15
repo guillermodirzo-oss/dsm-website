@@ -167,6 +167,8 @@ export default function BlogPostPage({
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
               href="https://dsmcleaningsolutions.bookingkoala.com/booknow"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-white text-brand-green font-bold px-8 py-3.5 rounded-full hover:bg-gray-50 transition-colors shadow-md"
             >
               Book Now

@@ -240,6 +240,8 @@ export default function RecurringCleaningPage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="https://dsmcleaningsolutions.bookingkoala.com/booknow"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block bg-white text-brand-green font-bold py-4 px-8 rounded-lg hover:bg-brand-green-50 transition-colors text-lg text-center"
               >
                 Start My Cleaning Plan
@@ -305,7 +307,7 @@ export default function RecurringCleaningPage() {
                     </li>
                   ))}
                 </ul>
-                <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" className={`block text-center font-bold py-3 px-6 rounded-lg transition-colors ${plan.highlight ? "btn-primary" : "btn-secondary"}`}>
+                <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className={`block text-center font-bold py-3 px-6 rounded-lg transition-colors ${plan.highlight ? "btn-primary" : "btn-secondary"}`}>
                   Get a Free Estimate
                 </Link>
               </div>

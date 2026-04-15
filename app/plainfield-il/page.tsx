@@ -198,6 +198,8 @@ export default function PlainfieldPage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="https://dsmcleaningsolutions.bookingkoala.com/booknow"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block bg-white text-brand-green font-bold py-4 px-8 rounded-lg hover:bg-brand-green-50 transition-colors text-lg text-center"
               >
                 Get a Free Quote in Plainfield
@@ -239,7 +241,7 @@ export default function PlainfieldPage() {
               <p className="text-gray-600 mb-6 leading-relaxed">
                 We use only eco-friendly, non-toxic cleaning products — because Plainfield families deserve a clean home that&apos;s also safe for their kids and pets. Whether you&apos;re in a classic home near Route 30 or a newer build in 60585, we show up prepared with everything we need.
               </p>
-              <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" className="btn-primary">
+              <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn-primary">
                 Book Cleaning in Plainfield
               </Link>
             </div>

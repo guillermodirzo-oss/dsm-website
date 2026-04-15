@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import BookingForm from "@/components/BookingForm";
 import ReviewCard from "@/components/ReviewCard";
 
@@ -216,6 +217,8 @@ export default function MoveOutCleaningPage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="https://dsmcleaningsolutions.bookingkoala.com/booknow"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block bg-white text-brand-green font-bold py-4 px-8 rounded-lg hover:bg-brand-green-50 transition-colors text-lg text-center"
               >
                 Book Move-Out Cleaning
@@ -322,27 +325,30 @@ export default function MoveOutCleaningPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
-              <img
+              <Image
                 src="/Work%20Pictures/IMG_1724.jpg"
                 alt="Clean laundry room ready for move-out inspection — move-out cleaning in Romeoville IL"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
-              <img
+              <Image
                 src="/Work%20Pictures/IMG_2035.jpg"
                 alt="Bathroom with walk-in shower deep cleaned for move-out inspection in Plainfield IL"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
-              <img
+              <Image
                 src="/Work%20Pictures/IMG_0224.jpg"
                 alt="Empty apartment with spotless parquet floors after professional move-out cleaning"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
           </div>

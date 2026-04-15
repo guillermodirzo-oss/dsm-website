@@ -75,6 +75,8 @@ export default function CityPageTemplate({ city }: { city: CityData }) {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="https://dsmcleaningsolutions.bookingkoala.com/booknow"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block bg-white text-brand-green font-bold py-4 px-8 rounded-lg hover:bg-brand-green-50 transition-colors text-lg text-center"
               >
                 Get a Free Quote in {city.name}
@@ -124,6 +126,8 @@ export default function CityPageTemplate({ city }: { city: CityData }) {
               ))}
               <Link
                 href="https://dsmcleaningsolutions.bookingkoala.com/booknow"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary"
               >
                 Book Cleaning in {city.name}

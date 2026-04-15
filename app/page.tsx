@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import BookingForm from "@/components/BookingForm";
 import ReviewCard from "@/components/ReviewCard";
 
@@ -88,7 +89,7 @@ export default function HomePage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" className="btn-white btn-lg text-base font-bold">
+            <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn-white btn-lg text-base font-bold">
               Book Online Now
             </Link>
             <a href="tel:+18152462113" className="btn-outline-white btn-lg text-base">
@@ -193,7 +194,7 @@ export default function HomePage() {
           </div>
 
           <div className="text-center mt-14">
-            <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" className="btn-primary btn-lg">
+            <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn-primary btn-lg">
               Book Your Cleaning Today
             </Link>
           </div>
@@ -241,18 +242,19 @@ export default function HomePage() {
               { src: "/Work%20Pictures/Google Post Image - Cleaning Service (1).png", alt: "Clean modern kitchen with granite island — professional house cleaning in Romeoville IL" },
             ].map((photo) => (
               <div key={photo.src} className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
-                <img
+                <Image
                   src={photo.src}
                   alt={photo.alt}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
             ))}
           </div>
 
           <div className="text-center mt-10">
-            <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" className="btn-primary btn-lg">
+            <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn-primary btn-lg">
               Book Your Cleaning Today
             </Link>
           </div>
@@ -296,7 +298,7 @@ export default function HomePage() {
                 ))}
               </div>
 
-              <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" className="btn-primary">
+              <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn-primary">
                 Get Your Free Estimate
               </Link>
             </div>
@@ -304,10 +306,12 @@ export default function HomePage() {
             <div className="relative">
               {/* Image with overlay card */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-orange-100 h-[500px]">
-                <img
+                <Image
                   src="/Work%20Pictures/Google Post Image - Cleaning Service (25).png"
                   alt="DSM Cleaning Solutions professional cleaner at work in a Plainfield IL home"
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
               </div>
@@ -474,6 +478,8 @@ export default function HomePage() {
             <p className="text-white/70 text-sm mb-4">Prefer to book online right now?</p>
             <Link
               href="https://dsmcleaningsolutions.bookingkoala.com/booknow"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white text-orange-600 font-bold text-lg px-8 py-4 rounded-2xl hover:bg-orange-50 active:scale-95 transition-all duration-200 shadow-xl"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
