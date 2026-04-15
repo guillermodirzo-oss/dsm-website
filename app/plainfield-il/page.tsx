@@ -110,7 +110,7 @@ const services = [
     icon: "🏠",
     title: "Standard House Cleaning in Plainfield",
     desc: "Routine house cleaning on a one-time or recurring basis. We keep your Plainfield home consistently clean and comfortable.",
-    link: "/#services",
+    link: "/standard-cleaning",
   },
   {
     icon: "🧹",
@@ -134,13 +134,13 @@ const services = [
     icon: "🌿",
     title: "Eco-Friendly Cleaning Plainfield",
     desc: "Green cleaning using non-toxic, biodegradable products — safe for your family and the environment.",
-    link: "/#services",
+    link: "/eco-friendly-cleaning",
   },
   {
     icon: "🏢",
     title: "Apartment Cleaning Plainfield",
     desc: "Professional apartment cleaning for renters and property managers throughout Plainfield.",
-    link: "/#services",
+    link: "/apartment-cleaning",
   },
 ];
 
@@ -361,13 +361,13 @@ export default function PlainfieldPage() {
           <div className="flex flex-wrap gap-3">
             {[
               { city: "Romeoville", href: "/" },
-              { city: "Naperville", href: "/#contact" },
-              { city: "Bolingbrook", href: "/#contact" },
-              { city: "Joliet", href: "/#contact" },
-              { city: "Westmont", href: "/#contact" },
-              { city: "Lockport", href: "/#contact" },
-              { city: "Lemont", href: "/#contact" },
-              { city: "Homer Glen", href: "/#contact" },
+              { city: "Naperville", href: "/naperville-il" },
+              { city: "Bolingbrook", href: "/bolingbrook-il" },
+              { city: "Joliet", href: "/joliet-il" },
+              { city: "Westmont", href: "/westmont-il" },
+              { city: "Lockport", href: "/lockport-il" },
+              { city: "Lemont", href: "/lemont-il" },
+              { city: "Homer Glen", href: "/homer-glen-il" },
             ].map((area) => (
               <Link
                 key={area.city}
