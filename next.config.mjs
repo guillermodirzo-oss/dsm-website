@@ -3,6 +3,161 @@ const nextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
   },
+
+  async redirects() {
+    return [
+      // ─── NON-WWW → WWW (301) ───────────────────────────────────────────────
+      // Fixes the 403 on dsmcleaningsolutions.com by redirecting all paths
+      // to the canonical www version.
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "dsmcleaningsolutions.com" }],
+        destination: "https://www.dsmcleaningsolutions.com/:path*",
+        permanent: true,
+      },
+
+      // ─── OLD ABOUT / CONTACT / AUTH PAGES ─────────────────────────────────
+      {
+        source: "/about-us",
+        destination: "/about",
+        permanent: true,
+      },
+      {
+        source: "/contact",
+        destination: "/#contact",
+        permanent: true,
+      },
+      {
+        source: "/contact-us",
+        destination: "/#contact",
+        permanent: true,
+      },
+      {
+        source: "/login",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/onlinequote",
+        destination: "/#contact",
+        permanent: true,
+      },
+      {
+        source: "/quote",
+        destination: "/#contact",
+        permanent: true,
+      },
+      {
+        source: "/get-a-quote",
+        destination: "/#contact",
+        permanent: true,
+      },
+      {
+        source: "/booking",
+        destination: "https://dsmcleaningsolutions.bookingkoala.com/booknow",
+        permanent: true,
+      },
+      {
+        source: "/book",
+        destination: "https://dsmcleaningsolutions.bookingkoala.com/booknow",
+        permanent: true,
+      },
+
+      // ─── OLD CITY / AREA PAGES ─────────────────────────────────────────────
+      {
+        source: "/romeoville-il",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/romeoville",
+        destination: "/",
+        permanent: true,
+      },
+
+      // ─── OLD SERVICE PAGES ─────────────────────────────────────────────────
+      {
+        source: "/services",
+        destination: "/deep-cleaning",
+        permanent: true,
+      },
+      {
+        source: "/house-cleaning",
+        destination: "/standard-cleaning",
+        permanent: true,
+      },
+      {
+        source: "/cleaning-services",
+        destination: "/standard-cleaning",
+        permanent: true,
+      },
+      {
+        source: "/maid-service",
+        destination: "/recurring-cleaning",
+        permanent: true,
+      },
+      {
+        source: "/recurring",
+        destination: "/recurring-cleaning",
+        permanent: true,
+      },
+      {
+        source: "/deep-clean",
+        destination: "/deep-cleaning",
+        permanent: true,
+      },
+      {
+        source: "/move-out",
+        destination: "/move-out-cleaning",
+        permanent: true,
+      },
+      {
+        source: "/move-in-cleaning",
+        destination: "/move-out-cleaning",
+        permanent: true,
+      },
+      {
+        source: "/move-in-out-cleaning",
+        destination: "/move-out-cleaning",
+        permanent: true,
+      },
+      {
+        source: "/green-cleaning",
+        destination: "/eco-friendly-cleaning",
+        permanent: true,
+      },
+      {
+        source: "/eco-cleaning",
+        destination: "/eco-friendly-cleaning",
+        permanent: true,
+      },
+      {
+        source: "/post-construction",
+        destination: "/post-construction-cleaning",
+        permanent: true,
+      },
+      {
+        source: "/airbnb",
+        destination: "/airbnb-cleaning",
+        permanent: true,
+      },
+      {
+        source: "/short-term-rental",
+        destination: "/airbnb-cleaning",
+        permanent: true,
+      },
+      {
+        source: "/apartment",
+        destination: "/apartment-cleaning",
+        permanent: true,
+      },
+      {
+        source: "/one-time",
+        destination: "/one-time-cleaning",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
