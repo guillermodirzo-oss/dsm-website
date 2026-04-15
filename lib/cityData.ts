@@ -7,6 +7,8 @@ export interface CityData {
   tagline: string;
   localIntro: string[];
   whyChoose: string[];
+  neighborhoods: string[];
+  landmarks: string[];
   services: Array<{ icon: string; title: string; desc: string; link: string }>;
   reviews: Array<{ name: string; location: string; text: string; date: string }>;
   faqs: Array<{ question: string; answer: string }>;
@@ -22,9 +24,9 @@ export const cities: CityData[] = [
     distance: "about 14 miles from our Romeoville base",
     tagline: "Trusted house cleaning for Naperville families — local, eco-friendly, fully insured.",
     localIntro: [
-      "Naperville is consistently ranked as one of the best places to live in America — and its residents expect the best. DSM Cleaning Solutions brings professional, eco-friendly house cleaning to Naperville families who want a spotless home without the hassle.",
+      "Naperville is consistently ranked as one of the best places to live in America — and its residents expect the best. DSM Cleaning Solutions brings professional, eco-friendly house cleaning to Naperville families in neighborhoods like Cress Creek, Hobson West, Ashbury, and White Eagle who want a spotless home without the hassle.",
       "As a locally owned company based just 14 miles away in Romeoville, we understand the Naperville community. We're not a national franchise with a call center — we're your southwest suburban neighbors, and we treat your home with the care it deserves.",
-      "From established neighborhoods near downtown Naperville to newer developments in the 60564 and 60565 zip codes, we serve all of Naperville with the same high standard of professional cleaning.",
+      "From established neighborhoods near the Riverwalk and Centennial Beach area to newer developments in the 60563, 60564, and 60565 zip codes, we serve all of Naperville with the same high standard of professional cleaning.",
     ],
     whyChoose: [
       "Local company based just 14 miles away in Romeoville",
@@ -36,6 +38,8 @@ export const cities: CityData[] = [
       "Background-checked, professional cleaning team",
       "Serving all Naperville zip codes: 60540, 60563, 60564, 60565",
     ],
+    neighborhoods: ["Cress Creek", "Hobson West", "Ashbury", "White Eagle", "River Run", "Tall Grass"],
+    landmarks: ["Riverwalk", "Centennial Beach", "Downtown Naperville"],
     services: [
       {
         icon: "🏠",
@@ -96,29 +100,29 @@ export const cities: CityData[] = [
     ],
     faqs: [
       {
-        question: "Do you offer house cleaning in Naperville, IL?",
+        question: "What neighborhoods in Naperville does DSM Cleaning serve?",
         answer:
-          "Yes, DSM serves all of Naperville including zip codes 60540, 60563, 60564, and 60565. Standard, deep, move-out, and recurring service all available.",
+          "We serve all of Naperville including Cress Creek, Hobson West, Ashbury, White Eagle, River Run, and Tall Grass, across zip codes 60540, 60563, 60564, and 60565. If you're near the Riverwalk or in the newer 60564/60565 areas, we cover you.",
       },
       {
-        question: "How far do you travel to clean homes in Naperville?",
+        question: "How much does house cleaning cost in Naperville, IL?",
         answer:
-          "We're based in Romeoville, about 14 miles away. We serve Naperville regularly and can accommodate same-week scheduling.",
+          "Pricing depends on your home size and the type of service. Standard recurring cleanings typically start around $120–$180. Deep cleanings start around $200. Contact us for a free, no-obligation estimate.",
       },
       {
-        question: "What cleaning services are available in Naperville, IL?",
+        question: "Do you offer same-day or same-week cleaning in Naperville?",
         answer:
-          "Full range: standard, deep, move-out/in, recurring maid service, apartment, eco-friendly, post-construction, and Airbnb turnover cleaning.",
+          "We work hard to accommodate same-week requests. Because we're based just 14 miles away in Romeoville, we can often schedule Naperville clients quickly. Contact us and we'll do our best.",
       },
       {
-        question: "How much does house cleaning cost in Naperville?",
+        question: "Are your cleaners background checked for Naperville homes?",
         answer:
-          "Depends on home size and service type. Contact us for a free custom estimate — no obligation.",
+          "Yes — every member of our cleaning team undergoes a thorough background check before ever entering a client's home. Fully insured and bonded too.",
       },
       {
-        question: "Are your cleaning products safe for children and pets in my Naperville home?",
+        question: "Do you use eco-friendly cleaning products in Naperville homes?",
         answer:
-          "Yes — all products are non-toxic, eco-friendly, and biodegradable. Safe for families and pets.",
+          "Absolutely. We use non-toxic, biodegradable cleaning products on every job. Safe for children, pets, and the environment — perfect for Naperville families.",
       },
     ],
     nearbyAreas: [
@@ -138,8 +142,8 @@ export const cities: CityData[] = [
     distance: "just 5 miles from our Romeoville base",
     tagline: "Professional house cleaning just minutes away — Bolingbrook's trusted local cleaners.",
     localIntro: [
-      "Bolingbrook is right next door to our home base in Romeoville — which means faster response times, same-week availability, and a team that truly knows the community. DSM Cleaning Solutions is Bolingbrook's go-to local house cleaning service.",
-      "Whether you're in a newer development near Rt. 53 or an established neighborhood off Weber Road, we service all of Bolingbrook with the same meticulous attention to detail. Our proximity means we can often accommodate last-minute requests that national companies can't.",
+      "Bolingbrook is right next door to our home base in Romeoville — which means faster response times, same-week availability, and a team that truly knows the community. DSM Cleaning Solutions serves neighborhoods like Naperville Acres, Americana Estates, Pheasant Chase, and Stillwater with the same professional care.",
+      "Whether you're near the Promenade Bolingbrook shopping area, a family home near Hidden Lakes, or an established neighborhood off Weber Road, we service all of Bolingbrook with meticulous attention to detail. Our proximity means we can often accommodate last-minute requests that national companies can't.",
       "Bolingbrook families appreciate our eco-friendly approach — safe for kids and pets — and our straightforward, honest pricing. No hidden fees, no bait-and-switch. Just a consistently excellent clean, every time.",
     ],
     whyChoose: [
@@ -152,6 +156,8 @@ export const cities: CityData[] = [
       "Background-checked, professional team",
       "Serving all of Bolingbrook: 60440 & 60490",
     ],
+    neighborhoods: ["Naperville Acres", "Americana Estates", "Pheasant Chase", "Stillwater", "Fox Run", "Lakewood Crossing"],
+    landmarks: ["Promenade Bolingbrook", "Hidden Lakes", "Pelican Harbor Aquatic Park"],
     services: [
       {
         icon: "🏠",
@@ -212,29 +218,29 @@ export const cities: CityData[] = [
     ],
     faqs: [
       {
-        question: "Do you clean homes in Bolingbrook, IL?",
+        question: "What neighborhoods in Bolingbrook does DSM Cleaning serve?",
         answer:
-          "Yes — Bolingbrook is one of our primary service areas. We're based just 5 miles away in Romeoville.",
+          "We serve all of Bolingbrook including Naperville Acres, Americana Estates, Pheasant Chase, Stillwater, Fox Run, and Lakewood Crossing — across zip codes 60440 and 60490.",
       },
       {
-        question: "Can you do same-week cleaning in Bolingbrook?",
+        question: "Do you offer same-day cleaning in Bolingbrook, IL?",
         answer:
-          "Often yes. Because we're so close, we frequently have same-week availability for Bolingbrook clients.",
+          "Yes — because we're based just 5 miles away in Romeoville, we frequently have same-week and sometimes same-day availability for Bolingbrook clients. Call (815) 246-2113 to check.",
       },
       {
-        question: "What services do you offer in Bolingbrook?",
+        question: "How much does house cleaning cost in Bolingbrook?",
         answer:
-          "Full range: standard, deep, move-out/in, recurring, apartment, eco-friendly, post-construction, Airbnb turnover.",
+          "Pricing depends on home size and service type. Standard cleanings start around $120–$180 and deep cleanings start around $200. Contact us for a free, no-obligation estimate.",
       },
       {
-        question: "How much does cleaning cost in Bolingbrook, IL?",
+        question: "Are you insured to clean homes in Bolingbrook, IL?",
         answer:
-          "Pricing depends on home size and service. Contact us for a free, no-obligation estimate.",
+          "Fully insured and bonded on every job. Your home and belongings are completely protected on every visit.",
       },
       {
-        question: "Are you insured to clean homes in Bolingbrook?",
+        question: "Do you bring your own cleaning supplies to Bolingbrook?",
         answer:
-          "Fully insured and bonded. Your home and belongings are completely protected.",
+          "Yes — we bring all eco-friendly, non-toxic cleaning supplies to every job. Nothing required from you.",
       },
     ],
     nearbyAreas: [
@@ -255,7 +261,7 @@ export const cities: CityData[] = [
     tagline: "Trusted professional cleaning for Joliet families — eco-friendly, insured, satisfaction guaranteed.",
     localIntro: [
       "Joliet is one of the largest and most diverse cities in the Chicago metro area, and DSM Cleaning Solutions is proud to serve its families with professional, eco-friendly house cleaning. Based just 10 miles away in Romeoville, we understand this community.",
-      "From the historic neighborhoods on the east side to the growing residential developments in the southwest, we serve all of Joliet across its multiple zip codes. Our team is background-checked, professional, and brings all eco-friendly supplies to every job.",
+      "From the historic neighborhoods on the east side to growing residential areas like Ingalls Park and Rock Run in the southwest, we serve all of Joliet across its multiple zip codes. Our team is background-checked, professional, and brings all eco-friendly supplies to every job.",
       "Joliet homeowners choose DSM because we're local, accountable, and genuinely care about the quality of our work. We're not a faceless national franchise — we're your neighbors, and your satisfaction is personal to us.",
     ],
     whyChoose: [
@@ -268,6 +274,8 @@ export const cities: CityData[] = [
       "Professional, background-checked team",
       "Serving all Joliet zip codes: 60431, 60432, 60433, 60435, 60436",
     ],
+    neighborhoods: ["Ingalls Park", "Rock Run", "Cathedral Area", "Forest Park", "Woodgate", "White Oak Subdivision"],
+    landmarks: ["Rialto Theatre", "Joliet Iron Works Historic Site", "Pilcher Park Nature Center", "Splash Station"],
     services: [
       {
         icon: "🏠",
@@ -328,14 +336,14 @@ export const cities: CityData[] = [
     ],
     faqs: [
       {
-        question: "Do you offer house cleaning in Joliet, IL?",
+        question: "What neighborhoods in Joliet does DSM Cleaning serve?",
         answer:
-          "Yes — we serve all of Joliet across zip codes 60431, 60432, 60433, 60435, and 60436.",
+          "We serve all of Joliet including Ingalls Park, Rock Run, Cathedral Area, Forest Park, and Woodgate, across all zip codes: 60431, 60432, 60433, 60435, and 60436.",
       },
       {
-        question: "Are you a local cleaning company near Joliet?",
+        question: "Do you offer same-day cleaning in Joliet, IL?",
         answer:
-          "Based in Romeoville, just 10 miles away. We're a true local company, not a national franchise.",
+          "We often accommodate same-week requests for Joliet clients. Based just 10 miles away in Romeoville, we can typically schedule you quickly. Call (815) 246-2113 to check availability.",
       },
       {
         question: "What cleaning services are available in Joliet, IL?",
@@ -345,7 +353,7 @@ export const cities: CityData[] = [
       {
         question: "How much does house cleaning cost in Joliet?",
         answer:
-          "Varies by home size and service type. Call or contact us for a free estimate.",
+          "Standard cleanings start around $120–$180 for an average home. Deep cleanings start around $200+. Call or contact us for a free estimate tailored to your Joliet home.",
       },
       {
         question: "Do you bring your own cleaning supplies to Joliet?",
@@ -372,7 +380,7 @@ export const cities: CityData[] = [
     localIntro: [
       "Westmont is a welcoming village in DuPage County, and its residents deserve professional cleaning they can trust. DSM Cleaning Solutions brings eco-friendly, family-owned house cleaning service to Westmont homeowners.",
       "We travel from our Romeoville base to serve Westmont because our clients here have come to rely on our consistency, professionalism, and genuine care for their homes. Every visit follows the same thorough checklist — no shortcuts.",
-      "From single-family homes near Cass Avenue to condos throughout the 60559 zip code, we handle all types of residences in Westmont with equal attention to detail.",
+      "From single-family homes along the Cass Avenue Corridor to Oakwood Estates and condos throughout the 60559 zip code, we handle all types of residences in Westmont with equal attention to detail.",
     ],
     whyChoose: [
       "Family-owned company based in the southwest suburbs",
@@ -384,6 +392,8 @@ export const cities: CityData[] = [
       "Background-checked, professional team",
       "Serving all of Westmont: 60559",
     ],
+    neighborhoods: ["Westmont Crossing", "Drummond Commons", "Oakwood Estates", "Village Center District", "Cass Avenue Corridor"],
+    landmarks: ["Ty Warner Park", "St. Joseph Creek Trail", "Westmont Community Park"],
     services: [
       {
         icon: "🏠",
@@ -468,6 +478,11 @@ export const cities: CityData[] = [
         answer:
           "Yes, we serve all of Westmont including the full 60559 zip code area.",
       },
+      {
+        question: "What neighborhoods in Westmont do you clean?",
+        answer:
+          "We serve the full 60559 zip code including Westmont Crossing, Drummond Commons, Oakwood Estates, and the Village Center area.",
+      },
     ],
     nearbyAreas: [
       { city: "Romeoville", href: "/" },
@@ -488,7 +503,7 @@ export const cities: CityData[] = [
     localIntro: [
       "Lockport is a growing Will County community with a mix of established neighborhoods and newer residential developments. DSM Cleaning Solutions is proud to serve Lockport homeowners with professional, eco-friendly house cleaning just 8 miles from our Romeoville base.",
       "Lockport families appreciate our local roots, transparent pricing, and the care we bring to every home. We're not a franchise — we're a family-owned business that takes every job personally.",
-      "From homes near the historic Illinois & Michigan Canal corridor to newer subdivisions in the 60491 area, we clean all types of residences in Lockport with the same meticulous attention to detail.",
+      "From homes in the Heritage Fields subdivision near the I&M Canal corridor to newer developments in the 60491 area, we clean all types of residences in Lockport with the same meticulous attention to detail.",
     ],
     whyChoose: [
       "Local — just 8 miles from Lockport in Romeoville",
@@ -500,6 +515,8 @@ export const cities: CityData[] = [
       "Professional, background-checked team",
       "Serving all of Lockport: 60441 & 60491",
     ],
+    neighborhoods: ["Heritage Fields", "Division Street area", "Lockport Township", "Broken Arrow Subdivision", "Farrell Road area"],
+    landmarks: ["Illinois & Michigan Canal National Heritage Corridor", "Dellwood Park", "Lockport Historic District", "Will County Courthouse"],
     services: [
       {
         icon: "🏠",
@@ -584,6 +601,11 @@ export const cities: CityData[] = [
         answer:
           "Yes — weekly, biweekly, and monthly plans available, often at a discount vs. one-time visits.",
       },
+      {
+        question: "What neighborhoods in Lockport does DSM serve?",
+        answer:
+          "We serve all of Lockport (60441 & 60491) including Heritage Fields, Division Street area, Lockport Township, and Broken Arrow Subdivision.",
+      },
     ],
     nearbyAreas: [
       { city: "Romeoville", href: "/" },
@@ -604,7 +626,7 @@ export const cities: CityData[] = [
     localIntro: [
       "Lemont is one of the most picturesque villages in the southwest suburbs — and its homeowners maintain high standards for their properties. DSM Cleaning Solutions brings professional, eco-friendly house cleaning to Lemont families who want a spotless home.",
       "Based just 12 miles away in Romeoville, we're a true neighbor to Lemont. We understand the community, the neighborhoods, and what local families expect from a professional cleaning service.",
-      "Whether your home overlooks the Des Plaines River Valley or sits in one of Lemont's newer residential areas, we bring the same thorough, detail-oriented approach to every clean in the 60439 zip code.",
+      "Whether your home overlooks the Des Plaines River Valley or sits in neighborhoods like Glenmoor or Lemont Hills, we bring the same thorough, detail-oriented approach to every clean in the 60439 zip code.",
     ],
     whyChoose: [
       "Local company just 12 miles away in Romeoville",
@@ -616,6 +638,8 @@ export const cities: CityData[] = [
       "Professional, background-checked cleaners",
       "Serving all of Lemont: 60439",
     ],
+    neighborhoods: ["Lemont Main Street District", "Glenmoor", "Lemont Hills", "Keepataw Forest area", "Sagamore Hills"],
+    landmarks: ["Des Plaines River Valley", "Centennial Park", "Lemont Quarries", "Sandhills Wildlife Area"],
     services: [
       {
         icon: "🏠",
@@ -700,6 +724,11 @@ export const cities: CityData[] = [
         answer:
           "Absolutely — weekly, biweekly, or monthly. Recurring clients often save vs. one-time rates.",
       },
+      {
+        question: "What neighborhoods in Lemont does DSM serve?",
+        answer:
+          "We serve all of Lemont (60439) including the Main Street District, Glenmoor, Lemont Hills, Sagamore Hills, and the Keepataw Forest area.",
+      },
     ],
     nearbyAreas: [
       { city: "Romeoville", href: "/" },
@@ -719,7 +748,7 @@ export const cities: CityData[] = [
     tagline: "Professional house cleaning in Homer Glen, IL — family-owned, eco-friendly, fully insured.",
     localIntro: [
       "Homer Glen is a beautiful Will County village known for its spacious homes, wooded lots, and strong sense of community. DSM Cleaning Solutions is proud to serve Homer Glen families with professional, eco-friendly house cleaning.",
-      "Based just 9 miles away in Romeoville, we're a local company that understands Homer Glen's neighborhoods and the standards its residents expect. From large homes on wooded lots to newer construction near 143rd Street, we handle all property types.",
+      "Based just 9 miles away in Romeoville, we're a local company that understands Homer Glen's neighborhoods and the standards its residents expect. From large homes on wooded lots near the 143rd Street area to newer construction in Goodings Grove, we handle all property types.",
       "Our Homer Glen clients especially appreciate our eco-friendly product line — non-toxic and biodegradable, safe for families with kids, pets, and everyone in between.",
     ],
     whyChoose: [
@@ -732,6 +761,8 @@ export const cities: CityData[] = [
       "Professional, background-checked team",
       "Serving all of Homer Glen: 60491",
     ],
+    neighborhoods: ["Goodings Grove", "Bell Road Corridor", "143rd Street area", "Broken Arrow", "Cedar Ridge"],
+    landmarks: ["Homer Lake Forest Preserve", "Highland Lake", "Tampier Slough Nature Area", "Messenger Woods Nature Preserve"],
     services: [
       {
         icon: "🏠",
@@ -816,6 +847,11 @@ export const cities: CityData[] = [
         answer:
           "Yes — weekly, biweekly, and monthly plans available.",
       },
+      {
+        question: "What neighborhoods in Homer Glen does DSM serve?",
+        answer:
+          "We serve all of Homer Glen (60491) including Goodings Grove, Cedar Ridge, the 143rd Street corridor, Bell Road area, and Broken Arrow.",
+      },
     ],
     nearbyAreas: [
       { city: "Romeoville", href: "/" },
@@ -836,7 +872,7 @@ export const cities: CityData[] = [
     localIntro: [
       "New Lenox is one of the fastest-growing communities in Will County, with beautiful residential neighborhoods and a strong family-oriented community. DSM Cleaning Solutions is proud to serve New Lenox homeowners with professional, eco-friendly cleaning.",
       "We travel from our Romeoville base to serve New Lenox because local families here have come to trust our consistency, professionalism, and genuine care. As a family-owned business, we treat every New Lenox home as if it were our own.",
-      "Whether you're in an established neighborhood or one of the newer developments throughout New Lenox, we deliver the same high-quality clean to every home in the 60451 zip code.",
+      "Whether you're in established neighborhoods like Sanctuary, White Oak, or Arbor Hills, or one of the newer developments throughout New Lenox, we deliver the same high-quality clean to every home in the 60451 zip code.",
     ],
     whyChoose: [
       "Family-owned company from neighboring Romeoville",
@@ -848,6 +884,8 @@ export const cities: CityData[] = [
       "Background-checked, professional team",
       "Serving all of New Lenox: 60451",
     ],
+    neighborhoods: ["Sanctuary", "White Oak", "Arbor Hills", "Spencer Crossing", "Founders Pointe"],
+    landmarks: ["New Lenox Community Park", "Lincoln-Way Central High School area", "Hadley Valley Preserve", "Arbury Hills"],
     services: [
       {
         icon: "🏠",
@@ -932,6 +970,11 @@ export const cities: CityData[] = [
         answer:
           "Yes — we bring all eco-friendly, non-toxic cleaning supplies. Nothing required from you.",
       },
+      {
+        question: "What neighborhoods in New Lenox does DSM serve?",
+        answer:
+          "We serve all of New Lenox (60451) including Sanctuary, White Oak, Arbor Hills, Spencer Crossing, and Founders Pointe.",
+      },
     ],
     nearbyAreas: [
       { city: "Romeoville", href: "/" },
@@ -952,7 +995,7 @@ export const cities: CityData[] = [
     localIntro: [
       "Shorewood is a growing Will County village with a welcoming community and a mix of established and newer neighborhoods. DSM Cleaning Solutions serves Shorewood homeowners with professional, eco-friendly house cleaning from our base just 10 miles away.",
       "As a family-owned business, we bring a personal level of care to every Shorewood home we clean. Our team is professional, background-checked, and equipped with eco-friendly, non-toxic cleaning products safe for your whole family.",
-      "From homes near Brook Crossing to neighborhoods throughout the 60404 zip code, we deliver consistent, thorough cleaning that Shorewood families can count on.",
+      "From homes in Brook Crossing and Shorewood Glen to neighborhoods throughout the 60404 zip code, we deliver consistent, thorough cleaning that Shorewood families can count on.",
     ],
     whyChoose: [
       "Local — based just 10 miles away in Romeoville",
@@ -964,6 +1007,8 @@ export const cities: CityData[] = [
       "Professional, background-checked team",
       "Serving all of Shorewood: 60404",
     ],
+    neighborhoods: ["Brook Crossing", "Shorewood Glen", "Willowbend", "River Crossing", "Morningside Estates"],
+    landmarks: ["Heritage Woods of Shorewood", "I&M Canal Trail", "Aux Sable Creek", "Rivervale Park"],
     services: [
       {
         icon: "🏠",
@@ -1048,6 +1093,11 @@ export const cities: CityData[] = [
         answer:
           "Fully insured and bonded on every job.",
       },
+      {
+        question: "What neighborhoods in Shorewood does DSM serve?",
+        answer:
+          "We serve all of Shorewood (60404) including Brook Crossing, Shorewood Glen, Willowbend, River Crossing, and Morningside Estates.",
+      },
     ],
     nearbyAreas: [
       { city: "Romeoville", href: "/" },
@@ -1068,7 +1118,7 @@ export const cities: CityData[] = [
     localIntro: [
       "Minooka is a growing Grundy and Kendall County community that has seen rapid residential growth in recent years. DSM Cleaning Solutions is proud to extend our professional, eco-friendly house cleaning services to Minooka homeowners.",
       "We travel from Romeoville to serve Minooka because local families here deserve professional, accountable cleaning service they can actually rely on. As a family-owned business, we're personally invested in the quality of every job.",
-      "From established homes near downtown Minooka to newer developments throughout the 60447 zip code, we bring the same thorough, detailed cleaning approach to every property.",
+      "From established homes near downtown Minooka to newer developments like Minooka Commons, Lakewood Trails, and Heritage Place throughout the 60447 zip code, we bring the same thorough, detailed cleaning approach to every property.",
     ],
     whyChoose: [
       "Family-owned company from the southwest suburbs",
@@ -1080,6 +1130,8 @@ export const cities: CityData[] = [
       "Background-checked, professional team",
       "Serving all of Minooka: 60447",
     ],
+    neighborhoods: ["Minooka Commons", "Heritage Place", "Lakewood Trails", "Indian Trails", "Rock Run Estates"],
+    landmarks: ["Minooka Community High School area", "Aux Sable Creek corridor", "Heritage Prairie Farm", "DuPage River access"],
     services: [
       {
         icon: "🏠",
@@ -1163,6 +1215,11 @@ export const cities: CityData[] = [
         question: "Do you serve all of Minooka including newer developments?",
         answer:
           "Yes — we serve the full 60447 zip code area including newer residential neighborhoods.",
+      },
+      {
+        question: "What neighborhoods in Minooka does DSM serve?",
+        answer:
+          "We serve all of Minooka (60447) including Minooka Commons, Heritage Place, Lakewood Trails, Indian Trails, and Rock Run Estates.",
       },
     ],
     nearbyAreas: [

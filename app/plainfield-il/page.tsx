@@ -79,6 +79,16 @@ const faqSchema = {
 
 const faqs = [
   {
+    question: "What neighborhoods in Plainfield, IL does DSM serve?",
+    answer:
+      "We serve all Plainfield neighborhoods including Settlers Ridge, Lakewood Falls, Grande Park, Springbank, Heritage Meadows, and River Run — across both zip codes 60544 and 60585.",
+  },
+  {
+    question: "Are your cleaners background checked in Plainfield?",
+    answer:
+      "Yes — every member of our cleaning team undergoes a thorough background check before ever entering a client's home. We are also fully insured and bonded on every job.",
+  },
+  {
     question: "Do you offer house cleaning in Plainfield, IL?",
     answer:
       "Yes! DSM Cleaning Solutions proudly serves Plainfield, IL with a full range of professional cleaning services including standard house cleaning, deep cleaning, move-out and move-in cleaning, and recurring maid service.",
@@ -221,18 +231,13 @@ export default function PlainfieldPage() {
             <div>
               <h2 className="section-heading">Your Local Cleaning Company in Plainfield, IL</h2>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                DSM Cleaning Solutions is based right in Romeoville — just minutes from Plainfield. We&apos;re
-                not a national franchise; we&apos;re your local neighbors, and we treat every Plainfield home with
-                the same care we&apos;d want for our own.
+                DSM Cleaning Solutions is based right in Romeoville — just minutes from Plainfield. We serve neighborhoods throughout Plainfield including Settlers Ridge, Lakewood Falls, Grande Park, and Springbank. We&apos;re not a national franchise; we&apos;re your local neighbors, and we treat every Plainfield home with the same care we&apos;d want for our own.
               </p>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                Plainfield is one of the fastest-growing communities in the southwest suburbs, and we&apos;re proud
-                to serve its families. Whether you&apos;re in one of the newer subdivisions or an established
-                neighborhood, we bring the same high standard of professional cleaning to every home.
+                Plainfield is one of the fastest-growing communities in the southwest suburbs, and we&apos;re proud to serve its families across zip codes 60544 and 60585. From the Plainfield Historic District area to the Township Park neighborhood and the newest residential developments, we bring the same high standard of professional cleaning to every home.
               </p>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                We use only eco-friendly, non-toxic cleaning products — because Plainfield families deserve
-                a clean home that&apos;s also safe for their kids and pets.
+                We use only eco-friendly, non-toxic cleaning products — because Plainfield families deserve a clean home that&apos;s also safe for their kids and pets. Whether you&apos;re in a classic home near Route 30 or a newer build in 60585, we show up prepared with everything we need.
               </p>
               <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" className="btn-primary">
                 Book Cleaning in Plainfield
@@ -240,6 +245,21 @@ export default function PlainfieldPage() {
             </div>
             <div className="bg-brand-green-50 rounded-2xl p-8 border border-brand-green-100">
               <h3 className="font-bold text-xl text-gray-900 mb-4">Why Plainfield Families Choose DSM</h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
+                {[
+                  { icon: "👨‍👩‍👧", label: "Family Owned & Operated" },
+                  { icon: "🛡️", label: "Fully Insured & Bonded" },
+                  { icon: "🌿", label: "Eco-Friendly Products" },
+                  { icon: "✅", label: "48-Hour Satisfaction Guarantee" },
+                  { icon: "📅", label: "Available 7 Days a Week" },
+                  { icon: "🔍", label: "Background-Checked Team" },
+                ].map(item => (
+                  <div key={item.label} className="flex flex-col items-center text-center bg-white rounded-xl p-3 border border-orange-100">
+                    <span className="text-2xl mb-1">{item.icon}</span>
+                    <p className="text-xs font-semibold text-gray-700 leading-tight">{item.label}</p>
+                  </div>
+                ))}
+              </div>
               <ul className="space-y-3">
                 {[
                   "Local company based in neighboring Romeoville",
@@ -259,6 +279,41 @@ export default function PlainfieldPage() {
                   </li>
                 ))}
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* NEIGHBORHOODS */}
+      <section className="py-14 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <div>
+              <h2 className="section-heading text-2xl mb-4">Neighborhoods We Serve in Plainfield, IL</h2>
+              <p className="text-gray-600 mb-5 leading-relaxed">
+                DSM Cleaning Solutions services every neighborhood across Plainfield. No matter which part of Plainfield you call home, we bring the same professional, eco-friendly clean to your door.
+              </p>
+              <div className="grid grid-cols-2 gap-2">
+                {["Settlers Ridge", "Lakewood Falls", "Grande Park", "Springbank", "Heritage Meadows", "River Run"].map((n) => (
+                  <div key={n} className="flex items-center gap-2 text-gray-700 text-sm">
+                    <svg className="w-4 h-4 text-brand-green flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    {n}
+                  </div>
+                ))}
+              </div>
+              <p className="text-gray-500 text-sm mt-4">Zip codes served: 60544 &amp; 60585</p>
+            </div>
+            <div>
+              <h3 className="font-bold text-xl text-gray-900 mb-4">Local Landmarks Near You</h3>
+              <p className="text-gray-600 mb-4 leading-relaxed text-sm">We&apos;re proud to serve the Plainfield community around these well-known local landmarks:</p>
+              <div className="space-y-2">
+                {["Plainfield Historic District", "Plainfield Township Park", "Riverwalk Trail System", "Route 59 Corridor", "119th Street Retail Area"].map((l) => (
+                  <div key={l} className="flex items-center gap-3 bg-white rounded-xl p-3 border border-gray-100">
+                    <span className="text-2xl">📍</span>
+                    <span className="text-gray-700 font-medium text-sm">{l}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -293,6 +348,53 @@ export default function PlainfieldPage() {
                 </span>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* WHAT'S INCLUDED */}
+      <section className="py-14 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="section-heading">What&apos;s Included in Every Plainfield Clean</h2>
+            <p className="section-subheading mx-auto">Our two most popular services — see exactly what we cover in your Plainfield home.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-gray-50 rounded-2xl p-7 border border-gray-200">
+              <div className="flex items-center gap-3 mb-5">
+                <span className="text-3xl">🏠</span>
+                <div>
+                  <h3 className="font-bold text-xl text-gray-900">Standard Cleaning</h3>
+                  <Link href="/standard-cleaning" className="text-brand-green text-sm font-semibold hover:underline">View full details →</Link>
+                </div>
+              </div>
+              <ul className="space-y-2 text-sm text-gray-700">
+                {["Vacuum all carpets, rugs & floors","Mop all hard-surface floors","Dust furniture, shelves & surfaces","Clean & disinfect bathrooms","Wipe kitchen counters & appliance exteriors","Clean mirrors throughout","Empty all trash bins","Wipe light switches & door handles","Make beds (optional)"].map(item => (
+                  <li key={item} className="flex items-start gap-2">
+                    <svg className="w-4 h-4 text-brand-green mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-orange-50 rounded-2xl p-7 border border-orange-200">
+              <div className="flex items-center gap-3 mb-5">
+                <span className="text-3xl">🧹</span>
+                <div>
+                  <h3 className="font-bold text-xl text-gray-900">Deep Cleaning</h3>
+                  <Link href="/deep-cleaning" className="text-brand-green text-sm font-semibold hover:underline">View full details →</Link>
+                </div>
+              </div>
+              <p className="text-xs text-brand-green font-bold uppercase tracking-widest mb-3">Everything in Standard, PLUS:</p>
+              <ul className="space-y-2 text-sm text-gray-700">
+                {["Scrub grout lines in showers & tile","Clean inside oven & microwave","Degrease stovetop, hood vent & burners","Wipe all cabinet fronts & handles","Clean behind & under appliances","Detailed baseboard & door frame cleaning","Vacuum & wipe window sills & tracks","Clean ceiling fans & light fixtures","Spot-clean walls & switch plates"].map(item => (
+                  <li key={item} className="flex items-start gap-2">
+                    <svg className="w-4 h-4 text-brand-green mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -388,8 +490,7 @@ export default function PlainfieldPage() {
             <div className="text-white">
               <h2 className="text-4xl font-bold mb-4">Book House Cleaning in Plainfield, IL Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                Get a free, no-obligation estimate for professional house cleaning in Plainfield. We respond
-                within 1 business day and offer flexible scheduling to fit your life.
+                Ready for a spotlessly clean home in Plainfield, IL? Whether you need a one-time deep clean in Settlers Ridge, recurring maid service in Grande Park, or a move-out cleaning in Lakewood Falls, DSM Cleaning Solutions is just a call away. We respond within 1 business day and back every clean with our 48-hour satisfaction guarantee. Serving all of Plainfield — zip codes 60544 &amp; 60585.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-brand-green-50 transition-colors mb-6">
                 📞 (815) 246-2113
