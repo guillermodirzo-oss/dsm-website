@@ -136,5 +136,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/how-often-should-you-deep-clean-your-home`,
+      lastModified: new Date("2025-04-10"),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/move-out-cleaning-checklist-naperville-il`,
+      lastModified: new Date("2025-04-07"),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/spring-cleaning-tips-romeoville-plainfield`,
+      lastModified: new Date("2025-04-03"),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
   ];
 }
