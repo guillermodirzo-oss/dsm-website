@@ -93,6 +93,7 @@ export default function SpringSpecialPage() {
           {/* Dual CTAs */}
           <div className="flex flex-col gap-3">
             <a
+              id="claim-offer-btn"
               href="#form"
               className="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-bold text-lg py-4 px-8 rounded-2xl shadow-xl shadow-orange-500/30 transition-all duration-200 w-full"
             >
@@ -102,13 +103,14 @@ export default function SpringSpecialPage() {
               </svg>
             </a>
             <a
+              id="book-now-btn"
               href={BOOK_URL}
-              className="inline-flex items-center justify-center gap-2 bg-white hover:bg-orange-50 active:scale-95 text-orange-600 font-bold text-base py-4 px-8 rounded-2xl border-2 border-orange-200 shadow-md transition-all duration-200 w-full"
+              className="inline-flex items-center justify-center gap-2 bg-gray-100 hover:bg-white active:scale-95 text-gray-900 font-bold text-base py-4 px-8 rounded-2xl border-2 border-gray-300 shadow-md transition-all duration-200 w-full"
             >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
-              Ready to Book? Use Code {COUPON}
+              Book Now — Use Code {COUPON}
             </a>
           </div>
           <p className="text-gray-500 text-sm mt-3 font-medium">⚡ Limited April spots — filling fast</p>
@@ -232,8 +234,9 @@ export default function SpringSpecialPage() {
               Get a Free Quote First ↓
             </a>
             <a
+              id="book-now-btn-2"
               href={BOOK_URL}
-              className="flex items-center justify-center gap-2 bg-gray-800 hover:bg-gray-700 active:scale-95 text-white font-bold text-base py-4 px-6 rounded-2xl border border-gray-700 transition-all duration-200 w-full"
+              className="flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-bold text-base py-4 px-6 rounded-2xl shadow-lg transition-all duration-200 w-full border-2 border-white/30"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -412,8 +415,9 @@ export default function SpringSpecialPage() {
               Get a Free Quote First
             </a>
             <a
+              id="book-now-btn-3"
               href={BOOK_URL}
-              className="inline-flex items-center justify-center gap-2 bg-orange-700 hover:bg-orange-800 active:scale-95 text-white font-bold text-base py-4 px-8 rounded-2xl border border-orange-400/40 transition-all duration-200 w-full"
+              className="inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-gray-800 active:scale-95 text-white font-bold text-base py-4 px-8 rounded-2xl border-2 border-white/20 transition-all duration-200 w-full"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
