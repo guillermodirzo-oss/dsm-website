@@ -4,8 +4,8 @@ import BookingForm from "@/components/BookingForm";
 import ReviewCard from "@/components/ReviewCard";
 
 export const metadata: Metadata = {
-  title: "Airbnb & Short-Term Rental Cleaning Romeoville IL | DSM Cleaning Solutions",
-  description: "Professional Airbnb & vacation rental cleaning in Romeoville, IL. Fast turnovers, fresh linens, guest-ready results every time. Fully insured. Free estimates.",
+  title: "Airbnb Cleaning Plainfield IL | DSM Cleaning Solutions",
+  description: "5-star Airbnb & vacation rental cleaning in Plainfield, IL. Fast turnovers, linen resets & restocking. Reliable & insured. Get a free turnover quote.",
   keywords: ["Airbnb cleaning Romeoville IL", "short term rental cleaning Romeoville", "vacation rental cleaning Romeoville", "VRBO cleaning Romeoville IL", "rental turnover cleaning Romeoville", "Airbnb cleaner Romeoville IL"],
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/airbnb-cleaning" },
 };

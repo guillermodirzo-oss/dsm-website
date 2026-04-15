@@ -14,11 +14,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.dsmcleaningsolutions.com"),
   title: {
-    default: "House Cleaning Romeoville IL | DSM Cleaning Solutions",
+    default: "House Cleaning Plainfield IL | DSM Cleaning Solutions",
     template: "%s | DSM Cleaning Solutions",
   },
   description:
-    "Family-owned house cleaning in Romeoville, IL. Eco-friendly, insured and trusted. Book online or call for a free estimate. Serving Plainfield, Naperville, Bolingbrook and surrounding suburbs.",
+    "Family-owned house cleaning in Plainfield & Romeoville, IL. Eco-friendly, fully insured & 5-star rated. Book online or call for a free estimate.",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "House Cleaning Romeoville IL | DSM Cleaning Solutions",
+    title: "House Cleaning Plainfield IL | DSM Cleaning Solutions",
     description:
       "Family-owned, eco-friendly house cleaning in Romeoville, IL. Fully insured. Book online or call for a free estimate.",
     images: ["/og-image.jpg"],

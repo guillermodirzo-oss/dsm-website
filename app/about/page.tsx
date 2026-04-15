@@ -4,9 +4,9 @@ import BookingForm from "@/components/BookingForm";
 import ReviewCard from "@/components/ReviewCard";
 
 export const metadata: Metadata = {
-  title: "About Us | DSM Cleaning Solutions — Romeoville, IL House Cleaning",
+  title: "Trusted Cleaning Company Plainfield IL | DSM Cleaning",
   description:
-    "Learn about DSM Cleaning Solutions — a family-owned, eco-friendly house cleaning company based in Romeoville, IL. Fully insured, 5-star rated, serving the southwest Chicago suburbs.",
+    "Meet DSM Cleaning Solutions — your trusted, family-owned cleaning company in Plainfield, IL. 5-star rated, eco-friendly & fully insured. Free estimates.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/about" },
 };
 

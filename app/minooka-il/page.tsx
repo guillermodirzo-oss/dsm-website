@@ -5,9 +5,9 @@ import { cities } from "@/lib/cityData";
 const city = cities.find((c) => c.slug === "minooka-il")!;
 
 export const metadata: Metadata = {
-  title: "House Cleaning Minooka IL | DSM Cleaning Solutions",
+  title: "Cleaning Service Minooka IL | DSM Cleaning Solutions",
   description:
-    "Professional house cleaning in Minooka, IL. Family-owned, eco-friendly, fully insured. Deep cleaning, move-out cleaning, and recurring maid service. Free estimates.",
+    "Dependable house cleaning in Minooka, IL — deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Free estimates.",
   keywords: [
     "house cleaning Minooka IL",
     "cleaning service Minooka",

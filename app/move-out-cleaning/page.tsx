@@ -4,9 +4,9 @@ import BookingForm from "@/components/BookingForm";
 import ReviewCard from "@/components/ReviewCard";
 
 export const metadata: Metadata = {
-  title: "Move Out Cleaning Romeoville IL | DSM Cleaning Solutions",
+  title: "Move-Out Cleaning Plainfield IL | DSM Cleaning Solutions",
   description:
-    "Professional move-out and move-in cleaning in Romeoville, IL. Get your full deposit back. Apartments, houses, and rentals. Eco-friendly, fully insured. Free estimates.",
+    "Professional move-out & move-in cleaning in Plainfield, IL. Get your full deposit back — guaranteed. Eco-friendly, fully insured. Free estimate.",
   keywords: [
     "move out cleaning Romeoville IL",
     "move in cleaning Romeoville IL",
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
     canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning",
   },
   openGraph: {
-    title: "Move Out Cleaning Romeoville IL | DSM Cleaning Solutions",
+    title: "Move-Out Cleaning Plainfield IL | DSM Cleaning Solutions",
     description:
-      "Professional move-out & move-in cleaning in Romeoville, IL. Get your full deposit back. Fully insured & eco-friendly.",
+      "Professional move-out & move-in cleaning in Plainfield, IL. Get your full deposit back — guaranteed. Eco-friendly, fully insured. Free estimate.",
     url: "https://www.dsmcleaningsolutions.com/move-out-cleaning",
   },
 };

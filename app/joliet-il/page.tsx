@@ -5,9 +5,9 @@ import { cities } from "@/lib/cityData";
 const city = cities.find((c) => c.slug === "joliet-il")!;
 
 export const metadata: Metadata = {
-  title: "House Cleaning Joliet IL | DSM Cleaning Solutions",
+  title: "Cleaning Service Joliet IL | DSM Cleaning Solutions",
   description:
-    "Professional house cleaning in Joliet, IL. Family-owned, eco-friendly, fully insured. Deep cleaning, move-out cleaning, and recurring maid service. Free estimates.",
+    "Professional house cleaning in Joliet, IL. Deep cleaning, move-out & recurring maid service. Family-owned, eco-friendly & insured. Free estimates today.",
   keywords: [
     "house cleaning Joliet IL",
     "cleaning service Joliet",

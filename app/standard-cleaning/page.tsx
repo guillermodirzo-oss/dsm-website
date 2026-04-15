@@ -4,8 +4,8 @@ import BookingForm from "@/components/BookingForm";
 import ReviewCard from "@/components/ReviewCard";
 
 export const metadata: Metadata = {
-  title: "Standard House Cleaning Romeoville IL | DSM Cleaning Solutions",
-  description: "Professional standard house cleaning in Romeoville, IL. One-time or recurring visits. Family-owned, eco-friendly, fully insured. Book online or call for a free estimate.",
+  title: "Standard Cleaning Plainfield IL | DSM Cleaning Solutions",
+  description: "Standard house cleaning in Plainfield, IL — one-time or recurring. Eco-friendly, fully insured. Family-owned. Get your free estimate today.",
   keywords: ["house cleaning Romeoville IL", "standard cleaning Romeoville", "home cleaning service Romeoville", "maid service Romeoville IL", "professional house cleaners Romeoville", "residential cleaning Romeoville IL"],
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/standard-cleaning" },
 };

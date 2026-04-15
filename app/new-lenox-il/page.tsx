@@ -5,9 +5,9 @@ import { cities } from "@/lib/cityData";
 const city = cities.find((c) => c.slug === "new-lenox-il")!;
 
 export const metadata: Metadata = {
-  title: "House Cleaning New Lenox IL | DSM Cleaning Solutions",
+  title: "Cleaning Service New Lenox IL | DSM Cleaning Solutions",
   description:
-    "Professional house cleaning in New Lenox, IL. Family-owned, eco-friendly, fully insured. Deep cleaning, move-out cleaning, and recurring maid service. Free estimates.",
+    "Local house cleaning in New Lenox, IL — deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Get a free estimate.",
   keywords: [
     "house cleaning New Lenox IL",
     "cleaning service New Lenox",

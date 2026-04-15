@@ -4,9 +4,9 @@ import BookingForm from "@/components/BookingForm";
 import ReviewCard from "@/components/ReviewCard";
 
 export const metadata: Metadata = {
-  title: "House Cleaning Plainfield IL | DSM Cleaning Solutions",
+  title: "Cleaning Service Plainfield IL | DSM Cleaning Solutions",
   description:
-    "Professional house cleaning in Plainfield, IL. Family-owned, eco-friendly, and fully insured. Deep cleaning, move-out cleaning, and recurring maid service. Free estimates.",
+    "DSM Cleaning Solutions serves all of Plainfield, IL — deep cleaning, standard cleaning, move-out & maid service. Family-owned, eco-friendly. Free estimate.",
   keywords: [
     "house cleaning Plainfield IL",
     "deep cleaning Plainfield IL",
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
     canonical: "https://www.dsmcleaningsolutions.com/plainfield-il",
   },
   openGraph: {
-    title: "House Cleaning Plainfield IL | DSM Cleaning Solutions",
+    title: "Cleaning Service Plainfield IL | DSM Cleaning Solutions",
     description:
-      "Professional, eco-friendly house cleaning in Plainfield, IL. Family-owned, fully insured. Free estimates.",
+      "DSM Cleaning Solutions serves all of Plainfield, IL — deep cleaning, standard cleaning, move-out & maid service. Family-owned, eco-friendly. Free estimate.",
     url: "https://www.dsmcleaningsolutions.com/plainfield-il",
   },
 };

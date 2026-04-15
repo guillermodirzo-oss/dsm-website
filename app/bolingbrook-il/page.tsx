@@ -5,9 +5,9 @@ import { cities } from "@/lib/cityData";
 const city = cities.find((c) => c.slug === "bolingbrook-il")!;
 
 export const metadata: Metadata = {
-  title: "House Cleaning Bolingbrook IL | DSM Cleaning Solutions",
+  title: "Cleaning Service Bolingbrook IL | DSM Cleaning Solutions",
   description:
-    "Professional house cleaning in Bolingbrook, IL. Family-owned, eco-friendly, fully insured. Deep cleaning, move-out cleaning, and recurring maid service. Free estimates.",
+    "Local house cleaning in Bolingbrook, IL — deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & insured. Call for a free estimate.",
   keywords: [
     "house cleaning Bolingbrook IL",
     "cleaning service Bolingbrook",
