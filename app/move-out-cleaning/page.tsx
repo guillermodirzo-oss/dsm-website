@@ -183,6 +183,19 @@ export default function MoveOutCleaningPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dsmcleaningsolutions.com" },
+              { "@type": "ListItem", position: 2, name: "Move-Out / Move-In Cleaning", item: "https://www.dsmcleaningsolutions.com/move-out-cleaning" },
+            ],
+          }),
+        }}
+      />
 
       {/* HERO */}
       <section className="bg-gradient-to-br from-brand-green-dark via-brand-green to-brand-green-light text-white py-16 md:py-20">

@@ -26,7 +26,11 @@
       "Bash(sed -i 's|<div className=\"bg-white rounded-2xl p-8 shadow-xl\">|<div className=\"bg-white rounded-2xl overflow-hidden shadow-xl\">|g' /c/Users/DSM/Desktop/dsm-website/__TRACKED_VAR__)",
       "Bash(sed -i 's|<div className=\"bg-white rounded-3xl p-8 shadow-xl\">|<div className=\"bg-white rounded-3xl overflow-hidden shadow-xl\">|g' /c/Users/DSM/Desktop/dsm-website/__TRACKED_VAR__)",
       "Bash(ls C:/Users/DSM/Desktop/dsm-website/public/spring-ad-*.png)",
-      "Bash(xargs sed:*)"
+      "Bash(xargs sed:*)",
+      "WebFetch(domain:www.dsmcleaningsolutions.com)",
+      "Bash(ls \"C:\\\\Users\\\\DSM\\\\Desktop\\\\dsm-website\\\\app\" /b)",
+      "Bash(dir \"C:\\\\Users\\\\DSM\\\\Desktop\\\\dsm-website\\\\app\" /b)",
+      "Bash(npx tsc:*)"
     ]
   }
 }

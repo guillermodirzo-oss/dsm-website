@@ -38,6 +38,37 @@ export default function StandardCleaningPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Standard House Cleaning Service",
+            provider: {
+              "@type": "LocalBusiness",
+              "@id": "https://www.dsmcleaningsolutions.com/#business",
+              name: "DSM Cleaning Solutions",
+              telephone: "+18152462113",
+            },
+            areaServed: ["Romeoville, IL", "Plainfield, IL", "Naperville, IL", "Bolingbrook, IL"],
+            description: "Professional standard house cleaning in Romeoville, IL. Recurring or one-time residential cleaning tailored to your home and schedule. Eco-friendly, fully insured.",
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dsmcleaningsolutions.com" },
+              { "@type": "ListItem", position: 2, name: "Standard House Cleaning", item: "https://www.dsmcleaningsolutions.com/standard-cleaning" },
+            ],
+          }),
+        }}
+      />
 
       {/* HERO */}
       <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-orange-900 text-white py-20 md:py-28 overflow-hidden">

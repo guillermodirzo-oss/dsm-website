@@ -70,6 +70,43 @@ const serviceAreas = [
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "@id": "https://www.dsmcleaningsolutions.com/#business",
+            name: "DSM Cleaning Solutions",
+            url: "https://www.dsmcleaningsolutions.com",
+            telephone: "+18152462113",
+            description: "Family-owned, eco-friendly professional house cleaning service based in Plainfield, IL. Serving Romeoville, Naperville, Bolingbrook, and the southwest Chicago suburbs.",
+            foundingDate: "2019",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Plainfield",
+              addressRegion: "IL",
+              postalCode: "60585",
+              addressCountry: "US",
+            },
+            areaServed: ["Romeoville, IL", "Plainfield, IL", "Naperville, IL", "Bolingbrook, IL", "Joliet, IL"],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dsmcleaningsolutions.com" },
+              { "@type": "ListItem", position: 2, name: "About Us", item: "https://www.dsmcleaningsolutions.com/about" },
+            ],
+          }),
+        }}
+      />
+
       {/* ─── SECTION 1: HERO ─── */}
       <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-orange-900 py-20 md:py-28">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
