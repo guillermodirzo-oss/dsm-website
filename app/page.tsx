@@ -45,19 +45,6 @@ const serviceAreas = [
   { city: "Shorewood", slug: "/shorewood-il" }, { city: "Minooka", slug: "/minooka-il" },
 ];
 
-const localBusinessSchema = {
-  "@context": "https://schema.org", "@type": "LocalBusiness",
-  "@id": "https://www.dsmcleaningsolutions.com/#business",
-  name: "DSM Cleaning Solutions",
-  description: "Family-owned, eco-friendly professional house cleaning service serving Romeoville, Plainfield, and the southwest Chicago suburbs. Fully insured and bonded.",
-  url: "https://www.dsmcleaningsolutions.com", telephone: "+18152462113", priceRange: "$$",
-  image: "https://www.dsmcleaningsolutions.com/og-image.jpg",
-  address: { "@type": "PostalAddress", addressLocality: "Romeoville", addressRegion: "IL", postalCode: "60446", addressCountry: "US" },
-  geo: { "@type": "GeoCoordinates", latitude: 41.6475, longitude: -88.0892 },
-  areaServed: ["Romeoville, IL", "Plainfield, IL", "Naperville, IL", "Bolingbrook, IL", "Joliet, IL", "Westmont, IL"],
-  aggregateRating: { "@type": "AggregateRating", ratingValue: "5", reviewCount: "47" },
-};
-
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: faqs.map((faq) => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })),
@@ -66,7 +53,6 @@ const faqSchema = {
 export default function HomePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* ─── HERO ─── */}

@@ -75,7 +75,7 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Organization",
+            "@type": "LocalBusiness",
             "@id": "https://www.dsmcleaningsolutions.com/#business",
             name: "DSM Cleaning Solutions",
             url: "https://www.dsmcleaningsolutions.com",

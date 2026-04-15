@@ -67,7 +67,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": ["LocalBusiness", "HouseCleaning"],
+              "@type": "LocalBusiness",
               "@id": "https://www.dsmcleaningsolutions.com/#business",
               name: "DSM Cleaning Solutions",
               description: "Family-owned, eco-friendly professional house cleaning service serving Romeoville, Plainfield, and the southwest Chicago suburbs. Fully insured and bonded.",
@@ -77,7 +77,6 @@ export default function RootLayout({
               image: "https://www.dsmcleaningsolutions.com/og-image.jpg",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "",
                 addressLocality: "Plainfield",
                 addressRegion: "IL",
                 postalCode: "60585",
