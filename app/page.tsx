@@ -267,18 +267,19 @@ export default function HomePage() {
               <p className="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">Our Story</p>
               <h2 className="section-heading text-4xl md:text-5xl">A Family Business Built on Trust</h2>
               <p className="text-gray-500 mb-5 leading-relaxed">
-                DSM Cleaning Solutions was born right here in Romeoville, IL. As a family-owned and operated
-                cleaning company, we understand that inviting someone into your home is a matter of trust —
-                and we take that responsibility seriously.
+                DSM Cleaning Solutions was born right here in Romeoville, IL (zip code 60446). As a family-owned
+                and operated cleaning company, we understand that inviting someone into your home is a matter of
+                trust — and we take that responsibility seriously.
               </p>
               <p className="text-gray-500 mb-5 leading-relaxed">
-                We serve families across Romeoville, Plainfield, and the entire southwest Chicago suburbs. Unlike
-                large national chains, we&apos;re your neighbors. We know this community, we live here, and we bring
-                genuine care to every home we clean.
+                We serve families throughout Romeoville — from Lakewood Falls and Windstone to Hidden Lakes and
+                Grand Haven — and across the entire southwest Chicago suburbs. Whether you live near the Isle a
+                la Cache Museum or along Romeo Lake, we&apos;re your true local neighbors.
               </p>
               <p className="text-gray-500 mb-8 leading-relaxed">
                 Our commitment to eco-friendly cleaning means we use non-toxic, biodegradable products that are
-                safe for children, pets, and the environment.
+                safe for children, pets, and the environment — because Romeoville families deserve a clean home
+                they can feel good about.
               </p>
 
               <div className="grid grid-cols-2 gap-4 mb-8">
@@ -348,6 +349,56 @@ export default function HomePage() {
             Not sure if we cover your area?{" "}
             <a href="tel:+18152462113" className="text-brand-green font-semibold hover:underline">(815) 246-2113</a>
           </p>
+        </div>
+      </section>
+
+      {/* ─── ROMEOVILLE NEIGHBORHOODS ─── */}
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <div>
+              <p className="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">Our Home Base</p>
+              <h2 className="section-heading text-3xl md:text-4xl mb-4">Romeoville Neighborhoods We Serve</h2>
+              <p className="text-gray-500 mb-5 leading-relaxed">
+                Based in Romeoville, IL (60446), DSM Cleaning Solutions knows every corner of this community.
+                We clean homes throughout every neighborhood — from the newest developments to established
+                subdivisions we&apos;ve served for years.
+              </p>
+              <div className="grid grid-cols-2 gap-2 mb-5">
+                {["Lakewood Falls", "Windstone", "Hidden Lakes", "Grand Haven", "Fox Run", "Prairieview"].map((n) => (
+                  <div key={n} className="flex items-center gap-2 text-gray-700 text-sm">
+                    <svg className="w-4 h-4 text-brand-green flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                      <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                    {n}
+                  </div>
+                ))}
+              </div>
+              <p className="text-gray-400 text-sm">Zip code served: 60446</p>
+            </div>
+            <div>
+              <h3 className="font-bold text-xl text-gray-900 mb-4">Local Romeoville Landmarks</h3>
+              <p className="text-gray-500 mb-4 text-sm leading-relaxed">
+                We&apos;re proud to call Romeoville home — and to serve the families who live near these
+                well-known local landmarks:
+              </p>
+              <div className="space-y-2">
+                {[
+                  "Isle a la Cache Museum",
+                  "Romeo Lake",
+                  "Romeoville Athletic & Events Center",
+                  "Independence Park",
+                  "Route 53 / Weber Road Corridor",
+                ].map((l) => (
+                  <div key={l} className="flex items-center gap-3 bg-gray-50 rounded-xl p-3 border border-gray-100">
+                    <span className="text-xl">📍</span>
+                    <span className="text-gray-700 font-medium text-sm">{l}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
