@@ -39,6 +39,15 @@ export default function SpringSpecialPage() {
       {/* ─── SECTION 1: STICKY TOP BAR ─── */}
       <div className="sticky top-0 z-50 bg-gray-950 border-b border-gray-800 py-2 px-4">
         <div className="max-w-5xl mx-auto flex items-center justify-between gap-3">
+          {/* Logo — links back to home page */}
+          <a href="/" aria-label="DSM Cleaning Solutions — Home">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/Logo.png"
+              alt="DSM Cleaning Solutions"
+              className="h-10 w-auto object-contain"
+            />
+          </a>
           <a
             href={PHONE_HREF}
             className="text-white font-bold text-sm sm:text-base hover:text-orange-400 transition-colors flex items-center gap-1.5"
