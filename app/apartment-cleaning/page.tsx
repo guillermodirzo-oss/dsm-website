@@ -148,6 +148,45 @@ export default function ApartmentCleaningPage() {
         </div>
       </section>
 
+      {/* PHOTO GALLERY */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">Our Work</p>
+            <h2 className="section-heading">Apartment Cleaning Results</h2>
+            <p className="section-subheading mx-auto">
+              Real apartments and condos we&apos;ve cleaned across Plainfield, Romeoville, and the southwest suburbs.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
+              <img
+                src="/Work%20Pictures/IMG_0220.jpg"
+                alt="Clean apartment bathroom with bidet — professional apartment cleaning service in Romeoville IL"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
+              <img
+                src="/Work%20Pictures/IMG_0224.jpg"
+                alt="Clean apartment with parquet hardwood floors — apartment cleaning in Plainfield IL"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
+              <img
+                src="/Work%20Pictures/IMG_1610.jpg"
+                alt="Clean bedroom maintained with recurring apartment cleaning service in the southwest suburbs"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* REVIEWS */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

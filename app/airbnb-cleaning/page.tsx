@@ -172,6 +172,45 @@ export default function AirbnbCleaningPage() {
         </div>
       </section>
 
+      {/* PHOTO GALLERY */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">Our Work</p>
+            <h2 className="section-heading">Guest-Ready Results</h2>
+            <p className="section-subheading mx-auto">
+              Properties we&apos;ve turned over for Airbnb and short-term rental hosts across the southwest suburbs.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
+              <img
+                src="/Work%20Pictures/IMG_2038.jpg"
+                alt="Clean furnished bedroom guest-ready after Airbnb turnover cleaning in Romeoville IL"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
+              <img
+                src="/Work%20Pictures/IMG_2033.jpg"
+                alt="Sparkling clean glass shower — Airbnb bathroom turnover cleaning in Plainfield IL"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
+              <img
+                src="/Work%20Pictures/IMG_1601.jpg"
+                alt="Spotless living room after short-term rental turnover cleaning in the southwest Chicago suburbs"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* REVIEWS */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

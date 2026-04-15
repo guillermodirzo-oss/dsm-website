@@ -310,6 +310,45 @@ export default function MoveOutCleaningPage() {
         </div>
       </section>
 
+      {/* PHOTO GALLERY */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">Our Work</p>
+            <h2 className="section-heading">Move-Out Cleaning Results</h2>
+            <p className="section-subheading mx-auto">
+              Homes and apartments we&apos;ve cleaned to deposit-back standards across Plainfield, Romeoville, and the southwest suburbs.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
+              <img
+                src="/Work%20Pictures/IMG_1724.jpg"
+                alt="Clean laundry room ready for move-out inspection — move-out cleaning in Romeoville IL"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
+              <img
+                src="/Work%20Pictures/IMG_2035.jpg"
+                alt="Bathroom with walk-in shower deep cleaned for move-out inspection in Plainfield IL"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
+              <img
+                src="/Work%20Pictures/IMG_0224.jpg"
+                alt="Empty apartment with spotless parquet floors after professional move-out cleaning"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* REVIEWS */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

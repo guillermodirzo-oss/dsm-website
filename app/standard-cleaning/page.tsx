@@ -72,7 +72,7 @@ export default function StandardCleaningPage() {
 
       {/* HERO */}
       <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-orange-900 text-white py-20 md:py-28 overflow-hidden">
-        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=1920&q=80&auto=format&fit=crop')", backgroundSize: "cover", backgroundPosition: "center" }} />
+        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url('/Work%20Pictures/IMG_1601.jpg')", backgroundSize: "cover", backgroundPosition: "center" }} />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 text-sm text-white/50 mb-5">
             <Link href="/" className="hover:text-white">Home</Link><span>/</span><span className="text-white">Standard House Cleaning</span>
@@ -168,6 +168,43 @@ export default function StandardCleaningPage() {
                 </ul>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PHOTO GALLERY */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">Our Work</p>
+            <h2 className="section-heading">Standard Cleaning Results</h2>
+            <p className="section-subheading mx-auto">A look at real homes we&apos;ve kept spotless across Plainfield, Romeoville, and the southwest suburbs.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
+              <img
+                src="/Work%20Pictures/IMG_1601.jpg"
+                alt="Clean living room with dark hardwood floors maintained with recurring house cleaning in Plainfield IL"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
+              <img
+                src="/Work%20Pictures/IMG_1610.jpg"
+                alt="Clean bedroom with hardwood floors — standard maid service in Romeoville IL"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
+              <img
+                src="/Work%20Pictures/IMG_0220.jpg"
+                alt="Sparkling clean bathroom after standard house cleaning service in the southwest Chicago suburbs"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </section>

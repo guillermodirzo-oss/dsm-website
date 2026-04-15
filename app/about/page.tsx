@@ -177,6 +177,53 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ─── SECTION: PHOTO GALLERY ─── */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">Our Work</p>
+            <h2 className="section-heading text-4xl">Homes We&apos;ve Transformed</h2>
+            <p className="section-subheading mx-auto">
+              Real results from real homes across Plainfield, Romeoville, and the southwest suburbs.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="relative aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
+              <img
+                src="/Work%20Pictures/Google Post Image - Cleaning Service (25).png"
+                alt="DSM Cleaning Solutions professional cleaner at work in a Plainfield IL home"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <div className="relative aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
+              <img
+                src="/Work%20Pictures/IMG_2033.jpg"
+                alt="Glass shower deep cleaned to sparkling perfection by DSM Cleaning Solutions in Romeoville IL"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <div className="relative aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
+              <img
+                src="/Work%20Pictures/IMG_1601.jpg"
+                alt="Clean living room with hardwood floors after house cleaning by DSM Cleaning Solutions"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <div className="relative aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
+              <img
+                src="/Work%20Pictures/Google Post Image - Cleaning Service (1).png"
+                alt="Clean modern kitchen with granite island after professional cleaning in Plainfield IL"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ─── SECTION 3: VALUES ─── */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

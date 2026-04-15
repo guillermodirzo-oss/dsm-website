@@ -220,6 +220,45 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ─── OUR WORK GALLERY ─── */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">Real Results</p>
+            <h2 className="section-heading text-4xl md:text-5xl">See Our Work in Action</h2>
+            <p className="section-subheading mx-auto text-lg">
+              Real homes, real results — from kitchens and bathrooms to bedrooms and living rooms across Plainfield &amp; Romeoville.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {[
+              { src: "/Work%20Pictures/IMG_1601.jpg", alt: "Clean living room with dark hardwood floors after professional house cleaning in Plainfield IL" },
+              { src: "/Work%20Pictures/IMG_2033.jpg", alt: "Sparkling clean glass shower with stone tiles — deep cleaning result in Romeoville IL" },
+              { src: "/Work%20Pictures/IMG_1610.jpg", alt: "Clean bedroom maintained with recurring maid service in Plainfield IL" },
+              { src: "/Work%20Pictures/IMG_0220.jpg", alt: "Clean bathroom with bidet after apartment cleaning service in the southwest suburbs" },
+              { src: "/Work%20Pictures/IMG_2036.jpg", alt: "Elegant double vanity cleaned and polished — deep cleaning by DSM Cleaning Solutions" },
+              { src: "/Work%20Pictures/Google Post Image - Cleaning Service (1).png", alt: "Clean modern kitchen with granite island — professional house cleaning in Romeoville IL" },
+            ].map((photo) => (
+              <div key={photo.src} className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" className="btn-primary btn-lg">
+              Book Your Cleaning Today
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ─── ABOUT ─── */}
       <section id="about" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -263,12 +302,12 @@ export default function HomePage() {
 
             <div className="relative">
               {/* Image with overlay card */}
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-orange-100 h-[500px]"
-                style={{
-                  backgroundImage: "url('https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=800&q=80&auto=format&fit=crop')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}>
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-orange-100 h-[500px]">
+                <img
+                  src="/Work%20Pictures/Google Post Image - Cleaning Service (25).png"
+                  alt="DSM Cleaning Solutions professional cleaner at work in a Plainfield IL home"
+                  className="w-full h-full object-cover"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
               </div>
               {/* Floating trust card */}
