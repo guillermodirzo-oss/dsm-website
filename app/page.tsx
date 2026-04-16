@@ -34,7 +34,7 @@ const faqs = [
   { question: "Do you use eco-friendly cleaning products?", answer: "Absolutely. We use non-toxic, eco-friendly cleaning products that are safe for children, pets, and the environment. Our green cleaning approach delivers a deep clean without harsh chemicals." },
   { question: "Can I book cleaning online?", answer: "Yes! You can book directly through our online booking page or call us at (815) 246-2113. We respond within 1 business day." },
   { question: "What areas do you serve?", answer: "We primarily serve Romeoville and Plainfield, IL, and extend to Naperville, Bolingbrook, Joliet, Westmont, and the surrounding southwest Chicago suburbs." },
-  { question: "What is your satisfaction guarantee?", answer: "Your satisfaction is our top priority. If you're not completely happy with our cleaning, let us know within 24 hours and we'll return to re-clean the area at no additional charge." },
+  { question: "What is your satisfaction guarantee?", answer: "Your satisfaction is our top priority. If you're not completely happy with our cleaning, let us know within 48 hours and we'll return to re-clean the area at no additional charge." },
 ];
 
 const serviceAreas = [
