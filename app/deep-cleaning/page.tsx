@@ -519,7 +519,7 @@ export default function DeepCleaningPage() {
       <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Other Cleaning Services We Offer</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
             <Link href="/move-out-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Move-Out / Move-In Cleaning</h3>
               <p className="text-sm text-gray-600">Get your deposit back with a thorough move-out clean.</p>
@@ -531,6 +531,21 @@ export default function DeepCleaningPage() {
             <Link href="/plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Cleaning in Plainfield, IL</h3>
               <p className="text-sm text-gray-600">Deep cleaning services available in Plainfield.</p>
+            </Link>
+          </div>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">We Offer Deep Cleaning Across the Area</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <Link href="/deep-cleaning-plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Plainfield, IL</h3>
+              <p className="text-sm text-gray-600">Serving all of Plainfield — zip codes 60544 & 60585.</p>
+            </Link>
+            <Link href="/deep-cleaning-naperville-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Naperville, IL</h3>
+              <p className="text-sm text-gray-600">Serving 60540, 60563, 60564 & 60565.</p>
+            </Link>
+            <Link href="/deep-cleaning-romeoville-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Romeoville, IL</h3>
+              <p className="text-sm text-gray-600">Serving all of Romeoville (60446) — our home base.</p>
             </Link>
           </div>
         </div>

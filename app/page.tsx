@@ -409,6 +409,27 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ─── POPULAR SERVICES IN ROMEOVILLE ─── */}
+      <section className="py-10 bg-white border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Popular Services in Romeoville, IL</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <Link href="/deep-cleaning-romeoville-il" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Romeoville</h3>
+              <p className="text-sm text-gray-600">Top-to-bottom deep cleaning for Romeoville homes (60446).</p>
+            </Link>
+            <Link href="/standard-cleaning-romeoville-il" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Standard Cleaning in Romeoville</h3>
+              <p className="text-sm text-gray-600">Weekly, biweekly & monthly house cleaning in Romeoville.</p>
+            </Link>
+            <Link href="/move-out-cleaning-romeoville-il" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning in Romeoville</h3>
+              <p className="text-sm text-gray-600">Deposit-back move-out cleaning for Romeoville rentals.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ─── FAQ ─── */}
       <section id="faq" className="py-24 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">

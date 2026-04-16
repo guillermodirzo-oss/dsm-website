@@ -421,7 +421,7 @@ export default function MoveOutCleaningPage() {
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Other Services You May Need</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
             <Link href="/deep-cleaning" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning</h3>
               <p className="text-sm text-gray-600">Perfect if your new home needs a thorough first clean.</p>
@@ -433,6 +433,21 @@ export default function MoveOutCleaningPage() {
             <Link href="/plainfield-il" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Plainfield, IL Cleaning</h3>
               <p className="text-sm text-gray-600">Move-out cleaning available throughout Plainfield.</p>
+            </Link>
+          </div>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">We Offer Move-Out Cleaning Across the Area</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <Link href="/move-out-cleaning-plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning in Plainfield, IL</h3>
+              <p className="text-sm text-gray-600">Serving all of Plainfield — zip codes 60544 & 60585.</p>
+            </Link>
+            <Link href="/move-out-cleaning-naperville-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning in Naperville, IL</h3>
+              <p className="text-sm text-gray-600">Serving 60540, 60563, 60564 & 60565.</p>
+            </Link>
+            <Link href="/move-out-cleaning-romeoville-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning in Romeoville, IL</h3>
+              <p className="text-sm text-gray-600">Serving all of Romeoville (60446) — our home base.</p>
             </Link>
           </div>
         </div>

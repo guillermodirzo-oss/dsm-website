@@ -458,6 +458,27 @@ export default function PlainfieldPage() {
         </div>
       </section>
 
+      {/* POPULAR SERVICES IN PLAINFIELD */}
+      <section className="py-12 bg-gray-50 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-xl font-bold text-gray-900 mb-5">Popular Services in Plainfield, IL</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <Link href="/deep-cleaning-plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Plainfield</h3>
+              <p className="text-sm text-gray-600">Top-to-bottom deep cleaning for Plainfield homes — 60544 & 60585.</p>
+            </Link>
+            <Link href="/standard-cleaning-plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Standard Cleaning in Plainfield</h3>
+              <p className="text-sm text-gray-600">Weekly, biweekly & monthly house cleaning in Plainfield.</p>
+            </Link>
+            <Link href="/move-out-cleaning-plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning in Plainfield</h3>
+              <p className="text-sm text-gray-600">Deposit-back move-out cleaning for Plainfield rentals.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* NEARBY AREAS */}
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

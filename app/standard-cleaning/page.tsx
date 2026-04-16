@@ -250,10 +250,25 @@ export default function StandardCleaningPage() {
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-xl font-bold text-gray-900 mb-5">Other Services You Might Need</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
             <Link href="/deep-cleaning" className="bg-gray-50 rounded-2xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all"><h3 className="font-bold text-gray-900 mb-1">Deep Cleaning</h3><p className="text-sm text-gray-500">Start with a thorough deep clean before recurring service.</p></Link>
             <Link href="/recurring-cleaning" className="bg-gray-50 rounded-2xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all"><h3 className="font-bold text-gray-900 mb-1">Recurring Maid Service</h3><p className="text-sm text-gray-500">Set up a weekly, biweekly, or monthly plan.</p></Link>
             <Link href="/one-time-cleaning" className="bg-gray-50 rounded-2xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all"><h3 className="font-bold text-gray-900 mb-1">One-Time Cleaning</h3><p className="text-sm text-gray-500">No commitment — book when you need it.</p></Link>
+          </div>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">We Offer Standard Cleaning Across the Area</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <Link href="/standard-cleaning-plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Standard Cleaning in Plainfield, IL</h3>
+              <p className="text-sm text-gray-600">Serving all of Plainfield — zip codes 60544 & 60585.</p>
+            </Link>
+            <Link href="/standard-cleaning-naperville-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Standard Cleaning in Naperville, IL</h3>
+              <p className="text-sm text-gray-600">Serving 60540, 60563, 60564 & 60565.</p>
+            </Link>
+            <Link href="/standard-cleaning-romeoville-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Standard Cleaning in Romeoville, IL</h3>
+              <p className="text-sm text-gray-600">Serving all of Romeoville (60446) — our home base.</p>
+            </Link>
           </div>
         </div>
       </section>
