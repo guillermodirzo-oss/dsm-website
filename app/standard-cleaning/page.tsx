@@ -17,6 +17,8 @@ const faqSchema = {
     { "@type": "Question", name: "What is included in a standard house cleaning?", acceptedAnswer: { "@type": "Answer", text: "Our standard cleaning covers all main living areas: vacuuming, mopping, bathroom cleaning and disinfecting, kitchen surface wipe-down, dusting, and trash removal. We can customize the checklist for your home." } },
     { "@type": "Question", name: "How often should I get a standard house cleaning?", acceptedAnswer: { "@type": "Answer", text: "Most families in Romeoville choose biweekly (every 2 weeks) service. Weekly is great for busy households or homes with pets. Monthly works well if you do light upkeep in between." } },
     { "@type": "Question", name: "How much does standard house cleaning cost in Romeoville?", acceptedAnswer: { "@type": "Answer", text: "Standard cleaning starts around $120–$180 for an average home and varies by size and frequency. Recurring clients receive discounted rates. Contact us for a free personalized estimate." } },
+    { "@type": "Question", name: "Do I need to be home during the cleaning?", acceptedAnswer: { "@type": "Answer", text: "No — many clients provide a key or access code. Our fully insured and background-checked team will take excellent care of your home." } },
+    { "@type": "Question", name: "Do you bring your own cleaning supplies?", acceptedAnswer: { "@type": "Answer", text: "Yes! We bring all eco-friendly, non-toxic cleaning products and equipment. You don't need to provide anything." } },
   ],
 };
 
@@ -45,6 +47,7 @@ export default function StandardCleaningPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
+            serviceType: "Standard House Cleaning",
             name: "Standard House Cleaning Service",
             provider: {
               "@type": "LocalBusiness",

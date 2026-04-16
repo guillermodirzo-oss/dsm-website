@@ -67,25 +67,25 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "LocalBusiness",
+              "@type": ["LocalBusiness", "HouseCleaning"],
               "@id": "https://www.dsmcleaningsolutions.com/#business",
               name: "DSM Cleaning Solutions",
-              description: "Family-owned, eco-friendly professional house cleaning service serving Romeoville, Plainfield, and the southwest Chicago suburbs. Fully insured and bonded.",
+              description: "Professional house cleaning services serving Plainfield, Romeoville, Naperville, and Bolingbrook IL. Family owned, fully insured, eco-friendly products.",
               url: "https://www.dsmcleaningsolutions.com",
               telephone: "+18152462113",
               priceRange: "$$",
-              image: "https://www.dsmcleaningsolutions.com/og-image.jpg",
+              image: "https://www.dsmcleaningsolutions.com/Logo.png",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Plainfield",
                 addressRegion: "IL",
-                postalCode: "60585",
+                postalCode: "60544",
                 addressCountry: "US",
               },
               geo: {
                 "@type": "GeoCoordinates",
-                latitude: 41.6133,
-                longitude: -88.2062,
+                latitude: 41.6328,
+                longitude: -88.2120,
               },
               openingHoursSpecification: [
                 {
@@ -108,7 +108,11 @@ export default function RootLayout({
                 ratingValue: "5",
                 reviewCount: "47",
                 bestRating: "5",
+                worstRating: "1",
               },
+              sameAs: [
+                "https://www.yelp.com/biz/dsm-cleaning-solutions",
+              ],
             }),
           }}
         />

@@ -35,6 +35,7 @@ export const metadata: Metadata = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
+  serviceType: "Move Out Cleaning",
   name: "Move-Out and Move-In Cleaning Service",
   provider: {
     "@type": "LocalBusiness",
@@ -86,6 +87,14 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text: "Yes! We specialize in empty apartment and house cleaning for both tenants moving out and tenants moving in. We serve Romeoville, Plainfield, Naperville, Bolingbrook, and surrounding areas.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer move-in cleaning in Plainfield, IL?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolutely. We serve both Romeoville and Plainfield, IL with full move-in and move-out cleaning services. Starting fresh in a perfectly clean home is our specialty.",
       },
     },
   ],

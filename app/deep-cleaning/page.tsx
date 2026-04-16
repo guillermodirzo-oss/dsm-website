@@ -73,6 +73,7 @@ const faqSchema = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
+  serviceType: "Deep Cleaning",
   name: "Deep Cleaning Service",
   provider: {
     "@type": "LocalBusiness",
