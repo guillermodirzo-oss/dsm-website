@@ -41,11 +41,11 @@ export default function Footer() {
                 { label: "Deep Cleaning", href: "/deep-cleaning" },
                 { label: "Move-Out / Move-In Cleaning", href: "/move-out-cleaning" },
                 { label: "Recurring Maid Service", href: "/recurring-cleaning" },
-                { label: "Standard House Cleaning", href: "https://dsmcleaningsolutions.bookingkoala.com/booknow" },
-                { label: "Eco-Friendly Green Cleaning", href: "https://dsmcleaningsolutions.bookingkoala.com/booknow" },
-                { label: "Apartment Cleaning", href: "https://dsmcleaningsolutions.bookingkoala.com/booknow" },
-                { label: "Post-Construction Cleaning", href: "https://dsmcleaningsolutions.bookingkoala.com/booknow" },
-                { label: "Airbnb / Short-Term Rental", href: "https://dsmcleaningsolutions.bookingkoala.com/booknow" },
+                { label: "Standard House Cleaning", href: "/standard-cleaning" },
+                { label: "Eco-Friendly Green Cleaning", href: "/eco-friendly-cleaning" },
+                { label: "Apartment Cleaning", href: "/apartment-cleaning" },
+                { label: "Post-Construction Cleaning", href: "/post-construction-cleaning" },
+                { label: "Airbnb / Short-Term Rental", href: "/airbnb-cleaning" },
               ].map((item) => (
                 <li key={item.label}><Link href={item.href} {...(item.href.startsWith("https://") ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="hover:text-white transition-colors">{item.label}</Link></li>
               ))}
