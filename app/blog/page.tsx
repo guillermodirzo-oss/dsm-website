@@ -3,7 +3,7 @@ import Link from "next/link";
 import { blogPosts } from "@/lib/blogData";
 
 export const metadata: Metadata = {
-  title: "Cleaning Tips Blog | DSM Cleaning Solutions",
+  title: "Cleaning Tips & Local Guides",
   description:
     "Cleaning tips, checklists, and local guides from DSM Cleaning Solutions — serving Plainfield, Romeoville, Naperville & the southwest Chicago suburbs.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/blog" },

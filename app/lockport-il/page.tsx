@@ -5,7 +5,7 @@ import { cities } from "@/lib/cityData";
 const city = cities.find((c) => c.slug === "lockport-il")!;
 
 export const metadata: Metadata = {
-  title: "Cleaning Service Lockport IL | DSM Cleaning Solutions",
+  title: "House Cleaning Lockport IL",
   description:
     "Reliable house cleaning in Lockport, IL — deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Free estimates.",
   keywords: [

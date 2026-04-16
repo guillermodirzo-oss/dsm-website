@@ -4,7 +4,7 @@ import BookingForm from "@/components/BookingForm";
 import ReviewCard from "@/components/ReviewCard";
 
 export const metadata: Metadata = {
-  title: "Eco-Friendly Cleaning Plainfield IL | DSM Cleaning Solutions",
+  title: "Eco-Friendly Cleaning Plainfield IL",
   description: "Green, non-toxic house cleaning in Plainfield, IL. Safe for kids & pets. Professional eco products. No harsh chemicals. Fully insured. Free estimate.",
   keywords: ["eco-friendly cleaning Romeoville IL", "green cleaning service Romeoville", "non-toxic house cleaning Romeoville", "natural cleaning service Romeoville IL", "safe cleaning products Romeoville", "organic cleaning Romeoville IL"],
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/eco-friendly-cleaning" },

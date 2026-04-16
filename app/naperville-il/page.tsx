@@ -5,7 +5,7 @@ import { cities } from "@/lib/cityData";
 const city = cities.find((c) => c.slug === "naperville-il")!;
 
 export const metadata: Metadata = {
-  title: "Cleaning Service Naperville IL | DSM Cleaning Solutions",
+  title: "House Cleaning Naperville IL",
   description:
     "Family-owned house cleaning in Naperville, IL. Deep cleaning, move-out & recurring maid service near you. Eco-friendly & insured. Call for a free estimate.",
   keywords: [

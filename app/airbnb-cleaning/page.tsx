@@ -5,7 +5,7 @@ import BookingForm from "@/components/BookingForm";
 import ReviewCard from "@/components/ReviewCard";
 
 export const metadata: Metadata = {
-  title: "Airbnb Cleaning Plainfield IL | DSM Cleaning Solutions",
+  title: "Airbnb Cleaning Plainfield IL",
   description: "5-star Airbnb & vacation rental cleaning in Plainfield, IL. Fast turnovers, linen resets & restocking. Reliable & insured. Get a free turnover quote.",
   keywords: ["Airbnb cleaning Romeoville IL", "short term rental cleaning Romeoville", "vacation rental cleaning Romeoville", "VRBO cleaning Romeoville IL", "rental turnover cleaning Romeoville", "Airbnb cleaner Romeoville IL"],
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/airbnb-cleaning" },

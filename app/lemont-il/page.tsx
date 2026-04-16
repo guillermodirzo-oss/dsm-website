@@ -5,7 +5,7 @@ import { cities } from "@/lib/cityData";
 const city = cities.find((c) => c.slug === "lemont-il")!;
 
 export const metadata: Metadata = {
-  title: "Cleaning Service Lemont IL | DSM Cleaning Solutions",
+  title: "House Cleaning Lemont IL",
   description:
     "Trusted house cleaning in Lemont, IL — deep cleaning, standard & recurring maid service. Eco-friendly, insured. Family-owned. Free estimate.",
   keywords: [

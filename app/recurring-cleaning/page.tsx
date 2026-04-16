@@ -4,7 +4,7 @@ import BookingForm from "@/components/BookingForm";
 import ReviewCard from "@/components/ReviewCard";
 
 export const metadata: Metadata = {
-  title: "Recurring Maid Service Plainfield IL | DSM Cleaning",
+  title: "Recurring Cleaning Plainfield IL",
   description:
     "Weekly, biweekly & monthly maid service in Plainfield, IL. Reliable, eco-friendly & insured. Save up to 20% with recurring plans. Free estimate.",
   keywords: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     canonical: "https://www.dsmcleaningsolutions.com/recurring-cleaning",
   },
   openGraph: {
-    title: "Recurring Maid Service Plainfield IL | DSM Cleaning",
+    title: "Recurring Cleaning Plainfield IL",
     description:
       "Weekly, biweekly & monthly maid service in Plainfield, IL. Reliable, eco-friendly & insured. Save up to 20% with recurring plans. Free estimate.",
     url: "https://www.dsmcleaningsolutions.com/recurring-cleaning",

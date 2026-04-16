@@ -5,7 +5,7 @@ import { cities } from "@/lib/cityData";
 const city = cities.find((c) => c.slug === "shorewood-il")!;
 
 export const metadata: Metadata = {
-  title: "Cleaning Service Shorewood IL | DSM Cleaning Solutions",
+  title: "House Cleaning Shorewood IL",
   description:
     "Quality house cleaning in Shorewood, IL — deep cleaning, standard & recurring service. Family-owned, eco-friendly & insured. Free estimate.",
   keywords: [

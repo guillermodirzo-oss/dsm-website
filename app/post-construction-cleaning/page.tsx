@@ -4,7 +4,7 @@ import BookingForm from "@/components/BookingForm";
 import ReviewCard from "@/components/ReviewCard";
 
 export const metadata: Metadata = {
-  title: "Post-Construction Cleaning Plainfield IL | DSM Cleaning",
+  title: "Post-Construction Cleaning IL",
   description: "We remove construction dust, debris & residue from new builds & renovations in Plainfield, IL. Fully insured post-construction cleaners. Free estimates.",
   keywords: ["post construction cleaning Romeoville IL", "construction cleanup Romeoville", "after construction cleaning Romeoville", "new construction cleaning Romeoville IL", "renovation cleanup Romeoville", "builder cleanup service Romeoville IL"],
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/post-construction-cleaning" },

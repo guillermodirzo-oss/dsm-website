@@ -5,7 +5,7 @@ import BookingForm from "@/components/BookingForm";
 import ReviewCard from "@/components/ReviewCard";
 
 export const metadata: Metadata = {
-  title: "Trusted Cleaning Company Plainfield IL | DSM Cleaning",
+  title: "Our Cleaning Team in Plainfield IL",
   description:
     "Meet DSM Cleaning Solutions — your trusted, family-owned cleaning company in Plainfield, IL. 5-star rated, eco-friendly & fully insured. Free estimates.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/about" },

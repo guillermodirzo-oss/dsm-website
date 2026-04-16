@@ -3,7 +3,7 @@ import Image from "next/image";
 import BookingForm from "@/components/BookingForm";
 
 export const metadata: Metadata = {
-  title: "Spring Cleaning Special Romeoville IL — $75 Off Deep Cleaning | DSM Cleaning Solutions",
+  title: "Spring Cleaning Special — $75 Off",
   description:
     "Get $75 off your spring deep cleaning in Romeoville, Plainfield & Naperville. Free oven cleaning included — a $40 value. Family-owned, fully insured. Deep cleans from $225 after discount. Limited April spots.",
   robots: {

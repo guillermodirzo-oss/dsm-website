@@ -5,7 +5,7 @@ import { cities } from "@/lib/cityData";
 const city = cities.find((c) => c.slug === "westmont-il")!;
 
 export const metadata: Metadata = {
-  title: "Cleaning Service Westmont IL | DSM Cleaning Solutions",
+  title: "House Cleaning Westmont IL",
   description:
     "Expert house cleaning in Westmont, IL — deep cleaning, standard & recurring maid service. Family-owned, eco-friendly, fully insured. Get a free estimate.",
   keywords: [

@@ -30,7 +30,10 @@
       "WebFetch(domain:www.dsmcleaningsolutions.com)",
       "Bash(ls \"C:\\\\Users\\\\DSM\\\\Desktop\\\\dsm-website\\\\app\" /b)",
       "Bash(dir \"C:\\\\Users\\\\DSM\\\\Desktop\\\\dsm-website\\\\app\" /b)",
-      "Bash(npx tsc:*)"
+      "Bash(npx tsc:*)",
+      "Bash(grep -v '/#about\\\\|/#faq\\\\|/#reviews\\\\|/#services$\\\\|href=\"/\\\\|href=\"/$\"')",
+      "Bash(grep -rL \"canonical\" app/*/page.tsx app/blog/page.tsx)",
+      "Bash(grep -v \"//\\\\|next/image\\\\|svg\\\\|Image\\\\|bgImage\\\\|ogImage\\\\|ImageObject\\\\|ImageItem\\\\|backgroundImage\\\\|webp\\\\|\\\\\\\\.png\\\\|\\\\.jpg\")"
     ]
   }
 }

@@ -14,7 +14,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "how-often-should-you-deep-clean-your-home",
     title: "How Often Should You Deep Clean Your Home? A Plainfield IL Guide",
-    metaTitle: "How Often Deep Clean Your Home? Plainfield IL Guide",
+    metaTitle: "How Often to Deep Clean Your Home",
     metaDescription:
       "Wondering how often to deep clean your home in Plainfield, IL? Expert tips from DSM Cleaning Solutions. Book a deep clean today — (815) 246-2113.",
     date: "April 10, 2025",
@@ -60,7 +60,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "move-out-cleaning-checklist-naperville-il",
     title: "The Ultimate Move-Out Cleaning Checklist for Naperville, IL Renters",
-    metaTitle: "Move-Out Cleaning Checklist Naperville IL | DSM Cleaning",
+    metaTitle: "Move-Out Cleaning in Naperville IL",
     metaDescription:
       "Get your full deposit back with our move-out cleaning checklist for Naperville, IL renters. Call DSM Cleaning Solutions at (815) 246-2113 today.",
     date: "April 7, 2025",
@@ -133,7 +133,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "spring-cleaning-tips-romeoville-plainfield",
     title: "Spring Cleaning Tips for Romeoville & Plainfield Homeowners",
-    metaTitle: "Spring Cleaning Tips Romeoville & Plainfield IL | DSM",
+    metaTitle: "Spring Cleaning Tips Romeoville IL",
     metaDescription:
       "Top spring cleaning tips for Romeoville & Plainfield, IL homeowners. Tackle the aftermath of Illinois winter. Book DSM Cleaning Solutions — (815) 246-2113.",
     date: "April 3, 2025",

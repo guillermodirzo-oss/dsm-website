@@ -4,7 +4,7 @@ import BookingForm from "@/components/BookingForm";
 import ReviewCard from "@/components/ReviewCard";
 
 export const metadata: Metadata = {
-  title: "One-Time Cleaning Plainfield IL | DSM Cleaning Solutions",
+  title: "One-Time Cleaning Plainfield IL",
   description: "No-commitment one-time cleaning in Plainfield, IL. Great for events, moving, or seasonal resets. Eco-friendly & insured. Free estimate — no contract.",
   keywords: ["one time cleaning Romeoville IL", "one time house cleaning Romeoville", "single visit cleaning Romeoville", "no contract cleaning Romeoville IL", "house cleaning no commitment Romeoville", "one time maid service Romeoville IL"],
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/one-time-cleaning" },

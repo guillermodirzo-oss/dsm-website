@@ -5,7 +5,7 @@ import { cities } from "@/lib/cityData";
 const city = cities.find((c) => c.slug === "homer-glen-il")!;
 
 export const metadata: Metadata = {
-  title: "Cleaning Service Homer Glen IL | DSM Cleaning Solutions",
+  title: "House Cleaning Homer Glen IL",
   description:
     "Professional house cleaning in Homer Glen, IL — deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & insured. Free estimates.",
   keywords: [

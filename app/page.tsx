@@ -5,12 +5,12 @@ import BookingForm from "@/components/BookingForm";
 import ReviewCard from "@/components/ReviewCard";
 
 export const metadata: Metadata = {
-  title: "House Cleaning Plainfield IL | DSM Cleaning Solutions",
+  title: "House Cleaning Plainfield IL",
   description:
     "Family-owned house cleaning in Plainfield, IL. Eco-friendly, fully insured & 5-star rated. Book online or call for a free estimate today.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com" },
   openGraph: {
-    title: "House Cleaning Plainfield IL | DSM Cleaning Solutions",
+    title: "House Cleaning Plainfield IL",
     description: "Family-owned house cleaning in Plainfield, IL. Eco-friendly, fully insured & 5-star rated. Book online or call for a free estimate today.",
     url: "https://www.dsmcleaningsolutions.com",
   },

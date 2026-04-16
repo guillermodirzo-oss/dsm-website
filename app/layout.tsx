@@ -14,7 +14,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.dsmcleaningsolutions.com"),
   title: {
-    default: "House Cleaning Plainfield IL | DSM Cleaning Solutions",
+    default: "House Cleaning Plainfield IL",
     template: "%s | DSM Cleaning Solutions",
   },
   description:

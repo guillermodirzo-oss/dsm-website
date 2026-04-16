@@ -5,7 +5,7 @@ import BookingForm from "@/components/BookingForm";
 import ReviewCard from "@/components/ReviewCard";
 
 export const metadata: Metadata = {
-  title: "Apartment Cleaning Plainfield IL | DSM Cleaning Solutions",
+  title: "Apartment Cleaning Plainfield IL",
   description: "Professional apartment cleaning in Plainfield, IL for renters, landlords & property managers. Eco-friendly, insured & reliable. Call for a free estimate.",
   keywords: ["apartment cleaning Romeoville IL", "condo cleaning Romeoville", "apartment cleaning service Romeoville", "rental unit cleaning Romeoville", "apartment maid service Romeoville IL", "studio cleaning Romeoville"],
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/apartment-cleaning" },

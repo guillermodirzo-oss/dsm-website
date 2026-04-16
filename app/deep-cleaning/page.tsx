@@ -5,7 +5,7 @@ import BookingForm from "@/components/BookingForm";
 import ReviewCard from "@/components/ReviewCard";
 
 export const metadata: Metadata = {
-  title: "Deep Cleaning Service Plainfield IL | DSM Cleaning Solutions",
+  title: "Deep Cleaning Service Plainfield IL",
   description:
     "Top-to-bottom deep cleaning in Plainfield & Romeoville, IL. We scrub every surface, baseboard & appliance. Eco-friendly & insured. Free estimates.",
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning",
   },
   openGraph: {
-    title: "Deep Cleaning Service Plainfield IL | DSM Cleaning Solutions",
+    title: "Deep Cleaning Service Plainfield IL",
     description:
       "Top-to-bottom deep cleaning in Plainfield & Romeoville, IL. We scrub every surface, baseboard & appliance. Eco-friendly & insured. Free estimates.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning",
