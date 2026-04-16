@@ -30,7 +30,7 @@ export default function Navigation() {
           <Link href="/" className="flex items-center">
             <Image
               src="/Logo.png"
-              alt="DSM Cleaning Solutions logo — house cleaning in Plainfield and Romeoville IL"
+              alt="DSM Cleaning Solutions — House Cleaning Plainfield IL"
               width={180}
               height={48}
               className="h-12 w-auto object-contain"

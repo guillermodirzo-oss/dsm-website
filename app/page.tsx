@@ -201,6 +201,49 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ─── OUR WORK ─── */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">Real Results</p>
+            <h2 className="section-heading text-4xl md:text-5xl">Our Work Speaks for Itself</h2>
+            <p className="section-subheading mx-auto text-lg">
+              Real results from real homes across Plainfield, Romeoville, Naperville &amp; Bolingbrook
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[
+              { src: "/Work%20Pictures/Google Post Image - Cleaning Service (1).png",  alt: "Professional deep cleaning service in Plainfield IL — sparkling clean kitchen by DSM Cleaning Solutions", caption: "Kitchen Deep Clean · Plainfield, IL" },
+              { src: "/Work%20Pictures/IMG_2033.jpg",                                  alt: "Glass shower and stone tile bathroom after professional deep cleaning in Romeoville IL", caption: "Bathroom Deep Clean · Romeoville, IL" },
+              { src: "/Work%20Pictures/IMG_1601.jpg",                                  alt: "Clean living room with dark hardwood floors — recurring maid service in Plainfield IL", caption: "Living Room · Standard Cleaning" },
+              { src: "/Work%20Pictures/IMG_2036.jpg",                                  alt: "Double vanity bathroom cleaned and polished by DSM Cleaning Solutions in Naperville IL", caption: "Vanity & Bathroom · Naperville, IL" },
+              { src: "/Work%20Pictures/IMG_1610.jpg",                                  alt: "Spotless bedroom after recurring house cleaning service in Bolingbrook IL", caption: "Master Bedroom · Bolingbrook, IL" },
+              { src: "/Work%20Pictures/Google Post Image - Cleaning Service (25).png", alt: "Professional cleaner at work in a southwest Chicago suburb home — DSM Cleaning Solutions", caption: "Move-Out Clean · Romeoville, IL" },
+            ].map((photo) => (
+              <div key={photo.src} className="group">
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <p className="text-xs text-gray-400 font-medium text-center mt-2.5 tracking-wide">{photo.caption}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link href="#contact" className="btn-primary btn-lg">
+              See What a Clean Home Feels Like
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ─── REVIEWS ─── */}
       <section id="reviews" className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -217,46 +260,6 @@ export default function HomePage() {
             <ReviewCard name="Sarah M." location="Romeoville, IL" text="DSM Cleaning Solutions is absolutely amazing! They transformed my home — every corner was spotless. Being a family-owned business, they truly care about the quality of their work. Highly recommend!" date="November 2024" />
             <ReviewCard name="Mike T." location="Plainfield, IL" text="Used DSM for a move-out clean on my Plainfield home. Got my full security deposit back! They are thorough, professional, and use eco-friendly products. Will definitely use them again." date="December 2024" />
             <ReviewCard name="Jennifer R." location="Bolingbrook, IL" text="I have a biweekly cleaning with DSM and I couldn't be happier. The team is reliable, trustworthy, and my house has never looked better. Love the eco-friendly products — safe for my kids and dogs!" date="January 2025" />
-          </div>
-        </div>
-      </section>
-
-      {/* ─── OUR WORK GALLERY ─── */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">Real Results</p>
-            <h2 className="section-heading text-4xl md:text-5xl">See Our Work in Action</h2>
-            <p className="section-subheading mx-auto text-lg">
-              Real homes, real results — from kitchens and bathrooms to bedrooms and living rooms across Plainfield &amp; Romeoville.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {[
-              { src: "/Work%20Pictures/IMG_1601.jpg", alt: "Clean living room with dark hardwood floors after professional house cleaning in Plainfield IL" },
-              { src: "/Work%20Pictures/IMG_2033.jpg", alt: "Sparkling clean glass shower with stone tiles — deep cleaning result in Romeoville IL" },
-              { src: "/Work%20Pictures/IMG_1610.jpg", alt: "Clean bedroom maintained with recurring maid service in Plainfield IL" },
-              { src: "/Work%20Pictures/IMG_0220.jpg", alt: "Clean bathroom with bidet after apartment cleaning service in the southwest suburbs" },
-              { src: "/Work%20Pictures/IMG_2036.jpg", alt: "Elegant double vanity cleaned and polished — deep cleaning by DSM Cleaning Solutions" },
-              { src: "/Work%20Pictures/Google Post Image - Cleaning Service (1).png", alt: "Clean modern kitchen with granite island — professional house cleaning in Romeoville IL" },
-            ].map((photo) => (
-              <div key={photo.src} className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
-                <Image
-                  src={photo.src}
-                  alt={photo.alt}
-                  fill
-                  sizes="(max-width: 768px) 50vw, 33vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-10">
-            <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn-primary btn-lg">
-              Book Your Cleaning Today
-            </Link>
           </div>
         </div>
       </section>
