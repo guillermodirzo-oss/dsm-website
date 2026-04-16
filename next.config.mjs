@@ -122,6 +122,16 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/move-in-move-out-cleaning-plainfield-il",
+        destination: "/move-out-cleaning",
+        permanent: true,
+      },
+      {
+        source: "/move-in-move-out-cleaning-romeoville-il",
+        destination: "/move-out-cleaning",
+        permanent: true,
+      },
+      {
         source: "/green-cleaning",
         destination: "/eco-friendly-cleaning",
         permanent: true,
