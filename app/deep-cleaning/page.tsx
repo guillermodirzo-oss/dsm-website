@@ -547,6 +547,10 @@ export default function DeepCleaningPage() {
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Romeoville, IL</h3>
               <p className="text-sm text-gray-600">Serving all of Romeoville (60446) — our home base.</p>
             </Link>
+            <Link href="/deep-cleaning-bolingbrook-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Bolingbrook, IL</h3>
+              <p className="text-sm text-gray-600">Serving all of Bolingbrook — zip codes 60440 & 60490.</p>
+            </Link>
           </div>
         </div>
       </section>
