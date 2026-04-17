@@ -99,7 +99,11 @@ export default function Footer() {
 
         <div className="border-t border-gray-900 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600">
           <p>© {currentYear} DSM Cleaning Solutions. All rights reserved. Romeoville, IL.</p>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-4">
+            <Link href="/privacy-policy" className="hover:text-gray-400 transition-colors">Privacy Policy</Link>
+            <span>·</span>
+            <Link href="/terms-and-conditions" className="hover:text-gray-400 transition-colors">Terms &amp; Conditions</Link>
+            <span>·</span>
             <Link href="/sitemap.xml" className="hover:text-gray-400 transition-colors">Sitemap</Link>
             <span>·</span>
             <span>Licensed &amp; Insured</span>
