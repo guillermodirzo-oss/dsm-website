@@ -5,7 +5,7 @@ import BookingForm from "@/components/BookingForm";
 import ReviewCard from "@/components/ReviewCard";
 
 export const metadata: Metadata = {
-  title: "Move-Out Cleaning Plainfield IL",
+  title: "Move Out Cleaning Services Plainfield IL",
   description:
     "Professional move-out & move-in cleaning in Plainfield, IL. Get your full deposit back — guaranteed. Eco-friendly, fully insured. Free estimate.",
   keywords: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning",
   },
   openGraph: {
-    title: "Move-Out Cleaning Plainfield IL",
+    title: "Move Out Cleaning Services Plainfield IL",
     description:
       "Professional move-out & move-in cleaning in Plainfield, IL. Get your full deposit back — guaranteed. Eco-friendly, fully insured. Free estimate.",
     url: "https://www.dsmcleaningsolutions.com/move-out-cleaning",
