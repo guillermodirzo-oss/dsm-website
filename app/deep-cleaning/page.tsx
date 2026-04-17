@@ -551,6 +551,14 @@ export default function DeepCleaningPage() {
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Bolingbrook, IL</h3>
               <p className="text-sm text-gray-600">Serving all of Bolingbrook — zip codes 60440 & 60490.</p>
             </Link>
+            <Link href="/deep-cleaning-joliet-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Joliet, IL</h3>
+              <p className="text-sm text-gray-600">Serving all Joliet zip codes — 60431, 60432, 60433, 60435 & 60436.</p>
+            </Link>
+            <Link href="/deep-cleaning-lockport-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Lockport, IL</h3>
+              <p className="text-sm text-gray-600">Serving all of Lockport (60441).</p>
+            </Link>
           </div>
         </div>
       </section>
