@@ -82,7 +82,7 @@ export default function Footer() {
               {[
                 { label: "Home", href: "/" },
                 { label: "About Us", href: "/about" },
-                { label: "Reviews", href: "/#reviews" },
+                { label: "Reviews", href: "/reviews" },
                 { label: "FAQ", href: "/#faq" },
                 { label: "Book Online", href: "https://dsmcleaningsolutions.bookingkoala.com/booknow" },
               ].map((item) => (
