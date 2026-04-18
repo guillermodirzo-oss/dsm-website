@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import FacebookPixel from "@/components/FacebookPixel";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -126,6 +127,7 @@ export default function RootLayout({
         <Footer />
         <Analytics />
         <SpeedInsights />
+        <GoogleAnalytics gaId="G-ZNH3HYZHQN" />
       </body>
     </html>
   );
