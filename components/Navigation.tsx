@@ -9,6 +9,7 @@ import { usePathname } from "next/navigation";
 export default function Navigation() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -112,41 +113,102 @@ export default function Navigation() {
 
         {/* Mobile menu */}
         {menuOpen && (
-          <div className="md:hidden border-t border-gray-100 py-3 space-y-1">
-            {[
-              { label: "Home", href: "/" },
-              { label: "Standard Cleaning", href: "/standard-cleaning" },
-              { label: "Deep Cleaning", href: "/deep-cleaning" },
-              { label: "Move-Out / Move-In", href: "/move-out-cleaning" },
-              { label: "Recurring Maid Service", href: "/recurring-cleaning" },
-              { label: "Eco-Friendly Cleaning", href: "/eco-friendly-cleaning" },
-              { label: "Apartment Cleaning", href: "/apartment-cleaning" },
-              { label: "Post-Construction Cleaning", href: "/post-construction-cleaning" },
-              { label: "Airbnb / Short-Term Rental", href: "/airbnb-cleaning" },
-              { label: "One-Time Cleaning", href: "/one-time-cleaning" },
-              { label: "Plainfield, IL", href: "/plainfield-il" },
-              { label: "About Us", href: "/#about" },
-              { label: "FAQ", href: "/#faq" },
-              { label: "Contact", href: "/contact" },
-              { label: "Blog", href: "/blog" },
-            ].map((item) => (
-              <Link key={item.href} href={item.href} onClick={() => setMenuOpen(false)}
+          <div className="md:hidden border-t border-gray-100 flex flex-col" style={{ maxHeight: "calc(100svh - 64px)", overflowY: "auto" }}>
+
+            {/* Scrollable nav links */}
+            <div className="py-3 space-y-1 flex-1">
+
+              {/* Home */}
+              <Link href="/" onClick={() => { setMenuOpen(false); setMobileServicesOpen(false); }}
                 className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-green-50 hover:text-brand-green font-medium rounded-xl transition-colors">
-                {item.label}
+                Home
               </Link>
-            ))}
-            <div className="px-4 pt-2 flex flex-col gap-2">
-              <Link href="https://dsmcleaningsolutions.bookingkoala.com/login" onClick={() => setMenuOpen(false)} target="_blank" rel="noopener noreferrer"
+
+              {/* Services — expandable */}
+              <div>
+                <button
+                  onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                  className="w-full flex items-center justify-between px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-green-50 hover:text-brand-green font-medium rounded-xl transition-colors"
+                >
+                  <span>Services</span>
+                  <svg
+                    className={`w-4 h-4 transition-transform duration-200 ${mobileServicesOpen ? "rotate-180" : ""}`}
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+
+                {mobileServicesOpen && (
+                  <div className="mt-1 ml-3 border-l-2 border-brand-green-100 pl-3 space-y-0.5">
+                    {/* Primary services */}
+                    {[
+                      { label: "🏠 Standard Cleaning", href: "/standard-cleaning" },
+                      { label: "🧹 Deep Cleaning", href: "/deep-cleaning" },
+                      { label: "📦 Move-Out / Move-In", href: "/move-out-cleaning" },
+                      { label: "📅 Recurring Maid Service", href: "/recurring-cleaning" },
+                    ].map((item) => (
+                      <Link key={item.href} href={item.href}
+                        onClick={() => { setMenuOpen(false); setMobileServicesOpen(false); }}
+                        className="block px-3 py-2 text-sm text-gray-700 hover:bg-brand-green-50 hover:text-brand-green font-medium rounded-lg transition-colors">
+                        {item.label}
+                      </Link>
+                    ))}
+
+                    {/* More services divider */}
+                    <p className="px-3 pt-2 pb-1 text-xs font-bold text-gray-400 uppercase tracking-widest">More Services</p>
+
+                    {[
+                      { label: "🌿 Eco-Friendly Cleaning", href: "/eco-friendly-cleaning" },
+                      { label: "🏢 Apartment Cleaning", href: "/apartment-cleaning" },
+                      { label: "🔨 Post-Construction", href: "/post-construction-cleaning" },
+                      { label: "🛏️ Airbnb / Short-Term Rental", href: "/airbnb-cleaning" },
+                      { label: "✨ One-Time Cleaning", href: "/one-time-cleaning" },
+                    ].map((item) => (
+                      <Link key={item.href} href={item.href}
+                        onClick={() => { setMenuOpen(false); setMobileServicesOpen(false); }}
+                        className="block px-3 py-2 text-sm text-gray-700 hover:bg-brand-green-50 hover:text-brand-green font-medium rounded-lg transition-colors">
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Remaining top-level links */}
+              {[
+                { label: "About", href: "/about" },
+                { label: "Blog", href: "/blog" },
+                { label: "FAQ", href: "/#faq" },
+                { label: "Contact", href: "/contact" },
+              ].map((item) => (
+                <Link key={item.href} href={item.href}
+                  onClick={() => { setMenuOpen(false); setMobileServicesOpen(false); }}
+                  className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-green-50 hover:text-brand-green font-medium rounded-xl transition-colors">
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+
+            {/* CTA buttons — always visible at bottom */}
+            <div className="px-4 py-4 border-t border-gray-100 flex flex-col gap-2 bg-white">
+              <Link href="https://dsmcleaningsolutions.bookingkoala.com/login"
+                onClick={() => { setMenuOpen(false); setMobileServicesOpen(false); }}
+                target="_blank" rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 w-full text-sm font-semibold text-gray-700 border border-gray-200 rounded-full py-2.5 hover:border-brand-green hover:text-brand-green transition-colors">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
                 Log In
               </Link>
-              <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" onClick={() => setMenuOpen(false)} target="_blank" rel="noopener noreferrer" className="btn-primary w-full block text-center text-sm">
+              <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow"
+                onClick={() => { setMenuOpen(false); setMobileServicesOpen(false); }}
+                target="_blank" rel="noopener noreferrer"
+                className="btn-primary w-full block text-center text-sm">
                 Book Now
               </Link>
             </div>
+
           </div>
         )}
       </div>
