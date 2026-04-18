@@ -126,7 +126,7 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
-              href="/#contact"
+              href="/contact"
               className="inline-flex items-center justify-center bg-white text-gray-900 font-bold px-7 py-3.5 rounded-2xl hover:bg-orange-50 transition-colors shadow-lg text-base"
             >
               Get a Free Estimate

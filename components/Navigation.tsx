@@ -72,6 +72,7 @@ export default function Navigation() {
             </div>
             <Link href="/#about" className="text-sm text-gray-600 hover:text-brand-green font-medium transition-colors">About</Link>
             <Link href="/#faq" className="text-sm text-gray-600 hover:text-brand-green font-medium transition-colors">FAQ</Link>
+            <Link href="/contact" className="text-sm text-gray-600 hover:text-brand-green font-medium transition-colors">Contact</Link>
             <Link href="/blog" className="text-sm text-gray-600 hover:text-brand-green font-medium transition-colors">Blog</Link>
           </div>
 
@@ -126,6 +127,7 @@ export default function Navigation() {
               { label: "Plainfield, IL", href: "/plainfield-il" },
               { label: "About Us", href: "/#about" },
               { label: "FAQ", href: "/#faq" },
+              { label: "Contact", href: "/contact" },
               { label: "Blog", href: "/blog" },
             ].map((item) => (
               <Link key={item.href} href={item.href} onClick={() => setMenuOpen(false)}
