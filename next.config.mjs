@@ -62,6 +62,48 @@ const nextConfig = {
         destination: "https://dsmcleaningsolutions.bookingkoala.com/booknow",
         permanent: true,
       },
+      {
+        source: "/booknow",
+        destination: "https://dsmcleaningsolutions.bookingkoala.com/booknow",
+        permanent: true,
+      },
+      {
+        source: "/book-now",
+        destination: "https://dsmcleaningsolutions.bookingkoala.com/booknow",
+        permanent: true,
+      },
+
+      // ─── LOGIN / ACCOUNT REDIRECTS ─────────────────────────────────────────
+      {
+        source: "/log-in",
+        destination: "https://dsmcleaningsolutions.bookingkoala.com/login",
+        permanent: true,
+      },
+      {
+        source: "/signin",
+        destination: "https://dsmcleaningsolutions.bookingkoala.com/login",
+        permanent: true,
+      },
+      {
+        source: "/sign-in",
+        destination: "https://dsmcleaningsolutions.bookingkoala.com/login",
+        permanent: true,
+      },
+      {
+        source: "/account",
+        destination: "https://dsmcleaningsolutions.bookingkoala.com/login",
+        permanent: true,
+      },
+      {
+        source: "/my-account",
+        destination: "https://dsmcleaningsolutions.bookingkoala.com/login",
+        permanent: true,
+      },
+      {
+        source: "/portal",
+        destination: "https://dsmcleaningsolutions.bookingkoala.com/login",
+        permanent: true,
+      },
 
       // ─── OLD CITY / AREA PAGES ─────────────────────────────────────────────
       {
