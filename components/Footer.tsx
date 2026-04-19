@@ -8,7 +8,7 @@ export default function Footer() {
   const pathname = usePathname();
   const currentYear = new Date().getFullYear();
 
-  if (pathname === "/spring-special") return null;
+  if (["/spring-special", "/thank-you", "/quote-thank-you"].includes(pathname)) return null;
   return (
     <footer className="bg-gray-950 text-gray-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

@@ -18,7 +18,7 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  if (pathname === "/spring-special") return null;
+  if (["/spring-special", "/thank-you", "/quote-thank-you"].includes(pathname)) return null;
 
   return (
     <nav className={`sticky top-0 z-50 transition-all duration-300 ${
