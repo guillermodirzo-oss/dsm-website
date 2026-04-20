@@ -1,14 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
+const CAPIG_ENDPOINT = "https://capig.stape.st/jhzpdfyt/events";
 const PIXEL_ID = "604766394322878";
-const GATEWAY_ID = "jhzpdfyt";
-
-// NOTE: The API key decodes to host "capig.stape.st" — trying both .st and .gl
-// since the user-supplied endpoint specifies .gl but the key encodes .st.
-const ENDPOINTS = [
-  `https://capig.stape.st/${GATEWAY_ID}/events`,  // host from decoded API key
-  `https://capig.stape.gl/${GATEWAY_ID}/events`,  // host specified by user
-];
 
 export async function POST(request: NextRequest) {
   try {
@@ -53,43 +46,28 @@ export async function POST(request: NextRequest) {
       ],
     };
 
-    console.log(`[CAPI] Firing ${eventName} | event_id: ${resolvedEventId} | pixel: ${PIXEL_ID}`);
+    console.log(`[CAPI] → ${eventName} | event_id: ${resolvedEventId} | pixel: ${PIXEL_ID} | endpoint: ${CAPIG_ENDPOINT}`);
 
-    // Try each endpoint, log full status + body for debugging
-    for (const endpoint of ENDPOINTS) {
-      try {
-        console.log(`[CAPI] → POST ${endpoint}`);
+    const response = await fetch(CAPIG_ENDPOINT, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "CAPIG-API-KEY": apiKey,
+      },
+      body: JSON.stringify(payload),
+    });
 
-        const response = await fetch(endpoint, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "CAPIG-API-KEY": apiKey,
-          },
-          body: JSON.stringify(payload),
-        });
+    const responseText = await response.text();
+    console.log(`[CAPI] ← status: ${response.status} | body: ${responseText}`);
 
-        const responseText = await response.text();
-        console.log(`[CAPI] ← ${endpoint} | status: ${response.status} | body: ${responseText}`);
-
-        if (response.ok) {
-          let result;
-          try { result = JSON.parse(responseText); } catch { result = responseText; }
-          return NextResponse.json({ success: true, endpoint, status: response.status, result });
-        }
-
-        console.warn(`[CAPI] ${endpoint} returned ${response.status} — trying next`);
-
-      } catch (fetchErr) {
-        console.error(`[CAPI] Fetch error for ${endpoint}:`, fetchErr);
-      }
+    if (!response.ok) {
+      console.error(`[CAPI] Stape error ${response.status}: ${responseText}`);
+      return NextResponse.json({ success: false, status: response.status, error: responseText }, { status: 200 });
     }
 
-    console.error("[CAPI] All endpoints failed");
-    return NextResponse.json(
-      { success: false, error: "All endpoints failed — check Vercel function logs" },
-      { status: 200 }
-    );
+    let result;
+    try { result = JSON.parse(responseText); } catch { result = responseText; }
+    return NextResponse.json({ success: true, status: response.status, result });
 
   } catch (err) {
     console.error("[CAPI] Unexpected error:", err);
