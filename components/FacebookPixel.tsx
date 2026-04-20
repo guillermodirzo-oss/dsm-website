@@ -9,11 +9,28 @@ const PIXEL_ID = "604766394322878";
 export default function FacebookPixel() {
   const pathname = usePathname();
 
-  // Fire PageView on every route change (Next.js client-side navigation)
+  // Fire PageView on every route change — browser pixel + server-side CAPI duplicate
   useEffect(() => {
-    if (typeof window !== "undefined" && typeof (window as any).fbq === "function") {
-      (window as any).fbq("track", "PageView");
+    const eventId = crypto.randomUUID();
+    const fbp = document.cookie.match(/_fbp=([^;]+)/)?.[1];
+    const fbc = document.cookie.match(/_fbc=([^;]+)/)?.[1];
+
+    // Browser-side PageView with eventID for deduplication
+    if (typeof (window as any).fbq === "function") {
+      (window as any).fbq("track", "PageView", {}, { eventID: eventId });
     }
+
+    // Server-side CAPI PageView via Stape CAPIG (fire-and-forget)
+    fetch("/api/track", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        eventName: "PageView",
+        eventId,
+        eventSourceUrl: window.location.href,
+        userData: { fbp, fbc },
+      }),
+    }).catch(() => {});
   }, [pathname]);
 
   return (

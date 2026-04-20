@@ -5,18 +5,31 @@ import Link from "next/link";
 
 export default function ThankYouClient() {
   useEffect(() => {
-    // Facebook Pixel — Purchase event
-    if (typeof window !== "undefined" && typeof (window as any).fbq === "function") {
-      (window as any).fbq("track", "Purchase", {
-        content_name: "Booking Completed",
-        content_category: "House Cleaning",
-        value: 200,
-        currency: "USD",
-      });
+    // Single event_id shared by browser pixel + server CAPI for deduplication
+    const eventId = crypto.randomUUID();
+
+    // Read Facebook cookies for better match quality
+    const fbp = document.cookie.match(/_fbp=([^;]+)/)?.[1];
+    const fbc = document.cookie.match(/_fbc=([^;]+)/)?.[1];
+
+    // ── Browser-side: Facebook Pixel Purchase ───────────────────────────────
+    // eventID passed as 4th arg so Meta can deduplicate against the server event
+    if (typeof (window as any).fbq === "function") {
+      (window as any).fbq(
+        "track",
+        "Purchase",
+        {
+          content_name: "Booking Completed",
+          content_category: "House Cleaning",
+          value: 200,
+          currency: "USD",
+        },
+        { eventID: eventId }
+      );
     }
 
-    // GA4 — purchase event
-    if (typeof window !== "undefined" && typeof (window as any).gtag === "function") {
+    // ── Browser-side: GA4 purchase ──────────────────────────────────────────
+    if (typeof (window as any).gtag === "function") {
       (window as any).gtag("event", "purchase", {
         event_category: "booking",
         event_label: "booking_completed",
@@ -24,6 +37,27 @@ export default function ThankYouClient() {
         currency: "USD",
       });
     }
+
+    // ── Server-side: CAPI Purchase via Stape CAPIG ──────────────────────────
+    // Fire-and-forget — if this fails the browser pixel event above still counted
+    fetch("/api/track", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        eventName: "Purchase",
+        eventId,
+        eventSourceUrl: window.location.href,
+        eventData: {
+          value: 200,
+          currency: "USD",
+          content_name: "Booking Completed",
+          content_category: "House Cleaning",
+        },
+        userData: { fbp, fbc },
+      }),
+    }).catch(() => {
+      // Silent — never block the user experience
+    });
   }, []);
 
   return (
@@ -58,18 +92,9 @@ export default function ThankYouClient() {
               <h2 className="text-lg font-bold text-gray-900 mb-5 text-center">What Happens Next?</h2>
               <div className="space-y-4">
                 {[
-                  {
-                    step: "1",
-                    text: "You will receive a confirmation email within 1 business day",
-                  },
-                  {
-                    step: "2",
-                    text: "Our team will reach out to confirm your appointment time",
-                  },
-                  {
-                    step: "3",
-                    text: "Sit back and relax — we will handle the rest!",
-                  },
+                  { step: "1", text: "You will receive a confirmation email within 1 business day" },
+                  { step: "2", text: "Our team will reach out to confirm your appointment time" },
+                  { step: "3", text: "Sit back and relax — we will handle the rest!" },
                 ].map(({ step, text }) => (
                   <div key={step} className="flex items-start gap-4">
                     <div className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-green flex items-center justify-center text-white text-sm font-bold">
@@ -84,10 +109,7 @@ export default function ThankYouClient() {
             {/* Phone */}
             <div className="bg-gray-50 rounded-2xl px-6 py-5 mb-8 text-center">
               <p className="text-sm text-gray-500 mb-1">Have questions? Call us:</p>
-              <a
-                href="tel:+18152462113"
-                className="text-2xl font-bold text-brand-green hover:text-orange-500 transition-colors"
-              >
+              <a href="tel:+18152462113" className="text-2xl font-bold text-brand-green hover:text-orange-500 transition-colors">
                 (815) 246-2113
               </a>
             </div>
@@ -109,10 +131,7 @@ export default function ThankYouClient() {
             </div>
 
             {/* Back link */}
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-brand-green transition-colors font-medium"
-            >
+            <Link href="/" className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-brand-green transition-colors font-medium">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
               </svg>
