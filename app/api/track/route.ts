@@ -1,11 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 
 const PIXEL_ID = "604766394322878";
+const GATEWAY_ID = "jhzpdfyt";
 
-// Endpoint candidates in priority order
+// NOTE: The API key decodes to host "capig.stape.st" — trying both .st and .gl
+// since the user-supplied endpoint specifies .gl but the key encodes .st.
 const ENDPOINTS = [
-  "https://capig.stape.gl/event?id=zxlczzbg",
-  "https://www.facebook.com/tr/",
+  `https://capig.stape.st/${GATEWAY_ID}/events`,  // host from decoded API key
+  `https://capig.stape.gl/${GATEWAY_ID}/events`,  // host specified by user
 ];
 
 export async function POST(request: NextRequest) {
@@ -30,12 +32,14 @@ export async function POST(request: NextRequest) {
       undefined;
     const userAgent = request.headers.get("user-agent") || undefined;
 
+    const resolvedEventId = eventId || crypto.randomUUID();
+
     const payload = {
       data: [
         {
           event_name: eventName,
           event_time: Math.floor(Date.now() / 1000),
-          event_id: eventId || crypto.randomUUID(),
+          event_id: resolvedEventId,
           event_source_url: eventSourceUrl || "https://www.dsmcleaningsolutions.com",
           action_source: "website",
           user_data: {
@@ -49,12 +53,12 @@ export async function POST(request: NextRequest) {
       ],
     };
 
-    console.log("[CAPI] Sending event:", eventName, "event_id:", payload.data[0].event_id);
+    console.log(`[CAPI] Firing ${eventName} | event_id: ${resolvedEventId} | pixel: ${PIXEL_ID}`);
 
-    // Try each endpoint in order, log full response for debugging
+    // Try each endpoint, log full status + body for debugging
     for (const endpoint of ENDPOINTS) {
       try {
-        console.log(`[CAPI] Trying endpoint: ${endpoint}`);
+        console.log(`[CAPI] → POST ${endpoint}`);
 
         const response = await fetch(endpoint, {
           method: "POST",
@@ -66,34 +70,26 @@ export async function POST(request: NextRequest) {
         });
 
         const responseText = await response.text();
-        console.log(`[CAPI] ${endpoint} → status: ${response.status}, body: ${responseText}`);
+        console.log(`[CAPI] ← ${endpoint} | status: ${response.status} | body: ${responseText}`);
 
         if (response.ok) {
-          console.log(`[CAPI] Success via ${endpoint}`);
           let result;
           try { result = JSON.parse(responseText); } catch { result = responseText; }
-          return NextResponse.json({
-            success: true,
-            endpoint,
-            status: response.status,
-            result,
-          });
+          return NextResponse.json({ success: true, endpoint, status: response.status, result });
         }
 
-        // Log non-OK and continue to next endpoint
-        console.warn(`[CAPI] ${endpoint} returned ${response.status} — trying next endpoint`);
+        console.warn(`[CAPI] ${endpoint} returned ${response.status} — trying next`);
 
       } catch (fetchErr) {
         console.error(`[CAPI] Fetch error for ${endpoint}:`, fetchErr);
       }
     }
 
-    // All endpoints failed — return 200 so browser pixel is unaffected
     console.error("[CAPI] All endpoints failed");
-    return NextResponse.json({
-      success: false,
-      error: "All endpoints failed — see Vercel function logs for details",
-    }, { status: 200 });
+    return NextResponse.json(
+      { success: false, error: "All endpoints failed — check Vercel function logs" },
+      { status: 200 }
+    );
 
   } catch (err) {
     console.error("[CAPI] Unexpected error:", err);
