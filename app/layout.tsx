@@ -86,7 +86,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": ["LocalBusiness", "HouseCleaning"],
+              "@type": ["LocalBusiness", "CleaningService"],
               "@id": "https://www.dsmcleaningsolutions.com/#business",
               name: "DSM Cleaning Solutions",
               description: "Professional house cleaning services serving Plainfield, Romeoville, Naperville, and Bolingbrook IL. Family owned, fully insured, eco-friendly products.",
@@ -124,7 +124,7 @@ export default function RootLayout({
               ],
               aggregateRating: {
                 "@type": "AggregateRating",
-                ratingValue: "5",
+                ratingValue: "5.0",
                 reviewCount: "47",
                 bestRating: "5",
                 worstRating: "1",

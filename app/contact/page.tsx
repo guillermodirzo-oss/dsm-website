@@ -15,9 +15,40 @@ export const metadata: Metadata = {
   },
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How quickly do you respond to inquiries?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We respond to all inquiries within 1 business day. For faster service, call us directly at (815) 246-2113 — we answer 7 days a week.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer free estimates?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes — all estimates are completely free with no obligation to book. Just fill out the form, give us a call, or book online and we'll get you a quote tailored to your home.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What areas do you serve?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We serve Plainfield, Romeoville, Naperville, Bolingbrook, Joliet, Lockport, Lemont, Homer Glen, New Lenox, Shorewood, Westmont, Minooka, and the surrounding southwest Chicago suburbs.",
+      },
+    },
+  ],
+};
+
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "HouseCleaning"],
+  "@type": ["LocalBusiness", "CleaningService"],
   "@id": "https://www.dsmcleaningsolutions.com/#business",
   name: "DSM Cleaning Solutions",
   telephone: "+18152462113",
@@ -84,6 +115,10 @@ export default function ContactPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       {/* HERO */}
