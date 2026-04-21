@@ -1,7 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const CAPIG_ENDPOINT = "https://capig.stape.st/jhzpdfyt/events";
 const PIXEL_ID = "604766394322878";
+
+// Gateway is Running per Stape dashboard (URL: https://capig.stape.st)
+// The identifier is encoded in the API key — it is NOT part of the URL path.
+// Try both the direct Stape host and the custom domain CNAME.
+const ENDPOINTS = [
+  "https://capig.stape.st/events",
+  "https://capi.dsmcleaningsolutions.com/events",
+];
 
 export async function POST(request: NextRequest) {
   try {
@@ -18,7 +25,6 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: false, error: "API key not configured" }, { status: 200 });
     }
 
-    // Pull real client IP from Vercel/proxy headers
     const clientIp =
       request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
       request.headers.get("x-real-ip") ||
@@ -28,6 +34,7 @@ export async function POST(request: NextRequest) {
     const resolvedEventId = eventId || crypto.randomUUID();
 
     const payload = {
+      pixel_id: PIXEL_ID,
       data: [
         {
           event_name: eventName,
@@ -46,28 +53,42 @@ export async function POST(request: NextRequest) {
       ],
     };
 
-    console.log(`[CAPI] → ${eventName} | event_id: ${resolvedEventId} | pixel: ${PIXEL_ID} | endpoint: ${CAPIG_ENDPOINT}`);
+    console.log(`[CAPI] Firing ${eventName} | event_id: ${resolvedEventId} | pixel: ${PIXEL_ID}`);
 
-    const response = await fetch(CAPIG_ENDPOINT, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "CAPIG-API-KEY": apiKey,
-      },
-      body: JSON.stringify(payload),
-    });
+    for (const endpoint of ENDPOINTS) {
+      try {
+        console.log(`[CAPI] → POST ${endpoint}`);
 
-    const responseText = await response.text();
-    console.log(`[CAPI] ← status: ${response.status} | body: ${responseText}`);
+        const response = await fetch(endpoint, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "CAPIG-API-KEY": apiKey,
+          },
+          body: JSON.stringify(payload),
+        });
 
-    if (!response.ok) {
-      console.error(`[CAPI] Stape error ${response.status}: ${responseText}`);
-      return NextResponse.json({ success: false, status: response.status, error: responseText }, { status: 200 });
+        const responseText = await response.text();
+        console.log(`[CAPI] ← ${endpoint} | status: ${response.status} | body: ${responseText}`);
+
+        if (response.ok) {
+          let result;
+          try { result = JSON.parse(responseText); } catch { result = responseText; }
+          return NextResponse.json({ success: true, endpoint, status: response.status, result });
+        }
+
+        console.warn(`[CAPI] ${endpoint} returned ${response.status} — trying next`);
+
+      } catch (fetchErr) {
+        console.error(`[CAPI] Fetch error for ${endpoint}:`, fetchErr);
+      }
     }
 
-    let result;
-    try { result = JSON.parse(responseText); } catch { result = responseText; }
-    return NextResponse.json({ success: true, status: response.status, result });
+    console.error("[CAPI] All endpoints failed");
+    return NextResponse.json(
+      { success: false, error: "All endpoints failed — check Vercel function logs" },
+      { status: 200 }
+    );
 
   } catch (err) {
     console.error("[CAPI] Unexpected error:", err);
