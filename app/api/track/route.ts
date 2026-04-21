@@ -2,12 +2,11 @@ import { NextRequest, NextResponse } from "next/server";
 
 const PIXEL_ID = "604766394322878";
 
-// Gateway is Running per Stape dashboard (URL: https://capig.stape.st)
-// The identifier is encoded in the API key — it is NOT part of the URL path.
+// Stape CAPIG endpoint — pixel ID goes in the URL path, CAPIG-API-KEY in header.
 // Try both the direct Stape host and the custom domain CNAME.
 const ENDPOINTS = [
-  "https://capig.stape.st/events",
-  "https://capi.dsmcleaningsolutions.com/events",
+  `https://capig.stape.st/${PIXEL_ID}/events`,
+  `https://capi.dsmcleaningsolutions.com/${PIXEL_ID}/events`,
 ];
 
 export async function POST(request: NextRequest) {
