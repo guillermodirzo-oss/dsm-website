@@ -31,7 +31,7 @@ export default function Navigation() {
           <Link href="/" className="flex items-center">
             <Image
               src="/Logo.png"
-              alt="DSM Cleaning Solutions — House Cleaning Plainfield IL"
+              alt="DSM Cleaning Solutions — House Cleaning Romeoville & Plainfield IL"
               width={180}
               height={48}
               className="h-12 w-auto object-contain"
@@ -61,7 +61,6 @@ export default function Navigation() {
                     { label: "Post-Construction", href: "/post-construction-cleaning", icon: "🔨" },
                     { label: "Airbnb / Short-Term Rental", href: "/airbnb-cleaning", icon: "🛏️" },
                     { label: "One-Time Cleaning", href: "/one-time-cleaning", icon: "✨" },
-                    { label: "Plainfield, IL", href: "/plainfield-il", icon: "📍" },
                   ].map((item) => (
                     <Link key={item.href} href={item.href} className="flex items-center gap-3 px-3 py-2.5 text-sm text-gray-700 hover:bg-brand-green-50 hover:text-brand-green rounded-xl transition-colors">
                       <span>{item.icon}</span>

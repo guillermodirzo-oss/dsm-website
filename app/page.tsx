@@ -5,13 +5,13 @@ import BookingForm from "@/components/BookingForm";
 import ReviewCard from "@/components/ReviewCard";
 
 export const metadata: Metadata = {
-  title: "House Cleaning Plainfield IL",
+  title: "House Cleaning Romeoville IL",
   description:
-    "Family-owned house cleaning in Plainfield, IL. Eco-friendly, fully insured & 5-star rated. Book online or call for a free estimate today.",
+    "Professional house cleaning in Romeoville & Plainfield IL. Family-owned, eco-friendly, fully insured. 5-star rated. Free estimates. Call (815) 246-2113.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com" },
   openGraph: {
-    title: "House Cleaning Plainfield IL",
-    description: "Family-owned house cleaning in Plainfield, IL. Eco-friendly, fully insured & 5-star rated. Book online or call for a free estimate today.",
+    title: "House Cleaning Romeoville IL | DSM Cleaning Solutions",
+    description: "Professional house cleaning in Romeoville & Plainfield IL. Family-owned, eco-friendly, fully insured. 5-star rated. Free estimates. Call (815) 246-2113.",
     url: "https://www.dsmcleaningsolutions.com",
   },
 };

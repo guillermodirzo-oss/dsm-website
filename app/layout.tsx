@@ -17,11 +17,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.dsmcleaningsolutions.com"),
   title: {
-    default: "House Cleaning Plainfield IL",
+    default: "DSM Cleaning Solutions | House Cleaning Romeoville & Plainfield IL",
     template: "%s | DSM Cleaning Solutions",
   },
   description:
-    "Family-owned house cleaning in Plainfield & Romeoville, IL. Eco-friendly, fully insured & 5-star rated. Book online or call for a free estimate.",
+    "Professional house cleaning in Romeoville & Plainfield IL. Family-owned, eco-friendly, fully insured. 5-star rated. Free estimates. Call (815) 246-2113.",
   icons: {
     icon: [
       { url: "/icon.png", sizes: "512x512", type: "image/png" },
