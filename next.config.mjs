@@ -22,14 +22,10 @@ const nextConfig = {
         destination: "/about",
         permanent: true,
       },
-      {
-        source: "/contact",
-        destination: "/#contact",
-        permanent: true,
-      },
+      // /contact is now a real page — no redirect needed (removed old /#contact redirect)
       {
         source: "/contact-us",
-        destination: "/#contact",
+        destination: "/contact",
         permanent: true,
       },
       {
@@ -39,17 +35,17 @@ const nextConfig = {
       },
       {
         source: "/onlinequote",
-        destination: "/#contact",
+        destination: "/contact",
         permanent: true,
       },
       {
         source: "/quote",
-        destination: "/#contact",
+        destination: "/contact",
         permanent: true,
       },
       {
         source: "/get-a-quote",
-        destination: "/#contact",
+        destination: "/contact",
         permanent: true,
       },
       {
