@@ -25,6 +25,7 @@ export const metadata: Metadata = {
     description:
       "DSM Cleaning Solutions serves all of Plainfield, IL — deep cleaning, standard cleaning, move-out & maid service. Family-owned, eco-friendly. Free estimate.",
     url: "https://www.dsmcleaningsolutions.com/plainfield-il",
+    siteName: "DSM Cleaning Solutions",
   },
 };
 

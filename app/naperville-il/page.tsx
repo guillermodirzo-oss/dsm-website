@@ -17,6 +17,13 @@ export const metadata: Metadata = {
     "recurring cleaning Naperville IL",
   ],
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/naperville-il" },
+  openGraph: {
+    title: "House Cleaning Naperville IL",
+    description:
+      "Family-owned house cleaning in Naperville, IL. Deep cleaning, move-out & recurring maid service near you. Eco-friendly & insured. Call for a free estimate.",
+    url: "https://www.dsmcleaningsolutions.com/naperville-il",
+    siteName: "DSM Cleaning Solutions",
+  },
 };
 
 export default function NapervillePage() {

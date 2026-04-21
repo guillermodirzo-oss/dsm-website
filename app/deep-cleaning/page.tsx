@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     description:
       "Top-to-bottom deep cleaning in Plainfield & Romeoville, IL. We scrub every surface, baseboard & appliance. Eco-friendly & insured. Free estimates.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning",
+    siteName: "DSM Cleaning Solutions",
   },
 };
 

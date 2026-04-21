@@ -16,6 +16,13 @@ export const metadata: Metadata = {
     "recurring cleaning Bolingbrook IL",
   ],
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/bolingbrook-il" },
+  openGraph: {
+    title: "House Cleaning Bolingbrook IL",
+    description:
+      "Local house cleaning in Bolingbrook, IL — deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & insured. Call for a free estimate.",
+    url: "https://www.dsmcleaningsolutions.com/bolingbrook-il",
+    siteName: "DSM Cleaning Solutions",
+  },
 };
 
 export default function BolingbrookPage() {
