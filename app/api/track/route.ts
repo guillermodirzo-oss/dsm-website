@@ -2,12 +2,9 @@ import { NextRequest, NextResponse } from "next/server";
 
 const PIXEL_ID = "604766394322878";
 
-// Stape CAPIG endpoint — /events path, CAPIG-API-KEY header + FB access_token in body.
-// Try both the direct Stape host and the custom domain CNAME.
-const ENDPOINTS = [
-  "https://capig.stape.st/events",
-  "https://capi.dsmcleaningsolutions.com/events",
-];
+// Send directly to Meta's Conversions API Graph endpoint.
+// access_token goes as a query param; pixel_id is in the URL path.
+const META_CAPI_URL = `https://graph.facebook.com/v19.0/${PIXEL_ID}/events`;
 
 export async function POST(request: NextRequest) {
   try {
@@ -16,12 +13,6 @@ export async function POST(request: NextRequest) {
 
     if (!eventName) {
       return NextResponse.json({ success: false, error: "eventName is required" }, { status: 400 });
-    }
-
-    const apiKey = process.env.STAPE_CAPIG_API_KEY;
-    if (!apiKey) {
-      console.error("[CAPI] STAPE_CAPIG_API_KEY env var is not set");
-      return NextResponse.json({ success: false, error: "API key not configured" }, { status: 200 });
     }
 
     const accessToken = process.env.FB_ACCESS_TOKEN;
@@ -38,9 +29,7 @@ export async function POST(request: NextRequest) {
 
     const resolvedEventId = eventId || crypto.randomUUID();
 
-    const payload = {
-      access_token: accessToken,
-      pixel_id: PIXEL_ID,
+    const eventPayload = {
       data: [
         {
           event_name: eventName,
@@ -59,42 +48,36 @@ export async function POST(request: NextRequest) {
       ],
     };
 
+    const url = `${META_CAPI_URL}?access_token=${accessToken}`;
     console.log(`[CAPI] Firing ${eventName} | event_id: ${resolvedEventId} | pixel: ${PIXEL_ID}`);
+    console.log(`[CAPI] → POST ${META_CAPI_URL}`);
 
-    for (const endpoint of ENDPOINTS) {
-      try {
-        console.log(`[CAPI] → POST ${endpoint}`);
+    try {
+      const response = await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(eventPayload),
+      });
 
-        const response = await fetch(endpoint, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "CAPIG-API-KEY": apiKey,
-          },
-          body: JSON.stringify(payload),
-        });
+      const responseText = await response.text();
+      console.log(`[CAPI] ← status: ${response.status} | body: ${responseText}`);
 
-        const responseText = await response.text();
-        console.log(`[CAPI] ← ${endpoint} | status: ${response.status} | body: ${responseText}`);
-
-        if (response.ok) {
-          let result;
-          try { result = JSON.parse(responseText); } catch { result = responseText; }
-          return NextResponse.json({ success: true, endpoint, status: response.status, result });
-        }
-
-        console.warn(`[CAPI] ${endpoint} returned ${response.status} — trying next`);
-
-      } catch (fetchErr) {
-        console.error(`[CAPI] Fetch error for ${endpoint}:`, fetchErr);
+      if (response.ok) {
+        let result;
+        try { result = JSON.parse(responseText); } catch { result = responseText; }
+        return NextResponse.json({ success: true, status: response.status, result });
       }
-    }
 
-    console.error("[CAPI] All endpoints failed");
-    return NextResponse.json(
-      { success: false, error: "All endpoints failed — check Vercel function logs" },
-      { status: 200 }
-    );
+      console.error(`[CAPI] Meta CAPI returned ${response.status}: ${responseText}`);
+      return NextResponse.json(
+        { success: false, error: `Meta CAPI error ${response.status}`, detail: responseText },
+        { status: 200 }
+      );
+
+    } catch (fetchErr) {
+      console.error("[CAPI] Fetch error:", fetchErr);
+      return NextResponse.json({ success: false, error: "Fetch failed" }, { status: 200 });
+    }
 
   } catch (err) {
     console.error("[CAPI] Unexpected error:", err);
