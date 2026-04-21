@@ -2,11 +2,11 @@ import { NextRequest, NextResponse } from "next/server";
 
 const PIXEL_ID = "604766394322878";
 
-// Stape CAPIG endpoint — pixel ID goes in the URL path, CAPIG-API-KEY in header.
+// Stape CAPIG endpoint — /events path, CAPIG-API-KEY header + FB access_token in body.
 // Try both the direct Stape host and the custom domain CNAME.
 const ENDPOINTS = [
-  `https://capig.stape.st/${PIXEL_ID}/events`,
-  `https://capi.dsmcleaningsolutions.com/${PIXEL_ID}/events`,
+  "https://capig.stape.st/events",
+  "https://capi.dsmcleaningsolutions.com/events",
 ];
 
 export async function POST(request: NextRequest) {
@@ -24,6 +24,12 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: false, error: "API key not configured" }, { status: 200 });
     }
 
+    const accessToken = process.env.FB_ACCESS_TOKEN;
+    if (!accessToken) {
+      console.error("[CAPI] FB_ACCESS_TOKEN env var is not set");
+      return NextResponse.json({ success: false, error: "FB access token not configured" }, { status: 200 });
+    }
+
     const clientIp =
       request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
       request.headers.get("x-real-ip") ||
@@ -33,6 +39,7 @@ export async function POST(request: NextRequest) {
     const resolvedEventId = eventId || crypto.randomUUID();
 
     const payload = {
+      access_token: accessToken,
       pixel_id: PIXEL_ID,
       data: [
         {
