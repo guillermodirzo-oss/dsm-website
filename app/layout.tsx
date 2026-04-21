@@ -22,12 +22,27 @@ export const metadata: Metadata = {
   },
   description:
     "Family-owned house cleaning in Plainfield & Romeoville, IL. Eco-friendly, fully insured & 5-star rated. Book online or call for a free estimate.",
+  icons: {
+    icon: [
+      { url: "/icon.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: "/icon.png",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://www.dsmcleaningsolutions.com",
     siteName: "DSM Cleaning Solutions",
     images: [
+      {
+        url: "/icon.png",
+        width: 512,
+        height: 512,
+        alt: "DSM Cleaning Solutions Logo",
+      },
       {
         url: "/og-image.jpg",
         width: 1200,
@@ -64,7 +79,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/icon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
