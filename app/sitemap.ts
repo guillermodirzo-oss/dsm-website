@@ -143,6 +143,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/blog/move-out-cleaning-checklist-bolingbrook-renters`,
+      lastModified: new Date("2026-04-21"),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/blog/what-to-expect-from-a-professional-deep-cleaning-service-plainfield-il`,
       lastModified: new Date("2026-04-17"),
       changeFrequency: "monthly" as const,

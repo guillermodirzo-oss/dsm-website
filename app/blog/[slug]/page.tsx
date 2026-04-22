@@ -62,11 +62,18 @@ export default function BlogPostPage({
 
   return (
     <main>
-      {/* JSON-LD */}
+      {/* JSON-LD: BlogPosting */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      {/* JSON-LD: FAQPage (per-post, optional) */}
+      {post.faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(post.faqSchema) }}
+        />
+      )}
 
       {/* Hero */}
       <section className="bg-gradient-to-br from-brand-green-dark via-brand-green to-brand-green-light text-white py-16 md:py-20">

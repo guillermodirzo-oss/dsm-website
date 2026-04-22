@@ -8,6 +8,7 @@ export interface BlogPost {
   author: string;
   excerpt: string;
   content: string; // HTML string
+  faqSchema?: object; // Optional FAQPage JSON-LD schema
 }
 
 export const blogPosts: BlogPost[] = [
@@ -230,6 +231,120 @@ export const blogPosts: BlogPost[] = [
 <p>DSM Cleaning Solutions has helped renters across Naperville's Ashbury and White Eagle neighborhoods (60540, 60564) and Bolingbrook's Americana Estates and Stillwater communities (60440, 60490) successfully pass their move-out inspections. We follow a landlord-focused checklist, use eco-friendly products that leave no residue or odor, and back every move-out job with a satisfaction guarantee. Learn more about our coverage on our <a href="/naperville-il" class="text-brand-green font-semibold hover:underline">Naperville, IL page</a> and <a href="/bolingbrook-il" class="text-brand-green font-semibold hover:underline">Bolingbrook, IL page</a>.</p>
 
 <p>Don't leave your security deposit on the table. Call DSM Cleaning Solutions at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> for a free estimate on your move-out clean. We'll make sure your rental is spotless before you hand over the keys — and help you walk away with every dollar of your deposit.</p>`,
+  },
+  {
+    slug: "move-out-cleaning-checklist-bolingbrook-renters",
+    title: "Move Out Cleaning Checklist for Bolingbrook Renters and Homeowners",
+    metaTitle: "Move Out Cleaning Checklist for Bolingbrook Renters",
+    metaDescription:
+      "Get your full security deposit back with our move-out cleaning checklist for Bolingbrook, IL renters. Call DSM Cleaning Solutions at (815) 246-2113.",
+    date: "April 21, 2026",
+    dateISO: "2026-04-21",
+    author: "DSM Cleaning Solutions",
+    excerpt:
+      "Moving out of your Bolingbrook apartment or home? Use this room-by-room checklist to pass your move-out inspection and recover every dollar of your security deposit.",
+    faqSchema: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "How much does move-out cleaning cost in Bolingbrook?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Professional move-out cleaning in Bolingbrook typically ranges from $150 to $250 for most apartments and smaller homes, with larger properties running $250–$350. Call (815) 246-2113 for a free, no-obligation estimate.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How far in advance should I book a move-out cleaning in Bolingbrook?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "We recommend booking 3–5 days before your move-out date. For month-end moves, booking a full week ahead is ideal. DSM Cleaning Solutions serves Bolingbrook 7 days a week, including weekends.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do I need to be home during the move-out cleaning?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "No — many customers leave a key or lock box code and return to a clean home. Our team is fully insured and background-checked, and we've served hundreds of Bolingbrook renters this way.",
+          },
+        },
+      ],
+    },
+    content: `<p>If you're planning a <strong>move out cleaning in Bolingbrook, IL</strong>, you're already ahead of most renters — and that preparation is exactly what separates those who get their full deposit back from those who don't. Security deposits in Bolingbrook typically run $1,200 to $2,500 depending on the property, and landlords throughout Americana Estates, Stillwater, and the newer developments along Route 53 apply the same scrutiny during move-out inspections. This room-by-room checklist covers everything you need to pass your walkthrough and protect every dollar of your deposit.</p>
+
+<h2>What Bolingbrook Landlords Check During Move-Out Inspections</h2>
+<p>Bolingbrook property managers serving the 60440 and 60490 zip codes conduct their inspections using the same move-in checklist you signed at the start of your lease. Any condition that has deteriorated beyond normal wear and tear can result in deductions. The areas cited most frequently in Bolingbrook move-out disputes are appliance cleanliness (especially the oven interior), bathroom grout and shower surfaces, the inside of kitchen cabinets and drawers, ceiling fans, and carpet condition. Many renters focus only on visible surfaces — countertops, floors — and miss the spots that actually trigger deductions.</p>
+
+<h2>Room-by-Room Move-Out Cleaning Checklist</h2>
+
+<h3>Kitchen</h3>
+<ul>
+  <li>Clean inside the oven completely — remove racks and scrub the interior walls, floor, and door glass; burnt-on residue is one of the most common reasons for deposit deductions</li>
+  <li>Degrease the stovetop, including burner grates and the area under the burners</li>
+  <li>Clean and degrease the range hood and filter</li>
+  <li>Wipe inside and outside the microwave, including the turntable</li>
+  <li>Clean the refrigerator inside and out — all shelves, drawers, door shelves, and the door gaskets</li>
+  <li>Scrub the sink and faucet thoroughly; remove any buildup around the drain</li>
+  <li>Wipe all cabinet fronts and clean inside every cabinet and drawer — remove shelf liners</li>
+  <li>Clean countertops and backsplash, including grout lines</li>
+  <li>Sweep and mop the floor, paying close attention to corners and the area under the toe kick</li>
+</ul>
+
+<h3>Bathrooms</h3>
+<ul>
+  <li>Scrub the toilet inside and out, including the base and behind the tank</li>
+  <li>Deep scrub the shower or tub — pay close attention to grout lines and tile; remove all soap scum, mildew, or hard water buildup</li>
+  <li>Clean shower doors and tracks; these are checked on every inspection</li>
+  <li>Polish faucets, handles, and shower fixtures to remove water spots</li>
+  <li>Clean the mirror completely streak-free</li>
+  <li>Wipe the vanity, sink basin, and countertop</li>
+  <li>Clean inside all bathroom cabinets and shelves</li>
+  <li>Mop the floor and scrub grout lines in corners and along the tub edge</li>
+</ul>
+
+<h3>Bedrooms and Living Areas</h3>
+<ul>
+  <li>Clean inside all closets — shelves, the rod, and the floor</li>
+  <li>Wipe all baseboards along every wall in every room</li>
+  <li>Clean window sills and window tracks throughout the home</li>
+  <li>Vacuum all carpets thoroughly, including along edges and inside closets; treat any visible stains</li>
+  <li>Sweep and mop all hard floors</li>
+  <li>Wipe light switches, outlet covers, and door handles</li>
+  <li>Dust and wipe all ceiling fans and light fixtures</li>
+  <li>Wipe all interior door surfaces and door frames</li>
+</ul>
+
+<h3>Often-Missed Areas Bolingbrook Landlords Inspect</h3>
+<ul>
+  <li>Inside the washer and dryer — clean the drum and door seal; remove all lint trap debris</li>
+  <li>Air vents and return registers — remove covers and wipe down both sides</li>
+  <li>The laundry room floor and the area behind the washer and dryer</li>
+  <li>Garage floor — sweep thoroughly and address any oil or fluid stains</li>
+  <li>Patio or back deck — sweep and wipe down railings</li>
+  <li>All personal items and trash removed from every closet, cabinet, and storage area</li>
+</ul>
+
+<h2>DIY vs. Hiring a Professional Move-Out Cleaner in Bolingbrook</h2>
+<p>Move-out cleaning looks manageable on paper but takes a full day of hard physical work in practice — scrubbing appliances, getting on your hands and knees for grout lines, moving furniture to reach baseboards — all while managing the rest of your move. Missing even a handful of items from this list risks deductions that typically run $300–$800 for a standard apartment in Bolingbrook, which frequently exceeds what a professional cleaning costs. Our <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning service</a> follows a landlord-focused checklist and covers every item on this list in a single visit. See the full details on our <a href="/move-out-cleaning-bolingbrook-il" class="text-brand-green font-semibold hover:underline">Bolingbrook move-out cleaning page</a>.</p>
+
+<h2>How DSM Cleaning Solutions Serves Bolingbrook Renters and Homeowners</h2>
+<p>DSM Cleaning Solutions serves all of Bolingbrook — zip codes 60440 and 60490 — including Americana Estates, Stillwater, Lake Bolingbrook, and the communities along Route 53 and Weber Road. We're familiar with the rental landscape in these neighborhoods and know exactly what Bolingbrook property managers look for during inspections. Every job follows a detailed, room-by-room checklist, uses eco-friendly products that leave no residue, and is backed by our 48-hour satisfaction guarantee. Our team is fully insured and every member is background-checked. Learn more about our coverage on our <a href="/bolingbrook-il" class="text-brand-green font-semibold hover:underline">Bolingbrook, IL service page</a>.</p>
+
+<h2>Frequently Asked Questions About Move-Out Cleaning in Bolingbrook</h2>
+
+<h3>How much does move-out cleaning cost in Bolingbrook?</h3>
+<p>Professional move-out cleaning in Bolingbrook typically ranges from $150 to $250 for most apartments and smaller homes, with larger properties running $250–$350. Call us at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> for a free, no-obligation estimate tailored to your home's size and condition.</p>
+
+<h3>How far in advance should I book a move-out cleaning?</h3>
+<p>We recommend booking 3–5 days before your move-out date to ensure availability. For month-end moves — the busiest period — booking a full week ahead is ideal. We serve Bolingbrook 7 days a week, including weekends.</p>
+
+<h3>Do I need to be home during the move-out cleaning?</h3>
+<p>No — many customers leave us a key or lock box code and return to a clean home. As long as we have access to all areas, you don't need to be present. Our team is fully insured and background-checked, and we've served hundreds of Bolingbrook renters this way.</p>
+
+<p>Don't risk your security deposit. Call DSM Cleaning Solutions at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> for a free estimate, or <a href="https://dsmcleaningsolutions.bookingkoala.com/booknow" class="text-brand-green font-semibold hover:underline">book your Bolingbrook move-out clean online</a> today.</p>`,
   },
   {
     slug: "spring-cleaning-tips-romeoville-plainfield",
