@@ -16,6 +16,13 @@ const nextConfig = {
         permanent: true,
       },
 
+      // ─── BOOKINGKOALA ADMIN SHORTCUT ──────────────────────────────────────
+      {
+        source: "/admin/:path*",
+        destination: "https://dsmcleaningsolutions.bookingkoala.com/admin/:path*",
+        permanent: false,
+      },
+
       // ─── OLD ABOUT / CONTACT / AUTH PAGES ─────────────────────────────────
       {
         source: "/about-us",
