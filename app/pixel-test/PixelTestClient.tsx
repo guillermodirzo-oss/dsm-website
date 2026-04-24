@@ -30,17 +30,19 @@ export default function PixelTestClient() {
   useEffect(() => {
     // Count how many times fbq('track') has been called for PageView
     let pageViewCount = 0;
-    const originalFbq = (window as any).fbq;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const originalFbq = (window as any).fbq as ((...args: any[]) => void) | undefined;
 
     if (typeof originalFbq === "function") {
-      // Wrap fbq to intercept calls (non-destructive)
-      const wrappedFbq = function (...args: unknown[]) {
+      // Wrap fbq with an arrow function to intercept PageView calls (non-destructive).
+      // Arrow functions avoid the `this` implicit-any error in strict TS.
+      const wrappedFbq = (...args: unknown[]) => {
         if (args[0] === "track" && args[1] === "PageView") {
           pageViewCount++;
         }
-        return originalFbq.apply(this, args);
+        originalFbq(...args);
       };
-      // Copy all properties from original fbq
+      // Copy all properties from original fbq so the pixel SDK still works
       Object.assign(wrappedFbq, originalFbq);
       (window as any).fbq = wrappedFbq;
     }
