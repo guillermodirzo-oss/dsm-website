@@ -122,13 +122,10 @@ export default function RootLayout({
                 { "@type": "City", name: "Joliet", containedInPlace: { "@type": "State", name: "Illinois" } },
                 { "@type": "City", name: "Westmont", containedInPlace: { "@type": "State", name: "Illinois" } },
               ],
-              aggregateRating: {
-                "@type": "AggregateRating",
-                ratingValue: "5.0",
-                reviewCount: "47",
-                bestRating: "5",
-                worstRating: "1",
-              },
+              // AggregateRating intentionally omitted from the global layout schema.
+              // It lives ONLY on /reviews so Google sees exactly one AggregateRating
+              // per page and the "Review has multiple aggregate ratings" GSC error
+              // does not trigger on blog posts or service pages.
               sameAs: [
                 "https://www.yelp.com/biz/dsm-cleaning-solutions",
               ],
