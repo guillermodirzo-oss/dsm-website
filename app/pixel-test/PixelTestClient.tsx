@@ -30,7 +30,6 @@ export default function PixelTestClient() {
   useEffect(() => {
     // Count how many times fbq('track') has been called for PageView
     let pageViewCount = 0;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const originalFbq = (window as any).fbq as ((...args: any[]) => void) | undefined;
 
     if (typeof originalFbq === "function") {
