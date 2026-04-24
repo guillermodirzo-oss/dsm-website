@@ -560,6 +560,10 @@ export default function DeepCleaningPage() {
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Lockport, IL</h3>
               <p className="text-sm text-gray-600">Serving all of Lockport (60441).</p>
             </Link>
+            <Link href="/deep-cleaning-shorewood-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Shorewood, IL</h3>
+              <p className="text-sm text-gray-600">Serving all of Shorewood (60404).</p>
+            </Link>
           </div>
         </div>
       </section>
