@@ -221,6 +221,105 @@ const nextConfig = {
         destination: "/one-time-cleaning",
         permanent: true,
       },
+
+      // ─── NEWLY ADDED MISSING REDIRECTS ────────────────────────────────────
+
+      // Internal page shortcuts
+      {
+        source: "/home",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/faqs",
+        destination: "/contact",
+        permanent: true,
+      },
+      {
+        source: "/faq",
+        destination: "/contact",
+        permanent: true,
+      },
+
+      // Booking / signup shortcuts
+      {
+        source: "/signup",
+        destination: "https://dsmcleaningsolutions.bookingkoala.com/booknow",
+        permanent: true,
+      },
+      {
+        source: "/sign-up",
+        destination: "https://dsmcleaningsolutions.bookingkoala.com/booknow",
+        permanent: true,
+      },
+      {
+        source: "/schedule",
+        destination: "https://dsmcleaningsolutions.bookingkoala.com/booknow",
+        permanent: true,
+      },
+      {
+        source: "/schedule-cleaning",
+        destination: "https://dsmcleaningsolutions.bookingkoala.com/booknow",
+        permanent: true,
+      },
+
+      // Estimate / pricing variants → contact form
+      {
+        source: "/estimate",
+        destination: "/contact",
+        permanent: true,
+      },
+      {
+        source: "/free-estimate",
+        destination: "/contact",
+        permanent: true,
+      },
+      {
+        source: "/pricing",
+        destination: "/contact",
+        permanent: true,
+      },
+      {
+        source: "/price",
+        destination: "/contact",
+        permanent: true,
+      },
+
+      // Reviews / social proof
+      {
+        source: "/testimonials",
+        destination: "/reviews",
+        permanent: true,
+      },
+      {
+        source: "/testimonial",
+        destination: "/reviews",
+        permanent: true,
+      },
+
+      // Missing move-in/move-out city variant
+      {
+        source: "/move-in-move-out-cleaning-bolingbrook-il",
+        destination: "/move-out-cleaning",
+        permanent: true,
+      },
+
+      // Residential / service name variants
+      {
+        source: "/residential",
+        destination: "/standard-cleaning",
+        permanent: true,
+      },
+      {
+        source: "/residential-cleaning",
+        destination: "/standard-cleaning",
+        permanent: true,
+      },
+      {
+        source: "/spring-cleaning",
+        destination: "/deep-cleaning",
+        permanent: true,
+      },
     ];
   },
 };
