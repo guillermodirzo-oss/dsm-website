@@ -8,9 +8,10 @@ export default function ThankYouClient() {
     // Single event_id shared by browser pixel + server CAPI for deduplication
     const eventId = crypto.randomUUID();
 
-    // Read Facebook cookies for better match quality
+    // Read Facebook cookies + stable external_id for better match quality
     const fbp = document.cookie.match(/_fbp=([^;]+)/)?.[1];
     const fbc = document.cookie.match(/_fbc=([^;]+)/)?.[1];
+    const externalId = (() => { try { return localStorage.getItem("dsm_eid") ?? undefined; } catch { return undefined; } })();
 
     // ── Browser-side: Facebook Pixel Purchase ───────────────────────────────
     // eventID passed as 4th arg so Meta can deduplicate against the server event
@@ -53,7 +54,7 @@ export default function ThankYouClient() {
           content_name: "Booking Completed",
           content_category: "House Cleaning",
         },
-        userData: { fbp, fbc },
+        userData: { fbp, fbc, external_id: externalId },
       }),
     }).catch(() => {
       // Silent — never block the user experience
