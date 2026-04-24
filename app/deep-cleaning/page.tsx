@@ -564,6 +564,14 @@ export default function DeepCleaningPage() {
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Shorewood, IL</h3>
               <p className="text-sm text-gray-600">Serving all of Shorewood (60404).</p>
             </Link>
+            <Link href="/deep-cleaning-lemont-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Lemont, IL</h3>
+              <p className="text-sm text-gray-600">Serving all of Lemont (60439).</p>
+            </Link>
+            <Link href="/deep-cleaning-homer-glen-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Homer Glen, IL</h3>
+              <p className="text-sm text-gray-600">Serving all of Homer Glen (60491).</p>
+            </Link>
           </div>
         </div>
       </section>
