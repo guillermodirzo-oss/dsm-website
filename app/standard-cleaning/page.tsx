@@ -299,6 +299,14 @@ export default function StandardCleaningPage() {
               <h3 className="font-bold text-gray-900 mb-1">Standard Cleaning in Homer Glen, IL</h3>
               <p className="text-sm text-gray-600">Serving all of Homer Glen (60491).</p>
             </Link>
+            <Link href="/standard-cleaning-westmont-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Standard Cleaning in Westmont, IL</h3>
+              <p className="text-sm text-gray-600">Serving all of Westmont (60559).</p>
+            </Link>
+            <Link href="/standard-cleaning-minooka-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Standard Cleaning in Minooka, IL</h3>
+              <p className="text-sm text-gray-600">Serving all of Minooka (60447).</p>
+            </Link>
           </div>
         </div>
       </section>
