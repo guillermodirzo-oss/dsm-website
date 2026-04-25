@@ -310,8 +310,8 @@ export default function HomePage() {
               {/* Image with overlay card */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-orange-100 h-[500px]">
                 <Image
-                  src="/Work%20Pictures/Google Post Image - Cleaning Service (25).png"
-                  alt="DSM Cleaning Solutions professional cleaner at work in a Plainfield IL home"
+                  src="/Work%20Pictures/IMG_2034.jpg"
+                  alt="DSM Cleaning Solutions professional move-out cleaning in a Romeoville IL home"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
