@@ -71,6 +71,7 @@ export default function Navigation() {
               </div>
             </div>
             <Link href="/#about" className="text-sm text-gray-600 hover:text-brand-green font-medium transition-colors">About</Link>
+            <Link href="/pricing" className="text-sm text-gray-600 hover:text-brand-green font-medium transition-colors">Pricing</Link>
             <Link href="/#faq" className="text-sm text-gray-600 hover:text-brand-green font-medium transition-colors">FAQ</Link>
             <Link href="/contact" className="text-sm text-gray-600 hover:text-brand-green font-medium transition-colors">Contact</Link>
             <Link href="/blog" className="text-sm text-gray-600 hover:text-brand-green font-medium transition-colors">Blog</Link>
@@ -177,6 +178,7 @@ export default function Navigation() {
               {/* Remaining top-level links */}
               {[
                 { label: "About", href: "/about" },
+                { label: "Pricing", href: "/pricing" },
                 { label: "Blog", href: "/blog" },
                 { label: "FAQ", href: "/#faq" },
                 { label: "Contact", href: "/contact" },
