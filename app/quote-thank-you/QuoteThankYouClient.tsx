@@ -2,6 +2,13 @@
 
 import { useEffect } from "react";
 import Link from "next/link";
+import {
+  getOrCreateExternalId,
+  getCookie,
+  getStoredRawEmail,
+  getStoredHashedEmail,
+  getStoredRawPhone,
+} from "@/lib/pixelHelpers";
 
 export default function QuoteThankYouClient() {
   useEffect(() => {
@@ -9,9 +16,24 @@ export default function QuoteThankYouClient() {
     const eventId = crypto.randomUUID();
 
     // Read Facebook cookies + stable external_id for better match quality
-    const fbp = document.cookie.match(/_fbp=([^;]+)/)?.[1];
-    const fbc = document.cookie.match(/_fbc=([^;]+)/)?.[1];
-    const externalId = (() => { try { return localStorage.getItem("dsm_eid") ?? undefined; } catch { return undefined; } })();
+    const fbp        = getCookie("_fbp");
+    const fbc        = getCookie("_fbc");
+    const externalId = getOrCreateExternalId();
+
+    // ── Advanced matching — read email captured from BookingForm pre-capture ──
+    // storeUserSignal() was called in BookingForm when the user entered their
+    // email. sessionStorage survives a router.push() redirect within the same
+    // tab, so the raw email is available here.
+    const rawEmail    = getStoredRawEmail();   // sessionStorage — raw for CAPI
+    const hashedEmail = getStoredHashedEmail(); // localStorage  — hashed for fbq
+    const rawPhone    = getStoredRawPhone();    // sessionStorage — raw for CAPI
+
+    // ── Browser-side: set advanced matching before firing the event ──────────
+    if (hashedEmail && typeof (window as any).fbq === "function") {
+      try {
+        (window as any).fbq("setUserProperties", "604766394322878", { em: hashedEmail });
+      } catch { /* ignore */ }
+    }
 
     // ── Browser-side: Facebook Pixel Lead ───────────────────────────────────
     // eventID passed as 4th arg so Meta can deduplicate against the server event
@@ -27,6 +49,11 @@ export default function QuoteThankYouClient() {
         },
         { eventID: eventId }
       );
+      console.debug(
+        "[Pixel] Lead (thank-you) | id:", eventId,
+        "| em:", rawEmail ? "✓" : "✗ (not captured)",
+        "| ph:", rawPhone ? "✓" : "✗"
+      );
     }
 
     // ── Browser-side: GA4 generate_lead ─────────────────────────────────────
@@ -39,8 +66,9 @@ export default function QuoteThankYouClient() {
       });
     }
 
-    // ── Server-side: CAPI Lead via Stape CAPIG ───────────────────────────────
-    // Fire-and-forget — if this fails the browser pixel event above still counted
+    // ── Server-side: CAPI Lead ───────────────────────────────────────────────
+    // Fire-and-forget — if this fails the browser pixel event above still counted.
+    // em + ph are raw values — /api/track hashes them before sending to Meta.
     fetch("/api/track", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -54,7 +82,13 @@ export default function QuoteThankYouClient() {
           value: 0,
           currency: "USD",
         },
-        userData: { fbp, fbc, external_id: externalId },
+        userData: {
+          fbp,
+          fbc,
+          external_id: externalId,
+          em: rawEmail  || undefined,   // raw — server hashes before sending to Meta
+          ph: rawPhone  || undefined,   // raw — server normalises + hashes
+        },
       }),
     }).catch(() => {
       // Silent — never block the user experience

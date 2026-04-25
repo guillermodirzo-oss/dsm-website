@@ -9,6 +9,8 @@ interface DiagState {
   fbc: string | null;
   fbclid: string | null;
   externalId: string | null;
+  hashedEmailStored: boolean;
+  rawEmailSession: boolean;
   capiResponse: string | null;
   capiStatus: "idle" | "loading" | "ok" | "error";
   matchParams: string[];
@@ -22,6 +24,8 @@ export default function PixelTestClient() {
     fbc: null,
     fbclid: null,
     externalId: null,
+    hashedEmailStored: false,
+    rawEmailSession: false,
     capiResponse: null,
     capiStatus: "idle",
     matchParams: [],
@@ -55,13 +59,19 @@ export default function PixelTestClient() {
         try { return localStorage.getItem("dsm_eid"); } catch { return null; }
       })();
 
+      const hashedEmailStored = !!((() => { try { return localStorage.getItem("dsm_em_h"); } catch { return null; } })());
+      const rawEmailSession   = !!((() => { try { return sessionStorage.getItem("dsm_em_raw"); } catch { return null; } })());
+
       const matchParams: string[] = [];
-      if (fbp)         matchParams.push("fbp ✓");
-      if (fbc)         matchParams.push("fbc ✓");
-      if (externalId)  matchParams.push("external_id ✓");
-      if (!fbp)        matchParams.push("fbp ✗ MISSING");
-      if (!fbc)        matchParams.push("fbc ✗ (OK if no ad click)");
-      if (!externalId) matchParams.push("external_id ✗ MISSING");
+      if (fbp)               matchParams.push("fbp ✓");
+      if (fbc)               matchParams.push("fbc ✓");
+      if (externalId)        matchParams.push("external_id ✓");
+      if (hashedEmailStored) matchParams.push("em (hashed) ✓ — stored in localStorage");
+      if (rawEmailSession)   matchParams.push("em (raw) ✓ — in sessionStorage for CAPI");
+      if (!fbp)              matchParams.push("fbp ✗ MISSING");
+      if (!fbc)              matchParams.push("fbc ✗ (OK if no ad click)");
+      if (!externalId)       matchParams.push("external_id ✗ MISSING");
+      if (!hashedEmailStored) matchParams.push("em ✗ — submit a form to capture email");
 
       setState(prev => ({
         ...prev,
@@ -71,6 +81,8 @@ export default function PixelTestClient() {
         fbc,
         fbclid,
         externalId,
+        hashedEmailStored,
+        rawEmailSession,
         matchParams,
       }));
     }, 1500);
@@ -165,6 +177,20 @@ export default function PixelTestClient() {
           {row("_fbc cookie", state.fbc, state.fbc !== null ? true : null)}
           {row("fbclid in URL", state.fbclid, state.fbclid !== null ? true : null)}
           {row("external_id", state.externalId, !!state.externalId)}
+          {row(
+            "em (hashed)",
+            state.hashedEmailStored
+              ? "✓ stored in localStorage (survives sessions)"
+              : "✗ not yet captured — submit a form first",
+            state.hashedEmailStored ? true : false
+          )}
+          {row(
+            "em (raw/CAPI)",
+            state.rawEmailSession
+              ? "✓ in sessionStorage — CAPI PageViews enriched"
+              : "✗ not in session — only present after form submit",
+            state.rawEmailSession ? true : null
+          )}
           {!state.fbp && (
             <div className="mt-4 bg-yellow-950 border border-yellow-700 rounded-lg px-4 py-3 text-yellow-200 text-sm">
               ⚠️ <strong>_fbp missing</strong> — this cookie is set by the Facebook pixel JS after it loads. If it&apos;s absent, the pixel may not have initialised yet. Reload the page. If still missing, check browser ad blockers.

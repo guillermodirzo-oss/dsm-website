@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { fireLeadEvent } from "@/lib/pixelHelpers";
 
 interface ContactFormProps {
   dark?: boolean;
@@ -13,7 +14,20 @@ export default function ContactForm({ dark = false }: ContactFormProps) {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    // Simulate form submission — replace with your actual endpoint (e.g. Formspree, Netlify Forms, custom API)
+
+    const form = e.currentTarget;
+    const email = (form.elements.namedItem("email") as HTMLInputElement)?.value ?? "";
+    const phone = (form.elements.namedItem("phone") as HTMLInputElement)?.value ?? "";
+
+    // Fire Meta Pixel + CAPI Lead event with email + phone for advanced matching.
+    // fireLeadEvent hashes email browser-side (for fbq) and sends raw to our
+    // server (for CAPI) — no plain-text PII ever reaches Meta's servers.
+    fireLeadEvent(email, phone).catch(() => {
+      // Pixel failures must never block form submission
+    });
+
+    // TODO: Replace this simulation with a real form submission endpoint
+    // e.g. Formspree, Netlify Forms, or a custom /api/contact route.
     await new Promise((r) => setTimeout(r, 800));
     setLoading(false);
     setSubmitted(true);
@@ -64,6 +78,17 @@ export default function ContactForm({ dark = false }: ContactFormProps) {
             className={inputClass}
           />
         </div>
+      </div>
+      <div>
+        <label htmlFor="email" className={labelClass}>Email Address *</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="jane@example.com"
+          className={inputClass}
+        />
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>

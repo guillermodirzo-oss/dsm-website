@@ -3,31 +3,15 @@
 import Script from "next/script";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
+import {
+  getOrCreateExternalId,
+  getCookie,
+  getStoredRawEmail,
+  getStoredHashedEmail,
+  getStoredRawPhone,
+} from "@/lib/pixelHelpers";
 
 const PIXEL_ID = "604766394322878";
-
-// Get or create a stable anonymous external_id in localStorage.
-// This persists across sessions so Meta can recognise returning visitors
-// and stitch browser + server events together without PII.
-function getOrCreateExternalId(): string {
-  try {
-    const KEY = "dsm_eid";
-    let eid = localStorage.getItem(KEY);
-    if (!eid) {
-      eid = crypto.randomUUID();
-      localStorage.setItem(KEY, eid);
-    }
-    return eid;
-  } catch {
-    // localStorage blocked (private browsing etc.) — use a session-only fallback
-    return crypto.randomUUID();
-  }
-}
-
-// Read a named cookie value from document.cookie
-function getCookie(name: string): string | undefined {
-  return document.cookie.match(new RegExp(`(?:^|; )${name}=([^;]*)`))?.[1];
-}
 
 export default function FacebookPixel() {
   const pathname = usePathname();
@@ -41,9 +25,28 @@ export default function FacebookPixel() {
     // This lets Meta deduplicate the two signals and count exactly 1 event.
     const eventId = crypto.randomUUID();
 
-    const fbp = getCookie("_fbp");
-    const fbc = getCookie("_fbc");
+    const fbp        = getCookie("_fbp");
+    const fbc        = getCookie("_fbc");
     const externalId = getOrCreateExternalId();
+
+    // ── Advanced matching — enrich pixel with email if we have it ──────────
+    // getStoredHashedEmail() reads from localStorage (survives across sessions).
+    // getStoredRawEmail() reads from sessionStorage (current tab only, for CAPI).
+    // getStoredRawPhone() reads from sessionStorage (current tab only, for CAPI).
+    const hashedEmail = getStoredHashedEmail();
+    const rawEmail    = getStoredRawEmail();
+    const rawPhone    = getStoredRawPhone();
+
+    // Call setUserProperties with the hashed email so that Meta can apply
+    // advanced matching to ALL subsequent track() calls on this page.
+    // This is the key fix for the low email coverage (19%) in Events Manager.
+    if (hashedEmail) {
+      try {
+        (window as any).fbq("setUserProperties", PIXEL_ID, { em: hashedEmail });
+      } catch {
+        /* ignore if pixel not ready */
+      }
+    }
 
     // ── Browser-side PageView ──────────────────────────────────────────────
     // eventID is passed as the 4th argument so Meta can match this with the
@@ -51,6 +54,8 @@ export default function FacebookPixel() {
     (window as any).fbq("track", "PageView", {}, { eventID: eventId });
 
     // ── Server-side CAPI PageView (fire-and-forget) ────────────────────────
+    // em and ph are raw values — /api/track hashes them server-side before
+    // forwarding to Meta. Raw PII is only transmitted over HTTPS to our server.
     fetch("/api/track", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -62,8 +67,8 @@ export default function FacebookPixel() {
           fbp,
           fbc,
           external_id: externalId,
-          // ph (hashed phone) and em (hashed email) are added by the server
-          // route whenever those values are available from form submissions.
+          em: rawEmail   || undefined,  // raw — server hashes before sending to Meta
+          ph: rawPhone   || undefined,  // raw — server normalises + hashes
         },
       }),
     }).catch(() => {
