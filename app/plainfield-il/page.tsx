@@ -287,32 +287,37 @@ export default function PlainfieldPage() {
         </div>
       </section>
 
-      {/* NEIGHBORHOODS */}
-      <section className="py-14 bg-gray-50">
+      {/* NEIGHBORHOODS & LANDMARKS */}
+      <section className="py-16 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <div>
-              <h2 className="section-heading text-2xl mb-4">Neighborhoods We Serve in Plainfield, IL</h2>
-              <p className="text-gray-600 mb-5 leading-relaxed">
-                DSM Cleaning Solutions services every neighborhood across Plainfield. No matter which part of Plainfield you call home, we bring the same professional, eco-friendly clean to your door.
+              <h2 className="section-heading text-3xl md:text-4xl mb-4">Plainfield Neighborhoods We Serve</h2>
+              <p className="text-gray-500 mb-5 leading-relaxed">
+                Based in the southwest Chicago suburbs, DSM Cleaning Solutions knows every corner of Plainfield. We clean homes throughout every neighborhood — from the newest developments to established subdivisions we&apos;ve served for years.
               </p>
-              <div className="grid grid-cols-2 gap-2">
-                {["Settlers Ridge", "Lakewood Falls", "Grande Park", "Springbank", "Heritage Meadows", "River Run"].map((n) => (
+              <div className="grid grid-cols-2 gap-2 mb-5">
+                {["Settlers Ridge", "Lakewood Falls", "Grande Park", "Springbank", "Wallin Oaks", "Creekside Crossing", "Whispering Creek"].map((n) => (
                   <div key={n} className="flex items-center gap-2 text-gray-700 text-sm">
-                    <svg className="w-4 h-4 text-brand-green flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    <svg className="w-4 h-4 text-brand-green flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                      <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
                     {n}
                   </div>
                 ))}
               </div>
-              <p className="text-gray-500 text-sm mt-4">Zip codes served: 60544 &amp; 60585</p>
+              <p className="text-gray-400 text-sm">Zip codes served: 60544 &amp; 60585</p>
             </div>
             <div>
-              <h3 className="font-bold text-xl text-gray-900 mb-4">Local Landmarks Near You</h3>
-              <p className="text-gray-600 mb-4 leading-relaxed text-sm">We&apos;re proud to serve the Plainfield community around these well-known local landmarks:</p>
+              <h3 className="font-bold text-xl text-gray-900 mb-4">Local Plainfield Landmarks</h3>
+              <p className="text-gray-500 mb-4 text-sm leading-relaxed">
+                We&apos;re proud to serve the families who live near these well-known local landmarks:
+              </p>
               <div className="space-y-2">
-                {["Plainfield Historic District", "Plainfield Township Park", "Riverwalk Trail System", "Route 59 Corridor", "119th Street Retail Area"].map((l) => (
-                  <div key={l} className="flex items-center gap-3 bg-white rounded-xl p-3 border border-gray-100">
-                    <span className="text-2xl">📍</span>
+                {["Plainfield Historic District", "Township Park", "Settlers Park", "Plainfield Public Library", "Van Dyke Road Corridor"].map((l) => (
+                  <div key={l} className="flex items-center gap-3 bg-gray-50 rounded-xl p-3 border border-gray-100">
+                    <span className="text-xl">📍</span>
                     <span className="text-gray-700 font-medium text-sm">{l}</span>
                   </div>
                 ))}
