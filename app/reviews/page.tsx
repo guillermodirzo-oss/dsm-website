@@ -56,6 +56,10 @@ const reviews = [
   },
 ];
 
+// aggregateRating lives in layout.tsx (global LocalBusiness entity with @id "#business").
+// Keeping it here too would cause the "Review has multiple aggregate ratings" GSC error
+// because Google merges all schemas sharing the same @id across the site.
+// This schema only adds the individual Review items to that same entity.
 const reviewSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
@@ -70,13 +74,6 @@ const reviewSchema = {
     addressRegion: "IL",
     postalCode: "60544",
     addressCountry: "US",
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5.0",
-    reviewCount: "47",
-    bestRating: "5",
-    worstRating: "1",
   },
   review: [
     {
