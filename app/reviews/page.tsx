@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "5-Star Reviews | DSM Cleaning Solutions",
+  title: "5-Star Reviews",
   description:
     "Read 5-star reviews for DSM Cleaning Solutions — trusted house cleaning in Plainfield, Romeoville, Naperville & Bolingbrook IL. Family owned & insured.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/reviews" },
