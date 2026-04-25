@@ -473,7 +473,6 @@ export default function RecurringCleaningPage() {
               <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Flexible plans</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Get a Free Estimate</h3>
               <BookingForm />
             </div>
           </div>

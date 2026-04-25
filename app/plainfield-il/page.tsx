@@ -527,7 +527,6 @@ export default function PlainfieldPage() {
               <p className="text-white/80">Local · Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Get a Free Cleaning Estimate</h3>
               <BookingForm />
             </div>
           </div>
