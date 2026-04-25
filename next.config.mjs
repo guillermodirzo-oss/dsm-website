@@ -274,14 +274,10 @@ const nextConfig = {
         destination: "/contact",
         permanent: true,
       },
-      {
-        source: "/pricing",
-        destination: "/contact",
-        permanent: true,
-      },
+      // /pricing is now a real page — redirect removed
       {
         source: "/price",
-        destination: "/contact",
+        destination: "/pricing",
         permanent: true,
       },
 
