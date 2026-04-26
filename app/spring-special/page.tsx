@@ -116,7 +116,7 @@ export default function SpringSpecialPage() {
           {/* Hero Image */}
           <div className="mt-8 rounded-2xl overflow-hidden shadow-lg border border-gray-200">
             <Image
-              src="/spring-ad-hero.png"
+              src="/spring-ad-hero-updated.png"
               alt="DSM Cleaning Solutions — $75 Off Spring Deep Cleaning"
               width={600}
               height={600}
