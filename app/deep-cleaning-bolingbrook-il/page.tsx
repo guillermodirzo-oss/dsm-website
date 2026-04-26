@@ -3,14 +3,14 @@ import Link from "next/link";
 import BookingForm from "@/components/BookingForm";
 
 export const metadata: Metadata = {
-  title: "Deep Cleaning Services Bolingbrook IL",
+  title: "Deep Cleaning Bolingbrook IL | DSM Cleaning Solutions",
   description:
-    "Professional deep cleaning in Bolingbrook IL by DSM Cleaning Solutions. Family owned, fully insured. 48-hr guarantee. Call (815) 246-2113.",
+    "Professional deep cleaning in Bolingbrook, IL. DSM Cleaning Solutions delivers thorough, detail-oriented deep cleans for homes across Bolingbrook. 5-star rated. Book today.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-bolingbrook-il" },
   openGraph: {
-    title: "Deep Cleaning Services Bolingbrook IL",
+    title: "Deep Cleaning Bolingbrook IL | DSM Cleaning Solutions",
     description:
-      "Professional deep cleaning in Bolingbrook IL by DSM Cleaning Solutions. Family owned, fully insured. 48-hr guarantee. Call (815) 246-2113.",
+      "Professional deep cleaning in Bolingbrook, IL. DSM Cleaning Solutions delivers thorough, detail-oriented deep cleans for homes across Bolingbrook. 5-star rated. Book today.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning-bolingbrook-il",
   },
 };
@@ -71,6 +71,16 @@ const faqSchema = {
     name: faq.question,
     acceptedAnswer: { "@type": "Answer", text: faq.answer },
   })),
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dsmcleaningsolutions.com" },
+    { "@type": "ListItem", position: 2, name: "Deep Cleaning", item: "https://www.dsmcleaningsolutions.com/deep-cleaning" },
+    { "@type": "ListItem", position: 3, name: "Bolingbrook, IL", item: "https://www.dsmcleaningsolutions.com/deep-cleaning-bolingbrook-il" },
+  ],
 };
 
 const checklist = [
@@ -141,6 +151,10 @@ export default function DeepCleaningBolingbrookPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* HERO */}

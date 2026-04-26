@@ -1232,3 +1232,196 @@ export const cities: CityData[] = [
     ],
   },
 ];
+
+// ─── COMBO PAGE DATA (city + service landing pages) ───────────────────────────
+
+export interface ComboPageData {
+  slug: string;
+  city: string;
+  state: string;
+  service: string;
+  heroHeading: string;
+  heroSubheading: string;
+  metaTitle: string;
+  metaDescription: string;
+  serviceDescription: string;
+  checklist: string[];
+  faqs: Array<{ question: string; answer: string }>;
+  internalLinks: Array<{ label: string; href: string }>;
+}
+
+export const comboPages: ComboPageData[] = [
+  {
+    slug: "deep-cleaning-bolingbrook-il",
+    city: "Bolingbrook",
+    state: "IL",
+    service: "Deep Cleaning",
+    heroHeading: "Professional Deep Cleaning in Bolingbrook, IL",
+    heroSubheading:
+      "Top-to-bottom deep cleaning for Bolingbrook homes — baseboards, appliances, grout, and every corner most cleaners miss. Backed by our 48-hour satisfaction guarantee.",
+    metaTitle: "Deep Cleaning Bolingbrook IL | DSM Cleaning Solutions",
+    metaDescription:
+      "Professional deep cleaning in Bolingbrook, IL. DSM Cleaning Solutions delivers thorough, detail-oriented deep cleans for homes across Bolingbrook. 5-star rated. Book today.",
+    serviceDescription:
+      "A deep cleaning is a full reset for your home — not just surfaces, but the spots that accumulate grime over weeks and months. Our Bolingbrook deep cleaning service covers every room from ceiling fans to baseboards, inside appliances, grout lines, and all the areas a standard clean doesn't reach.",
+    checklist: [
+      "Inside and outside of microwave",
+      "Inside oven scrubbed",
+      "Stovetop and burners cleaned",
+      "Cabinet fronts wiped down",
+      "Countertops and backsplash sanitized",
+      "Sink and faucet polished",
+      "Toilet scrubbed inside, outside, and behind",
+      "Tub, shower, and grout scrubbed",
+      "Shower doors cleaned",
+      "Mirror polished",
+      "Baseboards wiped in all rooms",
+      "Ceiling fans dusted",
+      "Blinds and window sills cleaned",
+      "Light switches and door handles sanitized",
+      "Floors vacuumed and mopped throughout",
+    ],
+    faqs: [
+      {
+        question: "How long does a deep cleaning take in Bolingbrook?",
+        answer:
+          "Most deep cleans in a 3-bedroom Bolingbrook home take 3–5 hours with our team. Larger homes or homes that haven't been deep cleaned recently may take longer. We'll give you an honest estimate when you book.",
+      },
+      {
+        question: "How is a deep cleaning different from a standard cleaning?",
+        answer:
+          "A standard clean maintains a tidy home — surfaces, floors, high-traffic areas. A deep cleaning goes further: inside appliances, baseboards, ceiling fans, grout lines, behind furniture. We recommend a deep clean every 3–6 months or as a one-time reset before starting recurring service.",
+      },
+      {
+        question: "Do I need to be home during the deep cleaning?",
+        answer:
+          "You don't need to be home. Many of our Bolingbrook clients provide entry and let us handle the rest. We're fully insured and trusted by homeowners across the area.",
+      },
+      {
+        question: "Is there a satisfaction guarantee?",
+        answer:
+          "Yes — every deep cleaning is backed by our 48-hour satisfaction guarantee. If you're not happy with any area we cleaned, contact us within 48 hours and we'll come back and re-clean it free of charge.",
+      },
+    ],
+    internalLinks: [
+      { label: "Bolingbrook House Cleaning", href: "/bolingbrook-il" },
+      { label: "Deep Cleaning Services", href: "/deep-cleaning" },
+      { label: "Move-Out Cleaning Bolingbrook", href: "/move-out-cleaning-bolingbrook-il" },
+      { label: "Standard Cleaning Bolingbrook", href: "/standard-cleaning-bolingbrook-il" },
+    ],
+  },
+  {
+    slug: "move-out-cleaning-bolingbrook-il",
+    city: "Bolingbrook",
+    state: "IL",
+    service: "Move-Out Cleaning",
+    heroHeading: "Move-Out Cleaning in Bolingbrook, IL",
+    heroSubheading:
+      "Professional move-out cleaning for Bolingbrook rentals and homes — designed to help you get your full security deposit back. 48-hour satisfaction guarantee.",
+    metaTitle: "Move-Out Cleaning Bolingbrook IL | DSM Cleaning Solutions",
+    metaDescription:
+      "Move-out cleaning in Bolingbrook, IL. DSM Cleaning Solutions helps renters and homeowners leave their property spotless. 5-star rated, 48-hour guarantee. Book online.",
+    serviceDescription:
+      "Moving out of your Bolingbrook home or apartment is stressful enough — the last thing you need is to lose your security deposit over cleaning. DSM Cleaning Solutions provides thorough move-out cleanings designed to meet landlord and property manager standards across Bolingbrook and Will County.",
+    checklist: [
+      "Inside oven and stovetop scrubbed",
+      "Inside refrigerator cleaned",
+      "Inside microwave cleaned",
+      "All cabinet interiors and fronts wiped",
+      "Countertops and backsplash sanitized",
+      "Sink and faucet polished",
+      "All bathrooms scrubbed top to bottom",
+      "Tub, shower, toilet, sink, mirror",
+      "Grout and tile cleaned",
+      "Baseboards wiped in every room",
+      "Window sills and blinds cleaned",
+      "Light switches and door handles sanitized",
+      "Inside all closets wiped",
+      "Floors vacuumed and mopped throughout",
+    ],
+    faqs: [
+      {
+        question: "Will a move-out cleaning help me get my deposit back in Bolingbrook?",
+        answer:
+          "It significantly improves your chances. Our move-out cleaning is designed to meet the cleaning standards most Bolingbrook landlords and property managers require. We also back every clean with our 48-hour satisfaction guarantee — if they flag anything, we come back free.",
+      },
+      {
+        question: "Do I need to have everything moved out before you arrive?",
+        answer:
+          "Yes — all furniture and belongings need to be out before we start. We need full access to floors, closets, cabinets, and appliances to do a thorough job.",
+      },
+      {
+        question: "How far in advance should I book my move-out cleaning in Bolingbrook?",
+        answer:
+          "We recommend booking at least 5–7 days before your move-out date. Late spring and summer are our busiest season in Bolingbrook — the earlier you book, the better your chances of getting your preferred date.",
+      },
+      {
+        question: "Do you clean inside appliances?",
+        answer:
+          "Yes. Our move-out cleaning includes inside the oven, inside the refrigerator, and inside the microwave — areas that are commonly flagged during landlord inspections.",
+      },
+    ],
+    internalLinks: [
+      { label: "Bolingbrook House Cleaning", href: "/bolingbrook-il" },
+      { label: "Move-Out Cleaning Services", href: "/move-out-cleaning" },
+      { label: "Deep Cleaning Bolingbrook", href: "/deep-cleaning-bolingbrook-il" },
+      { label: "Standard Cleaning Bolingbrook", href: "/standard-cleaning-bolingbrook-il" },
+    ],
+  },
+  {
+    slug: "standard-cleaning-bolingbrook-il",
+    city: "Bolingbrook",
+    state: "IL",
+    service: "Standard Cleaning",
+    heroHeading: "Standard House Cleaning in Bolingbrook, IL",
+    heroSubheading:
+      "Reliable recurring maid service for Bolingbrook homes — weekly, bi-weekly, or monthly. Consistent cleaners, consistent results, 48-hour satisfaction guarantee.",
+    metaTitle: "House Cleaning Service Bolingbrook IL | DSM Cleaning Solutions",
+    metaDescription:
+      "Recurring house cleaning in Bolingbrook, IL. DSM Cleaning Solutions offers weekly, bi-weekly, and monthly maid service for Bolingbrook homes. 5-star rated. Book online.",
+    serviceDescription:
+      "Keeping a clean home in Bolingbrook shouldn't be a second job. DSM Cleaning Solutions provides dependable recurring maid service — weekly, bi-weekly, or monthly — so your home stays consistently clean without the effort. We send the same trusted team every visit so you always know who's coming through your door.",
+    checklist: [
+      "Kitchen countertops wiped and sanitized",
+      "Stovetop cleaned",
+      "Microwave exterior and interior wiped",
+      "Sink scrubbed and polished",
+      "Bathroom toilets, sinks, tubs, and showers cleaned",
+      "Mirrors polished",
+      "All floors vacuumed and mopped",
+      "Furniture dusted",
+      "Trash emptied in all rooms",
+      "Beds made (linens changed if left out)",
+      "Window sills dusted",
+      "High-traffic surfaces sanitized",
+    ],
+    faqs: [
+      {
+        question: "How often should I schedule house cleaning in Bolingbrook?",
+        answer:
+          "Most Bolingbrook homeowners choose bi-weekly service — it keeps the home consistently clean without the cost of weekly visits. Families with kids or pets often prefer weekly. We also offer monthly service for lighter maintenance.",
+      },
+      {
+        question: "Will I get the same cleaner every visit?",
+        answer:
+          "We do our best to send the same team to your Bolingbrook home every visit. Consistency matters — your team learns your preferences and your home's specific needs over time.",
+      },
+      {
+        question: "What's the difference between standard cleaning and deep cleaning?",
+        answer:
+          "A standard clean maintains a tidy home between deep cleans — surfaces, floors, bathrooms, and kitchen. A deep cleaning goes further: inside appliances, baseboards, grout, ceiling fans. We recommend starting with a deep clean and then moving to recurring standard service.",
+      },
+      {
+        question: "Is there a satisfaction guarantee on recurring cleaning?",
+        answer:
+          "Yes — every standard cleaning is backed by our 48-hour satisfaction guarantee. If anything isn't up to your standard, contact us within 48 hours and we'll make it right, free.",
+      },
+    ],
+    internalLinks: [
+      { label: "Bolingbrook House Cleaning", href: "/bolingbrook-il" },
+      { label: "Standard Cleaning Services", href: "/standard-cleaning" },
+      { label: "Deep Cleaning Bolingbrook", href: "/deep-cleaning-bolingbrook-il" },
+      { label: "Move-Out Cleaning Bolingbrook", href: "/move-out-cleaning-bolingbrook-il" },
+    ],
+  },
+];

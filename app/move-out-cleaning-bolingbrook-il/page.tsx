@@ -3,14 +3,14 @@ import Link from "next/link";
 import BookingForm from "@/components/BookingForm";
 
 export const metadata: Metadata = {
-  title: "Move Out Cleaning Services Bolingbrook IL",
+  title: "Move-Out Cleaning Bolingbrook IL | DSM Cleaning Solutions",
   description:
-    "Move-out cleaning in Bolingbrook IL by DSM Cleaning Solutions. Get your deposit back. Fully insured. Call (815) 246-2113.",
+    "Move-out cleaning in Bolingbrook, IL. DSM Cleaning Solutions helps renters and homeowners leave their property spotless. 5-star rated, 48-hour guarantee. Book online.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-bolingbrook-il" },
   openGraph: {
-    title: "Move Out Cleaning Services Bolingbrook IL",
+    title: "Move-Out Cleaning Bolingbrook IL | DSM Cleaning Solutions",
     description:
-      "Move-out cleaning in Bolingbrook IL by DSM Cleaning Solutions. Get your deposit back. Fully insured. Call (815) 246-2113.",
+      "Move-out cleaning in Bolingbrook, IL. DSM Cleaning Solutions helps renters and homeowners leave their property spotless. 5-star rated, 48-hour guarantee. Book online.",
     url: "https://www.dsmcleaningsolutions.com/move-out-cleaning-bolingbrook-il",
   },
 };
@@ -71,6 +71,16 @@ const faqSchema = {
     name: faq.question,
     acceptedAnswer: { "@type": "Answer", text: faq.answer },
   })),
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dsmcleaningsolutions.com" },
+    { "@type": "ListItem", position: 2, name: "Move-Out Cleaning", item: "https://www.dsmcleaningsolutions.com/move-out-cleaning" },
+    { "@type": "ListItem", position: 3, name: "Bolingbrook, IL", item: "https://www.dsmcleaningsolutions.com/move-out-cleaning-bolingbrook-il" },
+  ],
 };
 
 const checklist = [
@@ -144,6 +154,10 @@ export default function MoveOutCleaningBolingbrookPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* HERO */}
