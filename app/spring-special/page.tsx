@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Spring Cleaning Special — $75 Off",
@@ -365,7 +366,14 @@ export default function SpringSpecialPage() {
       {/* ─── SECTION 7: MINIMAL FOOTER ─── */}
       <footer className="bg-gray-100 py-4 px-4 border-t border-gray-200">
         <p className="text-center text-gray-500 text-xs">
-          &copy; 2026 DSM Cleaning Solutions. Serving Naperville, Plainfield, Hinsdale, Burr Ridge, Oak Brook &amp; Downers Grove, IL. All rights reserved.
+          &copy; 2026 DSM Cleaning Solutions. Serving{" "}
+          <Link href="/deep-cleaning/naperville" className="hover:underline">Naperville</Link>,{" "}
+          Plainfield,{" "}
+          <Link href="/deep-cleaning/hinsdale" className="hover:underline">Hinsdale</Link>,{" "}
+          <Link href="/deep-cleaning/burr-ridge" className="hover:underline">Burr Ridge</Link>,{" "}
+          <Link href="/deep-cleaning/oak-brook" className="hover:underline">Oak Brook</Link>{" "}
+          &amp;{" "}
+          <Link href="/deep-cleaning/downers-grove" className="hover:underline">Downers Grove</Link>, IL. All rights reserved.
         </p>
       </footer>
     </>
