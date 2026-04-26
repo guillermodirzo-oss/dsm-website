@@ -518,4 +518,167 @@ export const blogPosts: BlogPost[] = [
 
 <p>Spring cleaning doesn't have to take your whole weekend. Call DSM Cleaning Solutions at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> for a free estimate, or <a href="https://dsmcleaningsolutions.bookingkoala.com/booknow" class="text-brand-green font-semibold hover:underline">book your spring clean online</a> today. We'll handle the deep work so you can enjoy a fresh home all season long.</p>`,
   },
+  {
+    slug: "what-is-included-in-a-deep-house-cleaning",
+    title: "What's Included in a Deep House Cleaning? (Complete Checklist)",
+    metaTitle: "What's Included in a Deep House Cleaning? | DSM Cleaning Solutions",
+    metaDescription:
+      "Wondering what a professional deep cleaning covers? Here's our complete room-by-room checklist — plus what sets DSM Cleaning Solutions apart in Plainfield & the Chicago suburbs.",
+    date: "April 25, 2026",
+    dateISO: "2026-04-25",
+    author: "DSM Cleaning Solutions",
+    excerpt:
+      "Wondering what's included in a deep house cleaning? Get the full room-by-room checklist, from kitchen appliances to bathroom grout — and find out how DSM Cleaning Solutions does it better.",
+    content: `<p>When homeowners in Plainfield and the southwest Chicago suburbs ask us, <strong>"What exactly is included in a deep house cleaning?"</strong>, they're often surprised by the answer. A professional deep clean goes far beyond what your weekly routine covers. It's a comprehensive, top-to-bottom reset that targets buildup, allergens, and the grime that accumulates in places you rarely think about — until you finally see them cleaned.</p>
+<p>This guide breaks down exactly what our <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning service</a> covers, room by room. Whether you're scheduling your first professional deep clean or just want to know what to expect, this checklist covers everything.</p>
+
+<h2>Deep Cleaning vs. Standard Cleaning: The Key Difference</h2>
+<p>Before diving into the checklist, it's worth drawing a clear line. <a href="/standard-cleaning" class="text-brand-green font-semibold hover:underline">Standard (recurring) cleaning</a> is maintenance — it keeps a clean home clean. Vacuuming, mopping, wiping counters, cleaning toilets and sinks, and dusting visible surfaces are all part of the routine. It's fast, efficient, and designed to be repeated weekly or biweekly.</p>
+<p>A <strong>deep clean</strong> is different. It's a reset — the kind of thorough cleaning that a home needs periodically to address the buildup that routine maintenance can't touch. Deep cleaning takes significantly more time, covers more surfaces, and involves detail work: scrubbing grout, cleaning inside appliances, wiping down baseboards, removing calcium deposits, and reaching the spots that standard cleaning skips entirely.</p>
+<p>Most cleaning professionals recommend a deep clean at least once or twice a year, with standard cleaning in between to maintain results. It's especially important after a long Illinois winter, when months of closed windows, forced-air heat, and road salt tracked inside have left residue on nearly every surface.</p>
+
+<h2>Kitchen Deep Cleaning Checklist</h2>
+<p>The kitchen is typically the most labor-intensive room in a deep clean. Grease, food splatter, and buildup accumulate behind appliances and inside cabinets in ways that routine cleaning never addresses.</p>
+<ul>
+  <li>Clean inside the oven, including racks, walls, and the oven door glass</li>
+  <li>Clean inside the microwave — walls, ceiling, turntable, and door seal</li>
+  <li>Degrease the stovetop, burner grates, drip pans, and control knobs</li>
+  <li>Clean the refrigerator interior: all shelves, drawers, door bins, and rubber gaskets</li>
+  <li>Wipe down the exterior of all appliances including the dishwasher, refrigerator, and microwave</li>
+  <li>Clean cabinet exteriors — fronts, handles, and tops of upper cabinets</li>
+  <li>Wipe down cabinet interiors if requested</li>
+  <li>Degrease the range hood and clean the filter</li>
+  <li>Scrub the sink basin, faucet, and drain area; remove mineral deposits</li>
+  <li>Clean and disinfect countertops thoroughly, including under small appliances</li>
+  <li>Wipe down backsplash tile and grout</li>
+  <li>Clean window sills and the inside of window tracks in the kitchen</li>
+  <li>Dust and wipe light fixtures and ceiling fan blades (if present)</li>
+  <li>Sweep, vacuum, and mop the floor, including edges and corners</li>
+</ul>
+
+<h2>Bathroom Deep Cleaning Checklist</h2>
+<p>Bathrooms accumulate soap scum, hard water deposits, and mildew that standard cleaning routines can't fully eliminate. A deep clean restores them to a level of cleanliness that's hard to achieve without professional products and technique.</p>
+<ul>
+  <li>Scrub tile walls and grout lines in the shower and tub area</li>
+  <li>Remove soap scum and hard water deposits from shower doors and tracks</li>
+  <li>Clean and disinfect the shower floor and corners</li>
+  <li>Deep clean the bathtub — jets, overflow drain, and all surfaces</li>
+  <li>Descale and scrub the toilet inside and out, including the base and behind the tank</li>
+  <li>Clean and disinfect the sink, faucet, and surrounding countertop</li>
+  <li>Wipe down cabinet exteriors and the inside of vanity drawers if requested</li>
+  <li>Clean the bathroom mirror and any mirrored cabinet doors</li>
+  <li>Wipe down all baseboards, door frames, and trim</li>
+  <li>Clean light fixtures and exhaust fan covers</li>
+  <li>Wash and sanitize the trash can</li>
+  <li>Sweep, scrub, and mop the floor, including behind the toilet and along the edges</li>
+</ul>
+
+<h2>Bedroom Deep Cleaning Checklist</h2>
+<p>Bedrooms are often overlooked in a deep clean, but they're some of the most important rooms for air quality and allergen control — especially in Illinois homes where windows stay sealed for months at a time.</p>
+<ul>
+  <li>Dust ceiling fans, light fixtures, and overhead surfaces</li>
+  <li>Wipe down all furniture surfaces: nightstands, dressers, headboards, and frames</li>
+  <li>Clean mirrors and glass surfaces</li>
+  <li>Vacuum the mattress top and sides</li>
+  <li>Vacuum under the bed and along all baseboards</li>
+  <li>Wipe down baseboards, window sills, and window tracks</li>
+  <li>Clean light switches and door handles</li>
+  <li>Vacuum and spot-clean upholstered furniture as needed</li>
+  <li>Vacuum floors thoroughly, including closet floors</li>
+  <li>Mop hard floors (if applicable)</li>
+</ul>
+
+<h2>Living Room & Common Areas Deep Cleaning Checklist</h2>
+<p>High-traffic common areas collect dust, pet dander, and allergens quickly. A deep clean of these spaces makes a visible and measurable difference in air quality and overall freshness.</p>
+<ul>
+  <li>Dust all ceiling fans, light fixtures, and ceiling corners</li>
+  <li>Wipe down and dust all furniture, shelves, and decorative surfaces</li>
+  <li>Clean TV screens and entertainment unit surfaces</li>
+  <li>Vacuum all upholstered furniture, including under cushions</li>
+  <li>Wipe down baseboards, door frames, and windowsills throughout</li>
+  <li>Clean window tracks and sills</li>
+  <li>Dust blinds and wipe window coverings</li>
+  <li>Clean light switches, outlet covers, and door handles</li>
+  <li>Vacuum all floors, rugs, and carpeted areas thoroughly</li>
+  <li>Mop all hard floors, including corners and edges</li>
+</ul>
+
+<h2>Additional Areas Covered in a Full Deep Clean</h2>
+<p>Beyond the main rooms, a thorough deep clean also addresses the transitional spaces and surfaces that accumulate grime over time:</p>
+<ul>
+  <li>Entryway and mudroom — sweep, mop, wipe down shoe storage and coat hooks</li>
+  <li>Hallways — dust, wipe baseboards, clean light switches and door handles</li>
+  <li>Laundry room — wipe down washer and dryer exterior, clean lint trap area, mop floor</li>
+  <li>Stairs — vacuum treads and risers, dust banisters and railings</li>
+  <li>Interior doors and frames throughout the home</li>
+  <li>Wall switches and outlet covers on every floor</li>
+</ul>
+
+<h2>What's NOT Included in a Standard Deep Clean</h2>
+<p>Transparency matters. Here's what a typical deep clean does not cover, so there are no surprises on the day of service:</p>
+<ul>
+  <li>Exterior windows (inside-only window cleaning is included; outside requires a separate add-on)</li>
+  <li>Carpet steam cleaning or stain removal (we vacuum thoroughly; steam cleaning is a separate service)</li>
+  <li>Garage cleaning</li>
+  <li>Attic or basement organization or cleaning</li>
+  <li>Biohazard cleanup</li>
+  <li>Dishes or laundry</li>
+</ul>
+<p>If you need any of these items addressed, just ask — we can often accommodate add-ons with advance notice. For homes preparing for a sale or lease, our <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning service</a> is designed specifically for that scenario and covers an even more detailed scope.</p>
+
+<h2>How Long Does a Deep House Cleaning Take?</h2>
+<p>Most deep cleans take between 4 and 8 hours depending on the size of the home, the number of bathrooms, and how long it's been since the last professional clean. A 3-bedroom, 2-bathroom home in typical condition typically takes 5–6 hours for our team. Homes that haven't been professionally deep cleaned in over a year may take longer due to built-up grease, soap scum, and mineral deposits.</p>
+<p>Our pricing is flat-rate, so you'll always know what you're paying before we arrive. Visit our <a href="/pricing" class="text-brand-green font-semibold hover:underline">pricing page</a> to see exact rates by home size.</p>
+
+<h2>Why Choose DSM Cleaning Solutions for Your Deep Clean?</h2>
+<p>We're a family-owned cleaning company based in Romeoville (60446), serving homeowners throughout Plainfield, Naperville, Bolingbrook, Joliet, Lockport, and the entire southwest Chicago suburbs. Every team member is background-checked and fully trained. We bring all our own supplies — all of which are non-toxic, biodegradable, and safe for children and pets. Learn more about our commitment to safer cleaning on our <a href="/eco-friendly-cleaning" class="text-brand-green font-semibold hover:underline">eco-friendly cleaning page</a>.</p>
+<p>Every clean is backed by our satisfaction guarantee. If something isn't right, we'll come back and fix it — no questions asked.</p>
+<p>Ready to book your deep clean? <a href="https://dsmcleaningsolutions.bookingkoala.com/booknow" class="text-brand-green font-semibold hover:underline">Schedule online in minutes</a>, or call us at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> for a free estimate. We serve Plainfield (60544, 60585), Romeoville (60446), Naperville (60540, 60565), Bolingbrook (60440), and surrounding communities.</p>`,
+    faqSchema: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What is included in a professional deep house cleaning?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "A professional deep house cleaning covers every room from top to bottom, including cleaning inside appliances (oven, microwave, refrigerator), scrubbing tile grout and shower walls, removing soap scum and hard water deposits, wiping down baseboards and door frames, cleaning ceiling fans and light fixtures, and vacuuming and mopping all floors. It goes significantly further than a standard recurring clean.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How long does a deep house cleaning take?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Most deep house cleanings take between 4 and 8 hours, depending on the size of the home, number of bathrooms, and the current condition. A typical 3-bedroom, 2-bathroom home takes approximately 5–6 hours. Homes that haven't been professionally cleaned in over a year may require additional time.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How is a deep clean different from a standard cleaning?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Standard cleaning is routine maintenance — vacuuming, mopping, wiping counters, and cleaning bathrooms. A deep clean is a comprehensive reset that includes inside appliances, grout scrubbing, baseboard and door frame wiping, ceiling fans, window tracks, and all the areas that get skipped during weekly cleanings. Deep cleans are recommended once or twice a year.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How much does a deep house cleaning cost?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "DSM Cleaning Solutions uses flat-rate pricing based on home size. Deep cleaning starts at $315 for a 1-bedroom home and ranges up to $840 for a 5-bedroom home. All rates are all-inclusive — no hidden fees. Visit our pricing page at dsmcleaningsolutions.com/pricing for the full breakdown.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do I need to be home during the deep cleaning?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "You don't need to be home during the cleaning. Many of our customers leave a key or provide entry instructions. All DSM Cleaning Solutions team members are background-checked and fully insured, so you can feel confident leaving your home in our care.",
+          },
+        },
+      ],
+    },
+  },
 ];
