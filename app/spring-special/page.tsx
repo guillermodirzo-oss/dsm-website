@@ -60,7 +60,7 @@ export default function SpringSpecialPage() {
             {PHONE}
           </a>
           <span className="text-orange-500 font-semibold text-xs sm:text-sm whitespace-nowrap">
-            47 Five-Star Reviews <span className="text-yellow-400">★★★★★</span>
+            38 Five-Star Reviews <span className="text-yellow-400">★★★★★</span>
           </span>
         </div>
       </div>
@@ -156,7 +156,6 @@ export default function SpringSpecialPage() {
               "Every baseboard wiped and scrubbed by hand",
               "Grout and tile detailed in every bathroom",
               "Full kitchen deep clean — inside and out",
-              "Inside appliances cleaned",
               "Window sills, door frames, vents, light switches",
               "Bathrooms sanitized top to bottom — no shortcuts",
             ].map((item) => (
@@ -261,7 +260,7 @@ export default function SpringSpecialPage() {
         <div className="max-w-2xl mx-auto">
           <p className="text-orange-500 font-bold text-xs uppercase tracking-widest mb-2 text-center">Real Reviews</p>
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 tracking-tight text-center">
-            47 Families Trust DSM Cleaning Solutions
+            38 Families Trust DSM Cleaning Solutions
           </h2>
           <p className="text-gray-500 text-sm text-center mb-8">
             Proudly serving homeowners in Naperville, Hinsdale, Burr Ridge, Oak Brook &amp; Downers Grove
