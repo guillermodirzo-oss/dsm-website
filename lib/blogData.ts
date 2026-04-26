@@ -681,4 +681,48 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   },
+  {
+    slug: "how-to-prepare-for-move-out-cleaning-plainfield",
+    title: "How to Prepare for a Move-Out Cleaning in Plainfield & Naperville, IL",
+    metaTitle:
+      "How to Prepare for a Move-Out Cleaning in Plainfield IL | DSM Cleaning Solutions",
+    metaDescription:
+      "Planning a move-out cleaning in Plainfield or Naperville? Here's exactly how to prepare your home so you can get your full deposit back. Tips from DSM Cleaning Solutions.",
+    date: "April 25, 2026",
+    dateISO: "2026-04-25",
+    author: "DSM Cleaning Solutions",
+    excerpt:
+      "Moving out soon? Here's exactly how to prepare your home for a professional move-out cleaning — so you get your deposit back and leave on good terms.",
+    content: `<p>Moving out of your home in <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield</a>, <a href="/naperville-il" class="text-brand-green font-semibold hover:underline">Naperville</a>, or anywhere in the Chicago suburbs is stressful enough without worrying about whether you'll get your security deposit back. Landlords in Illinois are allowed to withhold deposits for cleaning costs — and many do. A professional <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning</a> from DSM Cleaning Solutions is the most reliable way to make sure the home is left in the condition your lease requires.</p>
+<p>But there are a few things you can do before we arrive that will make the process smoother and faster. Here's exactly what to do — and what not to do — before your scheduled move-out cleaning.</p>
+
+<h2>Step 1 — Remove All of Your Belongings First</h2>
+<p>Before a move-out cleaning can begin, every item needs to be out of the home. We can't clean inside closets, cabinets, or underneath furniture if your belongings are still there. Schedule your move-out cleaning for after the movers have finished — ideally the same day or the day after your move. An empty home lets us work systematically and ensures nothing gets missed.</p>
+
+<h2>Step 2 — Leave Utilities On</h2>
+<p>We need running water, electricity, and working lights to do a thorough job. Make sure utilities aren't scheduled for disconnect until after the cleaning is complete. This is especially important for appliances — we clean inside ovens and refrigerators, which require power. If the lights are out or the water is off, we'll have to reschedule, which can put your move-out timeline at risk.</p>
+
+<h2>Step 3 — Point Out Any Problem Areas</h2>
+<p>If you know there are specific areas of concern — a stained bathtub, heavy grease buildup in the oven, marks on walls — let us know when you book. We'll make sure those areas get extra attention. Our 48-hour satisfaction guarantee means if your landlord flags something after we clean, we come back and re-clean it free of charge.</p>
+
+<h2>Step 4 — Don't Pre-Clean (Seriously)</h2>
+<p>Many people feel like they need to tidy before the cleaners arrive. For a move-out clean, you don't — and it can actually slow things down. Leave the space as-is and let the professionals handle it. We're equipped for homes in any condition. Pre-cleaning often means you've moved or rearranged things in ways that make it harder for us to work efficiently.</p>
+
+<h2>What's Included in a Move-Out Cleaning?</h2>
+<p>Our standard move-out cleaning covers everything a landlord will inspect. Here's what's included on every job:</p>
+<ul>
+  <li>Full kitchen clean: inside oven, inside refrigerator, stovetop, microwave, and all cabinet exteriors wiped down</li>
+  <li>All bathrooms scrubbed: tubs, showers, toilets, sinks, and floors</li>
+  <li>All rooms: baseboards, window sills, blinds, interior doors, light switches, and outlet covers</li>
+  <li>Floors vacuumed and mopped throughout — every room, every corner</li>
+  <li>Inside all closets and cabinets wiped clean</li>
+</ul>
+<p>For homes that also need a thorough allergen reset or heavy buildup addressed, our <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning service</a> can be added as an upgrade. Ask us when you book.</p>
+
+<h2>How Far in Advance Should I Book?</h2>
+<p>We recommend booking your move-out cleaning at least 5–7 days before your move-out date. Move-out season (May through August) fills up fast in the <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield</a> and <a href="/naperville-il" class="text-brand-green font-semibold hover:underline">Naperville</a> areas. The sooner you schedule, the better your chances of getting your preferred date and time.</p>
+
+<h2>Serving Plainfield, Naperville, Romeoville &amp; Bolingbrook</h2>
+<p>DSM Cleaning Solutions is locally owned and based in Plainfield, IL. We handle move-out cleanings across Will County and DuPage County — including <a href="/naperville-il" class="text-brand-green font-semibold hover:underline">Naperville</a>, <a href="/bolingbrook-il" class="text-brand-green font-semibold hover:underline">Bolingbrook</a>, and the surrounding suburbs. We're 5-star rated with a 48-hour satisfaction guarantee on every job. Call us at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or book online below.</p>`,
+  },
 ];

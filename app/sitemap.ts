@@ -191,6 +191,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/blog/how-to-prepare-for-move-out-cleaning-plainfield`,
+      lastModified: new Date("2026-04-25"),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/deep-cleaning-plainfield-il`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
