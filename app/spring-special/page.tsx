@@ -86,18 +86,6 @@ export default function SpringSpecialPage() {
             Family-owned &bull; Fully insured &bull; Serving Naperville, Hinsdale, Burr Ridge, Oak Brook, Downers Grove &amp; surrounding suburbs
           </p>
 
-          {/* Coupon code display */}
-          <div className="flex items-center gap-3 bg-gray-50 border border-orange-300 rounded-2xl px-4 py-3 mb-5">
-            <span className="text-2xl">🎟️</span>
-            <div>
-              <p className="text-gray-500 text-xs font-medium uppercase tracking-wider mb-0.5">Your coupon code</p>
-              <p className="text-gray-900 font-bold text-xl tracking-widest">{COUPON}</p>
-            </div>
-            <div className="ml-auto bg-orange-100 border border-orange-300 rounded-xl px-3 py-1">
-              <span className="text-orange-600 font-bold text-sm">$75 OFF</span>
-            </div>
-          </div>
-
           {/* Single primary CTA */}
           <a
             id="claim-offer-btn"
@@ -106,7 +94,7 @@ export default function SpringSpecialPage() {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-bold text-lg py-4 px-8 rounded-2xl shadow-xl shadow-orange-200 transition-all duration-200 w-full mb-3"
           >
-            Book Now — Use Code {COUPON}
+            Book Now
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
@@ -230,8 +218,7 @@ export default function SpringSpecialPage() {
           {/* Time-limited offer framing */}
           <div className="bg-orange-50 border border-orange-200 rounded-2xl p-4 mb-6 text-center">
             <p className="text-gray-800 text-sm sm:text-base font-medium leading-relaxed">
-              <span className="font-bold text-orange-600">This month only:</span> take $75 off your first deep clean plus receive a free oven cleaning. Use code{" "}
-              <span className="font-bold tracking-widest text-orange-600">{COUPON}</span> at booking.{" "}
+              <span className="font-bold text-orange-600">This month only:</span> take $75 off your first deep clean plus receive a free oven cleaning.{" "}
               <span className="font-bold text-gray-900">Offer expires April 30.</span>
             </p>
           </div>
@@ -247,7 +234,7 @@ export default function SpringSpecialPage() {
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
-            Book Now — Use Code {COUPON}
+            Book Now
           </a>
           <p className="text-center text-gray-400 text-xs mt-3">
             Prefer to call? <a href={PHONE_HREF} className="text-gray-600 font-semibold hover:text-orange-500 transition-colors">{PHONE}</a> — Mon–Sun 8am–6pm
@@ -270,9 +257,9 @@ export default function SpringSpecialPage() {
           <div className="space-y-4 mb-8">
             {[
               {
-                text: "DSM Cleaning Solutions is absolutely amazing! They transformed my home — every corner was spotless. Being a family-owned business, they truly care about quality.",
-                name: "Sarah M.",
-                location: "Romeoville, IL",
+                text: "DSM did an incredible deep clean before we listed our home for sale. Every room was spotless — I was genuinely impressed. Worth every penny.",
+                name: "Jennifer M.",
+                location: "Naperville, IL",
               },
               {
                 text: "Used DSM for a move-out clean on my Plainfield home. Got my full security deposit back! Thorough, professional, and eco-friendly products.",
@@ -285,9 +272,9 @@ export default function SpringSpecialPage() {
                 location: "Naperville, IL",
               },
               {
-                text: "DSM did an incredible deep clean before we listed our home for sale. Every room was spotless — I was genuinely impressed. Worth every penny.",
-                name: "Jennifer M.",
-                location: "Naperville, IL",
+                text: "DSM Cleaning Solutions is absolutely amazing! They transformed my home — every corner was spotless. Being a family-owned business, they truly care about quality.",
+                name: "Sarah M.",
+                location: "Romeoville, IL",
               },
             ].map((review) => (
               <div key={review.name + review.location} className="bg-gray-50 rounded-2xl p-5 border border-gray-200 shadow-sm">
@@ -347,12 +334,9 @@ export default function SpringSpecialPage() {
       {/* ─── SECTION 6: FINAL CTA ─── */}
       <section className="bg-orange-500 py-12 px-4">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2 tracking-tight leading-tight">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 tracking-tight leading-tight">
             Spring doesn&apos;t wait.<br />Neither should your home.
           </h2>
-          <p className="text-white/80 text-sm mb-6">
-            Coupon code: <span className="font-bold tracking-widest bg-white/20 px-2 py-0.5 rounded-lg">{COUPON}</span>
-          </p>
           <a
             id="book-now-btn-3"
             href={BOOK_URL}
