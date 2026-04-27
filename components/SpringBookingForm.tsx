@@ -67,11 +67,11 @@ export default function SpringBookingForm() {
     <div className="w-full">
       <iframe
         id="iFrameResizer1"
-        style={{ border: 0, overflow: "hidden" }}
+        style={{ border: 0 }}
         src={iframeSrc}
         height="1000px"
         width="100%"
-        scrolling="no"
+        scrolling="yes"
         title="Get Your Spring Cleaning Quote — DSM Cleaning Solutions"
       />
     </div>
