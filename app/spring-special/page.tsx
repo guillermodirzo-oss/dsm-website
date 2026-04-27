@@ -74,7 +74,7 @@ export default function SpringSpecialPage() {
           </a>
 
           <span className="font-semibold text-xs sm:text-sm whitespace-nowrap" style={{ color: ORANGE }}>
-            47 Five-Star Reviews{" "}
+            37 Five-Star Reviews{" "}
             <span className="text-yellow-400">★★★★★</span>
           </span>
         </div>
