@@ -300,7 +300,7 @@ export default function SpringSpecialPage() {
             Real Reviews
           </p>
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 tracking-tight text-center">
-            47 Families Trust DSM Cleaning Solutions
+            37 Families Trust DSM Cleaning Solutions
           </h2>
           <p className="text-gray-500 text-sm text-center mb-8">
             Proudly serving homeowners in Naperville, Hinsdale, Burr Ridge, Oak Brook &amp; Downers Grove
