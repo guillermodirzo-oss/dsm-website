@@ -39,12 +39,9 @@ export default function SpringSpecialPage() {
       `}</style>
 
       {/* ════════════════════════════════════════
-          SECTION 1 — STICKY TOP BAR
+          SECTION 1 — STICKY TOP BAR (white)
       ════════════════════════════════════════ */}
-      <div
-        className="sticky top-0 z-50 border-b shadow-md py-2 px-4"
-        style={{ backgroundColor: NAVY, borderColor: "#162350" }}
-      >
+      <div className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm py-2 px-4">
         <div className="max-w-5xl mx-auto flex items-center justify-between gap-3">
           <a href="/" aria-label="DSM Cleaning Solutions — Home">
             <Image
@@ -52,15 +49,14 @@ export default function SpringSpecialPage() {
               alt="DSM Cleaning Solutions — house cleaning in Naperville and surrounding suburbs"
               width={150}
               height={40}
-              className="h-10 w-auto object-contain brightness-0 invert"
+              className="h-10 w-auto object-contain"
               priority
             />
           </a>
 
           <a
             href={PHONE_HREF}
-            className="font-bold text-sm sm:text-base transition-colors flex items-center gap-1.5"
-            style={{ color: "#ffffff" }}
+            className="text-gray-800 font-bold text-sm sm:text-base hover:text-orange-500 transition-colors flex items-center gap-1.5"
           >
             <svg
               className="w-3.5 h-3.5 flex-shrink-0"
@@ -81,44 +77,43 @@ export default function SpringSpecialPage() {
       </div>
 
       {/* ════════════════════════════════════════
-          SECTION 2 — HERO (two-column on desktop)
+          SECTION 2 — HERO (two-column, white bg)
       ════════════════════════════════════════ */}
-      <section className="py-10 px-4" style={{ backgroundColor: NAVY }}>
+      <section className="bg-white py-10 px-4">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
 
             {/* ── Left column: headline + offer + image ── */}
-            <div className="text-white">
-
+            <div>
               {/* Urgency badge */}
               <div
                 className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-5 border"
-                style={{ backgroundColor: "rgba(232,114,28,0.15)", borderColor: "rgba(232,114,28,0.4)" }}
+                style={{ backgroundColor: "rgba(232,114,28,0.08)", borderColor: "rgba(232,114,28,0.35)" }}
               >
                 <span
                   className="w-2 h-2 rounded-full animate-pulse flex-shrink-0"
                   style={{ backgroundColor: ORANGE }}
                 />
-                <span className="text-xs font-bold uppercase tracking-wider" style={{ color: "#fbb97c" }}>
+                <span className="text-xs font-bold uppercase tracking-wider" style={{ color: ORANGE }}>
                   May Only — Limited Spots Available
                 </span>
               </div>
 
               {/* Headline */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight mb-3">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight tracking-tight mb-3">
                 Get Your Home<br />
                 <span style={{ color: ORANGE }}>Spring Deep Cleaned</span>
               </h1>
-              <p className="text-xl sm:text-2xl font-bold mb-4" style={{ color: "#fbb97c" }}>
+              <p className="text-xl sm:text-2xl font-bold mb-4" style={{ color: NAVY }}>
                 $75 OFF + Free Oven Cleaning This May
               </p>
-              <p className="text-sm sm:text-base leading-relaxed mb-6" style={{ color: "#93afd4" }}>
+              <p className="text-gray-500 text-sm sm:text-base leading-relaxed mb-6">
                 Family-owned &bull; Fully insured &bull; Serving Naperville, Hinsdale, Burr Ridge,
                 Oak Brook, Downers Grove &amp; surrounding suburbs
               </p>
 
               {/* Hero image */}
-              <div className="rounded-2xl overflow-hidden shadow-xl mb-6" style={{ border: "1px solid rgba(255,255,255,0.1)" }}>
+              <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-200 mb-6">
                 <Image
                   src="/spring-ad-hero-updated.png"
                   alt="DSM Cleaning Solutions — $75 Off Spring Deep Cleaning in Naperville, Hinsdale & suburbs"
@@ -137,30 +132,19 @@ export default function SpringSpecialPage() {
                   "✓ Eco-Friendly Products",
                   "✓ 48-Hour Guarantee",
                 ].map((item) => (
-                  <div key={item} className="flex items-center gap-2 text-sm font-medium" style={{ color: "#c7d9ef" }}>
+                  <div key={item} className="flex items-center gap-2 text-sm font-medium text-gray-600">
                     {item}
                   </div>
                 ))}
-              </div>
-
-              {/* Mobile call button */}
-              <div className="mt-6 lg:hidden">
-                <a
-                  href={PHONE_HREF}
-                  className="flex items-center justify-center gap-2 bg-white font-bold text-base py-3 px-6 rounded-2xl shadow-lg w-full transition-all duration-200"
-                  style={{ color: NAVY }}
-                >
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-                  </svg>
-                  Call {PHONE}
-                </a>
               </div>
             </div>
 
             {/* ── Right column: embedded booking form ── */}
             <div>
-              <div className="bg-white rounded-3xl shadow-2xl overflow-hidden" style={{ boxShadow: "0 25px 60px rgba(0,0,0,0.35)" }}>
+              <div
+                className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100"
+                style={{ boxShadow: "0 20px 50px rgba(0,0,0,0.12)" }}
+              >
                 {/* Form header */}
                 <div className="px-6 py-4 text-center" style={{ backgroundColor: ORANGE }}>
                   <p className="text-white font-bold text-lg">Claim Your $75 Off — May Only</p>
@@ -178,7 +162,7 @@ export default function SpringSpecialPage() {
                   <SpringBookingForm />
                 </Suspense>
               </div>
-              <p className="text-xs text-center mt-3" style={{ color: "#7fa8cf" }}>
+              <p className="text-gray-400 text-xs text-center mt-3">
                 ⚡ Limited May spots — filling fast
               </p>
             </div>
@@ -190,7 +174,7 @@ export default function SpringSpecialPage() {
       {/* ════════════════════════════════════════
           SECTION 3 — TRUST / CREDIBILITY BAR
       ════════════════════════════════════════ */}
-      <section className="bg-white border-b border-gray-100 py-8 px-4">
+      <section className="bg-white border-y border-gray-100 py-8 px-4">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             {[
@@ -366,7 +350,7 @@ export default function SpringSpecialPage() {
       </section>
 
       {/* ════════════════════════════════════════
-          SECTION 7 — SAVINGS BREAKDOWN + CTA
+          SECTION 7 — SAVINGS BREAKDOWN
       ════════════════════════════════════════ */}
       <section className="bg-white py-14 px-4">
         <div className="max-w-5xl mx-auto">
@@ -377,7 +361,7 @@ export default function SpringSpecialPage() {
             Here&apos;s Exactly What You Save This May
           </h2>
 
-          {/* Savings box */}
+          {/* Savings box — keeps navy as a card element */}
           <div
             className="rounded-2xl p-6 mb-6 shadow-xl max-w-xl mx-auto"
             style={{ backgroundColor: NAVY }}
@@ -432,35 +416,11 @@ export default function SpringSpecialPage() {
           </div>
 
           {/* Time-limited framing */}
-          <div className="bg-orange-50 border border-orange-200 rounded-2xl p-4 mb-7 text-center max-w-xl mx-auto">
+          <div className="bg-orange-50 border border-orange-200 rounded-2xl p-4 text-center max-w-xl mx-auto">
             <p className="text-gray-800 text-sm sm:text-base font-medium leading-relaxed">
               <span className="font-bold" style={{ color: ORANGE }}>This month only:</span> take $75 off your
               first deep clean plus receive a free oven cleaning.{" "}
               <span className="font-bold text-gray-900">Offer expires May 31.</span>
-            </p>
-          </div>
-
-          {/* CTA button */}
-          <div className="text-center max-w-xl mx-auto">
-            <a
-              id="book-now-btn-2"
-              href={BOOK_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 text-white font-bold text-base py-4 px-8 rounded-2xl shadow-lg transition-all duration-200 w-full active:scale-95"
-              style={{ backgroundColor: ORANGE }}
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              Book Now — Use Code {COUPON}
-            </a>
-            <p className="text-center text-gray-400 text-xs mt-3">
-              Prefer to call?{" "}
-              <a href={PHONE_HREF} className="text-gray-600 font-semibold hover:text-orange-500 transition-colors">
-                {PHONE}
-              </a>{" "}
-              — Mon–Sun 8am–6pm
             </p>
           </div>
         </div>
@@ -469,35 +429,35 @@ export default function SpringSpecialPage() {
       {/* ════════════════════════════════════════
           SECTION 8 — GUARANTEE + FINAL CTA
       ════════════════════════════════════════ */}
-      <section className="py-14 px-4" style={{ backgroundColor: NAVY }}>
+      <section className="bg-gray-50 py-14 px-4">
         <div className="max-w-5xl mx-auto">
 
           {/* Guarantee */}
           <div className="text-center mb-12">
             <div
               className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-xl"
-              style={{ backgroundColor: ORANGE, boxShadow: "0 10px 30px rgba(232,114,28,0.4)" }}
+              style={{ backgroundColor: ORANGE, boxShadow: "0 10px 30px rgba(232,114,28,0.3)" }}
             >
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-5 tracking-tight">Our Promise To You</h2>
-            <p className="text-base sm:text-lg leading-relaxed mb-4 max-w-xl mx-auto" style={{ color: "#c7d9ef" }}>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-5 tracking-tight">Our Promise To You</h2>
+            <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-4 max-w-xl mx-auto">
               If we miss anything during your deep clean, contact us within 48 hours and we will come back and
               re-clean any missed areas at{" "}
-              <span className="text-white font-bold">absolutely no charge</span>.
+              <span className="text-gray-900 font-bold">absolutely no charge</span>.
               No hassle. No arguments. No excuses.
             </p>
-            <p className="text-sm sm:text-base leading-relaxed" style={{ color: "#7fa8cf" }}>
+            <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
               Available across the western suburbs — Naperville, Hinsdale, Burr Ridge, Oak Brook, Downers Grove, and beyond.
             </p>
           </div>
 
-          {/* Final CTA block */}
+          {/* Final CTA block — orange section, Book Now stays here only */}
           <div
             className="rounded-3xl p-8 text-center"
-            style={{ backgroundColor: ORANGE, boxShadow: "0 20px 50px rgba(232,114,28,0.4)" }}
+            style={{ backgroundColor: ORANGE, boxShadow: "0 20px 50px rgba(232,114,28,0.3)" }}
           >
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3 tracking-tight leading-tight">
               Spring doesn&apos;t wait.<br />Neither should your home.
@@ -506,7 +466,7 @@ export default function SpringSpecialPage() {
               Spots are filling up — secure yours now before May is gone.
             </p>
             <a
-              id="book-now-btn-3"
+              id="book-now-btn"
               href={BOOK_URL}
               target="_blank"
               rel="noopener noreferrer"
