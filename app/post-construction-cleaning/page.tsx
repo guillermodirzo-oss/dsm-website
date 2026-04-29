@@ -89,7 +89,7 @@ export default function PostConstructionCleaningPage() {
             </h1>
             <p className="text-xl text-white/80 mb-8 leading-relaxed">Construction dust, debris, and residue removed — professionally and thoroughly. We make your newly built or renovated space spotless and move-in ready.</p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="#contact" className="btn-white btn-lg text-base font-bold">Get a Free Estimate</Link>
+              <Link href="/contact" className="btn-white btn-lg text-base font-bold">Get a Free Estimate</Link>
               <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn-outline-white btn-lg text-base">Book Now Online</Link>
             </div>
           </div>
@@ -122,7 +122,7 @@ export default function PostConstructionCleaningPage() {
                 ))}
               </div>
               <div className="flex gap-3">
-                <Link href="#contact" className="btn-primary">Get a Free Estimate</Link>
+                <Link href="/contact" className="btn-primary">Get a Free Estimate</Link>
                 <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn-secondary">Book Now</Link>
               </div>
             </div>
@@ -176,7 +176,7 @@ export default function PostConstructionCleaningPage() {
             ))}
           </div>
           <div className="text-center mt-10">
-            <Link href="#contact" className="btn-primary">Schedule My Post-Construction Clean</Link>
+            <Link href="/contact" className="btn-primary">Schedule My Post-Construction Clean</Link>
           </div>
         </div>
       </section>

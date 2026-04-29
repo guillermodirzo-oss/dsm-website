@@ -167,7 +167,7 @@ export default function MoveOutCleaningNapervillePage() {
               with a thorough, landlord-approved clean.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="#contact" className="btn-white btn-lg">Get a Free Quote</Link>
+              <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
               <a href="tel:+18152462113" className="btn-outline-white btn-lg">📞 (815) 246-2113</a>
             </div>
           </div>
@@ -276,7 +276,7 @@ export default function MoveOutCleaningNapervillePage() {
             do our best to accommodate your Naperville move-out timeline. All estimates are free and
             no-obligation.
           </p>
-          <Link href="#contact" className="btn-primary">Get My Free Naperville Quote</Link>
+          <Link href="/contact" className="btn-primary">Get My Free Naperville Quote</Link>
         </div>
       </section>
 

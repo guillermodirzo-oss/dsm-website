@@ -93,7 +93,7 @@ export default function StandardCleaningPage() {
             </h1>
             <p className="text-xl text-white/80 mb-8 leading-relaxed">Professional, thorough home cleaning on your schedule. One-time or recurring — we keep your home spotless so you can focus on what matters.</p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="#contact" className="btn-white btn-lg text-base font-bold">Get a Free Estimate</Link>
+              <Link href="/contact" className="btn-white btn-lg text-base font-bold">Get a Free Estimate</Link>
               <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn-outline-white btn-lg text-base">Book Now Online</Link>
             </div>
           </div>
@@ -126,7 +126,7 @@ export default function StandardCleaningPage() {
                 ))}
               </div>
               <div className="flex gap-3">
-                <Link href="#contact" className="btn-primary">Get a Free Estimate</Link>
+                <Link href="/contact" className="btn-primary">Get a Free Estimate</Link>
                 <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn-secondary">Book Now</Link>
               </div>
             </div>

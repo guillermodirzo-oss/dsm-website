@@ -163,7 +163,7 @@ export default function DeepCleaningJolietPage() {
               grout line restored, every appliance cleaned inside and out.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="#contact" className="btn-white btn-lg">Get a Free Quote</Link>
+              <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
               <a href="tel:+18152462113" className="btn-outline-white btn-lg">📞 (815) 246-2113</a>
             </div>
           </div>
@@ -272,7 +272,7 @@ export default function DeepCleaningJolietPage() {
             We always provide a free, no-obligation estimate before any work begins. There are no
             surprises — you&apos;ll know exactly what to expect before we arrive at your Joliet home.
           </p>
-          <Link href="#contact" className="btn-primary">Get My Free Joliet Quote</Link>
+          <Link href="/contact" className="btn-primary">Get My Free Joliet Quote</Link>
         </div>
       </section>
 

@@ -207,7 +207,7 @@ export default function DeepCleaningBurrRidgePage() {
               From the Route 83 corridor to Harveys Lake, we serve all of Burr Ridge.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="#contact" className="inline-block bg-white text-brand-green font-bold py-4 px-8 rounded-lg hover:bg-brand-green-50 transition-colors text-lg text-center">
+              <Link href="/contact" className="inline-block bg-white text-brand-green font-bold py-4 px-8 rounded-lg hover:bg-brand-green-50 transition-colors text-lg text-center">
                 Get a Free Quote
               </Link>
               <a href="tel:+18152462113" className="inline-block bg-transparent text-white font-bold py-4 px-8 rounded-lg border-2 border-white hover:bg-white/10 transition-colors text-lg text-center">
@@ -317,7 +317,7 @@ export default function DeepCleaningBurrRidgePage() {
             You&apos;ll know exactly what to expect — no hidden fees, no surprises. Just an honest quote from a
             family-owned local business.
           </p>
-          <Link href="#contact" className="btn-primary">Get My Free Burr Ridge Quote</Link>
+          <Link href="/contact" className="btn-primary">Get My Free Burr Ridge Quote</Link>
         </div>
       </section>
 

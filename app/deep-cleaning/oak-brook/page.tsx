@@ -207,7 +207,7 @@ export default function DeepCleaningOakBrookPage() {
               Serving all of Oak Brook, zip code 60523.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="#contact" className="inline-block bg-white text-brand-green font-bold py-4 px-8 rounded-lg hover:bg-brand-green-50 transition-colors text-lg text-center">
+              <Link href="/contact" className="inline-block bg-white text-brand-green font-bold py-4 px-8 rounded-lg hover:bg-brand-green-50 transition-colors text-lg text-center">
                 Get a Free Quote
               </Link>
               <a href="tel:+18152462113" className="inline-block bg-transparent text-white font-bold py-4 px-8 rounded-lg border-2 border-white hover:bg-white/10 transition-colors text-lg text-center">
@@ -316,7 +316,7 @@ export default function DeepCleaningOakBrookPage() {
             Every Oak Brook client receives a free, no-obligation estimate before we start. Transparent
             pricing, no hidden fees — just an honest quote from a team that values your trust.
           </p>
-          <Link href="#contact" className="btn-primary">Get My Free Oak Brook Quote</Link>
+          <Link href="/contact" className="btn-primary">Get My Free Oak Brook Quote</Link>
         </div>
       </section>
 

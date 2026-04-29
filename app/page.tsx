@@ -237,7 +237,7 @@ export default function HomePage() {
           </div>
 
           <div className="text-center mt-12">
-            <Link href="#contact" className="btn-primary btn-lg">
+            <Link href="/contact" className="btn-primary btn-lg">
               See What a Clean Home Feels Like
             </Link>
           </div>

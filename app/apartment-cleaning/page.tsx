@@ -72,7 +72,7 @@ export default function ApartmentCleaningPage() {
             </h1>
             <p className="text-xl text-white/80 mb-8 leading-relaxed">Professional, affordable apartment cleaning for renters, condo owners, and property managers across Romeoville and the southwest suburbs.</p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="#contact" className="btn-white btn-lg text-base font-bold">Get a Free Estimate</Link>
+              <Link href="/contact" className="btn-white btn-lg text-base font-bold">Get a Free Estimate</Link>
               <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn-outline-white btn-lg text-base">Book Now Online</Link>
             </div>
           </div>
@@ -143,7 +143,7 @@ export default function ApartmentCleaningPage() {
                 ))}
                 <p className="text-xs text-gray-500 mt-4">*Prices are estimates. Contact us for an exact quote based on your unit.</p>
               </div>
-              <Link href="#contact" className="btn-primary w-full text-center block">Get My Free Apartment Estimate</Link>
+              <Link href="/contact" className="btn-primary w-full text-center block">Get My Free Apartment Estimate</Link>
             </div>
           </div>
         </div>

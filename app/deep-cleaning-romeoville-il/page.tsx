@@ -163,7 +163,7 @@ export default function DeepCleaningRomeovillePage() {
               thorough, eco-friendly deep clean you can trust.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="#contact" className="btn-white btn-lg">Get a Free Quote</Link>
+              <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
               <a href="tel:+18152462113" className="btn-outline-white btn-lg">📞 (815) 246-2113</a>
             </div>
           </div>
@@ -272,7 +272,7 @@ export default function DeepCleaningRomeovillePage() {
             until service day, and no hidden fees — just a fair, transparent quote from your local
             cleaning team.
           </p>
-          <Link href="#contact" className="btn-primary">Get My Free Romeoville Quote</Link>
+          <Link href="/contact" className="btn-primary">Get My Free Romeoville Quote</Link>
         </div>
       </section>
 

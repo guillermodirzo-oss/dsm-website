@@ -80,7 +80,7 @@ export default function OneTimeCleaningPage() {
             </h1>
             <p className="text-xl text-white/80 mb-8 leading-relaxed">No contracts, no commitments — just a thorough professional clean when you need it. Perfect for special occasions, seasonal resets, or whenever life calls for a spotless home.</p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="#contact" className="btn-white btn-lg text-base font-bold">Get a Free Estimate</Link>
+              <Link href="/contact" className="btn-white btn-lg text-base font-bold">Get a Free Estimate</Link>
               <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn-outline-white btn-lg text-base">Book Now Online</Link>
             </div>
           </div>
@@ -152,7 +152,7 @@ export default function OneTimeCleaningPage() {
                 <p className="text-sm text-gray-500 mb-3">Recurring clients save up to 20% per visit. Start with a one-time clean and switch to a recurring plan anytime — no pressure.</p>
                 <Link href="/recurring-cleaning" className="text-brand-green font-semibold text-sm hover:underline">Learn about recurring service →</Link>
               </div>
-              <Link href="#contact" className="btn-primary w-full text-center block">Get My Free One-Time Estimate</Link>
+              <Link href="/contact" className="btn-primary w-full text-center block">Get My Free One-Time Estimate</Link>
             </div>
           </div>
         </div>

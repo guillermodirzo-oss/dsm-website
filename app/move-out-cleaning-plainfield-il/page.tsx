@@ -166,7 +166,7 @@ export default function MoveOutCleaningPlainfieldPage() {
               to Grande Park — with a comprehensive clean built to pass any inspection.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="#contact" className="btn-white btn-lg">Get a Free Quote</Link>
+              <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
               <a href="tel:+18152462113" className="btn-outline-white btn-lg">📞 (815) 246-2113</a>
             </div>
           </div>
@@ -273,7 +273,7 @@ export default function MoveOutCleaningPlainfieldPage() {
             Every Plainfield client receives a free, no-obligation estimate before booking. We&apos;re
             transparent about our pricing — no surprises, no hidden add-ons after the job.
           </p>
-          <Link href="#contact" className="btn-primary">Get My Free Plainfield Quote</Link>
+          <Link href="/contact" className="btn-primary">Get My Free Plainfield Quote</Link>
         </div>
       </section>
 

@@ -207,7 +207,7 @@ export default function DeepCleaningNapervillePage() {
               and appliance — backed by our 48-hour satisfaction guarantee.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="#contact" className="inline-block bg-white text-brand-green font-bold py-4 px-8 rounded-lg hover:bg-brand-green-50 transition-colors text-lg text-center">
+              <Link href="/contact" className="inline-block bg-white text-brand-green font-bold py-4 px-8 rounded-lg hover:bg-brand-green-50 transition-colors text-lg text-center">
                 Get a Free Quote
               </Link>
               <a href="tel:+18152462113" className="inline-block bg-transparent text-white font-bold py-4 px-8 rounded-lg border-2 border-white hover:bg-white/10 transition-colors text-lg text-center">
@@ -317,7 +317,7 @@ export default function DeepCleaningNapervillePage() {
             We provide every client with a free, no-obligation estimate before we start. You&apos;ll know
             exactly what to expect — no hidden fees, no surprises.
           </p>
-          <Link href="#contact" className="btn-primary">Get My Free Naperville Quote</Link>
+          <Link href="/contact" className="btn-primary">Get My Free Naperville Quote</Link>
         </div>
       </section>
 

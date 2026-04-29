@@ -160,7 +160,7 @@ export default function StandardCleaningLockportPage() {
               anywhere in zip code 60441 — we&apos;re your trusted local cleaning team.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="#contact" className="btn-white btn-lg">Get a Free Quote</Link>
+              <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
               <a href="tel:+18152462113" className="btn-outline-white btn-lg">📞 (815) 246-2113</a>
             </div>
           </div>
@@ -268,7 +268,7 @@ export default function StandardCleaningLockportPage() {
             your first visit. You&apos;ll always know exactly what you&apos;re paying — no hidden fees, no
             surprises.
           </p>
-          <Link href="#contact" className="btn-primary">Get My Free Lockport Quote</Link>
+          <Link href="/contact" className="btn-primary">Get My Free Lockport Quote</Link>
         </div>
       </section>
 

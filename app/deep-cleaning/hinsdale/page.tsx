@@ -207,7 +207,7 @@ export default function DeepCleaningHinsdalePage() {
               Serving all of Hinsdale across zip codes 60521 and 60522.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="#contact" className="inline-block bg-white text-brand-green font-bold py-4 px-8 rounded-lg hover:bg-brand-green-50 transition-colors text-lg text-center">
+              <Link href="/contact" className="inline-block bg-white text-brand-green font-bold py-4 px-8 rounded-lg hover:bg-brand-green-50 transition-colors text-lg text-center">
                 Get a Free Quote
               </Link>
               <a href="tel:+18152462113" className="inline-block bg-transparent text-white font-bold py-4 px-8 rounded-lg border-2 border-white hover:bg-white/10 transition-colors text-lg text-center">
@@ -316,7 +316,7 @@ export default function DeepCleaningHinsdalePage() {
             We provide every Hinsdale client with a free, no-obligation estimate before we start. You&apos;ll
             know exactly what to expect — no hidden fees, no surprises.
           </p>
-          <Link href="#contact" className="btn-primary">Get My Free Hinsdale Quote</Link>
+          <Link href="/contact" className="btn-primary">Get My Free Hinsdale Quote</Link>
         </div>
       </section>
 

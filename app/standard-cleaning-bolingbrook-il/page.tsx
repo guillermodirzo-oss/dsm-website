@@ -174,7 +174,7 @@ export default function StandardCleaningBolingbrookPage() {
               anywhere across zip codes 60440 and 60490 — we&apos;re your trusted local cleaning team.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="#contact" className="btn-white btn-lg">Get a Free Quote</Link>
+              <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
               <a href="tel:+18152462113" className="btn-outline-white btn-lg">📞 (815) 246-2113</a>
             </div>
           </div>
@@ -282,7 +282,7 @@ export default function StandardCleaningBolingbrookPage() {
             you&apos;re in a 2-bedroom condo in 60440 or a larger family home in 60490, we&apos;ll give you
             an honest, upfront price before we schedule your first visit.
           </p>
-          <Link href="#contact" className="btn-primary">Get My Free Bolingbrook Quote</Link>
+          <Link href="/contact" className="btn-primary">Get My Free Bolingbrook Quote</Link>
         </div>
       </section>
 

@@ -207,7 +207,7 @@ export default function DeepCleaningDownersGrovePage() {
               48-hour satisfaction guarantee. Serving all of Downers Grove, 60515 &amp; 60516.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="#contact" className="inline-block bg-white text-brand-green font-bold py-4 px-8 rounded-lg hover:bg-brand-green-50 transition-colors text-lg text-center">
+              <Link href="/contact" className="inline-block bg-white text-brand-green font-bold py-4 px-8 rounded-lg hover:bg-brand-green-50 transition-colors text-lg text-center">
                 Get a Free Quote
               </Link>
               <a href="tel:+18152462113" className="inline-block bg-transparent text-white font-bold py-4 px-8 rounded-lg border-2 border-white hover:bg-white/10 transition-colors text-lg text-center">
@@ -316,7 +316,7 @@ export default function DeepCleaningDownersGrovePage() {
             We provide every Downers Grove client with a free, no-obligation estimate before any work
             begins. Straightforward pricing, no hidden fees, and a satisfaction guarantee built in.
           </p>
-          <Link href="#contact" className="btn-primary">Get My Free Downers Grove Quote</Link>
+          <Link href="/contact" className="btn-primary">Get My Free Downers Grove Quote</Link>
         </div>
       </section>
 

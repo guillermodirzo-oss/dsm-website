@@ -163,7 +163,7 @@ export default function DeepCleaningNapervillePage() {
               and appliance — backed by our satisfaction guarantee.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="#contact" className="btn-white btn-lg">Get a Free Quote</Link>
+              <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
               <a href="tel:+18152462113" className="btn-outline-white btn-lg">📞 (815) 246-2113</a>
             </div>
           </div>
@@ -270,7 +270,7 @@ export default function DeepCleaningNapervillePage() {
             exactly what to expect — no hidden fees, no surprises. Just an honest quote from a
             family-owned local business.
           </p>
-          <Link href="#contact" className="btn-primary">Get My Free Naperville Quote</Link>
+          <Link href="/contact" className="btn-primary">Get My Free Naperville Quote</Link>
         </div>
       </section>
 
