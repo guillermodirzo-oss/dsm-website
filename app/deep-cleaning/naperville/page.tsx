@@ -3,7 +3,7 @@ import Link from "next/link";
 import BookingForm from "@/components/BookingForm";
 
 export const metadata: Metadata = {
-  title: "Deep Cleaning Naperville IL | DSM Cleaning Solutions",
+  title: "Deep Cleaning Naperville IL",
   description:
     "Professional deep cleaning in Naperville, IL. DSM Cleaning Solutions serves 60540, 60563, 60564 & 60565. Eco-friendly, fully insured, 48-hour guarantee. Free quote today.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning/naperville" },

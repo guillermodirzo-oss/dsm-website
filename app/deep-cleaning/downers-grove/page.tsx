@@ -3,7 +3,7 @@ import Link from "next/link";
 import BookingForm from "@/components/BookingForm";
 
 export const metadata: Metadata = {
-  title: "Deep Cleaning Downers Grove IL | DSM Cleaning Solutions",
+  title: "Deep Cleaning Downers Grove IL",
   description:
     "Professional deep cleaning in Downers Grove, IL. DSM Cleaning Solutions delivers reliable, thorough deep cleans for Downers Grove families. 5-star rated, 48-hour guarantee. Book today.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning/downers-grove" },

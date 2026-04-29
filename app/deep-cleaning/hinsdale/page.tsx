@@ -3,7 +3,7 @@ import Link from "next/link";
 import BookingForm from "@/components/BookingForm";
 
 export const metadata: Metadata = {
-  title: "Deep Cleaning Hinsdale IL | DSM Cleaning Solutions",
+  title: "Deep Cleaning Hinsdale IL",
   description:
     "Professional deep cleaning in Hinsdale, IL. DSM Cleaning Solutions delivers white-glove deep cleans for Hinsdale's historic and luxury homes. 5-star rated, 48-hour guarantee. Book today.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning/hinsdale" },

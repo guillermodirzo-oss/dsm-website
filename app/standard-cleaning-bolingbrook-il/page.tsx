@@ -3,7 +3,7 @@ import Link from "next/link";
 import BookingForm from "@/components/BookingForm";
 
 export const metadata: Metadata = {
-  title: "House Cleaning Service Bolingbrook IL | DSM Cleaning Solutions",
+  title: "House Cleaning Service Bolingbrook IL",
   description:
     "Recurring house cleaning in Bolingbrook, IL. DSM Cleaning Solutions offers weekly, bi-weekly, and monthly maid service for Bolingbrook homes. 5-star rated. Book online.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/standard-cleaning-bolingbrook-il" },

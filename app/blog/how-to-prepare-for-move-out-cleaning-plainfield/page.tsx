@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "How to Prepare for a Move-Out Cleaning in Plainfield IL | DSM Cleaning Solutions",
+  title: "How to Prepare for a Move-Out Cleaning in Plainfield IL",
   description:
     "Planning a move-out cleaning in Plainfield or Naperville? Here's exactly how to prepare your home so you can get your full deposit back. Tips from DSM Cleaning Solutions.",
   alternates: {

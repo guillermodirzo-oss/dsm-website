@@ -521,7 +521,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "what-is-included-in-a-deep-house-cleaning",
     title: "What's Included in a Deep House Cleaning? (Complete Checklist)",
-    metaTitle: "What's Included in a Deep House Cleaning? | DSM Cleaning Solutions",
+    metaTitle: "What's Included in a Deep House Cleaning?",
     metaDescription:
       "Wondering what a professional deep cleaning covers? Here's our complete room-by-room checklist — plus what sets DSM Cleaning Solutions apart in Plainfield & the Chicago suburbs.",
     date: "April 25, 2026",
@@ -684,7 +684,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "deep-cleaning-service-naperville-il",
     title: "Deep Cleaning Service in Naperville IL: What's Included and When to Book",
-    metaTitle: "Deep Cleaning Service Naperville IL | DSM Cleaning Solutions",
+    metaTitle: "Deep Cleaning Service Naperville IL",
     metaDescription:
       "Looking for a deep cleaning service in Naperville, IL? See exactly what's included, how long it takes, and what it costs — then book DSM Cleaning Solutions today.",
     date: "April 26, 2026",

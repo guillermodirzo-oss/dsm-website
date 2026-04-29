@@ -5,7 +5,7 @@ import { Suspense } from "react";
 import SpringBookingForm from "@/components/SpringBookingForm";
 
 export const metadata: Metadata = {
-  title: "Spring Cleaning Special — $75 Off | DSM Cleaning Solutions",
+  title: "Spring Cleaning Special — $75 Off",
   description:
     "Get $75 off your spring deep cleaning in Naperville, Hinsdale, Burr Ridge, Oak Brook & Downers Grove. Free oven cleaning included — a $40 value. Family-owned, fully insured. Limited May spots.",
   robots: { index: false, follow: false },

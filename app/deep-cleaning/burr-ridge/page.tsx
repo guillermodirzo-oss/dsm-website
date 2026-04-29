@@ -3,7 +3,7 @@ import Link from "next/link";
 import BookingForm from "@/components/BookingForm";
 
 export const metadata: Metadata = {
-  title: "Deep Cleaning Burr Ridge IL | DSM Cleaning Solutions",
+  title: "Deep Cleaning Burr Ridge IL",
   description:
     "Professional deep cleaning in Burr Ridge, IL. DSM Cleaning Solutions delivers thorough, white-glove deep cleans for Burr Ridge executive homes. 5-star rated, 48-hour guarantee. Book today.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning/burr-ridge" },

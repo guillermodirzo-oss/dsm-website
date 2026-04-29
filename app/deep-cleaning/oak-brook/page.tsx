@@ -3,7 +3,7 @@ import Link from "next/link";
 import BookingForm from "@/components/BookingForm";
 
 export const metadata: Metadata = {
-  title: "Deep Cleaning Oak Brook IL | DSM Cleaning Solutions",
+  title: "Deep Cleaning Oak Brook IL",
   description:
     "Professional deep cleaning in Oak Brook, IL. DSM Cleaning Solutions delivers premium deep cleans for Oak Brook luxury homes. 5-star rated, 48-hour guarantee. Book today.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning/oak-brook" },
