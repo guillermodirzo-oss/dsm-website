@@ -59,6 +59,13 @@ export default function AirbnbCleaningPage() {
       "@id": "https://www.dsmcleaningsolutions.com/#business",
       name: "DSM Cleaning Solutions",
       telephone: "+18152462113",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Romeoville",
+        addressRegion: "IL",
+        postalCode: "60446",
+        addressCountry: "US",
+      },
     },
     areaServed: ["Romeoville, IL", "Plainfield, IL", "Naperville, IL", "Bolingbrook, IL"],
     description: "Professional Airbnb and short-term rental turnover cleaning in Romeoville, IL and surrounding suburbs. Fast, reliable turnovers between guests.",

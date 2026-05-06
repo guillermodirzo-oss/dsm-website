@@ -30,6 +30,13 @@ const serviceSchema = {
     "@id": "https://www.dsmcleaningsolutions.com/#business",
     name: "DSM Cleaning Solutions",
     telephone: "+18152462113",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Romeoville",
+      addressRegion: "IL",
+      postalCode: "60446",
+      addressCountry: "US",
+    },
   },
   areaServed: {
     "@type": "City",
@@ -81,15 +88,6 @@ const breadcrumbSchema = {
   ],
 };
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://www.dsmcleaningsolutions.com/#business",
-  name: "DSM Cleaning Solutions",
-  telephone: "(815) 246-2113",
-  url: "https://www.dsmcleaningsolutions.com",
-  areaServed: "Oak Brook",
-};
 
 const faqs = [
   {
@@ -181,10 +179,6 @@ export default function DeepCleaningOakBrookPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
 
       {/* HERO */}

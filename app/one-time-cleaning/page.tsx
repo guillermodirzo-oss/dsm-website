@@ -60,6 +60,13 @@ export default function OneTimeCleaningPage() {
       "@id": "https://www.dsmcleaningsolutions.com/#business",
       name: "DSM Cleaning Solutions",
       telephone: "+18152462113",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Romeoville",
+        addressRegion: "IL",
+        postalCode: "60446",
+        addressCountry: "US",
+      },
     },
     areaServed: ["Romeoville, IL", "Plainfield, IL", "Naperville, IL", "Bolingbrook, IL"],
     description: "No-commitment one-time house cleaning in Romeoville, IL. Perfect for special occasions, guests, seasonal resets, or whenever you need it.",

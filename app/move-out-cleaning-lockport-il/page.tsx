@@ -57,6 +57,13 @@ const serviceSchema = {
     "@id": "https://www.dsmcleaningsolutions.com/#business",
     name: "DSM Cleaning Solutions",
     telephone: "+18152462113",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Romeoville",
+      addressRegion: "IL",
+      postalCode: "60446",
+      addressCountry: "US",
+    },
   },
   areaServed: {
     "@type": "City",

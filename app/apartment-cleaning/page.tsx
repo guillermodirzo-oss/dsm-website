@@ -52,6 +52,13 @@ export default function ApartmentCleaningPage() {
       "@id": "https://www.dsmcleaningsolutions.com/#business",
       name: "DSM Cleaning Solutions",
       telephone: "+18152462113",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Romeoville",
+        addressRegion: "IL",
+        postalCode: "60446",
+        addressCountry: "US",
+      },
     },
     areaServed: ["Romeoville, IL", "Plainfield, IL", "Naperville, IL", "Bolingbrook, IL"],
     description: "Professional apartment cleaning for renters, landlords, and property managers in Romeoville, IL and surrounding southwest suburbs.",

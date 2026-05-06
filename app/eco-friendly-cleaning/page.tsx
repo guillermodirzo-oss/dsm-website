@@ -58,6 +58,13 @@ export default function EcoFriendlyCleaningPage() {
       "@id": "https://www.dsmcleaningsolutions.com/#business",
       name: "DSM Cleaning Solutions",
       telephone: "+18152462113",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Romeoville",
+        addressRegion: "IL",
+        postalCode: "60446",
+        addressCountry: "US",
+      },
     },
     areaServed: ["Romeoville, IL", "Plainfield, IL", "Naperville, IL", "Bolingbrook, IL"],
     description: "Non-toxic, eco-friendly house cleaning in Romeoville, IL. Safe for children, pets, and the environment. Professional-grade green cleaning products.",

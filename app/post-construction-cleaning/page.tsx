@@ -69,6 +69,13 @@ export default function PostConstructionCleaningPage() {
       "@id": "https://www.dsmcleaningsolutions.com/#business",
       name: "DSM Cleaning Solutions",
       telephone: "+18152462113",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Romeoville",
+        addressRegion: "IL",
+        postalCode: "60446",
+        addressCountry: "US",
+      },
     },
     areaServed: ["Romeoville, IL", "Plainfield, IL", "Naperville, IL", "Bolingbrook, IL"],
     description: "Professional post-construction and renovation cleanup in Romeoville, IL. We remove dust, debris, and construction residue from new builds and renovation projects.",
