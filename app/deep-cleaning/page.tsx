@@ -7,7 +7,7 @@ import ReviewCard from "@/components/ReviewCard";
 export const metadata: Metadata = {
   title: "Deep Cleaning Service Plainfield IL",
   description:
-    "Top-to-bottom deep cleaning in Plainfield & Romeoville, IL. We scrub every surface, baseboard & appliance. Eco-friendly & insured. Free estimates.",
+    "Top-rated deep cleaning in Romeoville, Naperville, Plainfield & Bolingbrook. Thorough, detailed cleans. 5.0 stars, 48-hr guarantee. (815) 246-2113.",
   keywords: [
     "deep cleaning Romeoville IL",
     "deep house cleaning Romeoville",
@@ -24,11 +24,26 @@ export const metadata: Metadata = {
     canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning",
   },
   openGraph: {
-    title: "Deep Cleaning Service Plainfield IL",
+    title: "Deep Cleaning Service Plainfield IL | DSM Cleaning Solutions",
     description:
-      "Top-to-bottom deep cleaning in Plainfield & Romeoville, IL. We scrub every surface, baseboard & appliance. Eco-friendly & insured. Free estimates.",
+      "Top-rated deep cleaning in Romeoville, Naperville, Plainfield & Bolingbrook. Thorough, detailed cleans. 5.0 stars, 48-hr guarantee. (815) 246-2113.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning",
     siteName: "DSM Cleaning Solutions",
+    images: [
+      {
+        url: "/hero-image.png",
+        width: 1200,
+        height: 630,
+        alt: "DSM Cleaning Solutions — Professional Deep Cleaning in Plainfield IL",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Deep Cleaning Service Plainfield IL | DSM Cleaning Solutions",
+    description:
+      "Top-rated deep cleaning in Romeoville, Naperville, Plainfield & Bolingbrook. Thorough, detailed cleans. 5.0 stars, 48-hr guarantee.",
+    images: ["/hero-image.png"],
   },
 };
 
@@ -222,7 +237,7 @@ export default function DeepCleaningPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="https://dsmcleaningsolutions.bookingkoala.com/booknow"
+                href="/book"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-white text-brand-green font-bold py-4 px-8 rounded-lg hover:bg-brand-green-50 transition-colors text-lg text-center"
@@ -373,7 +388,7 @@ export default function DeepCleaningPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/IMG_2033.jpg"
+                src="/Work%20Pictures/shower-deep-clean-romeoville-il.jpg"
                 alt="Glass shower with stone tile grout scrubbed spotless after deep cleaning service in Romeoville IL"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -382,7 +397,7 @@ export default function DeepCleaningPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/IMG_2035.jpg"
+                src="/Work%20Pictures/bathroom-shower-tub-deep-clean-plainfield-il.jpg"
                 alt="Full bathroom with walk-in shower and tub professionally deep cleaned in Plainfield IL"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -391,8 +406,8 @@ export default function DeepCleaningPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/IMG_2036.jpg"
-                alt="Elegant modern double vanity cleaned and polished to perfection — deep cleaning by DSM Cleaning Solutions"
+                src="/Work%20Pictures/double-vanity-bathroom-clean-naperville-il.jpg"
+                alt="Elegant modern double vanity cleaned and polished by DSM Cleaning Solutions in Naperville IL"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -400,8 +415,8 @@ export default function DeepCleaningPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/IMG_1721.jpg"
-                alt="Clean green-tiled shower and tub after deep cleaning service in the southwest Chicago suburbs"
+                src="/Work%20Pictures/bathtub-shower-deep-clean-plainfield-il.jpg"
+                alt="Bathtub and shower deep cleaned by DSM Cleaning Solutions in Plainfield IL"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -409,8 +424,8 @@ export default function DeepCleaningPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/IMG_1722.jpg"
-                alt="Double vanity bathroom deep cleaned and sanitized by DSM Cleaning Solutions in Romeoville IL"
+                src="/Work%20Pictures/double-sink-bathroom-deep-clean-plainfield-il.jpg"
+                alt="Double sink bathroom deep cleaned and sanitized by DSM Cleaning Solutions in Plainfield IL"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -418,7 +433,7 @@ export default function DeepCleaningPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/IMG_1601.jpg"
+                src="/Work%20Pictures/living-room-hardwood-floors-plainfield-il.jpg"
                 alt="Spotless living room with hardwood floors after deep cleaning service in Plainfield IL"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"

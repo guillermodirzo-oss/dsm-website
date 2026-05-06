@@ -5,10 +5,32 @@ import BookingForm from "@/components/BookingForm";
 import ReviewCard from "@/components/ReviewCard";
 
 export const metadata: Metadata = {
-  title: "Meet the DSM Cleaning Team | Plainfield IL",
+  title: "Meet the DSM Cleaning Team | Romeoville IL",
   description:
     "Meet Memo and the DSM Cleaning Solutions team — a family-owned cleaning company proudly serving Plainfield, Romeoville, Naperville & Bolingbrook IL.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/about" },
+  openGraph: {
+    title: "Meet the DSM Cleaning Team | Romeoville IL",
+    description:
+      "Meet Memo and the DSM Cleaning Solutions team — a family-owned cleaning company proudly serving Plainfield, Romeoville, Naperville & Bolingbrook IL.",
+    url: "https://www.dsmcleaningsolutions.com/about",
+    siteName: "DSM Cleaning Solutions",
+    images: [
+      {
+        url: "/hero-image.png",
+        width: 1200,
+        height: 630,
+        alt: "DSM Cleaning Solutions Team — Family-Owned House Cleaning in Plainfield IL",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Meet the DSM Cleaning Team | Romeoville IL",
+    description:
+      "Meet Memo and the DSM Cleaning Solutions team — a family-owned cleaning company proudly serving Plainfield, Romeoville, Naperville & Bolingbrook IL.",
+    images: ["/hero-image.png"],
+  },
 };
 
 const stats = [
@@ -81,13 +103,13 @@ export default function AboutPage() {
             name: "DSM Cleaning Solutions",
             url: "https://www.dsmcleaningsolutions.com",
             telephone: "+18152462113",
-            description: "Family-owned, eco-friendly professional house cleaning service based in Plainfield, IL. Serving Romeoville, Naperville, Bolingbrook, and the southwest Chicago suburbs.",
+            description: "Family-owned, eco-friendly professional house cleaning service based in Romeoville, IL. Serving Plainfield, Naperville, Bolingbrook, and the southwest Chicago suburbs.",
             foundingDate: "2019",
             address: {
               "@type": "PostalAddress",
-              addressLocality: "Plainfield",
+              addressLocality: "Romeoville",
               addressRegion: "IL",
-              postalCode: "60585",
+              postalCode: "60446",
               addressCountry: "US",
             },
             areaServed: ["Romeoville, IL", "Plainfield, IL", "Naperville, IL", "Bolingbrook, IL", "Joliet, IL"],
@@ -160,7 +182,7 @@ export default function AboutPage() {
               <p className="text-gray-500 leading-relaxed mb-8">
                 Over the years, we&apos;ve grown from a small local operation to a trusted name across Romeoville, Plainfield, Naperville, Bolingbrook, and over a dozen southwest suburban communities. That growth has come entirely from word of mouth — from homeowners who trusted us enough to tell their friends and family.
               </p>
-              <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn-primary">
+              <Link href="/book" className="btn-primary">
                 Book a Cleaning
               </Link>
             </div>
@@ -200,7 +222,7 @@ export default function AboutPage() {
             </div>
             <div className="relative aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/IMG_2033.jpg"
+                src="/Work%20Pictures/shower-deep-clean-romeoville-il.jpg"
                 alt="Glass shower deep cleaned to sparkling perfection by DSM Cleaning Solutions in Romeoville IL"
                 fill
                 sizes="(max-width: 768px) 50vw, 25vw"
@@ -209,8 +231,8 @@ export default function AboutPage() {
             </div>
             <div className="relative aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/IMG_1601.jpg"
-                alt="Clean living room with hardwood floors after house cleaning by DSM Cleaning Solutions"
+                src="/Work%20Pictures/living-room-hardwood-floors-plainfield-il.jpg"
+                alt="Clean living room with hardwood floors after house cleaning by DSM Cleaning Solutions in Plainfield IL"
                 fill
                 sizes="(max-width: 768px) 50vw, 25vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"

@@ -7,6 +7,20 @@ export const metadata: Metadata = {
     "Terms and Conditions for DSM Cleaning Solutions. Please read our service policies including booking, payments, cancellations, and satisfaction guarantee before booking.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/terms-and-conditions" },
   robots: { index: true, follow: true },
+  openGraph: {
+    title: "Terms and Conditions | DSM Cleaning Solutions",
+    description:
+      "Terms and Conditions for DSM Cleaning Solutions. Please read our service policies including booking, payments, cancellations, and satisfaction guarantee before booking.",
+    url: "https://www.dsmcleaningsolutions.com/terms-and-conditions",
+    siteName: "DSM Cleaning Solutions",
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions — Terms and Conditions" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms and Conditions | DSM Cleaning Solutions",
+    description: "Terms and Conditions for DSM Cleaning Solutions. Read our service policies on booking, payments, and cancellations.",
+    images: ["/hero-image.png"],
+  },
 };
 
 export default function TermsAndConditionsPage() {

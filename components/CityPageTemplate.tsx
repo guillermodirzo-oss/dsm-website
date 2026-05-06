@@ -7,14 +7,18 @@ export default function CityPageTemplate({ city }: { city: CityData }) {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: `DSM Cleaning Solutions — ${city.name}, IL`,
-    url: `https://www.dsmcleaningsolutions.com/${city.slug}`,
+    // @id links this to the canonical business entity in layout.tsx — Google merges them.
+    // Address MUST match the actual business location (Romeoville, 60446), not the city served.
+    // areaServed communicates which city this page targets for SEO.
+    "@id": "https://www.dsmcleaningsolutions.com/#business",
+    name: "DSM Cleaning Solutions",
+    url: "https://www.dsmcleaningsolutions.com",
     telephone: "+18152462113",
     address: {
       "@type": "PostalAddress",
-      addressLocality: city.name,
+      addressLocality: "Romeoville",
       addressRegion: "IL",
-      postalCode: city.zips[0],
+      postalCode: "60446",
       addressCountry: "US",
     },
     areaServed: `${city.name}, IL`,
@@ -74,7 +78,7 @@ export default function CityPageTemplate({ city }: { city: CityData }) {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="https://dsmcleaningsolutions.bookingkoala.com/booknow"
+                href="/book"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-white text-brand-green font-bold py-4 px-8 rounded-lg hover:bg-brand-green-50 transition-colors text-lg text-center"
@@ -125,7 +129,7 @@ export default function CityPageTemplate({ city }: { city: CityData }) {
                 </p>
               ))}
               <Link
-                href="https://dsmcleaningsolutions.bookingkoala.com/booknow"
+                href="/book"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"

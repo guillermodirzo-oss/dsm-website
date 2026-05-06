@@ -16,6 +16,20 @@ export const metadata: Metadata = {
     "recurring cleaning Minooka IL",
   ],
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/minooka-il" },
+  openGraph: {
+    title: "House Cleaning Minooka IL | DSM Cleaning Solutions",
+    description:
+      "Dependable house cleaning in Minooka, IL — deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Free estimates.",
+    url: "https://www.dsmcleaningsolutions.com/minooka-il",
+    siteName: "DSM Cleaning Solutions",
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions — House Cleaning in Minooka IL" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "House Cleaning Minooka IL | DSM Cleaning Solutions",
+    description: "Dependable house cleaning in Minooka, IL — deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured.",
+    images: ["/hero-image.png"],
+  },
 };
 
 export default function MinookaPage() {

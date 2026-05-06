@@ -10,9 +10,28 @@ export const metadata: Metadata = {
     "Professional house cleaning in Romeoville & Plainfield IL. Family-owned, eco-friendly, fully insured. 5-star rated. Free estimates. Call (815) 246-2113.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com" },
   openGraph: {
-    title: "House Cleaning Romeoville IL | DSM Cleaning Solutions",
-    description: "Professional house cleaning in Romeoville & Plainfield IL. Family-owned, eco-friendly, fully insured. 5-star rated. Free estimates. Call (815) 246-2113.",
+    type: "website",
+    locale: "en_US",
     url: "https://www.dsmcleaningsolutions.com",
+    siteName: "DSM Cleaning Solutions",
+    title: "DSM Cleaning Solutions | House Cleaning Romeoville & Plainfield IL",
+    description:
+      "Professional house cleaning in Romeoville, Plainfield, Naperville & Bolingbrook IL. Family owned, fully insured, 5-star rated. Free estimates.",
+    images: [
+      {
+        url: "/hero-image.png",
+        width: 1200,
+        height: 630,
+        alt: "DSM Cleaning Solutions — Professional House Cleaning in Romeoville IL",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DSM Cleaning Solutions | House Cleaning Romeoville & Plainfield IL",
+    description:
+      "Professional house cleaning in Romeoville, Plainfield, Naperville & Bolingbrook IL. Family owned & insured. Call (815) 246-2113.",
+    images: ["/hero-image.png"],
   },
 };
 
@@ -89,12 +108,27 @@ export default function HomePage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn-white btn-lg text-base font-bold">
-              Book Online Now
+            <Link
+              href="/book"
+              className="w-full md:w-auto inline-block font-extrabold text-base text-white text-center py-4 px-9 rounded-full active:scale-95 transition-all duration-200 shadow-2xl"
+              style={{ backgroundColor: "#E8721C", boxShadow: "0 8px 30px rgba(232,114,28,0.5)" }}
+            >
+              Get a Free Quote →
             </Link>
-            <a href="tel:+18152462113" className="btn-outline-white btn-lg text-base">
+            <a href="tel:+18152462113" className="btn-outline-white btn-lg text-base w-full md:w-auto">
               📞 (815) 246-2113
             </a>
+            <Link
+              href="https://dsmcleaningsolutions.bookingkoala.com/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full md:w-auto inline-flex items-center justify-center gap-2 font-semibold text-base text-white/80 text-center py-4 px-7 rounded-full border border-white/30 hover:border-white/60 hover:text-white hover:bg-white/10 transition-all duration-200"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+              Log In
+            </Link>
           </div>
 
           {/* Trust indicators */}
@@ -194,7 +228,7 @@ export default function HomePage() {
           </div>
 
           <div className="text-center mt-14">
-            <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn-primary btn-lg">
+            <Link href="/book" className="btn-primary btn-lg">
               Book Your Cleaning Today
             </Link>
           </div>
@@ -215,10 +249,10 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
               { src: "/Work%20Pictures/Google Post Image - Cleaning Service (1).png",  alt: "Professional deep cleaning service in Plainfield IL — sparkling clean kitchen by DSM Cleaning Solutions", caption: "Kitchen Deep Clean · Plainfield, IL" },
-              { src: "/Work%20Pictures/IMG_2033.jpg",                                  alt: "Glass shower and stone tile bathroom after professional deep cleaning in Romeoville IL", caption: "Bathroom Deep Clean · Romeoville, IL" },
-              { src: "/Work%20Pictures/IMG_1601.jpg",                                  alt: "Clean living room with dark hardwood floors — recurring maid service in Plainfield IL", caption: "Living Room · Standard Cleaning" },
-              { src: "/Work%20Pictures/IMG_2036.jpg",                                  alt: "Double vanity bathroom cleaned and polished by DSM Cleaning Solutions in Naperville IL", caption: "Vanity & Bathroom · Naperville, IL" },
-              { src: "/Work%20Pictures/IMG_1610.jpg",                                  alt: "Spotless bedroom after recurring house cleaning service in Bolingbrook IL", caption: "Master Bedroom · Bolingbrook, IL" },
+              { src: "/Work%20Pictures/shower-deep-clean-romeoville-il.jpg",            alt: "Glass shower and stone tile bathroom after professional deep cleaning in Romeoville IL", caption: "Bathroom Deep Clean · Romeoville, IL" },
+              { src: "/Work%20Pictures/living-room-hardwood-floors-plainfield-il.jpg",  alt: "Clean living room with dark hardwood floors — recurring maid service in Plainfield IL", caption: "Living Room · Standard Cleaning" },
+              { src: "/Work%20Pictures/double-vanity-bathroom-clean-naperville-il.jpg", alt: "Double vanity bathroom cleaned and polished by DSM Cleaning Solutions in Naperville IL", caption: "Vanity & Bathroom · Naperville, IL" },
+              { src: "/Work%20Pictures/bedroom-cleaning-service-bolingbrook-il.jpg",    alt: "Spotless bedroom after recurring house cleaning service in Bolingbrook IL", caption: "Master Bedroom · Bolingbrook, IL" },
               { src: "/Work%20Pictures/Google Post Image - Cleaning Service (25).png", alt: "Professional cleaner at work in a southwest Chicago suburb home — DSM Cleaning Solutions", caption: "Move-Out Clean · Romeoville, IL" },
             ].map((photo) => (
               <div key={photo.src} className="group">
@@ -301,7 +335,7 @@ export default function HomePage() {
                 ))}
               </div>
 
-              <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn-primary">
+              <Link href="/book" className="btn-primary">
                 Get Your Free Estimate
               </Link>
             </div>
@@ -310,8 +344,8 @@ export default function HomePage() {
               {/* Image with overlay card */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-orange-100 h-[500px]">
                 <Image
-                  src="/Work%20Pictures/IMG_2034.jpg"
-                  alt="DSM Cleaning Solutions professional move-out cleaning in a Romeoville IL home"
+                  src="/Work%20Pictures/shower-tile-cleaning-romeoville-il.jpg"
+                  alt="Spotless shower tile cleaned by DSM Cleaning Solutions in Romeoville IL"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
@@ -430,6 +464,27 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ─── POPULAR SERVICES IN NAPERVILLE ─── */}
+      <section className="py-10 bg-gray-50 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Popular Services in Naperville, IL</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <Link href="/deep-cleaning-naperville-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Naperville</h3>
+              <p className="text-sm text-gray-600">Top-to-bottom deep cleaning for Naperville homes (60540, 60563, 60564, 60565).</p>
+            </Link>
+            <Link href="/standard-cleaning-naperville-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">House Cleaning in Naperville</h3>
+              <p className="text-sm text-gray-600">Weekly, biweekly & monthly house cleaning for Naperville families.</p>
+            </Link>
+            <Link href="/move-out-cleaning-naperville-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning in Naperville</h3>
+              <p className="text-sm text-gray-600">Deposit-back move-out cleaning for Naperville rentals & home sales.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ─── FAQ ─── */}
       <section id="faq" className="py-24 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -501,7 +556,7 @@ export default function HomePage() {
           <div className="text-center mt-8">
             <p className="text-white/70 text-sm mb-4">Prefer to book online right now?</p>
             <Link
-              href="https://dsmcleaningsolutions.bookingkoala.com/booknow"
+              href="/book"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white text-orange-600 font-bold text-lg px-8 py-4 rounded-2xl hover:bg-orange-50 active:scale-95 transition-all duration-200 shadow-xl"

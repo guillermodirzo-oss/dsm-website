@@ -10,10 +10,24 @@ export const metadata: Metadata = {
   keywords: ["house cleaning Romeoville IL", "standard cleaning Romeoville", "home cleaning service Romeoville", "maid service Romeoville IL", "professional house cleaners Romeoville", "residential cleaning Romeoville IL"],
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/standard-cleaning" },
   openGraph: {
-    title: "Standard Cleaning Service Plainfield IL",
+    title: "Standard Cleaning Service Plainfield IL | DSM Cleaning Solutions",
     description: "Standard house cleaning in Plainfield & Romeoville, IL — one-time or recurring. Eco-friendly, fully insured. Family-owned. Get your free estimate today.",
     url: "https://www.dsmcleaningsolutions.com/standard-cleaning",
     siteName: "DSM Cleaning Solutions",
+    images: [
+      {
+        url: "/hero-image.png",
+        width: 1200,
+        height: 630,
+        alt: "DSM Cleaning Solutions — Standard House Cleaning in Plainfield IL",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Standard Cleaning Service Plainfield IL | DSM Cleaning Solutions",
+    description: "Standard house cleaning in Plainfield & Romeoville, IL — one-time or recurring. Eco-friendly, fully insured. Family-owned.",
+    images: ["/hero-image.png"],
   },
 };
 
@@ -82,7 +96,7 @@ export default function StandardCleaningPage() {
 
       {/* HERO */}
       <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-orange-900 text-white py-20 md:py-28 overflow-hidden">
-        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url('/Work%20Pictures/IMG_1601.jpg')", backgroundSize: "cover", backgroundPosition: "center" }} />
+        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url('/Work%20Pictures/living-room-hardwood-floors-plainfield-il.jpg')", backgroundSize: "cover", backgroundPosition: "center" }} />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 text-sm text-white/50 mb-5">
             <Link href="/" className="hover:text-white">Home</Link><span>/</span><span className="text-white">Standard House Cleaning</span>
@@ -94,7 +108,7 @@ export default function StandardCleaningPage() {
             <p className="text-xl text-white/80 mb-8 leading-relaxed">Professional, thorough home cleaning on your schedule. One-time or recurring — we keep your home spotless so you can focus on what matters.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg text-base font-bold">Get a Free Estimate</Link>
-              <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn-outline-white btn-lg text-base">Book Now Online</Link>
+              <Link href="/book" className="btn-outline-white btn-lg text-base">Book Now Online</Link>
             </div>
           </div>
         </div>
@@ -127,7 +141,7 @@ export default function StandardCleaningPage() {
               </div>
               <div className="flex gap-3">
                 <Link href="/contact" className="btn-primary">Get a Free Estimate</Link>
-                <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn-secondary">Book Now</Link>
+                <Link href="/book" className="btn-secondary">Book Now</Link>
               </div>
             </div>
             <div className="bg-orange-50 rounded-3xl p-8 border border-orange-100">
@@ -193,7 +207,7 @@ export default function StandardCleaningPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/IMG_1601.jpg"
+                src="/Work%20Pictures/living-room-hardwood-floors-plainfield-il.jpg"
                 alt="Clean living room with dark hardwood floors maintained with recurring house cleaning in Plainfield IL"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -202,8 +216,8 @@ export default function StandardCleaningPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/IMG_1610.jpg"
-                alt="Clean bedroom with hardwood floors — standard maid service in Romeoville IL"
+                src="/Work%20Pictures/bedroom-cleaning-service-bolingbrook-il.jpg"
+                alt="Clean bedroom with hardwood floors after standard maid service in Bolingbrook IL"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -211,8 +225,8 @@ export default function StandardCleaningPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/IMG_0220.jpg"
-                alt="Sparkling clean bathroom after standard house cleaning service in the southwest Chicago suburbs"
+                src="/Work%20Pictures/apartment-bathroom-cleaning-naperville-il.jpg"
+                alt="Sparkling clean bathroom after standard house cleaning service in Naperville IL"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"

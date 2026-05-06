@@ -14,6 +14,10 @@ export const metadata: Metadata = {
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning/downers-grove",
     siteName: "DSM Cleaning Solutions",
   },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/hero-image.png"],
+  },
 };
 
 const serviceSchema = {
@@ -45,7 +49,7 @@ const faqSchema = {
       name: "How much does deep cleaning cost in Downers Grove, IL?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Deep cleaning in Downers Grove starts around $225 after seasonal discounts. Most homes in Downers Grove — a mix of 1940s-era homes and newer builds — fall in the $250–$425 range depending on size and condition. We provide free, no-obligation estimates before every job.",
+        text: "Deep cleaning in Downers Grove starts around $225 after seasonal discounts. Most homes in Downers Grove Ã¢â‚¬â€ a mix of 1940s-era homes and newer builds Ã¢â‚¬â€ fall in the $250Ã¢â‚¬â€œ$425 range depending on size and condition. We provide free, no-obligation estimates before every job.",
       },
     },
     {
@@ -53,7 +57,7 @@ const faqSchema = {
       name: "Do you serve all of Downers Grove, IL?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes — we serve all of Downers Grove across both zip codes: 60515 and 60516. From downtown Downers Grove and the Metra BNSF area to neighborhoods near Lyman Woods and Belmont Prairie, our team covers the full village. We also serve nearby Oak Brook, Westmont, Lisle, and Woodridge.",
+        text: "Yes Ã¢â‚¬â€ we serve all of Downers Grove across both zip codes: 60515 and 60516. From downtown Downers Grove and the Metra BNSF area to neighborhoods near Lyman Woods and Belmont Prairie, our team covers the full village. We also serve nearby Oak Brook, Westmont, Lisle, and Woodridge.",
       },
     },
     {
@@ -61,7 +65,7 @@ const faqSchema = {
       name: "How long does a deep cleaning take in Downers Grove?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Most deep cleanings in Downers Grove take 3–5 hours for a typical single-family home. Larger homes or those with more bathrooms and finished basements may take up to 6 hours. We always finish what we start — no room gets skipped.",
+        text: "Most deep cleanings in Downers Grove take 3Ã¢â‚¬â€œ5 hours for a typical single-family home. Larger homes or those with more bathrooms and finished basements may take up to 6 hours. We always finish what we start Ã¢â‚¬â€ no room gets skipped.",
       },
     },
   ],
@@ -80,32 +84,28 @@ const breadcrumbSchema = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": "https://www.dsmcleaningsolutions.com/#business",
   name: "DSM Cleaning Solutions",
   telephone: "(815) 246-2113",
   url: "https://www.dsmcleaningsolutions.com",
   areaServed: "Downers Grove",
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5.0",
-    reviewCount: "47",
-  },
 };
 
 const faqs = [
   {
     question: "How much does deep cleaning cost in Downers Grove, IL?",
     answer:
-      "Deep cleaning in Downers Grove starts around $225 after seasonal discounts. Most homes in Downers Grove — a mix of 1940s-era homes and newer builds — fall in the $250–$425 range depending on size and condition. We provide free, no-obligation estimates before every job.",
+      "Deep cleaning in Downers Grove starts around $225 after seasonal discounts. Most homes in Downers Grove Ã¢â‚¬â€ a mix of 1940s-era homes and newer builds Ã¢â‚¬â€ fall in the $250Ã¢â‚¬â€œ$425 range depending on size and condition. We provide free, no-obligation estimates before every job.",
   },
   {
     question: "Do you serve all of Downers Grove, IL?",
     answer:
-      "Yes — we serve all of Downers Grove across both zip codes: 60515 and 60516. From downtown Downers Grove and the Metra BNSF area to neighborhoods near Lyman Woods and Belmont Prairie, our team covers the full village. We also serve nearby Oak Brook, Westmont, Lisle, and Woodridge.",
+      "Yes Ã¢â‚¬â€ we serve all of Downers Grove across both zip codes: 60515 and 60516. From downtown Downers Grove and the Metra BNSF area to neighborhoods near Lyman Woods and Belmont Prairie, our team covers the full village. We also serve nearby Oak Brook, Westmont, Lisle, and Woodridge.",
   },
   {
     question: "How long does a deep cleaning take in Downers Grove?",
     answer:
-      "Most deep cleanings in Downers Grove take 3–5 hours for a typical single-family home. Larger homes or those with more bathrooms and finished basements may take up to 6 hours. We always finish what we start — no room gets skipped.",
+      "Most deep cleanings in Downers Grove take 3Ã¢â‚¬â€œ5 hours for a typical single-family home. Larger homes or those with more bathrooms and finished basements may take up to 6 hours. We always finish what we start Ã¢â‚¬â€ no room gets skipped.",
   },
 ];
 
@@ -159,12 +159,12 @@ const checklist = [
 ];
 
 const trustCards = [
-  { icon: "🌿", title: "Eco-Friendly", desc: "Non-toxic products — safe for Downers Grove families, kids, and pets." },
-  { icon: "🛡️", title: "Fully Insured & Bonded", desc: "Background-checked team. Your home is fully covered on every visit." },
-  { icon: "✅", title: "48-Hour Guarantee", desc: "Not satisfied? We re-clean at no charge within 48 hours." },
-  { icon: "👨‍👩‍👧", title: "Family Owned", desc: "Local southwest suburbs business — not a national franchise." },
-  { icon: "📅", title: "7 Days a Week", desc: "Flexible scheduling for busy Downers Grove families." },
-  { icon: "📍", title: "Serving Downers Grove", desc: "All of Downers Grove — zip codes 60515 & 60516." },
+  { icon: "Ã°Å¸Å’Â¿", title: "Eco-Friendly", desc: "Non-toxic products Ã¢â‚¬â€ safe for Downers Grove families, kids, and pets." },
+  { icon: "Ã°Å¸â€ºÂ¡Ã¯Â¸Â", title: "Fully Insured & Bonded", desc: "Background-checked team. Your home is fully covered on every visit." },
+  { icon: "Ã¢Å“â€¦", title: "48-Hour Guarantee", desc: "Not satisfied? We re-clean at no charge within 48 hours." },
+  { icon: "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§", title: "Family Owned", desc: "Local southwest suburbs business Ã¢â‚¬â€ not a national franchise." },
+  { icon: "Ã°Å¸â€œâ€¦", title: "7 Days a Week", desc: "Flexible scheduling for busy Downers Grove families." },
+  { icon: "Ã°Å¸â€œÂ", title: "Serving Downers Grove", desc: "All of Downers Grove Ã¢â‚¬â€ zip codes 60515 & 60516." },
 ];
 
 export default function DeepCleaningDownersGrovePage() {
@@ -203,7 +203,7 @@ export default function DeepCleaningDownersGrovePage() {
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               DSM Cleaning Solutions brings reliable, top-to-bottom deep cleaning to Downers Grove
-              families — thorough from the first room to the last, eco-friendly, and backed by our
+              families Ã¢â‚¬â€ thorough from the first room to the last, eco-friendly, and backed by our
               48-hour satisfaction guarantee. Serving all of Downers Grove, 60515 &amp; 60516.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -211,7 +211,7 @@ export default function DeepCleaningDownersGrovePage() {
                 Get a Free Quote
               </Link>
               <a href="tel:+18152462113" className="inline-block bg-transparent text-white font-bold py-4 px-8 rounded-lg border-2 border-white hover:bg-white/10 transition-colors text-lg text-center">
-                📞 (815) 246-2113
+                Ã°Å¸â€œÅ¾ (815) 246-2113
               </a>
             </div>
           </div>
@@ -222,7 +222,7 @@ export default function DeepCleaningDownersGrovePage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["✅ Fully Insured & Bonded", "🌿 Eco-Friendly Products", "👨‍👩‍👧 Family Owned", "⭐ 5-Star Rated · 47 Reviews", "✔️ 48-Hour Satisfaction Guarantee"].map(
+            {["Ã¢Å“â€¦ Fully Insured & Bonded", "Ã°Å¸Å’Â¿ Eco-Friendly Products", "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§ Family Owned", "Ã¢Â­Â 5-Star Rated Ã‚Â· 47 Reviews", "Ã¢Å“â€Ã¯Â¸Â 48-Hour Satisfaction Guarantee"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -235,18 +235,18 @@ export default function DeepCleaningDownersGrovePage() {
           <h2 className="section-heading mb-6">Professional Deep Cleaning Services in Downers Grove, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Deep cleaning in Downers Grove, IL means showing up on time, doing the work thoroughly, and
-            leaving the home genuinely cleaner — not just surface-level tidy. That&apos;s the standard DSM
+            leaving the home genuinely cleaner Ã¢â‚¬â€ not just surface-level tidy. That&apos;s the standard DSM
             Cleaning Solutions holds itself to in every home we clean across Downers Grove&apos;s 60515 and
             60516 zip codes.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Downers Grove has a wonderful variety of housing — classic bungalows and two-flats near the
+            Downers Grove has a wonderful variety of housing Ã¢â‚¬â€ classic bungalows and two-flats near the
             downtown and Metra BNSF corridor, alongside newer construction throughout the 60516 area and
             near Lyman Woods. Our team is experienced with both, adapting our deep cleaning approach to
             the unique character of each home while maintaining the same high standard throughout.
           </p>
           <p className="text-gray-600 leading-relaxed">
-            Busy families in Downers Grove rely on DSM because we follow through on what we promise —
+            Busy families in Downers Grove rely on DSM because we follow through on what we promise Ã¢â‚¬â€
             every room, every time. We use eco-friendly, non-toxic products safe for kids and pets, and
             we back every single deep clean with our 48-hour satisfaction guarantee.
           </p>
@@ -308,9 +308,9 @@ export default function DeepCleaningDownersGrovePage() {
           <h2 className="section-heading mb-6">How Much Does Deep Cleaning Cost in Downers Grove, IL?</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Deep cleaning in Downers Grove starts around $225 after seasonal discounts. The village&apos;s
-            mix of property sizes means pricing varies — compact historic homes near downtown may run
-            $225–$300, while larger newer builds with finished basements and multiple bathrooms typically
-            fall in the $350–$425 range.
+            mix of property sizes means pricing varies Ã¢â‚¬â€ compact historic homes near downtown may run
+            $225Ã¢â‚¬â€œ$300, while larger newer builds with finished basements and multiple bathrooms typically
+            fall in the $350Ã¢â‚¬â€œ$425 range.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
             We provide every Downers Grove client with a free, no-obligation estimate before any work
@@ -385,12 +385,12 @@ export default function DeepCleaningDownersGrovePage() {
               <h2 className="text-4xl font-bold mb-4">Book Your Deep Cleaning in Downers Grove Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Get a free quote for deep cleaning in Downers Grove, IL. We serve both zip codes and every
-                neighborhood — backed by our 48-hour satisfaction guarantee.
+                neighborhood Ã¢â‚¬â€ backed by our 48-hour satisfaction guarantee.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                📞 (815) 246-2113
+                Ã°Å¸â€œÅ¾ (815) 246-2113
               </a>
-              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
+              <p className="text-white/80">Family-owned Ã‚Â· Eco-friendly Ã‚Â· Fully insured Ã‚Â· Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <BookingForm />

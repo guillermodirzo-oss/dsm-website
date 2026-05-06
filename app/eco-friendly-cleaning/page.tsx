@@ -8,6 +8,26 @@ export const metadata: Metadata = {
   description: "Green, non-toxic house cleaning in Plainfield, IL. Safe for kids & pets. Professional eco products. No harsh chemicals. Fully insured. Free estimate.",
   keywords: ["eco-friendly cleaning Romeoville IL", "green cleaning service Romeoville", "non-toxic house cleaning Romeoville", "natural cleaning service Romeoville IL", "safe cleaning products Romeoville", "organic cleaning Romeoville IL"],
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/eco-friendly-cleaning" },
+  openGraph: {
+    title: "Eco-Friendly Cleaning Plainfield IL | DSM Cleaning Solutions",
+    description: "Green, non-toxic house cleaning in Plainfield, IL. Safe for kids & pets. Professional eco products. No harsh chemicals. Fully insured. Free estimate.",
+    url: "https://www.dsmcleaningsolutions.com/eco-friendly-cleaning",
+    siteName: "DSM Cleaning Solutions",
+    images: [
+      {
+        url: "/hero-image.png",
+        width: 1200,
+        height: 630,
+        alt: "DSM Cleaning Solutions — Eco-Friendly Green Cleaning in Plainfield IL",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Eco-Friendly Cleaning Plainfield IL | DSM Cleaning Solutions",
+    description: "Green, non-toxic house cleaning in Plainfield, IL. Safe for kids & pets. Professional eco products. No harsh chemicals.",
+    images: ["/hero-image.png"],
+  },
 };
 
 const faqs = [
@@ -72,7 +92,7 @@ export default function EcoFriendlyCleaningPage() {
             <p className="text-xl text-white/80 mb-8 leading-relaxed">Non-toxic, biodegradable cleaning products that are safe for your children, pets, and the planet — without sacrificing a single bit of cleaning power.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg text-base font-bold">Get a Free Estimate</Link>
-              <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn-outline-white btn-lg text-base">Book Now Online</Link>
+              <Link href="/book" className="btn-outline-white btn-lg text-base">Book Now Online</Link>
             </div>
           </div>
         </div>
@@ -112,7 +132,7 @@ export default function EcoFriendlyCleaningPage() {
               </div>
               <div className="flex gap-3">
                 <Link href="/contact" className="btn-primary">Get a Free Estimate</Link>
-                <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn-secondary">Book Now</Link>
+                <Link href="/book" className="btn-secondary">Book Now</Link>
               </div>
             </div>
             <div className="space-y-4">

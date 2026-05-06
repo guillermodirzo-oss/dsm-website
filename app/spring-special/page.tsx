@@ -7,14 +7,28 @@ import SpringBookingForm from "@/components/SpringBookingForm";
 export const metadata: Metadata = {
   title: "Spring Cleaning Special — $75 Off",
   description:
-    "Get $75 off your spring deep cleaning in Naperville, Hinsdale, Burr Ridge, Oak Brook & Downers Grove. Free oven cleaning included — a $40 value. Family-owned, fully insured. Limited May spots.",
+    "Get $75 off your spring deep cleaning in Romeoville, Plainfield, Bolingbrook, Lockport, Shorewood & Crest Hill. Free oven cleaning included — a $40 value. Family-owned, fully insured. Limited May spots.",
   robots: { index: false, follow: false },
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/spring-special" },
+  openGraph: {
+    title: "Spring Cleaning Special — $75 Off | DSM Cleaning Solutions",
+    description:
+      "Get $75 off your spring deep cleaning in Romeoville, Plainfield, Bolingbrook, Lockport, Shorewood & Crest Hill. Free oven cleaning included — a $40 value. Limited May spots.",
+    url: "https://www.dsmcleaningsolutions.com/spring-special",
+    siteName: "DSM Cleaning Solutions",
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions — Spring Cleaning Special $75 Off" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Spring Cleaning Special — $75 Off | DSM Cleaning Solutions",
+    description: "Get $75 off your spring deep cleaning + free oven cleaning in Romeoville, Plainfield & surrounding suburbs. Limited spots.",
+    images: ["/hero-image.png"],
+  },
 };
 
 const PHONE = "(815) 246-2113";
 const PHONE_HREF = "tel:+18152462113";
-const BOOK_URL = "https://dsmcleaningsolutions.bookingkoala.com/booknow";
+const BOOK_URL = "/book";
 const COUPON = "SPRING75";
 const NAVY = "#1B2B5E";
 const ORANGE = "#E8721C";
@@ -46,7 +60,7 @@ export default function SpringSpecialPage() {
           <a href="/" aria-label="DSM Cleaning Solutions — Home">
             <Image
               src="/Logo.png"
-              alt="DSM Cleaning Solutions — house cleaning in Naperville and surrounding suburbs"
+              alt="DSM Cleaning Solutions — house cleaning in Romeoville and surrounding suburbs"
               width={150}
               height={40}
               className="h-10 w-auto object-contain"
@@ -81,10 +95,17 @@ export default function SpringSpecialPage() {
       ════════════════════════════════════════ */}
       <section className="bg-white py-10 px-4">
         <div className="max-w-5xl mx-auto">
+          {/*
+            3-column grid trick for mobile reordering:
+            Div A (text)  → order-1 mobile | col-1 row-1 desktop
+            Div B (form)  → order-2 mobile | col-2 rows-1-2 desktop  (Change 1)
+            Div C (image) → order-3 mobile | col-1 row-2 desktop
+            This puts the form above the promo image on mobile (87% of traffic).
+          */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
 
-            {/* ── Left column: headline + offer + image ── */}
-            <div>
+            {/* ── Div A: Headline content — mobile: first, desktop: col-1/row-1 ── */}
+            <div className="order-1 lg:order-none">
               {/* Urgency badge */}
               <div
                 className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-5 border"
@@ -104,43 +125,27 @@ export default function SpringSpecialPage() {
                 Get Your Home<br />
                 <span style={{ color: ORANGE }}>Spring Deep Cleaned</span>
               </h1>
-              <p className="text-xl sm:text-2xl font-bold mb-4" style={{ color: NAVY }}>
-                $75 OFF + Free Oven Cleaning This May
-              </p>
-              <p className="text-gray-500 text-sm sm:text-base leading-relaxed mb-6">
-                Family-owned &bull; Fully insured &bull; Serving Naperville, Hinsdale, Burr Ridge,
-                Oak Brook, Downers Grove &amp; surrounding suburbs
-              </p>
 
-              {/* Hero image */}
-              <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-200 mb-6">
-                <Image
-                  src="/spring-ad-hero-updated.png"
-                  alt="DSM Cleaning Solutions — $75 Off Spring Deep Cleaning in Naperville, Hinsdale & suburbs"
-                  width={600}
-                  height={600}
-                  className="w-full h-auto"
-                  priority
-                />
-              </div>
+              {/* Change 2: pill badge — not clickable text — eliminates dead clicks */}
+              <span
+                className="inline-block px-5 py-2 rounded-full text-white font-bold text-base sm:text-lg mb-4"
+                style={{ backgroundColor: ORANGE }}
+              >
+                🎉 $75 OFF + Free Oven Cleaning This May
+              </span>
 
-              {/* Trust bullets */}
-              <div className="grid grid-cols-2 gap-2">
-                {[
-                  "✓ Family-Owned Business",
-                  "✓ Fully Insured & Bonded",
-                  "✓ Eco-Friendly Products",
-                  "✓ 48-Hour Guarantee",
-                ].map((item) => (
-                  <div key={item} className="flex items-center gap-2 text-sm font-medium text-gray-600">
-                    {item}
-                  </div>
-                ))}
-              </div>
+              <p className="text-gray-500 text-sm sm:text-base leading-relaxed">
+                Family-owned &bull; Fully insured &bull; Serving Romeoville, Plainfield, Bolingbrook,
+                Lockport, Shorewood, Crest Hill &amp; surrounding suburbs
+              </p>
             </div>
 
-            {/* ── Right column: embedded booking form ── */}
-            <div>
+            {/* ── Div B: Form — mobile: SECOND (before image), desktop: right col spans 2 rows ── */}
+            <div id="booking-form" className="order-2 lg:order-none lg:row-span-2">
+              {/* Change 4: urgency line directly above the embed */}
+              <p className="text-xs font-bold uppercase tracking-wider text-center mb-2" style={{ color: ORANGE }}>
+                ⚡ May Only — Limited Spots Available
+              </p>
               <div
                 className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100"
                 style={{ boxShadow: "0 20px 50px rgba(0,0,0,0.12)" }}
@@ -165,6 +170,35 @@ export default function SpringSpecialPage() {
               <p className="text-gray-400 text-xs text-center mt-3">
                 ⚡ Limited May spots — filling fast
               </p>
+            </div>
+
+            {/* ── Div C: Image + trust — mobile: THIRD (after form), desktop: col-1/row-2 ── */}
+            <div className="order-3 lg:order-none">
+              {/* Hero image */}
+              <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-200 mb-6">
+                <Image
+                  src="/spring-ad-hero.png"
+                  alt="DSM Cleaning Solutions — $75 Off Spring Deep Cleaning in Romeoville, Plainfield & suburbs"
+                  width={600}
+                  height={600}
+                  className="w-full h-auto"
+                  priority
+                />
+              </div>
+
+              {/* Trust bullets */}
+              <div className="grid grid-cols-2 gap-2">
+                {[
+                  "✓ Family-Owned Business",
+                  "✓ Fully Insured & Bonded",
+                  "✓ Eco-Friendly Products",
+                  "✓ 48-Hour Guarantee",
+                ].map((item) => (
+                  <div key={item} className="flex items-center gap-2 text-sm font-medium text-gray-600">
+                    {item}
+                  </div>
+                ))}
+              </div>
             </div>
 
           </div>
@@ -263,14 +297,14 @@ export default function SpringSpecialPage() {
           <div className="max-w-xl mx-auto rounded-2xl overflow-hidden shadow-xl border border-gray-200">
             <Image
               src="/spring-ad-before-after.png"
-              alt="Before and After — DSM Deep Cleaning Results in Naperville, IL"
+              alt="Before and After — DSM Deep Cleaning Results in Romeoville, IL"
               width={600}
               height={600}
               className="w-full h-auto"
             />
           </div>
           <p className="text-center text-gray-400 text-sm mt-4">
-            Real results from a DSM customer home in the Naperville / western suburbs area
+            Real results from a DSM customer home in the Romeoville / southwest suburbs area
           </p>
         </div>
       </section>
@@ -287,7 +321,7 @@ export default function SpringSpecialPage() {
             37 Families Trust DSM Cleaning Solutions
           </h2>
           <p className="text-gray-500 text-sm text-center mb-8">
-            Proudly serving homeowners in Naperville, Hinsdale, Burr Ridge, Oak Brook &amp; Downers Grove
+            Proudly serving homeowners in Romeoville, Plainfield, Bolingbrook, Lockport, Shorewood &amp; Crest Hill
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
@@ -450,48 +484,33 @@ export default function SpringSpecialPage() {
               No hassle. No arguments. No excuses.
             </p>
             <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
-              Available across the western suburbs — Naperville, Hinsdale, Burr Ridge, Oak Brook, Downers Grove, and beyond.
+              Available across the southwest suburbs — Romeoville, Plainfield, Bolingbrook, Lockport, Shorewood, Crest Hill, and beyond.
             </p>
-          </div>
-
-          {/* Final CTA block — orange section, Book Now stays here only */}
-          <div
-            className="rounded-3xl p-8 text-center"
-            style={{ backgroundColor: ORANGE, boxShadow: "0 20px 50px rgba(232,114,28,0.3)" }}
-          >
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3 tracking-tight leading-tight">
-              Spring doesn&apos;t wait.<br />Neither should your home.
-            </h3>
-            <p className="text-orange-100 text-sm mb-6">
-              Spots are filling up — secure yours now before May is gone.
-            </p>
-            <a
-              id="book-now-btn"
-              href={BOOK_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 font-bold text-lg py-4 px-8 rounded-2xl shadow-xl hover:bg-orange-50 active:scale-95 transition-all duration-200 w-full max-w-sm mx-auto"
-              style={{ backgroundColor: "#ffffff", color: ORANGE }}
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              Book Now — Use Code {COUPON}
-            </a>
-            <div className="mt-6">
-              <p className="text-white/80 text-sm mb-1">Or call us directly</p>
-              <a
-                href={PHONE_HREF}
-                className="text-2xl font-bold text-white hover:text-orange-100 transition-colors block mb-1"
-              >
-                {PHONE}
-              </a>
-              <p className="text-white/70 text-xs">Mon–Sun 8am–6pm</p>
-            </div>
           </div>
 
         </div>
       </section>
+
+      {/* ════════════════════════════════════════
+          STICKY MOBILE CTA BAR — Change 3
+          87% mobile traffic; fixed bar keeps
+          the offer visible at all scroll depths.
+          Hidden on md+ screens (desktop).
+      ════════════════════════════════════════ */}
+      <div
+        className="fixed bottom-0 left-0 right-0 z-50 md:hidden px-4 py-3"
+        style={{ backgroundColor: ORANGE, boxShadow: "0 -4px 20px rgba(232,114,28,0.35)" }}
+      >
+        <a
+          href="#booking-form"
+          className="flex items-center justify-center w-full text-white font-extrabold text-base py-3.5 rounded-2xl"
+          style={{ backgroundColor: "rgba(0,0,0,0.18)" }}
+        >
+          Claim Your $75 Off → Book in 60 Seconds
+        </a>
+      </div>
+      {/* Spacer so footer content isn't hidden behind the sticky bar on mobile */}
+      <div className="h-20 md:hidden" />
 
       {/* ════════════════════════════════════════
           SECTION 9 — MINIMAL FOOTER
@@ -499,13 +518,9 @@ export default function SpringSpecialPage() {
       <footer className="bg-gray-100 py-4 px-4 border-t border-gray-200">
         <p className="text-center text-gray-500 text-xs">
           &copy; 2026 DSM Cleaning Solutions. Serving{" "}
-          <Link href="/deep-cleaning/naperville" className="hover:underline">Naperville</Link>,{" "}
-          Plainfield,{" "}
-          <Link href="/deep-cleaning/hinsdale" className="hover:underline">Hinsdale</Link>,{" "}
-          <Link href="/deep-cleaning/burr-ridge" className="hover:underline">Burr Ridge</Link>,{" "}
-          <Link href="/deep-cleaning/oak-brook" className="hover:underline">Oak Brook</Link>{" "}
-          &amp;{" "}
-          <Link href="/deep-cleaning/downers-grove" className="hover:underline">Downers Grove</Link>, IL.
+          <Link href="/deep-cleaning-romeoville-il" className="hover:underline">Romeoville</Link>,{" "}
+          <Link href="/deep-cleaning-plainfield-il" className="hover:underline">Plainfield</Link>,{" "}
+          Bolingbrook, Lockport, Shorewood &amp; Crest Hill, IL.
           All rights reserved.
         </p>
       </footer>

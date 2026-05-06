@@ -84,7 +84,7 @@ export default function Footer() {
                 { label: "About Us", href: "/about" },
                 { label: "Reviews", href: "/reviews" },
                 { label: "FAQ", href: "/#faq" },
-                { label: "Book Online", href: "https://dsmcleaningsolutions.bookingkoala.com/booknow" },
+                { label: "Book Online", href: "/book" },
               ].map((item) => (
                 <li key={item.label}><Link href={item.href} {...(item.href.startsWith("https://") ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="hover:text-white transition-colors">{item.label}</Link></li>
               ))}

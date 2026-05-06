@@ -7,11 +7,26 @@ export const metadata: Metadata = {
     "Transparent flat-rate pricing for house cleaning in Plainfield, Romeoville & surrounding suburbs. Standard, deep & move-out cleaning. No hidden fees. Get an instant quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/pricing" },
   openGraph: {
-    title: "Cleaning Service Pricing | DSM Cleaning Solutions",
+    title: "House Cleaning Prices Romeoville & Plainfield IL | DSM Cleaning Solutions",
     description:
       "Transparent flat-rate pricing for house cleaning in Plainfield, Romeoville & surrounding suburbs. Standard, deep & move-out cleaning. No hidden fees.",
     url: "https://www.dsmcleaningsolutions.com/pricing",
     siteName: "DSM Cleaning Solutions",
+    images: [
+      {
+        url: "/hero-image.png",
+        width: 1200,
+        height: 630,
+        alt: "DSM Cleaning Solutions — House Cleaning Prices in Romeoville & Plainfield IL",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "House Cleaning Prices Romeoville & Plainfield IL | DSM Cleaning Solutions",
+    description:
+      "Transparent flat-rate pricing for house cleaning in Plainfield, Romeoville & surrounding suburbs. No hidden fees.",
+    images: ["/hero-image.png"],
   },
 };
 
@@ -197,7 +212,7 @@ export default function PricingPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="https://dsmcleaningsolutions.bookingkoala.com/booknow"
+                href="/book"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-white text-brand-green font-bold py-4 px-8 rounded-lg hover:bg-brand-green-50 transition-colors text-lg text-center"
@@ -308,7 +323,7 @@ export default function PricingPage() {
               Prices vary based on your specific home. Get your exact quote in seconds — no commitment required.
             </p>
             <Link
-              href="https://dsmcleaningsolutions.bookingkoala.com/booknow"
+              href="/book"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary inline-block"
@@ -438,7 +453,7 @@ export default function PricingPage() {
             and service type — no obligation required. Takes less than 2 minutes.
           </p>
           <Link
-            href="https://dsmcleaningsolutions.bookingkoala.com/booknow"
+            href="/book"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary btn-lg inline-block mb-4"
@@ -499,7 +514,7 @@ export default function PricingPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="https://dsmcleaningsolutions.bookingkoala.com/booknow"
+              href="/book"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-brand-green font-bold px-8 py-4 rounded-full hover:bg-brand-green-50 transition-colors shadow-md text-base"

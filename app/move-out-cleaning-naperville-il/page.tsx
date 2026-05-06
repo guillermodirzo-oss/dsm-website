@@ -3,15 +3,19 @@ import Link from "next/link";
 import BookingForm from "@/components/BookingForm";
 
 export const metadata: Metadata = {
-  title: "Move Out Cleaning Services Naperville IL",
+  title: "Move-Out Cleaning Naperville IL | 5-Star Rated",
   description:
-    "Professional move-out cleaning in Naperville, IL. DSM Cleaning Solutions helps renters, landlords & home sellers. Free estimate — (815) 246-2113.",
+    "Professional move-out cleaning in Naperville. Spotless results backed by our 48-hr guarantee. 5.0 stars, 47 reviews. Call (815) 246-2113.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-naperville-il" },
   openGraph: {
-    title: "Move Out Cleaning Services Naperville IL",
+    title: "Move-Out Cleaning Naperville IL | 5-Star Rated | DSM Cleaning",
     description:
-      "Professional move-out cleaning in Naperville, IL. DSM Cleaning Solutions helps renters, landlords & home sellers. Free estimate — (815) 246-2113.",
+      "Professional move-out cleaning in Naperville. Spotless results backed by our 48-hr guarantee. 5.0 stars, 47 reviews. Call (815) 246-2113.",
     url: "https://www.dsmcleaningsolutions.com/move-out-cleaning-naperville-il",
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/hero-image.png"],
   },
 };
 
@@ -19,27 +23,27 @@ const faqs = [
   {
     question: "How long does a move-out cleaning take in Naperville, IL?",
     answer:
-      "Move-out cleaning in Naperville typically takes 4–8 hours depending on the size of the property. Larger homes in White Eagle or Ashbury may take 6–8 hours. Condos or townhomes near Downtown Naperville are often completed in 4–5 hours.",
+      "Move-out cleaning in Naperville typically takes 4Ã¢â‚¬â€œ8 hours depending on the size of the property. Larger homes in White Eagle or Ashbury may take 6Ã¢â‚¬â€œ8 hours. Condos or townhomes near Downtown Naperville are often completed in 4Ã¢â‚¬â€œ5 hours.",
   },
   {
     question: "Do you serve the Cress Creek and Hobson West neighborhoods in Naperville for move-out cleaning?",
     answer:
-      "Yes — we serve all of Naperville for move-out and move-in cleaning, including Cress Creek, Hobson West, Ashbury, White Eagle, and every area in zip codes 60540, 60563, 60564, and 60565.",
+      "Yes Ã¢â‚¬â€ we serve all of Naperville for move-out and move-in cleaning, including Cress Creek, Hobson West, Ashbury, White Eagle, and every area in zip codes 60540, 60563, 60564, and 60565.",
   },
   {
     question: "How much does move-out cleaning cost in Naperville, IL?",
     answer:
-      "Move-out cleaning in Naperville starts around $150–$250 for most homes and scales up for larger properties. We always provide a free, no-obligation estimate before your move-out date. Call (815) 246-2113 for a quick quote.",
+      "Move-out cleaning in Naperville starts around $150Ã¢â‚¬â€œ$250 for most homes and scales up for larger properties. We always provide a free, no-obligation estimate before your move-out date. Call (815) 246-2113 for a quick quote.",
   },
   {
     question: "Does your Naperville move-out cleaning help get the security deposit back?",
     answer:
-      "Yes — that&apos;s exactly what our move-out cleaning is designed for. We follow a comprehensive checklist built to meet Naperville landlord and property manager standards, giving you the best possible chance of receiving your full deposit.",
+      "Yes Ã¢â‚¬â€ that&apos;s exactly what our move-out cleaning is designed for. We follow a comprehensive checklist built to meet Naperville landlord and property manager standards, giving you the best possible chance of receiving your full deposit.",
   },
   {
     question: "Is DSM Cleaning Solutions insured for move-out cleaning in Naperville, IL?",
     answer:
-      "Yes — DSM Cleaning Solutions is fully insured and bonded throughout Illinois, including Naperville. Every move-out cleaning job is covered so you and your landlord can proceed with confidence.",
+      "Yes Ã¢â‚¬â€ DSM Cleaning Solutions is fully insured and bonded throughout Illinois, including Naperville. Every move-out cleaning job is covered so you and your landlord can proceed with confidence.",
   },
 ];
 
@@ -60,7 +64,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Professional move-out cleaning in Naperville, IL. DSM Cleaning Solutions helps renters, landlords & home sellers. Free estimate — (815) 246-2113.",
+    "Professional move-out cleaning in Naperville, IL. DSM Cleaning Solutions helps renters, landlords & home sellers. Free estimate Ã¢â‚¬â€ (815) 246-2113.",
 };
 
 const faqSchema = {
@@ -126,12 +130,12 @@ const checklist = [
 ];
 
 const trustCards = [
-  { icon: "💰", title: "Deposit-Back Focused", desc: "Built to meet Naperville landlord inspection standards." },
-  { icon: "🛡️", title: "Fully Insured & Bonded", desc: "Background-checked team. Every job fully protected." },
-  { icon: "✅", title: "48-Hour Guarantee", desc: "We re-clean at no charge if the landlord isn&apos;t satisfied." },
-  { icon: "👨‍👩‍👧", title: "Family Owned", desc: "Local southwest suburbs business, not a national chain." },
-  { icon: "📅", title: "Flexible Scheduling", desc: "We work around your Naperville move-out timeline." },
-  { icon: "📍", title: "Serving Naperville", desc: "All four zip codes — 60540, 60563, 60564 & 60565." },
+  { icon: "Ã°Å¸â€™Â°", title: "Deposit-Back Focused", desc: "Built to meet Naperville landlord inspection standards." },
+  { icon: "Ã°Å¸â€ºÂ¡Ã¯Â¸Â", title: "Fully Insured & Bonded", desc: "Background-checked team. Every job fully protected." },
+  { icon: "Ã¢Å“â€¦", title: "48-Hour Guarantee", desc: "We re-clean at no charge if the landlord isn&apos;t satisfied." },
+  { icon: "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§", title: "Family Owned", desc: "Local southwest suburbs business, not a national chain." },
+  { icon: "Ã°Å¸â€œâ€¦", title: "Flexible Scheduling", desc: "We work around your Naperville move-out timeline." },
+  { icon: "Ã°Å¸â€œÂ", title: "Serving Naperville", desc: "All four zip codes Ã¢â‚¬â€ 60540, 60563, 60564 & 60565." },
 ];
 
 export default function MoveOutCleaningNapervillePage() {
@@ -163,12 +167,12 @@ export default function MoveOutCleaningNapervillePage() {
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               DSM Cleaning Solutions delivers professional move-out and move-in cleaning throughout
               Naperville. Whether you&apos;re a renter trying to secure your deposit, a landlord turning
-              over a unit, or a home seller preparing to list — we cover all four Naperville zip codes
+              over a unit, or a home seller preparing to list Ã¢â‚¬â€ we cover all four Naperville zip codes
               with a thorough, landlord-approved clean.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
-              <a href="tel:+18152462113" className="btn-outline-white btn-lg">📞 (815) 246-2113</a>
+              <a href="tel:+18152462113" className="btn-outline-white btn-lg">Ã°Å¸â€œÅ¾ (815) 246-2113</a>
             </div>
           </div>
         </div>
@@ -178,7 +182,7 @@ export default function MoveOutCleaningNapervillePage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["✅ Fully Insured & Bonded", "🌿 Eco-Friendly Products", "👨‍👩‍👧 Family Owned", "⭐ 5-Star Rated", "✔️ Satisfaction Guaranteed"].map(
+            {["Ã¢Å“â€¦ Fully Insured & Bonded", "Ã°Å¸Å’Â¿ Eco-Friendly Products", "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§ Family Owned", "Ã¢Â­Â 5-Star Rated", "Ã¢Å“â€Ã¯Â¸Â Satisfaction Guaranteed"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -191,21 +195,21 @@ export default function MoveOutCleaningNapervillePage() {
           <h2 className="section-heading mb-6">Professional Move-Out Cleaning Services in Naperville, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Professional move-out cleaning in Naperville, IL demands a level of thoroughness that goes
-            well beyond a regular cleaning visit — and DSM Cleaning Solutions is built exactly for this.
+            well beyond a regular cleaning visit Ã¢â‚¬â€ and DSM Cleaning Solutions is built exactly for this.
             We serve Naperville renters and landlords across all four zip codes (60540, 60563, 60564, and
             60565), covering neighborhoods from Cress Creek to White Eagle with a comprehensive move-out
             clean that&apos;s designed to satisfy even the most detail-oriented property manager.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Naperville renters move through some of the most competitive rental markets in the Chicago
-            suburbs, and your deposit matters. Our move-out cleaning team doesn&apos;t just wipe surfaces —
+            suburbs, and your deposit matters. Our move-out cleaning team doesn&apos;t just wipe surfaces Ã¢â‚¬â€
             we clean inside the oven, inside the refrigerator, inside every cabinet and closet, and along
             every baseboard and window track. We follow the same comprehensive checklist on every
             Naperville move-out job, ensuring nothing is missed.
           </p>
           <p className="text-gray-600 leading-relaxed">
             We also serve Naperville home sellers, real estate agents, and landlords who want a property
-            looking its absolute best. Our move-out cleaning is eco-friendly and uses non-toxic products —
+            looking its absolute best. Our move-out cleaning is eco-friendly and uses non-toxic products Ã¢â‚¬â€
             safe for the incoming tenant and the environment. Every job is backed by our 48-hour
             satisfaction guarantee.
           </p>
@@ -218,7 +222,7 @@ export default function MoveOutCleaningNapervillePage() {
           <div className="text-center mb-12">
             <h2 className="section-heading">What&apos;s Included in Our Move-Out Cleaning in Naperville, IL</h2>
             <p className="section-subheading mx-auto">
-              Every corner of your Naperville property — cleaned to landlord-inspection standards.
+              Every corner of your Naperville property Ã¢â‚¬â€ cleaned to landlord-inspection standards.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -266,12 +270,12 @@ export default function MoveOutCleaningNapervillePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading mb-6">How Much Does Move-Out Cleaning Cost in Naperville, IL?</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Move-out cleaning in Naperville starts around $150–$250 and varies based on the size of
+            Move-out cleaning in Naperville starts around $150Ã¢â‚¬â€œ$250 and varies based on the size of
             the property, the number of bathrooms, and overall condition. Larger homes in Ashbury or
-            White Eagle with four or more bedrooms typically fall in the $300–$450 range.
+            White Eagle with four or more bedrooms typically fall in the $300Ã¢â‚¬â€œ$450 range.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
-            We recommend contacting us at least 3–5 days before your move-out date to lock in your
+            We recommend contacting us at least 3Ã¢â‚¬â€œ5 days before your move-out date to lock in your
             preferred time slot. For urgent requests, call us directly at (815) 246-2113 and we&apos;ll
             do our best to accommodate your Naperville move-out timeline. All estimates are free and
             no-obligation.
@@ -337,9 +341,9 @@ export default function MoveOutCleaningNapervillePage() {
                 at no charge.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                📞 (815) 246-2113
+                Ã°Å¸â€œÅ¾ (815) 246-2113
               </a>
-              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Deposit-back focused</p>
+              <p className="text-white/80">Family-owned Ã‚Â· Eco-friendly Ã‚Â· Fully insured Ã‚Â· Deposit-back focused</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <BookingForm />

@@ -14,6 +14,10 @@ export const metadata: Metadata = {
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning/hinsdale",
     siteName: "DSM Cleaning Solutions",
   },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/hero-image.png"],
+  },
 };
 
 const serviceSchema = {
@@ -45,7 +49,7 @@ const faqSchema = {
       name: "How much does deep cleaning cost in Hinsdale, IL?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Deep cleaning in Hinsdale starts around $225 after seasonal discounts. Hinsdale's mix of large historic homes and newer construction typically places most deep cleans in the $300–$500 range, depending on size and condition. We provide a free, no-obligation estimate before every job.",
+        text: "Deep cleaning in Hinsdale starts around $225 after seasonal discounts. Hinsdale's mix of large historic homes and newer construction typically places most deep cleans in the $300Ã¢â‚¬â€œ$500 range, depending on size and condition. We provide a free, no-obligation estimate before every job.",
       },
     },
     {
@@ -53,7 +57,7 @@ const faqSchema = {
       name: "Do you serve all of Hinsdale, IL?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes — we serve all of Hinsdale across both zip codes (60521 and 60522), from downtown Hinsdale and the Hinsdale Central area to residential neighborhoods throughout the village. We also serve nearby Burr Ridge, Oak Brook, and Western Springs.",
+        text: "Yes Ã¢â‚¬â€ we serve all of Hinsdale across both zip codes (60521 and 60522), from downtown Hinsdale and the Hinsdale Central area to residential neighborhoods throughout the village. We also serve nearby Burr Ridge, Oak Brook, and Western Springs.",
       },
     },
     {
@@ -61,7 +65,7 @@ const faqSchema = {
       name: "How long does a deep cleaning take in Hinsdale?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A typical deep cleaning in Hinsdale takes 3–6 hours. Larger historic homes or newer construction with more square footage may take 5–7 hours. We work at the pace needed to do the job right — not to meet a time limit.",
+        text: "A typical deep cleaning in Hinsdale takes 3Ã¢â‚¬â€œ6 hours. Larger historic homes or newer construction with more square footage may take 5Ã¢â‚¬â€œ7 hours. We work at the pace needed to do the job right Ã¢â‚¬â€ not to meet a time limit.",
       },
     },
   ],
@@ -80,32 +84,28 @@ const breadcrumbSchema = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": "https://www.dsmcleaningsolutions.com/#business",
   name: "DSM Cleaning Solutions",
   telephone: "(815) 246-2113",
   url: "https://www.dsmcleaningsolutions.com",
   areaServed: "Hinsdale",
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5.0",
-    reviewCount: "47",
-  },
 };
 
 const faqs = [
   {
     question: "How much does deep cleaning cost in Hinsdale, IL?",
     answer:
-      "Deep cleaning in Hinsdale starts around $225 after seasonal discounts. Hinsdale's mix of large historic homes and newer construction typically places most deep cleans in the $300–$500 range, depending on size and condition. We provide a free, no-obligation estimate before every job.",
+      "Deep cleaning in Hinsdale starts around $225 after seasonal discounts. Hinsdale's mix of large historic homes and newer construction typically places most deep cleans in the $300Ã¢â‚¬â€œ$500 range, depending on size and condition. We provide a free, no-obligation estimate before every job.",
   },
   {
     question: "Do you serve all of Hinsdale, IL?",
     answer:
-      "Yes — we serve all of Hinsdale across both zip codes (60521 and 60522), from downtown Hinsdale and the Hinsdale Central area to residential neighborhoods throughout the village. We also serve nearby Burr Ridge, Oak Brook, and Western Springs.",
+      "Yes Ã¢â‚¬â€ we serve all of Hinsdale across both zip codes (60521 and 60522), from downtown Hinsdale and the Hinsdale Central area to residential neighborhoods throughout the village. We also serve nearby Burr Ridge, Oak Brook, and Western Springs.",
   },
   {
     question: "How long does a deep cleaning take in Hinsdale?",
     answer:
-      "A typical deep cleaning in Hinsdale takes 3–6 hours. Larger historic homes or newer construction with more square footage may take 5–7 hours. We work at the pace needed to do the job right — not to meet a time limit.",
+      "A typical deep cleaning in Hinsdale takes 3Ã¢â‚¬â€œ6 hours. Larger historic homes or newer construction with more square footage may take 5Ã¢â‚¬â€œ7 hours. We work at the pace needed to do the job right Ã¢â‚¬â€ not to meet a time limit.",
   },
 ];
 
@@ -159,12 +159,12 @@ const checklist = [
 ];
 
 const trustCards = [
-  { icon: "🌿", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products — safe for Hinsdale families and pets." },
-  { icon: "🛡️", title: "Fully Insured & Bonded", desc: "Background-checked team. Your Hinsdale home is fully covered." },
-  { icon: "✅", title: "48-Hour Guarantee", desc: "Not satisfied? We re-clean at no charge within 48 hours." },
-  { icon: "👨‍👩‍👧", title: "Family Owned", desc: "Local southwest suburbs business, not a national franchise." },
-  { icon: "📅", title: "7 Days a Week", desc: "Flexible scheduling around your busy Hinsdale schedule." },
-  { icon: "📍", title: "Serving Hinsdale", desc: "All of Hinsdale — zip codes 60521 & 60522." },
+  { icon: "Ã°Å¸Å’Â¿", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products Ã¢â‚¬â€ safe for Hinsdale families and pets." },
+  { icon: "Ã°Å¸â€ºÂ¡Ã¯Â¸Â", title: "Fully Insured & Bonded", desc: "Background-checked team. Your Hinsdale home is fully covered." },
+  { icon: "Ã¢Å“â€¦", title: "48-Hour Guarantee", desc: "Not satisfied? We re-clean at no charge within 48 hours." },
+  { icon: "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§", title: "Family Owned", desc: "Local southwest suburbs business, not a national franchise." },
+  { icon: "Ã°Å¸â€œâ€¦", title: "7 Days a Week", desc: "Flexible scheduling around your busy Hinsdale schedule." },
+  { icon: "Ã°Å¸â€œÂ", title: "Serving Hinsdale", desc: "All of Hinsdale Ã¢â‚¬â€ zip codes 60521 & 60522." },
 ];
 
 export default function DeepCleaningHinsdalePage() {
@@ -203,7 +203,7 @@ export default function DeepCleaningHinsdalePage() {
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               DSM Cleaning Solutions delivers white-glove deep cleaning to Hinsdale&apos;s historic and luxury
-              homes — meticulous, eco-friendly, and backed by our 48-hour satisfaction guarantee.
+              homes Ã¢â‚¬â€ meticulous, eco-friendly, and backed by our 48-hour satisfaction guarantee.
               Serving all of Hinsdale across zip codes 60521 and 60522.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -211,7 +211,7 @@ export default function DeepCleaningHinsdalePage() {
                 Get a Free Quote
               </Link>
               <a href="tel:+18152462113" className="inline-block bg-transparent text-white font-bold py-4 px-8 rounded-lg border-2 border-white hover:bg-white/10 transition-colors text-lg text-center">
-                📞 (815) 246-2113
+                Ã°Å¸â€œÅ¾ (815) 246-2113
               </a>
             </div>
           </div>
@@ -222,7 +222,7 @@ export default function DeepCleaningHinsdalePage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["✅ Fully Insured & Bonded", "🌿 Eco-Friendly Products", "👨‍👩‍👧 Family Owned", "⭐ 5-Star Rated · 47 Reviews", "✔️ 48-Hour Satisfaction Guarantee"].map(
+            {["Ã¢Å“â€¦ Fully Insured & Bonded", "Ã°Å¸Å’Â¿ Eco-Friendly Products", "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§ Family Owned", "Ã¢Â­Â 5-Star Rated Ã‚Â· 47 Reviews", "Ã¢Å“â€Ã¯Â¸Â 48-Hour Satisfaction Guarantee"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -235,18 +235,18 @@ export default function DeepCleaningHinsdalePage() {
           <h2 className="section-heading mb-6">Professional Deep Cleaning Services in Hinsdale, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Deep cleaning in Hinsdale, IL calls for a team that genuinely understands what white-glove
-            service means — and DSM Cleaning Solutions has built its reputation on exactly that. We serve
+            service means Ã¢â‚¬â€ and DSM Cleaning Solutions has built its reputation on exactly that. We serve
             all of Hinsdale across zip codes 60521 and 60522, from the charming streets near downtown
             Hinsdale and the Metra BNSF corridor to every residential neighborhood in the village.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Hinsdale&apos;s character is defined by its housing stock — century-old homes with original woodwork
+            Hinsdale&apos;s character is defined by its housing stock Ã¢â‚¬â€ century-old homes with original woodwork
             and plaster, alongside newly constructed properties with open-plan kitchens and spa-style baths.
             Our team is experienced with both. We adapt our approach to each home, protecting historic
             finishes while still delivering a deep, thorough clean.
           </p>
           <p className="text-gray-600 leading-relaxed">
-            We use professional-grade, eco-friendly cleaning products throughout — no harsh chemicals
+            We use professional-grade, eco-friendly cleaning products throughout Ã¢â‚¬â€ no harsh chemicals
             that linger after we leave. As a family-owned business based in the southwest suburbs, we
             treat every Hinsdale home with the respect and personal attention it deserves.
           </p>
@@ -308,13 +308,13 @@ export default function DeepCleaningHinsdalePage() {
           <h2 className="section-heading mb-6">How Much Does Deep Cleaning Cost in Hinsdale, IL?</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Deep cleaning in Hinsdale starts around $225 after seasonal discounts. The village&apos;s variety
-            of home types — from compact historic cottages to sprawling newer construction — means pricing
-            varies. Most Hinsdale deep cleans fall in the $300–$500 range depending on square footage,
+            of home types Ã¢â‚¬â€ from compact historic cottages to sprawling newer construction Ã¢â‚¬â€ means pricing
+            varies. Most Hinsdale deep cleans fall in the $300Ã¢â‚¬â€œ$500 range depending on square footage,
             number of bathrooms, and the home&apos;s current condition.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
             We provide every Hinsdale client with a free, no-obligation estimate before we start. You&apos;ll
-            know exactly what to expect — no hidden fees, no surprises.
+            know exactly what to expect Ã¢â‚¬â€ no hidden fees, no surprises.
           </p>
           <Link href="/contact" className="btn-primary">Get My Free Hinsdale Quote</Link>
         </div>
@@ -385,12 +385,12 @@ export default function DeepCleaningHinsdalePage() {
               <h2 className="text-4xl font-bold mb-4">Book Your Deep Cleaning in Hinsdale Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Get a free quote for deep cleaning in Hinsdale, IL. We serve both zip codes and every
-                neighborhood — and we back every job with our 48-hour satisfaction guarantee.
+                neighborhood Ã¢â‚¬â€ and we back every job with our 48-hour satisfaction guarantee.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                📞 (815) 246-2113
+                Ã°Å¸â€œÅ¾ (815) 246-2113
               </a>
-              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
+              <p className="text-white/80">Family-owned Ã‚Â· Eco-friendly Ã‚Â· Fully insured Ã‚Â· Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <BookingForm />

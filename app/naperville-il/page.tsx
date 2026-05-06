@@ -24,6 +24,10 @@ export const metadata: Metadata = {
     url: "https://www.dsmcleaningsolutions.com/naperville-il",
     siteName: "DSM Cleaning Solutions",
   },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/hero-image.png"],
+  },
 };
 
 export default function NapervillePage() {
@@ -38,7 +42,7 @@ export default function NapervillePage() {
             <div>
               <h2 className="section-heading text-3xl md:text-4xl mb-4">Naperville Neighborhoods We Serve</h2>
               <p className="text-gray-500 mb-5 leading-relaxed">
-                Based in the southwest Chicago suburbs, DSM Cleaning Solutions knows every corner of Naperville. We clean homes throughout every neighborhood — from the newest developments to established subdivisions we&apos;ve served for years.
+                Based in the southwest Chicago suburbs, DSM Cleaning Solutions knows every corner of Naperville. We clean homes throughout every neighborhood Ã¢â‚¬â€ from the newest developments to established subdivisions we&apos;ve served for years.
               </p>
               <div className="grid grid-cols-2 gap-2 mb-5">
                 {["Cress Creek", "Hobson West", "Ashbury", "White Eagle", "Knoch Knolls", "Tall Grass", "Naper Commons"].map((n) => (
@@ -61,7 +65,7 @@ export default function NapervillePage() {
               <div className="space-y-2">
                 {["Riverwalk", "Centennial Beach", "Downtown Naperville", "Naper Settlement", "Naperville Crossing"].map((l) => (
                   <div key={l} className="flex items-center gap-3 bg-gray-50 rounded-xl p-3 border border-gray-100">
-                    <span className="text-xl">📍</span>
+                    <span className="text-xl">Ã°Å¸â€œÂ</span>
                     <span className="text-gray-700 font-medium text-sm">{l}</span>
                   </div>
                 ))}

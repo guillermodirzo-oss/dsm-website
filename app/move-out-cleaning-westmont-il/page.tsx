@@ -13,33 +13,37 @@ export const metadata: Metadata = {
       "Move-out cleaning in Westmont IL by DSM Cleaning Solutions. Get your deposit back. Call (815) 246-2113.",
     url: "https://www.dsmcleaningsolutions.com/move-out-cleaning-westmont-il",
   },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/hero-image.png"],
+  },
 };
 
 const faqs = [
   {
     question: "Can you help me get my security deposit back in Westmont, IL?",
     answer:
-      "Yes — our Westmont move-out cleaning is specifically designed to meet landlord and property manager inspection standards. We clean every surface, inside every appliance, and inside every cabinet so your Westmont property looks move-in ready and gives you the best possible chance of getting your full security deposit back.",
+      "Yes Ã¢â‚¬â€ our Westmont move-out cleaning is specifically designed to meet landlord and property manager inspection standards. We clean every surface, inside every appliance, and inside every cabinet so your Westmont property looks move-in ready and gives you the best possible chance of getting your full security deposit back.",
   },
   {
     question: "How far in advance should I book move-out cleaning in Westmont?",
     answer:
-      "We recommend booking at least 3–5 days before your move-out date to secure your preferred time slot in Westmont. That said, we do our best to accommodate last-minute requests — give us a call at (815) 246-2113 and we'll see what we can do.",
+      "We recommend booking at least 3Ã¢â‚¬â€œ5 days before your move-out date to secure your preferred time slot in Westmont. That said, we do our best to accommodate last-minute requests Ã¢â‚¬â€ give us a call at (815) 246-2113 and we'll see what we can do.",
   },
   {
     question: "Do you clean inside appliances during Westmont move-out cleans?",
     answer:
-      "Yes — appliances are a central part of our move-out cleaning checklist. We clean inside and outside the oven, inside and outside the refrigerator (including all drawers and shelves), inside the microwave, and the dishwasher interior. These are the areas Westmont landlords and property managers inspect most closely.",
+      "Yes Ã¢â‚¬â€ appliances are a central part of our move-out cleaning checklist. We clean inside and outside the oven, inside and outside the refrigerator (including all drawers and shelves), inside the microwave, and the dishwasher interior. These are the areas Westmont landlords and property managers inspect most closely.",
   },
   {
     question: "How long does a Westmont move-out clean take?",
     answer:
-      "A move-out clean in Westmont typically takes 4–6 hours for an average-sized home in zip code 60559. Larger homes or properties that haven't been professionally cleaned recently may take longer. We'll give you an accurate time estimate when you contact us.",
+      "A move-out clean in Westmont typically takes 4Ã¢â‚¬â€œ6 hours for an average-sized home in zip code 60559. Larger homes or properties that haven't been professionally cleaned recently may take longer. We'll give you an accurate time estimate when you contact us.",
   },
   {
     question: "Do you serve all of Westmont, IL 60559?",
     answer:
-      "Yes — we serve all of Westmont, including zip code 60559 and all neighborhoods: Westmont Downtown, Oakwood Estates, the Waterfall Glen area, the Cass Avenue Corridor, and the Williams Street District. We serve Westmont regularly as part of our DuPage and Will County route.",
+      "Yes Ã¢â‚¬â€ we serve all of Westmont, including zip code 60559 and all neighborhoods: Westmont Downtown, Oakwood Estates, the Waterfall Glen area, the Cass Avenue Corridor, and the Williams Street District. We serve Westmont regularly as part of our DuPage and Will County route.",
   },
 ];
 
@@ -126,12 +130,12 @@ const checklist = [
 ];
 
 const trustCards = [
-  { icon: "💰", title: "Deposit-Back Focused", desc: "Designed to meet landlord inspection standards in Westmont, IL." },
-  { icon: "🛡️", title: "Fully Insured & Bonded", desc: "Background-checked team. Every Westmont job fully covered." },
-  { icon: "✅", title: "48-Hour Guarantee", desc: "If your landlord isn't satisfied, we re-clean at no charge." },
-  { icon: "👨‍👩‍👧", title: "Family Owned", desc: "Based in the southwest Chicago suburbs — your local neighbors." },
-  { icon: "📅", title: "Flexible Scheduling", desc: "Book around your move-out timeline in Westmont." },
-  { icon: "📍", title: "Serving Westmont", desc: "All neighborhoods in zip code 60559." },
+  { icon: "Ã°Å¸â€™Â°", title: "Deposit-Back Focused", desc: "Designed to meet landlord inspection standards in Westmont, IL." },
+  { icon: "Ã°Å¸â€ºÂ¡Ã¯Â¸Â", title: "Fully Insured & Bonded", desc: "Background-checked team. Every Westmont job fully covered." },
+  { icon: "Ã¢Å“â€¦", title: "48-Hour Guarantee", desc: "If your landlord isn't satisfied, we re-clean at no charge." },
+  { icon: "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§", title: "Family Owned", desc: "Based in the southwest Chicago suburbs Ã¢â‚¬â€ your local neighbors." },
+  { icon: "Ã°Å¸â€œâ€¦", title: "Flexible Scheduling", desc: "Book around your move-out timeline in Westmont." },
+  { icon: "Ã°Å¸â€œÂ", title: "Serving Westmont", desc: "All neighborhoods in zip code 60559." },
 ];
 
 export default function MoveOutCleaningWestmontPage() {
@@ -162,13 +166,13 @@ export default function MoveOutCleaningWestmontPage() {
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               Moving out of your Westmont home or rental? DSM Cleaning Solutions delivers a thorough,
-              landlord-inspection-ready clean throughout Westmont — including Westmont Downtown, Oakwood
+              landlord-inspection-ready clean throughout Westmont Ã¢â‚¬â€ including Westmont Downtown, Oakwood
               Estates, the Cass Avenue Corridor, and the Williams Street District. Get your full
               deposit back.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
-              <a href="tel:+18152462113" className="btn-outline-white btn-lg">📞 (815) 246-2113</a>
+              <a href="tel:+18152462113" className="btn-outline-white btn-lg">Ã°Å¸â€œÅ¾ (815) 246-2113</a>
             </div>
           </div>
         </div>
@@ -178,7 +182,7 @@ export default function MoveOutCleaningWestmontPage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["✅ Fully Insured & Bonded", "🌿 Eco-Friendly Products", "👨‍👩‍👧 Family Owned", "⭐ 5-Star Rated", "✔️ Satisfaction Guaranteed"].map(
+            {["Ã¢Å“â€¦ Fully Insured & Bonded", "Ã°Å¸Å’Â¿ Eco-Friendly Products", "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§ Family Owned", "Ã¢Â­Â 5-Star Rated", "Ã¢Å“â€Ã¯Â¸Â Satisfaction Guaranteed"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -192,7 +196,7 @@ export default function MoveOutCleaningWestmontPage() {
           <p className="text-gray-600 mb-4 leading-relaxed">
             <strong>Move-out cleaning in Westmont, IL</strong> is about one thing: getting your security deposit back.
             Landlords and property managers throughout Westmont (zip code 60559) conduct thorough
-            move-out inspections — and with established homes along the Cass Avenue Corridor and
+            move-out inspections Ã¢â‚¬â€ and with established homes along the Cass Avenue Corridor and
             in Oakwood Estates, the focus is always on the same high-risk areas: oven interior,
             refrigerator drawers, bathroom grout, cabinet interiors, and ceiling fans. Our move-out
             cleaning service covers every one of them.
@@ -201,11 +205,11 @@ export default function MoveOutCleaningWestmontPage() {
             We&apos;re a family-owned cleaning company from the southwest Chicago suburbs, and we&apos;ve
             helped renters across Westmont Downtown, Oakwood Estates, and the Williams Street
             District pass their move-out inspections and recover their full deposits. Our team
-            follows a detailed, landlord-focused checklist that covers every room — not just the
+            follows a detailed, landlord-focused checklist that covers every room Ã¢â‚¬â€ not just the
             surfaces your landlord can see from the doorway.
           </p>
           <p className="text-gray-600 leading-relaxed">
-            Every job is backed by our 48-hour satisfaction guarantee — if your landlord flags
+            Every job is backed by our 48-hour satisfaction guarantee Ã¢â‚¬â€ if your landlord flags
             anything within 48 hours, we come back and make it right at no charge. We serve
             Westmont alongside nearby{" "}
             <Link href="/move-out-cleaning-bolingbrook-il" className="text-brand-green font-semibold hover:underline">Bolingbrook</Link> and{" "}
@@ -272,12 +276,12 @@ export default function MoveOutCleaningWestmontPage() {
           <p className="text-gray-600 mb-4 leading-relaxed">
             Move-out cleaning in Westmont typically ranges from $150 to $300 for most homes and
             apartments in zip code 60559, depending on the size and condition of the property.
-            A 2-bedroom apartment in Westmont Downtown might run $150–$200, while a larger
-            single-family home in Oakwood Estates could run $250–$325.
+            A 2-bedroom apartment in Westmont Downtown might run $150Ã¢â‚¬â€œ$200, while a larger
+            single-family home in Oakwood Estates could run $250Ã¢â‚¬â€œ$325.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
             Every estimate is free and no-obligation. We&apos;ll give you an honest quote upfront
-            based on your home&apos;s specific details — and you&apos;ll know exactly what you&apos;re getting
+            based on your home&apos;s specific details Ã¢â‚¬â€ and you&apos;ll know exactly what you&apos;re getting
             before we start.
           </p>
           <Link href="/contact" className="btn-primary">Get My Free Westmont Quote</Link>
@@ -341,13 +345,13 @@ export default function MoveOutCleaningWestmontPage() {
               <h2 className="text-4xl font-bold mb-4">Get Your Free Westmont Move-Out Quote</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Don&apos;t leave your deposit on the table. Get your free move-out cleaning quote for
-                Westmont, IL — we respond within 1 business day and back every job with our
+                Westmont, IL Ã¢â‚¬â€ we respond within 1 business day and back every job with our
                 48-hour satisfaction guarantee.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                📞 (815) 246-2113
+                Ã°Å¸â€œÅ¾ (815) 246-2113
               </a>
-              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
+              <p className="text-white/80">Family-owned Ã‚Â· Eco-friendly Ã‚Â· Fully insured Ã‚Â· Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <BookingForm />

@@ -8,6 +8,16 @@ export const metadata: Metadata = {
     index: false,
     follow: false,
   },
+  openGraph: {
+    title: "You're All Booked! | DSM Cleaning Solutions",
+    description: "Your booking is confirmed. DSM Cleaning Solutions will be in touch shortly.",
+    siteName: "DSM Cleaning Solutions",
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions Ã¢â‚¬â€ Booking Confirmed" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/hero-image.png"],
+  },
 };
 
 export default function ThankYouPage() {

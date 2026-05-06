@@ -13,33 +13,37 @@ export const metadata: Metadata = {
       "Move-out cleaning in Minooka IL by DSM Cleaning Solutions. Get your deposit back. Call (815) 246-2113.",
     url: "https://www.dsmcleaningsolutions.com/move-out-cleaning-minooka-il",
   },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/hero-image.png"],
+  },
 };
 
 const faqs = [
   {
     question: "Can you help me get my security deposit back when moving out in Minooka, IL?",
     answer:
-      "Yes — our Minooka move-out cleaning is specifically designed to meet landlord and property manager inspection standards. Whether you&apos;re leaving a new construction home in Heritage Fields or an established rental in Old Town Minooka, we clean every surface, inside every appliance, and inside every cabinet so your property looks move-in ready and gives you the best possible chance of recovering your full security deposit.",
+      "Yes Ã¢â‚¬â€ our Minooka move-out cleaning is specifically designed to meet landlord and property manager inspection standards. Whether you&apos;re leaving a new construction home in Heritage Fields or an established rental in Old Town Minooka, we clean every surface, inside every appliance, and inside every cabinet so your property looks move-in ready and gives you the best possible chance of recovering your full security deposit.",
   },
   {
     question: "How far in advance should I book move-out cleaning in Minooka?",
     answer:
-      "We recommend booking at least 3–5 days before your move-out date to secure your preferred slot in Minooka. Minooka is a fast-growing community with strong move-in/move-out demand, so availability can fill quickly. That said, we do our best to accommodate last-minute requests — call us at (815) 246-2113 and we&apos;ll see what we can do.",
+      "We recommend booking at least 3Ã¢â‚¬â€œ5 days before your move-out date to secure your preferred slot in Minooka. Minooka is a fast-growing community with strong move-in/move-out demand, so availability can fill quickly. That said, we do our best to accommodate last-minute requests Ã¢â‚¬â€ call us at (815) 246-2113 and we&apos;ll see what we can do.",
   },
   {
     question: "Do you clean inside appliances during Minooka move-out cleans?",
     answer:
-      "Yes — appliances are a central part of our move-out cleaning checklist. We clean inside and outside the oven, inside and outside the refrigerator (including all drawers and shelves), inside the microwave, and the dishwasher interior. These are the areas Minooka landlords and property managers inspect most closely, especially in newer construction homes along the Route 6 Corridor and in Fox Run.",
+      "Yes Ã¢â‚¬â€ appliances are a central part of our move-out cleaning checklist. We clean inside and outside the oven, inside and outside the refrigerator (including all drawers and shelves), inside the microwave, and the dishwasher interior. These are the areas Minooka landlords and property managers inspect most closely, especially in newer construction homes along the Route 6 Corridor and in Fox Run.",
   },
   {
     question: "How long does a Minooka move-out clean take?",
     answer:
-      "A move-out clean in Minooka typically takes 4–6 hours for an average-sized home in zip code 60447. Larger new construction homes — common in Heritage Fields and Fox Run — may take 5–7 hours. We&apos;ll give you an accurate time estimate when you contact us.",
+      "A move-out clean in Minooka typically takes 4Ã¢â‚¬â€œ6 hours for an average-sized home in zip code 60447. Larger new construction homes Ã¢â‚¬â€ common in Heritage Fields and Fox Run Ã¢â‚¬â€ may take 5Ã¢â‚¬â€œ7 hours. We&apos;ll give you an accurate time estimate when you contact us.",
   },
   {
     question: "Do you serve all of Minooka, IL 60447?",
     answer:
-      "Yes — we serve all of Minooka, including zip code 60447 and all neighborhoods: Minooka Acres, Heritage Fields, Fox Run, Aux Sable Creek Estates, and Old Town Minooka. We serve Minooka regularly as part of our Grundy and Will County route.",
+      "Yes Ã¢â‚¬â€ we serve all of Minooka, including zip code 60447 and all neighborhoods: Minooka Acres, Heritage Fields, Fox Run, Aux Sable Creek Estates, and Old Town Minooka. We serve Minooka regularly as part of our Grundy and Will County route.",
   },
 ];
 
@@ -126,12 +130,12 @@ const checklist = [
 ];
 
 const trustCards = [
-  { icon: "💰", title: "Deposit-Back Focused", desc: "Designed to meet landlord inspection standards in Minooka, IL." },
-  { icon: "🛡️", title: "Fully Insured & Bonded", desc: "Background-checked team. Every Minooka job fully covered." },
-  { icon: "✅", title: "48-Hour Guarantee", desc: "If your landlord isn't satisfied, we re-clean at no charge." },
-  { icon: "👨‍👩‍👧", title: "Family Owned", desc: "Based in the southwest Chicago suburbs — your local neighbors." },
-  { icon: "📅", title: "Flexible Scheduling", desc: "Book around your move-out timeline in Minooka." },
-  { icon: "📍", title: "Serving Minooka", desc: "All neighborhoods in zip code 60447." },
+  { icon: "Ã°Å¸â€™Â°", title: "Deposit-Back Focused", desc: "Designed to meet landlord inspection standards in Minooka, IL." },
+  { icon: "Ã°Å¸â€ºÂ¡Ã¯Â¸Â", title: "Fully Insured & Bonded", desc: "Background-checked team. Every Minooka job fully covered." },
+  { icon: "Ã¢Å“â€¦", title: "48-Hour Guarantee", desc: "If your landlord isn't satisfied, we re-clean at no charge." },
+  { icon: "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§", title: "Family Owned", desc: "Based in the southwest Chicago suburbs Ã¢â‚¬â€ your local neighbors." },
+  { icon: "Ã°Å¸â€œâ€¦", title: "Flexible Scheduling", desc: "Book around your move-out timeline in Minooka." },
+  { icon: "Ã°Å¸â€œÂ", title: "Serving Minooka", desc: "All neighborhoods in zip code 60447." },
 ];
 
 export default function MoveOutCleaningMinookaPage() {
@@ -162,12 +166,12 @@ export default function MoveOutCleaningMinookaPage() {
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               Moving out of your Minooka home or rental? DSM Cleaning Solutions delivers a thorough,
-              landlord-inspection-ready clean throughout Minooka — including Heritage Fields, Fox Run,
+              landlord-inspection-ready clean throughout Minooka Ã¢â‚¬â€ including Heritage Fields, Fox Run,
               Aux Sable Creek Estates, and Old Town Minooka. Get your full deposit back.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
-              <a href="tel:+18152462113" className="btn-outline-white btn-lg">📞 (815) 246-2113</a>
+              <a href="tel:+18152462113" className="btn-outline-white btn-lg">Ã°Å¸â€œÅ¾ (815) 246-2113</a>
             </div>
           </div>
         </div>
@@ -177,7 +181,7 @@ export default function MoveOutCleaningMinookaPage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["✅ Fully Insured & Bonded", "🌿 Eco-Friendly Products", "👨‍👩‍👧 Family Owned", "⭐ 5-Star Rated", "✔️ Satisfaction Guaranteed"].map(
+            {["Ã¢Å“â€¦ Fully Insured & Bonded", "Ã°Å¸Å’Â¿ Eco-Friendly Products", "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§ Family Owned", "Ã¢Â­Â 5-Star Rated", "Ã¢Å“â€Ã¯Â¸Â Satisfaction Guaranteed"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -191,7 +195,7 @@ export default function MoveOutCleaningMinookaPage() {
           <p className="text-gray-600 mb-4 leading-relaxed">
             <strong>Move-out cleaning in Minooka, IL</strong> is about one thing: getting your security deposit back.
             Landlords and property managers throughout Minooka (zip code 60447) conduct thorough
-            move-out inspections — and in this fast-growing community with a mix of new construction
+            move-out inspections Ã¢â‚¬â€ and in this fast-growing community with a mix of new construction
             and established homes, the focus is always on the same high-risk areas: oven interior,
             refrigerator drawers, bathroom grout, cabinet interiors, and ceiling fans. Our move-out
             cleaning service covers every one of them.
@@ -201,10 +205,10 @@ export default function MoveOutCleaningMinookaPage() {
             helped renters across Heritage Fields, Fox Run, Minooka Acres, and Old Town Minooka
             pass their move-out inspections and recover their full deposits. New construction homes
             near the Route 6 Corridor and Aux Sable Creek Estates often have builder-grade finishes
-            that need careful attention — we know exactly what to look for.
+            that need careful attention Ã¢â‚¬â€ we know exactly what to look for.
           </p>
           <p className="text-gray-600 leading-relaxed">
-            Every job is backed by our 48-hour satisfaction guarantee — if your landlord flags
+            Every job is backed by our 48-hour satisfaction guarantee Ã¢â‚¬â€ if your landlord flags
             anything within 48 hours, we come back and make it right at no charge. We serve
             Minooka alongside nearby{" "}
             <Link href="/move-out-cleaning-joliet-il" className="text-brand-green font-semibold hover:underline">Joliet</Link>,{" "}
@@ -272,12 +276,12 @@ export default function MoveOutCleaningMinookaPage() {
           <p className="text-gray-600 mb-4 leading-relaxed">
             Move-out cleaning in Minooka typically ranges from $150 to $325 for most homes in
             zip code 60447, depending on the size and condition of the property. A 2-bedroom
-            home in Minooka Acres might run $150–$220, while a larger new construction home
-            in Heritage Fields or Fox Run could run $250–$325.
+            home in Minooka Acres might run $150Ã¢â‚¬â€œ$220, while a larger new construction home
+            in Heritage Fields or Fox Run could run $250Ã¢â‚¬â€œ$325.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
             Every estimate is free and no-obligation. We&apos;ll give you an honest quote upfront
-            based on your home&apos;s specific details — and you&apos;ll know exactly what you&apos;re getting
+            based on your home&apos;s specific details Ã¢â‚¬â€ and you&apos;ll know exactly what you&apos;re getting
             before we start.
           </p>
           <Link href="/contact" className="btn-primary">Get My Free Minooka Quote</Link>
@@ -341,13 +345,13 @@ export default function MoveOutCleaningMinookaPage() {
               <h2 className="text-4xl font-bold mb-4">Get Your Free Minooka Move-Out Quote</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Don&apos;t leave your deposit on the table. Get your free move-out cleaning quote for
-                Minooka, IL — we respond within 1 business day and back every job with our
+                Minooka, IL Ã¢â‚¬â€ we respond within 1 business day and back every job with our
                 48-hour satisfaction guarantee.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                📞 (815) 246-2113
+                Ã°Å¸â€œÅ¾ (815) 246-2113
               </a>
-              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
+              <p className="text-white/80">Family-owned Ã‚Â· Eco-friendly Ã‚Â· Fully insured Ã‚Â· Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <BookingForm />

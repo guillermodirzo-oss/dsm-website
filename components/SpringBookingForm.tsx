@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
 export default function SpringBookingForm() {
@@ -9,6 +9,7 @@ export default function SpringBookingForm() {
   const baseUrl =
     "https://dsmcleaningsolutions.bookingkoala.com/leads/form/lead-form?embed=true";
   const [iframeSrc, setIframeSrc] = useState(baseUrl);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
 
   useEffect(() => {
     // UTM passthrough — append any UTM params from the landing page URL to the iframe src
@@ -28,14 +29,38 @@ export default function SpringBookingForm() {
       setIframeSrc(`${baseUrl}&${parts.join("&")}`);
     }
 
-    // Load iFrame resizer
+    // Load iFrame resizer script, then INITIALIZE it on our iframe.
+    // Previously the script was loaded but iFrameResize() was never called —
+    // the parent-side listener was never started so the contentWindow inside
+    // the BookingKoala form could not handshake, causing a blank form.
     const script = document.createElement("script");
     script.src =
       "https://dsmcleaningsolutions.bookingkoala.com/resources/iframeResizer.min.js";
-    script.defer = true;
+    script.async = true;
+    script.onload = () => {
+      if (
+        typeof (window as unknown as Record<string, unknown>).iFrameResize ===
+          "function" &&
+        iframeRef.current
+      ) {
+        (
+          window as unknown as {
+            iFrameResize: (opts: Record<string, unknown>, el: HTMLIFrameElement) => void;
+          }
+        ).iFrameResize(
+          {
+            log: false,
+            checkOrigin: false,
+            heightCalculationMethod: "bodyOffset",
+            scrolling: "omit",
+          },
+          iframeRef.current
+        );
+      }
+    };
     document.body.appendChild(script);
 
-    // Listen for BookingKoala form submission and fire Meta Lead event then redirect
+    // Listen for BookingKoala form submission → fire Meta Lead event then redirect
     const handleMessage = (event: MessageEvent) => {
       if (event.origin !== "https://dsmcleaningsolutions.bookingkoala.com") return;
       const data = event.data;
@@ -47,9 +72,14 @@ export default function SpringBookingForm() {
         data?.status === "success" ||
         data?.submitted === true
       ) {
-        // Fire Meta Pixel Lead event
-        if (typeof window !== "undefined" && (window as unknown as Record<string, unknown>).fbq) {
-          (window as unknown as { fbq: (...args: unknown[]) => void }).fbq("track", "Lead");
+        if (
+          typeof window !== "undefined" &&
+          (window as unknown as Record<string, unknown>).fbq
+        ) {
+          (window as unknown as { fbq: (...args: unknown[]) => void }).fbq(
+            "track",
+            "Lead"
+          );
         }
         router.push("/quote-thank-you");
       }
@@ -58,7 +88,10 @@ export default function SpringBookingForm() {
     window.addEventListener("message", handleMessage);
 
     return () => {
-      document.body.removeChild(script);
+      // Guard against the script not yet being appended (e.g. fast unmount)
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
       window.removeEventListener("message", handleMessage);
     };
   }, [router, searchParams]);
@@ -66,12 +99,13 @@ export default function SpringBookingForm() {
   return (
     <div className="w-full">
       <iframe
+        ref={iframeRef}
         id="iFrameResizer1"
         style={{ border: 0 }}
         src={iframeSrc}
-        height="1000px"
+        height="900"
         width="100%"
-        scrolling="yes"
+        scrolling="no"
         title="Get Your Spring Cleaning Quote — DSM Cleaning Solutions"
       />
     </div>

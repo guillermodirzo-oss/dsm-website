@@ -13,18 +13,22 @@ export const metadata: Metadata = {
       "Professional deep cleaning in Lemont IL by DSM Cleaning Solutions. Family owned, fully insured, 48-hr guarantee. Call (815) 246-2113.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning-lemont-il",
   },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/hero-image.png"],
+  },
 };
 
 const faqs = [
   {
     question: "Do you offer deep cleaning in Lemont, IL?",
     answer:
-      "Yes — DSM Cleaning Solutions provides professional deep cleaning throughout Lemont, IL (zip code 60439), including Historic Downtown Lemont, Centennial Crossing, Covington Knolls, Burning Tree Estates, and Heritage Lake. We're based in nearby Romeoville and serve all of Lemont regularly.",
+      "Yes Ã¢â‚¬â€ DSM Cleaning Solutions provides professional deep cleaning throughout Lemont, IL (zip code 60439), including Historic Downtown Lemont, Centennial Crossing, Covington Knolls, Burning Tree Estates, and Heritage Lake. We're based in nearby Romeoville and serve all of Lemont regularly.",
   },
   {
     question: "How far is DSM Cleaning Solutions from Lemont?",
     answer:
-      "Our base is in Romeoville, IL — approximately 15–20 minutes from most Lemont neighborhoods. We serve Lemont regularly alongside our Joliet, Bolingbrook, and Plainfield clients throughout Will and Cook counties.",
+      "Our base is in Romeoville, IL Ã¢â‚¬â€ approximately 15Ã¢â‚¬â€œ20 minutes from most Lemont neighborhoods. We serve Lemont regularly alongside our Joliet, Bolingbrook, and Plainfield clients throughout Will and Cook counties.",
   },
   {
     question: "What neighborhoods in Lemont do you serve?",
@@ -34,12 +38,12 @@ const faqs = [
   {
     question: "Is your deep cleaning service insured in Lemont?",
     answer:
-      "Yes — DSM Cleaning Solutions is fully insured and bonded in Illinois, including all Lemont service areas. Every team member is background-checked and we carry full liability insurance on every job, so you can book with complete peace of mind.",
+      "Yes Ã¢â‚¬â€ DSM Cleaning Solutions is fully insured and bonded in Illinois, including all Lemont service areas. Every team member is background-checked and we carry full liability insurance on every job, so you can book with complete peace of mind.",
   },
   {
     question: "How often should Lemont homes get a professional deep clean?",
     answer:
-      "We recommend a professional deep clean at least once or twice a year for most Lemont homes. Households with pets, allergies, or young children benefit from deep cleaning every 3–4 months. Many Lemont clients pair a seasonal deep clean with our ongoing standard cleaning service for year-round results.",
+      "We recommend a professional deep clean at least once or twice a year for most Lemont homes. Households with pets, allergies, or young children benefit from deep cleaning every 3Ã¢â‚¬â€œ4 months. Many Lemont clients pair a seasonal deep clean with our ongoing standard cleaning service for year-round results.",
   },
 ];
 
@@ -123,12 +127,12 @@ const checklist = [
 ];
 
 const trustCards = [
-  { icon: "🌿", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products safe for kids and pets." },
-  { icon: "🛡️", title: "Fully Insured & Bonded", desc: "Background-checked team. Your Lemont home is fully protected." },
-  { icon: "✅", title: "48-Hour Guarantee", desc: "We re-clean anything that isn't right within 48 hours." },
-  { icon: "👨‍👩‍👧", title: "Family Owned", desc: "Based in nearby Romeoville — your southwest suburbs neighbors." },
-  { icon: "📅", title: "7 Days a Week", desc: "Available 8am–6pm, 7 days a week for your Lemont schedule." },
-  { icon: "📍", title: "Serving Lemont", desc: "All neighborhoods in zip code 60439." },
+  { icon: "Ã°Å¸Å’Â¿", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products safe for kids and pets." },
+  { icon: "Ã°Å¸â€ºÂ¡Ã¯Â¸Â", title: "Fully Insured & Bonded", desc: "Background-checked team. Your Lemont home is fully protected." },
+  { icon: "Ã¢Å“â€¦", title: "48-Hour Guarantee", desc: "We re-clean anything that isn't right within 48 hours." },
+  { icon: "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§", title: "Family Owned", desc: "Based in nearby Romeoville Ã¢â‚¬â€ your southwest suburbs neighbors." },
+  { icon: "Ã°Å¸â€œâ€¦", title: "7 Days a Week", desc: "Available 8amÃ¢â‚¬â€œ6pm, 7 days a week for your Lemont schedule." },
+  { icon: "Ã°Å¸â€œÂ", title: "Serving Lemont", desc: "All neighborhoods in zip code 60439." },
 ];
 
 export default function DeepCleaningLemontPage() {
@@ -159,13 +163,13 @@ export default function DeepCleaningLemontPage() {
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               DSM Cleaning Solutions delivers a thorough, top-to-bottom deep clean for homes across
-              Lemont — from Historic Downtown and Centennial Crossing to Covington Knolls, Burning
+              Lemont Ã¢â‚¬â€ from Historic Downtown and Centennial Crossing to Covington Knolls, Burning
               Tree Estates, and Heritage Lake. Every surface scrubbed, every grout line restored,
               every appliance cleaned inside and out.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
-              <a href="tel:+18152462113" className="btn-outline-white btn-lg">📞 (815) 246-2113</a>
+              <a href="tel:+18152462113" className="btn-outline-white btn-lg">Ã°Å¸â€œÅ¾ (815) 246-2113</a>
             </div>
           </div>
         </div>
@@ -175,7 +179,7 @@ export default function DeepCleaningLemontPage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["✅ Fully Insured & Bonded", "🌿 Eco-Friendly Products", "👨‍👩‍👧 Family Owned", "⭐ 5-Star Rated", "✔️ Satisfaction Guaranteed"].map(
+            {["Ã¢Å“â€¦ Fully Insured & Bonded", "Ã°Å¸Å’Â¿ Eco-Friendly Products", "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§ Family Owned", "Ã¢Â­Â 5-Star Rated", "Ã¢Å“â€Ã¯Â¸Â Satisfaction Guaranteed"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -187,16 +191,16 @@ export default function DeepCleaningLemontPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading mb-6">Professional Deep Cleaning Services in Lemont, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            <strong>Deep cleaning in Lemont, IL</strong> is our specialty — and DSM Cleaning Solutions brings the
+            <strong>Deep cleaning in Lemont, IL</strong> is our specialty Ã¢â‚¬â€ and DSM Cleaning Solutions brings the
             same meticulous, detail-focused approach to every home we serve. Whether you live in Historic
             Downtown Lemont, Centennial Crossing, Covington Knolls, Burning Tree Estates, or Heritage
             Lake, our team covers all of Lemont (zip code 60439) with a comprehensive clean that goes
             far beyond your regular maintenance routine.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Lemont is one of the Chicago southwest suburbs&apos; most desirable communities — an affluent
+            Lemont is one of the Chicago southwest suburbs&apos; most desirable communities Ã¢â‚¬â€ an affluent
             area with beautifully maintained homes that deserve equally high cleaning standards. We&apos;re a
-            family-owned business based in nearby Romeoville, just 15–20 minutes away, and we take
+            family-owned business based in nearby Romeoville, just 15Ã¢â‚¬â€œ20 minutes away, and we take
             pride in delivering the detail-oriented results that Lemont homeowners expect. From the
             historic corridor near St. Patrick Catholic Church to the newer developments near Forge
             Adventure Park and Lemont Quarries, our team serves all of Lemont with the same care
@@ -205,7 +209,7 @@ export default function DeepCleaningLemontPage() {
           <p className="text-gray-600 leading-relaxed">
             Whether you&apos;re preparing for a seasonal reset, getting ready before guests arrive, or
             simply want a thorough clean after months of normal use, our Lemont deep cleaning service
-            delivers. We use only eco-friendly, non-toxic products — safe for your family, pets, and
+            delivers. We use only eco-friendly, non-toxic products Ã¢â‚¬â€ safe for your family, pets, and
             surfaces. Conveniently located between <Link href="/deep-cleaning-bolingbrook-il" className="text-brand-green font-semibold hover:underline">Bolingbrook</Link> and{" "}
             <Link href="/deep-cleaning-joliet-il" className="text-brand-green font-semibold hover:underline">Joliet</Link>, we know this part of the southwest suburbs well.
           </p>
@@ -218,7 +222,7 @@ export default function DeepCleaningLemontPage() {
           <div className="text-center mb-12">
             <h2 className="section-heading">What&apos;s Included in Our Deep Cleaning in Lemont, IL</h2>
             <p className="section-subheading mx-auto">
-              Every room in your Lemont home — cleaned top to bottom.
+              Every room in your Lemont home Ã¢â‚¬â€ cleaned top to bottom.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -268,13 +272,13 @@ export default function DeepCleaningLemontPage() {
           <p className="text-gray-600 mb-4 leading-relaxed">
             Deep cleaning in Lemont starts around $200 for smaller homes and scales with the size of
             your home, the number of bedrooms and bathrooms, and how long it&apos;s been since your last
-            professional clean. A 3–4 bedroom home in Covington Knolls or Burning Tree Estates
-            typically falls in the $275–$375 range — reflecting the larger home sizes common in
+            professional clean. A 3Ã¢â‚¬â€œ4 bedroom home in Covington Knolls or Burning Tree Estates
+            typically falls in the $275Ã¢â‚¬â€œ$375 range Ã¢â‚¬â€ reflecting the larger home sizes common in
             Lemont&apos;s established neighborhoods.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
             We always provide a free, no-obligation estimate before any work begins. There are no
-            surprises — you&apos;ll know exactly what to expect before we arrive at your Lemont home.
+            surprises Ã¢â‚¬â€ you&apos;ll know exactly what to expect before we arrive at your Lemont home.
             Contact us at (815) 246-2113 or fill out the form below.
           </p>
           <Link href="/contact" className="btn-primary">Get My Free Lemont Quote</Link>
@@ -338,13 +342,13 @@ export default function DeepCleaningLemontPage() {
               <h2 className="text-4xl font-bold mb-4">Book Your Deep Cleaning in Lemont Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Ready for a Lemont home that&apos;s clean from top to bottom? Get your free deep cleaning
-                quote — we respond within 1 business day and back every job with our 48-hour satisfaction
+                quote Ã¢â‚¬â€ we respond within 1 business day and back every job with our 48-hour satisfaction
                 guarantee.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                📞 (815) 246-2113
+                Ã°Å¸â€œÅ¾ (815) 246-2113
               </a>
-              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
+              <p className="text-white/80">Family-owned Ã‚Â· Eco-friendly Ã‚Â· Fully insured Ã‚Â· Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <BookingForm />

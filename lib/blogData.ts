@@ -11,6 +11,13 @@ export interface BlogPost {
   faqSchema?: object; // Optional FAQPage JSON-LD schema
 }
 
+// IMPORTANT: Blog post JSON-LD must NOT include aggregateRating or a LocalBusiness schema.
+// The root layout (app/layout.tsx) already injects LocalBusiness + aggregateRating globally.
+// Adding it again here causes "Review has multiple aggregate ratings" errors in Google Search Console.
+// Blog posts should use BlogPosting schema only. Publisher/author use Organization type, no rating.
+// Also: do NOT add a `url` field to the `author` object — it entity-links the author back to the
+// LocalBusiness, which causes Google to associate the blog page with the same LocalBusiness entity
+// and report a duplicate aggregateRating. Keep author as { "@type": "Organization", "name": "DSM Cleaning Solutions" } only.
 export const blogPosts: BlogPost[] = [
   {
     slug: "how-often-should-you-deep-clean-your-home",
@@ -37,7 +44,7 @@ export const blogPosts: BlogPost[] = [
   <li><strong>Fall (September–October):</strong> Before you close up the windows and start running the heat again, fall is a smart time for a deep clean. Dust settles in vents, on baseboards, and on ceiling fan blades over the summer. Cleaning before heating season means you won't be blowing that accumulated dust around your home all winter.</li>
   <li><strong>Winter (December–January):</strong> If you're hosting family for the holidays, a professional deep clean before guests arrive ensures your home is at its best. This is especially valuable for kitchens and bathrooms that see heavy use during holiday gatherings.</li>
 </ul>
-<p>For households with pets, young children, or family members with allergies or asthma, we recommend deep cleaning every three months. Pet dander, allergens, and bacteria accumulate faster in these homes, and more frequent deep cleans can make a measurable difference in indoor air quality and overall comfort.</p>
+<p>For households with pets, young children, or family members with allergies or asthma, we recommend deep cleaning every three months. Pet dander, allergens, and bacteria accumulate faster in these homes, and more frequent deep cleans can make a measurable difference in indoor air quality and overall comfort. Pairing a seasonal deep clean with our <a href="/recurring-cleaning" class="text-brand-green font-semibold hover:underline">recurring maid service</a> is the most effective way to keep your home consistently clean year-round.</p>
 
 <h2>5 Signs Your Home Needs a Deep Clean Right Now</h2>
 <p>Not sure if it's time? Here are the clearest warning signs that your home is overdue:</p>
@@ -54,9 +61,10 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Why Plainfield & Romeoville Homeowners Trust DSM Cleaning Solutions</h2>
 <p>DSM Cleaning Solutions is a family-owned cleaning company based in Romeoville, Illinois. We serve all Plainfield zip codes — 60544 and 60585 — as well as Romeoville (60446) and the surrounding southwest suburbs. Our team knows these communities personally, and we've cleaned homes in neighborhoods throughout the area including Settlers Ridge, Grande Park, and Lakewood Falls. We understand the specific challenges that come with Illinois winters, and our deep cleaning process is built around them.</p>
-<p>We use eco-friendly, biodegradable cleaning products that are tough on grime but safe for your family. Every member of our team is background-checked and fully insured, and we back every clean with our 48-hour satisfaction guarantee — if something isn't right, we come back and make it right at no charge. Learn more about our service area on our <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield, IL page</a>.</p>
+<p>We use eco-friendly, biodegradable cleaning products that are tough on grime but safe for your family. Every member of our team is background-checked and fully insured, and we back every clean with our 48-hour satisfaction guarantee — if something isn't right, we come back and make it right at no charge. Learn more about our service area on our <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield, IL page</a>, or see our <a href="/deep-cleaning-plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield deep cleaning service</a> for details specific to your zip code. View flat-rate costs on our <a href="/pricing" class="text-brand-green font-semibold hover:underline">pricing page</a>.</p>
 
-<p>Ready to schedule your next deep clean? Call us at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> for a free estimate, or <a href="https://dsmcleaningsolutions.bookingkoala.com/booknow" class="text-brand-green font-semibold hover:underline">book online now</a> in just a few minutes. We serve Plainfield, Romeoville, Naperville, Bolingbrook, and the entire southwest Chicago suburbs.</p>`,
+<h3>Ready for a Professional Deep Clean in Plainfield?</h3>
+<p>DSM Cleaning Solutions serves Plainfield, Romeoville, and the surrounding southwest Chicago suburbs. Get a free estimate today — no obligation required. <a href="/contact" class="text-brand-green font-semibold hover:underline">Get My Free Quote</a> or call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a>.</p>`,
   },
   {
     slug: "move-out-cleaning-checklist-naperville-il",
@@ -123,13 +131,14 @@ export const blogPosts: BlogPost[] = [
 
 <h2>DIY vs. Hiring a Professional Move-Out Cleaner in Naperville</h2>
 <p>DIY move-out cleaning has one clear advantage: lower upfront cost. But the trade-offs are significant. Move-out cleaning is physically exhausting and time-consuming — easily a full day of hard labor — and you're doing it at the most stressful point of your move, when you're simultaneously coordinating movers, utilities, and logistics. More importantly, missing even a handful of items on the checklist can cost you hundreds of dollars in deposit deductions, which often exceeds the cost of hiring professionals in the first place.</p>
-<p>Hiring a professional move-out cleaner means you get a thorough, systematic clean performed by experienced cleaners who know exactly what landlords inspect. Our <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">our move-out cleaning service</a> covers every item on this checklist and more — and we back it with a satisfaction guarantee. You can focus on your move while we handle the clean.</p>
+<p>Hiring a professional move-out cleaner means you get a thorough, systematic clean performed by experienced cleaners who know exactly what landlords inspect. Our <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning service</a> covers every item on this checklist and more — and we back it with a satisfaction guarantee. See transparent flat-rate costs on our <a href="/pricing" class="text-brand-green font-semibold hover:underline">pricing page</a>. You can focus on your move while we handle the clean.</p>
 
 <h2>How DSM Cleaning Solutions Handles Naperville Move-Out Cleans</h2>
 <p>DSM Cleaning Solutions serves all Naperville zip codes — 60540, 60563, 60564, and 60565 — and we're familiar with the rental landscape throughout the city. We've helped renters in neighborhoods including Cress Creek, Hobson West, Ashbury, and White Eagle successfully pass their move-out inspections and recover their full security deposits. Our team follows a detailed, room-by-room checklist and uses non-toxic, eco-friendly cleaning products that are safe and effective.</p>
-<p>We're fully insured, background-checked, and offer a satisfaction guarantee on every move-out clean. Many Naperville renters who have worked with us have gotten their full deposit back — and avoided the frustration of a second walkthrough with a skeptical landlord. Visit our <a href="/naperville-il" class="text-brand-green font-semibold hover:underline">Naperville, IL service page</a> to learn more about what we offer in your area.</p>
+<p>We're fully insured, background-checked, and offer a satisfaction guarantee on every move-out clean. Many Naperville renters who have worked with us have gotten their full deposit back — and avoided the frustration of a second walkthrough with a skeptical landlord. Visit our <a href="/naperville-il" class="text-brand-green font-semibold hover:underline">Naperville, IL service page</a> to learn more about what we offer in your area, or go straight to our <a href="/move-out-cleaning-naperville-il" class="text-brand-green font-semibold hover:underline">Naperville move-out cleaning page</a> for service-specific details.</p>
 
-<p>Don't leave your security deposit to chance. Call DSM Cleaning Solutions at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> for a free estimate, or <a href="https://dsmcleaningsolutions.bookingkoala.com/booknow" class="text-brand-green font-semibold hover:underline">book your Naperville move-out clean online</a> today. We'll make sure your rental is spotless before you hand over the keys.</p>`,
+<h3>Ready for a Professional Move-Out Clean in Naperville?</h3>
+<p>DSM Cleaning Solutions serves Naperville and the surrounding southwest Chicago suburbs. Get a free estimate today — no obligation required. <a href="/contact" class="text-brand-green font-semibold hover:underline">Get My Free Quote</a> or call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a>.</p>`,
   },
   {
     slug: "what-to-expect-from-a-professional-deep-cleaning-service-plainfield-il",
@@ -145,7 +154,7 @@ export const blogPosts: BlogPost[] = [
     content: `<p>If you've been searching for a <strong>professional deep cleaning service in Plainfield, IL</strong>, you're likely already past the point of wondering whether you need one — you're wondering what you're actually going to get. That's a smart question. Deep cleaning and standard cleaning are often marketed the same way, but they're fundamentally different services. This guide walks you through exactly what a professional deep clean covers, how to prepare for one, and what separates a reliable cleaning company from one that will leave you disappointed.</p>
 
 <h2>Deep Cleaning vs. Standard Cleaning: What's Actually Different?</h2>
-<p>Standard cleaning is maintenance — it keeps a clean home looking clean. It covers the basics: vacuuming, mopping, wiping counters, scrubbing toilets, and taking out trash. A <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">professional deep cleaning service</a> goes several layers further. It targets everything standard cleaning skips: inside the oven, behind and under appliances, grout lines in bathrooms and kitchens, baseboards and door frames, ceiling fans and light fixtures, window tracks, and inside all cabinets. Think of standard cleaning as upkeep and deep cleaning as the full reset your home needs two to four times a year.</p>
+<p><a href="/standard-cleaning" class="text-brand-green font-semibold hover:underline">Standard cleaning</a> is maintenance — it keeps a clean home looking clean. It covers the basics: vacuuming, mopping, wiping counters, scrubbing toilets, and taking out trash. A <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">professional deep cleaning service</a> goes several layers further. It targets everything standard cleaning skips: inside the oven, behind and under appliances, grout lines in bathrooms and kitchens, baseboards and door frames, ceiling fans and light fixtures, window tracks, and inside all cabinets. Think of standard cleaning as upkeep and deep cleaning as the full reset your home needs two to four times a year.</p>
 
 <h2>How to Prepare Before Your Cleaners Arrive</h2>
 <p>A professional deep clean goes faster and covers more ground when the team isn't navigating clutter. Before your appointment, tidy up surfaces and floors so cleaners can access every area directly — countertops, tabletops, bathroom counters, and floors. You don't need to pre-clean anything; that's their job. But removing piles of mail, putting away dishes, and moving small items off shelves lets the team focus their time on actual deep cleaning rather than reorganizing. If you have pets, secure them in a separate area so the team can work through every room without interruption.</p>
@@ -177,9 +186,10 @@ export const blogPosts: BlogPost[] = [
 <p>Be cautious of any cleaning company that gives you a rock-bottom price with no details, refuses to provide proof of insurance, can't name the specific products they use, or has no written satisfaction policy. Vague pricing with no itemized checklist often means a surface-level clean that won't meet your expectations. Extremely low quotes frequently mean corners are cut — your home deserves better.</p>
 
 <h2>Why Plainfield Families Trust DSM Cleaning Solutions</h2>
-<p>DSM Cleaning Solutions is a family-owned cleaning company serving all of Plainfield — zip codes 60544 and 60585 — as well as Romeoville, Naperville, Bolingbrook, and the surrounding southwest suburbs. Every member of our team is background-checked, fully insured, and bonded. We use eco-friendly, non-toxic products safe for children and pets, bring all our own equipment, and back every clean with a 48-hour satisfaction guarantee. If anything isn't right, we come back and make it right at no charge. Learn more about our service area on our <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield, IL page</a>.</p>
+<p>DSM Cleaning Solutions is a family-owned cleaning company serving all of Plainfield — zip codes 60544 and 60585 — as well as Romeoville, Naperville, Bolingbrook, and the surrounding southwest suburbs. Every member of our team is background-checked, fully insured, and bonded. We use eco-friendly, non-toxic products safe for children and pets, bring all our own equipment, and back every clean with a 48-hour satisfaction guarantee. If anything isn't right, we come back and make it right at no charge. Learn more about our service area on our <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield, IL page</a>. After your deep clean, many Plainfield homeowners set up a <a href="/recurring-cleaning" class="text-brand-green font-semibold hover:underline">recurring maid service</a> to maintain results on a weekly or biweekly schedule. See all rates upfront on our <a href="/pricing" class="text-brand-green font-semibold hover:underline">pricing page</a>.</p>
 
-<p>Ready to book your deep clean? Call DSM Cleaning Solutions at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> for a free, no-obligation estimate. We'll give you an honest quote, a clear checklist, and a team that shows up ready to work — no surprises, no shortcuts.</p>`,
+<h3>Ready for a Professional Deep Clean in Plainfield?</h3>
+<p>DSM Cleaning Solutions serves Plainfield and the surrounding southwest Chicago suburbs. Get a free estimate today — no obligation required. <a href="/contact" class="text-brand-green font-semibold hover:underline">Get My Free Quote</a> or call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a>.</p>`,
   },
   {
     slug: "how-to-get-your-security-deposit-back-move-out-cleaning-naperville-bolingbrook",
@@ -219,7 +229,7 @@ export const blogPosts: BlogPost[] = [
 </ul>
 
 <h2>DIY vs. Hiring a Professional — An Honest Breakdown</h2>
-<p>DIY move-out cleaning is possible, but it comes with real trade-offs. It takes a full day of hard physical work — scrubbing appliances, getting on hands and knees for grout lines, moving furniture to reach baseboards — at the most stressful point of your move when you're also coordinating movers, utilities, and logistics. Miss even a handful of items and your landlord may withhold $300–$600 or more, which often exceeds the cost of hiring professionals. A professional move-out cleaning team follows a comprehensive checklist, works faster with commercial-grade equipment, and can complete the job in a fraction of the time it takes to DIY. Our <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning service</a> is built specifically to meet landlord inspection standards.</p>
+<p>DIY move-out cleaning is possible, but it comes with real trade-offs. It takes a full day of hard physical work — scrubbing appliances, getting on hands and knees for grout lines, moving furniture to reach baseboards — at the most stressful point of your move when you're also coordinating movers, utilities, and logistics. Miss even a handful of items and your landlord may withhold $300–$600 or more, which often exceeds the cost of hiring professionals. A professional move-out cleaning team follows a comprehensive checklist, works faster with commercial-grade equipment, and can complete the job in a fraction of the time it takes to DIY. Our <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning service</a> is built specifically to meet landlord inspection standards. If your rental also needs a thorough allergen reset, our <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning service</a> can be added for complete coverage. See our <a href="/pricing" class="text-brand-green font-semibold hover:underline">pricing page</a> for flat-rate costs by home size.</p>
 
 <h2>What Does Move-Out Cleaning Cost in Naperville and Bolingbrook?</h2>
 <p>Professional move-out cleaning in Naperville and Bolingbrook typically ranges from $150 to $300 for most homes, depending on size and condition. A 2-bedroom apartment in Bolingbrook's 60440 zip code might run $150–$200, while a larger 4-bedroom home in Naperville's White Eagle neighborhood could run $250–$350. Compare that against the $500–$1,500+ that landlords commonly withhold for cleaning issues — the math strongly favors hiring a pro. Visit our <a href="/move-out-cleaning-naperville-il" class="text-brand-green font-semibold hover:underline">Naperville move-out cleaning page</a> or our <a href="/move-out-cleaning-bolingbrook-il" class="text-brand-green font-semibold hover:underline">Bolingbrook move-out cleaning page</a> for more specific pricing guidance.</p>
@@ -230,7 +240,8 @@ export const blogPosts: BlogPost[] = [
 <h2>How DSM Cleaning Solutions Handles Move-Out Cleans in Naperville &amp; Bolingbrook</h2>
 <p>DSM Cleaning Solutions has helped renters across Naperville's Ashbury and White Eagle neighborhoods (60540, 60564) and Bolingbrook's Americana Estates and Stillwater communities (60440, 60490) successfully pass their move-out inspections. We follow a landlord-focused checklist, use eco-friendly products that leave no residue or odor, and back every move-out job with a satisfaction guarantee. Learn more about our coverage on our <a href="/naperville-il" class="text-brand-green font-semibold hover:underline">Naperville, IL page</a> and <a href="/bolingbrook-il" class="text-brand-green font-semibold hover:underline">Bolingbrook, IL page</a>.</p>
 
-<p>Don't leave your security deposit on the table. Call DSM Cleaning Solutions at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> for a free estimate on your move-out clean. We'll make sure your rental is spotless before you hand over the keys — and help you walk away with every dollar of your deposit.</p>`,
+<h3>Ready for a Professional Move-Out Clean in Naperville or Bolingbrook?</h3>
+<p>DSM Cleaning Solutions serves Naperville, Bolingbrook, and the surrounding southwest Chicago suburbs. Get a free estimate today — no obligation required. <a href="/contact" class="text-brand-green font-semibold hover:underline">Get My Free Quote</a> or call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a>.</p>`,
   },
   {
     slug: "move-out-cleaning-checklist-bolingbrook-renters",
@@ -328,7 +339,7 @@ export const blogPosts: BlogPost[] = [
 </ul>
 
 <h2>DIY vs. Hiring a Professional Move-Out Cleaner in Bolingbrook</h2>
-<p>Move-out cleaning looks manageable on paper but takes a full day of hard physical work in practice — scrubbing appliances, getting on your hands and knees for grout lines, moving furniture to reach baseboards — all while managing the rest of your move. Missing even a handful of items from this list risks deductions that typically run $300–$800 for a standard apartment in Bolingbrook, which frequently exceeds what a professional cleaning costs. Our <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning service</a> follows a landlord-focused checklist and covers every item on this list in a single visit. See the full details on our <a href="/move-out-cleaning-bolingbrook-il" class="text-brand-green font-semibold hover:underline">Bolingbrook move-out cleaning page</a>.</p>
+<p>Move-out cleaning looks manageable on paper but takes a full day of hard physical work in practice — scrubbing appliances, getting on your hands and knees for grout lines, moving furniture to reach baseboards — all while managing the rest of your move. Missing even a handful of items from this list risks deductions that typically run $300–$800 for a standard apartment in Bolingbrook, which frequently exceeds what a professional cleaning costs. Our <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning service</a> follows a landlord-focused checklist and covers every item on this list in a single visit. For homes that need extra allergen removal or heavy buildup addressed, our <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning service</a> can be paired for maximum results. See the full details on our <a href="/move-out-cleaning-bolingbrook-il" class="text-brand-green font-semibold hover:underline">Bolingbrook move-out cleaning page</a>, and view flat-rate costs on our <a href="/pricing" class="text-brand-green font-semibold hover:underline">pricing page</a>.</p>
 
 <h2>How DSM Cleaning Solutions Serves Bolingbrook Renters and Homeowners</h2>
 <p>DSM Cleaning Solutions serves all of Bolingbrook — zip codes 60440 and 60490 — including Americana Estates, Stillwater, Lake Bolingbrook, and the communities along Route 53 and Weber Road. We're familiar with the rental landscape in these neighborhoods and know exactly what Bolingbrook property managers look for during inspections. Every job follows a detailed, room-by-room checklist, uses eco-friendly products that leave no residue, and is backed by our 48-hour satisfaction guarantee. Our team is fully insured and every member is background-checked. Learn more about our coverage on our <a href="/bolingbrook-il" class="text-brand-green font-semibold hover:underline">Bolingbrook, IL service page</a>.</p>
@@ -344,7 +355,8 @@ export const blogPosts: BlogPost[] = [
 <h3>Do I need to be home during the move-out cleaning?</h3>
 <p>No — many customers leave us a key or lock box code and return to a clean home. As long as we have access to all areas, you don't need to be present. Our team is fully insured and background-checked, and we've served hundreds of Bolingbrook renters this way.</p>
 
-<p>Don't risk your security deposit. Call DSM Cleaning Solutions at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> for a free estimate, or <a href="https://dsmcleaningsolutions.bookingkoala.com/booknow" class="text-brand-green font-semibold hover:underline">book your Bolingbrook move-out clean online</a> today.</p>`,
+<h3>Ready for a Professional Move-Out Clean in Bolingbrook?</h3>
+<p>DSM Cleaning Solutions serves Bolingbrook and the surrounding southwest Chicago suburbs. Get a free estimate today — no obligation required. <a href="/contact" class="text-brand-green font-semibold hover:underline">Get My Free Quote</a> or call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a>.</p>`,
   },
   {
     slug: "post-construction-cleaning-romeoville-il",
@@ -412,7 +424,7 @@ export const blogPosts: BlogPost[] = [
 </ul>
 
 <h2>Why Professional Post-Construction Cleaning Protects Your New Surfaces</h2>
-<p>The biggest reason Romeoville homeowners and contractors hire professionals for post-construction cleanup isn't just time — it's protecting the investment they just made. New hardwood floors scratched by abrasive cleaning, tile etched by the wrong chemical, chrome fixtures dulled by harsh solvents, or grout haze that sets permanently because it wasn't addressed in time: these are all common outcomes of DIY post-construction cleaning done with the wrong products or technique. Our team uses pH-appropriate cleaners for each surface type, HEPA-filtered vacuums that actually capture fine dust instead of redistributing it, and non-abrasive tools on new floors and fixtures. We know which products remove grout haze without etching porcelain, which solvents lift adhesive without damaging hardwood, and how to remove paint overspray from glass without scratching it. Learn more about our <a href="/post-construction-cleaning" class="text-brand-green font-semibold hover:underline">post-construction cleaning service</a>.</p>
+<p>The biggest reason Romeoville homeowners and contractors hire professionals for post-construction cleanup isn't just time — it's protecting the investment they just made. New hardwood floors scratched by abrasive cleaning, tile etched by the wrong chemical, chrome fixtures dulled by harsh solvents, or grout haze that sets permanently because it wasn't addressed in time: these are all common outcomes of DIY post-construction cleaning done with the wrong products or technique. Our team uses pH-appropriate cleaners for each surface type, HEPA-filtered vacuums that actually capture fine dust instead of redistributing it, and non-abrasive tools on new floors and fixtures. We know which products remove grout haze without etching porcelain, which solvents lift adhesive without damaging hardwood, and how to remove paint overspray from glass without scratching it. All products we use are non-toxic and biodegradable — learn more about our commitment to safer cleaning on our <a href="/eco-friendly-cleaning" class="text-brand-green font-semibold hover:underline">eco-friendly cleaning page</a>. Learn more about our <a href="/post-construction-cleaning" class="text-brand-green font-semibold hover:underline">post-construction cleaning service</a>.</p>
 
 <h2>How to Prepare Your Home Before We Arrive</h2>
 <p>A few steps before your post-construction clean will help us work more efficiently and get better results:</p>
@@ -425,7 +437,7 @@ export const blogPosts: BlogPost[] = [
 </ul>
 
 <h2>Serving Romeoville and the Southwest Chicago Suburbs</h2>
-<p>DSM Cleaning Solutions serves all of Romeoville — zip code 60446 — including Lakewood Falls, Windstone, Hidden Lakes, and Grand Haven, as well as the surrounding southwest suburbs including Plainfield, Bolingbrook, Joliet, Lockport, and Naperville. We're familiar with the new construction and renovation activity throughout Will County and DuPage County, and we've handled post-construction cleanups in everything from single-room bathroom remodels to full gut renovations and new builds. Visit our <a href="/post-construction-cleaning" class="text-brand-green font-semibold hover:underline">post-construction cleaning page</a> for the full service details, or check out our <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning service</a> if your project was smaller in scope.</p>
+<p>DSM Cleaning Solutions serves all of Romeoville — zip code 60446 — including Lakewood Falls, Windstone, Hidden Lakes, and Grand Haven, as well as the surrounding southwest suburbs including <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield</a>, <a href="/bolingbrook-il" class="text-brand-green font-semibold hover:underline">Bolingbrook</a>, Joliet, Lockport, and Naperville. We're familiar with the new construction and renovation activity throughout Will County and DuPage County, and we've handled post-construction cleanups in everything from single-room bathroom remodels to full gut renovations and new builds. Visit our <a href="/post-construction-cleaning" class="text-brand-green font-semibold hover:underline">post-construction cleaning page</a> for the full service details, or check out our <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning service</a> if your project was smaller in scope.</p>
 
 <h2>Frequently Asked Questions About Post-Construction Cleaning in Romeoville</h2>
 
@@ -438,7 +450,8 @@ export const blogPosts: BlogPost[] = [
 <h3>What does post-construction cleaning cost in Romeoville?</h3>
 <p>Post-construction cleaning in Romeoville typically ranges from $300 to $600 depending on the size of the home and the level of construction residue. Call us at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> for a free, no-obligation estimate tailored to your specific project.</p>
 
-<p>Ready to get your newly renovated home truly clean? Call DSM Cleaning Solutions at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> for a free estimate, or <a href="https://dsmcleaningsolutions.bookingkoala.com/booknow" class="text-brand-green font-semibold hover:underline">book your post-construction clean online</a> today. We serve Romeoville, Plainfield, Naperville, Bolingbrook, and all of the southwest Chicago suburbs.</p>`,
+<h3>Ready for a Professional Post-Construction Clean in Romeoville?</h3>
+<p>DSM Cleaning Solutions serves Romeoville and the surrounding southwest Chicago suburbs. Get a free estimate today — no obligation required. <a href="/contact" class="text-brand-green font-semibold hover:underline">Get My Free Quote</a> or call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a>.</p>`,
   },
   {
     slug: "spring-cleaning-tips-romeoville-plainfield",
@@ -509,14 +522,15 @@ export const blogPosts: BlogPost[] = [
 
 <h2>When to Call a Professional vs. DIY Your Spring Clean</h2>
 <p>Not everything on this list requires professional help — some tasks are well within reach for most homeowners. But knowing when to bring in a pro saves you time, effort, and frustration.</p>
-<p><strong>DIY is perfectly fine for:</strong> day-to-day tidying, light dusting, routine vacuuming and mopping, wiping down counters, and decluttering. These are maintenance tasks that fit easily into a normal week.</p>
-<p><strong>Call a professional for:</strong> a full spring deep clean from top to bottom, scrubbing grout and tile, cleaning inside appliances, wiping down all baseboards and ceiling fans, removing allergens and pet dander thoroughly, or simply if you want the entire home done properly in a single day without clearing your whole weekend. Our <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">our deep cleaning service</a> covers every item on this checklist — and then some.</p>
+<p><strong>DIY is perfectly fine for:</strong> day-to-day tidying, light dusting, routine vacuuming and mopping, wiping down counters, and decluttering. These are the <a href="/standard-cleaning" class="text-brand-green font-semibold hover:underline">standard maintenance tasks</a> that fit easily into a normal week. If you'd rather hand that off entirely, our <a href="/recurring-cleaning" class="text-brand-green font-semibold hover:underline">recurring maid service</a> keeps your home consistently clean between deep cleans on a weekly, biweekly, or monthly schedule.</p>
+<p><strong>Call a professional for:</strong> a full spring deep clean from top to bottom, scrubbing grout and tile, cleaning inside appliances, wiping down all baseboards and ceiling fans, removing allergens and pet dander thoroughly, or simply if you want the entire home done properly in a single day without clearing your whole weekend. Our <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning service</a> covers every item on this checklist — and then some.</p>
 
 <h2>DSM Cleaning Solutions: Your Spring Cleaning Partner in Romeoville &amp; Plainfield</h2>
 <p>We're a family-owned cleaning company based in Romeoville (60446), and we've built our reputation one clean home at a time across Will County. In Romeoville, we regularly clean homes in Lakewood Falls, Windstone, Hidden Lakes, and Grand Haven. In Plainfield (60544 and 60585), our customers include homeowners in Settlers Ridge, Grande Park, Lakewood Falls, and Springbank. We're also familiar with the homes near Isle a la Cache and Township Park areas throughout the region.</p>
 <p>We're available seven days a week, fully insured, and every team member is background-checked. We bring all our own eco-friendly supplies, and every clean is backed by our satisfaction guarantee. Whether you need a full spring deep clean or just want to tackle those hard-to-reach areas, we're here to help. Visit our <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield, IL page</a> or return to our <a href="/" class="text-brand-green font-semibold hover:underline">homepage</a> to learn more about everything we offer.</p>
 
-<p>Spring cleaning doesn't have to take your whole weekend. Call DSM Cleaning Solutions at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> for a free estimate, or <a href="https://dsmcleaningsolutions.bookingkoala.com/booknow" class="text-brand-green font-semibold hover:underline">book your spring clean online</a> today. We'll handle the deep work so you can enjoy a fresh home all season long.</p>`,
+<h3>Ready for a Professional Spring Clean in Romeoville or Plainfield?</h3>
+<p>DSM Cleaning Solutions serves Romeoville, Plainfield, and the surrounding southwest Chicago suburbs. Get a free estimate today — no obligation required. <a href="/contact" class="text-brand-green font-semibold hover:underline">Get My Free Quote</a> or call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a>.</p>`,
   },
   {
     slug: "what-is-included-in-a-deep-house-cleaning",
@@ -535,7 +549,7 @@ export const blogPosts: BlogPost[] = [
 <h2>Deep Cleaning vs. Standard Cleaning: The Key Difference</h2>
 <p>Before diving into the checklist, it's worth drawing a clear line. <a href="/standard-cleaning" class="text-brand-green font-semibold hover:underline">Standard (recurring) cleaning</a> is maintenance — it keeps a clean home clean. Vacuuming, mopping, wiping counters, cleaning toilets and sinks, and dusting visible surfaces are all part of the routine. It's fast, efficient, and designed to be repeated weekly or biweekly.</p>
 <p>A <strong>deep clean</strong> is different. It's a reset — the kind of thorough cleaning that a home needs periodically to address the buildup that routine maintenance can't touch. Deep cleaning takes significantly more time, covers more surfaces, and involves detail work: scrubbing grout, cleaning inside appliances, wiping down baseboards, removing calcium deposits, and reaching the spots that standard cleaning skips entirely.</p>
-<p>Most cleaning professionals recommend a deep clean at least once or twice a year, with standard cleaning in between to maintain results. It's especially important after a long Illinois winter, when months of closed windows, forced-air heat, and road salt tracked inside have left residue on nearly every surface.</p>
+<p>Most cleaning professionals recommend a deep clean at least once or twice a year, with <a href="/recurring-cleaning" class="text-brand-green font-semibold hover:underline">recurring standard cleaning</a> in between to maintain results. It's especially important after a long Illinois winter, when months of closed windows, forced-air heat, and road salt tracked inside have left residue on nearly every surface.</p>
 
 <h2>Kitchen Deep Cleaning Checklist</h2>
 <p>The kitchen is typically the most labor-intensive room in a deep clean. Grease, food splatter, and buildup accumulate behind appliances and inside cabinets in ways that routine cleaning never addresses.</p>
@@ -631,9 +645,11 @@ export const blogPosts: BlogPost[] = [
 <p>Our pricing is flat-rate, so you'll always know what you're paying before we arrive. Visit our <a href="/pricing" class="text-brand-green font-semibold hover:underline">pricing page</a> to see exact rates by home size.</p>
 
 <h2>Why Choose DSM Cleaning Solutions for Your Deep Clean?</h2>
-<p>We're a family-owned cleaning company based in Romeoville (60446), serving homeowners throughout Plainfield, Naperville, Bolingbrook, Joliet, Lockport, and the entire southwest Chicago suburbs. Every team member is background-checked and fully trained. We bring all our own supplies — all of which are non-toxic, biodegradable, and safe for children and pets. Learn more about our commitment to safer cleaning on our <a href="/eco-friendly-cleaning" class="text-brand-green font-semibold hover:underline">eco-friendly cleaning page</a>.</p>
+<p>We're a family-owned cleaning company based in Romeoville (60446), serving homeowners throughout Plainfield, Naperville, Bolingbrook, Joliet, Lockport, and the entire southwest Chicago suburbs. Every team member is background-checked and fully trained. We bring all our own supplies — all of which are non-toxic, biodegradable, and safe for children and pets. Learn more about our commitment to safer cleaning on our <a href="/eco-friendly-cleaning" class="text-brand-green font-semibold hover:underline">eco-friendly cleaning page</a>. For Plainfield homeowners, see our dedicated <a href="/deep-cleaning-plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield deep cleaning service</a> page for location-specific details.</p>
 <p>Every clean is backed by our satisfaction guarantee. If something isn't right, we'll come back and fix it — no questions asked.</p>
-<p>Ready to book your deep clean? <a href="https://dsmcleaningsolutions.bookingkoala.com/booknow" class="text-brand-green font-semibold hover:underline">Schedule online in minutes</a>, or call us at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> for a free estimate. We serve Plainfield (60544, 60585), Romeoville (60446), Naperville (60540, 60565), Bolingbrook (60440), and surrounding communities.</p>`,
+
+<h3>Ready for a Professional Deep Clean in the Southwest Suburbs?</h3>
+<p>DSM Cleaning Solutions serves Plainfield, Romeoville, Naperville, Bolingbrook, and the surrounding southwest Chicago suburbs. Get a free estimate today — no obligation required. <a href="/contact" class="text-brand-green font-semibold hover:underline">Get My Free Quote</a> or call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a>.</p>`,
     faqSchema: {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -733,7 +749,7 @@ export const blogPosts: BlogPost[] = [
     content: `<p>If you've been searching for a <strong>deep cleaning service in Naperville, IL</strong>, you're likely past the point of wondering whether you need one — you want to know what you're actually getting. That's a smart question, because not all deep cleans are equal. This guide covers exactly what DSM Cleaning Solutions includes in every Naperville deep cleaning, what's not covered, how long to expect the job to take, and what makes our service worth booking.</p>
 
 <h2>What Makes a Deep Clean Different From Regular Cleaning?</h2>
-<p>Standard recurring cleaning is maintenance — it keeps a clean home presentable between visits. Vacuuming, mopping, wiping counters, cleaning bathrooms, and dusting visible surfaces. It's fast and efficient, designed to be done weekly or biweekly.</p>
+<p><a href="/standard-cleaning" class="text-brand-green font-semibold hover:underline">Standard recurring cleaning</a> is maintenance — it keeps a clean home presentable between visits. Vacuuming, mopping, wiping counters, cleaning bathrooms, and dusting visible surfaces. It's fast and efficient, designed to be done weekly or biweekly.</p>
 <p>A <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning service</a> is a full reset. It goes into every corner standard cleaning skips: inside appliances, grout lines, baseboards, ceiling fans, window tracks, and cabinet fronts. For Naperville homeowners, the most common triggers are spring cleaning after Illinois winters seal grime into homes for months, pre-sale preparation, post-renovation cleanup, or simply a home that hasn't been professionally deep cleaned in over a year.</p>
 
 <h2>What's Included in DSM's Deep Cleaning Service in Naperville</h2>
@@ -795,13 +811,13 @@ export const blogPosts: BlogPost[] = [
   <li><strong>Condition of the home:</strong> A home that's had regular professional cleaning will take less time than one that hasn't been deep cleaned in a year or more. We assess honestly and price fairly.</li>
   <li><strong>Frequency:</strong> One-time deep cleans are priced differently than deep cleans performed as part of a recurring service plan. Recurring clients typically receive a lower rate on each visit.</li>
 </ul>
-<p>We provide every Naperville client with a free, no-obligation estimate before we start. No hidden fees, no surprises — just an honest price from a family-owned local business.</p>
+<p>We provide every Naperville client with a free, no-obligation estimate before we start. No hidden fees, no surprises — just an honest price from a family-owned local business. See our full rate sheet on our <a href="/pricing" class="text-brand-green font-semibold hover:underline">pricing page</a>, or learn more about everything we offer on our <a href="/naperville-il" class="text-brand-green font-semibold hover:underline">Naperville, IL service page</a>.</p>
 
 <h2>How the 48-Hour Satisfaction Guarantee Works</h2>
 <p>Every deep cleaning we perform in Naperville is backed by our 48-hour satisfaction guarantee. If you're not happy with any area we cleaned — or your landlord flags something during a move-out inspection — contact us within 48 hours and we'll return to re-clean that area at no charge. No hassle, no questions. We stand behind our work completely. This guarantee is the reason many Naperville homeowners trust us before listing a home for sale, hosting out-of-town guests, or completing a move.</p>
 
 <h2>How to Book DSM Cleaning Solutions in Naperville</h2>
-<p>Booking is simple. You can call us directly at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> for a free estimate and to schedule your preferred date — we're available Monday through Sunday, 8am–6pm. You can also <a href="https://dsmcleaningsolutions.bookingkoala.com/booknow" class="text-brand-green font-semibold hover:underline">book online</a> in just a few minutes. We serve all Naperville zip codes: 60540, 60563, 60564, and 60565 — from Cress Creek and Hobson West to River Run, Tall Grass, and every neighborhood in between.</p>
+<p>Booking is simple. You can call us directly at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> for a free estimate and to schedule your preferred date — we're available Monday through Sunday, 8am–6pm. You can also <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> in just a few minutes. We serve all Naperville zip codes: 60540, 60563, 60564, and 60565 — from Cress Creek and Hobson West to River Run, Tall Grass, and every neighborhood in between.</p>
 <p>For everything specific to deep cleaning in Naperville — including pricing details and what to expect on the day — visit our dedicated <a href="/deep-cleaning/naperville" class="text-brand-green font-semibold hover:underline">deep cleaning Naperville page</a>.</p>
 
 <h2>Frequently Asked Questions</h2>
@@ -813,9 +829,292 @@ export const blogPosts: BlogPost[] = [
 <p>Not at all — DSM brings everything. We use professional-grade, eco-friendly, non-toxic products that are safe for children, pets, and the environment. Every supply and piece of equipment arrives with our team. You don't need to purchase or prepare anything.</p>
 
 <h3>Can I set up recurring service after my deep clean?</h3>
-<p>Yes, and many of our Naperville clients do exactly this. A one-time deep clean resets your home to a genuinely clean baseline, and then a weekly, biweekly, or monthly standard cleaning plan maintains it from there. Ask us about recurring service pricing when you call or book online — recurring clients receive a discounted rate on every visit.</p>
+<p>Yes, and many of our Naperville clients do exactly this. A one-time deep clean resets your home to a genuinely clean baseline, and then our <a href="/recurring-cleaning" class="text-brand-green font-semibold hover:underline">recurring maid service</a> maintains it on a weekly, biweekly, or monthly schedule. Recurring clients receive a discounted rate on every visit.</p>
 
-<p>Ready to schedule your Naperville deep clean? Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> for a free estimate or <a href="https://dsmcleaningsolutions.bookingkoala.com/booknow" class="text-brand-green font-semibold hover:underline">book online today</a>. DSM Cleaning Solutions is family-owned, fully insured, and backed by a 48-hour satisfaction guarantee — serving all of Naperville and the western suburbs.</p>`,
+<h3>Ready for a Professional Deep Clean in Naperville?</h3>
+<p>DSM Cleaning Solutions serves Naperville and the surrounding southwest Chicago suburbs. Get a free estimate today — no obligation required. <a href="/contact" class="text-brand-green font-semibold hover:underline">Get My Free Quote</a> or call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a>.</p>`,
+  },
+  {
+    slug: "house-cleaning-services-bolingbrook-il",
+    title: "House Cleaning Services in Bolingbrook IL: DSM's Complete Guide",
+    metaTitle: "House Cleaning Services in Bolingbrook IL",
+    metaDescription:
+      "Looking for house cleaning services in Bolingbrook, IL? DSM Cleaning Solutions offers deep cleaning, standard & move-out cleaning. Family-owned, insured & 5-star rated. Call (815) 246-2113.",
+    date: "May 1, 2026",
+    dateISO: "2026-05-01",
+    author: "DSM Cleaning Solutions",
+    excerpt:
+      "More Bolingbrook homeowners are turning to professional house cleaning — and for good reason. Here's everything you need to know about services, pricing, neighborhoods, and what to expect from DSM Cleaning Solutions.",
+    faqSchema: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Is DSM Cleaning Solutions licensed and insured in Bolingbrook?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. DSM Cleaning Solutions is fully insured and bonded to operate throughout Will County, including all of Bolingbrook (zip codes 60440 and 60490). Every team member is background-checked before their first cleaning appointment.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How do I schedule recurring cleaning service in Bolingbrook?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "You can set up weekly, biweekly, or monthly recurring cleaning when you book online at dsmcleaningsolutions.com/book or by calling (815) 246-2113. Most Bolingbrook clients start with a one-time deep clean, then move into a recurring biweekly plan. Recurring clients receive a discounted rate on every visit.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How quickly can you get to my Bolingbrook home?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "We typically have availability within 3–5 business days for Bolingbrook customers, and often sooner. For month-end move-out cleans during peak season (May–August), booking 7–10 days in advance is recommended. Call (815) 246-2113 to check current availability.",
+          },
+        },
+      ],
+    },
+    content: `<p>If you've been searching for <strong>house cleaning services in Bolingbrook, IL</strong>, you're not alone. More Bolingbrook homeowners than ever are turning to professional cleaning companies — not as a luxury, but as a practical solution for protecting their homes and reclaiming their weekends. Between busy work schedules, kids, and the demands that come with maintaining a home in Will County, keeping up with deep cleaning and recurring maintenance is genuinely hard. Here's what to know before you hire a cleaning company in Bolingbrook — and how DSM Cleaning Solutions serves your community.</p>
+
+<h2>What to Look for in a Bolingbrook House Cleaning Company</h2>
+<p>Not every cleaning company that appears in a search is the same. Before you book, there are a few non-negotiables worth confirming:</p>
+<ul>
+  <li>Are the cleaners background-checked and insured? Ask for proof — any reputable company will have this on hand.</li>
+  <li>Do they use eco-friendly products, or are they bringing harsh chemicals into your home?</li>
+  <li>Is their pricing flat-rate and transparent, or do prices change after you've booked?</li>
+  <li>Do they stand behind their work with a satisfaction guarantee?</li>
+</ul>
+<p>At DSM Cleaning Solutions, every one of these boxes is checked. We're a family-owned company based in the southwest Chicago suburbs, fully insured, and committed to cleaning that's safe for your kids, your pets, and your home.</p>
+
+<h2>House Cleaning Services Available in Bolingbrook</h2>
+<p>We offer three primary cleaning services to Bolingbrook homeowners, each built for a different need:</p>
+<ul>
+  <li><strong>Standard (Recurring) Cleaning:</strong> Weekly, biweekly, or monthly maintenance cleaning that keeps your home in great shape day to day. Our <a href="/standard-cleaning-bolingbrook-il" class="text-brand-green font-semibold hover:underline">standard cleaning service in Bolingbrook</a> covers vacuuming, mopping, bathroom cleaning, kitchen wipe-downs, and dusting throughout every room.</li>
+  <li><strong>Deep Cleaning:</strong> A top-to-bottom reset that tackles what standard cleaning skips — inside the oven and microwave, behind appliances, grout lines, baseboards, ceiling fans, and window tracks. Our <a href="/deep-cleaning-bolingbrook-il" class="text-brand-green font-semibold hover:underline">deep cleaning service in Bolingbrook</a> is ideal for first-time customers, seasonal resets, or homes that haven't been professionally cleaned in a while.</li>
+  <li><strong>Move-Out Cleaning:</strong> Designed to meet landlord inspection standards and help you recover your full security deposit. Our <a href="/move-out-cleaning-bolingbrook-il" class="text-brand-green font-semibold hover:underline">move-out cleaning service in Bolingbrook</a> covers every room systematically, following the same checklist Bolingbrook property managers use during walkthroughs.</li>
+</ul>
+
+<h2>Neighborhoods and Communities in Bolingbrook We Serve</h2>
+<p>Bolingbrook is a large, spread-out community with a mix of established neighborhoods and newer developments. DSM Cleaning Solutions serves all of Bolingbrook — zip codes 60440 and 60490 — including Americana Estates, Stillwater, Lake Bolingbrook, areas near the Romeoville border along Weber Road, communities around Bolingbrook Golf Club, and the Route 53 corridor. Whether you're in a newer townhome development or a long-established single-family neighborhood, we're familiar with the area and clean homes throughout the community. Learn more on our <a href="/bolingbrook-il" class="text-brand-green font-semibold hover:underline">Bolingbrook, IL service page</a>.</p>
+
+<h2>What to Expect at Your First Cleaning Appointment</h2>
+<p>For most first-time Bolingbrook customers, the first appointment is a deep clean — this lets us establish a genuine baseline before transitioning to recurring maintenance. Here's what the experience looks like:</p>
+<ul>
+  <li>Your team arrives within the scheduled window with all supplies and equipment — you don't need to provide anything</li>
+  <li>We do a quick walkthrough to note any specific areas of concern or special requests</li>
+  <li>Cleaning proceeds room by room, starting with the kitchen and bathrooms</li>
+  <li>You'll have a chance to review the results before we leave</li>
+</ul>
+<p>You don't need to be home. Many Bolingbrook customers leave a key or lock box code and return to a clean house. Our team is background-checked and fully insured on every visit.</p>
+
+<h2>How Pricing Works for Bolingbrook Homes</h2>
+<p>We use flat-rate pricing based on three key factors: home size (square footage and number of bedrooms and bathrooms), service type (deep clean vs. standard), and frequency (one-time vs. recurring). Recurring clients receive a lower per-visit rate, which is why many Bolingbrook homeowners start with a one-time deep clean and then move into a biweekly plan to maintain results.</p>
+<p>A typical Bolingbrook home — 3 bedrooms, 2 bathrooms — runs approximately $160–$200 for biweekly standard cleaning and $280–$360 for a one-time deep clean, depending on condition. Move-out cleans are similarly priced based on home size. There are no hidden fees and no last-minute price changes. Visit our <a href="/pricing" class="text-brand-green font-semibold hover:underline">pricing page</a> for a full breakdown by home size.</p>
+
+<h2>Why the 48-Hour Satisfaction Guarantee Matters</h2>
+<p>Hiring a new cleaning company always involves some level of trust. Our 48-hour satisfaction guarantee is designed to eliminate the risk entirely. If there's any area we cleaned that doesn't meet your expectations — a spot we missed, a surface that needs another pass — contact us within 48 hours and we'll return to re-clean it at no charge. No arguments, no hassle. This guarantee applies to every job we do in Bolingbrook, from first-time deep cleans to move-out services the day before a landlord walkthrough.</p>
+
+<h2>How to Get a Free Quote or Book Online</h2>
+<p>Getting a quote takes less than two minutes. Call us directly at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> — we're available Monday through Sunday, 8am to 6pm — or <a href="/book" class="text-brand-green font-semibold hover:underline">book online at our booking page</a> and receive instant confirmation. Same-week appointments are often available in the Bolingbrook area.</p>
+
+<h2>Frequently Asked Questions About House Cleaning in Bolingbrook</h2>
+
+<h3>Is DSM Cleaning Solutions licensed and insured in Bolingbrook?</h3>
+<p>Yes. DSM Cleaning Solutions is fully insured and bonded throughout Will County, including all of Bolingbrook (60440 and 60490). Every team member is background-checked before their first appointment. You can feel comfortable opening your door to our team.</p>
+
+<h3>How do I schedule recurring cleaning service in Bolingbrook?</h3>
+<p>You can set up weekly, biweekly, or monthly recurring cleaning when you <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> or call us at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a>. Most Bolingbrook clients start with a one-time deep clean and then transition into a biweekly plan — the most popular option for maintaining results. Recurring clients receive a discounted rate on every visit compared to one-time pricing.</p>
+
+<h3>How quickly can you get to my Bolingbrook home?</h3>
+<p>We typically have availability within 3–5 business days for Bolingbrook customers, and often sooner depending on the week. For month-end move-out cleans during peak season (May through August), booking 7–10 days in advance is recommended. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> to check current availability.</p>
+
+<h3>Ready for a Professional Clean in Bolingbrook?</h3>
+<p>DSM Cleaning Solutions serves Bolingbrook and the surrounding southwest Chicago suburbs. Get a free estimate today — no obligation required. <a href="/contact" class="text-brand-green font-semibold hover:underline">Get My Free Quote</a> or call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a>.</p>`,
+  },
+  {
+    slug: "how-much-does-deep-cleaning-cost-naperville-il",
+    title: "How Much Does Deep Cleaning Cost in Naperville, IL? (2026 Pricing Guide)",
+    metaTitle: "Deep Cleaning Cost Naperville IL — 2026 Guide",
+    metaDescription:
+      "How much does deep cleaning cost in Naperville IL? Get 2026 pricing for homes of all sizes plus a free quote from DSM Cleaning Solutions.",
+    date: "May 1, 2026",
+    dateISO: "2026-05-01",
+    author: "DSM Cleaning Solutions",
+    excerpt:
+      "Wondering what a deep clean should cost in Naperville in 2026? We break down real pricing by home size, what drives the cost, what's actually included — and what separates a great company from a cheap one.",
+    faqSchema: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "How much does deep cleaning cost in Naperville, IL?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "In 2026, professional deep cleaning in Naperville typically costs $150–$200 for small apartments under 1,000 sq ft, $200–$300 for medium homes (1,000–2,000 sq ft), $300–$400 for large homes (2,000–3,000 sq ft), and $400+ for homes over 3,000 sq ft. Price depends on home size, number of bathrooms, and condition.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What is included in a deep cleaning vs. a standard cleaning in Naperville?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Standard cleaning covers maintenance tasks like vacuuming, mopping, and wiping counters. A deep clean goes much further — inside the oven and microwave, grout scrubbing in bathrooms and kitchen, baseboards and door frames, ceiling fans, window tracks, and removing soap scum and hard water buildup throughout. Deep cleans take 3–6 hours and are recommended once or twice a year.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Is DSM Cleaning Solutions insured and background-checked in Naperville?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. DSM Cleaning Solutions is fully insured and bonded, and every team member is background-checked before their first appointment. We serve all Naperville zip codes — 60540, 60563, 60564, and 60565 — and back every job with a 48-hour satisfaction guarantee.",
+          },
+        },
+      ],
+    },
+    content: `<p>If you've been searching for the <strong>deep cleaning cost in Naperville, IL</strong>, you're in good company. Spring 2026 has brought a surge of homeowners across zip codes 60540, 60563, 60564, and 60565 looking to refresh their homes after a long Illinois winter — and one of the first questions everyone asks is: what should I actually expect to pay? This guide breaks down real 2026 pricing for Naperville homes of every size, what drives the cost up or down, and exactly what you get when you hire a professional cleaning company.</p>
+
+<h2>What Affects the Cost of a Deep Clean in Naperville</h2>
+<p>Deep cleaning isn't one-size-fits-all. Three factors drive the cost more than anything else:</p>
+<ul>
+  <li><strong>Home size:</strong> More square footage means more time and labor. A 1-bedroom condo near downtown Naperville takes far less time than a 4-bedroom home in White Eagle or Ashbury.</li>
+  <li><strong>Number of bathrooms:</strong> Bathrooms are the most labor-intensive rooms in a deep clean. Each additional full bathroom adds meaningful time to the job.</li>
+  <li><strong>Condition of the home:</strong> A home that's had regular professional cleaning takes less time to deep clean than one that hasn't been professionally serviced in over a year. Heavy buildup in grout, ovens, and appliances adds hours to the job — and affects the final price.</li>
+</ul>
+
+<h2>Average Deep Cleaning Prices in Naperville, IL (2026)</h2>
+<p>Here's what Naperville homeowners can expect to pay for a professional deep clean this year:</p>
+<ul>
+  <li><strong>Small home or apartment (under 1,000 sq ft) — $150–$200.</strong> Studios and 1-bedroom units, common near downtown Naperville and the Cress Creek area.</li>
+  <li><strong>Medium home (1,000–2,000 sq ft) — $200–$300.</strong> The most common price range in Naperville, covering 2–3 bedroom homes in Hobson West, River Run, and similar neighborhoods.</li>
+  <li><strong>Large home (2,000–3,000 sq ft) — $300–$400.</strong> Most 4-bedroom homes in White Eagle, Ashbury, and Tall Grass fall in this range.</li>
+  <li><strong>Extra-large home (3,000+ sq ft) — $400 and up.</strong> Larger properties with multiple full bathrooms are priced based on a detailed estimate.</li>
+</ul>
+<p>These ranges reflect the real Naperville market in 2026. Be cautious of quotes that come in significantly below these numbers — that usually signals a surface-level clean, not a genuine deep clean.</p>
+
+<h2>What's Included in a Professional Deep Clean vs. Standard Cleaning</h2>
+<p><a href="/standard-cleaning" class="text-brand-green font-semibold hover:underline">Standard cleaning</a> is maintenance — it covers the basics that keep a clean home looking clean: vacuuming, mopping, wiping counters, and routine bathroom cleaning. A <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">professional deep clean</a> is a full reset. It covers everything standard cleaning skips:</p>
+<ul>
+  <li>Inside the oven, microwave, and refrigerator</li>
+  <li>Scrubbing grout lines in kitchens and bathrooms</li>
+  <li>Wiping down baseboards and door frames throughout the home</li>
+  <li>Cleaning ceiling fans, light fixtures, and window sills and tracks</li>
+  <li>Degreasing the range hood and all appliance exteriors</li>
+  <li>Removing soap scum and hard water buildup from showers and tubs</li>
+</ul>
+<p>A deep clean typically takes 3–6 hours depending on your home's size and condition, and is recommended once or twice a year, with standard recurring cleaning in between to maintain results.</p>
+
+<h2>Why the Cheapest Quote Isn't Always the Best Value in Naperville</h2>
+<p>Naperville homeowners often encounter quotes ranging from $99 to $500+ for a so-called "deep clean." The difference usually comes down to what's actually being cleaned. A $99 quote frequently means a standard cleaning at best — it doesn't account for the time required to scrub grout, clean inside appliances, and work through baseboards and fixtures in a full home. Meanwhile, a quote from a reputable, insured company in the $200–$350 range for a mid-size Naperville home reflects real labor, proper products, and the work a genuine deep clean requires. The cost of redoing a poor clean — or losing a portion of a security deposit because a company skipped key areas — almost always exceeds the price difference.</p>
+
+<h2>What to Look for When Hiring a Deep Cleaning Company in Naperville</h2>
+<p>Before you book anyone, confirm these four things:</p>
+<ul>
+  <li>Are they fully insured and bonded? Ask for proof before letting anyone into your home.</li>
+  <li>Do they background-check every team member?</li>
+  <li>Can they provide a written checklist of what's included in a deep clean? Vague answers are a red flag.</li>
+  <li>Do they back their work with a satisfaction guarantee?</li>
+</ul>
+
+<h2>How DSM Cleaning Solutions Prices Deep Cleans in Naperville</h2>
+<p>At DSM Cleaning Solutions, deep cleaning in Naperville is flat-rate priced by home size — no hidden fees, no surprises after the job. What we quote is what you pay. See the full breakdown on our <a href="/pricing" class="text-brand-green font-semibold hover:underline">pricing page</a>. We serve all Naperville zip codes (60540, 60563, 60564, and 60565), including White Eagle, Ashbury, Cress Creek, Hobson West, and the communities along the Route 59 corridor. Every job uses eco-friendly, non-toxic products safe for children and pets, and is backed by our 48-hour satisfaction guarantee — if something isn't right, we come back and fix it at no charge. After your deep clean, many Naperville clients set up a <a href="/recurring-cleaning" class="text-brand-green font-semibold hover:underline">recurring maid service</a> to maintain results on a biweekly or monthly schedule. Visit our <a href="/deep-cleaning-naperville-il" class="text-brand-green font-semibold hover:underline">Naperville deep cleaning page</a> for full details, or learn more about everything we offer on our <a href="/naperville-il" class="text-brand-green font-semibold hover:underline">Naperville, IL service page</a>.</p>
+
+<h3>Ready for a Professional Deep Clean in Naperville?</h3>
+<p>DSM Cleaning Solutions serves Naperville and the surrounding southwest Chicago suburbs. Get a free estimate today — no obligation required. <a href="/contact" class="text-brand-green font-semibold hover:underline">Get My Free Quote</a> or call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a>.</p>`,
+  },
+  {
+    slug: "best-house-cleaning-service-joliet-il",
+    title: "Best House Cleaning Service in Joliet, IL (2026 Guide)",
+    metaTitle: "Best House Cleaning Service Joliet IL 2026",
+    metaDescription:
+      "Looking for the best house cleaning service in Joliet IL? See what to look for and why DSM Cleaning Solutions is the trusted local choice.",
+    date: "May 4, 2026",
+    dateISO: "2026-05-04",
+    author: "DSM Cleaning Solutions",
+    excerpt:
+      "Looking for a reliable house cleaning service in Joliet, IL? This guide covers what to look for, questions to ask, red flags to avoid, and why DSM Cleaning Solutions is Joliet's trusted local choice.",
+    content: `<p>If you've been searching for a trustworthy <strong>house cleaning service in Joliet, IL</strong>, you're in good company. Joliet is one of the fastest-growing cities in the Chicago metro area, and with more households juggling demanding schedules, the demand for professional home cleaning has never been higher. Whether you're in Ingalls Park, Rock Run, the Cathedral Area, or Forest Park, finding a cleaner that's truly reliable — fully insured, thorough, and actually shows up on time — takes more than a quick Google search. This guide walks you through exactly what to look for, what questions to ask, and what red flags to avoid.</p>
+
+<h2>What to Look for in a House Cleaning Company in Joliet, IL</h2>
+<p>Not all cleaning companies operate the same way. Before you hand over your house key to anyone, there are several non-negotiables worth checking off:</p>
+<ul>
+  <li><strong>Fully insured and bonded.</strong> Ask for a certificate of insurance before booking. If something breaks or a cleaner is injured in your home, you need to know you're protected. Any legitimate company will provide proof without hesitation.</li>
+  <li><strong>Background-checked cleaners.</strong> You're inviting people into your home. Reputable companies run thorough background checks on every team member — not just the owners.</li>
+  <li><strong>A written scope of work.</strong> Before your first appointment, you should know exactly what's included. A vague answer — "we clean everything" — is a red flag. Ask for an itemized list.</li>
+  <li><strong>Transparent, flat-rate pricing.</strong> Hidden fees and surprise charges after the job are common complaints in the industry. Look for a company that quotes you a firm price upfront.</li>
+  <li><strong>A satisfaction guarantee.</strong> Mistakes happen. What separates a professional company from an amateur is how they handle it. A genuine guarantee — in writing — means you have recourse if something is missed.</li>
+</ul>
+
+<h2>Questions to Ask Before Hiring a Cleaner in Joliet</h2>
+<p>When you're evaluating cleaning companies, ask these questions directly. How a company answers tells you a lot about how they operate:</p>
+<ul>
+  <li>Are your cleaners employees or independent contractors? (This affects liability and accountability.)</li>
+  <li>What cleaning products do you use? Are they safe for children and pets?</li>
+  <li>Do you bring your own supplies and equipment, or do I need to provide anything?</li>
+  <li>What's your process if I'm not satisfied with the clean?</li>
+  <li>Can you show me Google reviews or references from customers in Joliet?</li>
+  <li>What is your cancellation and rescheduling policy?</li>
+</ul>
+
+<h2>Red Flags to Watch Out for When Hiring in Joliet</h2>
+<p>The cleaning industry has a low barrier to entry, which means it attracts some operators who cut corners. Here's what to watch out for:</p>
+<ul>
+  <li>No proof of insurance. This is a dealbreaker — never skip this step.</li>
+  <li>Prices that seem dramatically lower than competitors. Extremely low rates often mean uninsured workers, substandard products, or rushed service.</li>
+  <li>Cash-only payment with no contract or receipt. A legitimate business accepts normal payment methods and provides documentation.</li>
+  <li>No satisfaction guarantee or a guarantee full of loopholes and conditions.</li>
+  <li>Pressure tactics — urgency to book immediately or deals that expire in minutes.</li>
+  <li>No verifiable online presence, reviews, or way to confirm the company is legitimate.</li>
+</ul>
+
+<h2>What Makes DSM Cleaning Solutions the Best Choice in Joliet</h2>
+<p>DSM Cleaning Solutions is a family-owned, fully insured cleaning company serving Joliet and the surrounding southwest suburbs. Every member of our team is background-checked before their first job, and we carry full liability insurance on every clean. We use eco-friendly, non-toxic products that are safe for children, pets, and all surfaces — no harsh chemicals, no shortcuts.</p>
+<p>We serve all Joliet zip codes — <strong>60431, 60432, 60433, 60435, and 60436</strong> — including homes in Ingalls Park, Rock Run, the Cathedral Area, and Forest Park. Whether your home is a ranch near downtown or a larger property in the western neighborhoods, our team has the experience to clean it right. And every job is backed by our 48-hour satisfaction guarantee: if anything is missed, we come back and fix it at no charge. Visit our <a href="/joliet-il" class="text-brand-green font-semibold hover:underline">Joliet, IL service page</a> to learn more about our coverage area.</p>
+
+<h2>Cleaning Services DSM Offers in Joliet, IL</h2>
+<p>We offer four core services for Joliet homeowners, and each one is priced transparently with no hidden fees:</p>
+<ul>
+  <li><strong>Standard Cleaning:</strong> Our <a href="/standard-cleaning-joliet-il" class="text-brand-green font-semibold hover:underline">standard cleaning service in Joliet</a> is ideal for regular maintenance — biweekly or monthly visits that keep your home consistently clean without the deep-clean price tag.</li>
+  <li><strong>Deep Cleaning:</strong> Our <a href="/deep-cleaning-joliet-il" class="text-brand-green font-semibold hover:underline">deep cleaning service in Joliet</a> goes beyond the surface — scrubbing grout, cleaning inside appliances, wiping baseboards, and tackling every area that routine cleaning skips. Perfect for a seasonal reset or first-time clients.</li>
+  <li><strong>Move-Out Cleaning:</strong> Moving out of a Joliet rental? Our <a href="/move-out-cleaning-joliet-il" class="text-brand-green font-semibold hover:underline">move-out cleaning service</a> covers everything landlords check — oven interiors, cabinet interiors, window sills, and every floor surface — so you walk away with your deposit.</li>
+  <li><strong>Recurring Cleaning Plans:</strong> Set it and forget it. Our <a href="/recurring-cleaning" class="text-brand-green font-semibold hover:underline">recurring cleaning plans</a> give you a reliable schedule and discounted rates compared to one-time bookings. Many of our Joliet clients have been on recurring plans for over a year.</li>
+</ul>
+
+<p>All services are transparently priced — visit our <a href="/pricing" class="text-brand-green font-semibold hover:underline">pricing page</a> for a full flat-rate breakdown by home size.</p>
+
+<h3>Ready for a Professional Clean in Joliet?</h3>
+<p>DSM Cleaning Solutions serves Joliet and the surrounding southwest Chicago suburbs. Get a free estimate today — no obligation required. <a href="/contact" class="text-brand-green font-semibold hover:underline">Get My Free Quote</a> or call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a>.</p>`,
+    faqSchema: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What should I look for in a house cleaning service in Joliet, IL?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Look for a company that is fully insured and bonded, background-checks all cleaners, provides a written scope of work, offers transparent flat-rate pricing, and backs their service with a satisfaction guarantee.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Does DSM Cleaning Solutions serve all Joliet zip codes?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. DSM Cleaning Solutions serves all Joliet zip codes including 60431, 60432, 60433, 60435, and 60436, covering neighborhoods like Ingalls Park, Rock Run, the Cathedral Area, and Forest Park.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What cleaning services does DSM offer in Joliet?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "DSM Cleaning Solutions offers standard cleaning, deep cleaning, move-out cleaning, and recurring cleaning plans for Joliet homeowners. All services are flat-rate priced with no hidden fees.",
+          },
+        },
+      ],
+    },
   },
   {
     slug: "how-to-prepare-for-move-out-cleaning-plainfield",
@@ -856,9 +1155,12 @@ export const blogPosts: BlogPost[] = [
 <p>For homes that also need a thorough allergen reset or heavy buildup addressed, our <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning service</a> can be added as an upgrade. Ask us when you book.</p>
 
 <h2>How Far in Advance Should I Book?</h2>
-<p>We recommend booking your move-out cleaning at least 5–7 days before your move-out date. Move-out season (May through August) fills up fast in the <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield</a> and <a href="/naperville-il" class="text-brand-green font-semibold hover:underline">Naperville</a> areas. The sooner you schedule, the better your chances of getting your preferred date and time.</p>
+<p>We recommend booking your move-out cleaning at least 5–7 days before your move-out date. Move-out season (May through August) fills up fast in the <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield</a> and <a href="/naperville-il" class="text-brand-green font-semibold hover:underline">Naperville</a> areas. The sooner you schedule, the better your chances of getting your preferred date and time. For Plainfield-specific move-out details, see our <a href="/move-out-cleaning-plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield move-out cleaning page</a>. All pricing is flat-rate and transparent — view rates on our <a href="/pricing" class="text-brand-green font-semibold hover:underline">pricing page</a>.</p>
 
 <h2>Serving Plainfield, Naperville, Romeoville &amp; Bolingbrook</h2>
-<p>DSM Cleaning Solutions is locally owned and based in Plainfield, IL. We handle move-out cleanings across Will County and DuPage County — including <a href="/naperville-il" class="text-brand-green font-semibold hover:underline">Naperville</a>, <a href="/bolingbrook-il" class="text-brand-green font-semibold hover:underline">Bolingbrook</a>, and the surrounding suburbs. We're 5-star rated with a 48-hour satisfaction guarantee on every job. Call us at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or book online below.</p>`,
+<p>DSM Cleaning Solutions is locally owned and based in Plainfield, IL. We handle move-out cleanings across Will County and DuPage County — including <a href="/naperville-il" class="text-brand-green font-semibold hover:underline">Naperville</a>, <a href="/bolingbrook-il" class="text-brand-green font-semibold hover:underline">Bolingbrook</a>, and the surrounding suburbs. We're 5-star rated with a 48-hour satisfaction guarantee on every job.</p>
+
+<h3>Ready for a Professional Move-Out Clean in Plainfield?</h3>
+<p>DSM Cleaning Solutions serves Plainfield, Naperville, and the surrounding southwest Chicago suburbs. Get a free estimate today — no obligation required. <a href="/contact" class="text-brand-green font-semibold hover:underline">Get My Free Quote</a> or call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a>.</p>`,
   },
 ];

@@ -8,6 +8,19 @@ export const metadata: Metadata = {
   description: "No-commitment one-time cleaning in Plainfield, IL. Great for events, moving, or seasonal resets. Eco-friendly & insured. Free estimate — no contract.",
   keywords: ["one time cleaning Romeoville IL", "one time house cleaning Romeoville", "single visit cleaning Romeoville", "no contract cleaning Romeoville IL", "house cleaning no commitment Romeoville", "one time maid service Romeoville IL"],
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/one-time-cleaning" },
+  openGraph: {
+    title: "One-Time Cleaning Plainfield IL | DSM Cleaning Solutions",
+    description: "No-commitment one-time cleaning in Plainfield, IL. Great for events, moving, or seasonal resets. Eco-friendly & insured. Free estimate — no contract.",
+    url: "https://www.dsmcleaningsolutions.com/one-time-cleaning",
+    siteName: "DSM Cleaning Solutions",
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions — One-Time House Cleaning in Plainfield IL" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "One-Time Cleaning Plainfield IL | DSM Cleaning Solutions",
+    description: "No-commitment one-time cleaning in Plainfield, IL. Great for events, moving, or seasonal resets. Eco-friendly & insured.",
+    images: ["/hero-image.png"],
+  },
 };
 
 const faqs = [
@@ -81,7 +94,7 @@ export default function OneTimeCleaningPage() {
             <p className="text-xl text-white/80 mb-8 leading-relaxed">No contracts, no commitments — just a thorough professional clean when you need it. Perfect for special occasions, seasonal resets, or whenever life calls for a spotless home.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg text-base font-bold">Get a Free Estimate</Link>
-              <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn-outline-white btn-lg text-base">Book Now Online</Link>
+              <Link href="/book" className="btn-outline-white btn-lg text-base">Book Now Online</Link>
             </div>
           </div>
         </div>

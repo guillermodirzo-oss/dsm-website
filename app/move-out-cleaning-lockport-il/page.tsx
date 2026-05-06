@@ -13,33 +13,37 @@ export const metadata: Metadata = {
       "Move-out cleaning in Lockport IL by DSM Cleaning Solutions. Get your deposit back. Fully insured. Call (815) 246-2113.",
     url: "https://www.dsmcleaningsolutions.com/move-out-cleaning-lockport-il",
   },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/hero-image.png"],
+  },
 };
 
 const faqs = [
   {
     question: "Can you help me get my security deposit back in Lockport?",
     answer:
-      "Yes — our Lockport move-out cleaning is specifically designed to meet landlord inspection standards. We clean every surface, inside every appliance, and inside every cabinet so your property looks move-in ready and you have the best possible chance of getting your full security deposit back.",
+      "Yes Ã¢â‚¬â€ our Lockport move-out cleaning is specifically designed to meet landlord inspection standards. We clean every surface, inside every appliance, and inside every cabinet so your property looks move-in ready and you have the best possible chance of getting your full security deposit back.",
   },
   {
     question: "How far in advance should I book move-out cleaning in Lockport?",
     answer:
-      "We recommend booking at least 3–5 days before your move-out date to secure your preferred time slot. For urgent requests in Lockport, call us at (815) 246-2113 and we'll do our best to accommodate your timeline.",
+      "We recommend booking at least 3Ã¢â‚¬â€œ5 days before your move-out date to secure your preferred time slot. For urgent requests in Lockport, call us at (815) 246-2113 and we'll do our best to accommodate your timeline.",
   },
   {
     question: "Do you clean inside appliances during Lockport move-out cleans?",
     answer:
-      "Yes — appliances are a core part of our move-out service. We clean inside and outside the oven (including oven racks), inside and outside the refrigerator, inside the microwave, and the dishwasher interior. These are the areas most likely to be flagged during a landlord inspection.",
+      "Yes Ã¢â‚¬â€ appliances are a core part of our move-out service. We clean inside and outside the oven (including oven racks), inside and outside the refrigerator, inside the microwave, and the dishwasher interior. These are the areas most likely to be flagged during a landlord inspection.",
   },
   {
     question: "How long does a Lockport move-out clean take?",
     answer:
-      "A move-out clean in Lockport typically takes 4–7 hours for an average-sized home. Larger homes in Lockport Estates or Heritage Woods, or properties that haven't been professionally cleaned in a while, may take longer. We'll give you an accurate estimate when you contact us.",
+      "A move-out clean in Lockport typically takes 4Ã¢â‚¬â€œ7 hours for an average-sized home. Larger homes in Lockport Estates or Heritage Woods, or properties that haven't been professionally cleaned in a while, may take longer. We'll give you an accurate estimate when you contact us.",
   },
   {
     question: "Do you serve all zip codes in Lockport IL 60441?",
     answer:
-      "Yes — we serve all of Lockport, IL under zip code 60441, including Lockport Estates, Heritage Woods, Milne Grove, Downtown Lockport, Dellwood Park, and all surrounding areas. If you're in Lockport, we come to you.",
+      "Yes Ã¢â‚¬â€ we serve all of Lockport, IL under zip code 60441, including Lockport Estates, Heritage Woods, Milne Grove, Downtown Lockport, Dellwood Park, and all surrounding areas. If you're in Lockport, we come to you.",
   },
 ];
 
@@ -126,12 +130,12 @@ const checklist = [
 ];
 
 const trustCards = [
-  { icon: "💰", title: "Deposit-Back Focused", desc: "Designed to meet landlord inspection standards in Lockport, IL." },
-  { icon: "🛡️", title: "Fully Insured & Bonded", desc: "Background-checked team. Every Lockport job fully covered." },
-  { icon: "✅", title: "48-Hour Guarantee", desc: "If your landlord isn't satisfied, we re-clean at no charge." },
-  { icon: "👨‍👩‍👧", title: "Family Owned", desc: "Based in nearby Romeoville — your trusted southwest suburbs neighbors." },
-  { icon: "📅", title: "Flexible Scheduling", desc: "Book around your move-out timeline in Lockport." },
-  { icon: "📍", title: "Serving Lockport", desc: "All neighborhoods throughout zip code 60441." },
+  { icon: "Ã°Å¸â€™Â°", title: "Deposit-Back Focused", desc: "Designed to meet landlord inspection standards in Lockport, IL." },
+  { icon: "Ã°Å¸â€ºÂ¡Ã¯Â¸Â", title: "Fully Insured & Bonded", desc: "Background-checked team. Every Lockport job fully covered." },
+  { icon: "Ã¢Å“â€¦", title: "48-Hour Guarantee", desc: "If your landlord isn't satisfied, we re-clean at no charge." },
+  { icon: "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§", title: "Family Owned", desc: "Based in nearby Romeoville Ã¢â‚¬â€ your trusted southwest suburbs neighbors." },
+  { icon: "Ã°Å¸â€œâ€¦", title: "Flexible Scheduling", desc: "Book around your move-out timeline in Lockport." },
+  { icon: "Ã°Å¸â€œÂ", title: "Serving Lockport", desc: "All neighborhoods throughout zip code 60441." },
 ];
 
 export default function MoveOutCleaningLockportPage() {
@@ -162,12 +166,12 @@ export default function MoveOutCleaningLockportPage() {
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               DSM Cleaning Solutions delivers a landlord-approved, deposit-back move-out clean for
-              Lockport homes and apartments throughout zip code 60441 — from Lockport Estates to
-              Dellwood Park — with a comprehensive clean built to pass any inspection.
+              Lockport homes and apartments throughout zip code 60441 Ã¢â‚¬â€ from Lockport Estates to
+              Dellwood Park Ã¢â‚¬â€ with a comprehensive clean built to pass any inspection.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
-              <a href="tel:+18152462113" className="btn-outline-white btn-lg">📞 (815) 246-2113</a>
+              <a href="tel:+18152462113" className="btn-outline-white btn-lg">Ã°Å¸â€œÅ¾ (815) 246-2113</a>
             </div>
           </div>
         </div>
@@ -177,7 +181,7 @@ export default function MoveOutCleaningLockportPage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["✅ Fully Insured & Bonded", "🌿 Eco-Friendly Products", "👨‍👩‍👧 Family Owned", "⭐ 5-Star Rated", "✔️ Satisfaction Guaranteed"].map(
+            {["Ã¢Å“â€¦ Fully Insured & Bonded", "Ã°Å¸Å’Â¿ Eco-Friendly Products", "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§ Family Owned", "Ã¢Â­Â 5-Star Rated", "Ã¢Å“â€Ã¯Â¸Â Satisfaction Guaranteed"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -187,7 +191,7 @@ export default function MoveOutCleaningLockportPage() {
       {/* INTRO */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading mb-6">Move-Out Cleaning in Lockport, IL — Built to Get Your Deposit Back</h2>
+          <h2 className="section-heading mb-6">Move-Out Cleaning in Lockport, IL Ã¢â‚¬â€ Built to Get Your Deposit Back</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Move-out cleaning in Lockport, IL is one of DSM Cleaning Solutions&apos; most requested
             services in Will County. Lockport renters in Lockport Estates, Heritage Woods, Milne
@@ -197,7 +201,7 @@ export default function MoveOutCleaningLockportPage() {
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Our Lockport move-out cleaning isn&apos;t a surface-level wipe-down. We clean inside every
-            appliance, inside every cabinet, inside every closet — every corner that a landlord
+            appliance, inside every cabinet, inside every closet Ã¢â‚¬â€ every corner that a landlord
             or property manager is likely to inspect. The goal is simple: leave the property in
             better condition than when you first moved in. DSM is based in nearby Romeoville, so
             we can respond quickly and work around your move-out schedule without issue.
@@ -265,15 +269,15 @@ export default function MoveOutCleaningLockportPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading mb-6">How Much Does Move-Out Cleaning Cost in Lockport, IL?</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Move-out cleaning in Lockport starts around $150–$250 for most homes, depending on size,
+            Move-out cleaning in Lockport starts around $150Ã¢â‚¬â€œ$250 for most homes, depending on size,
             number of bathrooms, and current condition. Larger homes in Lockport Estates or Heritage
             Woods with multiple bathrooms and full appliance cleaning may be priced higher. We
-            recommend booking at least 3–5 days before your move-out date to secure your preferred
+            recommend booking at least 3Ã¢â‚¬â€œ5 days before your move-out date to secure your preferred
             slot.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
             Every Lockport client receives a free, no-obligation estimate before booking. We&apos;re
-            transparent about our pricing — no surprises, no hidden add-ons after the job.
+            transparent about our pricing Ã¢â‚¬â€ no surprises, no hidden add-ons after the job.
           </p>
           <Link href="/contact" className="btn-primary">Get My Free Lockport Quote</Link>
         </div>
@@ -336,13 +340,13 @@ export default function MoveOutCleaningLockportPage() {
               <h2 className="text-4xl font-bold mb-4">Book Your Move-Out Cleaning in Lockport Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Moving out in Lockport, IL? Get your free quote today. We serve all of 60441 and
-                back every move-out job with our satisfaction guarantee — your deposit back or
+                back every move-out job with our satisfaction guarantee Ã¢â‚¬â€ your deposit back or
                 we re-clean at no charge.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                📞 (815) 246-2113
+                Ã°Å¸â€œÅ¾ (815) 246-2113
               </a>
-              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Deposit-back focused</p>
+              <p className="text-white/80">Family-owned Ã‚Â· Eco-friendly Ã‚Â· Fully insured Ã‚Â· Deposit-back focused</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <BookingForm />

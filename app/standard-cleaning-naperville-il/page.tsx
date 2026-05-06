@@ -5,13 +5,17 @@ import BookingForm from "@/components/BookingForm";
 export const metadata: Metadata = {
   title: "Standard Cleaning Services Naperville IL",
   description:
-    "Professional house cleaning in Naperville, IL. Recurring or one-time — DSM Cleaning Solutions keeps your home spotless. Insured & eco-friendly. Call today.",
+    "Professional house cleaning in Naperville, IL. Recurring or one-time Ã¢â‚¬â€ DSM Cleaning Solutions keeps your home spotless. Insured & eco-friendly. Call today.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/standard-cleaning-naperville-il" },
   openGraph: {
     title: "Standard Cleaning Services Naperville IL",
     description:
-      "Professional house cleaning in Naperville, IL. Recurring or one-time — DSM Cleaning Solutions keeps your home spotless. Insured & eco-friendly. Call today.",
+      "Professional house cleaning in Naperville, IL. Recurring or one-time Ã¢â‚¬â€ DSM Cleaning Solutions keeps your home spotless. Insured & eco-friendly. Call today.",
     url: "https://www.dsmcleaningsolutions.com/standard-cleaning-naperville-il",
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/hero-image.png"],
   },
 };
 
@@ -19,17 +23,17 @@ const faqs = [
   {
     question: "How often should I schedule standard cleaning in Naperville, IL?",
     answer:
-      "Naperville homeowners most often choose biweekly service — it&apos;s our most popular plan. Families with young children, pets, or high-traffic homes often prefer weekly. If you keep up light maintenance in between, monthly works well too.",
+      "Naperville homeowners most often choose biweekly service Ã¢â‚¬â€ it&apos;s our most popular plan. Families with young children, pets, or high-traffic homes often prefer weekly. If you keep up light maintenance in between, monthly works well too.",
   },
   {
     question: "Do you serve the Cress Creek and Hobson West neighborhoods in Naperville?",
     answer:
-      "Yes — we serve all of Naperville including Cress Creek, Hobson West, Ashbury, White Eagle, and every area across zip codes 60540, 60563, 60564, and 60565.",
+      "Yes Ã¢â‚¬â€ we serve all of Naperville including Cress Creek, Hobson West, Ashbury, White Eagle, and every area across zip codes 60540, 60563, 60564, and 60565.",
   },
   {
     question: "How much does standard house cleaning cost in Naperville, IL?",
     answer:
-      "Standard cleaning in Naperville starts around $120–$180 for an average home. Larger homes in White Eagle or Ashbury may be priced higher. Recurring clients receive a discounted rate. We always provide a free estimate before booking.",
+      "Standard cleaning in Naperville starts around $120Ã¢â‚¬â€œ$180 for an average home. Larger homes in White Eagle or Ashbury may be priced higher. Recurring clients receive a discounted rate. We always provide a free estimate before booking.",
   },
   {
     question: "Do I need to be home for my standard cleaning in Naperville?",
@@ -39,7 +43,7 @@ const faqs = [
   {
     question: "Is DSM Cleaning Solutions insured for work in Naperville, IL?",
     answer:
-      "Yes — DSM Cleaning Solutions is fully insured and bonded throughout Illinois, including Naperville. Every visit is covered, giving you complete peace of mind.",
+      "Yes Ã¢â‚¬â€ DSM Cleaning Solutions is fully insured and bonded throughout Illinois, including Naperville. Every visit is covered, giving you complete peace of mind.",
   },
 ];
 
@@ -60,7 +64,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Professional house cleaning in Naperville, IL. Recurring or one-time — DSM Cleaning Solutions keeps your home spotless. Insured & eco-friendly. Call today.",
+    "Professional house cleaning in Naperville, IL. Recurring or one-time Ã¢â‚¬â€ DSM Cleaning Solutions keeps your home spotless. Insured & eco-friendly. Call today.",
 };
 
 const faqSchema = {
@@ -120,12 +124,12 @@ const checklist = [
 ];
 
 const trustCards = [
-  { icon: "🌿", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products — safe for Naperville families." },
-  { icon: "🛡️", title: "Fully Insured & Bonded", desc: "Background-checked team. Your Naperville home is fully protected." },
-  { icon: "✅", title: "48-Hour Guarantee", desc: "Not satisfied? We re-clean at no charge within 48 hours." },
-  { icon: "👨‍👩‍👧", title: "Family Owned", desc: "Local southwest suburbs business — not a national chain." },
-  { icon: "📅", title: "7 Days a Week", desc: "Flexible scheduling for busy Naperville households." },
-  { icon: "📍", title: "Serving Naperville", desc: "All neighborhoods — 60540, 60563, 60564 & 60565." },
+  { icon: "Ã°Å¸Å’Â¿", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products Ã¢â‚¬â€ safe for Naperville families." },
+  { icon: "Ã°Å¸â€ºÂ¡Ã¯Â¸Â", title: "Fully Insured & Bonded", desc: "Background-checked team. Your Naperville home is fully protected." },
+  { icon: "Ã¢Å“â€¦", title: "48-Hour Guarantee", desc: "Not satisfied? We re-clean at no charge within 48 hours." },
+  { icon: "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§", title: "Family Owned", desc: "Local southwest suburbs business Ã¢â‚¬â€ not a national chain." },
+  { icon: "Ã°Å¸â€œâ€¦", title: "7 Days a Week", desc: "Flexible scheduling for busy Naperville households." },
+  { icon: "Ã°Å¸â€œÂ", title: "Serving Naperville", desc: "All neighborhoods Ã¢â‚¬â€ 60540, 60563, 60564 & 60565." },
 ];
 
 export default function StandardCleaningNapervillePage() {
@@ -155,13 +159,13 @@ export default function StandardCleaningNapervillePage() {
               Standard Cleaning in Naperville, IL
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              DSM Cleaning Solutions keeps Naperville homes consistently spotless — on your schedule.
+              DSM Cleaning Solutions keeps Naperville homes consistently spotless Ã¢â‚¬â€ on your schedule.
               From White Eagle to Cress Creek, we offer weekly, biweekly, and monthly house cleaning
               across all four Naperville zip codes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
-              <a href="tel:+18152462113" className="btn-outline-white btn-lg">📞 (815) 246-2113</a>
+              <a href="tel:+18152462113" className="btn-outline-white btn-lg">Ã°Å¸â€œÅ¾ (815) 246-2113</a>
             </div>
           </div>
         </div>
@@ -171,7 +175,7 @@ export default function StandardCleaningNapervillePage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["✅ Fully Insured & Bonded", "🌿 Eco-Friendly Products", "👨‍👩‍👧 Family Owned", "⭐ 5-Star Rated", "✔️ Satisfaction Guaranteed"].map(
+            {["Ã¢Å“â€¦ Fully Insured & Bonded", "Ã°Å¸Å’Â¿ Eco-Friendly Products", "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§ Family Owned", "Ã¢Â­Â 5-Star Rated", "Ã¢Å“â€Ã¯Â¸Â Satisfaction Guaranteed"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -183,22 +187,22 @@ export default function StandardCleaningNapervillePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading mb-6">Professional House Cleaning Services in Naperville, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Professional house cleaning in Naperville, IL means a team you can count on — and that&apos;s
+            Professional house cleaning in Naperville, IL means a team you can count on Ã¢â‚¬â€ and that&apos;s
             exactly what DSM Cleaning Solutions delivers. We serve all of Naperville across zip codes
             60540, 60563, 60564, and 60565, bringing reliable, thorough cleaning to neighborhoods
             including Cress Creek, Hobson West, Ashbury, and White Eagle.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Naperville is a busy, high-achieving community — and its residents deserve a cleaning service
+            Naperville is a busy, high-achieving community Ã¢â‚¬â€ and its residents deserve a cleaning service
             that keeps pace. Whether you&apos;re managing a full household near Centennial Beach or a working
             professional near Downtown Naperville, we build a cleaning plan around your life, not a
-            one-size-fits-all schedule. One-time, recurring, or just when you need it — we work on
+            one-size-fits-all schedule. One-time, recurring, or just when you need it Ã¢â‚¬â€ we work on
             your terms.
           </p>
           <p className="text-gray-600 leading-relaxed">
-            We use eco-friendly, non-toxic products on every visit — because Naperville homes deserve
+            We use eco-friendly, non-toxic products on every visit Ã¢â‚¬â€ because Naperville homes deserve
             a clean that&apos;s also healthy. DSM is fully insured, family-owned, and rooted in the southwest
-            suburbs. When you book with us, you&apos;re not calling a call center — you&apos;re calling your
+            suburbs. When you book with us, you&apos;re not calling a call center Ã¢â‚¬â€ you&apos;re calling your
             neighbors.
           </p>
         </div>
@@ -210,7 +214,7 @@ export default function StandardCleaningNapervillePage() {
           <div className="text-center mb-12">
             <h2 className="section-heading">What&apos;s Included in Our Standard Cleaning in Naperville, IL</h2>
             <p className="section-subheading mx-auto">
-              Every room covered, every visit — here&apos;s exactly what our Naperville team cleans.
+              Every room covered, every visit Ã¢â‚¬â€ here&apos;s exactly what our Naperville team cleans.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -258,14 +262,14 @@ export default function StandardCleaningNapervillePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading mb-6">How Much Does Standard Cleaning Cost in Naperville, IL?</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Standard cleaning in Naperville typically starts around $120–$180 for an average-sized home.
+            Standard cleaning in Naperville typically starts around $120Ã¢â‚¬â€œ$180 for an average-sized home.
             Larger homes in neighborhoods like Ashbury or White Eagle may be priced higher based on
-            square footage and bathroom count. Clients who sign up for recurring service — weekly or
-            biweekly — receive discounted rates on every visit.
+            square footage and bathroom count. Clients who sign up for recurring service Ã¢â‚¬â€ weekly or
+            biweekly Ã¢â‚¬â€ receive discounted rates on every visit.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
             We always provide a free, no-obligation estimate before your first appointment. Tell us about
-            your Naperville home and we&apos;ll give you a clear, upfront price — no guessing, no hidden fees.
+            your Naperville home and we&apos;ll give you a clear, upfront price Ã¢â‚¬â€ no guessing, no hidden fees.
           </p>
           <Link href="/contact" className="btn-primary">Get My Free Naperville Quote</Link>
         </div>
@@ -323,14 +327,14 @@ export default function StandardCleaningNapervillePage() {
             <div className="text-white">
               <h2 className="text-4xl font-bold mb-4">Book Your Standard Cleaning in Naperville Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                Ready for a consistently clean home in Naperville? Get your free estimate — we serve
+                Ready for a consistently clean home in Naperville? Get your free estimate Ã¢â‚¬â€ we serve
                 all of 60540, 60563, 60564, and 60565 and back every clean with our
                 48-hour satisfaction guarantee.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                📞 (815) 246-2113
+                Ã°Å¸â€œÅ¾ (815) 246-2113
               </a>
-              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
+              <p className="text-white/80">Family-owned Ã‚Â· Eco-friendly Ã‚Â· Fully insured Ã‚Â· Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <BookingForm />

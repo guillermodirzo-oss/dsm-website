@@ -197,6 +197,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/blog/house-cleaning-services-bolingbrook-il`,
+      lastModified: new Date("2026-05-01"),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/how-much-does-deep-cleaning-cost-naperville-il`,
+      lastModified: new Date("2026-05-01"),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/best-house-cleaning-service-joliet-il`,
+      lastModified: new Date("2026-05-04"),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/deep-cleaning-plainfield-il`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
@@ -395,6 +413,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
+      url: `${baseUrl}/deep-cleaning-new-lenox-il`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/standard-cleaning-new-lenox-il`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/move-out-cleaning-new-lenox-il`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+    },
+    {
       url: `${baseUrl}/deep-cleaning/naperville`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
@@ -423,6 +459,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/book`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/pricing`,

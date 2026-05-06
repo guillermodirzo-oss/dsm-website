@@ -7,6 +7,28 @@ export const metadata: Metadata = {
   description:
     "Cleaning tips, checklists, and local guides from DSM Cleaning Solutions — serving Plainfield, Romeoville, Naperville & the southwest Chicago suburbs.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/blog" },
+  openGraph: {
+    title: "Cleaning Tips & Local Guides | DSM Cleaning Solutions",
+    description:
+      "Cleaning tips, checklists, and local guides from DSM Cleaning Solutions — serving Plainfield, Romeoville, Naperville & the southwest Chicago suburbs.",
+    url: "https://www.dsmcleaningsolutions.com/blog",
+    siteName: "DSM Cleaning Solutions",
+    images: [
+      {
+        url: "/hero-image.png",
+        width: 1200,
+        height: 630,
+        alt: "DSM Cleaning Solutions Blog — Cleaning Tips & Local Guides",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cleaning Tips & Local Guides | DSM Cleaning Solutions",
+    description:
+      "Cleaning tips, checklists, and local guides from DSM Cleaning Solutions — serving Plainfield, Romeoville, Naperville & the southwest Chicago suburbs.",
+    images: ["/hero-image.png"],
+  },
 };
 
 export default function BlogIndexPage() {
@@ -89,7 +111,7 @@ export default function BlogIndexPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
-              href="https://dsmcleaningsolutions.bookingkoala.com/booknow"
+              href="/book"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-brand-green font-bold px-8 py-3.5 rounded-full hover:bg-gray-50 transition-colors shadow-md"

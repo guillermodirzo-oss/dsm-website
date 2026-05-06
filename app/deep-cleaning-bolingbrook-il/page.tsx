@@ -13,18 +13,22 @@ export const metadata: Metadata = {
       "Professional deep cleaning in Bolingbrook, IL. DSM Cleaning Solutions delivers thorough, detail-oriented deep cleans for homes across Bolingbrook. 5-star rated. Book today.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning-bolingbrook-il",
   },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/hero-image.png"],
+  },
 };
 
 const faqs = [
   {
     question: "How long does a deep clean take in Bolingbrook?",
     answer:
-      "Most deep cleaning jobs in Bolingbrook take 3–6 hours depending on the size and current condition of your home. A 2-bedroom home may take around 3 hours, while a larger home in Stillwater or Lakewood Estates could take 5–6 hours or more.",
+      "Most deep cleaning jobs in Bolingbrook take 3Ã¢â‚¬â€œ6 hours depending on the size and current condition of your home. A 2-bedroom home may take around 3 hours, while a larger home in Stillwater or Lakewood Estates could take 5Ã¢â‚¬â€œ6 hours or more.",
   },
   {
     question: "Do I need to be home during the deep clean?",
     answer:
-      "You don't have to be home. Many Bolingbrook clients provide a key or access code. Every member of our team is background-checked, insured, and bonded — your home is fully protected whether you're present or not.",
+      "You don't have to be home. Many Bolingbrook clients provide a key or access code. Every member of our team is background-checked, insured, and bonded Ã¢â‚¬â€ your home is fully protected whether you're present or not.",
   },
   {
     question: "What areas of Bolingbrook do you serve?",
@@ -34,12 +38,12 @@ const faqs = [
   {
     question: "Is your deep cleaning service insured in Bolingbrook?",
     answer:
-      "Yes — DSM Cleaning Solutions is fully insured and bonded in Illinois, including all of Bolingbrook. We carry liability insurance on every job so you can book with complete peace of mind.",
+      "Yes Ã¢â‚¬â€ DSM Cleaning Solutions is fully insured and bonded in Illinois, including all of Bolingbrook. We carry liability insurance on every job so you can book with complete peace of mind.",
   },
   {
     question: "How often should Bolingbrook homes get deep cleaned?",
     answer:
-      "We recommend a professional deep clean at least once or twice a year for most Bolingbrook homes. If you have pets, allergies, or a busy household, every 3–4 months is ideal. Many clients pair a deep clean with our recurring standard cleaning service.",
+      "We recommend a professional deep clean at least once or twice a year for most Bolingbrook homes. If you have pets, allergies, or a busy household, every 3Ã¢â‚¬â€œ4 months is ideal. Many clients pair a deep clean with our recurring standard cleaning service.",
   },
 ];
 
@@ -133,12 +137,12 @@ const checklist = [
 ];
 
 const trustCards = [
-  { icon: "🌿", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products safe for kids and pets." },
-  { icon: "🛡️", title: "Fully Insured & Bonded", desc: "Background-checked team. Your Bolingbrook home is fully protected." },
-  { icon: "✅", title: "48-Hour Guarantee", desc: "We re-clean anything that isn't right within 48 hours." },
-  { icon: "👨‍👩‍👧", title: "Family Owned", desc: "Local southwest suburbs business — not a national franchise." },
-  { icon: "📅", title: "7 Days a Week", desc: "Flexible scheduling to fit your Bolingbrook lifestyle." },
-  { icon: "📍", title: "Serving Bolingbrook", desc: "All neighborhoods — zip codes 60440 & 60490." },
+  { icon: "Ã°Å¸Å’Â¿", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products safe for kids and pets." },
+  { icon: "Ã°Å¸â€ºÂ¡Ã¯Â¸Â", title: "Fully Insured & Bonded", desc: "Background-checked team. Your Bolingbrook home is fully protected." },
+  { icon: "Ã¢Å“â€¦", title: "48-Hour Guarantee", desc: "We re-clean anything that isn't right within 48 hours." },
+  { icon: "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§", title: "Family Owned", desc: "Local southwest suburbs business Ã¢â‚¬â€ not a national franchise." },
+  { icon: "Ã°Å¸â€œâ€¦", title: "7 Days a Week", desc: "Flexible scheduling to fit your Bolingbrook lifestyle." },
+  { icon: "Ã°Å¸â€œÂ", title: "Serving Bolingbrook", desc: "All neighborhoods Ã¢â‚¬â€ zip codes 60440 & 60490." },
 ];
 
 export default function DeepCleaningBolingbrookPage() {
@@ -173,12 +177,12 @@ export default function DeepCleaningBolingbrookPage() {
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               DSM Cleaning Solutions delivers a thorough, top-to-bottom deep clean for homes across
-              Bolingbrook — from Naperville Acres to Stillwater and Lakewood Estates. Every surface
+              Bolingbrook Ã¢â‚¬â€ from Naperville Acres to Stillwater and Lakewood Estates. Every surface
               scrubbed, every grout line restored, every appliance cleaned inside and out.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
-              <a href="tel:+18152462113" className="btn-outline-white btn-lg">📞 (815) 246-2113</a>
+              <a href="tel:+18152462113" className="btn-outline-white btn-lg">Ã°Å¸â€œÅ¾ (815) 246-2113</a>
             </div>
           </div>
         </div>
@@ -188,7 +192,7 @@ export default function DeepCleaningBolingbrookPage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["✅ Fully Insured & Bonded", "🌿 Eco-Friendly Products", "👨‍👩‍👧 Family Owned", "⭐ 5-Star Rated", "✔️ Satisfaction Guaranteed"].map(
+            {["Ã¢Å“â€¦ Fully Insured & Bonded", "Ã°Å¸Å’Â¿ Eco-Friendly Products", "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§ Family Owned", "Ã¢Â­Â 5-Star Rated", "Ã¢Å“â€Ã¯Â¸Â Satisfaction Guaranteed"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -200,7 +204,7 @@ export default function DeepCleaningBolingbrookPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading mb-6">Professional Deep Cleaning Services in Bolingbrook, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Deep cleaning in Bolingbrook, IL is our specialty — and DSM Cleaning Solutions brings the
+            Deep cleaning in Bolingbrook, IL is our specialty Ã¢â‚¬â€ and DSM Cleaning Solutions brings the
             same meticulous, detail-focused approach to every home we serve. Whether you live in
             Naperville Acres, Americana Estates, Pheasant Chase, or Stillwater, our team covers zip
             codes 60440 and 60490 with a comprehensive clean that goes far beyond your regular
@@ -208,7 +212,7 @@ export default function DeepCleaningBolingbrookPage() {
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Bolingbrook families choose DSM because we treat every home like our own. We&apos;re not a
-            national franchise — we&apos;re a family-owned business based right here in the southwest
+            national franchise Ã¢â‚¬â€ we&apos;re a family-owned business based right here in the southwest
             suburbs, and we take pride in the results we deliver. From degreasing the kitchen hood
             vent to scrubbing grout lines in your master shower, nothing gets overlooked. Residents
             near the Promenade Bolingbrook, Hidden Lakes, and Bolingbrook Golf Club trust us to
@@ -217,7 +221,7 @@ export default function DeepCleaningBolingbrookPage() {
           <p className="text-gray-600 leading-relaxed">
             Whether you&apos;re preparing for the spring season, getting ready to host guests, or simply
             want a thorough reset after months of normal use, our Bolingbrook deep cleaning service is
-            the answer. We use only eco-friendly, non-toxic products — safe for your children, your
+            the answer. We use only eco-friendly, non-toxic products Ã¢â‚¬â€ safe for your children, your
             pets, and your home environment.
           </p>
         </div>
@@ -229,7 +233,7 @@ export default function DeepCleaningBolingbrookPage() {
           <div className="text-center mb-12">
             <h2 className="section-heading">What&apos;s Included in Our Deep Cleaning in Bolingbrook, IL</h2>
             <p className="section-subheading mx-auto">
-              Every room in your Bolingbrook home — cleaned top to bottom.
+              Every room in your Bolingbrook home Ã¢â‚¬â€ cleaned top to bottom.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -279,12 +283,12 @@ export default function DeepCleaningBolingbrookPage() {
           <p className="text-gray-600 mb-4 leading-relaxed">
             Deep cleaning in Bolingbrook starts around $200 for smaller homes and goes up based on
             the size of your home, the number of bedrooms and bathrooms, and how long it&apos;s been since
-            your last professional clean. A 3–4 bedroom home in Lakewood Estates or Americana Estates
-            typically falls in the $250–$350 range.
+            your last professional clean. A 3Ã¢â‚¬â€œ4 bedroom home in Lakewood Estates or Americana Estates
+            typically falls in the $250Ã¢â‚¬â€œ$350 range.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
             We always provide a free, no-obligation estimate before any work begins. There are no
-            surprises — you&apos;ll know exactly what to expect before we arrive at your Bolingbrook home.
+            surprises Ã¢â‚¬â€ you&apos;ll know exactly what to expect before we arrive at your Bolingbrook home.
           </p>
           <Link href="/contact" className="btn-primary">Get My Free Bolingbrook Quote</Link>
         </div>
@@ -321,7 +325,7 @@ export default function DeepCleaningBolingbrookPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <Link href="/deep-cleaning-plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Plainfield</h3>
-              <p className="text-sm text-gray-600">Serving all of Plainfield — zip codes 60544 & 60585.</p>
+              <p className="text-sm text-gray-600">Serving all of Plainfield Ã¢â‚¬â€ zip codes 60544 & 60585.</p>
             </Link>
             <Link href="/deep-cleaning-naperville-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Naperville</h3>
@@ -347,13 +351,13 @@ export default function DeepCleaningBolingbrookPage() {
               <h2 className="text-4xl font-bold mb-4">Book Your Deep Cleaning in Bolingbrook Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Ready for a home that&apos;s clean from top to bottom? Get your free deep cleaning quote for
-                Bolingbrook, IL — we respond within 1 business day and back every job with our
+                Bolingbrook, IL Ã¢â‚¬â€ we respond within 1 business day and back every job with our
                 48-hour satisfaction guarantee.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                📞 (815) 246-2113
+                Ã°Å¸â€œÅ¾ (815) 246-2113
               </a>
-              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
+              <p className="text-white/80">Family-owned Ã‚Â· Eco-friendly Ã‚Â· Fully insured Ã‚Â· Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <BookingForm />

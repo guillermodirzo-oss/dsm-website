@@ -8,6 +8,19 @@ export const metadata: Metadata = {
   description: "We remove construction dust, debris & residue from new builds & renovations in Plainfield, IL. Fully insured post-construction cleaners. Free estimates.",
   keywords: ["post construction cleaning Romeoville IL", "construction cleanup Romeoville", "after construction cleaning Romeoville", "new construction cleaning Romeoville IL", "renovation cleanup Romeoville", "builder cleanup service Romeoville IL"],
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/post-construction-cleaning" },
+  openGraph: {
+    title: "Post-Construction Cleaning IL | DSM Cleaning Solutions",
+    description: "We remove construction dust, debris & residue from new builds & renovations in Plainfield, IL. Fully insured post-construction cleaners. Free estimates.",
+    url: "https://www.dsmcleaningsolutions.com/post-construction-cleaning",
+    siteName: "DSM Cleaning Solutions",
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions — Post-Construction Cleaning in Plainfield IL" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Post-Construction Cleaning IL | DSM Cleaning Solutions",
+    description: "We remove construction dust, debris & residue from new builds & renovations in Plainfield, IL. Fully insured. Free estimates.",
+    images: ["/hero-image.png"],
+  },
 };
 
 const faqs = [
@@ -90,7 +103,7 @@ export default function PostConstructionCleaningPage() {
             <p className="text-xl text-white/80 mb-8 leading-relaxed">Construction dust, debris, and residue removed — professionally and thoroughly. We make your newly built or renovated space spotless and move-in ready.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg text-base font-bold">Get a Free Estimate</Link>
-              <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn-outline-white btn-lg text-base">Book Now Online</Link>
+              <Link href="/book" className="btn-outline-white btn-lg text-base">Book Now Online</Link>
             </div>
           </div>
         </div>
@@ -123,7 +136,7 @@ export default function PostConstructionCleaningPage() {
               </div>
               <div className="flex gap-3">
                 <Link href="/contact" className="btn-primary">Get a Free Estimate</Link>
-                <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn-secondary">Book Now</Link>
+                <Link href="/book" className="btn-secondary">Book Now</Link>
               </div>
             </div>
             <div className="bg-orange-50 rounded-3xl p-8 border border-orange-100">

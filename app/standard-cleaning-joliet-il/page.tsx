@@ -13,6 +13,10 @@ export const metadata: Metadata = {
       "Recurring house cleaning in Joliet IL by DSM Cleaning Solutions. Trusted, insured & eco-friendly. Call (815) 246-2113.",
     url: "https://www.dsmcleaningsolutions.com/standard-cleaning-joliet-il",
   },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/hero-image.png"],
+  },
 };
 
 const faqs = [
@@ -24,17 +28,17 @@ const faqs = [
   {
     question: "Do you bring your own supplies to Joliet homes?",
     answer:
-      "Yes — we arrive fully equipped with all our eco-friendly, non-toxic cleaning products and equipment. You don't need to supply a thing. Our green products are safe for children and pets throughout your Joliet home.",
+      "Yes Ã¢â‚¬â€ we arrive fully equipped with all our eco-friendly, non-toxic cleaning products and equipment. You don't need to supply a thing. Our green products are safe for children and pets throughout your Joliet home.",
   },
   {
     question: "Are your cleaners background checked in Joliet?",
     answer:
-      "Yes — every member of our cleaning team is background-checked, insured, and bonded. We take the security of your Joliet home seriously, whether you're present during the clean or not.",
+      "Yes Ã¢â‚¬â€ every member of our cleaning team is background-checked, insured, and bonded. We take the security of your Joliet home seriously, whether you're present during the clean or not.",
   },
   {
     question: "Can I customize what gets cleaned each visit in Joliet?",
     answer:
-      "Absolutely. We follow a detailed standard checklist on every visit, but we're flexible. Just let us know if you want extra attention on certain areas — like a heavily used kitchen or a bathroom that sees more traffic — and we'll adjust accordingly.",
+      "Absolutely. We follow a detailed standard checklist on every visit, but we're flexible. Just let us know if you want extra attention on certain areas Ã¢â‚¬â€ like a heavily used kitchen or a bathroom that sees more traffic Ã¢â‚¬â€ and we'll adjust accordingly.",
   },
   {
     question: "What if I need to reschedule my Joliet cleaning?",
@@ -120,12 +124,12 @@ const checklist = [
 ];
 
 const trustCards = [
-  { icon: "🌿", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products safe for your Joliet family." },
-  { icon: "🛡️", title: "Fully Insured & Bonded", desc: "Background-checked team. Your home is fully protected." },
-  { icon: "✅", title: "48-Hour Guarantee", desc: "We re-clean anything that isn't right within 48 hours." },
-  { icon: "👨‍👩‍👧", title: "Family Owned", desc: "Based in nearby Romeoville — your southwest suburbs neighbors." },
-  { icon: "📅", title: "7 Days a Week", desc: "Flexible scheduling to fit your busy Joliet schedule." },
-  { icon: "📍", title: "Serving Joliet", desc: "All neighborhoods — zip codes 60431, 60432, 60433, 60435 & 60436." },
+  { icon: "Ã°Å¸Å’Â¿", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products safe for your Joliet family." },
+  { icon: "Ã°Å¸â€ºÂ¡Ã¯Â¸Â", title: "Fully Insured & Bonded", desc: "Background-checked team. Your home is fully protected." },
+  { icon: "Ã¢Å“â€¦", title: "48-Hour Guarantee", desc: "We re-clean anything that isn't right within 48 hours." },
+  { icon: "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§", title: "Family Owned", desc: "Based in nearby Romeoville Ã¢â‚¬â€ your southwest suburbs neighbors." },
+  { icon: "Ã°Å¸â€œâ€¦", title: "7 Days a Week", desc: "Flexible scheduling to fit your busy Joliet schedule." },
+  { icon: "Ã°Å¸â€œÂ", title: "Serving Joliet", desc: "All neighborhoods Ã¢â‚¬â€ zip codes 60431, 60432, 60433, 60435 & 60436." },
 ];
 
 export default function StandardCleaningJolietPage() {
@@ -157,11 +161,11 @@ export default function StandardCleaningJolietPage() {
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               DSM Cleaning Solutions keeps Joliet homes spotless week after week. Whether you need a
               one-time clean or a recurring schedule in Ingalls Park, Forest Park, or anywhere across
-              Joliet&apos;s zip codes — we&apos;re your trusted local cleaning team.
+              Joliet&apos;s zip codes Ã¢â‚¬â€ we&apos;re your trusted local cleaning team.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
-              <a href="tel:+18152462113" className="btn-outline-white btn-lg">📞 (815) 246-2113</a>
+              <a href="tel:+18152462113" className="btn-outline-white btn-lg">Ã°Å¸â€œÅ¾ (815) 246-2113</a>
             </div>
           </div>
         </div>
@@ -171,7 +175,7 @@ export default function StandardCleaningJolietPage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["✅ Fully Insured & Bonded", "🌿 Eco-Friendly Products", "👨‍👩‍👧 Family Owned", "⭐ 5-Star Rated", "✔️ Satisfaction Guaranteed"].map(
+            {["Ã¢Å“â€¦ Fully Insured & Bonded", "Ã°Å¸Å’Â¿ Eco-Friendly Products", "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§ Family Owned", "Ã¢Â­Â 5-Star Rated", "Ã¢Å“â€Ã¯Â¸Â Satisfaction Guaranteed"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -190,7 +194,7 @@ export default function StandardCleaningJolietPage() {
             leaves your home spotless every single visit.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            We offer flexible scheduling to match your lifestyle — weekly, biweekly, or monthly plans
+            We offer flexible scheduling to match your lifestyle Ã¢â‚¬â€ weekly, biweekly, or monthly plans
             all available. Our biweekly service is the most popular choice among Joliet families
             because it strikes the perfect balance between frequency and cost. For households with
             young children, pets, or a very busy schedule, weekly cleaning keeps everything under
@@ -198,7 +202,7 @@ export default function StandardCleaningJolietPage() {
             genuinely local choice for Joliet homeowners.
           </p>
           <p className="text-gray-600 leading-relaxed">
-            Every visit follows a detailed, consistent checklist — so you always know exactly what
+            Every visit follows a detailed, consistent checklist Ã¢â‚¬â€ so you always know exactly what
             you&apos;re getting. No guessing, no surprises. Just a reliably clean home every time we
             visit your Joliet address.
           </p>
@@ -211,7 +215,7 @@ export default function StandardCleaningJolietPage() {
           <div className="text-center mb-12">
             <h2 className="section-heading">What&apos;s Included in Our Standard Cleaning in Joliet, IL</h2>
             <p className="section-subheading mx-auto">
-              Every room covered on every visit — here&apos;s exactly what our Joliet team cleans.
+              Every room covered on every visit Ã¢â‚¬â€ here&apos;s exactly what our Joliet team cleans.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -259,14 +263,14 @@ export default function StandardCleaningJolietPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading mb-6">How Much Does Standard Cleaning Cost in Joliet, IL?</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Standard cleaning in Joliet starts around $120–$180 for an average-sized home, with
+            Standard cleaning in Joliet starts around $120Ã¢â‚¬â€œ$180 for an average-sized home, with
             pricing based on the number of bedrooms, bathrooms, and your chosen frequency. Recurring
-            clients who book weekly or biweekly service receive a discounted rate — the more we visit,
+            clients who book weekly or biweekly service receive a discounted rate Ã¢â‚¬â€ the more we visit,
             the more you save.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
             We&apos;ll provide a free, no-obligation estimate customized to your Joliet home before your
-            first visit. You&apos;ll always know exactly what you&apos;re paying — no hidden fees, no surprises.
+            first visit. You&apos;ll always know exactly what you&apos;re paying Ã¢â‚¬â€ no hidden fees, no surprises.
           </p>
           <Link href="/contact" className="btn-primary">Get My Free Joliet Quote</Link>
         </div>
@@ -328,13 +332,13 @@ export default function StandardCleaningJolietPage() {
             <div className="text-white">
               <h2 className="text-4xl font-bold mb-4">Book Your Standard Cleaning in Joliet Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                Ready for a reliably clean home in Joliet, IL? Get your free estimate today — we
+                Ready for a reliably clean home in Joliet, IL? Get your free estimate today Ã¢â‚¬â€ we
                 serve all Joliet zip codes and back every clean with our 48-hour satisfaction guarantee.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                📞 (815) 246-2113
+                Ã°Å¸â€œÅ¾ (815) 246-2113
               </a>
-              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
+              <p className="text-white/80">Family-owned Ã‚Â· Eco-friendly Ã‚Â· Fully insured Ã‚Â· Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <BookingForm />

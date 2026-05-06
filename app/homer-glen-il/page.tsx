@@ -16,6 +16,20 @@ export const metadata: Metadata = {
     "recurring cleaning Homer Glen IL",
   ],
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/homer-glen-il" },
+  openGraph: {
+    title: "House Cleaning Homer Glen IL | DSM Cleaning Solutions",
+    description:
+      "Professional house cleaning in Homer Glen, IL — deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & insured. Free estimates.",
+    url: "https://www.dsmcleaningsolutions.com/homer-glen-il",
+    siteName: "DSM Cleaning Solutions",
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions — House Cleaning in Homer Glen IL" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "House Cleaning Homer Glen IL | DSM Cleaning Solutions",
+    description: "Professional house cleaning in Homer Glen, IL — deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & insured.",
+    images: ["/hero-image.png"],
+  },
 };
 
 export default function HomerGlenPage() {

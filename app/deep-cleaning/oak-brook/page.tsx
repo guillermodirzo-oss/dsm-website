@@ -14,6 +14,10 @@ export const metadata: Metadata = {
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning/oak-brook",
     siteName: "DSM Cleaning Solutions",
   },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/hero-image.png"],
+  },
 };
 
 const serviceSchema = {
@@ -45,7 +49,7 @@ const faqSchema = {
       name: "How much does deep cleaning cost in Oak Brook, IL?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Deep cleaning in Oak Brook starts around $225 after seasonal discounts. Most Oak Brook homes — which tend toward larger square footage and premium finishes — fall in the $350–$550+ range. We provide a detailed free estimate before every job with no surprises.",
+        text: "Deep cleaning in Oak Brook starts around $225 after seasonal discounts. Most Oak Brook homes Ã¢â‚¬â€ which tend toward larger square footage and premium finishes Ã¢â‚¬â€ fall in the $350Ã¢â‚¬â€œ$550+ range. We provide a detailed free estimate before every job with no surprises.",
       },
     },
     {
@@ -53,7 +57,7 @@ const faqSchema = {
       name: "Do you serve all of Oak Brook, IL?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes — we serve all of Oak Brook (60523), including areas near Oakbrook Center, Butler National Golf Club, and residential neighborhoods throughout the village. We also serve neighboring Hinsdale, Burr Ridge, Elmhurst, and Downers Grove.",
+        text: "Yes Ã¢â‚¬â€ we serve all of Oak Brook (60523), including areas near Oakbrook Center, Butler National Golf Club, and residential neighborhoods throughout the village. We also serve neighboring Hinsdale, Burr Ridge, Elmhurst, and Downers Grove.",
       },
     },
     {
@@ -61,7 +65,7 @@ const faqSchema = {
       name: "How long does a deep cleaning take in Oak Brook?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Deep cleanings in Oak Brook typically take 4–7 hours depending on the size and condition of the home. Luxury homes with multiple bathrooms, large kitchens, and extensive square footage may require additional time. We never compromise thoroughness for speed.",
+        text: "Deep cleanings in Oak Brook typically take 4Ã¢â‚¬â€œ7 hours depending on the size and condition of the home. Luxury homes with multiple bathrooms, large kitchens, and extensive square footage may require additional time. We never compromise thoroughness for speed.",
       },
     },
   ],
@@ -80,32 +84,28 @@ const breadcrumbSchema = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": "https://www.dsmcleaningsolutions.com/#business",
   name: "DSM Cleaning Solutions",
   telephone: "(815) 246-2113",
   url: "https://www.dsmcleaningsolutions.com",
   areaServed: "Oak Brook",
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5.0",
-    reviewCount: "47",
-  },
 };
 
 const faqs = [
   {
     question: "How much does deep cleaning cost in Oak Brook, IL?",
     answer:
-      "Deep cleaning in Oak Brook starts around $225 after seasonal discounts. Most Oak Brook homes — which tend toward larger square footage and premium finishes — fall in the $350–$550+ range. We provide a detailed free estimate before every job with no surprises.",
+      "Deep cleaning in Oak Brook starts around $225 after seasonal discounts. Most Oak Brook homes Ã¢â‚¬â€ which tend toward larger square footage and premium finishes Ã¢â‚¬â€ fall in the $350Ã¢â‚¬â€œ$550+ range. We provide a detailed free estimate before every job with no surprises.",
   },
   {
     question: "Do you serve all of Oak Brook, IL?",
     answer:
-      "Yes — we serve all of Oak Brook (60523), including areas near Oakbrook Center, Butler National Golf Club, and residential neighborhoods throughout the village. We also serve neighboring Hinsdale, Burr Ridge, Elmhurst, and Downers Grove.",
+      "Yes Ã¢â‚¬â€ we serve all of Oak Brook (60523), including areas near Oakbrook Center, Butler National Golf Club, and residential neighborhoods throughout the village. We also serve neighboring Hinsdale, Burr Ridge, Elmhurst, and Downers Grove.",
   },
   {
     question: "How long does a deep cleaning take in Oak Brook?",
     answer:
-      "Deep cleanings in Oak Brook typically take 4–7 hours depending on the size and condition of the home. Luxury homes with multiple bathrooms, large kitchens, and extensive square footage may require additional time. We never compromise thoroughness for speed.",
+      "Deep cleanings in Oak Brook typically take 4Ã¢â‚¬â€œ7 hours depending on the size and condition of the home. Luxury homes with multiple bathrooms, large kitchens, and extensive square footage may require additional time. We never compromise thoroughness for speed.",
   },
 ];
 
@@ -159,12 +159,12 @@ const checklist = [
 ];
 
 const trustCards = [
-  { icon: "🌿", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products — safe for Oak Brook families and pets." },
-  { icon: "🛡️", title: "Fully Insured & Bonded", desc: "Background-checked team. Your Oak Brook home is fully covered." },
-  { icon: "✅", title: "48-Hour Guarantee", desc: "Not satisfied? We re-clean at no charge within 48 hours." },
-  { icon: "👨‍👩‍👧", title: "Family Owned", desc: "Local southwest suburbs business, not a national franchise." },
-  { icon: "📅", title: "7 Days a Week", desc: "Premium scheduling flexibility for Oak Brook homeowners." },
-  { icon: "📍", title: "Serving Oak Brook", desc: "All of Oak Brook — zip code 60523." },
+  { icon: "Ã°Å¸Å’Â¿", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products Ã¢â‚¬â€ safe for Oak Brook families and pets." },
+  { icon: "Ã°Å¸â€ºÂ¡Ã¯Â¸Â", title: "Fully Insured & Bonded", desc: "Background-checked team. Your Oak Brook home is fully covered." },
+  { icon: "Ã¢Å“â€¦", title: "48-Hour Guarantee", desc: "Not satisfied? We re-clean at no charge within 48 hours." },
+  { icon: "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§", title: "Family Owned", desc: "Local southwest suburbs business, not a national franchise." },
+  { icon: "Ã°Å¸â€œâ€¦", title: "7 Days a Week", desc: "Premium scheduling flexibility for Oak Brook homeowners." },
+  { icon: "Ã°Å¸â€œÂ", title: "Serving Oak Brook", desc: "All of Oak Brook Ã¢â‚¬â€ zip code 60523." },
 ];
 
 export default function DeepCleaningOakBrookPage() {
@@ -203,7 +203,7 @@ export default function DeepCleaningOakBrookPage() {
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               DSM Cleaning Solutions delivers premium, detail-first deep cleaning to Oak Brook&apos;s luxury
-              homes — methodical, eco-friendly, and backed by our 48-hour satisfaction guarantee.
+              homes Ã¢â‚¬â€ methodical, eco-friendly, and backed by our 48-hour satisfaction guarantee.
               Serving all of Oak Brook, zip code 60523.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -211,7 +211,7 @@ export default function DeepCleaningOakBrookPage() {
                 Get a Free Quote
               </Link>
               <a href="tel:+18152462113" className="inline-block bg-transparent text-white font-bold py-4 px-8 rounded-lg border-2 border-white hover:bg-white/10 transition-colors text-lg text-center">
-                📞 (815) 246-2113
+                Ã°Å¸â€œÅ¾ (815) 246-2113
               </a>
             </div>
           </div>
@@ -222,7 +222,7 @@ export default function DeepCleaningOakBrookPage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["✅ Fully Insured & Bonded", "🌿 Eco-Friendly Products", "👨‍👩‍👧 Family Owned", "⭐ 5-Star Rated · 47 Reviews", "✔️ 48-Hour Satisfaction Guarantee"].map(
+            {["Ã¢Å“â€¦ Fully Insured & Bonded", "Ã°Å¸Å’Â¿ Eco-Friendly Products", "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§ Family Owned", "Ã¢Â­Â 5-Star Rated Ã‚Â· 47 Reviews", "Ã¢Å“â€Ã¯Â¸Â 48-Hour Satisfaction Guarantee"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -234,20 +234,20 @@ export default function DeepCleaningOakBrookPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading mb-6">Professional Deep Cleaning Services in Oak Brook, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Deep cleaning in Oak Brook, IL demands a premium standard — and DSM Cleaning Solutions is built
+            Deep cleaning in Oak Brook, IL demands a premium standard Ã¢â‚¬â€ and DSM Cleaning Solutions is built
             to meet it. We serve all of Oak Brook (60523), covering the full village from neighborhoods near
             the iconic Oakbrook Center and Butler National Golf Club to every residential enclave throughout
             this prestigious DuPage County community.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Oak Brook homeowners expect reliability and results — and that&apos;s exactly what our team delivers.
+            Oak Brook homeowners expect reliability and results Ã¢â‚¬â€ and that&apos;s exactly what our team delivers.
             Our deep cleaning process is methodical and thorough: we work room by room, surface by surface,
             with professional-grade eco-friendly products and a comprehensive checklist. No room gets
             overlooked, no corner gets skipped.
           </p>
           <p className="text-gray-600 leading-relaxed">
             As a family-owned business based in the southwest suburbs, we&apos;ve built our reputation on earning
-            trust one job at a time. We&apos;re not a franchise — we&apos;re a dedicated team personally invested in
+            trust one job at a time. We&apos;re not a franchise Ã¢â‚¬â€ we&apos;re a dedicated team personally invested in
             the quality of every clean we perform in Oak Brook.
           </p>
         </div>
@@ -308,13 +308,13 @@ export default function DeepCleaningOakBrookPage() {
           <h2 className="section-heading mb-6">How Much Does Deep Cleaning Cost in Oak Brook, IL?</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Deep cleaning in Oak Brook starts around $225 after seasonal discounts. Oak Brook&apos;s luxury
-            homes — many with expansive square footage, high-end kitchens, and multiple full baths —
-            typically place most deep cleans in the $350–$550+ range. Properties with finished basements,
+            homes Ã¢â‚¬â€ many with expansive square footage, high-end kitchens, and multiple full baths Ã¢â‚¬â€
+            typically place most deep cleans in the $350Ã¢â‚¬â€œ$550+ range. Properties with finished basements,
             four or more bedrooms, or additional living spaces may be priced accordingly.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
             Every Oak Brook client receives a free, no-obligation estimate before we start. Transparent
-            pricing, no hidden fees — just an honest quote from a team that values your trust.
+            pricing, no hidden fees Ã¢â‚¬â€ just an honest quote from a team that values your trust.
           </p>
           <Link href="/contact" className="btn-primary">Get My Free Oak Brook Quote</Link>
         </div>
@@ -385,12 +385,12 @@ export default function DeepCleaningOakBrookPage() {
               <h2 className="text-4xl font-bold mb-4">Book Your Deep Cleaning in Oak Brook Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Get a free quote for deep cleaning in Oak Brook, IL. We serve all of 60523 and every
-                neighborhood — backed by our 48-hour satisfaction guarantee.
+                neighborhood Ã¢â‚¬â€ backed by our 48-hour satisfaction guarantee.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                📞 (815) 246-2113
+                Ã°Å¸â€œÅ¾ (815) 246-2113
               </a>
-              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
+              <p className="text-white/80">Family-owned Ã‚Â· Eco-friendly Ã‚Â· Fully insured Ã‚Â· Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <BookingForm />

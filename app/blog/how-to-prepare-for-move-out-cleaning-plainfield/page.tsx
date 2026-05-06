@@ -9,6 +9,22 @@ export const metadata: Metadata = {
     canonical:
       "https://www.dsmcleaningsolutions.com/blog/how-to-prepare-for-move-out-cleaning-plainfield",
   },
+  openGraph: {
+    title: "How to Prepare for a Move-Out Cleaning in Plainfield IL",
+    description:
+      "Planning a move-out cleaning in Plainfield or Naperville? Here's exactly how to prepare your home so you can get your full deposit back. Tips from DSM Cleaning Solutions.",
+    url: "https://www.dsmcleaningsolutions.com/blog/how-to-prepare-for-move-out-cleaning-plainfield",
+    siteName: "DSM Cleaning Solutions",
+    type: "article",
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions — How to Prepare for a Move-Out Cleaning" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "How to Prepare for a Move-Out Cleaning in Plainfield IL",
+    description:
+      "Planning a move-out cleaning in Plainfield or Naperville? Here's how to prepare your home to get your full deposit back.",
+    images: ["/hero-image.png"],
+  },
 };
 
 const blogPostingSchema = {
@@ -268,7 +284,7 @@ export default function BlogPostPage() {
           {/* CTA button */}
           <div className="mt-8">
             <Link
-              href="https://www.dsmcleaningsolutions.com/book-now"
+              href="/book"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-brand-green text-white font-bold px-8 py-3.5 rounded-full hover:bg-brand-green-dark transition-colors shadow-md"
@@ -325,7 +341,7 @@ export default function BlogPostPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
-              href="https://dsmcleaningsolutions.bookingkoala.com/booknow"
+              href="/book"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-brand-green font-bold px-8 py-3.5 rounded-full hover:bg-gray-50 transition-colors shadow-md"

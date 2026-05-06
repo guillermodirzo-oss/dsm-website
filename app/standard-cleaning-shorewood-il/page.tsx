@@ -13,6 +13,10 @@ export const metadata: Metadata = {
       "Recurring house cleaning in Shorewood IL by DSM Cleaning Solutions. Trusted, insured & eco-friendly. Call (815) 246-2113.",
     url: "https://www.dsmcleaningsolutions.com/standard-cleaning-shorewood-il",
   },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/hero-image.png"],
+  },
 };
 
 const faqs = [
@@ -24,17 +28,17 @@ const faqs = [
   {
     question: "Do you bring your own supplies to Shorewood homes?",
     answer:
-      "Yes — we arrive fully equipped with all our eco-friendly, non-toxic cleaning products and equipment. You don't need to supply a thing. Our green products are safe for children and pets throughout your Shorewood home.",
+      "Yes Ã¢â‚¬â€ we arrive fully equipped with all our eco-friendly, non-toxic cleaning products and equipment. You don't need to supply a thing. Our green products are safe for children and pets throughout your Shorewood home.",
   },
   {
     question: "Are your cleaners background checked in Shorewood?",
     answer:
-      "Yes — every member of our cleaning team is background-checked, insured, and bonded. We take the security of your Shorewood home seriously, whether you're present during the clean or not.",
+      "Yes Ã¢â‚¬â€ every member of our cleaning team is background-checked, insured, and bonded. We take the security of your Shorewood home seriously, whether you're present during the clean or not.",
   },
   {
     question: "What recurring cleaning plans do you offer in Shorewood?",
     answer:
-      "We offer weekly, biweekly, and monthly recurring cleaning plans for Shorewood homes. All plans include the same thorough checklist — the frequency is simply adjusted to your household's needs and budget. Contact us at (815) 246-2113 to discuss the best fit for your Shorewood home.",
+      "We offer weekly, biweekly, and monthly recurring cleaning plans for Shorewood homes. All plans include the same thorough checklist Ã¢â‚¬â€ the frequency is simply adjusted to your household's needs and budget. Contact us at (815) 246-2113 to discuss the best fit for your Shorewood home.",
   },
   {
     question: "Can I reschedule my Shorewood cleaning appointment?",
@@ -120,12 +124,12 @@ const checklist = [
 ];
 
 const trustCards = [
-  { icon: "🌿", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products safe for your Shorewood family." },
-  { icon: "🛡️", title: "Fully Insured & Bonded", desc: "Background-checked team. Your home is fully protected." },
-  { icon: "✅", title: "48-Hour Guarantee", desc: "We re-clean anything that isn't right within 48 hours." },
-  { icon: "👨‍👩‍👧", title: "Family Owned", desc: "Based in nearby Romeoville — your southwest suburbs neighbors." },
-  { icon: "📅", title: "7 Days a Week", desc: "Flexible scheduling to fit your busy Shorewood schedule." },
-  { icon: "📍", title: "Serving Shorewood", desc: "All neighborhoods in zip code 60404." },
+  { icon: "Ã°Å¸Å’Â¿", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products safe for your Shorewood family." },
+  { icon: "Ã°Å¸â€ºÂ¡Ã¯Â¸Â", title: "Fully Insured & Bonded", desc: "Background-checked team. Your home is fully protected." },
+  { icon: "Ã¢Å“â€¦", title: "48-Hour Guarantee", desc: "We re-clean anything that isn't right within 48 hours." },
+  { icon: "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§", title: "Family Owned", desc: "Based in nearby Romeoville Ã¢â‚¬â€ your southwest suburbs neighbors." },
+  { icon: "Ã°Å¸â€œâ€¦", title: "7 Days a Week", desc: "Flexible scheduling to fit your busy Shorewood schedule." },
+  { icon: "Ã°Å¸â€œÂ", title: "Serving Shorewood", desc: "All neighborhoods in zip code 60404." },
 ];
 
 export default function StandardCleaningShorewoodPage() {
@@ -155,13 +159,13 @@ export default function StandardCleaningShorewoodPage() {
               Standard Cleaning Services in Shorewood, IL
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              DSM Cleaning Solutions provides reliable, recurring house cleaning for Shorewood homes —
+              DSM Cleaning Solutions provides reliable, recurring house cleaning for Shorewood homes Ã¢â‚¬â€
               from Shorewood Glen and Shorewood Crossings to River Crossing and Fox Bend. Weekly,
-              biweekly, or monthly — on your schedule, every time.
+              biweekly, or monthly Ã¢â‚¬â€ on your schedule, every time.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
-              <a href="tel:+18152462113" className="btn-outline-white btn-lg">📞 (815) 246-2113</a>
+              <a href="tel:+18152462113" className="btn-outline-white btn-lg">Ã°Å¸â€œÅ¾ (815) 246-2113</a>
             </div>
           </div>
         </div>
@@ -171,7 +175,7 @@ export default function StandardCleaningShorewoodPage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["✅ Fully Insured & Bonded", "🌿 Eco-Friendly Products", "👨‍👩‍👧 Family Owned", "⭐ 5-Star Rated", "✔️ Satisfaction Guaranteed"].map(
+            {["Ã¢Å“â€¦ Fully Insured & Bonded", "Ã°Å¸Å’Â¿ Eco-Friendly Products", "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§ Family Owned", "Ã¢Â­Â 5-Star Rated", "Ã¢Å“â€Ã¯Â¸Â Satisfaction Guaranteed"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -184,22 +188,22 @@ export default function StandardCleaningShorewoodPage() {
           <h2 className="section-heading mb-6">Trusted Standard Cleaning Services in Shorewood, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             <strong>Standard house cleaning in Shorewood, IL</strong> keeps your home consistently presentable between
-            deeper cleans — and DSM Cleaning Solutions makes it easy. Whether you live in Shorewood Glen,
+            deeper cleans Ã¢â‚¬â€ and DSM Cleaning Solutions makes it easy. Whether you live in Shorewood Glen,
             Shorewood Crossings, River Crossing, or Shorewood Commons, our team covers all of Shorewood
             (zip code 60404) with a reliable, detailed clean you can count on visit after visit.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            We&apos;re a family-owned cleaning company based in Romeoville, just minutes from Shorewood —
+            We&apos;re a family-owned cleaning company based in Romeoville, just minutes from Shorewood Ã¢â‚¬â€
             and we&apos;re proud to serve the hardworking families throughout Will County. Our standard
             cleaning service covers all the essentials: kitchens, bathrooms, bedrooms, and living areas
-            cleaned thoroughly on a schedule that works for you. No shortcuts, no rushed visits —
+            cleaned thoroughly on a schedule that works for you. No shortcuts, no rushed visits Ã¢â‚¬â€
             just consistent quality every time.
           </p>
           <p className="text-gray-600 leading-relaxed">
             Shorewood sits conveniently between <Link href="/standard-cleaning-plainfield-il" className="text-brand-green font-semibold hover:underline">Plainfield</Link> and{" "}
             <Link href="/standard-cleaning-joliet-il" className="text-brand-green font-semibold hover:underline">Joliet</Link>, and we
             serve all three communities as part of our regular route. Our eco-friendly, non-toxic products
-            are safe for your children and pets — and our background-checked team treats every home with
+            are safe for your children and pets Ã¢â‚¬â€ and our background-checked team treats every home with
             the respect it deserves.
           </p>
         </div>
@@ -211,7 +215,7 @@ export default function StandardCleaningShorewoodPage() {
           <div className="text-center mb-12">
             <h2 className="section-heading">What&apos;s Included in Our Standard Cleaning in Shorewood, IL</h2>
             <p className="section-subheading mx-auto">
-              A thorough, consistent clean for your Shorewood home — every visit.
+              A thorough, consistent clean for your Shorewood home Ã¢â‚¬â€ every visit.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -261,12 +265,12 @@ export default function StandardCleaningShorewoodPage() {
           <p className="text-gray-600 mb-4 leading-relaxed">
             Standard cleaning in Shorewood starts around $120 for smaller homes and scales with the
             size of your home, the number of rooms, and how frequently you schedule service. Recurring
-            clients receive preferred pricing — biweekly and weekly clients pay less per visit than
+            clients receive preferred pricing Ã¢â‚¬â€ biweekly and weekly clients pay less per visit than
             one-time bookings.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
             Every estimate is free and no-obligation. We&apos;ll assess your Shorewood home&apos;s needs and
-            give you a clear, upfront quote before we begin — no surprises on cleaning day.
+            give you a clear, upfront quote before we begin Ã¢â‚¬â€ no surprises on cleaning day.
           </p>
           <Link href="/contact" className="btn-primary">Get My Free Shorewood Quote</Link>
         </div>
@@ -328,13 +332,13 @@ export default function StandardCleaningShorewoodPage() {
             <div className="text-white">
               <h2 className="text-4xl font-bold mb-4">Book Your Standard Cleaning in Shorewood Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                Ready for a consistently clean Shorewood home? Get your free standard cleaning quote —
+                Ready for a consistently clean Shorewood home? Get your free standard cleaning quote Ã¢â‚¬â€
                 we respond within 1 business day and back every job with our 48-hour satisfaction guarantee.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                📞 (815) 246-2113
+                Ã°Å¸â€œÅ¾ (815) 246-2113
               </a>
-              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
+              <p className="text-white/80">Family-owned Ã‚Â· Eco-friendly Ã‚Â· Fully insured Ã‚Â· Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <BookingForm />

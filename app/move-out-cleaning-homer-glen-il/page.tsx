@@ -13,33 +13,37 @@ export const metadata: Metadata = {
       "Move-out cleaning in Homer Glen IL by DSM Cleaning Solutions. Get your deposit back. Call (815) 246-2113.",
     url: "https://www.dsmcleaningsolutions.com/move-out-cleaning-homer-glen-il",
   },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/hero-image.png"],
+  },
 };
 
 const faqs = [
   {
     question: "Can you help me get my deposit back when moving out in Homer Glen, IL?",
     answer:
-      "Yes — our Homer Glen move-out cleaning is specifically designed to meet landlord and property manager inspection standards. We clean every surface, inside every appliance, and inside every cabinet so your Homer Glen property looks move-in ready and gives you the best chance of getting your full security deposit returned.",
+      "Yes Ã¢â‚¬â€ our Homer Glen move-out cleaning is specifically designed to meet landlord and property manager inspection standards. We clean every surface, inside every appliance, and inside every cabinet so your Homer Glen property looks move-in ready and gives you the best chance of getting your full security deposit returned.",
   },
   {
     question: "How far in advance should I book move-out cleaning in Homer Glen?",
     answer:
-      "We recommend booking at least 3–5 days before your move-out date to secure your preferred time slot in Homer Glen. For larger homes in The Highlands or Homer Glen Estates, booking a week out gives us the most flexibility. We also accommodate last-minute requests — call (815) 246-2113 and we'll do our best.",
+      "We recommend booking at least 3Ã¢â‚¬â€œ5 days before your move-out date to secure your preferred time slot in Homer Glen. For larger homes in The Highlands or Homer Glen Estates, booking a week out gives us the most flexibility. We also accommodate last-minute requests Ã¢â‚¬â€ call (815) 246-2113 and we'll do our best.",
   },
   {
     question: "Do you clean inside appliances during Homer Glen move-out cleans?",
     answer:
-      "Yes — appliances are a central part of our move-out cleaning checklist. We clean inside and outside the oven, inside and outside the refrigerator (including all drawers and shelves), inside the microwave, and the dishwasher interior. These are the areas Homer Glen landlords and property managers inspect most closely.",
+      "Yes Ã¢â‚¬â€ appliances are a central part of our move-out cleaning checklist. We clean inside and outside the oven, inside and outside the refrigerator (including all drawers and shelves), inside the microwave, and the dishwasher interior. These are the areas Homer Glen landlords and property managers inspect most closely.",
   },
   {
     question: "How long does a Homer Glen move-out clean take?",
     answer:
-      "A move-out clean in Homer Glen typically takes 5–8 hours given the larger home sizes common in zip code 60491. Properties in The Highlands, Tamarack Fairways, or Homer Glen Estates with 4+ bedrooms and multiple bathrooms may require more time. We'll give you an accurate estimate when you contact us.",
+      "A move-out clean in Homer Glen typically takes 5Ã¢â‚¬â€œ8 hours given the larger home sizes common in zip code 60491. Properties in The Highlands, Tamarack Fairways, or Homer Glen Estates with 4+ bedrooms and multiple bathrooms may require more time. We'll give you an accurate estimate when you contact us.",
   },
   {
     question: "Do you serve all of Homer Glen, IL 60491?",
     answer:
-      "Yes — we serve all of Homer Glen, including zip code 60491 and all neighborhoods: Homer Lakes, Farmington Lakes, The Highlands, Tamarack Fairways, and Homer Glen Estates, as well as homes near Lake Katherine Nature Center and Hadley Valley Preserve. We're based in nearby Romeoville and serve Homer Glen regularly.",
+      "Yes Ã¢â‚¬â€ we serve all of Homer Glen, including zip code 60491 and all neighborhoods: Homer Lakes, Farmington Lakes, The Highlands, Tamarack Fairways, and Homer Glen Estates, as well as homes near Lake Katherine Nature Center and Hadley Valley Preserve. We're based in nearby Romeoville and serve Homer Glen regularly.",
   },
 ];
 
@@ -126,12 +130,12 @@ const checklist = [
 ];
 
 const trustCards = [
-  { icon: "💰", title: "Deposit-Back Focused", desc: "Designed to meet landlord inspection standards in Homer Glen, IL." },
-  { icon: "🛡️", title: "Fully Insured & Bonded", desc: "Background-checked team. Every Homer Glen job fully covered." },
-  { icon: "✅", title: "48-Hour Guarantee", desc: "If your landlord isn't satisfied, we re-clean at no charge." },
-  { icon: "👨‍👩‍👧", title: "Family Owned", desc: "Based in nearby Romeoville — your trusted southwest suburbs neighbors." },
-  { icon: "📅", title: "Flexible Scheduling", desc: "Book around your move-out timeline in Homer Glen." },
-  { icon: "📍", title: "Serving Homer Glen", desc: "All neighborhoods in zip code 60491." },
+  { icon: "Ã°Å¸â€™Â°", title: "Deposit-Back Focused", desc: "Designed to meet landlord inspection standards in Homer Glen, IL." },
+  { icon: "Ã°Å¸â€ºÂ¡Ã¯Â¸Â", title: "Fully Insured & Bonded", desc: "Background-checked team. Every Homer Glen job fully covered." },
+  { icon: "Ã¢Å“â€¦", title: "48-Hour Guarantee", desc: "If your landlord isn't satisfied, we re-clean at no charge." },
+  { icon: "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§", title: "Family Owned", desc: "Based in nearby Romeoville Ã¢â‚¬â€ your trusted southwest suburbs neighbors." },
+  { icon: "Ã°Å¸â€œâ€¦", title: "Flexible Scheduling", desc: "Book around your move-out timeline in Homer Glen." },
+  { icon: "Ã°Å¸â€œÂ", title: "Serving Homer Glen", desc: "All neighborhoods in zip code 60491." },
 ];
 
 export default function MoveOutCleaningHomerGlenPage() {
@@ -162,12 +166,12 @@ export default function MoveOutCleaningHomerGlenPage() {
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               Moving out of your Homer Glen home or rental? DSM Cleaning Solutions delivers a thorough,
-              landlord-inspection-ready clean throughout Homer Glen — including Homer Lakes, Farmington
+              landlord-inspection-ready clean throughout Homer Glen Ã¢â‚¬â€ including Homer Lakes, Farmington
               Lakes, The Highlands, Tamarack Fairways, and Homer Glen Estates. Get your full deposit back.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
-              <a href="tel:+18152462113" className="btn-outline-white btn-lg">📞 (815) 246-2113</a>
+              <a href="tel:+18152462113" className="btn-outline-white btn-lg">Ã°Å¸â€œÅ¾ (815) 246-2113</a>
             </div>
           </div>
         </div>
@@ -177,7 +181,7 @@ export default function MoveOutCleaningHomerGlenPage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["✅ Fully Insured & Bonded", "🌿 Eco-Friendly Products", "👨‍👩‍👧 Family Owned", "⭐ 5-Star Rated", "✔️ Satisfaction Guaranteed"].map(
+            {["Ã¢Å“â€¦ Fully Insured & Bonded", "Ã°Å¸Å’Â¿ Eco-Friendly Products", "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§ Family Owned", "Ã¢Â­Â 5-Star Rated", "Ã¢Å“â€Ã¯Â¸Â Satisfaction Guaranteed"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -192,8 +196,8 @@ export default function MoveOutCleaningHomerGlenPage() {
             <strong>Move-out cleaning in Homer Glen, IL</strong> is about one thing: getting your security deposit back.
             Landlords and property managers throughout Homer Glen (zip code 60491) conduct thorough
             move-out inspections, and the areas that generate the most deposit disputes are always
-            the same — oven interior, refrigerator drawers, bathroom grout, cabinet interiors, and
-            ceiling fans. Homer Glen&apos;s larger homes also mean more rooms to inspect — our move-out
+            the same Ã¢â‚¬â€ oven interior, refrigerator drawers, bathroom grout, cabinet interiors, and
+            ceiling fans. Homer Glen&apos;s larger homes also mean more rooms to inspect Ã¢â‚¬â€ our move-out
             cleaning service covers every one of them.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
@@ -201,12 +205,12 @@ export default function MoveOutCleaningHomerGlenPage() {
             We&apos;ve helped renters and homeowners across Homer Lakes, Farmington Lakes, The Highlands,
             Tamarack Fairways, and Homer Glen Estates pass their move-out inspections and recover their
             full deposits. Our team follows a detailed, landlord-focused checklist that covers every
-            room — not just the visible surfaces.
+            room Ã¢â‚¬â€ not just the visible surfaces.
           </p>
           <p className="text-gray-600 leading-relaxed">
             Homer Glen sits close to both <Link href="/move-out-cleaning-lockport-il" className="text-brand-green font-semibold hover:underline">Lockport</Link> and{" "}
             <Link href="/move-out-cleaning-joliet-il" className="text-brand-green font-semibold hover:underline">Joliet</Link>, and we
-            serve all three markets regularly. Every job is backed by our 48-hour satisfaction guarantee —
+            serve all three markets regularly. Every job is backed by our 48-hour satisfaction guarantee Ã¢â‚¬â€
             if your landlord flags anything within 48 hours, we come back and make it right at no charge.
             Learn more on our main <Link href="/move-out-cleaning" className="text-brand-green font-semibold hover:underline">move-out cleaning page</Link>.
           </p>
@@ -268,13 +272,13 @@ export default function MoveOutCleaningHomerGlenPage() {
           <h2 className="section-heading mb-6">How Much Does Move-Out Cleaning Cost in Homer Glen, IL?</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Move-out cleaning in Homer Glen typically ranges from $200 to $400 for most homes and
-            apartments in zip code 60491. Homer Glen&apos;s larger homes — particularly in The Highlands,
-            Tamarack Fairways, and Homer Glen Estates — may run $350–$500 given the additional rooms,
+            apartments in zip code 60491. Homer Glen&apos;s larger homes Ã¢â‚¬â€ particularly in The Highlands,
+            Tamarack Fairways, and Homer Glen Estates Ã¢â‚¬â€ may run $350Ã¢â‚¬â€œ$500 given the additional rooms,
             square footage, and detail required for these upscale properties.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
             Every estimate is free and no-obligation. We&apos;ll give you an honest quote upfront based
-            on your home&apos;s specific details — and you&apos;ll know exactly what you&apos;re getting before
+            on your home&apos;s specific details Ã¢â‚¬â€ and you&apos;ll know exactly what you&apos;re getting before
             we start.
           </p>
           <Link href="/contact" className="btn-primary">Get My Free Homer Glen Quote</Link>
@@ -338,13 +342,13 @@ export default function MoveOutCleaningHomerGlenPage() {
               <h2 className="text-4xl font-bold mb-4">Get Your Free Homer Glen Move-Out Quote</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Don&apos;t leave your deposit on the table. Get your free move-out cleaning quote for
-                Homer Glen, IL — we respond within 1 business day and back every job with our
+                Homer Glen, IL Ã¢â‚¬â€ we respond within 1 business day and back every job with our
                 48-hour satisfaction guarantee.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                📞 (815) 246-2113
+                Ã°Å¸â€œÅ¾ (815) 246-2113
               </a>
-              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
+              <p className="text-white/80">Family-owned Ã‚Â· Eco-friendly Ã‚Â· Fully insured Ã‚Â· Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <BookingForm />

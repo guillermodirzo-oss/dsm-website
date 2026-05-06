@@ -17,6 +17,20 @@ export const metadata: Metadata = {
     "recurring cleaning Shorewood IL",
   ],
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/shorewood-il" },
+  openGraph: {
+    title: "House Cleaning Shorewood IL | DSM Cleaning Solutions",
+    description:
+      "Quality house cleaning in Shorewood, IL — deep cleaning, standard & recurring service. Family-owned, eco-friendly & insured. Free estimate.",
+    url: "https://www.dsmcleaningsolutions.com/shorewood-il",
+    siteName: "DSM Cleaning Solutions",
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions — House Cleaning in Shorewood IL" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "House Cleaning Shorewood IL | DSM Cleaning Solutions",
+    description: "Quality house cleaning in Shorewood, IL — deep cleaning, standard & recurring service. Family-owned, eco-friendly & insured.",
+    images: ["/hero-image.png"],
+  },
 };
 
 export default function ShorewoodPage() {

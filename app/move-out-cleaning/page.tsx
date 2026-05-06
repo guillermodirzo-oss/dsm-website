@@ -5,9 +5,9 @@ import BookingForm from "@/components/BookingForm";
 import ReviewCard from "@/components/ReviewCard";
 
 export const metadata: Metadata = {
-  title: "Move Out Cleaning Services Plainfield IL",
+  title: "Move-Out Cleaning Services Plainfield IL",
   description:
-    "Professional move-out & move-in cleaning in Plainfield, IL. Get your full deposit back — guaranteed. Eco-friendly, fully insured. Free estimate.",
+    "Move-out cleaning in Romeoville, Naperville, Plainfield & Bolingbrook. 5.0-star rated, 48-hr guarantee. Call (815) 246-2113 or book online.",
   keywords: [
     "move out cleaning Romeoville IL",
     "move in cleaning Romeoville IL",
@@ -25,10 +25,26 @@ export const metadata: Metadata = {
     canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning",
   },
   openGraph: {
-    title: "Move Out Cleaning Services Plainfield IL",
+    title: "Move Out Cleaning Services Plainfield IL | DSM Cleaning Solutions",
     description:
-      "Professional move-out & move-in cleaning in Plainfield, IL. Get your full deposit back — guaranteed. Eco-friendly, fully insured. Free estimate.",
+      "Move-out cleaning in Romeoville, Naperville, Plainfield & Bolingbrook. 5.0-star rated, 48-hr guarantee. Call (815) 246-2113 or book online.",
     url: "https://www.dsmcleaningsolutions.com/move-out-cleaning",
+    siteName: "DSM Cleaning Solutions",
+    images: [
+      {
+        url: "/hero-image.png",
+        width: 1200,
+        height: 630,
+        alt: "DSM Cleaning Solutions — Move-Out Cleaning in Plainfield IL",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Move Out Cleaning Services Plainfield IL | DSM Cleaning Solutions",
+    description:
+      "Move-out cleaning in Romeoville, Naperville, Plainfield & Bolingbrook. 5.0-star rated, 48-hr guarantee.",
+    images: ["/hero-image.png"],
   },
 };
 
@@ -225,7 +241,7 @@ export default function MoveOutCleaningPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="https://dsmcleaningsolutions.bookingkoala.com/booknow"
+                href="/book"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-white text-brand-green font-bold py-4 px-8 rounded-lg hover:bg-brand-green-50 transition-colors text-lg text-center"
@@ -335,8 +351,8 @@ export default function MoveOutCleaningPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/IMG_1724.jpg"
-                alt="Clean laundry room ready for move-out inspection — move-out cleaning in Romeoville IL"
+                src="/Work%20Pictures/laundry-room-move-out-clean-romeoville-il.jpg"
+                alt="Clean laundry room ready for move-out inspection by DSM Cleaning Solutions in Romeoville IL"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -344,7 +360,7 @@ export default function MoveOutCleaningPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/IMG_2035.jpg"
+                src="/Work%20Pictures/bathroom-shower-tub-deep-clean-plainfield-il.jpg"
                 alt="Bathroom with walk-in shower deep cleaned for move-out inspection in Plainfield IL"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
@@ -353,8 +369,8 @@ export default function MoveOutCleaningPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/IMG_0224.jpg"
-                alt="Empty apartment with spotless parquet floors after professional move-out cleaning"
+                src="/Work%20Pictures/apartment-move-out-cleaning-joliet-il.jpg"
+                alt="Empty apartment with spotless parquet floors after professional move-out cleaning in Joliet IL"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"

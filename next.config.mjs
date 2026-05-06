@@ -61,11 +61,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/book",
-        destination: "https://dsmcleaningsolutions.bookingkoala.com/booknow",
-        permanent: true,
-      },
-      {
         source: "/booknow",
         destination: "https://dsmcleaningsolutions.bookingkoala.com/booknow",
         permanent: true,

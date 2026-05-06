@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import CityPageTemplate from "@/components/CityPageTemplate";
 import { cities } from "@/lib/cityData";
 
@@ -16,6 +17,20 @@ export const metadata: Metadata = {
     "recurring cleaning Joliet IL",
   ],
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/joliet-il" },
+  openGraph: {
+    title: "House Cleaning Joliet IL | DSM Cleaning Solutions",
+    description:
+      "Professional house cleaning in Joliet, IL. Deep cleaning, move-out & recurring maid service. Family-owned, eco-friendly & insured. Free estimates today.",
+    url: "https://www.dsmcleaningsolutions.com/joliet-il",
+    siteName: "DSM Cleaning Solutions",
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions — House Cleaning in Joliet IL" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "House Cleaning Joliet IL | DSM Cleaning Solutions",
+    description: "Professional house cleaning in Joliet, IL. Deep cleaning, move-out & recurring maid service. Family-owned, eco-friendly & insured.",
+    images: ["/hero-image.png"],
+  },
 };
 
 export default function JolietPage() {
@@ -68,18 +83,18 @@ export default function JolietPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Popular Services in Joliet, IL</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <a href="/deep-cleaning-joliet-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-orange-400 hover:shadow-md transition-all">
+            <Link href="/deep-cleaning-joliet-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Joliet</h3>
               <p className="text-sm text-gray-600">Top-to-bottom deep cleaning for homes across all Joliet zip codes.</p>
-            </a>
-            <a href="/standard-cleaning-joliet-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-orange-400 hover:shadow-md transition-all">
+            </Link>
+            <Link href="/standard-cleaning-joliet-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Standard Cleaning in Joliet</h3>
               <p className="text-sm text-gray-600">Weekly, biweekly & monthly recurring cleaning for Joliet homes.</p>
-            </a>
-            <a href="/move-out-cleaning-joliet-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-orange-400 hover:shadow-md transition-all">
+            </Link>
+            <Link href="/move-out-cleaning-joliet-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning in Joliet</h3>
               <p className="text-sm text-gray-600">Deposit-back focused move-out cleaning throughout Joliet, IL.</p>
-            </a>
+            </Link>
           </div>
         </div>
       </section>

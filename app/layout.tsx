@@ -7,6 +7,7 @@ import FacebookPixel from "@/components/FacebookPixel";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -36,27 +37,24 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.dsmcleaningsolutions.com",
     siteName: "DSM Cleaning Solutions",
+    title: "DSM Cleaning Solutions | House Cleaning Romeoville & Plainfield IL",
+    description:
+      "Professional house cleaning services in Romeoville, Plainfield, Naperville & Bolingbrook IL. Family owned, fully insured, 5-star rated. Free estimates.",
     images: [
       {
-        url: "/icon.png",
-        width: 512,
-        height: 512,
-        alt: "DSM Cleaning Solutions Logo",
-      },
-      {
-        url: "/og-image.jpg",
+        url: "/hero-image.png",
         width: 1200,
         height: 630,
-        alt: "DSM Cleaning Solutions - Professional House Cleaning in Romeoville, IL",
+        alt: "DSM Cleaning Solutions — Professional House Cleaning in Romeoville IL",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "House Cleaning Plainfield IL | DSM Cleaning Solutions",
+    title: "DSM Cleaning Solutions | House Cleaning Romeoville & Plainfield IL",
     description:
-      "Family-owned, eco-friendly house cleaning in Romeoville, IL. Fully insured. Book online or call for a free estimate.",
-    images: ["/og-image.jpg"],
+      "Professional house cleaning in Romeoville, Plainfield, Naperville & Bolingbrook IL. Family owned & insured. Free estimates.",
+    images: ["/hero-image.png"],
   },
   robots: {
     index: true,
@@ -89,22 +87,22 @@ export default function RootLayout({
               "@type": ["LocalBusiness", "CleaningService"],
               "@id": "https://www.dsmcleaningsolutions.com/#business",
               name: "DSM Cleaning Solutions",
-              description: "Professional house cleaning services serving Plainfield, Romeoville, Naperville, and Bolingbrook IL. Family owned, fully insured, eco-friendly products.",
+              description: "Professional house cleaning services serving Romeoville, Plainfield, Naperville, Bolingbrook, and surrounding IL communities. Family owned, fully insured, eco-friendly products.",
               url: "https://www.dsmcleaningsolutions.com",
               telephone: "+18152462113",
               priceRange: "$$",
               image: "https://www.dsmcleaningsolutions.com/Logo.png",
               address: {
                 "@type": "PostalAddress",
-                addressLocality: "Plainfield",
+                addressLocality: "Romeoville",
                 addressRegion: "IL",
-                postalCode: "60544",
+                postalCode: "60446",
                 addressCountry: "US",
               },
               geo: {
                 "@type": "GeoCoordinates",
-                latitude: 41.6328,
-                longitude: -88.2120,
+                latitude: 41.6299,
+                longitude: -88.0890,
               },
               openingHoursSpecification: [
                 {
@@ -120,12 +118,26 @@ export default function RootLayout({
                 { "@type": "City", name: "Naperville", containedInPlace: { "@type": "State", name: "Illinois" } },
                 { "@type": "City", name: "Bolingbrook", containedInPlace: { "@type": "State", name: "Illinois" } },
                 { "@type": "City", name: "Joliet", containedInPlace: { "@type": "State", name: "Illinois" } },
+                { "@type": "City", name: "Lockport", containedInPlace: { "@type": "State", name: "Illinois" } },
+                { "@type": "City", name: "Lemont", containedInPlace: { "@type": "State", name: "Illinois" } },
+                { "@type": "City", name: "Homer Glen", containedInPlace: { "@type": "State", name: "Illinois" } },
+                { "@type": "City", name: "New Lenox", containedInPlace: { "@type": "State", name: "Illinois" } },
+                { "@type": "City", name: "Shorewood", containedInPlace: { "@type": "State", name: "Illinois" } },
+                { "@type": "City", name: "Minooka", containedInPlace: { "@type": "State", name: "Illinois" } },
                 { "@type": "City", name: "Westmont", containedInPlace: { "@type": "State", name: "Illinois" } },
               ],
-              // AggregateRating intentionally omitted from the global layout schema.
-              // It lives ONLY on /reviews so Google sees exactly one AggregateRating
-              // per page and the "Review has multiple aggregate ratings" GSC error
-              // does not trigger on blog posts or service pages.
+              // AggregateRating lives here in the global layout so there is exactly
+              // ONE LocalBusiness entity with ONE aggregateRating across the entire site.
+              // Having it globally (not only on /reviews) is what Google recommends and
+              // eliminates the "Review has multiple aggregate ratings" GSC error that was
+              // caused by two schemas sharing the same @id with conflicting aggregateRating.
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "5.0",
+                reviewCount: "47",
+                bestRating: "5",
+                worstRating: "1",
+              },
               sameAs: [
                 "https://www.yelp.com/biz/dsm-cleaning-solutions",
               ],
@@ -141,6 +153,14 @@ export default function RootLayout({
         <Analytics />
         <SpeedInsights />
         <GoogleAnalytics gaId="G-ZNH3HYZHQN" />
+        {/* Microsoft Clarity — session recordings & heatmaps */}
+        <Script id="microsoft-clarity" strategy="afterInteractive">
+          {`(function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window,document,"clarity","script","wljkdhzea7");`}
+        </Script>
       </body>
     </html>
   );

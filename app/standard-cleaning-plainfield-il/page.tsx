@@ -5,13 +5,17 @@ import BookingForm from "@/components/BookingForm";
 export const metadata: Metadata = {
   title: "Standard Cleaning Services Plainfield IL",
   description:
-    "Reliable standard house cleaning in Plainfield, IL. Weekly, biweekly & monthly plans. DSM Cleaning Solutions — insured, eco-friendly. Free estimate.",
+    "Reliable standard house cleaning in Plainfield, IL. Weekly, biweekly & monthly plans. DSM Cleaning Solutions Ã¢â‚¬â€ insured, eco-friendly. Free estimate.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/standard-cleaning-plainfield-il" },
   openGraph: {
     title: "Standard Cleaning Services Plainfield IL",
     description:
-      "Reliable standard house cleaning in Plainfield, IL. Weekly, biweekly & monthly plans. DSM Cleaning Solutions — insured, eco-friendly. Free estimate.",
+      "Reliable standard house cleaning in Plainfield, IL. Weekly, biweekly & monthly plans. DSM Cleaning Solutions Ã¢â‚¬â€ insured, eco-friendly. Free estimate.",
     url: "https://www.dsmcleaningsolutions.com/standard-cleaning-plainfield-il",
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/hero-image.png"],
   },
 };
 
@@ -24,22 +28,22 @@ const faqs = [
   {
     question: "Do you serve Settlers Ridge and Lakewood Falls in Plainfield?",
     answer:
-      "Yes — we serve all of Plainfield including Settlers Ridge, Lakewood Falls, Grande Park, Springbank, and all areas across zip codes 60544 and 60585.",
+      "Yes Ã¢â‚¬â€ we serve all of Plainfield including Settlers Ridge, Lakewood Falls, Grande Park, Springbank, and all areas across zip codes 60544 and 60585.",
   },
   {
     question: "How much does standard cleaning cost in Plainfield, IL?",
     answer:
-      "Standard cleaning in Plainfield typically starts around $120–$180 depending on your home&apos;s size. Recurring clients receive discounted rates. We provide a free, no-obligation estimate before any service.",
+      "Standard cleaning in Plainfield typically starts around $120Ã¢â‚¬â€œ$180 depending on your home&apos;s size. Recurring clients receive discounted rates. We provide a free, no-obligation estimate before any service.",
   },
   {
     question: "Do I need to be home during my standard cleaning in Plainfield?",
     answer:
-      "No — many of our Plainfield clients are at work or running errands while we clean. Just provide a key or door code and our insured, background-checked team takes care of the rest.",
+      "No Ã¢â‚¬â€ many of our Plainfield clients are at work or running errands while we clean. Just provide a key or door code and our insured, background-checked team takes care of the rest.",
   },
   {
     question: "Does DSM bring its own cleaning supplies to Plainfield homes?",
     answer:
-      "Yes — we arrive with all our eco-friendly, non-toxic cleaning products and equipment. You don&apos;t need to supply a thing. Our green products are safe for children and pets throughout your Plainfield home.",
+      "Yes Ã¢â‚¬â€ we arrive with all our eco-friendly, non-toxic cleaning products and equipment. You don&apos;t need to supply a thing. Our green products are safe for children and pets throughout your Plainfield home.",
   },
 ];
 
@@ -60,7 +64,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Reliable standard house cleaning in Plainfield, IL. Weekly, biweekly & monthly plans. DSM Cleaning Solutions — insured, eco-friendly. Free estimate.",
+    "Reliable standard house cleaning in Plainfield, IL. Weekly, biweekly & monthly plans. DSM Cleaning Solutions Ã¢â‚¬â€ insured, eco-friendly. Free estimate.",
 };
 
 const faqSchema = {
@@ -120,12 +124,12 @@ const checklist = [
 ];
 
 const trustCards = [
-  { icon: "🌿", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products safe for your Plainfield family." },
-  { icon: "🛡️", title: "Fully Insured & Bonded", desc: "Background-checked team. Your home is fully protected." },
-  { icon: "✅", title: "48-Hour Guarantee", desc: "We re-clean anything that isn&apos;t right within 48 hours." },
-  { icon: "👨‍👩‍👧", title: "Family Owned", desc: "Local southwest suburbs business — not a national franchise." },
-  { icon: "📅", title: "7 Days a Week", desc: "Flexible scheduling to fit your busy Plainfield schedule." },
-  { icon: "📍", title: "Serving Plainfield", desc: "All neighborhoods — zip codes 60544 & 60585." },
+  { icon: "Ã°Å¸Å’Â¿", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products safe for your Plainfield family." },
+  { icon: "Ã°Å¸â€ºÂ¡Ã¯Â¸Â", title: "Fully Insured & Bonded", desc: "Background-checked team. Your home is fully protected." },
+  { icon: "Ã¢Å“â€¦", title: "48-Hour Guarantee", desc: "We re-clean anything that isn&apos;t right within 48 hours." },
+  { icon: "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§", title: "Family Owned", desc: "Local southwest suburbs business Ã¢â‚¬â€ not a national franchise." },
+  { icon: "Ã°Å¸â€œâ€¦", title: "7 Days a Week", desc: "Flexible scheduling to fit your busy Plainfield schedule." },
+  { icon: "Ã°Å¸â€œÂ", title: "Serving Plainfield", desc: "All neighborhoods Ã¢â‚¬â€ zip codes 60544 & 60585." },
 ];
 
 export default function StandardCleaningPlainfieldPage() {
@@ -157,11 +161,11 @@ export default function StandardCleaningPlainfieldPage() {
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               DSM Cleaning Solutions keeps Plainfield homes spotless week after week. Whether you need
               a one-time clean or a recurring schedule in Settlers Ridge, Springbank, or anywhere
-              across zip codes 60544 and 60585 — we&apos;re your trusted local cleaning team.
+              across zip codes 60544 and 60585 Ã¢â‚¬â€ we&apos;re your trusted local cleaning team.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
-              <a href="tel:+18152462113" className="btn-outline-white btn-lg">📞 (815) 246-2113</a>
+              <a href="tel:+18152462113" className="btn-outline-white btn-lg">Ã°Å¸â€œÅ¾ (815) 246-2113</a>
             </div>
           </div>
         </div>
@@ -171,7 +175,7 @@ export default function StandardCleaningPlainfieldPage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["✅ Fully Insured & Bonded", "🌿 Eco-Friendly Products", "👨‍👩‍👧 Family Owned", "⭐ 5-Star Rated", "✔️ Satisfaction Guaranteed"].map(
+            {["Ã¢Å“â€¦ Fully Insured & Bonded", "Ã°Å¸Å’Â¿ Eco-Friendly Products", "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§ Family Owned", "Ã¢Â­Â 5-Star Rated", "Ã¢Å“â€Ã¯Â¸Â Satisfaction Guaranteed"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -183,20 +187,20 @@ export default function StandardCleaningPlainfieldPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading mb-6">Reliable Standard House Cleaning in Plainfield, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Standard cleaning in Plainfield, IL is DSM Cleaning Solutions&apos; most popular service —
+            Standard cleaning in Plainfield, IL is DSM Cleaning Solutions&apos; most popular service Ã¢â‚¬â€
             and it&apos;s easy to see why. Plainfield families across zip codes 60544 and 60585 rely on us
             to keep their homes consistently clean, from the kitchen to the bedrooms. Whether you live
             in a newer build in Grande Park or an established home near the Plainfield Historic District,
             our team shows up prepared and leaves your home spotless.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            We offer flexible scheduling to match your lifestyle — weekly, biweekly, or monthly plans
+            We offer flexible scheduling to match your lifestyle Ã¢â‚¬â€ weekly, biweekly, or monthly plans
             all available. Our biweekly service is the most popular among Plainfield families because it
             strikes the perfect balance between frequency and cost. For households with young children,
             pets, or just a very busy schedule, weekly cleaning keeps everything under control year-round.
           </p>
           <p className="text-gray-600 leading-relaxed">
-            Every visit follows a detailed, consistent checklist — so you always know exactly what
+            Every visit follows a detailed, consistent checklist Ã¢â‚¬â€ so you always know exactly what
             you&apos;re getting. No guessing, no surprises. Just a reliably clean home, every single time we
             visit your Plainfield address.
           </p>
@@ -209,7 +213,7 @@ export default function StandardCleaningPlainfieldPage() {
           <div className="text-center mb-12">
             <h2 className="section-heading">What&apos;s Included in Our Standard Cleaning in Plainfield, IL</h2>
             <p className="section-subheading mx-auto">
-              Every room covered on every visit — here&apos;s exactly what our Plainfield team cleans.
+              Every room covered on every visit Ã¢â‚¬â€ here&apos;s exactly what our Plainfield team cleans.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -257,9 +261,9 @@ export default function StandardCleaningPlainfieldPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading mb-6">How Much Does Standard Cleaning Cost in Plainfield, IL?</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Standard cleaning in Plainfield starts around $120–$180 for an average-sized home, with
+            Standard cleaning in Plainfield starts around $120Ã¢â‚¬â€œ$180 for an average-sized home, with
             pricing based on the number of bedrooms, bathrooms, and your chosen frequency. Recurring
-            clients who book weekly or biweekly service receive a discounted rate — the more we visit,
+            clients who book weekly or biweekly service receive a discounted rate Ã¢â‚¬â€ the more we visit,
             the more you save.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
@@ -323,14 +327,14 @@ export default function StandardCleaningPlainfieldPage() {
             <div className="text-white">
               <h2 className="text-4xl font-bold mb-4">Book Your Standard Cleaning in Plainfield Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                Ready for a reliably clean home in Plainfield, IL? Get your free estimate today —
+                Ready for a reliably clean home in Plainfield, IL? Get your free estimate today Ã¢â‚¬â€
                 we serve all of 60544 and 60585 and back every clean with our 48-hour
                 satisfaction guarantee.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                📞 (815) 246-2113
+                Ã°Å¸â€œÅ¾ (815) 246-2113
               </a>
-              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
+              <p className="text-white/80">Family-owned Ã‚Â· Eco-friendly Ã‚Â· Fully insured Ã‚Â· Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <BookingForm />

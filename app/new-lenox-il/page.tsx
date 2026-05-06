@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import CityPageTemplate from "@/components/CityPageTemplate";
 import { cities } from "@/lib/cityData";
 
@@ -16,6 +17,20 @@ export const metadata: Metadata = {
     "recurring cleaning New Lenox IL",
   ],
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/new-lenox-il" },
+  openGraph: {
+    title: "House Cleaning New Lenox IL | DSM Cleaning Solutions",
+    description:
+      "Local house cleaning in New Lenox, IL — deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Get a free estimate.",
+    url: "https://www.dsmcleaningsolutions.com/new-lenox-il",
+    siteName: "DSM Cleaning Solutions",
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions — House Cleaning in New Lenox IL" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "House Cleaning New Lenox IL | DSM Cleaning Solutions",
+    description: "Local house cleaning in New Lenox, IL — deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured.",
+    images: ["/hero-image.png"],
+  },
 };
 
 export default function NewLenoxPage() {
@@ -59,6 +74,27 @@ export default function NewLenoxPage() {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* COMBO SERVICE LINKS */}
+      <section className="py-12 bg-gray-50 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Cleaning Services in New Lenox, IL</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <Link href="/deep-cleaning-new-lenox-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">🧹 Deep Cleaning New Lenox</h3>
+              <p className="text-sm text-gray-600">Top-to-bottom deep clean for New Lenox homes. Free estimate.</p>
+            </Link>
+            <Link href="/standard-cleaning-new-lenox-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">🏠 Standard Cleaning New Lenox</h3>
+              <p className="text-sm text-gray-600">Weekly, biweekly &amp; monthly cleaning for New Lenox families.</p>
+            </Link>
+            <Link href="/move-out-cleaning-new-lenox-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">📦 Move-Out Cleaning New Lenox</h3>
+              <p className="text-sm text-gray-600">Get your deposit back. Landlord-ready clean in New Lenox.</p>
+            </Link>
           </div>
         </div>
       </section>

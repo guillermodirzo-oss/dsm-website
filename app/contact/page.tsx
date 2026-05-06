@@ -8,10 +8,26 @@ export const metadata: Metadata = {
     "Contact DSM Cleaning Solutions for a free house cleaning estimate in Plainfield, Romeoville, Naperville & Bolingbrook IL. Call (815) 246-2113 today.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/contact" },
   openGraph: {
-    title: "Contact Us | Free Cleaning Estimate",
+    title: "Contact DSM Cleaning Solutions | Free Estimate",
     description:
       "Contact DSM Cleaning Solutions for a free house cleaning estimate in Plainfield, Romeoville, Naperville & Bolingbrook IL. Call (815) 246-2113 today.",
     url: "https://www.dsmcleaningsolutions.com/contact",
+    siteName: "DSM Cleaning Solutions",
+    images: [
+      {
+        url: "/hero-image.png",
+        width: 1200,
+        height: 630,
+        alt: "DSM Cleaning Solutions — Contact Us for a Free Estimate",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact DSM Cleaning Solutions | Free Estimate",
+    description:
+      "Contact DSM Cleaning Solutions for a free house cleaning estimate in Plainfield, Romeoville, Naperville & Bolingbrook IL.",
+    images: ["/hero-image.png"],
   },
 };
 
@@ -56,9 +72,9 @@ const localBusinessSchema = {
   image: "https://www.dsmcleaningsolutions.com/Logo.png",
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Plainfield",
+    addressLocality: "Romeoville",
     addressRegion: "IL",
-    postalCode: "60544",
+    postalCode: "60446",
     addressCountry: "US",
   },
   openingHoursSpecification: [
@@ -70,12 +86,18 @@ const localBusinessSchema = {
     },
   ],
   areaServed: [
-    { "@type": "City", name: "Plainfield", containedInPlace: { "@type": "State", name: "Illinois" } },
     { "@type": "City", name: "Romeoville", containedInPlace: { "@type": "State", name: "Illinois" } },
+    { "@type": "City", name: "Plainfield", containedInPlace: { "@type": "State", name: "Illinois" } },
     { "@type": "City", name: "Naperville", containedInPlace: { "@type": "State", name: "Illinois" } },
     { "@type": "City", name: "Bolingbrook", containedInPlace: { "@type": "State", name: "Illinois" } },
     { "@type": "City", name: "Joliet", containedInPlace: { "@type": "State", name: "Illinois" } },
     { "@type": "City", name: "Lockport", containedInPlace: { "@type": "State", name: "Illinois" } },
+    { "@type": "City", name: "Westmont", containedInPlace: { "@type": "State", name: "Illinois" } },
+    { "@type": "City", name: "Lemont", containedInPlace: { "@type": "State", name: "Illinois" } },
+    { "@type": "City", name: "Homer Glen", containedInPlace: { "@type": "State", name: "Illinois" } },
+    { "@type": "City", name: "New Lenox", containedInPlace: { "@type": "State", name: "Illinois" } },
+    { "@type": "City", name: "Shorewood", containedInPlace: { "@type": "State", name: "Illinois" } },
+    { "@type": "City", name: "Minooka", containedInPlace: { "@type": "State", name: "Illinois" } },
   ],
   contactPoint: {
     "@type": "ContactPoint",
@@ -140,7 +162,7 @@ export default function ContactPage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="tel:+18152462113" className="btn-white btn-lg">📞 Call Now</a>
               <Link
-                href="https://dsmcleaningsolutions.bookingkoala.com/booknow"
+                href="/book"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-outline-white btn-lg"
@@ -302,7 +324,7 @@ export default function ContactPage() {
             Skip the form and book your cleaning in minutes through our online scheduler.
           </p>
           <Link
-            href="https://dsmcleaningsolutions.bookingkoala.com/booknow"
+            href="/book"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-white text-brand-green font-bold text-lg px-10 py-4 rounded-full hover:bg-orange-50 transition-colors shadow-lg mb-6"

@@ -9,6 +9,19 @@ export const metadata: Metadata = {
   description: "Professional apartment cleaning in Plainfield, IL for renters, landlords & property managers. Eco-friendly, insured & reliable. Call for a free estimate.",
   keywords: ["apartment cleaning Romeoville IL", "condo cleaning Romeoville", "apartment cleaning service Romeoville", "rental unit cleaning Romeoville", "apartment maid service Romeoville IL", "studio cleaning Romeoville"],
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/apartment-cleaning" },
+  openGraph: {
+    title: "Apartment Cleaning Plainfield IL | DSM Cleaning Solutions",
+    description: "Professional apartment cleaning in Plainfield, IL for renters, landlords & property managers. Eco-friendly, insured & reliable. Call for a free estimate.",
+    url: "https://www.dsmcleaningsolutions.com/apartment-cleaning",
+    siteName: "DSM Cleaning Solutions",
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions — Apartment Cleaning in Plainfield IL" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Apartment Cleaning Plainfield IL | DSM Cleaning Solutions",
+    description: "Professional apartment cleaning in Plainfield, IL for renters, landlords & property managers. Eco-friendly, insured & reliable.",
+    images: ["/hero-image.png"],
+  },
 };
 
 const faqs = [
@@ -73,7 +86,7 @@ export default function ApartmentCleaningPage() {
             <p className="text-xl text-white/80 mb-8 leading-relaxed">Professional, affordable apartment cleaning for renters, condo owners, and property managers across Romeoville and the southwest suburbs.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg text-base font-bold">Get a Free Estimate</Link>
-              <Link href="https://dsmcleaningsolutions.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn-outline-white btn-lg text-base">Book Now Online</Link>
+              <Link href="/book" className="btn-outline-white btn-lg text-base">Book Now Online</Link>
             </div>
           </div>
         </div>
@@ -162,8 +175,8 @@ export default function ApartmentCleaningPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/IMG_0220.jpg"
-                alt="Clean apartment bathroom with bidet — professional apartment cleaning service in Romeoville IL"
+                src="/Work%20Pictures/apartment-bathroom-cleaning-naperville-il.jpg"
+                alt="Clean apartment bathroom professionally cleaned by DSM Cleaning Solutions in Naperville IL"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -171,8 +184,8 @@ export default function ApartmentCleaningPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/IMG_0224.jpg"
-                alt="Clean apartment with parquet hardwood floors — apartment cleaning in Plainfield IL"
+                src="/Work%20Pictures/apartment-move-out-cleaning-joliet-il.jpg"
+                alt="Clean apartment with parquet hardwood floors after professional cleaning service in Joliet IL"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -180,8 +193,8 @@ export default function ApartmentCleaningPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/IMG_1610.jpg"
-                alt="Clean bedroom maintained with recurring apartment cleaning service in the southwest suburbs"
+                src="/Work%20Pictures/bedroom-cleaning-service-bolingbrook-il.jpg"
+                alt="Clean bedroom maintained with recurring apartment cleaning service in Bolingbrook IL"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"

@@ -14,6 +14,10 @@ export const metadata: Metadata = {
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning/burr-ridge",
     siteName: "DSM Cleaning Solutions",
   },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/hero-image.png"],
+  },
 };
 
 const serviceSchema = {
@@ -45,7 +49,7 @@ const faqSchema = {
       name: "How much does deep cleaning cost in Burr Ridge, IL?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Deep cleaning in Burr Ridge starts around $225 after seasonal discounts. Because Burr Ridge homes tend to be larger — many ranging from 3,500 to 6,000+ square feet — most deep cleans fall in the $350–$550 range depending on your home's size and current condition. Contact us for a free, personalized estimate.",
+        text: "Deep cleaning in Burr Ridge starts around $225 after seasonal discounts. Because Burr Ridge homes tend to be larger Ã¢â‚¬â€ many ranging from 3,500 to 6,000+ square feet Ã¢â‚¬â€ most deep cleans fall in the $350Ã¢â‚¬â€œ$550 range depending on your home's size and current condition. Contact us for a free, personalized estimate.",
       },
     },
     {
@@ -53,7 +57,7 @@ const faqSchema = {
       name: "Do you serve all of Burr Ridge, IL?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes — we serve all of Burr Ridge (60527), including homes near the Burr Ridge Village Center, Harveys Lake, the Route 83 corridor, and County Line Road. We also serve neighboring Hinsdale, Oak Brook, and Willowbrook.",
+        text: "Yes Ã¢â‚¬â€ we serve all of Burr Ridge (60527), including homes near the Burr Ridge Village Center, Harveys Lake, the Route 83 corridor, and County Line Road. We also serve neighboring Hinsdale, Oak Brook, and Willowbrook.",
       },
     },
     {
@@ -61,7 +65,7 @@ const faqSchema = {
       name: "How long does a deep cleaning take in Burr Ridge?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Most deep cleans take 3–6 hours, but Burr Ridge's larger executive homes often require 5–7 hours to complete properly. We never rush a job — every room gets the same thorough attention regardless of size.",
+        text: "Most deep cleans take 3Ã¢â‚¬â€œ6 hours, but Burr Ridge's larger executive homes often require 5Ã¢â‚¬â€œ7 hours to complete properly. We never rush a job Ã¢â‚¬â€ every room gets the same thorough attention regardless of size.",
       },
     },
   ],
@@ -80,32 +84,28 @@ const breadcrumbSchema = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": "https://www.dsmcleaningsolutions.com/#business",
   name: "DSM Cleaning Solutions",
   telephone: "(815) 246-2113",
   url: "https://www.dsmcleaningsolutions.com",
   areaServed: "Burr Ridge",
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5.0",
-    reviewCount: "47",
-  },
 };
 
 const faqs = [
   {
     question: "How much does deep cleaning cost in Burr Ridge, IL?",
     answer:
-      "Deep cleaning in Burr Ridge starts around $225 after seasonal discounts. Because Burr Ridge homes tend to be larger — many ranging from 3,500 to 6,000+ square feet — most deep cleans fall in the $350–$550 range depending on your home's size and current condition. Contact us for a free, personalized estimate.",
+      "Deep cleaning in Burr Ridge starts around $225 after seasonal discounts. Because Burr Ridge homes tend to be larger Ã¢â‚¬â€ many ranging from 3,500 to 6,000+ square feet Ã¢â‚¬â€ most deep cleans fall in the $350Ã¢â‚¬â€œ$550 range depending on your home's size and current condition. Contact us for a free, personalized estimate.",
   },
   {
     question: "Do you serve all of Burr Ridge, IL?",
     answer:
-      "Yes — we serve all of Burr Ridge (60527), including homes near the Burr Ridge Village Center, Harveys Lake, the Route 83 corridor, and County Line Road. We also serve neighboring Hinsdale, Oak Brook, and Willowbrook.",
+      "Yes Ã¢â‚¬â€ we serve all of Burr Ridge (60527), including homes near the Burr Ridge Village Center, Harveys Lake, the Route 83 corridor, and County Line Road. We also serve neighboring Hinsdale, Oak Brook, and Willowbrook.",
   },
   {
     question: "How long does a deep cleaning take in Burr Ridge?",
     answer:
-      "Most deep cleans take 3–6 hours, but Burr Ridge's larger executive homes often require 5–7 hours to complete properly. We never rush a job — every room gets the same thorough attention regardless of size.",
+      "Most deep cleans take 3Ã¢â‚¬â€œ6 hours, but Burr Ridge's larger executive homes often require 5Ã¢â‚¬â€œ7 hours to complete properly. We never rush a job Ã¢â‚¬â€ every room gets the same thorough attention regardless of size.",
   },
 ];
 
@@ -159,12 +159,12 @@ const checklist = [
 ];
 
 const trustCards = [
-  { icon: "🌿", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products — safe for Burr Ridge families and pets." },
-  { icon: "🛡️", title: "Fully Insured & Bonded", desc: "Background-checked team. Your luxury home is fully covered." },
-  { icon: "✅", title: "48-Hour Guarantee", desc: "Not satisfied? We re-clean at no charge within 48 hours." },
-  { icon: "👨‍👩‍👧", title: "Family Owned", desc: "Local southwest suburbs business, not a national franchise." },
-  { icon: "📅", title: "7 Days a Week", desc: "Flexible scheduling around your Burr Ridge lifestyle." },
-  { icon: "📍", title: "Serving Burr Ridge", desc: "All of Burr Ridge — zip code 60527." },
+  { icon: "Ã°Å¸Å’Â¿", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products Ã¢â‚¬â€ safe for Burr Ridge families and pets." },
+  { icon: "Ã°Å¸â€ºÂ¡Ã¯Â¸Â", title: "Fully Insured & Bonded", desc: "Background-checked team. Your luxury home is fully covered." },
+  { icon: "Ã¢Å“â€¦", title: "48-Hour Guarantee", desc: "Not satisfied? We re-clean at no charge within 48 hours." },
+  { icon: "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§", title: "Family Owned", desc: "Local southwest suburbs business, not a national franchise." },
+  { icon: "Ã°Å¸â€œâ€¦", title: "7 Days a Week", desc: "Flexible scheduling around your Burr Ridge lifestyle." },
+  { icon: "Ã°Å¸â€œÂ", title: "Serving Burr Ridge", desc: "All of Burr Ridge Ã¢â‚¬â€ zip code 60527." },
 ];
 
 export default function DeepCleaningBurrRidgePage() {
@@ -202,7 +202,7 @@ export default function DeepCleaningBurrRidgePage() {
               Deep Cleaning in Burr Ridge, IL
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              DSM Cleaning Solutions brings white-glove deep cleaning to Burr Ridge&apos;s executive homes —
+              DSM Cleaning Solutions brings white-glove deep cleaning to Burr Ridge&apos;s executive homes Ã¢â‚¬â€
               methodical, detail-first, and backed by our 48-hour satisfaction guarantee.
               From the Route 83 corridor to Harveys Lake, we serve all of Burr Ridge.
             </p>
@@ -211,7 +211,7 @@ export default function DeepCleaningBurrRidgePage() {
                 Get a Free Quote
               </Link>
               <a href="tel:+18152462113" className="inline-block bg-transparent text-white font-bold py-4 px-8 rounded-lg border-2 border-white hover:bg-white/10 transition-colors text-lg text-center">
-                📞 (815) 246-2113
+                Ã°Å¸â€œÅ¾ (815) 246-2113
               </a>
             </div>
           </div>
@@ -222,7 +222,7 @@ export default function DeepCleaningBurrRidgePage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["✅ Fully Insured & Bonded", "🌿 Eco-Friendly Products", "👨‍👩‍👧 Family Owned", "⭐ 5-Star Rated · 47 Reviews", "✔️ 48-Hour Satisfaction Guarantee"].map(
+            {["Ã¢Å“â€¦ Fully Insured & Bonded", "Ã°Å¸Å’Â¿ Eco-Friendly Products", "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§ Family Owned", "Ã¢Â­Â 5-Star Rated Ã‚Â· 47 Reviews", "Ã¢Å“â€Ã¯Â¸Â 48-Hour Satisfaction Guarantee"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -235,18 +235,18 @@ export default function DeepCleaningBurrRidgePage() {
           <h2 className="section-heading mb-6">Professional Deep Cleaning Services in Burr Ridge, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Deep cleaning in Burr Ridge, IL requires a team that understands the high standards this
-            community demands — and that&apos;s exactly what DSM Cleaning Solutions delivers. We serve all of
+            community demands Ã¢â‚¬â€ and that&apos;s exactly what DSM Cleaning Solutions delivers. We serve all of
             Burr Ridge (60527), covering the full village from the Burr Ridge Village Center corridor to the
             Harveys Lake area with a comprehensive, room-by-room deep clean.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Burr Ridge homes are built to impress — and they deserve cleaning that matches. Executive homes
+            Burr Ridge homes are built to impress Ã¢â‚¬â€ and they deserve cleaning that matches. Executive homes
             along the Route 83 corridor and County Line Road area require a methodical, detail-first approach
             that goes far beyond a standard maintenance clean. Our team arrives prepared for larger square
             footage, multiple full baths, and the elevated finishes that define homes in this area.
           </p>
           <p className="text-gray-600 leading-relaxed">
-            We use professional-grade, eco-friendly cleaning products throughout — no harsh chemicals
+            We use professional-grade, eco-friendly cleaning products throughout Ã¢â‚¬â€ no harsh chemicals
             that linger after we leave. DSM is family-owned and based in the southwest suburbs, giving us a
             community commitment that national cleaning chains simply can&apos;t match.
           </p>
@@ -308,13 +308,13 @@ export default function DeepCleaningBurrRidgePage() {
           <h2 className="section-heading mb-6">How Much Does Deep Cleaning Cost in Burr Ridge, IL?</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Deep cleaning in Burr Ridge starts around $225 after seasonal discounts. Because Burr Ridge is
-            home to some of the largest executive properties in Cook and DuPage County — many in the
-            3,500–6,000+ square foot range — most deep cleans fall between $350 and $550. Homes with
+            home to some of the largest executive properties in Cook and DuPage County Ã¢â‚¬â€ many in the
+            3,500Ã¢â‚¬â€œ6,000+ square foot range Ã¢â‚¬â€ most deep cleans fall between $350 and $550. Homes with
             multiple full baths, finished basements, or additional square footage may be priced higher.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
             We provide every Burr Ridge client with a free, no-obligation estimate before we start.
-            You&apos;ll know exactly what to expect — no hidden fees, no surprises. Just an honest quote from a
+            You&apos;ll know exactly what to expect Ã¢â‚¬â€ no hidden fees, no surprises. Just an honest quote from a
             family-owned local business.
           </p>
           <Link href="/contact" className="btn-primary">Get My Free Burr Ridge Quote</Link>
@@ -386,12 +386,12 @@ export default function DeepCleaningBurrRidgePage() {
               <h2 className="text-4xl font-bold mb-4">Book Your Deep Cleaning in Burr Ridge Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Get a free quote for deep cleaning in Burr Ridge, IL. We serve all of 60527 and every
-                neighborhood — and we back every job with our 48-hour satisfaction guarantee.
+                neighborhood Ã¢â‚¬â€ and we back every job with our 48-hour satisfaction guarantee.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                📞 (815) 246-2113
+                Ã°Å¸â€œÅ¾ (815) 246-2113
               </a>
-              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
+              <p className="text-white/80">Family-owned Ã‚Â· Eco-friendly Ã‚Â· Fully insured Ã‚Â· Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <BookingForm />

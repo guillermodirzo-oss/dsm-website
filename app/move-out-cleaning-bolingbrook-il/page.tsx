@@ -13,28 +13,32 @@ export const metadata: Metadata = {
       "Move-out cleaning in Bolingbrook, IL. DSM Cleaning Solutions helps renters and homeowners leave their property spotless. 5-star rated, 48-hour guarantee. Book online.",
     url: "https://www.dsmcleaningsolutions.com/move-out-cleaning-bolingbrook-il",
   },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/hero-image.png"],
+  },
 };
 
 const faqs = [
   {
     question: "Will your move-out cleaning help me get my deposit back in Bolingbrook?",
     answer:
-      "Yes — our Bolingbrook move-out cleaning is specifically designed to meet landlord inspection standards. We clean every surface, inside every appliance, and inside every cabinet so your property looks move-in ready and maximizes your chances of getting your full security deposit back.",
+      "Yes Ã¢â‚¬â€ our Bolingbrook move-out cleaning is specifically designed to meet landlord inspection standards. We clean every surface, inside every appliance, and inside every cabinet so your property looks move-in ready and maximizes your chances of getting your full security deposit back.",
   },
   {
     question: "How far in advance should I book move-out cleaning in Bolingbrook?",
     answer:
-      "We recommend booking at least 3–5 days before your move-out date to secure your preferred time slot. That said, we do our best to accommodate last-minute requests — give us a call at (815) 246-2113 and we'll see what we can do.",
+      "We recommend booking at least 3Ã¢â‚¬â€œ5 days before your move-out date to secure your preferred time slot. That said, we do our best to accommodate last-minute requests Ã¢â‚¬â€ give us a call at (815) 246-2113 and we'll see what we can do.",
   },
   {
     question: "Do you clean appliances during move-out cleans?",
     answer:
-      "Yes — appliances are a key part of our move-out cleaning. We clean inside and outside the oven, inside and outside the refrigerator, inside the microwave, and the dishwasher interior. These are the areas landlords inspect most closely.",
+      "Yes Ã¢â‚¬â€ appliances are a key part of our move-out cleaning. We clean inside and outside the oven, inside and outside the refrigerator, inside the microwave, and the dishwasher interior. These are the areas landlords inspect most closely.",
   },
   {
     question: "How long does a move-out clean take in Bolingbrook?",
     answer:
-      "A move-out clean in Bolingbrook typically takes 4–7 hours for an average-sized home. Larger homes in Stillwater or Lakewood Estates, or properties that haven't been professionally cleaned in a while, may take longer. We'll give you an accurate time estimate when you contact us.",
+      "A move-out clean in Bolingbrook typically takes 4Ã¢â‚¬â€œ7 hours for an average-sized home. Larger homes in Stillwater or Lakewood Estates, or properties that haven't been professionally cleaned in a while, may take longer. We'll give you an accurate time estimate when you contact us.",
   },
   {
     question: "Do you offer same-day move-out cleaning in Bolingbrook?",
@@ -136,12 +140,12 @@ const checklist = [
 ];
 
 const trustCards = [
-  { icon: "💰", title: "Deposit-Back Focused", desc: "Designed to meet landlord inspection standards in Bolingbrook, IL." },
-  { icon: "🛡️", title: "Fully Insured & Bonded", desc: "Background-checked team. Every job fully covered." },
-  { icon: "✅", title: "48-Hour Guarantee", desc: "If your landlord isn&apos;t satisfied, we re-clean at no charge." },
-  { icon: "👨‍👩‍👧", title: "Family Owned", desc: "Local southwest suburbs business — your trusted neighbors." },
-  { icon: "📅", title: "Flexible Scheduling", desc: "Book around your move-out timeline in Bolingbrook." },
-  { icon: "📍", title: "Serving Bolingbrook", desc: "All neighborhoods — zip codes 60440 & 60490." },
+  { icon: "Ã°Å¸â€™Â°", title: "Deposit-Back Focused", desc: "Designed to meet landlord inspection standards in Bolingbrook, IL." },
+  { icon: "Ã°Å¸â€ºÂ¡Ã¯Â¸Â", title: "Fully Insured & Bonded", desc: "Background-checked team. Every job fully covered." },
+  { icon: "Ã¢Å“â€¦", title: "48-Hour Guarantee", desc: "If your landlord isn&apos;t satisfied, we re-clean at no charge." },
+  { icon: "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§", title: "Family Owned", desc: "Local southwest suburbs business Ã¢â‚¬â€ your trusted neighbors." },
+  { icon: "Ã°Å¸â€œâ€¦", title: "Flexible Scheduling", desc: "Book around your move-out timeline in Bolingbrook." },
+  { icon: "Ã°Å¸â€œÂ", title: "Serving Bolingbrook", desc: "All neighborhoods Ã¢â‚¬â€ zip codes 60440 & 60490." },
 ];
 
 export default function MoveOutCleaningBolingbrookPage() {
@@ -176,12 +180,12 @@ export default function MoveOutCleaningBolingbrookPage() {
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               DSM Cleaning Solutions delivers a landlord-approved, deposit-back move-out clean for
-              Bolingbrook homes and apartments. We serve all of 60440 and 60490 — from Naperville
-              Acres to Stillwater — with a comprehensive clean built to pass any inspection.
+              Bolingbrook homes and apartments. We serve all of 60440 and 60490 Ã¢â‚¬â€ from Naperville
+              Acres to Stillwater Ã¢â‚¬â€ with a comprehensive clean built to pass any inspection.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
-              <a href="tel:+18152462113" className="btn-outline-white btn-lg">📞 (815) 246-2113</a>
+              <a href="tel:+18152462113" className="btn-outline-white btn-lg">Ã°Å¸â€œÅ¾ (815) 246-2113</a>
             </div>
           </div>
         </div>
@@ -191,7 +195,7 @@ export default function MoveOutCleaningBolingbrookPage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["✅ Fully Insured & Bonded", "🌿 Eco-Friendly Products", "👨‍👩‍👧 Family Owned", "⭐ 5-Star Rated", "✔️ Satisfaction Guaranteed"].map(
+            {["Ã¢Å“â€¦ Fully Insured & Bonded", "Ã°Å¸Å’Â¿ Eco-Friendly Products", "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§ Family Owned", "Ã¢Â­Â 5-Star Rated", "Ã¢Å“â€Ã¯Â¸Â Satisfaction Guaranteed"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -201,17 +205,17 @@ export default function MoveOutCleaningBolingbrookPage() {
       {/* INTRO */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading mb-6">Move-Out Cleaning in Bolingbrook, IL — Built to Get Your Deposit Back</h2>
+          <h2 className="section-heading mb-6">Move-Out Cleaning in Bolingbrook, IL Ã¢â‚¬â€ Built to Get Your Deposit Back</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Move-out cleaning in Bolingbrook, IL is one of DSM Cleaning Solutions&apos; most requested
-            services — and for good reason. Bolingbrook renters in Naperville Acres, Americana
+            services Ã¢â‚¬â€ and for good reason. Bolingbrook renters in Naperville Acres, Americana
             Estates, Pheasant Chase, and across zip codes 60440 and 60490 trust us to deliver the
             kind of deep, comprehensive clean that meets even the strictest landlord standards and
             maximizes the chance of getting their full security deposit back.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Our Bolingbrook move-out cleaning service isn&apos;t a surface-level wipe-down. We clean inside
-            every appliance, inside every cabinet, inside every closet — every corner of the empty
+            every appliance, inside every cabinet, inside every closet Ã¢â‚¬â€ every corner of the empty
             home that a landlord or property manager is likely to inspect. The goal is simple: leave
             the property in better condition than when you first moved in.
           </p>
@@ -278,15 +282,15 @@ export default function MoveOutCleaningBolingbrookPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading mb-6">How Much Does Move-Out Cleaning Cost in Bolingbrook, IL?</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Move-out cleaning in Bolingbrook starts around $150–$250 for most homes, depending on
+            Move-out cleaning in Bolingbrook starts around $150Ã¢â‚¬â€œ$250 for most homes, depending on
             size, number of bathrooms, and current condition. Larger homes in Lakewood Estates or
             Stillwater with multiple bathrooms and full appliance cleaning may be priced higher. We
-            recommend booking at least 3–5 days before your move-out date to secure your preferred
+            recommend booking at least 3Ã¢â‚¬â€œ5 days before your move-out date to secure your preferred
             time slot.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
             Every Bolingbrook client receives a free, no-obligation estimate before booking. We&apos;re
-            transparent about our pricing — no surprises, no hidden add-ons after the job.
+            transparent about our pricing Ã¢â‚¬â€ no surprises, no hidden add-ons after the job.
           </p>
           <Link href="/contact" className="btn-primary">Get My Free Bolingbrook Quote</Link>
         </div>
@@ -323,7 +327,7 @@ export default function MoveOutCleaningBolingbrookPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <Link href="/move-out-cleaning-plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning in Plainfield</h3>
-              <p className="text-sm text-gray-600">Serving all of Plainfield — zip codes 60544 & 60585.</p>
+              <p className="text-sm text-gray-600">Serving all of Plainfield Ã¢â‚¬â€ zip codes 60544 & 60585.</p>
             </Link>
             <Link href="/move-out-cleaning-naperville-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning in Naperville</h3>
@@ -349,13 +353,13 @@ export default function MoveOutCleaningBolingbrookPage() {
               <h2 className="text-4xl font-bold mb-4">Book Your Move-Out Cleaning in Bolingbrook Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Moving out in Bolingbrook, IL? Get your free quote today. We serve all of 60440 and
-                60490 and back every move-out job with our satisfaction guarantee — your deposit back
+                60490 and back every move-out job with our satisfaction guarantee Ã¢â‚¬â€ your deposit back
                 or we re-clean at no charge.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                📞 (815) 246-2113
+                Ã°Å¸â€œÅ¾ (815) 246-2113
               </a>
-              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Deposit-back focused</p>
+              <p className="text-white/80">Family-owned Ã‚Â· Eco-friendly Ã‚Â· Fully insured Ã‚Â· Deposit-back focused</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <BookingForm />

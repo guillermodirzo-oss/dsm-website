@@ -13,6 +13,10 @@ export const metadata: Metadata = {
       "Recurring house cleaning in Lockport IL by DSM Cleaning Solutions. Trusted, insured & eco-friendly. Call (815) 246-2113.",
     url: "https://www.dsmcleaningsolutions.com/standard-cleaning-lockport-il",
   },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/hero-image.png"],
+  },
 };
 
 const faqs = [
@@ -24,17 +28,17 @@ const faqs = [
   {
     question: "Do you bring your own eco-friendly supplies to Lockport?",
     answer:
-      "Yes — we arrive fully equipped with all our eco-friendly, non-toxic cleaning products and equipment. You don't need to provide anything. Our green products are safe for children and pets throughout your Lockport home.",
+      "Yes Ã¢â‚¬â€ we arrive fully equipped with all our eco-friendly, non-toxic cleaning products and equipment. You don't need to provide anything. Our green products are safe for children and pets throughout your Lockport home.",
   },
   {
     question: "Are your cleaners background checked for Lockport homes?",
     answer:
-      "Yes — every member of our cleaning team is background-checked, insured, and bonded. We take the security of your Lockport home seriously, whether you're present during the clean or not.",
+      "Yes Ã¢â‚¬â€ every member of our cleaning team is background-checked, insured, and bonded. We take the security of your Lockport home seriously, whether you're present during the clean or not.",
   },
   {
     question: "What recurring cleaning plans do you offer in Lockport?",
     answer:
-      "We offer weekly, biweekly, and monthly recurring cleaning plans for Lockport homes. Recurring clients receive discounted rates — the more frequently we visit, the more you save. We'll recommend the best frequency based on your home size, lifestyle, and budget.",
+      "We offer weekly, biweekly, and monthly recurring cleaning plans for Lockport homes. Recurring clients receive discounted rates Ã¢â‚¬â€ the more frequently we visit, the more you save. We'll recommend the best frequency based on your home size, lifestyle, and budget.",
   },
   {
     question: "What if I need to reschedule my Lockport cleaning?",
@@ -120,12 +124,12 @@ const checklist = [
 ];
 
 const trustCards = [
-  { icon: "🌿", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products safe for your Lockport family." },
-  { icon: "🛡️", title: "Fully Insured & Bonded", desc: "Background-checked team. Your home is fully protected." },
-  { icon: "✅", title: "48-Hour Guarantee", desc: "We re-clean anything that isn't right within 48 hours." },
-  { icon: "👨‍👩‍👧", title: "Family Owned", desc: "Based in nearby Romeoville — your southwest suburbs neighbors." },
-  { icon: "📅", title: "7 Days a Week", desc: "Flexible scheduling to fit your busy Lockport schedule." },
-  { icon: "📍", title: "Serving Lockport", desc: "All neighborhoods throughout zip code 60441." },
+  { icon: "Ã°Å¸Å’Â¿", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products safe for your Lockport family." },
+  { icon: "Ã°Å¸â€ºÂ¡Ã¯Â¸Â", title: "Fully Insured & Bonded", desc: "Background-checked team. Your home is fully protected." },
+  { icon: "Ã¢Å“â€¦", title: "48-Hour Guarantee", desc: "We re-clean anything that isn't right within 48 hours." },
+  { icon: "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§", title: "Family Owned", desc: "Based in nearby Romeoville Ã¢â‚¬â€ your southwest suburbs neighbors." },
+  { icon: "Ã°Å¸â€œâ€¦", title: "7 Days a Week", desc: "Flexible scheduling to fit your busy Lockport schedule." },
+  { icon: "Ã°Å¸â€œÂ", title: "Serving Lockport", desc: "All neighborhoods throughout zip code 60441." },
 ];
 
 export default function StandardCleaningLockportPage() {
@@ -157,11 +161,11 @@ export default function StandardCleaningLockportPage() {
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               DSM Cleaning Solutions keeps Lockport homes spotless week after week. Whether you need
               a one-time clean or a recurring schedule in Lockport Estates, Heritage Woods, or
-              anywhere in zip code 60441 — we&apos;re your trusted local cleaning team.
+              anywhere in zip code 60441 Ã¢â‚¬â€ we&apos;re your trusted local cleaning team.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
-              <a href="tel:+18152462113" className="btn-outline-white btn-lg">📞 (815) 246-2113</a>
+              <a href="tel:+18152462113" className="btn-outline-white btn-lg">Ã°Å¸â€œÅ¾ (815) 246-2113</a>
             </div>
           </div>
         </div>
@@ -171,7 +175,7 @@ export default function StandardCleaningLockportPage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["✅ Fully Insured & Bonded", "🌿 Eco-Friendly Products", "👨‍👩‍👧 Family Owned", "⭐ 5-Star Rated", "✔️ Satisfaction Guaranteed"].map(
+            {["Ã¢Å“â€¦ Fully Insured & Bonded", "Ã°Å¸Å’Â¿ Eco-Friendly Products", "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§ Family Owned", "Ã¢Â­Â 5-Star Rated", "Ã¢Å“â€Ã¯Â¸Â Satisfaction Guaranteed"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -184,13 +188,13 @@ export default function StandardCleaningLockportPage() {
           <h2 className="section-heading mb-6">Reliable Standard House Cleaning in Lockport, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Standard cleaning in Lockport, IL is one of DSM Cleaning Solutions&apos; most trusted services
-            throughout Will County. Lockport families in zip code 60441 — from Lockport Estates and
-            Heritage Woods to Milne Grove and Downtown Lockport — rely on us to keep their homes
+            throughout Will County. Lockport families in zip code 60441 Ã¢â‚¬â€ from Lockport Estates and
+            Heritage Woods to Milne Grove and Downtown Lockport Ã¢â‚¬â€ rely on us to keep their homes
             consistently clean, visit after visit. Our team shows up on time, follows a detailed
             checklist, and leaves your home spotless every single time.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            We offer flexible scheduling — weekly, biweekly, or monthly — to match your lifestyle.
+            We offer flexible scheduling Ã¢â‚¬â€ weekly, biweekly, or monthly Ã¢â‚¬â€ to match your lifestyle.
             Biweekly is our most popular plan for Lockport families because it balances frequency and
             cost perfectly. For households with young children, pets, or a very active schedule,
             weekly cleaning keeps everything under control year-round. DSM is based in nearby
@@ -198,7 +202,7 @@ export default function StandardCleaningLockportPage() {
             reliable, neighborhood-level cleaning company they can count on.
           </p>
           <p className="text-gray-600 leading-relaxed">
-            Every visit follows the same detailed checklist — so you always know exactly what&apos;s
+            Every visit follows the same detailed checklist Ã¢â‚¬â€ so you always know exactly what&apos;s
             been cleaned and what to expect. No guessing, no surprises.
           </p>
         </div>
@@ -210,7 +214,7 @@ export default function StandardCleaningLockportPage() {
           <div className="text-center mb-12">
             <h2 className="section-heading">What&apos;s Included in Our Standard Cleaning in Lockport, IL</h2>
             <p className="section-subheading mx-auto">
-              Every room covered on every visit — here&apos;s exactly what our Lockport team cleans.
+              Every room covered on every visit Ã¢â‚¬â€ here&apos;s exactly what our Lockport team cleans.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -258,14 +262,14 @@ export default function StandardCleaningLockportPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading mb-6">How Much Does Standard Cleaning Cost in Lockport, IL?</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Standard cleaning in Lockport starts around $120–$180 for an average-sized home, with
+            Standard cleaning in Lockport starts around $120Ã¢â‚¬â€œ$180 for an average-sized home, with
             pricing based on the number of bedrooms, bathrooms, and your chosen frequency. Recurring
-            clients who book weekly or biweekly service receive a discounted rate — the more we
+            clients who book weekly or biweekly service receive a discounted rate Ã¢â‚¬â€ the more we
             visit, the more you save.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
             We&apos;ll provide a free, no-obligation estimate customized to your Lockport home before
-            your first visit. You&apos;ll always know exactly what you&apos;re paying — no hidden fees, no
+            your first visit. You&apos;ll always know exactly what you&apos;re paying Ã¢â‚¬â€ no hidden fees, no
             surprises.
           </p>
           <Link href="/contact" className="btn-primary">Get My Free Lockport Quote</Link>
@@ -328,13 +332,13 @@ export default function StandardCleaningLockportPage() {
             <div className="text-white">
               <h2 className="text-4xl font-bold mb-4">Book Your Standard Cleaning in Lockport Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                Ready for a reliably clean home in Lockport, IL? Get your free estimate today —
+                Ready for a reliably clean home in Lockport, IL? Get your free estimate today Ã¢â‚¬â€
                 we serve all of 60441 and back every clean with our 48-hour satisfaction guarantee.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                📞 (815) 246-2113
+                Ã°Å¸â€œÅ¾ (815) 246-2113
               </a>
-              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
+              <p className="text-white/80">Family-owned Ã‚Â· Eco-friendly Ã‚Â· Fully insured Ã‚Â· Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <BookingForm />

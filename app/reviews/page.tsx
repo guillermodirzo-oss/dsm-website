@@ -7,10 +7,26 @@ export const metadata: Metadata = {
     "Read 5-star reviews for DSM Cleaning Solutions — trusted house cleaning in Plainfield, Romeoville, Naperville & Bolingbrook IL. Family owned & insured.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/reviews" },
   openGraph: {
-    title: "5-Star Reviews | DSM Cleaning Solutions",
+    title: "5-Star Reviews | DSM Cleaning Solutions Romeoville IL",
     description:
       "Read 5-star reviews for DSM Cleaning Solutions — trusted house cleaning in Plainfield, Romeoville, Naperville & Bolingbrook IL. Family owned & insured.",
     url: "https://www.dsmcleaningsolutions.com/reviews",
+    siteName: "DSM Cleaning Solutions",
+    images: [
+      {
+        url: "/hero-image.png",
+        width: 1200,
+        height: 630,
+        alt: "DSM Cleaning Solutions — 5-Star Rated House Cleaning in Romeoville IL",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "5-Star Reviews | DSM Cleaning Solutions Romeoville IL",
+    description:
+      "Read 5-star reviews for DSM Cleaning Solutions — trusted house cleaning in Plainfield, Romeoville, Naperville & Bolingbrook IL.",
+    images: ["/hero-image.png"],
   },
 };
 
@@ -70,9 +86,9 @@ const reviewSchema = {
   telephone: "+18152462113",
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Plainfield",
+    addressLocality: "Romeoville",
     addressRegion: "IL",
-    postalCode: "60544",
+    postalCode: "60446",
     addressCountry: "US",
   },
   review: [
@@ -221,7 +237,7 @@ export default function ReviewsPage() {
                 ⭐ Leave Us a Review
               </a>
               <Link
-                href="https://dsmcleaningsolutions.bookingkoala.com/booknow"
+                href="/book"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-outline-white btn-lg"
@@ -355,7 +371,7 @@ export default function ReviewsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="https://dsmcleaningsolutions.bookingkoala.com/booknow"
+              href="/book"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-brand-green font-bold px-8 py-3.5 rounded-full hover:bg-orange-50 transition-colors shadow-md text-base"
