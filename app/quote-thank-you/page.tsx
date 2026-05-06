@@ -4,6 +4,7 @@ import QuoteThankYouClient from "./QuoteThankYouClient";
 export const metadata: Metadata = {
   title: "We Got Your Request!",
   description: "Thanks for reaching out. DSM Cleaning Solutions will reply within 1 business day with your free estimate.",
+  alternates: { canonical: "https://www.dsmcleaningsolutions.com/quote-thank-you" },
   robots: {
     index: false,
     follow: false,

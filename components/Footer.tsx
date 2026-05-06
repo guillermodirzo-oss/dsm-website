@@ -72,6 +72,11 @@ export default function Footer() {
               ].map((item) => (
                 <li key={item.label}><Link href={item.href} className="hover:text-white transition-colors">{item.label}</Link></li>
               ))}
+              <li className="pt-1">
+                <Link href="/service-areas" className="text-brand-green font-semibold hover:text-white transition-colors">
+                  View All Service Areas →
+                </Link>
+              </li>
             </ul>
           </div>
 

@@ -493,7 +493,7 @@ export default function PlainfieldPage() {
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">We Also Serve These Nearby Areas</h2>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-3 mb-5">
             {[
               { city: "Romeoville", href: "/" },
               { city: "Naperville", href: "/naperville-il" },
@@ -513,6 +513,15 @@ export default function PlainfieldPage() {
               </Link>
             ))}
           </div>
+          <Link
+            href="/service-areas"
+            className="inline-flex items-center gap-2 text-brand-green font-semibold text-sm hover:text-brand-green-dark transition-colors"
+          >
+            View All Service Areas
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
         </div>
       </section>
 
