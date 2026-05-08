@@ -36,7 +36,7 @@ const ORANGE = "#E8721C";
 export default function SpringSpecialPage() {
   return (
     <>
-      {/* ─── HIDE BOOKINGKOALA BRANDING ─── */}
+      {/* ─── HIDE BOOKINGKOALA BRANDING + GLOBAL PAGE FIXES ─── */}
       <style>{`
         [class*="powered"],
         [class*="bookingkoala"],
@@ -50,6 +50,12 @@ export default function SpringSpecialPage() {
           height: 0 !important;
           overflow: hidden !important;
         }
+        /* Smooth anchor scrolling — fixes dead-click anchor links */
+        html { scroll-behavior: smooth; }
+        /* Prevent CLS from font loading */
+        @font-face { font-display: swap; }
+        /* Non-interactive trust elements — remove tappable appearance */
+        .trust-static { cursor: default; user-select: none; -webkit-tap-highlight-color: transparent; pointer-events: none; }
       `}</style>
 
       {/* ════════════════════════════════════════
@@ -106,9 +112,9 @@ export default function SpringSpecialPage() {
 
             {/* ── Div A: Headline content — mobile: first, desktop: col-1/row-1 ── */}
             <div className="order-1 lg:order-none">
-              {/* Urgency badge */}
+              {/* Urgency badge — mb reduced on mobile to pull form up */}
               <div
-                className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-5 border"
+                className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-3 border"
                 style={{ backgroundColor: "rgba(232,114,28,0.08)", borderColor: "rgba(232,114,28,0.35)" }}
               >
                 <span
@@ -120,19 +126,20 @@ export default function SpringSpecialPage() {
                 </span>
               </div>
 
-              {/* Headline */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight tracking-tight mb-3">
+              {/* Headline — tighter mb on mobile */}
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight tracking-tight mb-2">
                 Get Your Home<br />
                 <span style={{ color: ORANGE }}>Spring Deep Cleaned</span>
               </h1>
 
-              {/* Change 2: pill badge — not clickable text — eliminates dead clicks */}
-              <span
-                className="inline-block px-5 py-2 rounded-full text-white font-bold text-base sm:text-lg mb-4"
+              {/* Real anchor link to form — fixes dead clicks on this button-styled element */}
+              <a
+                href="#quote-form"
+                className="inline-block px-5 py-2 rounded-full text-white font-bold text-base sm:text-lg mb-3 cursor-pointer"
                 style={{ backgroundColor: ORANGE }}
               >
                 🎉 $75 OFF + Free Oven Cleaning This May
-              </span>
+              </a>
 
               <p className="text-gray-500 text-sm sm:text-base leading-relaxed">
                 Family-owned &bull; Fully insured &bull; Serving Romeoville, Plainfield, Bolingbrook,
@@ -141,25 +148,22 @@ export default function SpringSpecialPage() {
             </div>
 
             {/* ── Div B: Form — mobile: SECOND (before image), desktop: right col spans 2 rows ── */}
-            <div id="booking-form" className="order-2 lg:order-none lg:row-span-2">
-              {/* Change 4: urgency line directly above the embed */}
-              <p className="text-xs font-bold uppercase tracking-wider text-center mb-2" style={{ color: ORANGE }}>
-                ⚡ May Only — Limited Spots Available
-              </p>
+            {/* id="quote-form" is the scroll target for all anchor links on this page */}
+            <div id="quote-form" className="order-2 lg:order-none lg:row-span-2">
               <div
                 className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100"
                 style={{ boxShadow: "0 20px 50px rgba(0,0,0,0.12)" }}
               >
                 {/* Form header */}
                 <div className="px-6 py-4 text-center" style={{ backgroundColor: ORANGE }}>
-                  <p className="text-white font-bold text-lg">Claim Your $75 Off — May Only</p>
-                  <p className="text-orange-100 text-sm mt-1">Fill out your info to lock in the discount</p>
+                  <p className="text-white font-bold text-lg">Get Your Free Quote</p>
+                  <p className="text-orange-100 text-sm mt-1">Fill out your info to lock in the $75 discount</p>
                 </div>
 
-                {/* BookingKoala lead form */}
+                {/* BookingKoala lead form — min-height reserves space to prevent CLS */}
                 <Suspense
                   fallback={
-                    <div className="h-96 flex items-center justify-center">
+                    <div className="flex items-center justify-center" style={{ minHeight: "520px" }}>
                       <span className="text-gray-400 text-sm">Loading form…</span>
                     </div>
                   }
@@ -167,15 +171,23 @@ export default function SpringSpecialPage() {
                   <SpringBookingForm />
                 </Suspense>
               </div>
-              <p className="text-gray-400 text-xs text-center mt-3">
-                ⚡ Limited May spots — filling fast
+
+              {/* Secondary direct-booking link */}
+              <p className="text-center mt-4">
+                <a
+                  href="https://www.dsmcleaningsolutions.com/book"
+                  className="underline text-gray-400 hover:text-gray-600 transition-colors"
+                  style={{ fontSize: "14px" }}
+                >
+                  Prefer to book directly? Book online instantly →
+                </a>
               </p>
             </div>
 
             {/* ── Div C: Image + trust — mobile: THIRD (after form), desktop: col-1/row-2 ── */}
             <div className="order-3 lg:order-none">
-              {/* Hero image */}
-              <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-200 mb-6">
+              {/* Hero image — explicit aspect-ratio prevents CLS while loading */}
+              <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-200 mb-6" style={{ aspectRatio: "1 / 1" }}>
                 <Image
                   src="/spring-ad-hero.png"
                   alt="DSM Cleaning Solutions — $75 Off Spring Deep Cleaning in Romeoville, Plainfield & suburbs"
@@ -217,7 +229,7 @@ export default function SpringSpecialPage() {
               { icon: "🌿", label: "Eco-Friendly", desc: "Safe for kids & pets" },
               { icon: "✅", label: "Satisfaction Guaranteed", desc: "48-hour re-clean promise" },
             ].map((item) => (
-              <div key={item.label} className="flex flex-col items-center gap-2 p-4">
+              <div key={item.label} className="trust-static flex flex-col items-center gap-2 p-4">
                 <span className="text-3xl">{item.icon}</span>
                 <p className="font-bold text-gray-900 text-sm">{item.label}</p>
                 <p className="text-xs text-gray-400">{item.desc}</p>
@@ -294,7 +306,7 @@ export default function SpringSpecialPage() {
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 tracking-tight text-center">
             See the Difference a Deep Clean Makes
           </h2>
-          <div className="max-w-xl mx-auto rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+          <div className="max-w-xl mx-auto rounded-2xl overflow-hidden shadow-xl border border-gray-200" style={{ aspectRatio: "1 / 1" }}>
             <Image
               src="/spring-ad-before-after.png"
               alt="Before and After — DSM Deep Cleaning Results in Romeoville, IL"
@@ -372,11 +384,10 @@ export default function SpringSpecialPage() {
             ].map((badge) => (
               <div
                 key={badge.label}
-                className="rounded-2xl p-4 text-center border"
-                style={{ backgroundColor: "rgba(232,114,28,0.05)", borderColor: "rgba(232,114,28,0.2)" }}
+                className="trust-static rounded-2xl p-4 text-center"
               >
                 <span className="text-2xl block mb-2">{badge.icon}</span>
-                <span className="text-gray-700 font-semibold text-xs leading-tight">{badge.label}</span>
+                <span className="text-gray-500 font-semibold text-xs leading-tight">{badge.label}</span>
               </div>
             ))}
           </div>
@@ -466,8 +477,8 @@ export default function SpringSpecialPage() {
       <section className="bg-gray-50 py-14 px-4">
         <div className="max-w-5xl mx-auto">
 
-          {/* Guarantee */}
-          <div className="text-center mb-12">
+          {/* Guarantee — trust-static prevents tap-highlight on non-interactive elements */}
+          <div className="trust-static text-center mb-12">
             <div
               className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-xl"
               style={{ backgroundColor: ORANGE, boxShadow: "0 10px 30px rgba(232,114,28,0.3)" }}
@@ -502,7 +513,7 @@ export default function SpringSpecialPage() {
         style={{ backgroundColor: ORANGE, boxShadow: "0 -4px 20px rgba(232,114,28,0.35)" }}
       >
         <a
-          href="#booking-form"
+          href="#quote-form"
           className="flex items-center justify-center w-full text-white font-extrabold text-base py-3.5 rounded-2xl"
           style={{ backgroundColor: "rgba(0,0,0,0.18)" }}
         >
