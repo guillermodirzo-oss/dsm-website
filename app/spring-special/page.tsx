@@ -61,13 +61,24 @@ export default function SpringSpecialPage() {
           -webkit-tap-highlight-color: transparent;
           pointer-events: none;
         }
-        /* Mobile hero height cap — keeps form in first viewport */
+        /* ── MOBILE LAYOUT FIXES (max-width: 1023px) ── */
         @media (max-width: 1023px) {
-          .mobile-hero { max-height: 200px; overflow: visible; }
-          .mobile-hero h1 { font-size: 1.25rem; line-height: 1.3; margin-bottom: 4px; }
-          .mobile-hero .badge { margin-bottom: 4px; }
+          /* FIX 5: Hero section — 8px top padding, compressed height */
+          .mobile-hero-section { padding-top: 8px !important; padding-bottom: 0 !important; }
+          /* FIX 5: H1 exactly 32px on mobile */
+          .mobile-hero h1 { font-size: 2rem !important; line-height: 1.2; margin-top: 6px; margin-bottom: 6px; }
+          .mobile-hero .badge { margin-bottom: 6px; }
           .mobile-hero .offer-pill { margin-bottom: 6px; font-size: 0.875rem; padding: 6px 14px; }
-          .mobile-hero .trust-line { font-size: 0.75rem; }
+          /* FIX 5: 8px padding below trust line */
+          .mobile-hero .trust-line { font-size: 0.75rem; margin-bottom: 8px !important; padding-bottom: 0; }
+          /* FIX 1: Kill the gap between hero div and form div */
+          .form-wrapper { padding-top: 0 !important; margin-top: 0 !important; }
+          /* FIX 1: Reset browser default h2 margins that create hidden gap */
+          .form-wrapper h2 { margin-top: 0 !important; margin-bottom: 8px !important; }
+          /* FIX 2: Hide orange "Get Your Free Quote" box on mobile — confirmed hidden */
+          .form-orange-header { display: none !important; }
+          /* FIX 1: Remove grid gap on mobile so hero sits flush against form */
+          .hero-form-grid { gap: 0 !important; }
         }
       `}</style>
 
@@ -107,14 +118,14 @@ export default function SpringSpecialPage() {
             order: badge → h1 → offer pill → trust line
           Desktop: left column, full size
       ════════════════════════════════════════ */}
-      <section className="bg-white pt-3 pb-0 lg:py-10 px-4">
+      <section className="mobile-hero-section bg-white pt-3 pb-0 lg:py-10 px-4">
         <div className="max-w-5xl mx-auto">
           {/*
             DOM order: A (hero) → B (form) → C (image)
             Mobile (single col): A stacks above B — hero then form ✓
             Desktop (2-col grid): A col-1/row-1, B col-2/rows-1-2, C col-1/row-2
           */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-10 items-start">
+          <div className="hero-form-grid grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-10 items-start">
 
             {/* ── A: Hero text ── */}
             <div className="mobile-hero order-1 lg:order-none">
@@ -166,13 +177,16 @@ export default function SpringSpecialPage() {
                 On mobile: immediately below the compact hero.
                 On desktop: right column, spans 2 rows.
             ── */}
-            <div id="quote-form" className="order-2 lg:order-none lg:row-span-2 pt-2 lg:pt-0">
+            <div id="quote-form" className="form-wrapper order-2 lg:order-none lg:row-span-2 lg:pt-0">
 
               {/*
-                "Get Your Free Quote" is a plain <h2>, NOT a button or anchor.
-                Shown on mobile only — on desktop the orange card header serves this role.
+                FIX 2: Plain <h2> heading — NOT a button or anchor, NOT orange.
+                Inline margin reset prevents browser-default h2 spacing creating the gap.
               */}
-              <h2 className="lg:hidden text-lg font-bold text-center text-gray-900 mb-2">
+              <h2
+                className="lg:hidden text-lg font-bold text-center text-gray-900"
+                style={{ marginTop: 0, marginBottom: "8px" }}
+              >
                 Get Your Free Quote
               </h2>
 
@@ -181,8 +195,9 @@ export default function SpringSpecialPage() {
                 className="bg-white rounded-3xl overflow-hidden border border-gray-100"
                 style={{ boxShadow: "0 20px 50px rgba(0,0,0,0.12)" }}
               >
-                {/* Orange sub-header — desktop only (on mobile the h2 above replaces this) */}
-                <div className="hidden lg:block px-6 py-4 text-center" style={{ backgroundColor: ORANGE }}>
+                {/* FIX 2: Orange box — hidden on mobile via form-orange-header CSS class.
+                    Class "hidden lg:block" also enforces this, dual protection. */}
+                <div className="form-orange-header hidden lg:block px-6 py-4 text-center" style={{ backgroundColor: ORANGE }}>
                   <p className="text-white font-bold text-lg">Get Your Free Quote</p>
                   <p className="text-orange-100 text-sm mt-1">Fill out your info to lock in the $75 discount</p>
                 </div>
