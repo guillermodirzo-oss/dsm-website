@@ -28,7 +28,6 @@ export const metadata: Metadata = {
 
 const PHONE = "(815) 246-2113";
 const PHONE_HREF = "tel:+18152462113";
-const BOOK_URL = "/book";
 const COUPON = "SPRING75";
 const NAVY = "#1B2B5E";
 const ORANGE = "#E8721C";
@@ -36,8 +35,9 @@ const ORANGE = "#E8721C";
 export default function SpringSpecialPage() {
   return (
     <>
-      {/* ─── HIDE BOOKINGKOALA BRANDING + GLOBAL PAGE FIXES ─── */}
+      {/* ─── GLOBAL STYLES ─── */}
       <style>{`
+        /* Hide BookingKoala branding */
         [class*="powered"],
         [class*="bookingkoala"],
         [class*="bk-brand"],
@@ -50,16 +50,29 @@ export default function SpringSpecialPage() {
           height: 0 !important;
           overflow: hidden !important;
         }
-        /* Smooth anchor scrolling — fixes dead-click anchor links */
-        html { scroll-behavior: smooth; }
-        /* Prevent CLS from font loading */
+        /* CLS: reserve image space before images load */
+        .img-1-1 { aspect-ratio: 1 / 1; }
+        /* CLS: prevent font layout shift */
         @font-face { font-display: swap; }
-        /* Non-interactive trust elements — remove tappable appearance */
-        .trust-static { cursor: default; user-select: none; -webkit-tap-highlight-color: transparent; pointer-events: none; }
+        /* Non-interactive trust elements */
+        .trust-static {
+          cursor: default;
+          user-select: none;
+          -webkit-tap-highlight-color: transparent;
+          pointer-events: none;
+        }
+        /* Mobile hero height cap — keeps form in first viewport */
+        @media (max-width: 1023px) {
+          .mobile-hero { max-height: 200px; overflow: visible; }
+          .mobile-hero h1 { font-size: 1.25rem; line-height: 1.3; margin-bottom: 4px; }
+          .mobile-hero .badge { margin-bottom: 4px; }
+          .mobile-hero .offer-pill { margin-bottom: 6px; font-size: 0.875rem; padding: 6px 14px; }
+          .mobile-hero .trust-line { font-size: 0.75rem; }
+        }
       `}</style>
 
       {/* ════════════════════════════════════════
-          SECTION 1 — STICKY TOP BAR (white)
+          SECTION 1 — STICKY TOP HEADER (~60px)
       ════════════════════════════════════════ */}
       <div className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm py-2 px-4">
         <div className="max-w-5xl mx-auto flex items-center justify-between gap-3">
@@ -73,94 +86,108 @@ export default function SpringSpecialPage() {
               priority
             />
           </a>
-
           <a
             href={PHONE_HREF}
             className="text-gray-800 font-bold text-sm sm:text-base hover:text-orange-500 transition-colors flex items-center gap-1.5"
           >
-            <svg
-              className="w-3.5 h-3.5 flex-shrink-0"
-              style={{ color: ORANGE }}
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
+            <svg className="w-3.5 h-3.5 flex-shrink-0" style={{ color: ORANGE }} fill="currentColor" viewBox="0 0 24 24">
               <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
             </svg>
             {PHONE}
           </a>
-
           <span className="font-semibold text-xs sm:text-sm whitespace-nowrap" style={{ color: ORANGE }}>
-            37 Five-Star Reviews{" "}
-            <span className="text-yellow-400">★★★★★</span>
+            47 Five-Star Reviews <span className="text-yellow-400">★★★★★</span>
           </span>
         </div>
       </div>
 
       {/* ════════════════════════════════════════
-          SECTION 2 — HERO (two-column, white bg)
+          SECTION 2 — HERO
+          Mobile: compact strip, max ~200px tall
+            order: badge → h1 → offer pill → trust line
+          Desktop: left column, full size
       ════════════════════════════════════════ */}
-      <section className="bg-white py-10 px-4">
+      <section className="bg-white pt-3 pb-0 lg:py-10 px-4">
         <div className="max-w-5xl mx-auto">
           {/*
-            3-column grid trick for mobile reordering:
-            Div A (text)  → order-1 mobile | col-1 row-1 desktop
-            Div B (form)  → order-2 mobile | col-2 rows-1-2 desktop  (Change 1)
-            Div C (image) → order-3 mobile | col-1 row-2 desktop
-            This puts the form above the promo image on mobile (87% of traffic).
+            DOM order: A (hero) → B (form) → C (image)
+            Mobile (single col): A stacks above B — hero then form ✓
+            Desktop (2-col grid): A col-1/row-1, B col-2/rows-1-2, C col-1/row-2
           */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-10 items-start">
 
-            {/* ── Div A: Headline content — mobile: first, desktop: col-1/row-1 ── */}
-            <div className="order-1 lg:order-none">
-              {/* Urgency badge — mb reduced on mobile to pull form up */}
+            {/* ── A: Hero text ── */}
+            <div className="mobile-hero order-1 lg:order-none">
+
+              {/* Urgency badge */}
               <div
-                className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-3 border"
+                className="badge inline-flex items-center gap-2 rounded-full px-3 py-1 lg:px-4 lg:py-1.5 border"
                 style={{ backgroundColor: "rgba(232,114,28,0.08)", borderColor: "rgba(232,114,28,0.35)" }}
               >
-                <span
-                  className="w-2 h-2 rounded-full animate-pulse flex-shrink-0"
-                  style={{ backgroundColor: ORANGE }}
-                />
+                <span className="w-2 h-2 rounded-full animate-pulse flex-shrink-0" style={{ backgroundColor: ORANGE }} />
                 <span className="text-xs font-bold uppercase tracking-wider" style={{ color: ORANGE }}>
                   May Only — Limited Spots Available
                 </span>
               </div>
 
-              {/* Headline — tighter mb on mobile */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight tracking-tight mb-2">
-                Get Your Home<br />
+              {/* H1 */}
+              <h1 className="font-bold text-gray-900 leading-tight tracking-tight lg:text-4xl xl:text-5xl mt-1 lg:mt-3 lg:mb-2">
+                Get Your Home{" "}
                 <span style={{ color: ORANGE }}>Spring Deep Cleaned</span>
               </h1>
 
-              {/* Real anchor link to form — fixes dead clicks on this button-styled element */}
+              {/*
+                OFFER PILL — real anchor link.
+                Uses data-scroll-form attribute so the injected <script> at the
+                bottom of the page attaches a proper getElementById scrollIntoView
+                handler. This bypasses any Next.js router interception of href="#...".
+              */}
               <a
                 href="#quote-form"
-                className="inline-block px-5 py-2 rounded-full text-white font-bold text-base sm:text-lg mb-3 cursor-pointer"
+                data-scroll-form="true"
+                className="offer-pill inline-block rounded-full text-white font-bold cursor-pointer mt-1 lg:mt-0 lg:text-lg lg:px-5 lg:py-2 lg:mb-3"
                 style={{ backgroundColor: ORANGE }}
               >
                 🎉 $75 OFF + Free Oven Cleaning This May
               </a>
 
-              <p className="text-gray-500 text-sm sm:text-base leading-relaxed">
-                Family-owned &bull; Fully insured &bull; Serving Romeoville, Plainfield, Bolingbrook,
-                Lockport, Shorewood, Crest Hill &amp; surrounding suburbs
+              {/* Trust line — ONE line on mobile */}
+              <p className="trust-line text-gray-500 mt-1 lg:mt-0 lg:text-base">
+                Family-owned &bull; Insured &bull; 47 Five-Star Reviews
+              </p>
+              {/* Extended service area — desktop only */}
+              <p className="hidden lg:block text-gray-500 text-sm mt-1">
+                Serving Romeoville, Plainfield, Bolingbrook, Lockport, Shorewood, Crest Hill &amp; suburbs
               </p>
             </div>
 
-            {/* ── Div B: Form — mobile: SECOND (before image), desktop: right col spans 2 rows ── */}
-            {/* id="quote-form" is the scroll target for all anchor links on this page */}
-            <div id="quote-form" className="order-2 lg:order-none lg:row-span-2">
+            {/* ── B: QUOTE FORM ──
+                id="quote-form" — this is the scroll target for ALL anchor links.
+                On mobile: immediately below the compact hero.
+                On desktop: right column, spans 2 rows.
+            ── */}
+            <div id="quote-form" className="order-2 lg:order-none lg:row-span-2 pt-2 lg:pt-0">
+
+              {/*
+                "Get Your Free Quote" is a plain <h2>, NOT a button or anchor.
+                Shown on mobile only — on desktop the orange card header serves this role.
+              */}
+              <h2 className="lg:hidden text-lg font-bold text-center text-gray-900 mb-2">
+                Get Your Free Quote
+              </h2>
+
+              {/* Form card */}
               <div
-                className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100"
+                className="bg-white rounded-3xl overflow-hidden border border-gray-100"
                 style={{ boxShadow: "0 20px 50px rgba(0,0,0,0.12)" }}
               >
-                {/* Form header */}
-                <div className="px-6 py-4 text-center" style={{ backgroundColor: ORANGE }}>
+                {/* Orange sub-header — desktop only (on mobile the h2 above replaces this) */}
+                <div className="hidden lg:block px-6 py-4 text-center" style={{ backgroundColor: ORANGE }}>
                   <p className="text-white font-bold text-lg">Get Your Free Quote</p>
                   <p className="text-orange-100 text-sm mt-1">Fill out your info to lock in the $75 discount</p>
                 </div>
 
-                {/* BookingKoala lead form — min-height reserves space to prevent CLS */}
+                {/* BookingKoala iframe — min-height reserves space to prevent CLS */}
                 <Suspense
                   fallback={
                     <div className="flex items-center justify-center" style={{ minHeight: "520px" }}>
@@ -173,7 +200,7 @@ export default function SpringSpecialPage() {
               </div>
 
               {/* Secondary direct-booking link */}
-              <p className="text-center mt-4">
+              <p className="text-center mt-3">
                 <a
                   href="https://www.dsmcleaningsolutions.com/book"
                   className="underline text-gray-400 hover:text-gray-600 transition-colors"
@@ -184,10 +211,12 @@ export default function SpringSpecialPage() {
               </p>
             </div>
 
-            {/* ── Div C: Image + trust — mobile: THIRD (after form), desktop: col-1/row-2 ── */}
-            <div className="order-3 lg:order-none">
-              {/* Hero image — explicit aspect-ratio prevents CLS while loading */}
-              <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-200 mb-6" style={{ aspectRatio: "1 / 1" }}>
+            {/* ── C: Image + trust bullets ──
+                Hidden on mobile — decorative, adds no conversion value.
+                Desktop: left column, row 2 (below hero text).
+            ── */}
+            <div className="order-3 lg:order-none hidden lg:block">
+              <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-200 mb-6 img-1-1">
                 <Image
                   src="/spring-ad-hero.png"
                   alt="DSM Cleaning Solutions — $75 Off Spring Deep Cleaning in Romeoville, Plainfield & suburbs"
@@ -197,8 +226,6 @@ export default function SpringSpecialPage() {
                   priority
                 />
               </div>
-
-              {/* Trust bullets */}
               <div className="grid grid-cols-2 gap-2">
                 {[
                   "✓ Family-Owned Business",
@@ -206,7 +233,7 @@ export default function SpringSpecialPage() {
                   "✓ Eco-Friendly Products",
                   "✓ 48-Hour Guarantee",
                 ].map((item) => (
-                  <div key={item} className="flex items-center gap-2 text-sm font-medium text-gray-600">
+                  <div key={item} className="trust-static flex items-center gap-2 text-sm font-medium text-gray-600">
                     {item}
                   </div>
                 ))}
@@ -218,9 +245,12 @@ export default function SpringSpecialPage() {
       </section>
 
       {/* ════════════════════════════════════════
-          SECTION 3 — TRUST / CREDIBILITY BAR
+          EVERYTHING BELOW IS SECTION 4+
+          All content below the form, on all viewports.
       ════════════════════════════════════════ */}
-      <section className="bg-white border-y border-gray-100 py-8 px-4">
+
+      {/* TRUST / CREDIBILITY BAR */}
+      <section className="bg-white border-y border-gray-100 py-8 px-4 mt-4">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             {[
@@ -239,9 +269,7 @@ export default function SpringSpecialPage() {
         </div>
       </section>
 
-      {/* ════════════════════════════════════════
-          SECTION 4 — WHAT'S INCLUDED
-      ════════════════════════════════════════ */}
+      {/* WHAT'S INCLUDED */}
       <section className="bg-gray-50 py-14 px-4">
         <div className="max-w-5xl mx-auto">
           <p className="font-bold text-xs uppercase tracking-widest mb-2" style={{ color: ORANGE }}>
@@ -255,7 +283,6 @@ export default function SpringSpecialPage() {
             bathrooms, kitchen — we go where regular cleaning doesn&apos;t.
           </p>
 
-          {/* Guarantee callout */}
           <div className="bg-white border border-green-200 rounded-2xl p-4 mb-7 flex items-start gap-3 max-w-2xl">
             <span className="text-2xl flex-shrink-0">🛡️</span>
             <div>
@@ -264,7 +291,6 @@ export default function SpringSpecialPage() {
             </div>
           </div>
 
-          {/* Checklist grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 max-w-2xl">
             {[
               "Full deep cleaning of your entire home",
@@ -281,7 +307,6 @@ export default function SpringSpecialPage() {
             ))}
           </div>
 
-          {/* Free oven bonus */}
           <div
             className="inline-flex items-start gap-3 rounded-2xl p-4 border max-w-2xl w-full"
             style={{ backgroundColor: "rgba(232,114,28,0.06)", borderColor: "rgba(232,114,28,0.3)" }}
@@ -295,9 +320,7 @@ export default function SpringSpecialPage() {
         </div>
       </section>
 
-      {/* ════════════════════════════════════════
-          SECTION 5 — BEFORE / AFTER
-      ════════════════════════════════════════ */}
+      {/* BEFORE / AFTER */}
       <section className="bg-white py-14 px-4">
         <div className="max-w-5xl mx-auto">
           <p className="font-bold text-xs uppercase tracking-widest mb-2 text-center" style={{ color: ORANGE }}>
@@ -306,7 +329,7 @@ export default function SpringSpecialPage() {
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 tracking-tight text-center">
             See the Difference a Deep Clean Makes
           </h2>
-          <div className="max-w-xl mx-auto rounded-2xl overflow-hidden shadow-xl border border-gray-200" style={{ aspectRatio: "1 / 1" }}>
+          <div className="max-w-xl mx-auto rounded-2xl overflow-hidden shadow-xl border border-gray-200 img-1-1">
             <Image
               src="/spring-ad-before-after.png"
               alt="Before and After — DSM Deep Cleaning Results in Romeoville, IL"
@@ -321,45 +344,27 @@ export default function SpringSpecialPage() {
         </div>
       </section>
 
-      {/* ════════════════════════════════════════
-          SECTION 6 — SOCIAL PROOF / REVIEWS
-      ════════════════════════════════════════ */}
+      {/* SOCIAL PROOF / REVIEWS */}
       <section className="bg-gray-50 py-14 px-4">
         <div className="max-w-5xl mx-auto">
           <p className="font-bold text-xs uppercase tracking-widest mb-2 text-center" style={{ color: ORANGE }}>
             Real Reviews
           </p>
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 tracking-tight text-center">
-            37 Families Trust DSM Cleaning Solutions
+            47 Families Trust DSM Cleaning Solutions
           </h2>
-          <p className="text-gray-500 text-sm text-center mb-8">
+          <p className="trust-static text-gray-500 text-sm text-center mb-8">
             Proudly serving homeowners in Romeoville, Plainfield, Bolingbrook, Lockport, Shorewood &amp; Crest Hill
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
             {[
-              {
-                text: "DSM did an incredible deep clean before we listed our home for sale. Every room was spotless — I was genuinely impressed. Worth every penny.",
-                name: "Jennifer M.",
-                location: "Naperville, IL",
-              },
-              {
-                text: "Used DSM for a move-out clean on my Plainfield home. Got my full security deposit back! Thorough, professional, and eco-friendly products.",
-                name: "Mike T.",
-                location: "Plainfield, IL",
-              },
-              {
-                text: "I have a biweekly cleaning with DSM and couldn't be happier. Reliable, trustworthy, and my house has never looked better.",
-                name: "Jennifer R.",
-                location: "Naperville, IL",
-              },
-              {
-                text: "DSM Cleaning Solutions is absolutely amazing! They transformed my home — every corner was spotless. Being a family-owned business, they truly care about quality.",
-                name: "Sarah M.",
-                location: "Romeoville, IL",
-              },
+              { text: "DSM did an incredible deep clean before we listed our home for sale. Every room was spotless — I was genuinely impressed. Worth every penny.", name: "Jennifer M.", location: "Naperville, IL" },
+              { text: "Used DSM for a move-out clean on my Plainfield home. Got my full security deposit back! Thorough, professional, and eco-friendly products.", name: "Mike T.", location: "Plainfield, IL" },
+              { text: "I have a biweekly cleaning with DSM and couldn't be happier. Reliable, trustworthy, and my house has never looked better.", name: "Jennifer R.", location: "Naperville, IL" },
+              { text: "DSM Cleaning Solutions is absolutely amazing! They transformed my home — every corner was spotless. Being a family-owned business, they truly care about quality.", name: "Sarah M.", location: "Romeoville, IL" },
             ].map((review) => (
-              <div key={review.name + review.location} className="bg-white rounded-2xl p-5 border border-gray-200 shadow-sm">
+              <div key={review.name + review.location} className="trust-static bg-white rounded-2xl p-5 border border-gray-200 shadow-sm">
                 <div className="flex gap-0.5 mb-3">
                   {[...Array(5)].map((_, i) => (
                     <svg key={i} className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -368,24 +373,18 @@ export default function SpringSpecialPage() {
                   ))}
                 </div>
                 <p className="text-gray-700 text-sm leading-relaxed mb-3">&ldquo;{review.text}&rdquo;</p>
-                <p className="text-gray-500 text-xs font-semibold">
-                  — {review.name}, <span className="text-gray-400">{review.location}</span>
-                </p>
+                <p className="text-gray-500 text-xs font-semibold">— {review.name}, <span className="text-gray-400">{review.location}</span></p>
               </div>
             ))}
           </div>
 
-          {/* Trust badges */}
           <div className="grid grid-cols-3 gap-3 max-w-lg mx-auto">
             {[
               { icon: "🏠", label: "Family Owned & Operated" },
               { icon: "✓", label: "Fully Insured & Bonded" },
               { icon: "🌿", label: "Eco-Friendly Products" },
             ].map((badge) => (
-              <div
-                key={badge.label}
-                className="trust-static rounded-2xl p-4 text-center"
-              >
+              <div key={badge.label} className="trust-static rounded-2xl p-4 text-center">
                 <span className="text-2xl block mb-2">{badge.icon}</span>
                 <span className="text-gray-500 font-semibold text-xs leading-tight">{badge.label}</span>
               </div>
@@ -394,9 +393,7 @@ export default function SpringSpecialPage() {
         </div>
       </section>
 
-      {/* ════════════════════════════════════════
-          SECTION 7 — SAVINGS BREAKDOWN
-      ════════════════════════════════════════ */}
+      {/* SAVINGS BREAKDOWN */}
       <section className="bg-white py-14 px-4">
         <div className="max-w-5xl mx-auto">
           <p className="font-bold text-xs uppercase tracking-widest mb-2 text-center" style={{ color: ORANGE }}>
@@ -406,11 +403,7 @@ export default function SpringSpecialPage() {
             Here&apos;s Exactly What You Save This May
           </h2>
 
-          {/* Savings box — keeps navy as a card element */}
-          <div
-            className="rounded-2xl p-6 mb-6 shadow-xl max-w-xl mx-auto"
-            style={{ backgroundColor: NAVY }}
-          >
+          <div className="rounded-2xl p-6 mb-6 shadow-xl max-w-xl mx-auto" style={{ backgroundColor: NAVY }}>
             <h3 className="font-bold text-xs uppercase tracking-wider mb-4" style={{ color: "#93afd4" }}>
               Your May Savings Breakdown
             </h3>
@@ -441,12 +434,7 @@ export default function SpringSpecialPage() {
                 </div>
               </div>
             </div>
-
-            {/* Coupon code */}
-            <div
-              className="border-t mt-4 pt-4 flex items-center justify-between"
-              style={{ borderColor: "rgba(147,175,212,0.25)" }}
-            >
+            <div className="border-t mt-4 pt-4 flex items-center justify-between" style={{ borderColor: "rgba(147,175,212,0.25)" }}>
               <div>
                 <p className="text-xs uppercase tracking-wider mb-1" style={{ color: "#93afd4" }}>Coupon Code</p>
                 <p className="font-bold text-xl tracking-widest" style={{ color: ORANGE }}>{COUPON}</p>
@@ -460,7 +448,6 @@ export default function SpringSpecialPage() {
             </div>
           </div>
 
-          {/* Time-limited framing */}
           <div className="bg-orange-50 border border-orange-200 rounded-2xl p-4 text-center max-w-xl mx-auto">
             <p className="text-gray-800 text-sm sm:text-base font-medium leading-relaxed">
               <span className="font-bold" style={{ color: ORANGE }}>This month only:</span> take $75 off your
@@ -471,13 +458,9 @@ export default function SpringSpecialPage() {
         </div>
       </section>
 
-      {/* ════════════════════════════════════════
-          SECTION 8 — GUARANTEE + FINAL CTA
-      ════════════════════════════════════════ */}
+      {/* GUARANTEE */}
       <section className="bg-gray-50 py-14 px-4">
         <div className="max-w-5xl mx-auto">
-
-          {/* Guarantee — trust-static prevents tap-highlight on non-interactive elements */}
           <div className="trust-static text-center mb-12">
             <div
               className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-xl"
@@ -498,43 +481,93 @@ export default function SpringSpecialPage() {
               Available across the southwest suburbs — Romeoville, Plainfield, Bolingbrook, Lockport, Shorewood, Crest Hill, and beyond.
             </p>
           </div>
-
         </div>
       </section>
 
       {/* ════════════════════════════════════════
-          STICKY MOBILE CTA BAR — Change 3
-          87% mobile traffic; fixed bar keeps
-          the offer visible at all scroll depths.
-          Hidden on md+ screens (desktop).
+          STICKY MOBILE CTA BAR
+          Exact inline styles per spec.
+          data-scroll-form triggers JS handler below.
+          Hidden on lg+ (desktop).
       ════════════════════════════════════════ */}
       <div
-        className="fixed bottom-0 left-0 right-0 z-50 md:hidden px-4 py-3"
-        style={{ backgroundColor: ORANGE, boxShadow: "0 -4px 20px rgba(232,114,28,0.35)" }}
+        className="lg:hidden"
+        style={{
+          position: "fixed",
+          bottom: 0,
+          left: 0,
+          right: 0,
+          zIndex: 9999,
+          padding: "12px 16px",
+          background: "#e07b00",
+          boxShadow: "0 -4px 20px rgba(224,123,0,0.4)",
+        }}
       >
         <a
           href="#quote-form"
-          className="flex items-center justify-center w-full text-white font-extrabold text-base py-3.5 rounded-2xl"
-          style={{ backgroundColor: "rgba(0,0,0,0.18)" }}
+          data-scroll-form="true"
+          style={{
+            display: "block",
+            textAlign: "center",
+            color: "white",
+            fontWeight: "bold",
+            fontSize: "16px",
+            textDecoration: "none",
+            padding: "10px 0",
+          }}
         >
-          Claim Your $75 Off → Book in 60 Seconds
+          Claim Your $75 Off → Get Free Quote
         </a>
       </div>
-      {/* Spacer so footer content isn't hidden behind the sticky bar on mobile */}
-      <div className="h-20 md:hidden" />
+      {/* Spacer prevents content hiding behind sticky bar */}
+      <div className="lg:hidden" style={{ height: "72px" }} />
 
-      {/* ════════════════════════════════════════
-          SECTION 9 — MINIMAL FOOTER
-      ════════════════════════════════════════ */}
+      {/* MINIMAL FOOTER */}
       <footer className="bg-gray-100 py-4 px-4 border-t border-gray-200">
         <p className="text-center text-gray-500 text-xs">
           &copy; 2026 DSM Cleaning Solutions. Serving{" "}
           <Link href="/deep-cleaning-romeoville-il" className="hover:underline">Romeoville</Link>,{" "}
           <Link href="/deep-cleaning-plainfield-il" className="hover:underline">Plainfield</Link>,{" "}
-          Bolingbrook, Lockport, Shorewood &amp; Crest Hill, IL.
-          All rights reserved.
+          Bolingbrook, Lockport, Shorewood &amp; Crest Hill, IL. All rights reserved.
         </p>
       </footer>
+
+      {/* ════════════════════════════════════════
+          SCROLL FIX SCRIPT
+          Runs client-side after hydration.
+          Attaches getElementById scrollIntoView to every
+          element with data-scroll-form="true".
+          Bypasses Next.js router link interception completely.
+      ════════════════════════════════════════ */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+(function () {
+  function scrollToForm(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    var el = document.getElementById('quote-form');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  function attachHandlers() {
+    var btns = document.querySelectorAll('[data-scroll-form="true"]');
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', scrollToForm);
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', attachHandlers);
+  } else {
+    attachHandlers();
+  }
+})();
+          `,
+        }}
+      />
     </>
   );
 }
