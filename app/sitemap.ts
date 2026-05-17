@@ -227,6 +227,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/blog/best-house-cleaning-service-lockport-il`,
+      lastModified: new Date("2026-05-16"),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/deep-cleaning-plainfield-il`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
