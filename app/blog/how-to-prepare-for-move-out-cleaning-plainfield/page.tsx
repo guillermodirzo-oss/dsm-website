@@ -39,7 +39,6 @@ const blogPostingSchema = {
   author: {
     "@type": "Organization",
     name: "DSM Cleaning Solutions",
-    url: "https://www.dsmcleaningsolutions.com",
   },
   publisher: {
     "@type": "Organization",

@@ -72,7 +72,6 @@ export default function BlogPostPage({
     publisher: {
       "@type": "Organization",
       name: "DSM Cleaning Solutions",
-      url: "https://www.dsmcleaningsolutions.com",
       logo: {
         "@type": "ImageObject",
         url: "https://www.dsmcleaningsolutions.com/logo.png",
