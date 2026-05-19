@@ -359,9 +359,9 @@ export default function DeepCleaningHinsdalePage() {
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Naperville</h3>
               <p className="text-sm text-gray-600">Serving 60540, 60563, 60564 &amp; 60565.</p>
             </Link>
-            <Link href="/westmont-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">House Cleaning in Westmont</h3>
-              <p className="text-sm text-gray-600">Serving all of Westmont (60559).</p>
+            <Link href="/hinsdale-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">All Cleaning Services in Hinsdale</h3>
+              <p className="text-sm text-gray-600">Deep, standard, recurring, and move-out cleaning in Hinsdale, IL.</p>
             </Link>
             <Link href="/deep-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">View Full Deep Cleaning Service</h3>
