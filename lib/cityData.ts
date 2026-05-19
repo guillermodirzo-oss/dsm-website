@@ -1471,6 +1471,498 @@ export const cities: CityData[] = [
       { city: "Oswego", href: "/#contact" },
     ],
   },
+  {
+    name: "Downers Grove",
+    slug: "downers-grove-il",
+    state: "IL",
+    zips: ["60515", "60516"],
+    distance: "about 20 miles from our Romeoville base",
+    tagline: "Professional house cleaning in Downers Grove, IL — local, eco-friendly, fully insured.",
+    localIntro: [
+      "Downers Grove is one of DuPage County's most desirable communities — known for its walkable downtown, top-rated schools, and beautiful single-family neighborhoods. DSM Cleaning Solutions is proud to bring professional, eco-friendly house cleaning to Downers Grove families who expect the best for their homes.",
+      "Based in the southwest suburbs and traveling about 20 miles to serve Downers Grove, our team understands the high standards of this community. From established neighborhoods along Ogden Avenue to newer developments near the 60516 zip code, we deliver consistent, meticulous results every visit.",
+      "Downers Grove homeowners choose DSM because we're a local, family-owned business — not a national franchise. We bring our own non-toxic, biodegradable cleaning supplies, and every job is backed by our 48-hour satisfaction guarantee.",
+    ],
+    whyChoose: [
+      "Family-owned local company, not a faceless franchise",
+      "Fully insured and bonded — your DuPage County home is protected",
+      "Eco-friendly, non-toxic products safe for kids and pets",
+      "48-hour satisfaction guarantee on every clean",
+      "Flexible scheduling — weekly, biweekly, or monthly",
+      "Background-checked, professional cleaning team",
+      "No contracts, no hidden fees — transparent flat-rate pricing",
+      "Serving all of Downers Grove: 60515 & 60516",
+    ],
+    neighborhoods: ["Highland Park", "Orchard Brook", "Dunham Place", "Middaugh", "Belmont Central", "Fairmount"],
+    landmarks: ["Tivoli Theatre", "Lyman Woods", "Downtown Downers Grove", "Maple Avenue Arts Center"],
+    services: [
+      {
+        icon: "🏠",
+        title: "Standard House Cleaning in Downers Grove",
+        desc: "Routine one-time or recurring cleaning to keep your Downers Grove home consistently fresh and tidy.",
+        link: "/standard-cleaning",
+      },
+      {
+        icon: "🧹",
+        title: "Deep Cleaning in Downers Grove",
+        desc: "Thorough top-to-bottom cleaning covering every surface, appliance, and corner in your Downers Grove home.",
+        link: "/deep-cleaning",
+      },
+      {
+        icon: "📦",
+        title: "Move-Out / Move-In Cleaning Downers Grove",
+        desc: "Deposit-back move-out cleaning or a fresh-start move-in clean for your Downers Grove home.",
+        link: "/move-out-cleaning",
+      },
+      {
+        icon: "📅",
+        title: "Recurring Maid Service Downers Grove",
+        desc: "Weekly, biweekly, or monthly maid service tailored to your Downers Grove home and lifestyle.",
+        link: "/recurring-cleaning",
+      },
+      {
+        icon: "🌿",
+        title: "Eco-Friendly Cleaning Downers Grove",
+        desc: "Green, non-toxic cleaning products safe for your family, pets, and the environment.",
+        link: "/eco-friendly-cleaning",
+      },
+      {
+        icon: "🏢",
+        title: "Apartment Cleaning Downers Grove",
+        desc: "Professional apartment and condo cleaning for Downers Grove renters and property owners.",
+        link: "/apartment-cleaning",
+      },
+    ],
+    reviews: [
+      {
+        name: "Karen L.",
+        location: "Downers Grove, IL",
+        text: "I wasn't sure about using a company from Romeoville, but DSM exceeded every expectation. Thorough, professional, and the eco-friendly products were a big plus for my family. Booked recurring service immediately.",
+        date: "March 2025",
+      },
+      {
+        name: "Michael T.",
+        location: "Downers Grove, IL",
+        text: "Used DSM for a deep clean before putting our home on the market. Our realtor was blown away — said it was the best pre-listing clean she'd seen. Multiple offers above asking. Worth every dollar.",
+        date: "February 2025",
+      },
+      {
+        name: "Sarah P.",
+        location: "Downers Grove, IL",
+        text: "Biweekly service for 4 months now and the quality has been outstanding every time. Same team, same attention to detail. Love coming home on cleaning day.",
+        date: "April 2025",
+      },
+    ],
+    faqs: [
+      {
+        question: "Do you offer house cleaning in Downers Grove, IL?",
+        answer:
+          "Yes — we serve all of Downers Grove (60515 & 60516) from our Romeoville base, approximately 20 miles away. Standard, deep, move-out, recurring, and eco-friendly cleaning available.",
+      },
+      {
+        question: "How much does house cleaning cost in Downers Grove?",
+        answer:
+          "Pricing is based on home size and service type. Standard recurring cleanings typically start around $120–$180. Deep cleanings start around $200. Contact us for a free, no-obligation estimate.",
+      },
+      {
+        question: "Do you use eco-friendly products in Downers Grove homes?",
+        answer:
+          "Absolutely — all of our cleaning products are non-toxic, biodegradable, and safe for children and pets. No harsh chemicals, no strong fumes.",
+      },
+      {
+        question: "Are you insured to clean homes in Downers Grove?",
+        answer:
+          "Yes — fully insured and bonded on every job. Your Downers Grove home and belongings are completely protected on every visit.",
+      },
+      {
+        question: "Do you offer recurring maid service in Downers Grove?",
+        answer:
+          "Yes — weekly, biweekly, and monthly plans available with no long-term contract required. Recurring clients often receive a discount vs. one-time rates.",
+      },
+      {
+        question: "What neighborhoods in Downers Grove does DSM serve?",
+        answer:
+          "We serve all of Downers Grove including Highland Park, Orchard Brook, Dunham Place, Middaugh, Belmont Central, and Fairmount — across zip codes 60515 and 60516.",
+      },
+    ],
+    nearbyAreas: [
+      { city: "Westmont", href: "/westmont-il" },
+      { city: "Naperville", href: "/naperville-il" },
+      { city: "Bolingbrook", href: "/bolingbrook-il" },
+      { city: "Lemont", href: "/lemont-il" },
+      { city: "Romeoville", href: "/" },
+      { city: "Burr Ridge", href: "/burr-ridge-il" },
+    ],
+  },
+  {
+    name: "Hinsdale",
+    slug: "hinsdale-il",
+    state: "IL",
+    zips: ["60521", "60522"],
+    distance: "about 22 miles from our Romeoville base",
+    tagline: "Premium house cleaning in Hinsdale, IL — trusted, eco-friendly, satisfaction guaranteed.",
+    localIntro: [
+      "Hinsdale is one of the most prestigious communities in the Chicago suburbs — a village defined by beautiful estates, tree-lined streets, and a close-knit community that values quality above all else. DSM Cleaning Solutions brings that same level of excellence to Hinsdale homeowners who demand nothing but the best.",
+      "We serve Hinsdale's historic neighborhoods and newer luxury homes alike, understanding that a premium home requires premium care. Our eco-friendly, non-toxic cleaning products protect your surfaces and finishes while leaving every room spotless.",
+      "As a family-owned business, we treat every Hinsdale home as if it were our own. Our background-checked team arrives on time, brings all supplies, and delivers results that meet the high standards of this exceptional community.",
+    ],
+    whyChoose: [
+      "White-glove service standards matching Hinsdale's expectations",
+      "Fully insured and bonded — premium homes fully protected",
+      "Eco-friendly, non-toxic products safe for children, pets, and fine finishes",
+      "Family-owned business with personal accountability on every job",
+      "48-hour satisfaction guarantee — we make it right, period",
+      "Flexible scheduling around your Hinsdale lifestyle",
+      "Background-checked, professional, uniformed team",
+      "Serving all of Hinsdale: 60521 & 60522",
+    ],
+    neighborhoods: ["East Hinsdale", "West Hinsdale", "Fullersburg", "South Hinsdale", "The Village Center"],
+    landmarks: ["Fullersburg Woods Nature Education Center", "Graue Mill", "Downtown Hinsdale", "Katherine Legge Memorial Park"],
+    services: [
+      {
+        icon: "🏠",
+        title: "Standard House Cleaning in Hinsdale",
+        desc: "Premium recurring or one-time house cleaning for Hinsdale homes — meticulous, professional, consistent.",
+        link: "/standard-cleaning",
+      },
+      {
+        icon: "🧹",
+        title: "Deep Cleaning in Hinsdale",
+        desc: "Comprehensive top-to-bottom deep cleaning for Hinsdale homes — every surface, appliance, and detail addressed.",
+        link: "/deep-cleaning",
+      },
+      {
+        icon: "📦",
+        title: "Move-Out / Move-In Cleaning Hinsdale",
+        desc: "Professional move-out cleaning to protect your deposit, or move-in cleaning to start fresh in your Hinsdale home.",
+        link: "/move-out-cleaning",
+      },
+      {
+        icon: "📅",
+        title: "Recurring Maid Service Hinsdale",
+        desc: "Weekly, biweekly, or monthly professional maid service for Hinsdale homes — consistent team, consistent results.",
+        link: "/recurring-cleaning",
+      },
+      {
+        icon: "🌿",
+        title: "Eco-Friendly Cleaning Hinsdale",
+        desc: "Non-toxic, biodegradable cleaning products — safe for your family and protective of your home's premium finishes.",
+        link: "/eco-friendly-cleaning",
+      },
+      {
+        icon: "🏗️",
+        title: "Post-Construction Cleaning Hinsdale",
+        desc: "Specialized cleaning after remodels and renovations in Hinsdale — dust, debris, and construction residue removed.",
+        link: "/post-construction-cleaning",
+      },
+    ],
+    reviews: [
+      {
+        name: "Jennifer R.",
+        location: "Hinsdale, IL",
+        text: "Exceptional service. DSM cleaned our home before a dinner party and the results were flawless. They understood exactly what was needed in a home of this caliber. Booked recurring service that night.",
+        date: "March 2025",
+      },
+      {
+        name: "David H.",
+        location: "Hinsdale, IL",
+        text: "We've had cleaning services in Hinsdale before — DSM is the first that truly delivered the level of thoroughness we expected. Professional, courteous, and the eco-friendly approach was a priority for us.",
+        date: "January 2025",
+      },
+      {
+        name: "Margot S.",
+        location: "Hinsdale, IL",
+        text: "Used DSM for post-renovation cleaning after our kitchen remodel. Immaculate job — every cabinet, countertop, and surface spotless. Will be using them for monthly maintenance going forward.",
+        date: "April 2025",
+      },
+    ],
+    faqs: [
+      {
+        question: "Do you offer house cleaning in Hinsdale, IL?",
+        answer:
+          "Yes — we serve all of Hinsdale (60521 & 60522) from our southwest suburban base. We bring all supplies and are fully insured for every Hinsdale home we clean.",
+      },
+      {
+        question: "How much does house cleaning cost in Hinsdale?",
+        answer:
+          "Pricing is based on your home's size and the service type. For a free, no-obligation estimate tailored to your Hinsdale home, call (815) 246-2113 or fill out our quote form.",
+      },
+      {
+        question: "Are your products safe for premium surfaces and finishes?",
+        answer:
+          "Yes — we use non-toxic, biodegradable products specifically chosen to be safe on hardwood floors, natural stone countertops, and other high-end surfaces common in Hinsdale homes.",
+      },
+      {
+        question: "Will you always send the same team to my Hinsdale home?",
+        answer:
+          "We do our best to send the same team every visit so they learn your home's specific preferences and layout. Consistency is especially important for our recurring Hinsdale clients.",
+      },
+      {
+        question: "Do you offer post-renovation cleaning in Hinsdale?",
+        answer:
+          "Yes — post-construction cleaning after kitchen remodels, bathroom renovations, and additions is a specialty service we offer for Hinsdale homeowners.",
+      },
+      {
+        question: "What neighborhoods in Hinsdale does DSM serve?",
+        answer:
+          "We serve all of Hinsdale including East Hinsdale, West Hinsdale, Fullersburg, South Hinsdale, and the Village Center area — across zip codes 60521 and 60522.",
+      },
+    ],
+    nearbyAreas: [
+      { city: "Burr Ridge", href: "/burr-ridge-il" },
+      { city: "Oak Brook", href: "/oak-brook-il" },
+      { city: "Westmont", href: "/westmont-il" },
+      { city: "Downers Grove", href: "/downers-grove-il" },
+      { city: "Naperville", href: "/naperville-il" },
+      { city: "Lemont", href: "/lemont-il" },
+    ],
+  },
+  {
+    name: "Oak Brook",
+    slug: "oak-brook-il",
+    state: "IL",
+    zips: ["60523"],
+    distance: "about 20 miles from our Romeoville base",
+    tagline: "Expert house cleaning in Oak Brook, IL — professional, eco-friendly, satisfaction guaranteed.",
+    localIntro: [
+      "Oak Brook is one of Illinois's premier communities — home to beautiful executive neighborhoods, luxury homes, and the iconic Oak Brook Center. Residents here expect a high standard of service, and DSM Cleaning Solutions delivers exactly that with professional, eco-friendly house cleaning.",
+      "We serve Oak Brook from our southwest suburban base, understanding that every home here — from single-family residences in Ginger Creek to elegant homes near the Oak Brook Club — deserves meticulous, detail-oriented care.",
+      "As a family-owned cleaning company, we're accountable for every job in a way a franchise simply isn't. Our background-checked team brings all non-toxic supplies and is fully insured, ensuring your Oak Brook home receives the professional service it deserves.",
+    ],
+    whyChoose: [
+      "Professional service standards suited to Oak Brook's premium homes",
+      "Fully insured and bonded — complete protection every visit",
+      "Eco-friendly, non-toxic products safe for children and pets",
+      "Family-owned accountability — not a call-center franchise",
+      "48-hour satisfaction guarantee on every clean",
+      "Flexible scheduling around your Oak Brook schedule",
+      "Background-checked, uniformed professional team",
+      "Serving all of Oak Brook: 60523",
+    ],
+    neighborhoods: ["Ginger Creek", "Oak Brook Club", "East Oak Brook", "York Woods", "Midwest Club"],
+    landmarks: ["Oak Brook Center", "Graue Mill & Museum", "Butler National Golf Club area", "McDonald's Campus"],
+    services: [
+      {
+        icon: "🏠",
+        title: "Standard House Cleaning in Oak Brook",
+        desc: "Premium recurring or one-time standard cleaning for Oak Brook homes — professional, consistent, thorough.",
+        link: "/standard-cleaning",
+      },
+      {
+        icon: "🧹",
+        title: "Deep Cleaning in Oak Brook",
+        desc: "Comprehensive top-to-bottom deep cleaning for Oak Brook homes — every surface, appliance, and corner addressed.",
+        link: "/deep-cleaning",
+      },
+      {
+        icon: "📦",
+        title: "Move-Out / Move-In Cleaning Oak Brook",
+        desc: "Professional move-out or move-in cleaning for Oak Brook homes and luxury properties.",
+        link: "/move-out-cleaning",
+      },
+      {
+        icon: "📅",
+        title: "Recurring Maid Service Oak Brook",
+        desc: "Weekly, biweekly, or monthly maid service for Oak Brook homes — consistent team, consistent quality.",
+        link: "/recurring-cleaning",
+      },
+      {
+        icon: "🌿",
+        title: "Eco-Friendly Cleaning Oak Brook",
+        desc: "Non-toxic, biodegradable cleaning products — safe for your family and your home's premium finishes.",
+        link: "/eco-friendly-cleaning",
+      },
+      {
+        icon: "🏗️",
+        title: "Post-Construction Cleaning Oak Brook",
+        desc: "Specialized cleaning after renovations and remodels in Oak Brook luxury homes.",
+        link: "/post-construction-cleaning",
+      },
+    ],
+    reviews: [
+      {
+        name: "Robert C.",
+        location: "Oak Brook, IL",
+        text: "DSM cleaned our Oak Brook home before a family gathering and the results were outstanding. Every room was spotless — they didn't miss a single detail. Professional team, on time, and great communication.",
+        date: "February 2025",
+      },
+      {
+        name: "Patricia N.",
+        location: "Oak Brook, IL",
+        text: "I've been using DSM for biweekly cleaning of our Oak Brook home for six months. Consistently excellent. The same team every time and they know exactly what our home needs.",
+        date: "March 2025",
+      },
+      {
+        name: "James W.",
+        location: "Oak Brook, IL",
+        text: "Used DSM after a kitchen renovation — absolutely thorough job removing all the construction dust and debris. Highly recommend for any Oak Brook homeowner.",
+        date: "January 2025",
+      },
+    ],
+    faqs: [
+      {
+        question: "Do you offer house cleaning in Oak Brook, IL?",
+        answer:
+          "Yes — we serve all of Oak Brook (60523). Our team is fully insured, brings all eco-friendly supplies, and delivers professional results on every visit.",
+      },
+      {
+        question: "How much does house cleaning cost in Oak Brook?",
+        answer:
+          "Pricing depends on home size and service type. Contact us for a free, no-obligation estimate tailored to your Oak Brook home — call (815) 246-2113 or fill out our form.",
+      },
+      {
+        question: "Do you clean luxury homes in Oak Brook?",
+        answer:
+          "Yes — we have experience with larger executive homes. We use non-toxic products safe on hardwood, natural stone, and other premium surfaces throughout Oak Brook properties.",
+      },
+      {
+        question: "Are you insured to clean in Oak Brook, IL?",
+        answer:
+          "Fully insured and bonded on every visit. Your Oak Brook home and all belongings are completely protected.",
+      },
+      {
+        question: "Do you offer recurring maid service in Oak Brook?",
+        answer:
+          "Yes — weekly, biweekly, and monthly plans available, no contract required. Recurring clients often receive priority scheduling and a discount off one-time rates.",
+      },
+      {
+        question: "What neighborhoods in Oak Brook does DSM serve?",
+        answer:
+          "We serve all of Oak Brook (60523) including Ginger Creek, Oak Brook Club, East Oak Brook, York Woods, and the Midwest Club neighborhood.",
+      },
+    ],
+    nearbyAreas: [
+      { city: "Hinsdale", href: "/hinsdale-il" },
+      { city: "Burr Ridge", href: "/burr-ridge-il" },
+      { city: "Westmont", href: "/westmont-il" },
+      { city: "Downers Grove", href: "/downers-grove-il" },
+      { city: "Naperville", href: "/naperville-il" },
+      { city: "Bolingbrook", href: "/bolingbrook-il" },
+    ],
+  },
+  {
+    name: "Burr Ridge",
+    slug: "burr-ridge-il",
+    state: "IL",
+    zips: ["60527"],
+    distance: "about 18 miles from our Romeoville base",
+    tagline: "Professional house cleaning in Burr Ridge, IL — trusted, eco-friendly, satisfaction guaranteed.",
+    localIntro: [
+      "Burr Ridge is one of the most sought-after residential communities in DuPage County — known for spacious custom homes, privacy, and a strong sense of community. DSM Cleaning Solutions delivers the professional, eco-friendly house cleaning that Burr Ridge homeowners expect.",
+      "From established neighborhoods like Braemoor and The Reserve to luxury homes along the Harveys Lake area, we understand that every Burr Ridge home is unique. Our team brings meticulous attention to detail and high-quality non-toxic products to every job.",
+      "As a family-owned company based in the southwest suburbs, we're proud to serve Burr Ridge families with the same personal accountability that a franchise simply can't provide. Every job is backed by our 48-hour satisfaction guarantee.",
+    ],
+    whyChoose: [
+      "Professional standards matched to Burr Ridge's luxury homes",
+      "Fully insured and bonded — your home is protected on every visit",
+      "Eco-friendly, non-toxic products safe for children, pets, and fine surfaces",
+      "Family-owned — personal accountability on every job",
+      "48-hour satisfaction guarantee — we make it right",
+      "Flexible scheduling: weekly, biweekly, or monthly",
+      "Background-checked, professional cleaning team",
+      "Serving all of Burr Ridge: 60527",
+    ],
+    neighborhoods: ["Braemoor", "The Reserve", "Harveys Lake", "Fieldstone", "Claridge Court"],
+    landmarks: ["Waterfall Glen Forest Preserve", "Burr Ridge Village Center", "Salt Creek Greenway"],
+    services: [
+      {
+        icon: "🏠",
+        title: "Standard House Cleaning in Burr Ridge",
+        desc: "Premium recurring or one-time standard cleaning for Burr Ridge homes — professional and consistent.",
+        link: "/standard-cleaning",
+      },
+      {
+        icon: "🧹",
+        title: "Deep Cleaning in Burr Ridge",
+        desc: "Top-to-bottom deep cleaning for Burr Ridge homes — every surface, appliance, and detail addressed.",
+        link: "/deep-cleaning",
+      },
+      {
+        icon: "📦",
+        title: "Move-Out / Move-In Cleaning Burr Ridge",
+        desc: "Professional move-out cleaning to protect your deposit, or move-in cleaning for your new Burr Ridge home.",
+        link: "/move-out-cleaning",
+      },
+      {
+        icon: "📅",
+        title: "Recurring Maid Service Burr Ridge",
+        desc: "Weekly, biweekly, or monthly professional maid service for Burr Ridge homes — reliable, consistent results.",
+        link: "/recurring-cleaning",
+      },
+      {
+        icon: "🌿",
+        title: "Eco-Friendly Cleaning Burr Ridge",
+        desc: "Non-toxic, biodegradable products — safe for your family and protective of your home's premium finishes.",
+        link: "/eco-friendly-cleaning",
+      },
+      {
+        icon: "🏗️",
+        title: "Post-Construction Cleaning Burr Ridge",
+        desc: "Specialized post-renovation cleaning for Burr Ridge custom homes and remodels.",
+        link: "/post-construction-cleaning",
+      },
+    ],
+    reviews: [
+      {
+        name: "Christine M.",
+        location: "Burr Ridge, IL",
+        text: "DSM cleaned our Burr Ridge home and I was honestly amazed. They spent extra time on the details that most services skip. Professional, punctual, and the eco-friendly products were exactly what I wanted.",
+        date: "March 2025",
+      },
+      {
+        name: "Thomas B.",
+        location: "Burr Ridge, IL",
+        text: "Monthly recurring service for our Burr Ridge home has been seamless. Same team every time, great attention to detail, and they're always respectful of our space. Highly recommend.",
+        date: "February 2025",
+      },
+      {
+        name: "Alison F.",
+        location: "Burr Ridge, IL",
+        text: "Used DSM for move-out cleaning on our Burr Ridge home — got our full deposit back without any issues. Thorough, professional, and very easy to work with.",
+        date: "April 2025",
+      },
+    ],
+    faqs: [
+      {
+        question: "Do you offer house cleaning in Burr Ridge, IL?",
+        answer:
+          "Yes — we serve all of Burr Ridge (60527) from our southwest suburban base. Fully insured, bring all eco-friendly supplies, and offer a satisfaction guarantee on every job.",
+      },
+      {
+        question: "How much does house cleaning cost in Burr Ridge?",
+        answer:
+          "Pricing depends on your home's size and the type of service. Contact us for a free custom estimate — call (815) 246-2113 or fill out the quote form on this page.",
+      },
+      {
+        question: "Are your cleaning products safe for high-end surfaces?",
+        answer:
+          "Yes — we use non-toxic, biodegradable products that are safe on hardwood floors, natural stone, and premium finishes throughout Burr Ridge homes.",
+      },
+      {
+        question: "Are you insured to clean homes in Burr Ridge?",
+        answer:
+          "Fully insured and bonded on every visit. Your Burr Ridge home and belongings are completely protected.",
+      },
+      {
+        question: "Do you offer recurring cleaning service in Burr Ridge?",
+        answer:
+          "Yes — weekly, biweekly, and monthly plans available with no contract required. Recurring clients receive consistent scheduling and priority availability.",
+      },
+      {
+        question: "What neighborhoods in Burr Ridge does DSM serve?",
+        answer:
+          "We serve all of Burr Ridge (60527) including Braemoor, The Reserve, Harveys Lake, Fieldstone, and Claridge Court neighborhoods.",
+      },
+    ],
+    nearbyAreas: [
+      { city: "Hinsdale", href: "/hinsdale-il" },
+      { city: "Lemont", href: "/lemont-il" },
+      { city: "Westmont", href: "/westmont-il" },
+      { city: "Oak Brook", href: "/oak-brook-il" },
+      { city: "Bolingbrook", href: "/bolingbrook-il" },
+      { city: "Romeoville", href: "/" },
+    ],
+  },
 ];
 
 // ─── COMBO PAGE DATA (city + service landing pages) ───────────────────────────
