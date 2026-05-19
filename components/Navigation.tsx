@@ -70,7 +70,7 @@ export default function Navigation() {
                 </div>
               </div>
             </div>
-            <Link href="/#about" className="text-sm text-gray-600 hover:text-brand-green font-medium transition-colors">About</Link>
+            <Link href="/about" className="text-sm text-gray-600 hover:text-brand-green font-medium transition-colors">About</Link>
             <Link href="/pricing" className="text-sm text-gray-600 hover:text-brand-green font-medium transition-colors">Pricing</Link>
             <Link href="/#faq" className="text-sm text-gray-600 hover:text-brand-green font-medium transition-colors">FAQ</Link>
             <Link href="/contact" className="text-sm text-gray-600 hover:text-brand-green font-medium transition-colors">Contact</Link>

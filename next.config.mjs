@@ -264,11 +264,7 @@ const nextConfig = {
         destination: "/contact",
         permanent: true,
       },
-      {
-        source: "/free-estimate",
-        destination: "/contact",
-        permanent: true,
-      },
+      // /free-estimate is now a real page — redirect removed
       // /pricing is now a real page — redirect removed
       {
         source: "/price",
