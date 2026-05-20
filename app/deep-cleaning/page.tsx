@@ -7,7 +7,7 @@ import ReviewCard from "@/components/ReviewCard";
 export const metadata: Metadata = {
   title: "Deep Cleaning Service Plainfield IL",
   description:
-    "Top-rated deep cleaning in Romeoville, Naperville, Plainfield & Bolingbrook. Thorough, detailed cleans. 5.0 stars, 48-hr guarantee. (815) 246-2113.",
+    "Professional deep cleaning in Plainfield & Romeoville IL. We scrub baseboards, grout, appliances & more. 5-star rated team. 48-hr satisfaction guarantee. Book online in 2 min.",
   keywords: [
     "deep cleaning Romeoville IL",
     "deep house cleaning Romeoville",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Deep Cleaning Service Plainfield IL | DSM Cleaning Solutions",
     description:
-      "Top-rated deep cleaning in Romeoville, Naperville, Plainfield & Bolingbrook. Thorough, detailed cleans. 5.0 stars, 48-hr guarantee. (815) 246-2113.",
+      "Professional deep cleaning in Plainfield & Romeoville IL. We scrub baseboards, grout, appliances & more. 5-star rated team. 48-hr satisfaction guarantee. Book online in 2 min.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning",
     siteName: "DSM Cleaning Solutions",
     images: [

@@ -6,12 +6,12 @@ import ReviewCard from "@/components/ReviewCard";
 
 export const metadata: Metadata = {
   title: "Standard Cleaning Service Plainfield IL",
-  description: "Standard house cleaning in Plainfield & Romeoville, IL — one-time or recurring. Eco-friendly, fully insured. Family-owned. Get your free estimate today.",
+  description: "Recurring house cleaning in Plainfield & Romeoville IL starting from $120. Vetted, insured cleaners. Weekly, bi-weekly or monthly. 5-star rated. Get a free quote today.",
   keywords: ["house cleaning Romeoville IL", "standard cleaning Romeoville", "home cleaning service Romeoville", "maid service Romeoville IL", "professional house cleaners Romeoville", "residential cleaning Romeoville IL"],
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/standard-cleaning" },
   openGraph: {
     title: "Standard Cleaning Service Plainfield IL | DSM Cleaning Solutions",
-    description: "Standard house cleaning in Plainfield & Romeoville, IL — one-time or recurring. Eco-friendly, fully insured. Family-owned. Get your free estimate today.",
+    description: "Recurring house cleaning in Plainfield & Romeoville IL starting from $120. Vetted, insured cleaners. Weekly, bi-weekly or monthly. 5-star rated. Get a free quote today.",
     url: "https://www.dsmcleaningsolutions.com/standard-cleaning",
     siteName: "DSM Cleaning Solutions",
     images: [

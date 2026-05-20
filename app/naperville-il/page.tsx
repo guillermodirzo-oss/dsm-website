@@ -8,7 +8,7 @@ const city = cities.find((c) => c.slug === "naperville-il")!;
 export const metadata: Metadata = {
   title: "House Cleaning Naperville IL",
   description:
-    "Family-owned house cleaning in Naperville, IL. Deep cleaning, move-out & recurring maid service near you. Eco-friendly & insured. Call for a free estimate.",
+    "Top-rated house cleaning in Naperville IL. Serving 60540, 60563, 60564 & 60565. Deep cleaning, move-out & recurring maid service. 5-star rated. 48-hr guarantee. Book now.",
   keywords: [
     "house cleaning Naperville IL",
     "cleaning service Naperville",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "House Cleaning Naperville IL",
     description:
-      "Family-owned house cleaning in Naperville, IL. Deep cleaning, move-out & recurring maid service near you. Eco-friendly & insured. Call for a free estimate.",
+      "Top-rated house cleaning in Naperville IL. Serving 60540, 60563, 60564 & 60565. Deep cleaning, move-out & recurring maid service. 5-star rated. 48-hr guarantee. Book now.",
     url: "https://www.dsmcleaningsolutions.com/naperville-il",
     siteName: "DSM Cleaning Solutions",
   },

@@ -7,7 +7,7 @@ import ReviewCard from "@/components/ReviewCard";
 export const metadata: Metadata = {
   title: "Move-Out Cleaning Services Plainfield IL",
   description:
-    "Move-out cleaning in Romeoville, Naperville, Plainfield & Bolingbrook. 5.0-star rated, 48-hr guarantee. Call (815) 246-2113 or book online.",
+    "Moving out in Plainfield, Romeoville or Naperville IL? We'll get your deposit back. Landlord-ready clean guaranteed. 5-stars. 48-hr guarantee. Book your move-out date now.",
   keywords: [
     "move out cleaning Romeoville IL",
     "move in cleaning Romeoville IL",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Move Out Cleaning Services Plainfield IL | DSM Cleaning Solutions",
     description:
-      "Move-out cleaning in Romeoville, Naperville, Plainfield & Bolingbrook. 5.0-star rated, 48-hr guarantee. Call (815) 246-2113 or book online.",
+      "Moving out in Plainfield, Romeoville or Naperville IL? We'll get your deposit back. Landlord-ready clean guaranteed. 5-stars. 48-hr guarantee. Book your move-out date now.",
     url: "https://www.dsmcleaningsolutions.com/move-out-cleaning",
     siteName: "DSM Cleaning Solutions",
     images: [

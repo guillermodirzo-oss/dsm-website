@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Book a Cleaning | $75 Off",
@@ -103,11 +102,6 @@ const faqs = [
 export default function BookPage() {
   return (
     <>
-      <Script
-        src="https://dsmcleaningsolutions.bookingkoala.com/resources/embed.js"
-        strategy="lazyOnload"
-      />
-
       {/* ════════════ STICKY TOP BAR ════════════ */}
       <div className="sticky top-0 z-50 text-white py-2.5 px-4 text-center text-sm font-semibold" style={{ backgroundColor: ORANGE }}>
         🔥 May Only — $75 Off + Free Oven Cleaning ($40 value) · Use Code&nbsp;
@@ -472,17 +466,18 @@ export default function BookPage() {
       </section>
 
       {/* ════════════ STICKY MOBILE BAR ════════════ */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white border-t border-gray-200 shadow-2xl px-4 py-3 flex items-center justify-between gap-3">
+      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white border-t border-gray-200 shadow-2xl px-4 flex items-stretch gap-3" style={{ minHeight: "60px" }}>
         <a
           href={PHONE_HREF}
-          className="flex items-center gap-1.5 text-gray-700 font-semibold text-sm flex-shrink-0"
+          className="flex items-center gap-1.5 text-gray-700 font-semibold text-sm flex-shrink-0 py-3"
+          style={{ minHeight: "44px" }}
         >
           📞 {PHONE}
         </a>
         <a
           href="#booking-form"
-          className="flex-1 text-white font-bold text-sm py-3 px-4 rounded-full text-center hover:opacity-90 active:scale-95 transition-all duration-200 shadow-lg"
-          style={{ backgroundColor: ORANGE }}
+          className="flex-1 text-white font-bold text-sm py-3 px-4 rounded-full text-center my-auto hover:opacity-90 active:scale-95 transition-all duration-200 shadow-lg"
+          style={{ backgroundColor: ORANGE, minHeight: "44px", display: "flex", alignItems: "center", justifyContent: "center" }}
         >
           Claim $75 Off →
         </a>

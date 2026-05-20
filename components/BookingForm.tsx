@@ -35,7 +35,12 @@ export default function BookingForm() {
     window.addEventListener("message", handleMessage);
 
     return () => {
-      document.body.removeChild(script);
+      // Guard against the script being removed before cleanup runs
+      // (e.g. fast navigation, React Strict Mode double-invoke in dev).
+      // SpringBookingForm uses the same pattern.
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
       window.removeEventListener("message", handleMessage);
     };
   }, [router]);
