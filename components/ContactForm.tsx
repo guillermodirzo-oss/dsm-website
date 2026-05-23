@@ -1,6 +1,6 @@
-"use client";
+﻿"use client";
 
-import BookingForm from "@/components/BookingForm";
+import LeadForm from "@/components/LeadForm";
 
 /**
  * ContactForm — delegates to the BookingKoala embedded lead form.
@@ -21,5 +21,5 @@ import BookingForm from "@/components/BookingForm";
  * app/about/page.tsx, and all city/service combo pages.
  */
 export default function ContactForm({ dark: _dark = false }: { dark?: boolean }) {
-  return <BookingForm />;
+  return <LeadForm />;
 }

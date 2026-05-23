@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
-import BookingForm from "@/components/BookingForm";
+import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
   title: "Standard vs Deep Cleaning | Which Do You Need?",
@@ -384,7 +384,7 @@ export default function StandardVsDeepCleaningPage() {
               <p className="text-white/80">Flat-rate pricing · Fully insured · 48-hr guarantee · Family owned</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
-              <BookingForm />
+              <LeadForm />
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
-import BookingForm from "@/components/BookingForm";
+import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
   title: "Move Out Cleaning Services Lemont IL",
@@ -358,7 +358,7 @@ export default function MoveOutCleaningLemontPage() {
               <p className="text-white/80">Family-owned Ã‚Â· Eco-friendly Ã‚Â· Fully insured Ã‚Â· Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
-              <BookingForm />
+              <LeadForm />
             </div>
           </div>
         </div>

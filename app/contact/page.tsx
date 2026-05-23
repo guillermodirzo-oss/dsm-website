@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
-import BookingForm from "@/components/BookingForm";
+import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
   title: "Contact Us | Free Cleaning Estimate",
@@ -285,7 +285,7 @@ export default function ContactPage() {
 
             {/* Right — form embed */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl border border-gray-100">
-              <BookingForm />
+              <LeadForm />
             </div>
 
           </div>

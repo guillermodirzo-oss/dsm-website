@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import BookingForm from "@/components/BookingForm";
+import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
 
 export const metadata: Metadata = {
@@ -388,7 +388,7 @@ export default function AboutPage() {
           </a>
 
           <div className="bg-white rounded-3xl shadow-2xl shadow-black/20 overflow-hidden">
-            <BookingForm />
+            <LeadForm />
           </div>
         </div>
       </section>

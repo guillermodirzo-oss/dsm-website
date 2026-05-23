@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Suspense } from "react";
-import SpringBookingForm from "@/components/SpringBookingForm";
+import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
   title: "Spring Cleaning Special — $75 Off",
@@ -203,16 +202,9 @@ export default function SpringSpecialPage() {
                   <p className="text-orange-100 text-sm mt-1">Fill out your info to lock in the $75 discount</p>
                 </div>
 
-                {/* BookingKoala iframe — min-height reserves space to prevent CLS */}
-                <Suspense
-                  fallback={
-                    <div className="flex items-center justify-center" style={{ minHeight: "520px" }}>
-                      <span className="text-gray-400 text-sm">Loading form…</span>
-                    </div>
-                  }
-                >
-                  <SpringBookingForm />
-                </Suspense>
+                <div className="px-6 py-6">
+                  <LeadForm />
+                </div>
               </div>
 
               {/* Secondary direct-booking link */}

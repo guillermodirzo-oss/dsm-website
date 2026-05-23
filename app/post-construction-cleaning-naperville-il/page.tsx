@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
-import BookingForm from "@/components/BookingForm";
+import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
   title: "Post Construction Cleaning Naperville IL",
@@ -357,7 +357,7 @@ export default function PostConstructionCleaningNapervillePage() {
               <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Move-in ready guarantee</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
-              <BookingForm />
+              <LeadForm />
             </div>
           </div>
         </div>

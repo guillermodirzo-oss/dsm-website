@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
-import BookingForm from "@/components/BookingForm";
+import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
 
 export const metadata: Metadata = {
@@ -399,7 +399,7 @@ export default function WhyChooseDSMPage() {
               <p className="text-white/80">👨‍👩‍👧 Family owned · 🛡️ Fully insured · 🌿 Eco-friendly · ✅ 48-hr guarantee</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
-              <BookingForm />
+              <LeadForm />
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
-import BookingForm from "@/components/BookingForm";
+import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
   title: "Free House Cleaning Estimate Romeoville & Plainfield IL",
@@ -383,7 +383,7 @@ export default function FreeEstimatePage() {
               <p className="text-white/80">Same-day response · Flat-rate pricing · No hidden fees · Fully insured</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
-              <BookingForm />
+              <LeadForm />
             </div>
           </div>
         </div>

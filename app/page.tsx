@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import BookingForm from "@/components/BookingForm";
+import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
 import { ScrollIndicator, StickyMobileBar } from "@/components/HomepageScrollWidgets";
 
@@ -546,7 +546,7 @@ export default function HomePage() {
 
           {/* BookingKoala Embedded Form */}
           <div className="bg-white rounded-3xl shadow-2xl shadow-black/20 overflow-hidden">
-            <BookingForm />
+            <LeadForm />
           </div>
 
           {/* Book Now direct option */}

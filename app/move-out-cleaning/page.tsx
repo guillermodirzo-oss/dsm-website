@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import BookingForm from "@/components/BookingForm";
+import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
 
 export const metadata: Metadata = {
@@ -517,7 +517,7 @@ export default function MoveOutCleaningPage() {
               <p className="text-white/80">Family-owned · Fully insured · Deposit-back cleaning · Eco-friendly</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
-              <BookingForm />
+              <LeadForm />
             </div>
           </div>
         </div>

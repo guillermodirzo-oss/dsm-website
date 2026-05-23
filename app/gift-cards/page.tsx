@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
-import BookingForm from "@/components/BookingForm";
+import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
   title: "House Cleaning Gift Cards Romeoville & Plainfield IL",
@@ -345,7 +345,7 @@ export default function GiftCardsPage() {
               <p className="text-white/80">🎁 Never expire · ✅ Any service · 🌿 Eco-friendly cleaning · 🛡️ Fully insured</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
-              <BookingForm />
+              <LeadForm />
             </div>
           </div>
         </div>

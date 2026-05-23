@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
-import BookingForm from "@/components/BookingForm";
+import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
   title: "Airbnb Cleaning Services Naperville IL",
@@ -352,7 +352,7 @@ export default function AirbnbCleaningNapervillePage() {
               <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Fast turnovers</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
-              <BookingForm />
+              <LeadForm />
             </div>
           </div>
         </div>

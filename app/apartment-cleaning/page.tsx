@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import BookingForm from "@/components/BookingForm";
+import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
 
 export const metadata: Metadata = {
@@ -249,7 +249,7 @@ export default function ApartmentCleaningPage() {
             <p className="text-white/80 text-lg mb-5">Tell us about your unit and we&apos;ll send you a custom quote.</p>
             <a href="tel:+18152462113" className="inline-flex items-center gap-2 bg-white text-brand-green font-bold text-xl px-6 py-3 rounded-2xl hover:bg-orange-50 transition-colors shadow-xl">📞 (815) 246-2113</a>
           </div>
-          <div className="bg-white rounded-3xl overflow-hidden shadow-2xl shadow-black/20"><BookingForm /></div>
+          <div className="bg-white rounded-3xl overflow-hidden shadow-2xl shadow-black/20"><LeadForm /></div>
         </div>
       </section>
     </>

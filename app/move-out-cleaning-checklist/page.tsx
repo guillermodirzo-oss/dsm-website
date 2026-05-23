@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
-import BookingForm from "@/components/BookingForm";
+import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
   title: "Move Out Cleaning Checklist Illinois Renters 2026",
@@ -435,7 +435,7 @@ export default function MoveOutCleaningChecklistPage() {
               <p className="text-white/80">Starting at $480 · Flat-rate · Fully insured · 48-hr guarantee</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
-              <BookingForm />
+              <LeadForm />
             </div>
           </div>
         </div>

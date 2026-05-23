@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
-import BookingForm from "@/components/BookingForm";
+import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
   title: "Our House Cleaning Process | What to Expect",
@@ -441,7 +441,7 @@ export default function OurCleaningProcessPage() {
               <p className="text-white/80">✅ Free estimate · 🚫 No hidden fees · ✔️ 48-hr guarantee · 👨‍👩‍👧 Family owned</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
-              <BookingForm />
+              <LeadForm />
             </div>
           </div>
         </div>

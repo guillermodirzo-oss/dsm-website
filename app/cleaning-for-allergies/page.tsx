@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
-import BookingForm from "@/components/BookingForm";
+import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
   title: "Allergy Friendly Cleaning Service Romeoville & Plainfield IL",
@@ -375,7 +375,7 @@ export default function CleaningForAllergiesPage() {
               <p className="text-white/80">🌿 Hypoallergenic · 🚫 No harsh fumes · 🛡️ Fully insured · 👨‍👩‍👧 Family owned</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
-              <BookingForm />
+              <LeadForm />
             </div>
           </div>
         </div>

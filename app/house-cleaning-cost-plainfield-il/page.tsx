@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
-import BookingForm from "@/components/BookingForm";
+import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
   title: "House Cleaning Prices Plainfield IL 2026 Guide",
@@ -414,7 +414,7 @@ export default function HouseCleaningCostPlainfield() {
               <p className="text-white/80">Family-owned · Flat-rate pricing · Fully insured · No hidden fees</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
-              <BookingForm />
+              <LeadForm />
             </div>
           </div>
         </div>

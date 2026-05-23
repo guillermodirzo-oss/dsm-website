@@ -1,5 +1,5 @@
-import Link from "next/link";
-import BookingForm from "@/components/BookingForm";
+﻿import Link from "next/link";
+import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
 import type { CityData } from "@/lib/cityData";
 
@@ -423,7 +423,7 @@ export default function CityPageTemplate({ city }: { city: CityData }) {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 Get a Free Cleaning Estimate
               </h3>
-              <BookingForm />
+              <LeadForm />
             </div>
           </div>
         </div>
