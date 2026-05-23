@@ -5,6 +5,7 @@ import { submitToHubspot } from "@/lib/submitToHubspot";
 
 type Step1 = {
   firstname: string;
+  email: string;
   phone: string;
   service_type: string;
 };
@@ -13,7 +14,6 @@ type Step2 = {
   bedrooms: string;
   bathrooms: string;
   square_footage: string;
-  email: string;
 };
 
 const SERVICE_OPTIONS = [
@@ -43,6 +43,7 @@ export default function LeadForm() {
   const [step, setStep] = useState(1);
   const [step1, setStep1] = useState<Step1>({
     firstname: "",
+    email: "",
     phone: "",
     service_type: "",
   });
@@ -50,7 +51,6 @@ export default function LeadForm() {
     bedrooms: "",
     bathrooms: "",
     square_footage: "",
-    email: "",
   });
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -69,6 +69,7 @@ export default function LeadForm() {
     // Fire Step 1 data immediately — HubSpot can create the contact even if they abandon Step 2
     submitToHubspot({
       firstname: step1.firstname,
+      email: step1.email,
       phone: step1.phone,
       mobilephone: step1.phone,
       service_type: step1.service_type,
@@ -83,7 +84,7 @@ export default function LeadForm() {
     try {
       await submitToHubspot({
         firstname: step1.firstname,
-        email: step2.email,
+        email: step1.email,
         phone: step1.phone,
         mobilephone: step1.phone,
         service_type: step1.service_type,
@@ -149,6 +150,20 @@ export default function LeadForm() {
                 autoComplete="given-name"
                 placeholder="Jane"
                 value={step1.firstname}
+                onChange={handleStep1Change}
+                className={inputClass}
+              />
+            </div>
+            <div>
+              <label htmlFor="lf-email" className={labelClass}>Email Address</label>
+              <input
+                id="lf-email"
+                name="email"
+                type="email"
+                required
+                autoComplete="email"
+                placeholder="jane@example.com"
+                value={step1.email}
                 onChange={handleStep1Change}
                 className={inputClass}
               />
@@ -243,20 +258,6 @@ export default function LeadForm() {
                   <option key={opt} value={opt}>{opt}</option>
                 ))}
               </select>
-            </div>
-            <div>
-              <label htmlFor="lf-email" className={labelClass}>Email Address</label>
-              <input
-                id="lf-email"
-                name="email"
-                type="email"
-                required
-                autoComplete="email"
-                placeholder="jane@example.com"
-                value={step2.email}
-                onChange={handleStep2Change}
-                className={inputClass}
-              />
             </div>
           </div>
 
