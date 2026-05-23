@@ -110,7 +110,7 @@ export default function HomePage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/book"
+              href="/contact"
               className="w-full md:w-auto inline-block font-extrabold text-base text-white text-center py-4 px-9 rounded-full active:scale-95 transition-all duration-200 shadow-2xl"
               style={{ backgroundColor: "#E8721C", boxShadow: "0 8px 30px rgba(232,114,28,0.5)" }}
             >
@@ -332,7 +332,7 @@ export default function HomePage() {
                 ))}
               </div>
 
-              <Link href="/book" className="btn-primary">
+              <Link href="/contact" className="btn-primary">
                 Get Your Free Estimate
               </Link>
             </div>
@@ -545,7 +545,7 @@ export default function HomePage() {
           </div>
 
           {/* BookingKoala Embedded Form */}
-          <div className="bg-white rounded-3xl shadow-2xl shadow-black/20 overflow-hidden">
+          <div className="bg-white rounded-3xl shadow-2xl shadow-black/20 p-6 md:p-8">
             <LeadForm />
           </div>
 
