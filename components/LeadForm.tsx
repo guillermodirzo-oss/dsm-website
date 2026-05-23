@@ -66,6 +66,14 @@ export default function LeadForm() {
 
   function handleNext(e: React.FormEvent) {
     e.preventDefault();
+    // Capture Step 1 immediately — if they abandon on Step 2 we still have the lead
+    submitToHubspot({
+      firstname: step1.firstname,
+      mobilephone: step1.phone,
+      phone: step1.phone,
+      hs_lead_status: "NEW",
+      service_type: step1.service_type,
+    }).catch(() => {}); // fire-and-forget, never block the UI
     setStep(2);
   }
 
@@ -76,6 +84,7 @@ export default function LeadForm() {
     try {
       await submitToHubspot({
         firstname: step1.firstname,
+        mobilephone: step1.phone,
         phone: step1.phone,
         service_type: step1.service_type,
         bedrooms: step2.bedrooms,
