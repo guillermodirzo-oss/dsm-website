@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { submitToHubspot } from "@/lib/submitToHubspot";
 
 type Step1 = {
@@ -40,6 +41,7 @@ const SQFT_OPTIONS = [
 ];
 
 export default function LeadForm() {
+  const router = useRouter();
   const [step, setStep] = useState(1);
   const [step1, setStep1] = useState<Step1>({
     firstname: "",
@@ -53,7 +55,6 @@ export default function LeadForm() {
     square_footage: "",
   });
   const [submitting, setSubmitting] = useState(false);
-  const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
 
   function handleStep1Change(e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) {
@@ -92,7 +93,7 @@ export default function LeadForm() {
         bathrooms: step2.bathrooms,
         square_footage: step2.square_footage,
       });
-      setSuccess(true);
+      router.push("/quote-thank-you");
     } catch {
       setError(true);
     } finally {
@@ -104,22 +105,6 @@ export default function LeadForm() {
     "w-full border border-gray-200 rounded-xl px-4 py-3 text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent transition placeholder-gray-400 bg-white";
 
   const labelClass = "block text-sm font-semibold text-gray-700 mb-1.5";
-
-  if (success) {
-    return (
-      <div className="flex flex-col items-center justify-center py-10 px-4 text-center">
-        <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4">
-          <svg className="w-8 h-8 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-          </svg>
-        </div>
-        <h3 className="text-xl font-bold text-gray-900 mb-2">You&apos;re all set!</h3>
-        <p className="text-gray-600 text-sm max-w-xs">
-          Thank you! We&apos;ll reach out within 24 hours with your free quote.
-        </p>
-      </div>
-    );
-  }
 
   return (
     <div className="w-full">
