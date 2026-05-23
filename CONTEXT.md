@@ -43,6 +43,16 @@ Romeoville, Plainfield, Naperville, Bolingbrook, Joliet — Will County and DuPa
 | `components/CityPageTemplate.tsx` | Shared template for all city/service combo pages |
 | `public/robots.txt` | Crawl rules |
 
+## Form Usage Rules — Critical
+There are TWO lead forms on this site. Never mix them up.
+
+| Form | Component | HubSpot Form GUID | Used On |
+|---|---|---|---|
+| Residential | `components/LeadForm.tsx` | `c702ab87-4ac4-4fcf-adcd-80603639cb6e` | All residential pages, homepage, city combo pages, contact page |
+| Commercial/Office | `components/OfficeLeadForm.tsx` | `fda5d224-97f4-4b79-ba1b-ff0ef512ce7f` | All office and commercial cleaning pages only |
+
+**Rule: Never place `LeadForm.tsx` on commercial pages. Never place `OfficeLeadForm.tsx` on residential pages.**
+
 ## What Has Already Been Completed
 - 301 redirects and www canonicalization in next.config.mjs
 - JSON-LD structured data on all major pages (LocalBusiness, Service, FAQPage, BreadcrumbList, BlogPosting)
