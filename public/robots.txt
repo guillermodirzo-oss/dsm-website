@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 
 Disallow: /spring-special
+Disallow: /deep-clean-offer
 
 Sitemap: https://www.dsmcleaningsolutions.com/sitemap.xml
