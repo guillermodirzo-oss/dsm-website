@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
 import StickyBar from "./StickyBar";
+import DeepCleanChecklist from "./DeepCleanChecklist";
 
 // ─── Metadata ────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
@@ -29,7 +30,7 @@ const problemCards = [
   {
     icon: "🍳",
     title: "Kitchen Grease Buildup",
-    desc: "Cabinet tops, oven interior, refrigerator coils, and hood filters collect grease all year. Regular cleaning skips them every time.",
+    desc: "Cabinet tops, oven exterior, hood vents, and countertop surfaces collect grease all year. Regular cleaning skips them every time — and it builds up fast.",
   },
   {
     icon: "🤧",
@@ -64,49 +65,6 @@ const regularItems: { text: string; included: boolean }[] = [
   { text: "Sink & fixtures polished", included: false },
 ];
 
-const deepCleanSections = [
-  {
-    label: "ALL ROOMS",
-    items: [
-      "Everything in regular cleaning",
-      "Dust & wipe door & door frames",
-      "Dust baseboards throughout",
-      "Ceiling fans deep-dusted & cobwebs removed",
-      "Dust blinds",
-      "Wipe & clean mirrors & light switches",
-      "Vacuum & mop all floors",
-    ],
-  },
-  {
-    label: "KITCHEN",
-    items: [
-      "Inside oven — FREE with this offer",
-      "Oven & stove exterior cleaned",
-      "Exterior refrigerator cleaned (exterior only)",
-      "Interior & exterior microwave",
-      "Hood & light switches",
-      "All cabinet faces wiped",
-      "Baseboards cleaned",
-      "Sink & faucet wiped, cleaned & dried",
-      "Countertops & all surfaces",
-      "Trash & recyclables removed",
-    ],
-  },
-  {
-    label: "BATHROOM",
-    items: [
-      "Dust reachable vents",
-      "Toilet & toilet area sanitized",
-      "Soap scum & mildew removed from shower/tub",
-      "Cabinet faces cleaned",
-      "Countertops sanitized",
-      "Sink & fixtures polished",
-      "Mirrors & light switches",
-      "Baseboards & doors wiped",
-      "Floors vacuumed & mopped",
-    ],
-  },
-];
 
 const workPhotos = [
   {
@@ -186,8 +144,9 @@ export default function DeepCleanOfferPage() {
               </h1>
 
               <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-8">
-                Most homes do — especially after winter. Here&apos;s how to
-                know, and how to{" "}
+                Most homes do — especially heading into summer when allergens
+                peak and guests start visiting. Here&apos;s how to know, and
+                how to{" "}
                 <a
                   href="#quote-form-top"
                   className="text-amber-400 font-semibold hover:text-amber-300 underline underline-offset-2"
@@ -197,14 +156,14 @@ export default function DeepCleanOfferPage() {
                 .
               </p>
 
-              {/* Trust bullets — all screen sizes */}
-              <ul className="flex flex-col gap-3">
+              {/* Trust bullets — 2-col compact grid on mobile, single col on md+ */}
+              <ul className="grid grid-cols-2 gap-2 md:flex md:flex-col md:gap-3">
                 {trustBullets.map((b) => (
                   <li
                     key={b.text}
-                    className="flex items-start gap-2.5 text-sm text-gray-300"
+                    className="flex items-start gap-1.5 text-xs md:text-sm text-gray-300"
                   >
-                    <span className="flex-shrink-0 mt-0.5">{b.icon}</span>
+                    <span className="flex-shrink-0">{b.icon}</span>
                     <span>{b.text}</span>
                   </li>
                 ))}
@@ -216,7 +175,7 @@ export default function DeepCleanOfferPage() {
               id="quote-form-top"
               className="bg-white rounded-3xl shadow-2xl p-6 md:p-8"
             >
-              <div className="mb-5">
+              <div className="mb-4">
                 <h2 className="text-xl font-bold text-gray-900 mb-1">
                   Claim Your{" "}
                   <a
@@ -229,6 +188,12 @@ export default function DeepCleanOfferPage() {
                 <p className="text-sm text-gray-500">
                   $75 OFF + Free Oven Clean — Limited spots available
                 </p>
+              </div>
+              {/* Trust badges */}
+              <div className="flex justify-center gap-2 flex-wrap mb-4">
+                <span className="bg-gray-100 text-xs text-gray-600 px-2 py-1 rounded-full">⭐ Google 5.0</span>
+                <span className="bg-gray-100 text-xs text-gray-600 px-2 py-1 rounded-full">🛡️ Fully Insured</span>
+                <span className="bg-gray-100 text-xs text-gray-600 px-2 py-1 rounded-full">🏠 Family-Owned</span>
               </div>
               <LeadForm defaultService="Deep Cleaning" />
             </div>
@@ -283,7 +248,7 @@ export default function DeepCleanOfferPage() {
                 boxShadow: "0 4px 15px rgba(232,114,28,0.35)",
               }}
             >
-              Claim Your{" "}
+              Fix All of This — Claim Your{" "}
               <span className="mx-1 underline underline-offset-2">$75 Off</span>{" "}
               →
             </a>
@@ -337,33 +302,7 @@ export default function DeepCleanOfferPage() {
                   DSM Deep Clean ⭐
                 </h3>
               </div>
-              <div className="py-3">
-                {deepCleanSections.map((section) => (
-                  <div key={section.label}>
-                    <p className="text-xs font-bold text-gray-400 uppercase tracking-wider px-6 pt-4 pb-2">
-                      {section.label}
-                    </p>
-                    <ul className="px-6 space-y-3 pb-2">
-                      {section.items.map((item) => (
-                        <li key={item} className="flex items-start gap-3 text-sm">
-                          <span className="flex-shrink-0 font-bold text-green-600 text-sm mt-0.5">
-                            ✓
-                          </span>
-                          <span
-                            className={`font-medium ${
-                              item.includes("FREE")
-                                ? "text-orange-600 font-semibold"
-                                : "text-gray-800"
-                            }`}
-                          >
-                            {item}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
+              <DeepCleanChecklist />
             </div>
           </div>
 
@@ -486,6 +425,9 @@ export default function DeepCleanOfferPage() {
               Shorewood, and Lockport. Spots for June are going fast — once
               they&apos;re filled, the next availability moves to July.
             </p>
+            <p className="text-sm text-gray-400 mt-3">
+              📅 Request today — most homes are scheduled within 3–5 days.
+            </p>
           </div>
 
           {/* Jan Forster review — above second form */}
@@ -517,17 +459,74 @@ export default function DeepCleanOfferPage() {
                 </a>{" "}
                 Before Spots Fill Up
               </h3>
-              <p className="text-sm text-gray-500 mb-5">
+              <p className="text-sm text-gray-500 mb-3">
                 $75 OFF + Free Oven Cleaning · 48-Hour Guarantee · Family-Owned
               </p>
+              {/* Trust badges */}
+              <div className="flex justify-center gap-2 flex-wrap mb-4">
+                <span className="bg-gray-100 text-xs text-gray-600 px-2 py-1 rounded-full">⭐ Google 5.0</span>
+                <span className="bg-gray-100 text-xs text-gray-600 px-2 py-1 rounded-full">🛡️ Fully Insured</span>
+                <span className="bg-gray-100 text-xs text-gray-600 px-2 py-1 rounded-full">🏠 Family-Owned</span>
+              </div>
               <LeadForm defaultService="Deep Cleaning" />
             </div>
+            {/* Phone CTA — below second form only */}
+            <p className="text-sm text-gray-400 text-center mt-3">
+              📞 Prefer to call?{" "}
+              <a
+                href="tel:8152462113"
+                className="text-gray-500 hover:text-gray-700 font-medium"
+              >
+                (815) 246-2113
+              </a>{" "}
+              · Mon–Sun 8am–6pm
+            </p>
           </div>
         </div>
       </section>
 
       {/* ══════════════════════════════════════════════════════════════════════
-          SECTION 6 — Guarantee
+          SECTION 7 — FAQ
+      ══════════════════════════════════════════════════════════════════════ */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-10">
+            Questions Before You Book?
+          </h2>
+          <div className="divide-y divide-gray-200">
+            {[
+              {
+                q: "Do I need to be home during the cleaning?",
+                a: "No — many of our clients give us access and come home to a spotless house. We are fully insured and background-checked for your peace of mind.",
+              },
+              {
+                q: "How long does a deep clean take?",
+                a: "Most homes take between 3–5 hours depending on size and condition. We'll give you a better estimate when you request your quote.",
+              },
+              {
+                q: "Are you insured?",
+                a: "Yes — DSM Cleaning Solutions is fully insured. You're covered from the moment we walk in the door.",
+              },
+              {
+                q: "What if I'm not 100% happy?",
+                a: "Call us within 48 hours and we'll come back and make it right — completely free. That's our guarantee, no questions asked.",
+              },
+              {
+                q: "How fast can I get scheduled?",
+                a: "Most homes are scheduled within 3–5 days of your request. June spots are limited — the sooner you request, the better.",
+              },
+            ].map((item) => (
+              <div key={item.q} className="py-4">
+                <p className="font-semibold text-gray-900 mb-1">{item.q}</p>
+                <p className="text-gray-600 text-sm leading-relaxed">{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════════════════
+          SECTION 8 — Guarantee
       ══════════════════════════════════════════════════════════════════════ */}
       <section className="py-16 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

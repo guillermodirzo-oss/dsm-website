@@ -7,11 +7,11 @@ import { submitToHubspot } from "@/lib/submitToHubspot";
 type Step1 = {
   firstname: string;
   email: string;
-  phone: string;
   service_type: string;
 };
 
 type Step2 = {
+  phone: string;
   bedrooms: string;
   bathrooms: string;
   square_footage: string;
@@ -46,7 +46,6 @@ export default function LeadForm({ defaultService }: { defaultService?: string }
   const [step1, setStep1] = useState<Step1>({
     firstname: "",
     email: "",
-    phone: "",
     service_type: "",
   });
 
@@ -56,6 +55,7 @@ export default function LeadForm({ defaultService }: { defaultService?: string }
     }
   }, [defaultService]);
   const [step2, setStep2] = useState<Step2>({
+    phone: "",
     bedrooms: "",
     bathrooms: "",
     square_footage: "",
@@ -77,8 +77,6 @@ export default function LeadForm({ defaultService }: { defaultService?: string }
     submitToHubspot({
       firstname: step1.firstname,
       email: step1.email,
-      phone: step1.phone,
-      mobilephone: step1.phone,
       service_type: step1.service_type,
     }).catch(() => {}); // fire-and-forget, never block the UI
     setStep(2);
@@ -92,8 +90,8 @@ export default function LeadForm({ defaultService }: { defaultService?: string }
       await submitToHubspot({
         firstname: step1.firstname,
         email: step1.email,
-        phone: step1.phone,
-        mobilephone: step1.phone,
+        phone: step2.phone,
+        mobilephone: step2.phone,
         service_type: step1.service_type,
         bedrooms: step2.bedrooms,
         bathrooms: step2.bathrooms,
@@ -160,20 +158,6 @@ export default function LeadForm({ defaultService }: { defaultService?: string }
               />
             </div>
             <div>
-              <label htmlFor="lf-phone" className={labelClass}>Phone Number</label>
-              <input
-                id="lf-phone"
-                name="phone"
-                type="tel"
-                required
-                autoComplete="tel"
-                placeholder="(815) 000-0000"
-                value={step1.phone}
-                onChange={handleStep1Change}
-                className={inputClass}
-              />
-            </div>
-            <div>
               <label htmlFor="lf-service" className={labelClass}>Service Type</label>
               <select
                 id="lf-service"
@@ -202,6 +186,20 @@ export default function LeadForm({ defaultService }: { defaultService?: string }
       ) : (
         <form onSubmit={handleSubmit} noValidate>
           <div className="space-y-4">
+            <div>
+              <label htmlFor="lf-phone" className={labelClass}>Phone Number</label>
+              <input
+                id="lf-phone"
+                name="phone"
+                type="tel"
+                required
+                autoComplete="tel"
+                placeholder="(815) 000-0000"
+                value={step2.phone}
+                onChange={handleStep2Change}
+                className={inputClass}
+              />
+            </div>
             <div>
               <label htmlFor="lf-bedrooms" className={labelClass}>Bedrooms</label>
               <select
