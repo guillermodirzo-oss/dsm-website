@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { submitToHubspot } from "@/lib/submitToHubspot";
 
@@ -40,7 +40,7 @@ const SQFT_OPTIONS = [
   "5,000+ sq ft",
 ];
 
-export default function LeadForm() {
+export default function LeadForm({ defaultService }: { defaultService?: string }) {
   const router = useRouter();
   const [step, setStep] = useState(1);
   const [step1, setStep1] = useState<Step1>({
@@ -49,6 +49,12 @@ export default function LeadForm() {
     phone: "",
     service_type: "",
   });
+
+  useEffect(() => {
+    if (defaultService) {
+      setStep1((prev) => ({ ...prev, service_type: defaultService }));
+    }
+  }, [defaultService]);
   const [step2, setStep2] = useState<Step2>({
     bedrooms: "",
     bathrooms: "",

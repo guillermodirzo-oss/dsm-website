@@ -44,27 +44,68 @@ const problemCards = [
 ];
 
 const regularItems: { text: string; included: boolean }[] = [
-  { text: "Wipe counters", included: true },
-  { text: "Vacuum floors", included: true },
+  { text: "Dust ceiling fans & remove cobwebs", included: true },
+  { text: "Dust window sills & ledges", included: true },
+  { text: "Wipe & clean mirrors & light switches", included: true },
+  { text: "Dust blinds", included: true },
+  { text: "Vacuum floors (carpet & hard surfaces)", included: true },
+  { text: "Mop hard surface floors", included: true },
   { text: "Clean bathroom surfaces", included: true },
-  { text: "Mop hard floors", included: true },
-  { text: "Inside oven (skipped)", included: false },
+  { text: "Wipe counters", included: true },
+  { text: "Inside oven", included: false },
   { text: "Baseboards hand-scrubbed", included: false },
-  { text: "Inside refrigerator", included: false },
-  { text: "Window tracks", included: false },
-  { text: "Behind appliances", included: false },
-  { text: "Light fixtures & fans", included: false },
-  { text: "Cabinet interiors", included: false },
+  { text: "Door & door frames wiped", included: false },
+  { text: "Interior microwave", included: false },
+  { text: "Hood & light switches cleaned", included: false },
+  { text: "Cabinet faces wiped", included: false },
+  { text: "Bathroom grout scrubbed", included: false },
+  { text: "Soap scum & mildew removal", included: false },
+  { text: "Toilet area sanitized", included: false },
+  { text: "Sink & fixtures polished", included: false },
 ];
 
-const deepCleanItems = [
-  "Everything in regular cleaning",
-  "Inside oven — FREE with this offer",
-  "Baseboards hand-scrubbed",
-  "Cabinet faces",
-  "Grout scrubbing",
-  "Light fixtures & ceiling fans",
-  "Window sills & ledges",
+const deepCleanSections = [
+  {
+    label: "ALL ROOMS",
+    items: [
+      "Everything in regular cleaning",
+      "Dust & wipe door & door frames",
+      "Dust baseboards throughout",
+      "Ceiling fans deep-dusted & cobwebs removed",
+      "Dust blinds",
+      "Wipe & clean mirrors & light switches",
+      "Vacuum & mop all floors",
+    ],
+  },
+  {
+    label: "KITCHEN",
+    items: [
+      "Inside oven — FREE with this offer",
+      "Oven & stove exterior cleaned",
+      "Exterior refrigerator cleaned (exterior only)",
+      "Interior & exterior microwave",
+      "Hood & light switches",
+      "All cabinet faces wiped",
+      "Baseboards cleaned",
+      "Sink & faucet wiped, cleaned & dried",
+      "Countertops & all surfaces",
+      "Trash & recyclables removed",
+    ],
+  },
+  {
+    label: "BATHROOM",
+    items: [
+      "Dust reachable vents",
+      "Toilet & toilet area sanitized",
+      "Soap scum & mildew removed from shower/tub",
+      "Cabinet faces cleaned",
+      "Countertops sanitized",
+      "Sink & fixtures polished",
+      "Mirrors & light switches",
+      "Baseboards & doors wiped",
+      "Floors vacuumed & mopped",
+    ],
+  },
 ];
 
 const workPhotos = [
@@ -156,8 +197,8 @@ export default function DeepCleanOfferPage() {
                 .
               </p>
 
-              {/* Trust bullets — desktop only (shown in left col) */}
-              <ul className="hidden lg:flex flex-col gap-3">
+              {/* Trust bullets — all screen sizes */}
+              <ul className="flex flex-col gap-3">
                 {trustBullets.map((b) => (
                   <li
                     key={b.text}
@@ -189,22 +230,10 @@ export default function DeepCleanOfferPage() {
                   $75 OFF + Free Oven Clean — Limited spots available
                 </p>
               </div>
-              <LeadForm />
+              <LeadForm defaultService="Deep Cleaning" />
             </div>
           </div>
 
-          {/* Trust bullets — mobile only (below form card) */}
-          <ul className="flex lg:hidden flex-col gap-3 mt-8">
-            {trustBullets.map((b) => (
-              <li
-                key={b.text}
-                className="flex items-start gap-2.5 text-sm text-gray-300"
-              >
-                <span className="flex-shrink-0 mt-0.5">{b.icon}</span>
-                <span>{b.text}</span>
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
 
@@ -308,24 +337,33 @@ export default function DeepCleanOfferPage() {
                   DSM Deep Clean ⭐
                 </h3>
               </div>
-              <ul className="px-6 py-5 space-y-3">
-                {deepCleanItems.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm">
-                    <span className="flex-shrink-0 font-bold text-green-600 text-sm mt-0.5">
-                      ✓
-                    </span>
-                    <span
-                      className={`font-medium ${
-                        item.includes("FREE")
-                          ? "text-orange-600 font-semibold"
-                          : "text-gray-800"
-                      }`}
-                    >
-                      {item}
-                    </span>
-                  </li>
+              <div className="py-3">
+                {deepCleanSections.map((section) => (
+                  <div key={section.label}>
+                    <p className="text-xs font-bold text-gray-400 uppercase tracking-wider px-6 pt-4 pb-2">
+                      {section.label}
+                    </p>
+                    <ul className="px-6 space-y-3 pb-2">
+                      {section.items.map((item) => (
+                        <li key={item} className="flex items-start gap-3 text-sm">
+                          <span className="flex-shrink-0 font-bold text-green-600 text-sm mt-0.5">
+                            ✓
+                          </span>
+                          <span
+                            className={`font-medium ${
+                              item.includes("FREE")
+                                ? "text-orange-600 font-semibold"
+                                : "text-gray-800"
+                            }`}
+                          >
+                            {item}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
 
@@ -427,9 +465,7 @@ export default function DeepCleanOfferPage() {
                 boxShadow: "0 4px 15px rgba(232,114,28,0.35)",
               }}
             >
-              Get This Level of Clean — Claim Your{" "}
-              <span className="mx-1 underline underline-offset-2">$75 Off</span>{" "}
-              →
+              Claim Your $75 Off →
             </a>
           </div>
         </div>
@@ -445,12 +481,26 @@ export default function DeepCleanOfferPage() {
               We Limit Deep Clean Bookings to Keep Quality High
             </h2>
             <p className="text-gray-500 leading-relaxed">
-              We personally handle every job and can only take on a limited
-              number of deep cleans per week across Romeoville, Plainfield,
-              Bolingbrook, Crest Hill, Shorewood, and Lockport. Spots for June
-              are going fast.
+              We personally handle every job and only take on 6 deep cleans per
+              week across Romeoville, Plainfield, Bolingbrook, Crest Hill,
+              Shorewood, and Lockport. Spots for June are going fast — once
+              they&apos;re filled, the next availability moves to July.
             </p>
           </div>
+
+          {/* Jan Forster review — above second form */}
+          <blockquote className="max-w-xl mx-auto mb-8 text-center">
+            <p className="text-gray-600 italic leading-relaxed text-base">
+              &ldquo;Very happy with my cleaning! My house has been neglected due
+              to a few surgeries and I was thrilled to have a sparkling house
+              again! Will definitely use them again! Very friendly as well!&rdquo;
+            </p>
+            <footer className="mt-3 text-sm font-semibold text-gray-700">
+              — Jan Forster{" "}
+              <span className="text-amber-400 not-italic">★★★★★</span>
+              <span className="font-normal text-gray-400"> · Google Review</span>
+            </footer>
+          </blockquote>
 
           <div className="max-w-xl mx-auto">
             <div
@@ -470,7 +520,7 @@ export default function DeepCleanOfferPage() {
               <p className="text-sm text-gray-500 mb-5">
                 $75 OFF + Free Oven Cleaning · 48-Hour Guarantee · Family-Owned
               </p>
-              <LeadForm />
+              <LeadForm defaultService="Deep Cleaning" />
             </div>
           </div>
         </div>
