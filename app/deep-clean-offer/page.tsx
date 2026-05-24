@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
 import StickyBar from "./StickyBar";
 
@@ -60,14 +61,43 @@ const deepCleanItems = [
   "Everything in regular cleaning",
   "Inside oven — FREE with this offer",
   "Baseboards hand-scrubbed",
-  "Inside refrigerator",
-  "Window tracks cleaned",
-  "Behind & under appliances",
-  "Light fixtures & ceiling fans",
-  "Cabinet fronts & interiors",
+  "Cabinet faces",
   "Grout scrubbing",
-  "Under furniture moved & cleaned",
+  "Light fixtures & ceiling fans",
   "Window sills & ledges",
+];
+
+const workPhotos = [
+  {
+    src: "/Work%20Pictures/shower-deep-clean-romeoville-il.jpg",
+    alt: "Deep cleaned glass shower — Romeoville IL",
+    caption: "Shower deep clean — Romeoville",
+  },
+  {
+    src: "/Work%20Pictures/double-vanity-bathroom-clean-naperville-il.jpg",
+    alt: "Double vanity bathroom after deep cleaning — Naperville IL",
+    caption: "Master bath — Naperville",
+  },
+  {
+    src: "/Work%20Pictures/double-sink-bathroom-deep-clean-plainfield-il.jpg",
+    alt: "Double sink bathroom after deep cleaning — Plainfield IL",
+    caption: "Full bathroom — Plainfield",
+  },
+  {
+    src: "/Work%20Pictures/living-room-hardwood-floors-plainfield-il.jpg",
+    alt: "Gleaming hardwood floors after professional cleaning — Plainfield IL",
+    caption: "Hardwood floors — Plainfield",
+  },
+  {
+    src: "/Work%20Pictures/master-bedroom-airbnb-cleaning-bolingbrook-il.jpg",
+    alt: "Clean master bedroom — Bolingbrook IL",
+    caption: "Master bedroom — Bolingbrook",
+  },
+  {
+    src: "/Work%20Pictures/bathtub-shower-deep-clean-plainfield-il.jpg",
+    alt: "Full bathroom deep clean with tub and shower — Plainfield IL",
+    caption: "Bathroom deep clean — Plainfield",
+  },
 ];
 
 const reviews = [
@@ -352,7 +382,61 @@ export default function DeepCleanOfferPage() {
       </section>
 
       {/* ══════════════════════════════════════════════════════════════════════
-          SECTION 5 — Scarcity + Second Form
+          SECTION 5 — Real Work Photos
+      ══════════════════════════════════════════════════════════════════════ */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-gray-900 mb-3">
+              Real Results from Real Homes in Your Area
+            </h2>
+            <p className="text-gray-500 max-w-xl mx-auto">
+              Every photo below is from an actual DSM Cleaning Solutions job —
+              no stock photos, no filters.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+            {workPhotos.map((photo) => (
+              <div
+                key={photo.src}
+                className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-gray-200 shadow-sm"
+              >
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/65 to-transparent px-3 py-3">
+                  <p className="text-white text-xs font-semibold">
+                    {photo.caption}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <a
+              href="#quote-form-bottom"
+              className="inline-flex items-center justify-center font-bold text-white rounded-full py-3.5 px-8 text-base transition-all hover:opacity-90 active:scale-95"
+              style={{
+                backgroundColor: "#E8721C",
+                boxShadow: "0 4px 15px rgba(232,114,28,0.35)",
+              }}
+            >
+              Get This Level of Clean — Claim Your{" "}
+              <span className="mx-1 underline underline-offset-2">$75 Off</span>{" "}
+              →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════════════════
+          SECTION 6 — Scarcity + Second Form
       ══════════════════════════════════════════════════════════════════════ */}
       <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
