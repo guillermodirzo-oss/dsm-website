@@ -251,6 +251,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/blog/why-hire-eco-friendly-cleaning-service-romeoville-il`,
+      lastModified: new Date("2026-05-19"),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/blog/best-house-cleaning-service-lockport-il`,
       lastModified: new Date("2026-05-16"),
       changeFrequency: "monthly" as const,
