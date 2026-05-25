@@ -144,14 +144,12 @@ export default function DeepCleanOfferPage() {
               </h1>
 
               <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-8">
-                Most homes do — especially heading into summer when allergens
-                peak and guests start visiting. Here&apos;s how to know, and
-                how to{" "}
+                Most do — especially in summer.{" "}
                 <a
                   href="#quote-form-top"
                   className="text-amber-400 font-semibold hover:text-amber-300 underline underline-offset-2"
                 >
-                  save $75 when you book
+                  Here&apos;s how to save $75 when you book
                 </a>
                 .
               </p>
@@ -190,10 +188,10 @@ export default function DeepCleanOfferPage() {
                 </p>
               </div>
               {/* Trust badges */}
-              <div className="flex justify-center gap-2 flex-wrap mb-4">
-                <span className="bg-gray-100 text-xs text-gray-600 px-2 py-1 rounded-full">⭐ Google 5.0</span>
-                <span className="bg-gray-100 text-xs text-gray-600 px-2 py-1 rounded-full">🛡️ Fully Insured</span>
-                <span className="bg-gray-100 text-xs text-gray-600 px-2 py-1 rounded-full">🏠 Family-Owned</span>
+              <div className="grid grid-cols-3 gap-1 w-full mb-4">
+                <span className="bg-gray-100 text-xs text-gray-600 px-1 py-1 rounded-full flex justify-center items-center text-center">⭐ Google 5.0</span>
+                <span className="bg-gray-100 text-xs text-gray-600 px-1 py-1 rounded-full flex justify-center items-center text-center">🛡️ Fully Insured</span>
+                <span className="bg-gray-100 text-xs text-gray-600 px-1 py-1 rounded-full flex justify-center items-center text-center">🏠 Family-Owned</span>
               </div>
               <LeadForm defaultService="Deep Cleaning" />
             </div>
@@ -248,7 +246,7 @@ export default function DeepCleanOfferPage() {
                 boxShadow: "0 4px 15px rgba(232,114,28,0.35)",
               }}
             >
-              Fix All of This — Claim Your{" "}
+              Fix This — Claim Your{" "}
               <span className="mx-1 underline underline-offset-2">$75 Off</span>{" "}
               →
             </a>
@@ -413,7 +411,7 @@ export default function DeepCleanOfferPage() {
       {/* ══════════════════════════════════════════════════════════════════════
           SECTION 6 — Scarcity + Second Form
       ══════════════════════════════════════════════════════════════════════ */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 pb-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mx-auto text-center mb-10">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -463,10 +461,10 @@ export default function DeepCleanOfferPage() {
                 $75 OFF + Free Oven Cleaning · 48-Hour Guarantee · Family-Owned
               </p>
               {/* Trust badges */}
-              <div className="flex justify-center gap-2 flex-wrap mb-4">
-                <span className="bg-gray-100 text-xs text-gray-600 px-2 py-1 rounded-full">⭐ Google 5.0</span>
-                <span className="bg-gray-100 text-xs text-gray-600 px-2 py-1 rounded-full">🛡️ Fully Insured</span>
-                <span className="bg-gray-100 text-xs text-gray-600 px-2 py-1 rounded-full">🏠 Family-Owned</span>
+              <div className="grid grid-cols-3 gap-1 w-full mb-4">
+                <span className="bg-gray-100 text-xs text-gray-600 px-1 py-1 rounded-full flex justify-center items-center text-center">⭐ Google 5.0</span>
+                <span className="bg-gray-100 text-xs text-gray-600 px-1 py-1 rounded-full flex justify-center items-center text-center">🛡️ Fully Insured</span>
+                <span className="bg-gray-100 text-xs text-gray-600 px-1 py-1 rounded-full flex justify-center items-center text-center">🏠 Family-Owned</span>
               </div>
               <LeadForm defaultService="Deep Cleaning" />
             </div>
