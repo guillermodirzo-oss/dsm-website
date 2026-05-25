@@ -40,7 +40,13 @@ const SQFT_OPTIONS = [
   "5,000+ sq ft",
 ];
 
-export default function LeadForm({ defaultService }: { defaultService?: string }) {
+export default function LeadForm({
+  defaultService,
+  step1Label = "Your info",
+}: {
+  defaultService?: string;
+  step1Label?: string;
+}) {
   const router = useRouter();
   const [step, setStep] = useState(1);
   const [step1, setStep1] = useState<Step1>({
@@ -116,7 +122,7 @@ export default function LeadForm({ defaultService }: { defaultService?: string }
       <div className="mb-6">
         <div className="flex items-center justify-between mb-2">
           <span className="text-xs font-semibold text-brand-green">Step {step} of 2</span>
-          <span className="text-xs text-gray-400">{step === 1 ? "Your info" : "Home details"}</span>
+          <span className="text-xs text-gray-400">{step === 1 ? step1Label : "Home details"}</span>
         </div>
         <div className="w-full bg-gray-100 rounded-full h-1.5">
           <div

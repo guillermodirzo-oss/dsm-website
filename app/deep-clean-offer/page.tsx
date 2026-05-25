@@ -118,12 +118,18 @@ const reviews = [
 export default function DeepCleanOfferPage() {
   return (
     <>
-      {/* ── Minimal header — logo text only, no link ── */}
-      <div className="bg-white border-b border-gray-100 px-4 py-3.5 flex items-center justify-center">
-        <span className="font-bold text-gray-900 text-lg tracking-tight">
+      {/* ── Minimal header — logo + phone only, zero nav links ── */}
+      <header className="bg-white border-b border-gray-100 px-4 py-3 flex items-center justify-between">
+        <span className="font-bold text-gray-900 text-lg">
           DSM Cleaning Solutions
         </span>
-      </div>
+        <a
+          href="tel:8152462113"
+          className="text-sm font-medium text-orange-600 hover:text-orange-700"
+        >
+          (815) 246-2113
+        </a>
+      </header>
 
       {/* ══════════════════════════════════════════════════════════════════════
           SECTION 1 — Hero (above the fold)
@@ -136,23 +142,25 @@ export default function DeepCleanOfferPage() {
             <div className="text-white">
               {/* Pill tag */}
               <div className="inline-flex items-center gap-1.5 bg-amber-500/20 border border-amber-400/30 text-amber-300 text-xs font-semibold px-3 py-1.5 rounded-full mb-5">
-                ⚡ Limited Spots — June 2026
+                ⚡ Limited Weekly Spots — Book Now
               </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
-                Does Your Home Actually Need a Deep Clean?
+                $75 Off Your First Deep Clean
               </h1>
 
-              <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-8">
-                Most do — especially in summer.{" "}
-                <a
-                  href="#quote-form-top"
-                  className="text-amber-400 font-semibold hover:text-amber-300 underline underline-offset-2"
-                >
-                  Here&apos;s how to save $75 when you book
-                </a>
-                .
+              <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-4">
+                Does your home actually need one? Most do. Here&apos;s how to
+                get yours done for $75 less — plus a free oven clean.
               </p>
+
+              {/* Trust bar — stars + social proof in one line */}
+              <div className="flex items-center gap-1.5 text-sm font-medium my-3 flex-wrap">
+                <span className="text-yellow-400">★★★★★</span>
+                <span className="text-gray-200">
+                  5.0 Stars · 100+ Reviews · Fully Insured · Family-Owned
+                </span>
+              </div>
 
               {/* Trust bullets — 2-col compact grid on mobile, single col on md+ */}
               <ul className="grid grid-cols-2 gap-2 md:flex md:flex-col md:gap-3">
@@ -193,7 +201,7 @@ export default function DeepCleanOfferPage() {
                 <span className="bg-gray-100 text-xs text-gray-600 px-1 py-1 rounded-full flex justify-center items-center text-center">🛡️ Fully Insured</span>
                 <span className="bg-gray-100 text-xs text-gray-600 px-1 py-1 rounded-full flex justify-center items-center text-center">🏠 Family-Owned</span>
               </div>
-              <LeadForm defaultService="Deep Cleaning" />
+              <LeadForm defaultService="Deep Cleaning" step1Label="Get Your $75 Discount — 60 Seconds" />
             </div>
           </div>
 
@@ -420,11 +428,11 @@ export default function DeepCleanOfferPage() {
             <p className="text-gray-500 leading-relaxed">
               We personally handle every job and only take on 6 deep cleans per
               week across Romeoville, Plainfield, Bolingbrook, Crest Hill,
-              Shorewood, and Lockport. Spots for June are going fast — once
-              they&apos;re filled, the next availability moves to July.
+              Shorewood, and Lockport. We limit bookings to maintain quality —
+              request yours to check availability for your area.
             </p>
             <p className="text-sm text-gray-400 mt-3">
-              📅 Request today — most homes are scheduled within 3–5 days.
+              📅 Most homes are scheduled within 3–5 days of requesting.
             </p>
           </div>
 
@@ -466,7 +474,7 @@ export default function DeepCleanOfferPage() {
                 <span className="bg-gray-100 text-xs text-gray-600 px-1 py-1 rounded-full flex justify-center items-center text-center">🛡️ Fully Insured</span>
                 <span className="bg-gray-100 text-xs text-gray-600 px-1 py-1 rounded-full flex justify-center items-center text-center">🏠 Family-Owned</span>
               </div>
-              <LeadForm defaultService="Deep Cleaning" />
+              <LeadForm defaultService="Deep Cleaning" step1Label="Get Your $75 Discount — 60 Seconds" />
             </div>
             {/* Phone CTA — below second form only */}
             <p className="text-sm text-gray-400 text-center mt-3">
@@ -511,7 +519,7 @@ export default function DeepCleanOfferPage() {
               },
               {
                 q: "How fast can I get scheduled?",
-                a: "Most homes are scheduled within 3–5 days of your request. June spots are limited — the sooner you request, the better.",
+                a: "Most homes are scheduled within 3–5 days of your request. Spots fill weekly — the sooner you request, the better.",
               },
             ].map((item) => (
               <div key={item.q} className="py-4">
@@ -544,23 +552,19 @@ export default function DeepCleanOfferPage() {
         </div>
       </section>
 
-      {/* ── Simple footer — no nav links ── */}
-      <div className="bg-gray-900 py-6 px-4">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-sm text-gray-400">
-          <span className="font-semibold text-white">
-            DSM Cleaning Solutions
-          </span>
-          <span className="text-center">
-            © 2026 DSM Cleaning Solutions · Romeoville, IL · Family-Owned
-          </span>
-          <a
-            href="tel:+18152462113"
-            className="text-gray-300 hover:text-white transition-colors font-medium"
-          >
-            (815) 246-2113
-          </a>
+      {/* ── Minimal footer — business name, phone, copyright only ── */}
+      <footer className="bg-gray-900 text-white py-6 px-4 text-center text-sm">
+        <div className="font-semibold mb-1">DSM Cleaning Solutions</div>
+        <a
+          href="tel:8152462113"
+          className="text-orange-400 hover:text-orange-300"
+        >
+          (815) 246-2113
+        </a>
+        <div className="text-gray-400 mt-2">
+          © 2026 DSM Cleaning Solutions · Romeoville, IL · Family-Owned
         </div>
-      </div>
+      </footer>
 
       {/* Sticky mobile CTA bar */}
       <StickyBar />
