@@ -140,27 +140,22 @@ export default function DeepCleanOfferPage() {
 
             {/* Left column — headline + trust bullets */}
             <div className="text-white">
-              {/* Pill tag */}
-              <div className="inline-flex items-center gap-1.5 bg-amber-500/20 border border-amber-400/30 text-amber-300 text-xs font-semibold px-3 py-1.5 rounded-full mb-5">
+              {/* Pill tag — clickable anchor to first form */}
+              <a
+                href="#quote-form-top"
+                className="inline-flex items-center gap-1.5 bg-amber-500/20 border border-amber-400/30 text-amber-300 text-xs font-semibold px-3 py-1.5 rounded-full mb-5 cursor-pointer hover:opacity-90 transition-opacity"
+              >
                 ⚡ Limited Weekly Spots — Book Now
-              </div>
+              </a>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
                 $75 Off Your First Deep Clean
               </h1>
 
               <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-4">
-                Does your home actually need one? Most do. Here&apos;s how to
-                get yours done for $75 less — plus a free oven clean.
+                Most do. Here&apos;s how to get yours done for $75 less + a
+                free oven clean.
               </p>
-
-              {/* Trust bar — stars + social proof in one line */}
-              <div className="flex items-center gap-1.5 text-sm font-medium my-3 flex-wrap">
-                <span className="text-yellow-400">★★★★★</span>
-                <span className="text-gray-200">
-                  5.0 Stars · 100+ Reviews · Fully Insured · Family-Owned
-                </span>
-              </div>
 
               {/* Trust bullets — 2-col compact grid on mobile, single col on md+ */}
               <ul className="grid grid-cols-2 gap-2 md:flex md:flex-col md:gap-3">
