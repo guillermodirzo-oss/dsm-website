@@ -18,18 +18,17 @@ export default function StickyBar() {
       }`}
       style={{ backgroundColor: "#0f172a", height: 56 }}
     >
-      <div className="flex items-center justify-between h-full px-4 gap-3">
+      <a href="#quote-form-bottom" className="flex items-center justify-between h-full px-4 gap-3">
         <span className="text-white text-sm font-semibold truncate">
           💥 $75 OFF Deep Cleaning — Limited Spots
         </span>
-        <a
-          href="#quote-form-bottom"
-          className="flex-shrink-0 text-white text-sm font-bold px-4 py-2 rounded-full transition-opacity hover:opacity-90"
+        <span
+          className="flex-shrink-0 text-white text-sm font-bold px-4 py-2 rounded-full"
           style={{ backgroundColor: "#E8721C" }}
         >
           Claim Your Spot
-        </a>
-      </div>
+        </span>
+      </a>
     </div>
   );
 }

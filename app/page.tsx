@@ -71,6 +71,17 @@ const faqSchema = {
   mainEntity: faqs.map((faq) => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })),
 };
 
+function renderFaqAnswer(answer: string) {
+  const phone = "(815) 246-2113";
+  if (!answer.includes(phone)) return answer;
+  const parts = answer.split(phone);
+  return (
+    <>
+      {parts[0]}<a href="tel:+18152462113" className="text-brand-green font-semibold hover:underline">{phone}</a>{parts[1]}
+    </>
+  );
+}
+
 export default function HomePage() {
   return (
     <>
@@ -92,10 +103,10 @@ export default function HomePage() {
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 mb-8">
+          <Link href="/reviews" className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 mb-8 hover:bg-white/20 transition-colors">
             <span className="text-yellow-400 text-sm">★★★★★</span>
             <span className="text-white/90 text-sm font-medium">5-Star Rated · Romeoville &amp; Plainfield, IL</span>
-          </div>
+          </Link>
 
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-[1.05] tracking-tight mb-6">
             Professional House<br />
@@ -281,10 +292,10 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <p className="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">Reviews</p>
             <h2 className="section-heading text-4xl md:text-5xl">What Romeoville Families Are Saying</h2>
-            <div className="flex items-center justify-center gap-2 mt-3">
+            <Link href="/reviews" className="inline-flex items-center justify-center gap-2 mt-3 hover:opacity-80 transition-opacity">
               <span className="text-yellow-400 text-2xl">★★★★★</span>
               <span className="text-gray-400 font-medium">5.0 average · 47+ reviews</span>
-            </div>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -350,13 +361,13 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
               </div>
               {/* Floating trust card */}
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-5 shadow-xl border border-gray-100 max-w-[200px]">
+              <Link href="/reviews" className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-5 shadow-xl border border-gray-100 max-w-[200px] hover:shadow-2xl hover:-translate-y-0.5 transition-all">
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-yellow-400">★★★★★</span>
                 </div>
                 <p className="font-bold text-gray-900 text-sm">47+ Reviews</p>
                 <p className="text-xs text-gray-400 mt-0.5">5.0 avg rating</p>
-              </div>
+              </Link>
               {/* Floating badge */}
               <div className="absolute -top-4 -right-4 bg-gradient-to-br from-brand-green to-brand-green-dark text-white rounded-2xl p-4 shadow-xl shadow-orange-200">
                 <p className="font-bold text-2xl">5+</p>
@@ -499,7 +510,7 @@ export default function HomePage() {
                   </svg>
                 </summary>
                 <div className="px-5 pb-5 pt-1">
-                  <p className="text-gray-500 leading-relaxed text-sm">{faq.answer}</p>
+                  <p className="text-gray-500 leading-relaxed text-sm">{renderFaqAnswer(faq.answer)}</p>
                 </div>
               </details>
             ))}
