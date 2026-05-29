@@ -4,9 +4,9 @@ import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
 
 export const metadata: Metadata = {
-  title: "Recurring Cleaning Plainfield IL",
+  title: "Recurring Maid Service in Romeoville & Plainfield IL | DSM Cleaning Solutions",
   description:
-    "Weekly, biweekly & monthly maid service in Plainfield, IL. Reliable, eco-friendly & insured. Save up to 20% with recurring plans. Free estimate.",
+    "Weekly, bi-weekly or monthly cleaning service from a trusted local team. Consistent cleaners, flexible scheduling, 48-hour guarantee. Book recurring service today.",
   keywords: [
     "recurring house cleaning Romeoville",
     "maid service Romeoville IL",

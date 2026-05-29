@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Cleaning Service Pricing",
+  title: "House Cleaning Prices in Romeoville IL | DSM Cleaning Solutions",
   description:
-    "Transparent flat-rate pricing for house cleaning in Plainfield, Romeoville & surrounding suburbs. Standard, deep & move-out cleaning. No hidden fees. Get an instant quote.",
+    "Transparent, affordable cleaning prices for homes in Romeoville, Plainfield & Bolingbrook IL. See rates for standard, deep, and move-out cleaning. No hidden fees.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/pricing" },
   openGraph: {
     title: "House Cleaning Prices Romeoville & Plainfield IL | DSM Cleaning Solutions",

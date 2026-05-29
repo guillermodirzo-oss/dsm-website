@@ -5,9 +5,9 @@ import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
 
 export const metadata: Metadata = {
-  title: "Deep Cleaning Service Plainfield IL",
+  title: "Deep Cleaning Service in Romeoville & Plainfield IL | DSM Cleaning Solutions",
   description:
-    "Professional deep cleaning in Plainfield & Romeoville IL. We scrub baseboards, grout, appliances & more. 5-star rated team. 48-hr satisfaction guarantee. Book online in 2 min.",
+    "Professional deep cleaning for homes in Romeoville, Plainfield & Bolingbrook. Perfect before a big event, after winter, or for a fresh start. Book your deep clean today.",
   keywords: [
     "deep cleaning Romeoville IL",
     "deep house cleaning Romeoville",
