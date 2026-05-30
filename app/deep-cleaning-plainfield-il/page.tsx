@@ -1,16 +1,16 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
-  title: "Deep Cleaning Service Plainfield IL",
+  title: "Deep Cleaning Service in Plainfield IL | DSM Cleaning Solutions",
   description:
-    "Deep cleaning in Plainfield, IL done right. DSM Cleaning Ã¢â‚¬â€ detailed, thorough, and backed by a 48-hr guarantee. Book now: (815) 246-2113.",
+    "Deep cleaning in Plainfield, IL done right. DSM Cleaning — detailed, thorough, and backed by a 48-hr guarantee. Book now: (815) 246-2113.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-plainfield-il" },
   openGraph: {
-    title: "Deep Cleaning Service Plainfield IL | DSM Cleaning Solutions",
+    title: "Deep Cleaning Service in Plainfield IL | DSM Cleaning Solutions",
     description:
-      "Deep cleaning in Plainfield, IL done right. DSM Cleaning Ã¢â‚¬â€ detailed, thorough, and backed by a 48-hr guarantee. Book now: (815) 246-2113.",
+      "Deep cleaning in Plainfield, IL done right. DSM Cleaning — detailed, thorough, and backed by a 48-hr guarantee. Book now: (815) 246-2113.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning-plainfield-il",
   },
   twitter: {
@@ -23,12 +23,12 @@ const faqs = [
   {
     question: "How long does a deep cleaning take in Plainfield, IL?",
     answer:
-      "Most deep cleaning jobs in Plainfield take 3Ã¢â‚¬â€œ6 hours depending on the size and current condition of your home. A 2-bedroom home may take 3 hours while a larger 4-bedroom home in Grande Park or Lakewood Falls could take 5Ã¢â‚¬â€œ6 hours.",
+      "Most deep cleaning jobs in Plainfield take 3–6 hours depending on the size and current condition of your home. A 2-bedroom home may take 3 hours while a larger 4-bedroom home in Grande Park or Lakewood Falls could take 5–6 hours.",
   },
   {
     question: "Do you serve the Settlers Ridge and Springbank neighborhoods in Plainfield?",
     answer:
-      "Yes Ã¢â‚¬â€ we serve all Plainfield neighborhoods including Settlers Ridge, Springbank, Lakewood Falls, Grande Park, and all areas within zip codes 60544 and 60585.",
+      "Yes — we serve all Plainfield neighborhoods including Settlers Ridge, Springbank, Lakewood Falls, Grande Park, and all areas within zip codes 60544 and 60585.",
   },
   {
     question: "How much does deep cleaning cost in Plainfield, IL?",
@@ -38,12 +38,12 @@ const faqs = [
   {
     question: "Do I need to be home during the deep cleaning in Plainfield?",
     answer:
-      "You don't have to be home. Many Plainfield clients provide a key or access code. Every member of our team is background-checked, insured, and bonded Ã¢â‚¬â€ your home is fully protected.",
+      "You don't have to be home. Many Plainfield clients provide a key or access code. Every member of our team is background-checked, insured, and bonded — your home is fully protected.",
   },
   {
     question: "Is DSM Cleaning Solutions insured in Plainfield, IL?",
     answer:
-      "Yes Ã¢â‚¬â€ DSM Cleaning Solutions is fully insured and bonded in Illinois, including all of Plainfield. We carry liability insurance on every job so you can book with complete peace of mind.",
+      "Yes — DSM Cleaning Solutions is fully insured and bonded in Illinois, including all of Plainfield. We carry liability insurance on every job so you can book with complete peace of mind.",
   },
 ];
 
@@ -71,7 +71,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Professional deep cleaning in Plainfield, IL Ã¢â‚¬â€ 60544 & 60585. DSM Cleaning Solutions scrubs every surface, grout line & appliance. Free estimate. (815) 246-2113.",
+    "Professional deep cleaning in Plainfield, IL — 60544 & 60585. DSM Cleaning Solutions scrubs every surface, grout line & appliance. Free estimate. (815) 246-2113.",
 };
 
 const faqSchema = {
@@ -82,6 +82,16 @@ const faqSchema = {
     name: faq.question,
     acceptedAnswer: { "@type": "Answer", text: faq.answer },
   })),
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dsmcleaningsolutions.com" },
+    { "@type": "ListItem", position: 2, name: "Deep Cleaning", item: "https://www.dsmcleaningsolutions.com/deep-cleaning" },
+    { "@type": "ListItem", position: 3, name: "Plainfield, IL", item: "https://www.dsmcleaningsolutions.com/deep-cleaning-plainfield-il" },
+  ],
 };
 
 const checklist = [
@@ -134,12 +144,12 @@ const checklist = [
 ];
 
 const trustCards = [
-  { icon: "Ã°Å¸Å’Â¿", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products safe for kids and pets." },
-  { icon: "Ã°Å¸â€ºÂ¡Ã¯Â¸Â", title: "Fully Insured & Bonded", desc: "Background-checked team. Your home is fully protected." },
-  { icon: "Ã¢Å“â€¦", title: "48-Hour Guarantee", desc: "We re-clean anything that isn't right within 48 hours." },
-  { icon: "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§", title: "Family Owned", desc: "Local Romeoville-based business with a personal touch." },
-  { icon: "Ã°Å¸â€œâ€¦", title: "7 Days a Week", desc: "Flexible scheduling to fit your Plainfield lifestyle." },
-  { icon: "Ã°Å¸â€œÂ", title: "Serving Plainfield", desc: "All neighborhoods Ã¢â‚¬â€ zip codes 60544 & 60585." },
+  { icon: "🌿", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products safe for kids and pets." },
+  { icon: "🛡️", title: "Fully Insured & Bonded", desc: "Background-checked team. Your home is fully protected." },
+  { icon: "✅", title: "48-Hour Guarantee", desc: "We re-clean anything that isn't right within 48 hours." },
+  { icon: "👨‍👩‍👧", title: "Family Owned", desc: "Local Romeoville-based business with a personal touch." },
+  { icon: "📅", title: "7 Days a Week", desc: "Flexible scheduling to fit your Plainfield lifestyle." },
+  { icon: "📍", title: "Serving Plainfield", desc: "All neighborhoods — zip codes 60544 & 60585." },
 ];
 
 export default function DeepCleaningPlainfieldPage() {
@@ -152,6 +162,10 @@ export default function DeepCleaningPlainfieldPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* HERO */}
@@ -170,12 +184,12 @@ export default function DeepCleaningPlainfieldPage() {
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               DSM Cleaning Solutions delivers a thorough, top-to-bottom deep clean for homes across
-              Plainfield Ã¢â‚¬â€ from Settlers Ridge to Grande Park. Every surface scrubbed, every grout
+              Plainfield — from Settlers Ridge to Grande Park. Every surface scrubbed, every grout
               line restored, every appliance cleaned inside and out.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
-              <a href="tel:+18152462113" className="btn-outline-white btn-lg">Ã°Å¸â€œÅ¾ (815) 246-2113</a>
+              <a href="tel:+18152462113" className="btn-outline-white btn-lg">📞 (815) 246-2113</a>
             </div>
           </div>
         </div>
@@ -185,7 +199,7 @@ export default function DeepCleaningPlainfieldPage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["Ã¢Å“â€¦ Fully Insured & Bonded", "Ã°Å¸Å’Â¿ Eco-Friendly Products", "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§ Family Owned", "Ã¢Â­Â 5-Star Rated", "Ã¢Å“â€Ã¯Â¸Â Satisfaction Guaranteed"].map(
+            {["✅ Fully Insured & Bonded", "🌿 Eco-Friendly Products", "👨‍👩‍👧 Family Owned", "⭐ 5-Star Rated", "✔️ Satisfaction Guaranteed"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -197,21 +211,21 @@ export default function DeepCleaningPlainfieldPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading mb-6">Professional Deep Cleaning Services in Plainfield, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Deep cleaning in Plainfield, IL is our specialty Ã¢â‚¬â€ and DSM Cleaning Solutions brings the same
+            Deep cleaning in Plainfield, IL is our specialty — and DSM Cleaning Solutions brings the same
             meticulous, detail-focused approach to every home we serve. Whether you live in Settlers Ridge,
             Lakewood Falls, Springbank, or Grande Park, our team covers zip codes 60544 and 60585 with
             a comprehensive clean that goes far beyond your regular maintenance routine.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Plainfield families choose DSM because we treat every home like our own. We&apos;re not a national
-            franchise Ã¢â‚¬â€ we&apos;re a family-owned business based right here in the southwest suburbs, and we take
+            franchise — we&apos;re a family-owned business based right here in the southwest suburbs, and we take
             pride in the results we deliver. From degreasing the kitchen hood vent to scrubbing grout lines
             in your master shower, nothing gets overlooked.
           </p>
           <p className="text-gray-600 leading-relaxed">
             Whether you&apos;re preparing for the spring season, getting your home ready before hosting guests,
             or simply want a thorough reset after months of normal use, our Plainfield deep cleaning service
-            is the solution. We use only eco-friendly, non-toxic products Ã¢â‚¬â€ safe for your kids, your pets,
+            is the solution. We use only eco-friendly, non-toxic products — safe for your kids, your pets,
             and the Plainfield environment you love.
           </p>
         </div>
@@ -223,7 +237,7 @@ export default function DeepCleaningPlainfieldPage() {
           <div className="text-center mb-12">
             <h2 className="section-heading">What&apos;s Included in Our Deep Cleaning in Plainfield, IL</h2>
             <p className="section-subheading mx-auto">
-              Every room in your Plainfield home Ã¢â‚¬â€ cleaned top to bottom.
+              Every room in your Plainfield home — cleaned top to bottom.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -273,11 +287,11 @@ export default function DeepCleaningPlainfieldPage() {
           <p className="text-gray-600 mb-4 leading-relaxed">
             Deep cleaning in Plainfield starts around $200 for smaller homes and goes up based on the size
             of your home, the number of bedrooms and bathrooms, and how long it&apos;s been since your last
-            professional clean. A 3Ã¢â‚¬â€œ4 bedroom home in Lakewood Falls or Springbank typically falls in the
-            $250Ã¢â‚¬â€œ$350 range.
+            professional clean. A 3–4 bedroom home in Lakewood Falls or Springbank typically falls in the
+            $250–$350 range.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
-            We always provide a free, no-obligation estimate before any work begins. There are no surprises Ã¢â‚¬â€
+            We always provide a free, no-obligation estimate before any work begins. There are no surprises —
             you&apos;ll know exactly what to expect before we arrive at your Plainfield home.
           </p>
           <Link href="/contact" className="btn-primary">Get My Free Plainfield Quote</Link>
@@ -315,7 +329,7 @@ export default function DeepCleaningPlainfieldPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <Link href="/deep-cleaning-naperville-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Naperville</h3>
-              <p className="text-sm text-gray-600">Serving 60540, 60563, 60564 & 60565.</p>
+              <p className="text-sm text-gray-600">Serving 60540, 60563, 60564 &amp; 60565.</p>
             </Link>
             <Link href="/deep-cleaning-romeoville-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Romeoville</h3>
@@ -337,16 +351,16 @@ export default function DeepCleaningPlainfieldPage() {
               <h2 className="text-4xl font-bold mb-4">Book Your Deep Cleaning in Plainfield Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Ready for a home that&apos;s clean from top to bottom? Get your free deep cleaning quote for
-                Plainfield, IL Ã¢â‚¬â€ we respond within 1 business day and back every job with our
+                Plainfield, IL — we respond within 1 business day and back every job with our
                 48-hour satisfaction guarantee.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                Ã°Å¸â€œÅ¾ (815) 246-2113
+                📞 (815) 246-2113
               </a>
-              <p className="text-white/80">Family-owned Ã‚Â· Eco-friendly Ã‚Â· Fully insured Ã‚Â· Satisfaction guaranteed</p>
+              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
-              <LeadForm />
+              <LeadForm defaultService="Deep Cleaning" />
             </div>
           </div>
         </div>
