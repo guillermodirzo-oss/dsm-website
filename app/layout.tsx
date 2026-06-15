@@ -161,6 +161,11 @@ export default function RootLayout({
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
           })(window,document,"clarity","script","wljkdhzea7");`}
         </Script>
+        <Script
+          id="hs-script-loader"
+          src="//js.hs-scripts.com/246258605.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

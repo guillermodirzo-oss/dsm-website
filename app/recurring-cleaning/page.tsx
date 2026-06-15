@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
@@ -71,7 +71,7 @@ const faqSchema = {
       name: "Can I customize my recurring cleaning plan?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Absolutely. We work with you to create a cleaning checklist that fits your priorities and your home. Tell us what rooms matter most, any areas to skip, and any special requests Ã¢â‚¬â€ we'll accommodate them.",
+        text: "Absolutely. We work with you to create a cleaning checklist that fits your priorities and your home. Tell us what rooms matter most, any areas to skip, and any special requests — we'll accommodate them.",
       },
     },
     {
@@ -79,7 +79,7 @@ const faqSchema = {
       name: "Do I need to be home during the cleaning?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No Ã¢â‚¬â€ many of our recurring clients give us a key or access code. Our fully insured and background-checked team will take excellent care of your home whether you're there or not.",
+        text: "No — many of our recurring clients give us a key or access code. Our fully insured and background-checked team will take excellent care of your home whether you're there or not.",
       },
     },
     {
@@ -102,12 +102,12 @@ const faqs = [
   {
     question: "Can I customize my recurring cleaning plan?",
     answer:
-      "Absolutely. We work with you to create a cleaning checklist that fits your priorities. Tell us what rooms matter most, any areas to skip, and any special requests Ã¢â‚¬â€ we'll accommodate them.",
+      "Absolutely. We work with you to create a cleaning checklist that fits your priorities. Tell us what rooms matter most, any areas to skip, and any special requests — we'll accommodate them.",
   },
   {
     question: "Do I need to be home during the cleaning?",
     answer:
-      "No Ã¢â‚¬â€ many of our recurring clients give us a key or access code. Our fully insured and background-checked team will take excellent care of your home whether you're there or not.",
+      "No — many of our recurring clients give us a key or access code. Our fully insured and background-checked team will take excellent care of your home whether you're there or not.",
   },
   {
     question: "What if I need to skip or reschedule a cleaning?",
@@ -130,7 +130,7 @@ const plans = [
   {
     name: "Weekly Cleaning",
     freq: "Every week",
-    icon: "Ã°Å¸â€œâ€¦",
+    icon: "📅",
     highlight: true,
     badge: "Best Value",
     desc: "Ideal for busy families, pet owners, or anyone who wants their home consistently spotless year-round.",
@@ -148,7 +148,7 @@ const plans = [
   {
     name: "Biweekly Cleaning",
     freq: "Every 2 weeks",
-    icon: "Ã°Å¸â€”â€œÃ¯Â¸Â",
+    icon: "🗓️",
     highlight: false,
     badge: "Most Popular",
     desc: "Our most popular plan. Perfect for working professionals and families who want a clean home without the weekly commitment.",
@@ -166,7 +166,7 @@ const plans = [
   {
     name: "Monthly Cleaning",
     freq: "Once per month",
-    icon: "Ã°Å¸â€œâ€ ",
+    icon: "📆",
     highlight: false,
     badge: null,
     desc: "Great for those who do light upkeep themselves and want a professional deep clean once a month to reset the home.",
@@ -254,7 +254,7 @@ export default function RecurringCleaningPage() {
                 href="tel:+18152462113"
                 className="inline-block bg-transparent text-white font-bold py-4 px-8 rounded-lg border-2 border-white hover:bg-white/10 transition-colors text-lg text-center"
               >
-                Ã°Å¸â€œÅ¾ (815) 246-2113
+                📞 (815) 246-2113
               </a>
             </div>
           </div>
@@ -265,7 +265,7 @@ export default function RecurringCleaningPage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["Ã°Å¸â€œâ€¦ Weekly, Biweekly & Monthly Plans", "Ã°Å¸â€â€˜ Key-Holder Service Available", "Ã°Å¸Å’Â¿ Eco-Friendly Products", "Ã°Å¸â€ºÂ¡Ã¯Â¸Â Fully Insured", "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§ Family Owned"].map(
+            {["📅 Weekly, Biweekly & Monthly Plans", "🔑 Key-Holder Service Available", "🌿 Eco-Friendly Products", "🛡️ Fully Insured", "👨‍👩‍👧 Family Owned"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -278,7 +278,7 @@ export default function RecurringCleaningPage() {
           <div className="text-center mb-12">
             <h2 className="section-heading">Choose Your Recurring Cleaning Plan</h2>
             <p className="section-subheading mx-auto">
-              Flexible plans designed for every lifestyle. The more often we clean, the less time each visit takes Ã¢â‚¬â€ and the better value you get.
+              Flexible plans designed for every lifestyle. The more often we clean, the less time each visit takes — and the better value you get.
             </p>
           </div>
 
@@ -397,13 +397,13 @@ export default function RecurringCleaningPage() {
             <ReviewCard
               name="Jennifer R."
               location="Romeoville, IL"
-              text="I've had biweekly cleaning with DSM for over a year now. They are so reliable and thorough. My house always looks amazing after they come. I love that they use eco-friendly products too Ã¢â‚¬â€ safe for my dogs!"
+              text="I've had biweekly cleaning with DSM for over a year now. They are so reliable and thorough. My house always looks amazing after they come. I love that they use eco-friendly products too — safe for my dogs!"
               date="January 2025"
             />
             <ReviewCard
               name="Carlos M."
               location="Bolingbrook, IL"
-              text="DSM does my weekly cleaning and I couldn't be happier. The same team comes every time so they know my home perfectly. I never have to give instructions anymore Ã¢â‚¬â€ they just handle it."
+              text="DSM does my weekly cleaning and I couldn't be happier. The same team comes every time so they know my home perfectly. I never have to give instructions anymore — they just handle it."
               date="November 2024"
             />
             <ReviewCard
@@ -472,9 +472,9 @@ export default function RecurringCleaningPage() {
                 for weekly, biweekly, or monthly maid service in Romeoville, Plainfield, and surrounding suburbs.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-brand-green-50 transition-colors mb-6">
-                Ã°Å¸â€œÅ¾ (815) 246-2113
+                📞 (815) 246-2113
               </a>
-              <p className="text-white/80">Family-owned Ã‚Â· Eco-friendly Ã‚Â· Fully insured Ã‚Â· Flexible plans</p>
+              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Flexible plans</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <LeadForm />
