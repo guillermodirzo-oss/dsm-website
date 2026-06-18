@@ -20,6 +20,102 @@ export interface BlogPost {
 // and report a duplicate aggregateRating. Keep author as { "@type": "Organization", "name": "DSM Cleaning Solutions" } only.
 export const blogPosts: BlogPost[] = [
   {
+    slug: "move-out-cleaning-romeoville-il",
+    title: "Move-Out Cleaning in Romeoville, IL — Checklist, Costs & How to Book",
+    metaTitle: "Move-Out Cleaning in Romeoville IL — Checklist, Costs & How to Book",
+    metaDescription:
+      "Moving out of your Romeoville home or apartment? DSM Cleaning Solutions offers professional move-out cleaning with a 48-hour satisfaction guarantee. See what's included and get your deposit back.",
+    date: "June 20, 2026",
+    dateISO: "2026-06-20",
+    author: "DSM Cleaning Solutions",
+    excerpt:
+      "Moving out of your Romeoville home or apartment? Between packing and coordinating your move, the last thing you need is to lose your security deposit over cleaning. Here's exactly what landlords inspect, what DSM's move-out cleaning covers room by room, and how to book before peak moving season fills up.",
+    faqSchema: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Does move-out cleaning include the inside of the oven and refrigerator?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes — oven interior (including racks and door glass) and refrigerator interior (all shelves, drawers, and door bins) are included in every DSM move-out clean. These are among the most commonly cited items on Romeoville landlord inspection reports, and we treat them as non-negotiable parts of the service.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What if my landlord isn't satisfied after the cleaning?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Contact us within 48 hours of your cleaning and we'll return to re-clean any area your landlord flagged — at no charge. Our satisfaction guarantee is designed specifically for move-out situations where an inspection is on the line. If we missed something, we make it right before it costs you anything from your deposit.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How far in advance should I book my move-out cleaning?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "We recommend booking 5–7 days before your move-out date to secure your preferred appointment. May through August is peak moving season in the Romeoville and Will County area — availability fills quickly during that stretch. The sooner you book, the more flexibility you'll have on timing.",
+          },
+        },
+      ],
+    },
+    content: `<p>Moving out of a home or apartment in <a href="/romeoville-il" class="text-brand-green font-semibold hover:underline">Romeoville</a> is stressful enough on its own — packing, coordinating movers, switching utilities, and managing the calendar. The last thing you want is to lose part of your security deposit because the oven wasn't clean or the grout in the bathroom didn't pass inspection. That's where <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning</a> from DSM Cleaning Solutions comes in. We handle the deep, detail-oriented clean that landlords and property managers expect, so you can focus on the move itself and walk away with your full deposit. Every job is backed by our <strong>48-hour satisfaction guarantee</strong> — if your landlord flags anything after we clean, we come back and address it at no charge.</p>
+
+<h2>What Landlords Actually Inspect During Move-Out in Romeoville</h2>
+<p>Romeoville property managers serving zip code 60446 — from apartment complexes near Weber Road and Route 53 to single-family rentals in Lakewood Falls, Windstone, and Hidden Lakes — conduct move-out inspections using the same checklist you signed at the start of your lease. They're looking at the same areas every time, and the ones that generate the most deposit disputes are consistently:</p>
+<ul>
+  <li><strong>Kitchen appliances:</strong> The oven interior is the single most common reason for deposit deductions. Inspectors open the door and look inside — burnt residue on the walls, floor, and racks is an immediate flag. Stovetop grime, a grimy refrigerator interior, and a dirty microwave are close behind.</li>
+  <li><strong>Bathrooms:</strong> Grout discoloration in the shower and tub, soap scum on glass doors, residue around the toilet base and behind the tank, and water spots on fixtures are all documented during inspection. These are areas where DIY cleaning often comes up short.</li>
+  <li><strong>Floors and baseboards:</strong> Landlords check corners, along baseboards, and inside closets — areas that get skipped during routine cleaning but stand out in an empty, well-lit space.</li>
+  <li><strong>Walls, switches, and windows:</strong> Scuffs on walls, grimy light switches and outlet covers, dirty window sills, and dusty blinds are noted and can trigger line-item deductions even when the rest of the home looks clean.</li>
+</ul>
+
+<h2>What's Included in DSM's Move-Out Cleaning Service</h2>
+<p>Our move-out cleaning follows a landlord-focused checklist built around what inspectors actually look at. Here's a room-by-room breakdown of what every job includes:</p>
+<ul>
+  <li><strong>Kitchen:</strong> Clean inside the oven (walls, floor, racks, and door glass), degrease stovetop and hood vent filter, clean inside and outside the refrigerator (all shelves, drawers, and door bins), wipe interior and exterior of all cabinets and drawers, clean inside and outside the microwave, scrub the sink and faucet, wipe all countertops and backsplash</li>
+  <li><strong>Bathrooms:</strong> Scrub toilet inside and out including the base and behind the tank, deep scrub tub and shower surfaces, clean grout lines, wipe all faucets and fixtures, clean sink and vanity, clean mirrors streak-free, wipe cabinet interiors and exteriors, mop floors</li>
+  <li><strong>Bedrooms:</strong> Wipe inside all closets including shelves and floor, clean window sills and tracks, dust ceiling fans and light fixtures, wipe baseboards, vacuum and mop floors</li>
+  <li><strong>Living areas:</strong> Wipe all baseboards, dust ceiling fans and light fixtures, wipe blinds, wipe light switches and outlet covers throughout, vacuum and mop all floors</li>
+  <li><strong>Throughout the home:</strong> Remove all trash, dust all light fixtures, wipe all interior door surfaces and door handles, do a final room-by-room walkthrough</li>
+</ul>
+<p>This is a significantly more detailed scope than a standard recurring clean or even a <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> — every cabinet interior, every appliance, every closet. It's priced accordingly, and it's designed to meet the standard your landlord is measuring against.</p>
+
+<h2>How Much Does Move-Out Cleaning Cost in Romeoville, IL?</h2>
+<p>Move-out cleaning is priced based on the size of your home and its current condition. A studio or one-bedroom apartment takes substantially less time than a three-bedroom house — and a home that's been well maintained throughout the lease will take less time than one where cleaning was deferred. Optional add-ons like inside window cleaning or garage sweeping may affect the final price as well.</p>
+<p>Move-out cleans are priced higher than standard recurring cleaning because of the level of detail required — every cabinet interior, every appliance, every closet — rather than the surface-level maintenance that recurring cleans provide. We don't publish a single flat number because a quote that's accurate for a studio doesn't apply to a four-bedroom home. The fastest way to get a real number for your specific situation is to call us at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">request a quote online</a> — we'll ask a few questions and get back to you same-day.</p>
+
+<h2>When Should You Schedule Your Move-Out Cleaning?</h2>
+<p>Book your move-out cleaning 5–7 days before your move-out date. That gives you a buffer if anything needs to be addressed before your landlord walkthrough, and it gives us time to schedule your preferred date and time slot. May through August is peak moving season throughout Will County and the Romeoville area — lease-end dates cluster at the end of each month, and our calendar fills quickly during that stretch. If you're moving between May and August, booking a full week or more in advance is strongly recommended. Waiting until the week of your move-out is the most common way people end up without an available appointment when they need it most.</p>
+
+<h2>Why Romeoville Renters and Homeowners Trust DSM</h2>
+<p>We're a family-owned cleaning company serving the Romeoville area — not a national chain, not a gig-economy platform. Here's what our move-out clients rely on:</p>
+<ul>
+  <li><strong>Locally owned and operated.</strong> We live and work in this area. Our reputation in the community matters to us personally, and that shows in how we approach every job.</li>
+  <li><strong>Background-checked team members.</strong> Every cleaner on our team passes a thorough background check before their first appointment. You're handing over access to a home — you deserve to know exactly who's going in.</li>
+  <li><strong>48-hour satisfaction guarantee.</strong> If your landlord flags anything during the move-out inspection within 48 hours of our clean, we return and re-clean it at no charge. This guarantee is specifically built for move-out situations where a real inspection is on the line.</li>
+  <li><strong>5-star rated.</strong> Our clients in Romeoville and across the southwest suburbs have trusted us through hundreds of move-outs. We're proud of our track record and take it seriously on every single job.</li>
+</ul>
+
+<h2>Serving Romeoville and the Surrounding Area</h2>
+<p>DSM Cleaning Solutions serves all of Romeoville (60446) and the surrounding southwest Chicago suburbs, including <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield</a>, <a href="/bolingbrook-il" class="text-brand-green font-semibold hover:underline">Bolingbrook</a>, Joliet, Lockport, and Naperville. Whether you're moving out of an apartment on Weber Road, a townhome in Lakewood Falls, or a single-family home in Hidden Lakes, we're familiar with the area and know what local landlords and property managers expect.</p>
+
+<h2>Frequently Asked Questions About Move-Out Cleaning in Romeoville</h2>
+
+<h3>Does move-out cleaning include the inside of the oven and refrigerator?</h3>
+<p>Yes — the oven interior (including racks and door glass) and refrigerator interior (all shelves, drawers, and door bins) are included in every DSM move-out clean. These are among the most commonly cited items on Romeoville landlord inspection reports, and we treat them as non-negotiable parts of the service. You won't need to worry about requesting them as add-ons.</p>
+
+<h3>What if my landlord isn't satisfied after the cleaning?</h3>
+<p>Contact us within 48 hours of your cleaning and we'll return to re-clean any area your landlord flagged — at no charge. Our 48-hour satisfaction guarantee is designed specifically for move-out situations where an inspection is on the line. We stand behind every job completely: if we missed something or your landlord has a concern, we make it right before it costs you anything from your deposit.</p>
+
+<h3>How far in advance should I book my move-out cleaning?</h3>
+<p>We recommend booking 5–7 days before your move-out date to secure your preferred appointment time. May through August is peak moving season in the Romeoville and Will County area — availability fills quickly during that stretch, especially toward the end of each month when lease-end dates cluster. Book as early as you can to give yourself the most flexibility on timing and to leave a buffer for any follow-up before your landlord walkthrough.</p>
+
+<h3>Ready to Book Your Move-Out Cleaning in Romeoville?</h3>
+<p>Don't risk your security deposit on a rushed DIY clean or a company that won't stand behind their work. DSM Cleaning Solutions has helped hundreds of Romeoville renters and homeowners pass their move-out inspections and recover their full deposits. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book your cleaning online</a> today — most clients get their appointment within the week, and every job is backed by our 48-hour satisfaction guarantee.</p>`,
+  },
+  {
     slug: "maid-service-romeoville-il",
     title: "Maid Service in Romeoville, IL — What to Expect & How to Book",
     metaTitle: "Maid Service in Romeoville IL — What to Expect & How to Book",
