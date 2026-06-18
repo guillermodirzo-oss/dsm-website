@@ -251,6 +251,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/blog/deep-cleaning-service-bolingbrook-il`,
+      lastModified: new Date("2026-06-24"),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/blog/recurring-cleaning-service-romeoville-il`,
       lastModified: new Date("2026-06-22"),
       changeFrequency: "monthly" as const,
