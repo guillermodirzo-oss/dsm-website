@@ -111,6 +111,97 @@ export const blogPosts: BlogPost[] = [
 <p>A surface wipe-down won't get the oven interior, the grout, the baseboards, or the ceiling fans. DSM Cleaning Solutions' deep cleaning service in Bolingbrook covers every corner — and every visit is backed by our 48-hour satisfaction guarantee. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> today and schedule your deep clean.</p>`,
   },
   {
+    slug: "deep-cleaning-service-joliet-il",
+    title: "Deep Cleaning Service in Joliet, IL — What's Included & How to Book",
+    metaTitle: "Deep Cleaning Service in Joliet IL — What's Included & How to Book",
+    metaDescription:
+      "Looking for a deep cleaning service in Joliet, IL? DSM Cleaning Solutions delivers a thorough top-to-bottom clean with a 48-hour satisfaction guarantee. See what's included and book online.",
+    date: "June 25, 2026",
+    dateISO: "2026-06-25",
+    author: "DSM Cleaning Solutions",
+    excerpt:
+      "Your Joliet home might look passable on the surface, but there's grease behind the stovetop, soap scum coating the shower walls, and dust caked on every baseboard that a regular cleaning never touches. A professional deep cleaning service from DSM Cleaning Solutions is the full reset your home needs — backed by our 48-hour satisfaction guarantee.",
+    faqSchema: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "How long does a deep cleaning take in Joliet?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "It depends on the size of your home and its current condition. A typical 3-bedroom home in Joliet takes between 4 and 6 hours for a full deep clean. Larger homes or those that haven't been professionally cleaned in a while may take longer. When you call or book online, we'll ask a few questions about your home so we can give you a realistic time estimate before the team arrives.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do I need to prepare anything before the cleaners arrive?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Not much. The most helpful thing is to pick up personal clutter from floors and surfaces so our team can focus on actually cleaning rather than organizing. You don't need to pre-clean anything — that's exactly what we're there for. If there are specific rooms or areas you'd like us to prioritize, just let us know when you book and we'll make a note for the team.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I set up recurring cleaning after my deep clean?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes — and most of our Joliet clients do exactly that. A deep clean brings your home up to a thoroughly clean baseline, and then recurring visits on a weekly, bi-weekly, or monthly schedule keep it at that standard without the time or cost of another full deep clean. It's also the most cost-effective approach over time — recurring maintenance visits are priced lower than deep cleans because there's far less buildup to address each visit.",
+          },
+        },
+      ],
+    },
+    content: `<p>On the surface, your home might look fine. But behind the stovetop there's grease that's been baking on for months. The shower walls have a soap scum layer that a quick spray-and-wipe won't touch. The baseboards are caked with dust, the ceiling fans haven't been wiped since you moved in, and the inside of the oven is something nobody wants to look at too closely. These aren't signs of a neglected home — they're what happens in any house over time. A professional <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning service</a> in <a href="/joliet-il" class="text-brand-green font-semibold hover:underline">Joliet, IL</a> from DSM Cleaning Solutions is the full reset that gets into all of it. Every visit is backed by our 48-hour satisfaction guarantee — if anything is missed, we come back and fix it at no charge.</p>
+
+<h2>What's the Difference Between a Deep Clean and a Regular Cleaning?</h2>
+<p>A standard cleaning is maintenance. It keeps an already-clean home looking clean — surfaces wiped, floors mopped, bathrooms freshened. A deep clean is a completely different level of service. It goes inside, underneath, and behind everything a routine cleaning visit never touches.</p>
+<p>Here's what that looks like in practice: a regular cleaning wipes the stovetop. A deep clean removes the burner grates and scrubs the grime underneath them. A regular visit dusts the furniture. A deep clean includes wiping down baseboards, cleaning inside cabinet interiors, scrubbing grout lines in the bathroom, and degreasing the hood vent above the stove. During a routine cleaning, the oven gets ignored. During a deep clean, the interior and racks get fully scrubbed. A regular cleaning maintains the surface of your home. A deep clean restores what's underneath it. If you've never had a professional deep clean — or it's been six months or more — the difference is immediately visible when you walk back in.</p>
+
+<h2>What's Included in DSM's Deep Cleaning Service in Joliet</h2>
+<p>Here's exactly what our team covers on every deep clean, room by room:</p>
+<ul>
+  <li><strong>Kitchen:</strong> oven interior and racks scrubbed, stovetop and burners degreased, hood vent cleaned, refrigerator exterior wiped down, all cabinet interiors and exteriors wiped, countertops cleaned and sanitized, sink scrubbed and disinfected, microwave cleaned inside and out, floor swept and mopped</li>
+  <li><strong>Bathrooms:</strong> toilet scrubbed inside and out including the base and behind the bowl, tub and shower walls and floor scrubbed, grout cleaned, sink and faucet scrubbed, mirror cleaned streak-free, vanity drawer exteriors wiped, floor scrubbed</li>
+  <li><strong>Bedrooms:</strong> ceiling fans dusted, baseboards wiped down, closet interiors wiped, all furniture surfaces dusted, window sills cleaned, floors vacuumed and mopped</li>
+  <li><strong>Living areas:</strong> ceiling fans dusted, baseboards wiped, blinds wiped down, furniture dusted, floors vacuumed and mopped, light switches and outlet covers wiped</li>
+  <li><strong>Throughout the home:</strong> trash removed and bins wiped out, door frames wiped, spot-clean of walls where needed</li>
+</ul>
+<p>One clarification worth noting: interior refrigerator cleaning is not part of a standard deep clean — it is included in our <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning</a> service, which is specifically designed for vacating tenants and homeowners. If you're doing a seasonal reset or pre-guest deep clean, everything listed above is what you get — and it covers the areas that matter most.</p>
+
+<h2>How Much Does Deep Cleaning Cost in Joliet, IL?</h2>
+<p>Deep cleaning cost in Joliet depends on the size of your home, the number of bedrooms and bathrooms, and the current condition of the space. A one-bedroom apartment requires significantly less time than a five-bedroom house. A home that hasn't had a professional clean in over a year takes more time and effort than one on a regular maintenance schedule — and pricing reflects that honestly.</p>
+<p>What we can tell you: deep cleans are priced higher than recurring maintenance visits because of the time and level of detail involved. It's a top-to-bottom service, not a surface refresh. That said, the majority of Joliet clients who book a deep clean transition to a recurring cleaning plan afterward — and those ongoing visits cost less per appointment because there's far less buildup to address each time. Over the long run, it's the most cost-effective way to keep your home genuinely clean. To get an accurate quote for your specific home, call us at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> — we'll ask a few questions and have a number for you right away.</p>
+
+<h2>When Should You Book a Deep Cleaning in Joliet?</h2>
+<p>There are certain moments when a deep clean is the obvious right call. Moving into a new home — even one that the previous owners kept tidy — is one of the most common reasons Joliet residents reach out. You want to start fresh in a space that's been professionally cleaned before your belongings are unpacked. Pre-guest deep cleans are popular too: before family visits, holiday gatherings, or parties, a deep clean makes the home genuinely ready rather than just surface-level presentable.</p>
+<p>Post-renovation cleanup is another frequent trigger — construction leaves dust and debris in places that take hours to locate and address properly. Seasonal resets in spring or fall are a smart twice-a-year habit for homeowners who want a reliable maintenance schedule for their home. And sometimes the reason is straightforward: the home just hasn't had a real top-to-bottom clean in months, and it's time. A professional deep clean once or twice a year is smart home maintenance — not an admission that the house is dirty. It's simply what regular cleaning can't accomplish on its own.</p>
+
+<h2>Why Joliet Homeowners Choose DSM Cleaning Solutions</h2>
+<ul>
+  <li><strong>Locally owned and operated.</strong> DSM Cleaning Solutions is a family-owned business serving Joliet and the greater Will County area. We're not a national franchise — this community is where we live and work, and our reputation here matters to us personally.</li>
+  <li><strong>Background-checked and fully insured.</strong> Every cleaner on our team passes a thorough background check before their first appointment. We carry full liability insurance on every job, so you're protected if anything unexpected happens.</li>
+  <li><strong>48-hour satisfaction guarantee.</strong> If anything is missed or not up to standard after your deep clean, contact us within 48 hours and we'll send a team back to make it right — at no additional charge. No arguments, no back-and-forth.</li>
+  <li><strong>Consistently 5-star rated.</strong> Our reviews on Google and other platforms reflect what Joliet homeowners experience on every visit: a team that arrives on time, does thorough work, and stands behind the results.</li>
+</ul>
+
+<h2>Serving Joliet and Surrounding Communities</h2>
+<p>DSM Cleaning Solutions provides deep cleaning services throughout Joliet and the surrounding southwest suburbs. We also serve <a href="/romeoville-il" class="text-brand-green font-semibold hover:underline">Romeoville</a>, <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield</a>, <a href="/bolingbrook-il" class="text-brand-green font-semibold hover:underline">Bolingbrook</a>, Lockport, and Naperville. If you're in Will County and looking for a dependable local cleaning team, we're likely already cleaning homes in your neighborhood.</p>
+
+<h2>Frequently Asked Questions About Deep Cleaning in Joliet</h2>
+
+<h3>How long does a deep cleaning take in Joliet?</h3>
+<p>It depends on the size of your home and its current condition. A typical 3-bedroom home in Joliet takes between 4 and 6 hours for a full deep clean. Larger homes or those that haven't been professionally cleaned in a while may take longer. When you call or book online, we'll ask a few questions about your home so we can give you a realistic time estimate before the team arrives — no surprises on the day of your appointment.</p>
+
+<h3>Do I need to prepare anything before the cleaners arrive?</h3>
+<p>Not much. The most helpful thing you can do is pick up personal clutter from floors and surfaces so our team can focus on actually cleaning rather than organizing or working around items. You don't need to pre-clean anything — that's exactly what we're there for. If there are specific areas you'd like us to prioritize, or rooms you'd prefer we skip, just let us know when you book and we'll note it for the team.</p>
+
+<h3>Can I set up recurring cleaning after my deep clean?</h3>
+<p>Yes — and most of our Joliet clients do exactly that. A deep clean brings your home up to a thoroughly clean baseline, and then recurring visits on a weekly, bi-weekly, or monthly schedule maintain that standard without the time or cost of another full deep clean. It's also the most cost-effective approach over time — ongoing maintenance visits are priced lower than deep cleans because there's far less buildup to address each appointment. Once the home has been deeply cleaned, keeping it that way is much easier.</p>
+
+<h3>Your Joliet Home Deserves a Real Reset</h3>
+<p>A surface wipe-down won't reach the oven interior, the grout, the baseboards, or the cabinet interiors. DSM Cleaning Solutions' deep cleaning service in Joliet covers every corner — and every visit is backed by our 48-hour satisfaction guarantee, so there's no risk in getting started. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> today.</p>`,
+  },
+  {
     slug: "move-out-cleaning-joliet-il",
     title: "Move-Out Cleaning in Joliet, IL — Checklist, Costs & How to Book",
     metaTitle: "Move-Out Cleaning in Joliet IL — Checklist, Costs & How to Book",
