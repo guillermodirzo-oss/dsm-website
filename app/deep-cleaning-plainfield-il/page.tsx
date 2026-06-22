@@ -186,12 +186,12 @@ export default function DeepCleaningPlainfieldPage() {
 
               {/* Subheadline */}
               <p className="text-2xl sm:text-3xl font-bold text-white/95 mb-4 leading-snug">
-                Your Home Is Overwhelming You. We&apos;ll Fix That.
+                We&apos;ll Get the Stuff You&apos;ve Been Putting Off.
               </p>
 
               {/* Body copy */}
               <p className="text-white/85 text-lg leading-relaxed mb-8">
-                DSM Cleaning Solutions gives Plainfield homeowners a complete top-to-bottom reset — every room, every surface, nothing overlooked. Local, family-owned, and backed by a 48-hour satisfaction guarantee.
+                DSM Cleaning Solutions scrubs every room in your Plainfield home. Ceiling fans, grout lines, baseboards, the oven. Local, family-owned, and every job comes with a 48-hour satisfaction guarantee.
               </p>
 
               {/* CTAs */}
@@ -283,22 +283,21 @@ export default function DeepCleaningPlainfieldPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Professional Deep Cleaning Services in Plainfield, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Deep cleaning in Plainfield, IL is our specialty — and DSM Cleaning Solutions brings the same
-            meticulous, detail-focused approach to every home we serve. Whether you live in Settlers Ridge,
+            Deep cleaning in Plainfield, IL is what we do. DSM Cleaning Solutions brings the same
+            detail-focused approach to every home we serve. Whether you live in Settlers Ridge,
             Lakewood Falls, Springbank, or Grande Park, our team covers zip codes 60544 and 60585 with
-            a comprehensive clean that goes far beyond your regular maintenance routine.
+            a thorough clean that goes well beyond your regular maintenance routine.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Plainfield families choose DSM because we treat every home like our own. We&apos;re not a national
-            franchise — we&apos;re a family-owned business based right here in the southwest suburbs, and we take
-            pride in the results we deliver. From degreasing the kitchen hood vent to scrubbing grout lines
-            in your master shower, nothing gets overlooked.
+            franchise. We&apos;re a family-owned business based right here in the southwest suburbs. From
+            degreasing the kitchen hood vent to scrubbing grout lines in your master shower, nothing
+            gets overlooked.
           </p>
           <p className="text-gray-600 leading-relaxed">
-            Whether you&apos;re preparing for the spring season, getting your home ready before hosting guests,
-            or simply want a thorough reset after months of normal use, our Plainfield deep cleaning service
-            is the solution. We use only eco-friendly, non-toxic products — safe for your kids, your pets,
-            and the Plainfield environment you love.
+            Getting ready for spring, cleaning up before guests arrive, or just want a real clean after
+            months of normal use? Our Plainfield deep cleaning service gets it done. We use eco-friendly,
+            non-toxic products. Safe for your kids and pets.
           </p>
         </div>
       </section>
@@ -310,10 +309,10 @@ export default function DeepCleaningPlainfieldPage() {
             <span className="text-6xl font-serif leading-none absolute top-6 left-8" style={{ color: "#E8622A" }}>&ldquo;</span>
             <blockquote className="pt-8">
               <p className="text-gray-800 text-lg leading-relaxed mb-5 italic">
-                I was embarrassed by how dirty my house had gotten. DSM came in and I couldn&apos;t believe the difference — my kitchen alone looked brand new. Worth every penny and I&apos;ve already booked them again.
+                I was embarrassed by how dirty my house had gotten. DSM came in and I couldn&apos;t believe it. My kitchen alone looked brand new. Worth every penny and I&apos;ve already booked them again.
               </p>
               <footer>
-                <p className="font-bold text-gray-900">— Maria G., Plainfield IL <span className="text-amber-400">★★★★★</span></p>
+                <p className="font-bold text-gray-900">Maria G., Plainfield IL <span className="text-amber-400">★★★★★</span></p>
                 <p className="text-sm text-gray-400 mt-1">One of our 42 five-star Google reviews</p>
               </footer>
             </blockquote>
@@ -338,7 +337,7 @@ export default function DeepCleaningPlainfieldPage() {
                 </svg>
               </div>
               <h3 className="font-bold text-gray-900 text-base mb-2">Safe for Your Kids &amp; Pets</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">We use only non-toxic, biodegradable products. No harsh chemicals, no fumes — just a clean home your whole family can enjoy immediately.</p>
+              <p className="text-gray-600 text-sm leading-relaxed">We use non-toxic, biodegradable products on every job. No harsh chemicals, no fumes. Your family can be back in the house right after we leave.</p>
             </div>
 
             {/* Benefit 2 */}
@@ -349,7 +348,7 @@ export default function DeepCleaningPlainfieldPage() {
                 </svg>
               </div>
               <h3 className="font-bold text-gray-900 text-base mb-2">Your Home Is Protected</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">Fully insured, bonded, and background-checked. If anything ever goes wrong, you&apos;re covered — though in 5+ years, we&apos;ve never had a claim.</p>
+              <p className="text-gray-600 text-sm leading-relaxed">Fully insured, bonded, and background-checked. If anything goes wrong you&apos;re covered. In 5 years we&apos;ve never had a claim.</p>
             </div>
 
             {/* Benefit 3 */}
@@ -372,7 +371,7 @@ export default function DeepCleaningPlainfieldPage() {
                 </svg>
               </div>
               <h3 className="font-bold text-gray-900 text-base mb-2">We&apos;re Your Neighbors</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">Based right here in the southwest suburbs — not a national franchise. Memo answers his own phone. You can call or text him directly.</p>
+              <p className="text-gray-600 text-sm leading-relaxed">Based right here in the southwest suburbs. Not a national franchise. Memo answers his own phone. Call or text him directly.</p>
             </div>
 
           </div>
@@ -393,7 +392,7 @@ export default function DeepCleaningPlainfieldPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-3">What&apos;s Included in Our Deep Cleaning in Plainfield, IL</h2>
-            <p className="text-gray-500 text-lg max-w-2xl mx-auto">Every room in your Plainfield home — cleaned top to bottom.</p>
+            <p className="text-gray-500 text-lg max-w-2xl mx-auto">Every room in your Plainfield home. Nothing skipped.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -440,8 +439,8 @@ export default function DeepCleaningPlainfieldPage() {
             $250–$350 range.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
-            We always provide a free, no-obligation estimate before any work begins. There are no surprises —
-            you&apos;ll know exactly what to expect before we arrive at your Plainfield home.
+            We always give you a free estimate before anything starts. No surprises. You&apos;ll know
+            the price before we show up at your Plainfield home.
           </p>
           <a
             href="#quote-form"
@@ -463,18 +462,18 @@ export default function DeepCleaningPlainfieldPage() {
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative">
               <span className="text-4xl font-serif leading-none absolute top-4 left-5 text-orange-300">&ldquo;</span>
               <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">
-                Scheduled a deep clean before my in-laws visited and DSM absolutely delivered. Every corner was spotless. My mother-in-law actually asked who cleaned my house — that never happens.
+                Scheduled a deep clean before my in-laws visited and DSM absolutely delivered. Every corner was spotless. My mother-in-law asked who cleaned my house. That never happens.
               </p>
-              <p className="font-semibold text-gray-900 text-sm">— Jennifer M., Plainfield IL</p>
+              <p className="font-semibold text-gray-900 text-sm">Jennifer M., Plainfield IL</p>
               <p className="text-amber-400 text-sm">★★★★★</p>
             </div>
 
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative">
               <span className="text-4xl font-serif leading-none absolute top-4 left-5 text-orange-300">&ldquo;</span>
               <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">
-                They cleaned things I didn&apos;t even think to ask about — the tops of the door frames, behind the toilet, inside the microwave. Incredibly thorough and the team was so professional.
+                They got to things I didn&apos;t even think to ask about. Tops of the door frames, behind the toilet, inside the microwave. Really thorough and the whole team was great to work with.
               </p>
-              <p className="font-semibold text-gray-900 text-sm">— Carlos R., Plainfield IL</p>
+              <p className="font-semibold text-gray-900 text-sm">Carlos R., Plainfield IL</p>
               <p className="text-amber-400 text-sm">★★★★★</p>
             </div>
 
@@ -483,7 +482,7 @@ export default function DeepCleaningPlainfieldPage() {
               <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">
                 Best cleaning service in the area. I&apos;ve tried two others and DSM is on a different level. The kitchen and bathrooms looked brand new. Will not be using anyone else.
               </p>
-              <p className="font-semibold text-gray-900 text-sm">— Ashley T., Plainfield IL</p>
+              <p className="font-semibold text-gray-900 text-sm">Ashley T., Plainfield IL</p>
               <p className="text-amber-400 text-sm">★★★★★</p>
             </div>
 
@@ -539,9 +538,8 @@ export default function DeepCleaningPlainfieldPage() {
                 ★★★★★ Trusted by 42 Plainfield-area homeowners
               </p>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                Ready for a home that&apos;s clean from top to bottom? Get your free deep cleaning quote for
-                Plainfield, IL — we respond within 1 business day and back every job with our
-                48-hour satisfaction guarantee.
+                Get your free deep cleaning quote for Plainfield, IL. We usually respond the same day
+                and every job is backed by our 48-hour satisfaction guarantee.
               </p>
               <a
                 href="tel:+18152462113"
