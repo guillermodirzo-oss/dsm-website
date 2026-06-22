@@ -215,8 +215,8 @@ export default function DeepCleaningPlainfieldPage() {
             <div className="mt-6 lg:mt-0">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/Work%20Pictures/bathtub-shower-deep-clean-plainfield-il.jpg"
-                alt="Professional deep cleaning of bathroom in Plainfield, IL by DSM Cleaning Solutions"
+                src="/Work%20Pictures/double-vanity-bathroom-clean-naperville-il.jpg"
+                alt="Professionally cleaned double vanity bathroom by DSM Cleaning Solutions"
                 className="w-full rounded-xl object-cover shadow-lg"
                 style={{ maxHeight: "340px" }}
               />
