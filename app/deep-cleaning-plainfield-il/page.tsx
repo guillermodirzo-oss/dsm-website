@@ -379,8 +379,8 @@ export default function DeepCleaningPlainfieldPage() {
           {/* Second photo */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/Work%20Pictures/living-room-hardwood-floors-plainfield-il.jpg"
-            alt="Clean living room with hardwood floors in Plainfield, IL"
+            src="/Work%20Pictures/Google%20Post%20Image%20-%20Cleaning%20Service%20(1).png"
+            alt="Professionally cleaned kitchen in Plainfield, IL by DSM Cleaning Solutions"
             className="w-full rounded-xl object-cover mt-10 shadow-sm"
             style={{ maxHeight: "360px" }}
           />
