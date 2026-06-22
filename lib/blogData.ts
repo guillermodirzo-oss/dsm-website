@@ -111,6 +111,97 @@ export const blogPosts: BlogPost[] = [
 <p>A surface wipe-down won't get the oven interior, the grout, the baseboards, or the ceiling fans. DSM Cleaning Solutions' deep cleaning service in Bolingbrook covers every corner — and every visit is backed by our 48-hour satisfaction guarantee. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> today and schedule your deep clean.</p>`,
   },
   {
+    slug: "move-out-cleaning-joliet-il",
+    title: "Move-Out Cleaning in Joliet, IL — Checklist, Costs & How to Book",
+    metaTitle: "Move-Out Cleaning in Joliet IL — Checklist, Costs & How to Book",
+    metaDescription:
+      "Moving out of your Joliet home or apartment? DSM Cleaning Solutions provides professional move-out cleaning with a 48-hour satisfaction guarantee. See what's included and book online.",
+    date: "June 23, 2026",
+    dateISO: "2026-06-23",
+    author: "DSM Cleaning Solutions",
+    excerpt:
+      "Moving out in Joliet means coordinating movers, packing boxes, and then facing the part nobody wants to deal with — leaving the unit in spotless condition for the landlord walkthrough. DSM Cleaning Solutions handles the cleaning so you can focus on everything else. Here's what's included, what it costs, and how to book your move-out clean.",
+    faqSchema: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Does move-out cleaning include the inside of the oven and refrigerator?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes — both are included in our move-out cleaning service. The oven interior and racks are scrubbed, and the refrigerator is cleaned inside and out. These are two of the most common items landlords flag during move-out inspections, and we treat them as non-negotiable parts of every move-out clean we do in Joliet.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What if my landlord isn't satisfied after the cleaning?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Every move-out cleaning from DSM Cleaning Solutions is backed by our 48-hour satisfaction guarantee. If your landlord or property manager identifies anything that was missed during the walkthrough, contact us within 48 hours and we will return and address it at no additional charge. Our goal is to make sure you pass your inspection and recover your full security deposit.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How far in advance should I book my move-out cleaning in Joliet?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "We recommend booking at least 5–7 days before your move-out date or landlord walkthrough. Late spring and summer are peak moving season in the Joliet and Will County area, and our schedule fills up quickly — especially in June and July. Booking in advance gives you the flexibility to choose a date and time that works for your move, rather than scrambling for last-minute availability.",
+          },
+        },
+      ],
+    },
+    content: `<p>Moving out is one of the most logistically demanding things you'll do. There are boxes to pack, movers to coordinate, utilities to transfer, and a hundred other details to track — and then comes the realization that the unit has to be left spotless for the landlord walkthrough. Most leases require the property to be returned in the same condition it was received, and property managers in <a href="/joliet-il" class="text-brand-green font-semibold hover:underline">Joliet</a> know exactly what to look for. That's where professional <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning</a> from DSM Cleaning Solutions comes in. We handle every room, top to bottom, so you can focus on the move itself. Every visit is backed by our 48-hour satisfaction guarantee — if anything is flagged during the walkthrough, we come back and fix it at no charge.</p>
+
+<h2>What Joliet Landlords Look for During Move-Out Inspections</h2>
+<p>Property managers and landlords in Joliet walk through a unit with a specific checklist in mind, and they've seen every corner-cutting shortcut tenants attempt before a move-out. They open the oven and check the interior for baked-on grease. They pull the refrigerator shelves out and look underneath. They crouch down to check the toilet base and the grout lines in the shower. They run a finger along the baseboards. They look at window sills — a spot most people forget entirely until it's too late. They check the blinds for dust and the light switches for grime buildup that accumulates over months or years of use.</p>
+<p>Floors get a close look too, especially in corners and under appliances. Cabinet interiors are opened, hood vents are inspected, and door frames get checked for scuff marks. None of this is a surprise — it's all standard. The problem is that thorough cleaning of all these surfaces takes far more time than most tenants have during the final days of a move. A professional move-out clean addresses every item on that list before the inspector ever arrives.</p>
+
+<h2>What's Included in DSM's Move-Out Cleaning Service</h2>
+<p>Our move-out cleaning service is designed specifically to meet the standards Joliet landlords expect. Here's what the team covers on every appointment:</p>
+<ul>
+  <li><strong>Kitchen:</strong> oven interior and racks scrubbed, stovetop and burners degreased, hood vent cleaned, refrigerator interior and exterior cleaned, all cabinet interiors and exteriors wiped, countertops cleaned and sanitized, sink scrubbed and disinfected, microwave cleaned inside and out, floor swept and mopped</li>
+  <li><strong>Bathrooms:</strong> toilet scrubbed inside and out including the base and behind the bowl, tub and shower walls scrubbed, grout cleaned, sink and faucet scrubbed, mirror cleaned streak-free, vanity wiped down, floors scrubbed</li>
+  <li><strong>Bedrooms:</strong> closet interiors wiped down, baseboards wiped, window sills cleaned, ceiling fans dusted, all surfaces dusted, floors vacuumed and mopped</li>
+  <li><strong>Living areas:</strong> baseboards wiped, ceiling fans dusted, blinds wiped down, floors vacuumed and mopped, light switches and outlet covers wiped</li>
+  <li><strong>Throughout the home:</strong> trash removed and bins wiped, door frames wiped, spot-clean of walls where needed</li>
+</ul>
+<p>Move-out cleaning goes further than a standard <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> in one key area: the refrigerator interior is fully cleaned as part of the service. Landlords consistently flag refrigerators during Joliet move-out inspections, and it's one of the most tedious items to clean properly on your own.</p>
+
+<h2>How Much Does Move-Out Cleaning Cost in Joliet, IL?</h2>
+<p>Move-out cleaning cost in Joliet depends on the size of the unit, the number of bedrooms and bathrooms, and the overall condition of the property. A one-bedroom apartment is priced differently than a four-bedroom house, and a unit that was well-maintained throughout the lease requires less time than one that hasn't been deeply cleaned in over a year.</p>
+<p>Move-out cleans are priced higher than standard recurring maintenance visits because of the level of detail and time involved — this is a thorough top-to-bottom service, not a surface refresh. That said, most clients find that the cost of a professional move-out clean is significantly less than the risk of losing even a portion of their security deposit. Deposits in Joliet often run $1,000–$2,000 or more, and landlords can and do withhold funds for cleaning that wasn't completed properly. The professional clean more than pays for itself. To get an accurate quote for your specific unit, call us at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> — we'll ask a few questions and get you a number right away.</p>
+
+<h2>When Should You Schedule Your Move-Out Cleaning in Joliet?</h2>
+<p>The best time to schedule your move-out cleaning is 5–7 days before your official move-out date or landlord walkthrough. That gives you a buffer — if anything needs to be addressed after the clean, there's time to handle it before the inspection. It also ensures the unit is freshly cleaned going into the walkthrough rather than sitting for a week and collecting dust.</p>
+<p>Timing matters more than most people realize in the Joliet area. Late spring through summer is peak moving season across Will County, and availability fills up quickly — especially in June and July when lease turnover is highest. If you already know your move-out date, don't wait. Book as early as you can to lock in the slot that works for your schedule. Last-minute availability exists, but it's not something to count on during the busiest weeks of the moving season.</p>
+
+<h2>Why Joliet Residents Trust DSM Cleaning Solutions</h2>
+<ul>
+  <li><strong>Locally owned and operated.</strong> DSM Cleaning Solutions is a family-owned business serving Joliet and the surrounding Will County communities. We're not a national franchise — this is our community too, and our reputation here matters to us personally.</li>
+  <li><strong>Background-checked and fully insured.</strong> Every member of our cleaning team passes a thorough background check before their first appointment. We carry full liability insurance on every job, so you're covered if anything unexpected happens.</li>
+  <li><strong>48-hour satisfaction guarantee.</strong> If your landlord identifies anything that was missed during the walkthrough, contact us within 48 hours and we'll return to address it at no additional charge. The goal is simple: you pass your inspection and get your deposit back.</li>
+  <li><strong>Consistently 5-star rated.</strong> Our reviews across Google and other platforms reflect what Joliet clients experience on every visit — a team that shows up on time, does thorough work, and stands behind the results.</li>
+</ul>
+
+<h2>Areas We Serve Near Joliet</h2>
+<p>DSM Cleaning Solutions provides move-out cleaning throughout Joliet and the surrounding area. We also serve <a href="/romeoville-il" class="text-brand-green font-semibold hover:underline">Romeoville</a>, <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield</a>, <a href="/bolingbrook-il" class="text-brand-green font-semibold hover:underline">Bolingbrook</a>, Lockport, and Naperville. If you're moving out anywhere in the southwest Chicago suburbs, we're likely already cleaning homes and apartments in your neighborhood.</p>
+
+<h2>Frequently Asked Questions About Move-Out Cleaning in Joliet</h2>
+
+<h3>Does move-out cleaning include the inside of the oven and refrigerator?</h3>
+<p>Yes — both are included in our move-out cleaning service. The oven interior and racks are fully scrubbed, and the refrigerator is cleaned inside and out including shelves, drawers, and the door seals. These are two of the most common items Joliet landlords flag during move-out inspections, and we treat them as non-negotiable parts of every move-out clean we complete. You won't need to worry about either when the walkthrough happens.</p>
+
+<h3>What if my landlord isn't satisfied after the cleaning?</h3>
+<p>Every move-out cleaning from DSM is backed by our 48-hour satisfaction guarantee. If your landlord or property manager identifies anything that was missed during the walkthrough, contact us within 48 hours and we'll return and address it at no additional charge. We're not going to leave you in a position where you lose part of your deposit over something our team was supposed to handle. That guarantee is real, and we stand behind it.</p>
+
+<h3>How far in advance should I book my move-out cleaning in Joliet?</h3>
+<p>We recommend booking at least 5–7 days before your move-out date or final walkthrough. Late spring and summer are peak moving season across the Joliet and Will County area, and our schedule fills up quickly — especially in June and July. Booking in advance gives you the flexibility to choose a date and time that works around your move, rather than having to scramble for whatever last-minute slot is available. If you're moving soon, reach out now and we'll get you on the calendar.</p>
+
+<h3>Ready to Book Your Joliet Move-Out Cleaning?</h3>
+<p>Getting your full security deposit back is worth it — and our 48-hour satisfaction guarantee means there's no risk in letting us handle the cleaning. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> today. We'll get your Joliet unit ready for the walkthrough so you can focus on your move.</p>`,
+  },
+  {
     slug: "recurring-cleaning-service-romeoville-il",
     title: "Maid Service in Romeoville, IL — What's Included, Pricing & How to Book",
     metaTitle: "Maid Service in Romeoville IL — What's Included, Pricing & How to Book",
