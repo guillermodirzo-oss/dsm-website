@@ -115,7 +115,7 @@ const checklist = [
     items: [
       "Dust all surfaces and shelves",
       "Wipe baseboards and door frames",
-      "Clean window sills and tracks",
+      "Clean window sills and inside glass",
       "Vacuum all carpets and rugs",
       "Sweep and mop hard floors",
       "Wipe light switches and outlets",

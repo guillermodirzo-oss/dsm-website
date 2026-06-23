@@ -32,7 +32,7 @@ const nextConfig = {
       // /contact is now a real page — no redirect needed (removed old /#contact redirect)
       {
         source: "/contact-us",
-        destination: "/contact",
+        destination: "https://dsmcleaningsolutions.bookingkoala.com/login",
         permanent: true,
       },
       {
@@ -42,32 +42,32 @@ const nextConfig = {
       },
       {
         source: "/onlinequote",
-        destination: "/contact",
+        destination: "https://dsmcleaningsolutions.bookingkoala.com/login",
         permanent: true,
       },
       {
         source: "/quote",
-        destination: "/contact",
+        destination: "https://dsmcleaningsolutions.bookingkoala.com/login",
         permanent: true,
       },
       {
         source: "/get-a-quote",
-        destination: "/contact",
+        destination: "https://dsmcleaningsolutions.bookingkoala.com/login",
         permanent: true,
       },
       {
         source: "/booking",
-        destination: "https://dsmcleaningsolutions.bookingkoala.com/booknow",
+        destination: "/book",
         permanent: true,
       },
       {
         source: "/booknow",
-        destination: "https://dsmcleaningsolutions.bookingkoala.com/booknow",
+        destination: "/book",
         permanent: true,
       },
       {
         source: "/book-now",
-        destination: "https://dsmcleaningsolutions.bookingkoala.com/booknow",
+        destination: "/book",
         permanent: true,
       },
 
@@ -227,41 +227,41 @@ const nextConfig = {
       },
       {
         source: "/faqs",
-        destination: "/contact",
+        destination: "https://dsmcleaningsolutions.bookingkoala.com/login",
         permanent: true,
       },
       {
         source: "/faq",
-        destination: "/contact",
+        destination: "https://dsmcleaningsolutions.bookingkoala.com/login",
         permanent: true,
       },
 
       // Booking / signup shortcuts
       {
         source: "/signup",
-        destination: "https://dsmcleaningsolutions.bookingkoala.com/booknow",
+        destination: "/book",
         permanent: true,
       },
       {
         source: "/sign-up",
-        destination: "https://dsmcleaningsolutions.bookingkoala.com/booknow",
+        destination: "/book",
         permanent: true,
       },
       {
         source: "/schedule",
-        destination: "https://dsmcleaningsolutions.bookingkoala.com/booknow",
+        destination: "/book",
         permanent: true,
       },
       {
         source: "/schedule-cleaning",
-        destination: "https://dsmcleaningsolutions.bookingkoala.com/booknow",
+        destination: "/book",
         permanent: true,
       },
 
       // Estimate / pricing variants → contact form
       {
         source: "/estimate",
-        destination: "/contact",
+        destination: "https://dsmcleaningsolutions.bookingkoala.com/login",
         permanent: true,
       },
       // /free-estimate is now a real page — redirect removed

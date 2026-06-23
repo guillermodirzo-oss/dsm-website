@@ -35,7 +35,7 @@ const problemCards = [
   {
     icon: "🤧",
     title: "Hidden Allergens",
-    desc: "Baseboards, window tracks, ceiling fans, and under furniture collect dust, pet dander, and mold that weekly visits don't reach.",
+    desc: "Baseboards, window sills, ceiling fans, and under furniture collect dust, pet dander, and mold that weekly visits don't reach.",
   },
   {
     icon: "🚿",

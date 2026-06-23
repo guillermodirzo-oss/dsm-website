@@ -208,7 +208,7 @@ export default function DeepCleaningMinookaPage() {
             Minooka is one of the fastest-growing communities in the southwest Chicago suburbs Ã¢â‚¬â€
             with new construction bringing hundreds of families to neighborhoods like Heritage Fields
             and Fox Run each year. New builds especially benefit from a professional deep clean after
-            the construction phase: construction dust settles deep into vents, window tracks, and
+            the construction phase: construction dust settles deep into vents, window sills, and
             cabinet interiors that a regular cleaning will miss. Our Minooka deep cleaning service
             tackles all of it. We&apos;re a family-owned business based in nearby Romeoville, and we
             know this corridor of Will and Grundy counties well.

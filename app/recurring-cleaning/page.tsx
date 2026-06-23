@@ -176,7 +176,7 @@ const plans = [
       "Full bathroom cleaning & disinfecting",
       "Kitchen deep clean",
       "Dust all surfaces and furniture",
-      "Clean window sills and tracks",
+      "Clean window sills and inside glass",
       "Empty all trash bins",
       "Customizable checklist",
     ],

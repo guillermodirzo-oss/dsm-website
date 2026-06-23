@@ -620,7 +620,7 @@ export const blogPosts: BlogPost[] = [
   <li>Wash pillows and comforters — summer sweat and higher humidity make this a seasonal necessity rather than an occasional task</li>
   <li>Vacuum mattresses top and sides, then flip or rotate if applicable</li>
   <li>Clean ceiling fans thoroughly — a dusty fan redistributes allergens every time it runs, and in summer it runs constantly</li>
-  <li>Wipe down window sills and tracks — open windows bring in pollen, insects, and outdoor dust all summer</li>
+  <li>Wipe down window sills and inside glass — open windows bring in pollen, insects, and outdoor dust all summer</li>
   <li>Vacuum and mop under beds and along baseboards, where pet dander and dust settle over winter and spring</li>
 </ul>
 
@@ -752,7 +752,7 @@ export const blogPosts: BlogPost[] = [
 <p>We offer four core cleaning services for Lockport homeowners in zip code 60441:</p>
 <ul>
   <li><strong>Standard cleaning</strong> — our <a href="/standard-cleaning-lockport-il" class="text-brand-green font-semibold hover:underline">standard cleaning service in Lockport</a> covers all the essentials: vacuuming, mopping, kitchen surfaces, bathrooms, dusting, and trash. Ideal for maintaining a clean home between deeper cleans.</li>
-  <li><strong>Deep cleaning</strong> — our <a href="/deep-cleaning-lockport-il" class="text-brand-green font-semibold hover:underline">deep cleaning service in Lockport</a> goes further: scrubbing grout lines, cleaning inside appliances, wiping baseboards and door frames, detailing ceiling fans and window tracks. The right choice for a thorough reset or a first clean with a new service.</li>
+  <li><strong>Deep cleaning</strong> — our <a href="/deep-cleaning-lockport-il" class="text-brand-green font-semibold hover:underline">deep cleaning service in Lockport</a> goes further: scrubbing grout lines, cleaning inside appliances, wiping baseboards and door frames, detailing ceiling fans and window sills. The right choice for a thorough reset or a first clean with a new service.</li>
   <li><strong>Move-out cleaning</strong> — our <a href="/move-out-cleaning-lockport-il" class="text-brand-green font-semibold hover:underline">move-out cleaning service in Lockport</a> is designed to bring a home back to move-in condition. We cover every inch of the property — inside appliances, all cabinets, closets, and every room — to help tenants and sellers protect their deposit or listing.</li>
   <li><strong>Recurring cleaning</strong> — our most popular option. Weekly, bi-weekly, or monthly visits at a discounted per-visit rate. Customers who set up recurring service pay consistently less than one-time pricing and enjoy a home that stays clean year-round.</li>
 </ul>
@@ -867,7 +867,7 @@ export const blogPosts: BlogPost[] = [
 <p>A professional deep clean takes longer than a standard cleaning — typically 3 to 6 hours depending on your home's size. Our team works room by room, top to bottom, so dust and debris fall to surfaces we haven't cleaned yet rather than back onto surfaces we just finished. When we're done, every surface will be cleaned, disinfected, and detailed. You may notice the home smells fresher immediately — that's a result of removing the grime and buildup that traps odors. For ongoing maintenance after your deep clean, many of our clients transition to a <a href="/recurring-cleaning" class="text-brand-green font-semibold hover:underline">recurring cleaning schedule</a> to keep that level of cleanliness going.</p>
 
 <h2>How DSM Cleaning Solutions Handles Deep Cleans in Plainfield, Romeoville, and Naperville</h2>
-<p>DSM Cleaning Solutions is a family-owned cleaning company serving Plainfield, Romeoville, Naperville, Bolingbrook, Joliet, and the surrounding southwest Chicago suburbs. Every deep clean we perform includes scrubbing grout, cleaning inside appliances, wiping baseboards and door frames, dusting ceiling fans, cleaning window sills and tracks, and sanitizing all high-touch surfaces. We bring all products and equipment — you don't need to supply a thing. Compared to a <a href="/standard-cleaning" class="text-brand-green font-semibold hover:underline">standard cleaning</a>, a deep clean addresses the accumulated buildup that routine visits maintain around but don't eliminate. Every job is backed by our 48-hour satisfaction guarantee.</p>
+<p>DSM Cleaning Solutions is a family-owned cleaning company serving Plainfield, Romeoville, Naperville, Bolingbrook, Joliet, and the surrounding southwest Chicago suburbs. Every deep clean we perform includes scrubbing grout, cleaning inside appliances, wiping baseboards and door frames, dusting ceiling fans, cleaning window sills and inside glass, and sanitizing all high-touch surfaces. We bring all products and equipment — you don't need to supply a thing. Compared to a <a href="/standard-cleaning" class="text-brand-green font-semibold hover:underline">standard cleaning</a>, a deep clean addresses the accumulated buildup that routine visits maintain around but don't eliminate. Every job is backed by our 48-hour satisfaction guarantee.</p>
 
 <h3>Ready to Book Your Deep Clean?</h3>
 <p>DSM Cleaning Solutions serves Plainfield, Romeoville, Naperville, and the entire southwest Chicago suburbs. Follow the steps above, and we'll take care of the rest. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/contact" class="text-brand-green font-semibold hover:underline">request a free quote online</a> — most quotes are returned same-day.</p>`,
@@ -887,7 +887,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Standard Cleaning vs. Deep Cleaning: What's the Difference?</h2>
 <p>Before diving into frequency, it helps to understand what sets a deep clean apart from your regular routine. <a href="/standard-cleaning" class="text-brand-green font-semibold hover:underline">Standard cleaning</a> is maintenance — it covers the basics you do weekly or biweekly: vacuuming, mopping, wiping down counters, cleaning bathrooms, and taking out the trash. It keeps your home looking presentable on a day-to-day basis.</p>
-<p><a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">Our deep cleaning service</a> goes several layers further. It tackles everything standard cleaning skips: scrubbing grout lines, cleaning inside and behind appliances, wiping down baseboards and door frames, dusting ceiling fans and light fixtures, washing window sills and tracks, and cleaning cabinet fronts inside and out. If standard cleaning is the upkeep, deep cleaning is the reset — and every home needs it periodically to stay truly clean and healthy.</p>
+<p><a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">Our deep cleaning service</a> goes several layers further. It tackles everything standard cleaning skips: scrubbing grout lines, cleaning inside and behind appliances, wiping down baseboards and door frames, dusting ceiling fans and light fixtures, washing window sills and inside glass, and cleaning cabinet fronts inside and out. If standard cleaning is the upkeep, deep cleaning is the reset — and every home needs it periodically to stay truly clean and healthy.</p>
 
 <h2>How Often Should You Deep Clean? A Seasonal Guide for Illinois Homes</h2>
 <p>Most professional cleaners and home care experts recommend deep cleaning your home two to four times per year. For Illinois homeowners specifically, aligning those deep cleans with the seasons makes the most sense given our climate.</p>
@@ -910,7 +910,7 @@ export const blogPosts: BlogPost[] = [
 </ul>
 
 <h2>What's Included in a Professional Deep Clean?</h2>
-<p>When DSM Cleaning Solutions performs a deep clean, we cover the areas that standard cleaning skips entirely. That means scrubbing grout in bathrooms and kitchens, cleaning inside the oven and microwave (including removing oven racks for a thorough scrub), wiping down the fronts of all cabinets, pulling out appliances to clean behind them, dusting and wiping all baseboards, cleaning ceiling fans and light fixtures, washing window sills and tracks, and sanitizing all high-touch surfaces throughout the home. We bring everything needed and use non-toxic, eco-friendly products that are safe for children and pets. Learn more about what to expect from <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">our deep cleaning service</a>.</p>
+<p>When DSM Cleaning Solutions performs a deep clean, we cover the areas that standard cleaning skips entirely. That means scrubbing grout in bathrooms and kitchens, cleaning inside the oven and microwave (including removing oven racks for a thorough scrub), wiping down the fronts of all cabinets, pulling out appliances to clean behind them, dusting and wiping all baseboards, cleaning ceiling fans and light fixtures, washing window sills and inside glass, and sanitizing all high-touch surfaces throughout the home. We bring everything needed and use non-toxic, eco-friendly products that are safe for children and pets. Learn more about what to expect from <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">our deep cleaning service</a>.</p>
 
 <h2>Why Plainfield & Romeoville Homeowners Trust DSM Cleaning Solutions</h2>
 <p>DSM Cleaning Solutions is a family-owned cleaning company based in Romeoville, Illinois. We serve all Plainfield zip codes — 60544 and 60585 — as well as Romeoville (60446) and the surrounding southwest suburbs. Our team knows these communities personally, and we've cleaned homes in neighborhoods throughout the area including Settlers Ridge, Grande Park, and Lakewood Falls. We understand the specific challenges that come with Illinois winters, and our deep cleaning process is built around them.</p>
@@ -1007,7 +1007,7 @@ export const blogPosts: BlogPost[] = [
     content: `<p>If you've been searching for a <strong>professional deep cleaning service in Plainfield, IL</strong>, you're likely already past the point of wondering whether you need one — you're wondering what you're actually going to get. That's a smart question. Deep cleaning and standard cleaning are often marketed the same way, but they're fundamentally different services. This guide walks you through exactly what a professional deep clean covers, how to prepare for one, and what separates a reliable cleaning company from one that will leave you disappointed.</p>
 
 <h2>Deep Cleaning vs. Standard Cleaning: What's Actually Different?</h2>
-<p><a href="/standard-cleaning" class="text-brand-green font-semibold hover:underline">Standard cleaning</a> is maintenance — it keeps a clean home looking clean. It covers the basics: vacuuming, mopping, wiping counters, scrubbing toilets, and taking out trash. A <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">professional deep cleaning service</a> goes several layers further. It targets everything standard cleaning skips: inside the oven, behind and under appliances, grout lines in bathrooms and kitchens, baseboards and door frames, ceiling fans and light fixtures, window tracks, and inside all cabinets. Think of standard cleaning as upkeep and deep cleaning as the full reset your home needs two to four times a year.</p>
+<p><a href="/standard-cleaning" class="text-brand-green font-semibold hover:underline">Standard cleaning</a> is maintenance — it keeps a clean home looking clean. It covers the basics: vacuuming, mopping, wiping counters, scrubbing toilets, and taking out trash. A <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">professional deep cleaning service</a> goes several layers further. It targets everything standard cleaning skips: inside the oven, behind and under appliances, grout lines in bathrooms and kitchens, baseboards and door frames, ceiling fans and light fixtures, window sills, and inside all cabinets. Think of standard cleaning as upkeep and deep cleaning as the full reset your home needs two to four times a year.</p>
 
 <h2>How to Prepare Before Your Cleaners Arrive</h2>
 <p>A professional deep clean goes faster and covers more ground when the team isn't navigating clutter. Before your appointment, tidy up surfaces and floors so cleaners can access every area directly — countertops, tabletops, bathroom counters, and floors. You don't need to pre-clean anything; that's their job. But removing piles of mail, putting away dishes, and moving small items off shelves lets the team focus their time on actual deep cleaning rather than reorganizing. If you have pets, secure them in a separate area so the team can work through every room without interruption.</p>
@@ -1017,7 +1017,7 @@ export const blogPosts: BlogPost[] = [
 <ul>
   <li><strong>Kitchen:</strong> Inside and outside the oven (racks removed and scrubbed), stovetop burners and hood vent degreased, inside the microwave, all cabinet fronts wiped, sink and faucet scrubbed, countertops and backsplash cleaned, refrigerator exterior wiped, floors mopped and scrubbed</li>
   <li><strong>Bathrooms:</strong> Toilet scrubbed and disinfected, shower and tub deep-scrubbed with grout cleaning, faucets and fixtures polished, sink and vanity washed, mirrors cleaned, cabinet fronts and shelves wiped, floors mopped with grout lines cleaned</li>
-  <li><strong>Bedrooms &amp; Living Areas:</strong> All surfaces and shelves dusted, baseboards and door frames wiped, window sills and tracks cleaned, underneath and behind furniture vacuumed, ceiling fans and light fixtures dusted</li>
+  <li><strong>Bedrooms &amp; Living Areas:</strong> All surfaces and shelves dusted, baseboards and door frames wiped, window sills and inside glass cleaned, underneath and behind furniture vacuumed, ceiling fans and light fixtures dusted</li>
   <li><strong>Whole Home:</strong> All carpets vacuumed, hard floors mopped, all doors and door frames wiped, vents and registers dusted</li>
 </ul>
 <p>For Plainfield homes in Settlers Ridge, Grande Park, and across zip codes 60544 and 60585, our <a href="/deep-cleaning-plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield deep cleaning service</a> follows this checklist on every job — no items skipped based on time or convenience.</p>
@@ -1342,7 +1342,7 @@ export const blogPosts: BlogPost[] = [
 <h3>Bedrooms &amp; Living Areas</h3>
 <ul>
   <li>Flip and vacuum mattresses — dust mites thrive in the warm, dry conditions that indoor heating creates all winter</li>
-  <li>Clean window tracks — salt residue and winter condensation leave behind a grimy buildup that's only visible when you look closely</li>
+  <li>Clean window sills and inside glass — salt residue and winter condensation leave behind a grimy buildup that's only visible when you look closely</li>
   <li>Wipe all baseboards — after months of forced-air heating pushing air around the house, baseboards collect more dust in winter than any other season</li>
   <li>Dust ceiling fans, light fixtures, and lamp shades</li>
   <li>Vacuum behind and under all furniture — move sofas and beds to reach the walls</li>
@@ -1418,7 +1418,7 @@ export const blogPosts: BlogPost[] = [
   <li>Scrub the sink basin, faucet, and drain area; remove mineral deposits</li>
   <li>Clean and disinfect countertops thoroughly, including under small appliances</li>
   <li>Wipe down backsplash tile and grout</li>
-  <li>Clean window sills and the inside of window tracks in the kitchen</li>
+  <li>Clean window sills and inside glass in the kitchen</li>
   <li>Dust and wipe light fixtures and ceiling fan blades (if present)</li>
   <li>Sweep, vacuum, and mop the floor, including edges and corners</li>
 </ul>
@@ -1448,7 +1448,7 @@ export const blogPosts: BlogPost[] = [
   <li>Clean mirrors and glass surfaces</li>
   <li>Vacuum the mattress top and sides</li>
   <li>Vacuum under the bed and along all baseboards</li>
-  <li>Wipe down baseboards, window sills, and window tracks</li>
+  <li>Wipe down baseboards and window sills</li>
   <li>Clean light switches and door handles</li>
   <li>Vacuum and spot-clean upholstered furniture as needed</li>
   <li>Vacuum floors thoroughly, including closet floors</li>
@@ -1463,7 +1463,7 @@ export const blogPosts: BlogPost[] = [
   <li>Clean TV screens and entertainment unit surfaces</li>
   <li>Vacuum all upholstered furniture, including under cushions</li>
   <li>Wipe down baseboards, door frames, and windowsills throughout</li>
-  <li>Clean window tracks and sills</li>
+  <li>Clean window sills and inside glass</li>
   <li>Dust blinds and wipe window coverings</li>
   <li>Clean light switches, outlet covers, and door handles</li>
   <li>Vacuum all floors, rugs, and carpeted areas thoroughly</li>
@@ -1528,7 +1528,7 @@ export const blogPosts: BlogPost[] = [
           name: "How is a deep clean different from a standard cleaning?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Standard cleaning is routine maintenance — vacuuming, mopping, wiping counters, and cleaning bathrooms. A deep clean is a comprehensive reset that includes inside appliances, grout scrubbing, baseboard and door frame wiping, ceiling fans, window tracks, and all the areas that get skipped during weekly cleanings. Deep cleans are recommended once or twice a year.",
+            text: "Standard cleaning is routine maintenance — vacuuming, mopping, wiping counters, and cleaning bathrooms. A deep clean is a comprehensive reset that includes inside appliances, grout scrubbing, baseboard and door frame wiping, ceiling fans, and all the areas that get skipped during weekly cleanings. Deep cleans are recommended once or twice a year.",
           },
         },
         {
@@ -1603,7 +1603,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>What Makes a Deep Clean Different From Regular Cleaning?</h2>
 <p><a href="/standard-cleaning" class="text-brand-green font-semibold hover:underline">Standard recurring cleaning</a> is maintenance — it keeps a clean home presentable between visits. Vacuuming, mopping, wiping counters, cleaning bathrooms, and dusting visible surfaces. It's fast and efficient, designed to be done weekly or biweekly.</p>
-<p>A <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning service</a> is a full reset. It goes into every corner standard cleaning skips: inside appliances, grout lines, baseboards, ceiling fans, window tracks, and cabinet fronts. For Naperville homeowners, the most common triggers are spring cleaning after Illinois winters seal grime into homes for months, pre-sale preparation, post-renovation cleanup, or simply a home that hasn't been professionally deep cleaned in over a year.</p>
+<p>A <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning service</a> is a full reset. It goes into every corner standard cleaning skips: inside appliances, grout lines, baseboards, ceiling fans, window sills, and cabinet fronts. For Naperville homeowners, the most common triggers are spring cleaning after Illinois winters seal grime into homes for months, pre-sale preparation, post-renovation cleanup, or simply a home that hasn't been professionally deep cleaned in over a year.</p>
 
 <h2>What's Included in DSM's Deep Cleaning Service in Naperville</h2>
 <p>Here's a complete breakdown of what we cover on every Naperville deep cleaning job:</p>
@@ -1636,7 +1636,7 @@ export const blogPosts: BlogPost[] = [
 <ul>
   <li>Dust ceiling fans and light fixtures</li>
   <li>Wipe all furniture surfaces, shelves, and ledges</li>
-  <li>Clean window sills and tracks</li>
+  <li>Clean window sills and inside glass</li>
   <li>Wipe baseboards and door frames throughout</li>
   <li>Vacuum under and behind furniture</li>
   <li>Clean light switches and door handles</li>
@@ -1646,7 +1646,7 @@ export const blogPosts: BlogPost[] = [
 <h2>What's NOT Included in a Standard Deep Clean</h2>
 <p>Transparency matters. Here's what a standard deep clean does not cover — so there are no surprises:</p>
 <ul>
-  <li>Exterior windows (interior window sills and tracks are included; outside glass requires a separate add-on)</li>
+  <li>Exterior windows (window sills and inside glass are included; outside glass and window tracks require a separate add-on)</li>
   <li>Washing walls (spot-cleaning is performed; full wall washing is a separate service)</li>
   <li>Carpet steam cleaning or stain treatment (we vacuum thoroughly; steam cleaning is separate)</li>
   <li>Garage or exterior spaces</li>
@@ -1744,7 +1744,7 @@ export const blogPosts: BlogPost[] = [
 <p>We offer three primary cleaning services to Bolingbrook homeowners, each built for a different need:</p>
 <ul>
   <li><strong>Standard (Recurring) Cleaning:</strong> Weekly, biweekly, or monthly maintenance cleaning that keeps your home in great shape day to day. Our <a href="/standard-cleaning-bolingbrook-il" class="text-brand-green font-semibold hover:underline">standard cleaning service in Bolingbrook</a> covers vacuuming, mopping, bathroom cleaning, kitchen wipe-downs, and dusting throughout every room.</li>
-  <li><strong>Deep Cleaning:</strong> A top-to-bottom reset that tackles what standard cleaning skips — inside the oven and microwave, behind appliances, grout lines, baseboards, ceiling fans, and window tracks. Our <a href="/deep-cleaning-bolingbrook-il" class="text-brand-green font-semibold hover:underline">deep cleaning service in Bolingbrook</a> is ideal for first-time customers, seasonal resets, or homes that haven't been professionally cleaned in a while.</li>
+  <li><strong>Deep Cleaning:</strong> A top-to-bottom reset that tackles what standard cleaning skips — inside the oven and microwave, behind appliances, grout lines, baseboards, ceiling fans, and window sills. Our <a href="/deep-cleaning-bolingbrook-il" class="text-brand-green font-semibold hover:underline">deep cleaning service in Bolingbrook</a> is ideal for first-time customers, seasonal resets, or homes that haven't been professionally cleaned in a while.</li>
   <li><strong>Move-Out Cleaning:</strong> Designed to meet landlord inspection standards and help you recover your full security deposit. Our <a href="/move-out-cleaning-bolingbrook-il" class="text-brand-green font-semibold hover:underline">move-out cleaning service in Bolingbrook</a> covers every room systematically, following the same checklist Bolingbrook property managers use during walkthroughs.</li>
 </ul>
 
@@ -1813,7 +1813,7 @@ export const blogPosts: BlogPost[] = [
           name: "What is included in a deep cleaning vs. a standard cleaning in Naperville?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Standard cleaning covers maintenance tasks like vacuuming, mopping, and wiping counters. A deep clean goes much further — inside the oven and microwave, grout scrubbing in bathrooms and kitchen, baseboards and door frames, ceiling fans, window tracks, and removing soap scum and hard water buildup throughout. Deep cleans take 3–6 hours and are recommended once or twice a year.",
+            text: "Standard cleaning covers maintenance tasks like vacuuming, mopping, and wiping counters. A deep clean goes much further — inside the oven and microwave, grout scrubbing in bathrooms and kitchen, baseboards and door frames, ceiling fans, and removing soap scum and hard water buildup throughout. Deep cleans take 3–6 hours and are recommended once or twice a year.",
           },
         },
         {
@@ -1852,7 +1852,7 @@ export const blogPosts: BlogPost[] = [
   <li>Inside the oven, microwave, and refrigerator</li>
   <li>Scrubbing grout lines in kitchens and bathrooms</li>
   <li>Wiping down baseboards and door frames throughout the home</li>
-  <li>Cleaning ceiling fans, light fixtures, and window sills and tracks</li>
+  <li>Cleaning ceiling fans, light fixtures, and window sills and inside glass</li>
   <li>Degreasing the range hood and all appliance exteriors</li>
   <li>Removing soap scum and hard water buildup from showers and tubs</li>
 </ul>

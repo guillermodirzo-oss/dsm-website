@@ -30,7 +30,7 @@ const faqs = [
   {
     question: "What is included in deep cleaning in Naperville?",
     answer:
-      "Our Naperville deep cleaning covers everything in a standard clean plus: inside kitchen appliances (oven, microwave, refrigerator exterior), scrubbing grout and tile, cleaning inside cabinet fronts, wiping all baseboards and door frames, cleaning ceiling fans and light fixtures, washing window sills and tracks, scrubbing bathroom fixtures and shower doors, and detail-cleaning areas that are skipped in routine visits.",
+      "Our Naperville deep cleaning covers everything in a standard clean plus: inside kitchen appliances (oven, microwave, refrigerator exterior), scrubbing grout and tile, cleaning inside cabinet fronts, wiping all baseboards and door frames, cleaning ceiling fans and light fixtures, washing window sills and inside glass, scrubbing bathroom fixtures and shower doors, and detail-cleaning areas that are skipped in routine visits.",
   },
   {
     question: "How long does a deep clean take in Naperville?",
@@ -106,7 +106,7 @@ const pricingBySize = [
 const included = [
   { room: "Kitchen", items: ["Inside microwave", "Inside and outside oven", "Refrigerator exterior", "Grease-cut stovetop and drip pans", "Wipe all cabinet fronts and handles", "Scrub sink and faucet", "Clean small appliances", "Sweep and mop floor"] },
   { room: "Bathrooms", items: ["Scrub grout and tile", "Remove soap scum from shower/tub", "Clean inside and behind toilet", "Polish all fixtures", "Scrub sink and vanity", "Wipe all baseboards", "Clean mirrors and glass", "Scrub floor"] },
-  { room: "Bedrooms & Living", items: ["Dust ceiling fans and fixtures", "Wipe all baseboards and door frames", "Clean window sills and tracks", "Dust all surfaces top-to-bottom", "Vacuum carpets with edge detail", "Sweep and mop hard floors", "Wipe light switches and outlets"] },
+  { room: "Bedrooms & Living", items: ["Dust ceiling fans and fixtures", "Wipe all baseboards and door frames", "Clean window sills and inside glass", "Dust all surfaces top-to-bottom", "Vacuum carpets with edge detail", "Sweep and mop hard floors", "Wipe light switches and outlets"] },
   { room: "Whole Home", items: ["Wipe all doors and door frames", "Clean all vents and registers", "Spot-clean walls as needed", "Wipe all window sills", "Empty and re-line trash bins", "Final walkthrough inspection"] },
 ];
 
@@ -284,7 +284,7 @@ export default function DeepCleaningCostNapervillePage() {
                   { feature: "Baseboard detail cleaning", standard: "Light wipe", deep: "Full scrub" },
                   { feature: "Ceiling fans & fixtures", standard: "✗", deep: "✓" },
                   { feature: "Inside cabinet fronts", standard: "✗", deep: "✓" },
-                  { feature: "Window sill & track detail", standard: "✗", deep: "✓" },
+                  { feature: "Window sills and inside glass", standard: "✗", deep: "✓" },
                   { feature: "Estimated time (2 bed / 1 bath)", standard: "2–3 hours", deep: "4–6 hours" },
                   { feature: "Best for", standard: "Regular maintenance", deep: "First clean, seasonal reset" },
                 ].map((row) => (

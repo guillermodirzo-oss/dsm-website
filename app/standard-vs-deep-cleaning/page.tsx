@@ -102,7 +102,7 @@ const comparisonRows = [
   { feature: "Inside oven", standard: "—", deep: "✓" },
   { feature: "Refrigerator exterior detail", standard: "—", deep: "✓" },
   { feature: "Baseboard scrubbing", standard: "Light wipe", deep: "Full scrub" },
-  { feature: "Window sills & tracks", standard: "—", deep: "✓" },
+  { feature: "Window sills and inside glass", standard: "—", deep: "✓" },
   { feature: "Ceiling fans & light fixtures", standard: "—", deep: "✓" },
   { feature: "Grout scrubbing", standard: "—", deep: "✓" },
   { feature: "Cabinet interiors", standard: "—", deep: "✓" },

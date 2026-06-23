@@ -56,7 +56,7 @@ const faqSchema = {
       name: "What is included in a deep cleaning service in Romeoville, IL?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Our deep cleaning service covers everything in a standard clean plus: scrubbing grout lines, cleaning behind and under appliances, wiping down baseboards and molding, deep-cleaning inside the oven and microwave, scrubbing bathroom tiles and fixtures, cleaning window sills and tracks, and more. It is a top-to-bottom detail clean.",
+        text: "Our deep cleaning service covers everything in a standard clean plus: scrubbing grout lines, cleaning behind and under appliances, wiping down baseboards and molding, deep-cleaning inside the oven and microwave, scrubbing bathroom tiles and fixtures, cleaning window sills and inside glass, and more. It is a top-to-bottom detail clean.",
       },
     },
     {
@@ -149,7 +149,7 @@ const deepCleanChecklist = [
     items: [
       "Dust all surfaces, shelves, and décor",
       "Wipe baseboards and door frames",
-      "Clean window sills and tracks",
+      "Clean window sills and inside glass",
       "Vacuum under and behind furniture",
       "Clean ceiling fans and light fixtures",
       "Vacuum and spot-clean upholstery",
@@ -175,7 +175,7 @@ const faqs = [
   {
     question: "What is included in a deep cleaning service in Romeoville, IL?",
     answer:
-      "Our deep cleaning service covers everything in a standard clean plus: scrubbing grout lines, cleaning behind and under appliances, wiping down baseboards and molding, deep-cleaning inside the oven and microwave, scrubbing bathroom tiles and fixtures, cleaning window sills and tracks, and more.",
+      "Our deep cleaning service covers everything in a standard clean plus: scrubbing grout lines, cleaning behind and under appliances, wiping down baseboards and molding, deep-cleaning inside the oven and microwave, scrubbing bathroom tiles and fixtures, cleaning window sills and inside glass, and more.",
   },
   {
     question: "How long does a deep cleaning take?",
@@ -320,7 +320,7 @@ export default function DeepCleaningPage() {
                   { task: "Grout scrubbing", standard: false, deep: true },
                   { task: "Behind/under appliances", standard: false, deep: true },
                   { task: "Baseboards & door frames", standard: false, deep: true },
-                  { task: "Window sills & tracks", standard: false, deep: true },
+                  { task: "Window sills and inside glass", standard: false, deep: true },
                   { task: "Cabinet fronts detailed", standard: false, deep: true },
                 ].map((row) => (
                   <div key={row.task} className="flex items-center justify-between text-sm">
