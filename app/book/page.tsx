@@ -414,7 +414,7 @@ export default function BookPage() {
             <div
               id="bk-skeleton"
               className="absolute inset-0 bg-white z-10 pointer-events-none"
-              style={{ minHeight: "1000px" }}
+              style={{ minHeight: "1800px" }}
             >
               <div className="p-6 space-y-4 animate-pulse">
                 <div className="h-6 bg-gray-100 rounded-full w-1/2 mx-auto" />
@@ -432,9 +432,9 @@ export default function BookPage() {
               dangerouslySetInnerHTML={{
                 __html: `<iframe
                   src="https://dsmcleaningsolutions.bookingkoala.com/booknow?embed=true"
-                  style="border:none;height:1000px;display:block"
+                  style="border:none;height:1800px;display:block"
                   width="100%"
-                  scrolling="no"
+                  scrolling="auto"
                   loading="lazy"
                   onload="var s=document.getElementById('bk-skeleton');if(s)s.style.display='none';"
                 ></iframe>`,
