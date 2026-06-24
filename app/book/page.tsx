@@ -237,7 +237,7 @@ export default function BookPage() {
             >
               Lock In My Spot Now →
             </a>
-            <p className="text-xs mt-3" style={{ color: "#93afd4" }}>Offer expires May 31 · Spots are limited</p>
+            <p className="text-xs mt-3" style={{ color: "#93afd4" }}>Offer expires July 31 · Spots are limited</p>
           </div>
         </div>
       </section>
@@ -391,7 +391,7 @@ export default function BookPage() {
               <span className="font-black tracking-widest px-2 py-0.5 rounded" style={{ backgroundColor: ORANGE, color: "#fff" }}>
                 {COUPON}
               </span>{" "}
-              at checkout · Free oven cleaning added automatically · Offer expires May 31
+              at checkout · Free oven cleaning added automatically · Offer expires July 31
             </p>
           </div>
 
