@@ -300,7 +300,7 @@ export default function BookPage() {
           </h2>
           <p className="text-gray-300 text-lg leading-relaxed mb-4 max-w-2xl mx-auto">
             If we miss anything, contact us within{" "}
-            <span className="text-white font-bold">48 hours</span> and we'll come back and make it right.{" "}
+            <span className="text-white font-bold">48 hours</span> and we&apos;ll come back and make it right.{" "}
             <span className="font-bold" style={{ color: ORANGE }}>No charge.</span>
           </p>
           <p className="text-gray-500 text-base mb-10">
