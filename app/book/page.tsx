@@ -39,13 +39,13 @@ const valueStack = [
   { item: "Full Deep Cleaning of Your Entire Home", value: "$300+" },
   { item: "Every Baseboard Scrubbed by Hand", value: "Included" },
   { item: "Grout & Tile Detail in Every Bathroom", value: "Included" },
-  { item: "Kitchen Deep Clean — Inside & Out", value: "Included" },
+  { item: "Kitchen Deep Clean: Inside and Out", value: "Included" },
   { item: "Window Sills, Door Frames, Vents & Light Switches", value: "Included" },
   { item: "Bathrooms Sanitized Top to Bottom", value: "Included" },
   { item: "Eco-Friendly Products (Safe for Kids & Pets)", value: "Included" },
   { item: "Trained, Background-Checked Cleaners", value: "Included" },
   { item: "48-Hour Re-Clean Guarantee", value: "Included" },
-  { item: "FREE Oven Deep Clean — May Only Bonus", value: "$40 value" },
+  { item: "FREE Oven Deep Clean, Summer Bonus", value: "$40 value" },
   { item: "May Discount Code: SPRING75", value: "− $75 off" },
 ];
 
@@ -75,7 +75,7 @@ const reviews = [
 const faqs = [
   {
     q: "Do I need to be home during the cleaning?",
-    a: "Nope. Many of our clients leave a key or code and come home to a spotless house. Our cleaners are background-checked and fully insured — your home is safe.",
+    a: "Nope. Many of our clients leave a key or code and come home to a spotless house. Our cleaners are background-checked and fully insured. Your home is safe.",
   },
   {
     q: "How do I apply the $75 discount?",
@@ -83,7 +83,7 @@ const faqs = [
   },
   {
     q: "Is the free oven cleaning really free?",
-    a: "Yes — completely free this May. Our oven deep clean is normally a $40 add-on. Book this month and it's included at no charge.",
+    a: "Yes, completely free through July. Our oven deep clean is normally a $40 add-on. Book before July 31 and it's included at no charge.",
   },
   {
     q: "What if I'm not happy with the clean?",
@@ -104,7 +104,7 @@ export default function BookPage() {
     <>
       {/* ════════════ STICKY TOP BAR ════════════ */}
       <div className="sticky top-0 z-50 text-white py-2.5 px-4 text-center text-sm font-semibold" style={{ backgroundColor: ORANGE }}>
-        🔥 May Only — $75 Off + Free Oven Cleaning ($40 value) · Use Code&nbsp;
+        🔥 $75 Off + Free Oven Cleaning ($40 value) through July · Use Code&nbsp;
         <span className="bg-white font-black px-2 py-0.5 rounded tracking-widest" style={{ color: ORANGE }}>
           {COUPON}
         </span>
@@ -124,7 +124,7 @@ export default function BookPage() {
             style={{ backgroundColor: "rgba(232,114,28,0.08)", borderColor: "rgba(232,114,28,0.4)", color: ORANGE }}
           >
             <span className="w-2 h-2 rounded-full animate-pulse flex-shrink-0" style={{ backgroundColor: ORANGE }} />
-            May Only — Limited Spots Left
+            Limited Time · Spots Filling Fast
           </div>
 
           {/* Headline */}
@@ -133,7 +133,7 @@ export default function BookPage() {
             <span style={{ color: ORANGE }}>Deep Cleaned for $75 Off</span>
           </h1>
           <p className="text-xl sm:text-2xl font-bold mb-3" style={{ color: NAVY }}>
-            + FREE Oven Cleaning — a $40 Value — This May Only
+            Plus free oven cleaning this summer. A $40 value, on us.
           </p>
           <p className="text-gray-500 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
             Family-owned · Fully insured · Eco-friendly products · Serving Romeoville, Plainfield, Bolingbrook, Lockport, Shorewood &amp; Crest Hill
@@ -153,7 +153,7 @@ export default function BookPage() {
             className="inline-block text-white font-extrabold text-xl px-10 py-5 rounded-full shadow-2xl hover:opacity-90 active:scale-95 transition-all duration-200 mb-4"
             style={{ backgroundColor: ORANGE, boxShadow: "0 15px 40px rgba(232,114,28,0.35)" }}
           >
-            Claim My $75 Off — Book Now →
+            Claim My $75 Off and Book Now →
           </a>
           <p className="text-gray-400 text-sm">No credit card required to get started · Instant confirmation</p>
         </div>
@@ -163,12 +163,12 @@ export default function BookPage() {
       <section className="py-16 px-4" style={{ backgroundColor: NAVY }}>
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-10">
-            <p className="text-xs uppercase tracking-widest font-bold mb-2" style={{ color: "#93afd4" }}>Your May Offer</p>
+            <p className="text-xs uppercase tracking-widest font-bold mb-2" style={{ color: "#93afd4" }}>Summer Offer</p>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-3 tracking-tight">
               Here&apos;s Everything You Get
             </h2>
             <p className="text-base leading-relaxed" style={{ color: "#c7d9ef" }}>
-              Say yes to this and saying no starts to feel ridiculous.
+              Everything included with your first clean this summer.
             </p>
           </div>
 
@@ -237,7 +237,7 @@ export default function BookPage() {
             >
               Lock In My Spot Now →
             </a>
-            <p className="text-xs mt-3" style={{ color: "#93afd4" }}>Offer expires July 31 · Spots are limited</p>
+            <p className="text-xs mt-3" style={{ color: "#93afd4" }}>Offer expires July 31. Spots are limited.</p>
           </div>
         </div>
       </section>
@@ -248,7 +248,7 @@ export default function BookPage() {
           <div className="text-center mb-12">
             <p className="text-xs uppercase tracking-widest font-bold mb-2" style={{ color: ORANGE }}>Simple Process</p>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
-              From Booking to Spotless — In 3 Steps
+              From Booking to Spotless in 3 Steps
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -261,12 +261,12 @@ export default function BookPage() {
               {
                 step: "2",
                 title: "We Show Up & Get to Work",
-                desc: "Our vetted, insured team arrives on time and deep cleans every room, every surface — including your oven for free.",
+                desc: "Our vetted, insured team shows up on time and cleans every room, every surface. Your oven is included free.",
               },
               {
                 step: "3",
                 title: "Walk Into a Home You Love",
-                desc: "Come home to spotless. If anything isn't perfect, we come back within 48 hours — free, no questions asked.",
+                desc: "Come home to a spotless house. If anything isn't right, we come back within 48 hours at no charge.",
               },
             ].map((s) => (
               <div key={s.step} className="flex flex-col items-center text-center p-6 rounded-2xl bg-gray-50 border border-gray-100">
@@ -296,15 +296,15 @@ export default function BookPage() {
             </svg>
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-5 tracking-tight">
-            Our Promise — Zero Risk to You
+            Our Promise: Zero Risk to You
           </h2>
           <p className="text-gray-300 text-lg leading-relaxed mb-4 max-w-2xl mx-auto">
-            If we miss anything — anything at all — contact us within{" "}
-            <span className="text-white font-bold">48 hours</span> and we come back and make it right at{" "}
-            <span className="font-bold" style={{ color: ORANGE }}>absolutely no charge</span>.
+            If we miss anything, contact us within{" "}
+            <span className="text-white font-bold">48 hours</span> and we'll come back and make it right.{" "}
+            <span className="font-bold" style={{ color: ORANGE }}>No charge.</span>
           </p>
           <p className="text-gray-500 text-base mb-10">
-            No hassle. No arguments. No excuses. Just a spotless home — or we fix it free.
+            No hassle. No arguments. No excuses. We fix it free.
           </p>
           <a
             href="#booking-form"
@@ -360,7 +360,7 @@ export default function BookPage() {
           <div className="text-center mb-10">
             <p className="text-xs uppercase tracking-widest font-bold mb-2" style={{ color: ORANGE }}>Got Questions?</p>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
-              Everything You&apos;re Wondering — Answered
+              Everything You&apos;re Wondering, Answered
             </h2>
           </div>
           <div className="space-y-4">
@@ -398,7 +398,7 @@ export default function BookPage() {
           {/* Form header */}
           <div className="text-center mb-8">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-2 tracking-tight">
-              Book Your Cleaning — Takes Less Than 2 Minutes
+              Book Your Cleaning. Takes Less Than 2 Minutes.
             </h2>
             <p className="text-gray-500 text-sm">
               Serving Romeoville, Plainfield, Bolingbrook, Lockport, Shorewood &amp; Crest Hill ·{" "}
