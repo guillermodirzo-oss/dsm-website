@@ -257,6 +257,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/blog/maid-service-naperville-il`,
+      lastModified: new Date("2026-06-29"),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/blog/maid-service-plainfield-il`,
       lastModified: new Date("2026-06-27"),
       changeFrequency: "monthly" as const,
