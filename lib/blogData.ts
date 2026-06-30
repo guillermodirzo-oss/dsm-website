@@ -111,6 +111,102 @@ export const blogPosts: BlogPost[] = [
 <p>A surface wipe-down won't get the oven interior, the grout, the baseboards, or the ceiling fans. DSM Cleaning Solutions' deep cleaning service in Bolingbrook covers every corner — and every visit is backed by our 48-hour satisfaction guarantee. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> today and schedule your deep clean.</p>`,
   },
   {
+    slug: "maid-service-bolingbrook-il",
+    title: "Maid Service in Bolingbrook, IL — What's Included, Pricing & How to Book",
+    metaTitle: "Maid Service in Bolingbrook IL — What's Included, Pricing & How to Book",
+    metaDescription:
+      "Looking for a dependable maid service in Bolingbrook, IL? DSM Cleaning Solutions offers weekly, bi-weekly, and monthly recurring cleaning with a 48-hour satisfaction guarantee. See what's included.",
+    date: "July 1, 2026",
+    dateISO: "2026-07-01",
+    author: "DSM Cleaning Solutions",
+    excerpt:
+      "Between work, school, and weekend activities, keeping a Bolingbrook home clean can feel like a losing battle. A recurring maid service from DSM Cleaning Solutions gives you your weekends back, with weekly, bi-weekly, or monthly visits and a 48-hour satisfaction guarantee on every clean.",
+    faqSchema: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Do I need to be home when the cleaners come?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "No, you don't have to be. Most of our Bolingbrook clients share a key or door code so we can clean while they're at work or out with the kids. Our team is background-checked and fully insured, so you can feel comfortable leaving your home with us. If you'd rather be home for the first visit to walk through expectations, that's completely fine.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What if I need to skip or reschedule a cleaning?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Just let us know ahead of time. We ask for at least 24 hours' notice so we can adjust our schedule, but we understand that things come up. There's no penalty for skipping a visit. We'll pick back up on your next scheduled date, or we can find a different time that works better for you.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do you bring your own supplies and equipment?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, we bring everything including vacuums, mops, and cleaning products. You don't need to have anything ready. If you have a preferred product for a specific surface in your home, just let us know and we'll use it instead.",
+          },
+        },
+      ],
+    },
+    content: `<p>Bolingbrook households are busy. Between work schedules, school pickups, sports practice, and everything else going on during the week, the house gets messy again almost as fast as you clean it. If that sounds familiar, a recurring maid service in <a href="/bolingbrook-il" class="text-brand-green font-semibold hover:underline">Bolingbrook, IL</a> is worth a serious look. DSM Cleaning Solutions offers weekly, bi-weekly, and monthly cleaning visits so you can stop spending your weekends scrubbing bathrooms and actually enjoy the time off. Every visit is backed by our 48-hour satisfaction guarantee.</p>
+
+<h2>What Does a Recurring Maid Service Include?</h2>
+<p>A recurring maid service is not the same as a one-time <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep clean</a>. A deep clean is a more intensive appointment that gets into places regular cleaning doesn't touch, like oven interiors, cabinet insides, and grout lines. A recurring visit is maintenance cleaning, keeping the home at a consistent standard so it never gets to the point where it needs a full reset.</p>
+<p>On every regular visit, our team handles the kitchen surfaces, stovetop, and sink. Bathrooms get a full scrub: toilet inside and out, tub, shower, sink, mirrors, and floor. In bedrooms we dust all surfaces, vacuum or mop the floors, and make the beds if linens are left out. Living areas get dusted and vacuumed with surfaces wiped down. It's consistent work that keeps the house genuinely clean between visits, not just presentable on the surface.</p>
+
+<h2>Weekly, Bi-Weekly, or Monthly: Which Fits Your Bolingbrook Home?</h2>
+<p>The right frequency depends on what's going on in your household. Here's how most clients land on a schedule:</p>
+<ul>
+  <li><strong>Weekly:</strong> the best fit for families with young kids, homes with pets, or anyone who needs the house consistently guest-ready. More people and activity means more cleaning needed to stay on top of it.</li>
+  <li><strong>Bi-weekly:</strong> the most popular choice for our Bolingbrook clients. It keeps the home in good shape without the cost of weekly visits, and it works well for most households where things don't pile up too fast.</li>
+  <li><strong>Monthly:</strong> a good option for smaller households, or people who handle day-to-day tidying on their own and just want a professional clean once a month for the things that build up over time.</li>
+</ul>
+<p>DSM offers all three, and you're not locked into a single schedule forever. If your household changes or you just want to try a different frequency, we can adjust it.</p>
+
+<h2>What's Included Room by Room</h2>
+<p>Here's exactly what our team covers on a recurring cleaning visit:</p>
+<ul>
+  <li><strong>Kitchen:</strong> countertops cleaned and sanitized, stovetop wiped down, microwave exterior cleaned, sink scrubbed, cabinet exteriors wiped, floor swept and mopped</li>
+  <li><strong>Bathrooms:</strong> toilet scrubbed inside and out, tub and shower walls cleaned, sink and vanity wiped, mirror polished, floor mopped</li>
+  <li><strong>Bedrooms:</strong> all surfaces dusted, floors vacuumed or mopped, beds made, window sills cleaned</li>
+  <li><strong>Living areas:</strong> furniture and shelves dusted, floors vacuumed or mopped, light switches wiped down</li>
+  <li><strong>Throughout the home:</strong> trash emptied, doors and handles spot-cleaned</li>
+</ul>
+<p>We bring our own supplies and equipment to every visit, so there's nothing you need to set out for us ahead of time.</p>
+
+<h2>How Much Does Maid Service Cost in Bolingbrook, IL?</h2>
+<p>What you'll pay depends on the size of your home, the number of bedrooms and bathrooms, and how often you want cleaning. Frequency matters too: clients who schedule bi-weekly service pay less per visit than monthly clients, because the home stays in better shape between appointments and takes less time each visit.</p>
+<p>We don't post flat rates because a number that's right for one home will be wrong for another. The fastest way to get an accurate quote for your Bolingbrook home is to call us at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or book online. We'll ask a few quick questions and have a number ready right away. Most new clients start with a deep clean first to set a solid baseline, and recurring visits maintain it from there.</p>
+
+<h2>Why Bolingbrook Homeowners Choose DSM Cleaning Solutions</h2>
+<ul>
+  <li><strong>Locally owned and operated.</strong> DSM is a family-owned business based in the southwest suburbs, not a national chain. We serve Bolingbrook and the surrounding Will County area and our reputation here matters to us personally.</li>
+  <li><strong>Same trusted cleaners each visit.</strong> We send the same person or team to your home as often as we can, so you're not meeting someone new every couple of weeks.</li>
+  <li><strong>Background-checked and fully insured.</strong> Every cleaner passes a background check before their first job, and we carry full liability insurance on every visit.</li>
+  <li><strong>48-hour satisfaction guarantee.</strong> If something got missed after a visit, let us know within 48 hours and we'll come back and fix it at no charge.</li>
+</ul>
+
+<h2>How to Get Started With Recurring Cleaning in Bolingbrook</h2>
+<p>Getting started is easy. Call us at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or book online and tell us a bit about your home. Your first appointment is typically a deep clean to get everything up to the right standard, and then recurring visits keep it there. There are no long-term contracts, and you can pause or change your frequency whenever you need to. We also serve <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield</a>, <a href="/romeoville-il" class="text-brand-green font-semibold hover:underline">Romeoville</a>, and <a href="/naperville-il" class="text-brand-green font-semibold hover:underline">Naperville</a>.</p>
+
+<h2>Frequently Asked Questions About Maid Service in Bolingbrook</h2>
+
+<h3>Do I need to be home when the cleaners come?</h3>
+<p>No, you don't have to be. Most of our Bolingbrook clients share a key or door code so we can clean while they're at work or out with the kids. Our team is background-checked and fully insured, so you can feel comfortable leaving your home with us. If you'd rather be home for the first visit, that's completely fine too.</p>
+
+<h3>What if I need to skip or reschedule a cleaning?</h3>
+<p>Just let us know ahead of time. We ask for at least 24 hours' notice when possible so we can adjust our schedule, but we understand that things come up. There's no penalty for skipping a visit here and there, and we can always find a time that works better for you.</p>
+
+<h3>Do you bring your own supplies and equipment?</h3>
+<p>Yes, we bring everything we need, including vacuums, mops, and cleaning products. You don't need to have anything ready or set out for us. If you have a product you'd prefer we use on a specific surface, like a certain floor cleaner or countertop spray, just tell us and we'll use it.</p>
+
+<h3>Ready to Stop Spending Your Weekends Cleaning?</h3>
+<p>Coming home to a clean house without having spent the morning doing it yourself is a better feeling than most people expect. DSM Cleaning Solutions provides weekly, bi-weekly, and monthly maid service throughout Bolingbrook, and every visit is backed by our 48-hour satisfaction guarantee. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> and get your first cleaning on the calendar.</p>`,
+  },
+  {
     slug: "maid-service-naperville-il",
     title: "Maid Service in Naperville, IL — What's Included, Pricing & How to Book",
     metaTitle: "Maid Service in Naperville IL — What's Included, Pricing & How to Book",

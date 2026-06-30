@@ -257,6 +257,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/blog/maid-service-bolingbrook-il`,
+      lastModified: new Date("2026-07-01"),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/blog/maid-service-naperville-il`,
       lastModified: new Date("2026-06-29"),
       changeFrequency: "monthly" as const,
