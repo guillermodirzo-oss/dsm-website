@@ -257,6 +257,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/blog/move-out-cleaning-lockport-il`,
+      lastModified: new Date("2026-06-30"),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/blog/maid-service-bolingbrook-il`,
       lastModified: new Date("2026-07-01"),
       changeFrequency: "monthly" as const,

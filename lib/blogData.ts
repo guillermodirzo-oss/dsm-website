@@ -111,6 +111,97 @@ export const blogPosts: BlogPost[] = [
 <p>A surface wipe-down won't get the oven interior, the grout, the baseboards, or the ceiling fans. DSM Cleaning Solutions' deep cleaning service in Bolingbrook covers every corner — and every visit is backed by our 48-hour satisfaction guarantee. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> today and schedule your deep clean.</p>`,
   },
   {
+    slug: "move-out-cleaning-lockport-il",
+    title: "Move-Out Cleaning in Lockport, IL - Checklist, Costs and How to Book",
+    metaTitle: "Move-Out Cleaning in Lockport IL - Checklist, Costs and How to Book",
+    metaDescription:
+      "Moving out of your Lockport home or apartment? DSM Cleaning Solutions provides professional move-out cleaning with a 48-hour satisfaction guarantee. See what's included and book online.",
+    date: "June 30, 2026",
+    dateISO: "2026-06-30",
+    author: "DSM Cleaning Solutions",
+    excerpt:
+      "Moving out of a Lockport home or apartment means packing, coordinating movers, and still leaving the place spotless for the landlord walkthrough. DSM Cleaning Solutions handles the cleaning so you can focus on the move, and every job is backed by a 48-hour satisfaction guarantee.",
+    faqSchema: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Does move-out cleaning include the inside of the oven and refrigerator?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, both are included in our move-out cleaning service. The oven interior and racks get scrubbed, and we clean both the inside and outside of the refrigerator. These are two of the areas landlords check most closely, so we make sure they're done right. If your refrigerator has a lot of buildup, it just takes a bit more time, but it's always part of the job.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What if my landlord isn't satisfied after the cleaning?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "That's what our 48-hour satisfaction guarantee is for. If your landlord finds something that was missed during the walkthrough, contact us within 48 hours and we'll come back and take care of it at no charge. We stand behind our work, and we'd rather fix something than have you lose part of your deposit over it.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How far in advance should I book my move-out cleaning in Lockport?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "At least 5 to 7 days before your walkthrough date is a good rule of thumb. Late spring and summer are the busiest moving months in Lockport and the rest of Will County, and our schedule fills up fast during that stretch. If you know your move-out date, book as soon as you can rather than waiting until the week of.",
+          },
+        },
+      ],
+    },
+    content: `<p>Moving out is a lot to manage at once. You're packing boxes, coordinating movers, dealing with utilities, and somewhere in the middle of all that you realize the place still needs to be spotless before the landlord walks through. That's where <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning</a> in <a href="/lockport-il" class="text-brand-green font-semibold hover:underline">Lockport, IL</a> from DSM Cleaning Solutions comes in. We handle the full clean so you can focus on the move itself. Every job comes with a 48-hour satisfaction guarantee, so if the landlord finds anything after the walkthrough, we'll come back and fix it at no charge.</p>
+
+<h2>What Lockport Landlords Check During Move-Out Inspections</h2>
+<p>Most landlords in Lockport work from a checklist during move-out walkthroughs, and they know exactly where tenants tend to miss things. The oven interior is almost always on the list. Grease and baked-on buildup inside an oven is one of the most common reasons for deposit deductions. The stovetop, burner grates, and hood vent get checked too.</p>
+<p>Bathrooms get a close look at the toilet base, behind the bowl, and the grout lines in the tub and shower. Landlords check baseboards throughout the home because dust and scuffs collect there and they're easy to spot. Window sills, blinds, and light switches are other common points. Floors get inspected in every room, including inside closets. If you've been in the unit for a year or more, the buildup in these spots adds up fast, and a surface clean won't cut it for a move-out inspection.</p>
+
+<h2>What's Included in DSM's Move-Out Cleaning Service</h2>
+<p>Our move-out cleaning covers more ground than a standard recurring visit. Here's what the team covers:</p>
+<ul>
+  <li><strong>Kitchen:</strong> oven interior and racks scrubbed, stovetop and burners degreased, hood vent cleaned, refrigerator cleaned inside and out, all cabinet interiors and exteriors wiped, countertops cleaned and sanitized, sink scrubbed, microwave cleaned inside and out, floor swept and mopped</li>
+  <li><strong>Bathrooms:</strong> toilet scrubbed inside and out including the base and behind the bowl, tub and shower walls scrubbed, grout cleaned, sink and faucet scrubbed, mirror cleaned, vanity wiped down, floor scrubbed</li>
+  <li><strong>Bedrooms:</strong> closet interiors wiped down, baseboards wiped, window sills cleaned, ceiling fans dusted, all surfaces dusted, floors vacuumed and mopped</li>
+  <li><strong>Living areas:</strong> baseboards wiped, ceiling fans dusted, blinds wiped down, floors vacuumed and mopped, light switches and outlet covers wiped</li>
+  <li><strong>Throughout the home:</strong> trash removed, door frames wiped, spot-cleaning of walls where needed</li>
+</ul>
+<p>This is a different level of service than a standard maintenance clean, designed specifically to pass a landlord inspection.</p>
+
+<h2>How Much Does Move-Out Cleaning Cost in Lockport, IL?</h2>
+<p>Pricing depends on the size of the unit, the number of bedrooms and bathrooms, and the overall condition of the space. A one-bedroom apartment that's been well-maintained is a shorter job than a three-bedroom house that's been lived in for several years. The more buildup there is in the oven, bathroom, or kitchen, the more time it takes to clean properly.</p>
+<p>Move-out cleans cost more than a standard maintenance visit because of the detail involved. We're going places that don't get touched in a regular clean, and that takes more time. That said, the cost is almost always less than losing even a portion of a security deposit. The best way to get an accurate number is to call us at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a>. We'll ask a few questions about your space and give you a straight quote.</p>
+
+<h2>When Should You Schedule Your Move-Out Cleaning in Lockport?</h2>
+<p>Plan to have the cleaning done 5 to 7 days before your final walkthrough. That gives you a small window to handle anything unexpected before the landlord comes through, and it means the unit isn't sitting long enough to collect dust again before the inspection.</p>
+<p>Late spring through summer is the busiest moving season in Lockport and across Will County. A lot of leases end in May, June, and July, and availability fills up fast. If you know your move-out date, book as early as you can.</p>
+
+<h2>Why Lockport Residents Trust DSM Cleaning Solutions</h2>
+<ul>
+  <li><strong>Locally owned and operated.</strong> DSM is based in the southwest suburbs and serves Lockport along with the surrounding Will County communities. We're not a national franchise, and our reputation here matters to us.</li>
+  <li><strong>Background-checked and fully insured.</strong> Every cleaner on our team passes a background check before their first job, and we carry full liability insurance on every visit.</li>
+  <li><strong>48-hour satisfaction guarantee.</strong> If the landlord finds something that was missed, contact us within 48 hours and we'll come back and fix it at no charge. No runaround.</li>
+  <li><strong>Consistently 5-star rated.</strong> Our reviews on Google reflect what Lockport clients experience: a team that shows up, does the work, and stands behind it.</li>
+</ul>
+
+<h2>Areas We Serve Near Lockport</h2>
+<p>DSM Cleaning Solutions also provides move-out cleaning throughout the southwest suburbs. We serve <a href="/romeoville-il" class="text-brand-green font-semibold hover:underline">Romeoville</a>, <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield</a>, Bolingbrook, <a href="/joliet-il" class="text-brand-green font-semibold hover:underline">Joliet</a>, and Naperville. If you're moving out of a rental anywhere in Will County, we can likely cover it.</p>
+
+<h2>Frequently Asked Questions About Move-Out Cleaning in Lockport</h2>
+
+<h3>Does move-out cleaning include the inside of the oven and refrigerator?</h3>
+<p>Yes, both are included. The oven interior and racks get scrubbed, and we clean the refrigerator inside and out. These are two of the areas landlords check most closely, so we make sure they're done right. If there's a lot of buildup inside either one, it takes more time, but it's always part of the job.</p>
+
+<h3>What if my landlord isn't satisfied after the cleaning?</h3>
+<p>That's what the 48-hour satisfaction guarantee is for. If your landlord finds something during the walkthrough that was missed, contact us within 48 hours and we'll come back and take care of it at no charge. We'd rather fix something than have you lose part of your deposit over it. It rarely comes to that, but the guarantee is there if it does.</p>
+
+<h3>How far in advance should I book my move-out cleaning in Lockport?</h3>
+<p>At least 5 to 7 days before your walkthrough date is a good rule. Late spring and summer are the busiest moving months in Lockport and Will County, and availability fills up quickly during that time. If you know your move-out date, don't wait. Book as soon as you can so you're not stuck trying to find a slot the week of your move.</p>
+
+<h3>Get Your Deposit Back Without the Stress</h3>
+<p>A professional move-out clean is one of the smartest things you can do before your landlord walkthrough. The cost is a fraction of what you'd lose from a deposit deduction, and DSM's 48-hour satisfaction guarantee means there's no risk. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> and get your Lockport move-out cleaning scheduled today.</p>`,
+  },
+  {
     slug: "maid-service-bolingbrook-il",
     title: "Maid Service in Bolingbrook, IL — What's Included, Pricing & How to Book",
     metaTitle: "Maid Service in Bolingbrook IL — What's Included, Pricing & How to Book",
