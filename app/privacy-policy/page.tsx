@@ -4,13 +4,13 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Privacy Policy for DSM Cleaning Solutions. Learn how we collect, use, and protect your personal information when you use our website or book our cleaning services.",
+    "Privacy Policy for DSM Cleaning Solutions. How we collect, use, and protect your information when you use our website or book our cleaning services.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/privacy-policy" },
   robots: { index: true, follow: true },
   openGraph: {
     title: "Privacy Policy | DSM Cleaning Solutions",
     description:
-      "Privacy Policy for DSM Cleaning Solutions. Learn how we collect, use, and protect your personal information when you use our website or book our cleaning services.",
+      "Privacy Policy for DSM Cleaning Solutions. How we collect, use, and protect your information when you use our website or book our cleaning services.",
     url: "https://www.dsmcleaningsolutions.com/privacy-policy",
     siteName: "DSM Cleaning Solutions",
     images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions — Privacy Policy" }],

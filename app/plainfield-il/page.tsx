@@ -6,7 +6,7 @@ import ReviewCard from "@/components/ReviewCard";
 export const metadata: Metadata = {
   title: "House Cleaning Plainfield IL",
   description:
-    "#1 rated house cleaning service in Plainfield IL. Deep cleaning, move-out, recurring & more. Serving Grande Park, Wallin Oaks & all Plainfield neighborhoods. Call (815) 246-2113.",
+    "#1 rated house cleaning service in Plainfield IL. Deep cleaning, move-out, recurring & more. Serving Grande Park, Wallin Oaks & all Plainfield neighborhoods.",
   keywords: [
     "house cleaning Plainfield IL",
     "deep cleaning Plainfield IL",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "House Cleaning Plainfield IL",
     description:
-      "#1 rated house cleaning service in Plainfield IL. Deep cleaning, move-out, recurring & more. Serving Grande Park, Wallin Oaks & all Plainfield neighborhoods. Call (815) 246-2113.",
+      "#1 rated house cleaning service in Plainfield IL. Deep cleaning, move-out, recurring & more. Serving Grande Park, Wallin Oaks & all Plainfield neighborhoods.",
     url: "https://www.dsmcleaningsolutions.com/plainfield-il",
     siteName: "DSM Cleaning Solutions",
   },

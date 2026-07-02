@@ -307,6 +307,13 @@ const nextConfig = {
         destination: "/deep-cleaning",
         permanent: true,
       },
+
+      // ─── DEEP CLEANING CITY REDIRECTS ─────────────────────────────────────
+      {
+        source: "/deep-cleaning/naperville",
+        destination: "/deep-cleaning-naperville-il",
+        permanent: true,
+      },
     ];
   },
 };

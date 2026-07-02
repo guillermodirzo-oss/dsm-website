@@ -5,12 +5,12 @@ import LeadForm from "@/components/LeadForm";
 export const metadata: Metadata = {
   title: "Post Construction Cleaning Naperville IL",
   description:
-    "Post construction cleaning in Naperville IL by DSM Cleaning Solutions. New builds and remodels. Call (815) 246-2113.",
+    "Post construction cleaning in Naperville IL by DSM Cleaning Solutions. New builds and remodels. Fully insured. Free estimate.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/post-construction-cleaning-naperville-il" },
   openGraph: {
     title: "Post Construction Cleaning Naperville IL | DSM Cleaning Solutions",
     description:
-      "Post construction cleaning in Naperville IL by DSM Cleaning Solutions. New builds and remodels. Call (815) 246-2113.",
+      "Post construction cleaning in Naperville IL by DSM Cleaning Solutions. New builds and remodels. Fully insured. Free estimate.",
     url: "https://www.dsmcleaningsolutions.com/post-construction-cleaning-naperville-il",
     siteName: "DSM Cleaning Solutions",
     images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "Post Construction Cleaning Naperville IL" }],
@@ -73,7 +73,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Professional post-construction cleaning in Naperville, IL. New builds, full remodels, kitchen and bathroom renovations. DSM Cleaning Solutions — fully insured, free estimate, (815) 246-2113.",
+    "Post-construction cleaning in Naperville, IL. New builds, remodels, kitchen & bathroom renovations. DSM Cleaning Solutions - fully insured, free estimate.",
 };
 
 const faqSchema = {

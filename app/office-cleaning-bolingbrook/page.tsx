@@ -5,12 +5,12 @@ import OfficeLeadForm from "@/components/OfficeLeadForm";
 export const metadata: Metadata = {
   title: "Office Cleaning in Bolingbrook, IL",
   description:
-    "Reliable office and commercial cleaning in Bolingbrook, IL. DSM Cleaning Solutions keeps Bolingbrook businesses clean and professional. Call (815) 246-2113.",
+    "Reliable office and commercial cleaning in Bolingbrook, IL. DSM Cleaning Solutions keeps Bolingbrook businesses clean and professional. Free estimate.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/office-cleaning-bolingbrook" },
   openGraph: {
     title: "Office Cleaning in Bolingbrook, IL",
     description:
-      "Reliable office and commercial cleaning in Bolingbrook, IL. DSM Cleaning Solutions keeps Bolingbrook businesses clean and professional. Call (815) 246-2113.",
+      "Reliable office and commercial cleaning in Bolingbrook, IL. DSM Cleaning Solutions keeps Bolingbrook businesses clean and professional. Free estimate.",
     url: "https://www.dsmcleaningsolutions.com/office-cleaning-bolingbrook",
     siteName: "DSM Cleaning Solutions",
   },

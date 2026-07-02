@@ -5,12 +5,12 @@ import LeadForm from "@/components/LeadForm";
 export const metadata: Metadata = {
   title: "House Cleaning Gift Cards Romeoville & Plainfield IL",
   description:
-    "Give the gift of a clean home. House cleaning gift cards in Romeoville and Plainfield IL from DSM Cleaning Solutions. Call (815) 246-2113.",
+    "Give the gift of a clean home. House cleaning gift cards in Romeoville and Plainfield IL from DSM Cleaning Solutions. Never expire.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/gift-cards" },
   openGraph: {
     title: "House Cleaning Gift Cards Romeoville & Plainfield IL | DSM Cleaning Solutions",
     description:
-      "Give the gift of a clean home. House cleaning gift cards in Romeoville and Plainfield IL from DSM Cleaning Solutions. Call (815) 246-2113.",
+      "Give the gift of a clean home. House cleaning gift cards in Romeoville and Plainfield IL from DSM Cleaning Solutions. Never expire.",
     url: "https://www.dsmcleaningsolutions.com/gift-cards",
     siteName: "DSM Cleaning Solutions",
     images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "House Cleaning Gift Cards Romeoville Plainfield" }],
@@ -76,7 +76,7 @@ const serviceSchema = {
   },
   areaServed: ["Romeoville, IL", "Plainfield, IL", "Naperville, IL", "Bolingbrook, IL"],
   description:
-    "House cleaning gift cards for Romeoville, Plainfield, Naperville, and the southwest Chicago suburbs. Available in $100, $150, $200, and custom amounts. Never expire.",
+    "House cleaning gift cards for Romeoville, Plainfield, Naperville, and the southwest Chicago suburbs. Available in $100, $150, $200, and custom amounts.",
 };
 
 const breadcrumbSchema = {

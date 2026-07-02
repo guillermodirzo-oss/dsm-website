@@ -5,12 +5,12 @@ import LeadForm from "@/components/LeadForm";
 export const metadata: Metadata = {
   title: "Deep Cleaning Services Homer Glen IL",
   description:
-    "Professional deep cleaning in Homer Glen IL by DSM Cleaning Solutions. Family owned, fully insured, 48-hr guarantee. Call (815) 246-2113.",
+    "Professional deep cleaning in Homer Glen, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-homer-glen-il" },
   openGraph: {
     title: "Deep Cleaning Services Homer Glen IL",
     description:
-      "Professional deep cleaning in Homer Glen IL by DSM Cleaning Solutions. Family owned, fully insured, 48-hr guarantee. Call (815) 246-2113.",
+      "Professional deep cleaning in Homer Glen, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning-homer-glen-il",
   },
   twitter: {
@@ -23,12 +23,12 @@ const faqs = [
   {
     question: "Do you offer deep cleaning in Homer Glen, IL?",
     answer:
-      "Yes Ã¢â‚¬â€ DSM Cleaning Solutions provides professional deep cleaning throughout Homer Glen, IL (zip code 60491), including Homer Lakes, Farmington Lakes, The Highlands, Tamarack Fairways, and Homer Glen Estates. We're based in nearby Romeoville and serve all of Homer Glen regularly.",
+      "Yes - DSM Cleaning Solutions provides professional deep cleaning throughout Homer Glen, IL (zip code 60491), including Homer Lakes, Farmington Lakes, The Highlands, Tamarack Fairways, and Homer Glen Estates. We're based in nearby Romeoville and serve all of Homer Glen regularly.",
   },
   {
     question: "How far is DSM Cleaning Solutions from Homer Glen?",
     answer:
-      "Our base is in Romeoville, IL Ã¢â‚¬â€ approximately 15Ã¢â‚¬â€œ20 minutes from most Homer Glen neighborhoods. We serve Homer Glen regularly alongside our Joliet, Lockport, and Bolingbrook clients throughout Will County.",
+      "Our base is in Romeoville, IL - approximately 15-20 minutes from most Homer Glen neighborhoods. We serve Homer Glen regularly alongside our Joliet, Lockport, and Bolingbrook clients throughout Will County.",
   },
   {
     question: "What neighborhoods in Homer Glen do you serve?",
@@ -38,12 +38,12 @@ const faqs = [
   {
     question: "Is your team insured for deep cleaning in Homer Glen?",
     answer:
-      "Yes Ã¢â‚¬â€ DSM Cleaning Solutions is fully insured and bonded in Illinois, including all Homer Glen service areas. Every team member is background-checked and we carry full liability insurance on every job, so you can book with complete confidence.",
+      "Yes - DSM Cleaning Solutions is fully insured and bonded in Illinois, including all Homer Glen service areas. Every team member is background-checked and we carry full liability insurance on every job, so you can book with complete confidence.",
   },
   {
     question: "How often should Homer Glen homes get deep cleaned?",
     answer:
-      "Given the larger home sizes common in Homer Glen, we recommend a professional deep clean at least twice a year Ã¢â‚¬â€ spring and fall. Homes with pets, allergies, or young children benefit from deep cleaning every 3Ã¢â‚¬â€œ4 months. Many Homer Glen clients pair a seasonal deep clean with our ongoing standard cleaning service for year-round results.",
+      "Given the larger home sizes common in Homer Glen, we recommend a professional deep clean at least twice a year - spring and fall. Homes with pets, allergies, or young children benefit from deep cleaning every 3-4 months. Many Homer Glen clients pair a seasonal deep clean with our ongoing standard cleaning service for year-round results.",
   },
 ];
 
@@ -71,7 +71,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Professional deep cleaning in Homer Glen IL by DSM Cleaning Solutions. Family owned, fully insured, 48-hr guarantee. Call (815) 246-2113.",
+    "Professional deep cleaning in Homer Glen, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
 };
 
 const faqSchema = {
@@ -134,12 +134,12 @@ const checklist = [
 ];
 
 const trustCards = [
-  { icon: "Ã°Å¸Å’Â¿", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products safe for kids and pets." },
-  { icon: "Ã°Å¸â€ºÂ¡Ã¯Â¸Â", title: "Fully Insured & Bonded", desc: "Background-checked team. Your Homer Glen home is fully protected." },
-  { icon: "Ã¢Å“â€¦", title: "48-Hour Guarantee", desc: "We re-clean anything that isn't right within 48 hours." },
-  { icon: "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§", title: "Family Owned", desc: "Based in nearby Romeoville Ã¢â‚¬â€ your southwest suburbs neighbors." },
-  { icon: "Ã°Å¸â€œâ€¦", title: "7 Days a Week", desc: "Available 8amÃ¢â‚¬â€œ6pm, 7 days a week for your Homer Glen schedule." },
-  { icon: "Ã°Å¸â€œÂ", title: "Serving Homer Glen", desc: "All neighborhoods in zip code 60491." },
+  { icon: "", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products safe for kids and pets." },
+  { icon: "", title: "Fully Insured & Bonded", desc: "Background-checked team. Your Homer Glen home is fully protected." },
+  { icon: "", title: "48-Hour Guarantee", desc: "We re-clean anything that isn't right within 48 hours." },
+  { icon: "", title: "Family Owned", desc: "Based in nearby Romeoville - your southwest suburbs neighbors." },
+  { icon: "", title: "7 Days a Week", desc: "Available 8am-6pm, 7 days a week for your Homer Glen schedule." },
+  { icon: "", title: "Serving Homer Glen", desc: "All neighborhoods in zip code 60491." },
 ];
 
 export default function DeepCleaningHomerGlenPage() {
@@ -170,13 +170,13 @@ export default function DeepCleaningHomerGlenPage() {
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               DSM Cleaning Solutions delivers a thorough, top-to-bottom deep clean for homes across
-              Homer Glen Ã¢â‚¬â€ from Homer Lakes and Farmington Lakes to The Highlands, Tamarack Fairways,
-              and Homer Glen Estates. Large homes demand a thorough clean Ã¢â‚¬â€ and that&apos;s exactly what
+              Homer Glen - from Homer Lakes and Farmington Lakes to The Highlands, Tamarack Fairways,
+              and Homer Glen Estates. Large homes demand a thorough clean - and that&apos;s exactly what
               we deliver.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
-              <a href="tel:+18152462113" className="btn-outline-white btn-lg">Ã°Å¸â€œÅ¾ (815) 246-2113</a>
+              <a href="tel:+18152462113" className="btn-outline-white btn-lg"> (815) 246-2113</a>
             </div>
           </div>
         </div>
@@ -186,7 +186,7 @@ export default function DeepCleaningHomerGlenPage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["Ã¢Å“â€¦ Fully Insured & Bonded", "Ã°Å¸Å’Â¿ Eco-Friendly Products", "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§ Family Owned", "Ã¢Â­Â 5-Star Rated", "Ã¢Å“â€Ã¯Â¸Â Satisfaction Guaranteed"].map(
+            {["Fully Insured & Bonded", "Eco-Friendly Products", "Family Owned", "5-Star Rated", "Satisfaction Guaranteed"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -198,14 +198,14 @@ export default function DeepCleaningHomerGlenPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading mb-6">Professional Deep Cleaning Services in Homer Glen, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            <strong>Deep cleaning in Homer Glen, IL</strong> is our specialty Ã¢â‚¬â€ and DSM Cleaning Solutions brings
+            <strong>Deep cleaning in Homer Glen, IL</strong> is our specialty - and DSM Cleaning Solutions brings
             the same meticulous, detail-focused approach to every home we serve. Whether you live in Homer
             Lakes, Farmington Lakes, The Highlands, Tamarack Fairways, or Homer Glen Estates, our team
             covers all of Homer Glen (zip code 60491) with a comprehensive clean that goes far beyond
             your regular maintenance routine.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Homer Glen is known throughout Will County for its upscale, spacious homes Ã¢â‚¬â€ and larger homes
+            Homer Glen is known throughout Will County for its upscale, spacious homes - and larger homes
             mean more surface area, more rooms, and more corners that need professional attention. We&apos;re
             a family-owned business based in nearby Romeoville, and we specialize in exactly this kind
             of detailed, high-standard cleaning that Homer Glen homeowners expect. From homes backing
@@ -215,7 +215,7 @@ export default function DeepCleaningHomerGlenPage() {
           <p className="text-gray-600 leading-relaxed">
             Whether you&apos;re preparing for a seasonal reset, hosting a large gathering, or simply want
             a thorough clean after months of use, our Homer Glen deep cleaning service delivers.
-            We use only eco-friendly, non-toxic products Ã¢â‚¬â€ safe for your family, pets, and surfaces.
+            We use only eco-friendly, non-toxic products - safe for your family, pets, and surfaces.
             Conveniently close to both <Link href="/deep-cleaning-lockport-il" className="text-brand-green font-semibold hover:underline">Lockport</Link> and{" "}
             <Link href="/deep-cleaning-joliet-il" className="text-brand-green font-semibold hover:underline">Joliet</Link>, we know Will County well.
           </p>
@@ -228,7 +228,7 @@ export default function DeepCleaningHomerGlenPage() {
           <div className="text-center mb-12">
             <h2 className="section-heading">What&apos;s Included in Our Deep Cleaning in Homer Glen, IL</h2>
             <p className="section-subheading mx-auto">
-              Every room in your Homer Glen home Ã¢â‚¬â€ cleaned top to bottom.
+              Every room in your Homer Glen home - cleaned top to bottom.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -278,13 +278,13 @@ export default function DeepCleaningHomerGlenPage() {
           <p className="text-gray-600 mb-4 leading-relaxed">
             Deep cleaning in Homer Glen starts around $225 for mid-size homes and scales with the
             size of your home, the number of bedrooms and bathrooms, and how long it&apos;s been since
-            your last professional clean. Homer Glen&apos;s larger homes Ã¢â‚¬â€ particularly in The Highlands,
-            Tamarack Fairways, and Homer Glen Estates Ã¢â‚¬â€ typically fall in the $300Ã¢â‚¬â€œ$450 range,
+            your last professional clean. Homer Glen&apos;s larger homes - particularly in The Highlands,
+            Tamarack Fairways, and Homer Glen Estates - typically fall in the $300-$450 range,
             reflecting the additional rooms and square footage that come with upscale homes in this area.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
             We always provide a free, no-obligation estimate before any work begins. There are no
-            surprises Ã¢â‚¬â€ you&apos;ll know exactly what to expect before we arrive at your Homer Glen home.
+            surprises - you&apos;ll know exactly what to expect before we arrive at your Homer Glen home.
             Contact us at (815) 246-2113 or fill out the form below.
           </p>
           <Link href="/contact" className="btn-primary">Get My Free Homer Glen Quote</Link>
@@ -348,13 +348,13 @@ export default function DeepCleaningHomerGlenPage() {
               <h2 className="text-4xl font-bold mb-4">Book Your Deep Cleaning in Homer Glen Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Ready for a Homer Glen home that&apos;s clean from top to bottom? Get your free deep cleaning
-                quote Ã¢â‚¬â€ we respond within 1 business day and back every job with our 48-hour satisfaction
+                quote - we respond within 1 business day and back every job with our 48-hour satisfaction
                 guarantee.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                Ã°Å¸â€œÅ¾ (815) 246-2113
+                 (815) 246-2113
               </a>
-              <p className="text-white/80">Family-owned Ã‚Â· Eco-friendly Ã‚Â· Fully insured Ã‚Â· Satisfaction guaranteed</p>
+              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <LeadForm />

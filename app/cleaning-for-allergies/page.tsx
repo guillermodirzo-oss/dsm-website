@@ -69,7 +69,7 @@ const serviceSchema = {
   },
   areaServed: ["Romeoville, IL", "Plainfield, IL", "Naperville, IL", "Bolingbrook, IL", "Joliet, IL"],
   description:
-    "Allergy-friendly, hypoallergenic house cleaning for Illinois families with asthma, hay fever, and chemical sensitivities. Non-toxic products and allergen-reduction techniques throughout the southwest Chicago suburbs.",
+    "Allergy-friendly house cleaning for families with asthma and sensitivities. Non-toxic products, allergen-reduction techniques. Southwest Chicago suburbs.",
 };
 
 const faqSchema = {

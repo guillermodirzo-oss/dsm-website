@@ -8,7 +8,7 @@ const city = cities.find((c) => c.slug === "bolingbrook-il")!;
 export const metadata: Metadata = {
   title: "House Cleaning Bolingbrook IL",
   description:
-    "Local house cleaning in Bolingbrook, IL Ã¢â‚¬â€ deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & insured. Call for a free estimate.",
+    "Local house cleaning in Bolingbrook, IL - deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & insured. Call for a free estimate.",
   keywords: [
     "house cleaning Bolingbrook IL",
     "cleaning service Bolingbrook",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "House Cleaning Bolingbrook IL",
     description:
-      "Local house cleaning in Bolingbrook, IL Ã¢â‚¬â€ deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & insured. Call for a free estimate.",
+      "Local house cleaning in Bolingbrook, IL - deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & insured. Call for a free estimate.",
     url: "https://www.dsmcleaningsolutions.com/bolingbrook-il",
     siteName: "DSM Cleaning Solutions",
   },
@@ -42,7 +42,7 @@ export default function BolingbrookPage() {
             <div>
               <h2 className="section-heading text-3xl md:text-4xl mb-4">Bolingbrook Neighborhoods We Serve</h2>
               <p className="text-gray-500 mb-5 leading-relaxed">
-                Based in the southwest Chicago suburbs, DSM Cleaning Solutions knows every corner of Bolingbrook. We clean homes throughout every neighborhood Ã¢â‚¬â€ from the newest developments to established subdivisions we&apos;ve served for years.
+                Based in the southwest Chicago suburbs, DSM Cleaning Solutions knows every corner of Bolingbrook. We clean homes throughout every neighborhood - from the newest developments to established subdivisions we&apos;ve served for years.
               </p>
               <div className="grid grid-cols-2 gap-2 mb-5">
                 {["Naperville Acres", "Americana Estates", "Pheasant Chase", "Stillwater", "Lakewood Estates", "Lakewood Place", "Indian Boundary", "Westlake"].map((n) => (
@@ -65,7 +65,7 @@ export default function BolingbrookPage() {
               <div className="space-y-2">
                 {["Promenade Bolingbrook", "Hidden Lakes", "Bolingbrook Golf Club", "Bolingbrook Recreation Center", "Route 53 Corridor"].map((l) => (
                   <div key={l} className="flex items-center gap-3 bg-gray-50 rounded-xl p-3 border border-gray-100">
-                    <span className="text-xl">Ã°Å¸â€œÂ</span>
+                    <span className="text-xl"></span>
                     <span className="text-gray-700 font-medium text-sm">{l}</span>
                   </div>
                 ))}

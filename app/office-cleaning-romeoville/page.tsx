@@ -5,12 +5,12 @@ import OfficeLeadForm from "@/components/OfficeLeadForm";
 export const metadata: Metadata = {
   title: "Office Cleaning in Romeoville, IL",
   description:
-    "Professional office and commercial cleaning in Romeoville, IL. DSM Cleaning Solutions serves local businesses with reliable, thorough cleaning. Call (815) 246-2113.",
+    "Professional office and commercial cleaning in Romeoville, IL. DSM Cleaning Solutions serves local businesses with reliable, thorough cleaning. Free estimate.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/office-cleaning-romeoville" },
   openGraph: {
     title: "Office Cleaning in Romeoville, IL",
     description:
-      "Professional office and commercial cleaning in Romeoville, IL. DSM Cleaning Solutions serves local businesses with reliable, thorough cleaning. Call (815) 246-2113.",
+      "Professional office and commercial cleaning in Romeoville, IL. DSM Cleaning Solutions serves local businesses with reliable, thorough cleaning. Free estimate.",
     url: "https://www.dsmcleaningsolutions.com/office-cleaning-romeoville",
     siteName: "DSM Cleaning Solutions",
   },

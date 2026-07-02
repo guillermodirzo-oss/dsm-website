@@ -73,7 +73,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "House cleaning pricing guide for Plainfield, IL. DSM Cleaning Solutions offers standard, deep, and move-out cleaning in zip codes 60544 and 60585. Flat-rate pricing, no hidden fees.",
+    "House cleaning pricing guide for Plainfield, IL. Standard, deep, and move-out cleaning in 60544 and 60585. Flat-rate pricing, no hidden fees. Free estimate.",
 };
 
 const faqSchema = {

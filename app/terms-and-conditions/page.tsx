@@ -4,13 +4,13 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Terms and Conditions",
   description:
-    "Terms and Conditions for DSM Cleaning Solutions. Please read our service policies including booking, payments, cancellations, and satisfaction guarantee before booking.",
+    "Terms and Conditions for DSM Cleaning Solutions. Our service policies covering booking, payments, cancellations, and satisfaction guarantee.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/terms-and-conditions" },
   robots: { index: true, follow: true },
   openGraph: {
     title: "Terms and Conditions | DSM Cleaning Solutions",
     description:
-      "Terms and Conditions for DSM Cleaning Solutions. Please read our service policies including booking, payments, cancellations, and satisfaction guarantee before booking.",
+      "Terms and Conditions for DSM Cleaning Solutions. Our service policies covering booking, payments, cancellations, and satisfaction guarantee.",
     url: "https://www.dsmcleaningsolutions.com/terms-and-conditions",
     siteName: "DSM Cleaning Solutions",
     images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions — Terms and Conditions" }],

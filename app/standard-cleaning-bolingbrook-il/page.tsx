@@ -5,12 +5,12 @@ import LeadForm from "@/components/LeadForm";
 export const metadata: Metadata = {
   title: "Standard House Cleaning in Bolingbrook IL | DSM Cleaning Solutions",
   description:
-    "Recurring house cleaning in Bolingbrook, IL. DSM Cleaning Solutions offers weekly, bi-weekly, and monthly maid service for Bolingbrook homes. 5-star rated. Book online.",
+    "Recurring house cleaning in Bolingbrook, IL. Weekly, bi-weekly, and monthly maid service. Eco-friendly, fully insured, 5-star rated. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/standard-cleaning-bolingbrook-il" },
   openGraph: {
     title: "Standard House Cleaning in Bolingbrook IL | DSM Cleaning Solutions",
     description:
-      "Recurring house cleaning in Bolingbrook, IL. DSM Cleaning Solutions offers weekly, bi-weekly, and monthly maid service for Bolingbrook homes. 5-star rated. Book online.",
+      "Recurring house cleaning in Bolingbrook, IL. Weekly, bi-weekly, and monthly maid service. Eco-friendly, fully insured, 5-star rated. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/standard-cleaning-bolingbrook-il",
   },
   twitter: {
@@ -71,7 +71,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Recurring house cleaning in Bolingbrook IL by DSM Cleaning Solutions. Trusted, insured & eco-friendly. Call (815) 246-2113.",
+    "Recurring house cleaning in Bolingbrook IL by DSM Cleaning Solutions. Trusted, insured & eco-friendly. Free estimate.",
 };
 
 const faqSchema = {

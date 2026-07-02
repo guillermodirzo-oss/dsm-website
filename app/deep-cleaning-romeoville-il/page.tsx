@@ -5,12 +5,12 @@ import LeadForm from "@/components/LeadForm";
 export const metadata: Metadata = {
   title: "Deep Cleaning Service Romeoville IL",
   description:
-    "Expert deep cleaning in Romeoville, IL. We scrub every corner Ã¢â‚¬â€ baseboards, appliances, bathrooms & more. 5.0 stars, 48-hr guarantee. (815) 246-2113.",
+    "Expert deep cleaning in Romeoville, IL. We scrub baseboards, appliances, bathrooms & more. 5-star rated, 48-hr satisfaction guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-romeoville-il" },
   openGraph: {
     title: "Deep Cleaning Service Romeoville IL | DSM Cleaning Solutions",
     description:
-      "Expert deep cleaning in Romeoville, IL. We scrub every corner Ã¢â‚¬â€ baseboards, appliances, bathrooms & more. 5.0 stars, 48-hr guarantee. (815) 246-2113.",
+      "Expert deep cleaning in Romeoville, IL. We scrub baseboards, appliances, bathrooms & more. 5-star rated, 48-hr satisfaction guarantee. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning-romeoville-il",
   },
   twitter: {
@@ -23,12 +23,12 @@ const faqs = [
   {
     question: "How long does a deep cleaning take in Romeoville, IL?",
     answer:
-      "A deep clean in Romeoville typically takes 3Ã¢â‚¬â€œ6 hours. A smaller 2-bedroom home in Windstone may take about 3 hours, while a larger home in Grand Haven or Hidden Lakes could take 5Ã¢â‚¬â€œ6 hours or more depending on condition.",
+      "A deep clean in Romeoville typically takes 3-6 hours. A smaller 2-bedroom home in Windstone may take about 3 hours, while a larger home in Grand Haven or Hidden Lakes could take 5-6 hours or more depending on condition.",
   },
   {
     question: "Do you serve the Windstone and Hidden Lakes neighborhoods in Romeoville?",
     answer:
-      "Yes Ã¢â‚¬â€ we serve all of Romeoville (zip code 60446), including Windstone, Hidden Lakes, Grand Haven, and every other neighborhood throughout the city.",
+      "Yes - we serve all of Romeoville (zip code 60446), including Windstone, Hidden Lakes, Grand Haven, and every other neighborhood throughout the city.",
   },
   {
     question: "How much does deep cleaning cost in Romeoville, IL?",
@@ -38,12 +38,12 @@ const faqs = [
   {
     question: "Do I need to be home during the deep cleaning in Romeoville?",
     answer:
-      "No Ã¢â‚¬â€ you don&apos;t need to be home. Many of our regular Romeoville clients give us a key or a door code. Our fully insured, bonded, and background-checked team will treat your home with complete care.",
+      "No - you don&apos;t need to be home. Many of our regular Romeoville clients give us a key or a door code. Our fully insured, bonded, and background-checked team will treat your home with complete care.",
   },
   {
     question: "Is DSM Cleaning Solutions a local company in Romeoville?",
     answer:
-      "Yes Ã¢â‚¬â€ DSM Cleaning Solutions is actually based right here in Romeoville, IL. We&apos;re your neighbors, and we take deep pride in serving our home community with the best possible cleaning service.",
+      "Yes - DSM Cleaning Solutions is actually based right here in Romeoville, IL. We&apos;re your neighbors, and we take deep pride in serving our home community with the best possible cleaning service.",
   },
 ];
 
@@ -71,7 +71,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Expert deep cleaning in Romeoville, IL (60446). DSM Cleaning Solutions Ã¢â‚¬â€ locally owned, eco-friendly, satisfaction guaranteed. Call (815) 246-2113.",
+    "Expert deep cleaning in Romeoville, IL (60446). DSM Cleaning Solutions - locally owned, eco-friendly, satisfaction guaranteed. Free quote.",
 };
 
 const faqSchema = {
@@ -134,12 +134,12 @@ const checklist = [
 ];
 
 const trustCards = [
-  { icon: "Ã°Å¸Å’Â¿", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products Ã¢â‚¬â€ the safe choice for your family." },
-  { icon: "Ã°Å¸â€ºÂ¡Ã¯Â¸Â", title: "Fully Insured & Bonded", desc: "Background-checked team. Every Romeoville job fully covered." },
-  { icon: "Ã¢Å“â€¦", title: "48-Hour Guarantee", desc: "If anything isn&apos;t right, we re-clean it free within 48 hours." },
-  { icon: "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§", title: "Family Owned", desc: "Locally based in Romeoville Ã¢â‚¬â€ your neighbors, not a franchise." },
-  { icon: "Ã°Å¸â€œâ€¦", title: "7 Days a Week", desc: "We work around your schedule, including weekends." },
-  { icon: "Ã°Å¸â€œÂ", title: "Serving Romeoville", desc: "All neighborhoods throughout zip code 60446." },
+  { icon: "", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products - the safe choice for your family." },
+  { icon: "", title: "Fully Insured & Bonded", desc: "Background-checked team. Every Romeoville job fully covered." },
+  { icon: "", title: "48-Hour Guarantee", desc: "If anything isn&apos;t right, we re-clean it free within 48 hours." },
+  { icon: "", title: "Family Owned", desc: "Locally based in Romeoville - your neighbors, not a franchise." },
+  { icon: "", title: "7 Days a Week", desc: "We work around your schedule, including weekends." },
+  { icon: "", title: "Serving Romeoville", desc: "All neighborhoods throughout zip code 60446." },
 ];
 
 export default function DeepCleaningRomeovillePage() {
@@ -169,13 +169,13 @@ export default function DeepCleaningRomeovillePage() {
               Deep Cleaning in Romeoville, IL
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              DSM Cleaning Solutions is your Romeoville-based deep cleaning team. We&apos;re in your community Ã¢â‚¬â€
+              DSM Cleaning Solutions is your Romeoville-based deep cleaning team. We&apos;re in your community  - 
               serving Windstone, Hidden Lakes, Grand Haven, and every neighborhood in 60446 with a
               thorough, eco-friendly deep clean you can trust.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
-              <a href="tel:+18152462113" className="btn-outline-white btn-lg">Ã°Å¸â€œÅ¾ (815) 246-2113</a>
+              <a href="tel:+18152462113" className="btn-outline-white btn-lg"> (815) 246-2113</a>
             </div>
           </div>
         </div>
@@ -185,7 +185,7 @@ export default function DeepCleaningRomeovillePage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["Ã¢Å“â€¦ Fully Insured & Bonded", "Ã°Å¸Å’Â¿ Eco-Friendly Products", "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§ Family Owned", "Ã¢Â­Â 5-Star Rated", "Ã¢Å“â€Ã¯Â¸Â Satisfaction Guaranteed"].map(
+            {["Fully Insured & Bonded", "Eco-Friendly Products", "Family Owned", "5-Star Rated", "Satisfaction Guaranteed"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -197,7 +197,7 @@ export default function DeepCleaningRomeovillePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading mb-6">Expert Deep Cleaning Services in Romeoville, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Expert deep cleaning in Romeoville, IL starts right here Ã¢â‚¬â€ because DSM Cleaning Solutions
+            Expert deep cleaning in Romeoville, IL starts right here - because DSM Cleaning Solutions
             calls Romeoville home. Based in zip code 60446, we know this community personally and take
             genuine pride in delivering an exceptional clean to every home we visit in Windstone,
             Hidden Lakes, Grand Haven, and beyond.
@@ -205,7 +205,7 @@ export default function DeepCleaningRomeovillePage() {
           <p className="text-gray-600 mb-4 leading-relaxed">
             Romeoville families choose DSM because we combine the personal care of a local business
             with the thoroughness and professionalism of an experienced cleaning team. Our deep cleaning
-            service is designed for homeowners who want more than a surface wipe-down Ã¢â‚¬â€ we get into
+            service is designed for homeowners who want more than a surface wipe-down - we get into
             every grout line, vent, and corner that regular cleaning misses. Near Isle a la Cache Museum
             or Romeo Lake, whatever part of Romeoville you call home, we&apos;re minutes away and ready
             to transform your space.
@@ -213,7 +213,7 @@ export default function DeepCleaningRomeovillePage() {
           <p className="text-gray-600 leading-relaxed">
             Every deep cleaning service includes eco-friendly, non-toxic products that are safe for
             children and pets. We&apos;re fully insured and bonded, and we stand behind every job with our
-            48-hour satisfaction guarantee. If something isn&apos;t right, we come back and make it right Ã¢â‚¬â€
+            48-hour satisfaction guarantee. If something isn&apos;t right, we come back and make it right  - 
             at no additional charge.
           </p>
         </div>
@@ -225,7 +225,7 @@ export default function DeepCleaningRomeovillePage() {
           <div className="text-center mb-12">
             <h2 className="section-heading">What&apos;s Included in Our Deep Cleaning in Romeoville, IL</h2>
             <p className="section-subheading mx-auto">
-              Every corner of your Romeoville home Ã¢â‚¬â€ cleaned to a higher standard.
+              Every corner of your Romeoville home - cleaned to a higher standard.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -276,11 +276,11 @@ export default function DeepCleaningRomeovillePage() {
             Deep cleaning in Romeoville starts around $200 for a smaller home and varies based on
             square footage, the number of bathrooms, and the current condition of your home.
             Homes in Grand Haven or newer developments throughout 60446 typically range from
-            $225Ã¢â‚¬â€œ$375 for a full deep clean.
+            $225-$375 for a full deep clean.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
             We provide every Romeoville client with a free estimate before booking. No deposits required
-            until service day, and no hidden fees Ã¢â‚¬â€ just a fair, transparent quote from your local
+            until service day, and no hidden fees - just a fair, transparent quote from your local
             cleaning team.
           </p>
           <Link href="/contact" className="btn-primary">Get My Free Romeoville Quote</Link>
@@ -340,13 +340,13 @@ export default function DeepCleaningRomeovillePage() {
               <h2 className="text-4xl font-bold mb-4">Book Your Deep Cleaning in Romeoville Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 As your local Romeoville cleaning company, we&apos;re ready to deliver a deep clean you can
-                see and feel. Get your free quote today Ã¢â‚¬â€ we respond within 1 business day and back
+                see and feel. Get your free quote today - we respond within 1 business day and back
                 every job with a 48-hour satisfaction guarantee.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                Ã°Å¸â€œÅ¾ (815) 246-2113
+                 (815) 246-2113
               </a>
-              <p className="text-white/80">Locally based Ã‚Â· Eco-friendly Ã‚Â· Fully insured Ã‚Â· Satisfaction guaranteed</p>
+              <p className="text-white/80">Locally based · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <LeadForm />

@@ -5,12 +5,12 @@ import LeadForm from "@/components/LeadForm";
 export const metadata: Metadata = {
   title: "Deep Cleaning Services New Lenox IL",
   description:
-    "Professional deep cleaning in New Lenox IL by DSM Cleaning Solutions. Family owned, fully insured, 48-hr guarantee. Call (815) 246-2113.",
+    "Professional deep cleaning in New Lenox, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-new-lenox-il" },
   openGraph: {
     title: "Deep Cleaning Services New Lenox IL",
     description:
-      "Professional deep cleaning in New Lenox IL by DSM Cleaning Solutions. Family owned, fully insured, 48-hr guarantee. Call (815) 246-2113.",
+      "Professional deep cleaning in New Lenox, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning-new-lenox-il",
   },
   twitter: {
@@ -23,12 +23,12 @@ const faqs = [
   {
     question: "Do you offer deep cleaning in New Lenox, IL?",
     answer:
-      "Yes Ã¢â‚¬â€ DSM Cleaning Solutions provides professional deep cleaning throughout New Lenox, IL (zip code 60451), including Sanctuary, Spencer Pointe, Grand Crossing, Savanna Hills, and Pheasant Run Estates. We're based in nearby Romeoville and serve the entire New Lenox area.",
+      "Yes - DSM Cleaning Solutions provides professional deep cleaning throughout New Lenox, IL (zip code 60451), including Sanctuary, Spencer Pointe, Grand Crossing, Savanna Hills, and Pheasant Run Estates. We're based in nearby Romeoville and serve the entire New Lenox area.",
   },
   {
     question: "How far is DSM Cleaning Solutions from New Lenox?",
     answer:
-      "Our base is in Romeoville, IL Ã¢â‚¬â€ approximately 10Ã¢â‚¬â€œ15 minutes from most New Lenox neighborhoods. We serve New Lenox regularly alongside our Joliet, Lockport, and Plainfield clients throughout Will County.",
+      "Our base is in Romeoville, IL - approximately 10-15 minutes from most New Lenox neighborhoods. We serve New Lenox regularly alongside our Joliet, Lockport, and Plainfield clients throughout Will County.",
   },
   {
     question: "What New Lenox neighborhoods do you serve?",
@@ -38,12 +38,12 @@ const faqs = [
   {
     question: "Is your deep cleaning team insured in New Lenox?",
     answer:
-      "Yes Ã¢â‚¬â€ DSM Cleaning Solutions is fully insured and bonded in Illinois, including all New Lenox service areas. Every team member is background-checked and we carry liability insurance on every job so you can book with complete peace of mind.",
+      "Yes - DSM Cleaning Solutions is fully insured and bonded in Illinois, including all New Lenox service areas. Every team member is background-checked and we carry liability insurance on every job so you can book with complete peace of mind.",
   },
   {
     question: "How often should New Lenox homes get a professional deep clean?",
     answer:
-      "We recommend a professional deep clean at least once or twice a year for most New Lenox homes. Households with pets, allergies, or young children benefit from deep cleaning every 3Ã¢â‚¬â€œ4 months. Many clients pair a seasonal deep clean with our ongoing standard cleaning service for year-round results.",
+      "We recommend a professional deep clean at least once or twice a year for most New Lenox homes. Households with pets, allergies, or young children benefit from deep cleaning every 3-4 months. Many clients pair a seasonal deep clean with our ongoing standard cleaning service for year-round results.",
   },
 ];
 
@@ -71,7 +71,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Professional deep cleaning in New Lenox IL by DSM Cleaning Solutions. Family owned, fully insured, 48-hr guarantee. Call (815) 246-2113.",
+    "Professional deep cleaning in New Lenox, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
 };
 
 const faqSchema = {
@@ -134,12 +134,12 @@ const checklist = [
 ];
 
 const trustCards = [
-  { icon: "Ã°Å¸Å’Â¿", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products safe for kids and pets." },
-  { icon: "Ã°Å¸â€ºÂ¡Ã¯Â¸Â", title: "Fully Insured & Bonded", desc: "Background-checked team. Your New Lenox home is fully protected." },
-  { icon: "Ã¢Å“â€¦", title: "48-Hour Guarantee", desc: "We re-clean anything that isn't right within 48 hours." },
-  { icon: "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§", title: "Family Owned", desc: "Based in nearby Romeoville Ã¢â‚¬â€ your southwest suburbs neighbors." },
-  { icon: "Ã°Å¸â€œâ€¦", title: "7 Days a Week", desc: "Flexible scheduling to fit your New Lenox lifestyle." },
-  { icon: "Ã°Å¸â€œÂ", title: "Serving New Lenox", desc: "All neighborhoods in zip code 60451." },
+  { icon: "", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products safe for kids and pets." },
+  { icon: "", title: "Fully Insured & Bonded", desc: "Background-checked team. Your New Lenox home is fully protected." },
+  { icon: "", title: "48-Hour Guarantee", desc: "We re-clean anything that isn't right within 48 hours." },
+  { icon: "", title: "Family Owned", desc: "Based in nearby Romeoville - your southwest suburbs neighbors." },
+  { icon: "", title: "7 Days a Week", desc: "Flexible scheduling to fit your New Lenox lifestyle." },
+  { icon: "", title: "Serving New Lenox", desc: "All neighborhoods in zip code 60451." },
 ];
 
 export default function DeepCleaningNewLenoxPage() {
@@ -170,12 +170,12 @@ export default function DeepCleaningNewLenoxPage() {
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               DSM Cleaning Solutions delivers a thorough, top-to-bottom deep clean for homes across
-              New Lenox Ã¢â‚¬â€ from Sanctuary and Spencer Pointe to Grand Crossing and Savanna Hills.
+              New Lenox - from Sanctuary and Spencer Pointe to Grand Crossing and Savanna Hills.
               Every surface scrubbed, every grout line restored, every appliance cleaned inside and out.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
-              <a href="tel:+18152462113" className="btn-outline-white btn-lg">Ã°Å¸â€œÅ¾ (815) 246-2113</a>
+              <a href="tel:+18152462113" className="btn-outline-white btn-lg"> (815) 246-2113</a>
             </div>
           </div>
         </div>
@@ -185,7 +185,7 @@ export default function DeepCleaningNewLenoxPage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["Ã¢Å“â€¦ Fully Insured & Bonded", "Ã°Å¸Å’Â¿ Eco-Friendly Products", "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§ Family Owned", "Ã¢Â­Â 5-Star Rated", "Ã¢Å“â€Ã¯Â¸Â Satisfaction Guaranteed"].map(
+            {["Fully Insured & Bonded", "Eco-Friendly Products", "Family Owned", "5-Star Rated", "Satisfaction Guaranteed"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -197,7 +197,7 @@ export default function DeepCleaningNewLenoxPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading mb-6">Professional Deep Cleaning Services in New Lenox, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            <strong>Deep cleaning in New Lenox, IL</strong> is our specialty Ã¢â‚¬â€ and DSM Cleaning Solutions brings the
+            <strong>Deep cleaning in New Lenox, IL</strong> is our specialty - and DSM Cleaning Solutions brings the
             same meticulous, detail-focused approach to every home we serve. Whether you live in Sanctuary,
             Spencer Pointe, Grand Crossing, Savanna Hills, or Pheasant Run Estates, our team covers all
             of New Lenox (zip code 60451) with a comprehensive clean that goes far beyond your regular
@@ -205,7 +205,7 @@ export default function DeepCleaningNewLenoxPage() {
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
             New Lenox families choose DSM because we treat every home like our own. We&apos;re a family-owned
-            business based in nearby Romeoville Ã¢â‚¬â€ just 10Ã¢â‚¬â€œ15 minutes away Ã¢â‚¬â€ and we take pride in the results
+            business based in nearby Romeoville - just 10-15 minutes away - and we take pride in the results
             we deliver throughout Will County. From degreasing the kitchen hood vent to scrubbing grout
             lines in your master shower, nothing gets overlooked. Residents near New Lenox Community Park,
             along the Historic Downtown corridor, and throughout New Lenox&apos;s established neighborhoods
@@ -214,7 +214,7 @@ export default function DeepCleaningNewLenoxPage() {
           <p className="text-gray-600 leading-relaxed">
             Whether you&apos;re preparing for a seasonal reset, getting your home ready before a big gathering,
             or simply want a thorough clean after months of normal use, our New Lenox deep cleaning service
-            is the answer. We use only eco-friendly, non-toxic products Ã¢â‚¬â€ safe for your children, your pets,
+            is the answer. We use only eco-friendly, non-toxic products - safe for your children, your pets,
             and your surfaces. Conveniently located near{" "}
             <Link href="/deep-cleaning-joliet-il" className="text-brand-green font-semibold hover:underline">Joliet</Link> and{" "}
             <Link href="/deep-cleaning-lockport-il" className="text-brand-green font-semibold hover:underline">Lockport</Link>, we know this part of Will County well.
@@ -228,7 +228,7 @@ export default function DeepCleaningNewLenoxPage() {
           <div className="text-center mb-12">
             <h2 className="section-heading">What&apos;s Included in Our Deep Cleaning in New Lenox, IL</h2>
             <p className="section-subheading mx-auto">
-              Every room in your New Lenox home Ã¢â‚¬â€ cleaned top to bottom.
+              Every room in your New Lenox home - cleaned top to bottom.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -278,12 +278,12 @@ export default function DeepCleaningNewLenoxPage() {
           <p className="text-gray-600 mb-4 leading-relaxed">
             Deep cleaning in New Lenox starts around $200 for smaller homes and scales based on the
             size of your home, the number of bedrooms and bathrooms, and how long it&apos;s been since
-            your last professional clean. A 3Ã¢â‚¬â€œ4 bedroom home in Sanctuary or Spencer Pointe
-            typically falls in the $250Ã¢â‚¬â€œ$375 range.
+            your last professional clean. A 3-4 bedroom home in Sanctuary or Spencer Pointe
+            typically falls in the $250-$375 range.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
             We always provide a free, no-obligation estimate before any work begins. There are no
-            surprises Ã¢â‚¬â€ you&apos;ll know exactly what to expect before we arrive at your New Lenox home.
+            surprises - you&apos;ll know exactly what to expect before we arrive at your New Lenox home.
           </p>
           <Link href="/contact" className="btn-primary">Get My Free New Lenox Quote</Link>
         </div>
@@ -346,13 +346,13 @@ export default function DeepCleaningNewLenoxPage() {
               <h2 className="text-4xl font-bold mb-4">Book Your Deep Cleaning in New Lenox Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Ready for a New Lenox home that&apos;s clean from top to bottom? Get your free deep cleaning
-                quote Ã¢â‚¬â€ we respond within 1 business day and back every job with our 48-hour satisfaction
+                quote - we respond within 1 business day and back every job with our 48-hour satisfaction
                 guarantee.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                Ã°Å¸â€œÅ¾ (815) 246-2113
+                 (815) 246-2113
               </a>
-              <p className="text-white/80">Family-owned Ã‚Â· Eco-friendly Ã‚Â· Fully insured Ã‚Â· Satisfaction guaranteed</p>
+              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <LeadForm />

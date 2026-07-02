@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | DSM Cleaning Solutions",
   },
   description:
-    "Professional house cleaning in Romeoville & Plainfield IL. Family-owned, eco-friendly, fully insured. 5-star rated. Free estimates. Call (815) 246-2113.",
+    "Professional house cleaning in Romeoville & Plainfield IL. Family-owned, eco-friendly, fully insured. 5-star rated. Free estimates.",
   icons: {
     icon: [
       { url: "/icon.png", sizes: "512x512", type: "image/png" },
@@ -87,7 +87,7 @@ export default function RootLayout({
               "@type": ["LocalBusiness", "CleaningService"],
               "@id": "https://www.dsmcleaningsolutions.com/#business",
               name: "DSM Cleaning Solutions",
-              description: "Professional house cleaning services serving Romeoville, Plainfield, Naperville, Bolingbrook, and surrounding IL communities. Family owned, fully insured, eco-friendly products.",
+              description: "Professional house cleaning in Romeoville, Plainfield, Naperville, Bolingbrook, and the southwest Chicago suburbs. Family owned, fully insured, eco-friendly.",
               url: "https://www.dsmcleaningsolutions.com",
               telephone: "+18152462113",
               priceRange: "$$",

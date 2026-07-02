@@ -5,12 +5,12 @@ import OfficeLeadForm from "@/components/OfficeLeadForm";
 export const metadata: Metadata = {
   title: "Office Cleaning Services in Romeoville & Chicagoland",
   description:
-    "Professional office cleaning services in Romeoville, Plainfield, Naperville, and Bolingbrook. DSM Cleaning Solutions keeps your workspace spotless. Call (815) 246-2113.",
+    "Office cleaning in Romeoville, Plainfield, Naperville, and Bolingbrook. DSM Cleaning Solutions keeps your workspace spotless. Fully insured. Free estimate.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/office-cleaning" },
   openGraph: {
     title: "Office Cleaning Services in Romeoville & Chicagoland",
     description:
-      "Professional office cleaning services in Romeoville, Plainfield, Naperville, and Bolingbrook. DSM Cleaning Solutions keeps your workspace spotless. Call (815) 246-2113.",
+      "Office cleaning in Romeoville, Plainfield, Naperville, and Bolingbrook. DSM Cleaning Solutions keeps your workspace spotless. Fully insured. Free estimate.",
     url: "https://www.dsmcleaningsolutions.com/office-cleaning",
     siteName: "DSM Cleaning Solutions",
   },

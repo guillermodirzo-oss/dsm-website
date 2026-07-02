@@ -5,12 +5,12 @@ import LeadForm from "@/components/LeadForm";
 export const metadata: Metadata = {
   title: "Deep Cleaning Services Joliet IL",
   description:
-    "Professional deep cleaning in Joliet IL by DSM Cleaning Solutions. Family owned, fully insured, 48-hr guarantee. Call (815) 246-2113.",
+    "Professional deep cleaning in Joliet, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-joliet-il" },
   openGraph: {
     title: "Deep Cleaning Services Joliet IL",
     description:
-      "Professional deep cleaning in Joliet IL by DSM Cleaning Solutions. Family owned, fully insured, 48-hr guarantee. Call (815) 246-2113.",
+      "Professional deep cleaning in Joliet, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning-joliet-il",
   },
   twitter: {
@@ -23,12 +23,12 @@ const faqs = [
   {
     question: "How long does a deep clean take in Joliet, IL?",
     answer:
-      "Most deep cleaning jobs in Joliet take 3Ã¢â‚¬â€œ6 hours depending on the size and current condition of your home. A 2-bedroom home may take around 3 hours, while a larger home in Rock Run or Woodgate could take 5Ã¢â‚¬â€œ6 hours or more. We'll give you an accurate time estimate when you contact us.",
+      "Most deep cleaning jobs in Joliet take 3-6 hours depending on the size and current condition of your home. A 2-bedroom home may take around 3 hours, while a larger home in Rock Run or Woodgate could take 5-6 hours or more. We'll give you an accurate time estimate when you contact us.",
   },
   {
     question: "Do I need to be home during the deep clean in Joliet?",
     answer:
-      "You don't have to be home. Many of our Joliet clients provide a key or access code. Every member of our team is background-checked, insured, and bonded Ã¢â‚¬â€ your home is fully protected whether you're present or not.",
+      "You don't have to be home. Many of our Joliet clients provide a key or access code. Every member of our team is background-checked, insured, and bonded - your home is fully protected whether you're present or not.",
   },
   {
     question: "What neighborhoods in Joliet do you serve?",
@@ -38,12 +38,12 @@ const faqs = [
   {
     question: "Is your deep cleaning service insured in Joliet?",
     answer:
-      "Yes Ã¢â‚¬â€ DSM Cleaning Solutions is fully insured and bonded in Illinois, including all of Joliet. We carry liability insurance on every job so you can book with complete peace of mind.",
+      "Yes - DSM Cleaning Solutions is fully insured and bonded in Illinois, including all of Joliet. We carry liability insurance on every job so you can book with complete peace of mind.",
   },
   {
     question: "How often should Joliet homes get a deep clean?",
     answer:
-      "We recommend a professional deep clean at least once or twice a year for most Joliet homes. If you have pets, allergies, or a busy household, every 3Ã¢â‚¬â€œ4 months is ideal. Many clients pair a seasonal deep clean with our ongoing standard cleaning service.",
+      "We recommend a professional deep clean at least once or twice a year for most Joliet homes. If you have pets, allergies, or a busy household, every 3-4 months is ideal. Many clients pair a seasonal deep clean with our ongoing standard cleaning service.",
   },
 ];
 
@@ -71,7 +71,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Professional deep cleaning in Joliet IL by DSM Cleaning Solutions. Family owned, fully insured, 48-hr guarantee. Call (815) 246-2113.",
+    "Professional deep cleaning in Joliet, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
 };
 
 const faqSchema = {
@@ -134,12 +134,12 @@ const checklist = [
 ];
 
 const trustCards = [
-  { icon: "Ã°Å¸Å’Â¿", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products safe for kids and pets." },
-  { icon: "Ã°Å¸â€ºÂ¡Ã¯Â¸Â", title: "Fully Insured & Bonded", desc: "Background-checked team. Your Joliet home is fully protected." },
-  { icon: "Ã¢Å“â€¦", title: "48-Hour Guarantee", desc: "We re-clean anything that isn't right within 48 hours." },
-  { icon: "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§", title: "Family Owned", desc: "Based in nearby Romeoville Ã¢â‚¬â€ your southwest suburbs neighbors." },
-  { icon: "Ã°Å¸â€œâ€¦", title: "7 Days a Week", desc: "Flexible scheduling to fit your Joliet lifestyle." },
-  { icon: "Ã°Å¸â€œÂ", title: "Serving Joliet", desc: "All neighborhoods Ã¢â‚¬â€ zip codes 60431, 60432, 60433, 60435 & 60436." },
+  { icon: "", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products safe for kids and pets." },
+  { icon: "", title: "Fully Insured & Bonded", desc: "Background-checked team. Your Joliet home is fully protected." },
+  { icon: "", title: "48-Hour Guarantee", desc: "We re-clean anything that isn't right within 48 hours." },
+  { icon: "", title: "Family Owned", desc: "Based in nearby Romeoville - your southwest suburbs neighbors." },
+  { icon: "", title: "7 Days a Week", desc: "Flexible scheduling to fit your Joliet lifestyle." },
+  { icon: "", title: "Serving Joliet", desc: "All neighborhoods - zip codes 60431, 60432, 60433, 60435 & 60436." },
 ];
 
 export default function DeepCleaningJolietPage() {
@@ -170,12 +170,12 @@ export default function DeepCleaningJolietPage() {
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               DSM Cleaning Solutions delivers a thorough, top-to-bottom deep clean for homes across
-              Joliet Ã¢â‚¬â€ from Ingalls Park to Rock Run and Woodgate. Every surface scrubbed, every
+              Joliet - from Ingalls Park to Rock Run and Woodgate. Every surface scrubbed, every
               grout line restored, every appliance cleaned inside and out.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
-              <a href="tel:+18152462113" className="btn-outline-white btn-lg">Ã°Å¸â€œÅ¾ (815) 246-2113</a>
+              <a href="tel:+18152462113" className="btn-outline-white btn-lg"> (815) 246-2113</a>
             </div>
           </div>
         </div>
@@ -185,7 +185,7 @@ export default function DeepCleaningJolietPage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["Ã¢Å“â€¦ Fully Insured & Bonded", "Ã°Å¸Å’Â¿ Eco-Friendly Products", "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§ Family Owned", "Ã¢Â­Â 5-Star Rated", "Ã¢Å“â€Ã¯Â¸Â Satisfaction Guaranteed"].map(
+            {["Fully Insured & Bonded", "Eco-Friendly Products", "Family Owned", "5-Star Rated", "Satisfaction Guaranteed"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -197,15 +197,15 @@ export default function DeepCleaningJolietPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading mb-6">Professional Deep Cleaning Services in Joliet, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Deep cleaning in Joliet, IL is our specialty Ã¢â‚¬â€ and DSM Cleaning Solutions brings the same
+            Deep cleaning in Joliet, IL is our specialty - and DSM Cleaning Solutions brings the same
             meticulous, detail-focused approach to every home we serve. Whether you live in Ingalls
             Park, Rock Run, the Cathedral Area, Forest Park, or Woodgate, our team covers all Joliet
-            zip codes Ã¢â‚¬â€ 60431, 60432, 60433, 60435, and 60436 Ã¢â‚¬â€ with a comprehensive clean that goes
+            zip codes - 60431, 60432, 60433, 60435, and 60436 - with a comprehensive clean that goes
             far beyond your regular maintenance routine.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Joliet families choose DSM because we treat every home like our own. We&apos;re a family-owned
-            business based in nearby Romeoville Ã¢â‚¬â€ just 10 miles away Ã¢â‚¬â€ and we take pride in the results
+            business based in nearby Romeoville - just 10 miles away - and we take pride in the results
             we deliver throughout Will County. From degreasing the kitchen hood vent to scrubbing grout
             lines in your master shower, nothing gets overlooked. Residents near Pilcher Park, the
             Rialto Theatre area, and throughout Joliet&apos;s established neighborhoods trust us to deliver
@@ -214,7 +214,7 @@ export default function DeepCleaningJolietPage() {
           <p className="text-gray-600 leading-relaxed">
             Whether you&apos;re preparing for a seasonal reset, getting your home ready for guests, or
             simply want a thorough clean after months of normal use, our Joliet deep cleaning service
-            is the answer. We use only eco-friendly, non-toxic products Ã¢â‚¬â€ safe for your children, your
+            is the answer. We use only eco-friendly, non-toxic products - safe for your children, your
             pets, and your home.
           </p>
         </div>
@@ -226,7 +226,7 @@ export default function DeepCleaningJolietPage() {
           <div className="text-center mb-12">
             <h2 className="section-heading">What&apos;s Included in Our Deep Cleaning in Joliet, IL</h2>
             <p className="section-subheading mx-auto">
-              Every room in your Joliet home Ã¢â‚¬â€ cleaned top to bottom.
+              Every room in your Joliet home - cleaned top to bottom.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -276,12 +276,12 @@ export default function DeepCleaningJolietPage() {
           <p className="text-gray-600 mb-4 leading-relaxed">
             Deep cleaning in Joliet starts around $200 for smaller homes and goes up based on the
             size of your home, the number of bedrooms and bathrooms, and how long it&apos;s been since
-            your last professional clean. A 3Ã¢â‚¬â€œ4 bedroom home in Rock Run or White Oak Subdivision
-            typically falls in the $250Ã¢â‚¬â€œ$350 range.
+            your last professional clean. A 3-4 bedroom home in Rock Run or White Oak Subdivision
+            typically falls in the $250-$350 range.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
             We always provide a free, no-obligation estimate before any work begins. There are no
-            surprises Ã¢â‚¬â€ you&apos;ll know exactly what to expect before we arrive at your Joliet home.
+            surprises - you&apos;ll know exactly what to expect before we arrive at your Joliet home.
           </p>
           <Link href="/contact" className="btn-primary">Get My Free Joliet Quote</Link>
         </div>
@@ -344,13 +344,13 @@ export default function DeepCleaningJolietPage() {
               <h2 className="text-4xl font-bold mb-4">Book Your Deep Cleaning in Joliet Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Ready for a home that&apos;s clean from top to bottom? Get your free deep cleaning quote
-                for Joliet, IL Ã¢â‚¬â€ we respond within 1 business day and back every job with our
+                for Joliet, IL - we respond within 1 business day and back every job with our
                 48-hour satisfaction guarantee.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                Ã°Å¸â€œÅ¾ (815) 246-2113
+                 (815) 246-2113
               </a>
-              <p className="text-white/80">Family-owned Ã‚Â· Eco-friendly Ã‚Â· Fully insured Ã‚Â· Satisfaction guaranteed</p>
+              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <LeadForm />

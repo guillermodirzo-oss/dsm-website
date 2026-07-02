@@ -5,12 +5,12 @@ import LeadForm from "@/components/LeadForm";
 export const metadata: Metadata = {
   title: "Apartment Cleaning Services Naperville IL",
   description:
-    "Professional apartment cleaning in Naperville IL by DSM Cleaning Solutions. Move-out specialists. Fully insured. Call (815) 246-2113.",
+    "Professional apartment cleaning in Naperville IL by DSM Cleaning Solutions. Move-out specialists. Fully insured. Free estimate.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/apartment-cleaning-naperville-il" },
   openGraph: {
     title: "Apartment Cleaning Services Naperville IL | DSM Cleaning Solutions",
     description:
-      "Professional apartment cleaning in Naperville IL by DSM Cleaning Solutions. Move-out specialists. Fully insured. Call (815) 246-2113.",
+      "Professional apartment cleaning in Naperville IL by DSM Cleaning Solutions. Move-out specialists. Fully insured. Free estimate.",
     url: "https://www.dsmcleaningsolutions.com/apartment-cleaning-naperville-il",
     siteName: "DSM Cleaning Solutions",
     images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "Apartment Cleaning Naperville IL" }],
@@ -73,7 +73,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Professional apartment cleaning in Naperville, IL. DSM Cleaning Solutions serves studios, 1-, 2-, and 3-bedroom apartments across zip codes 60540, 60563, 60564 & 60565. Move-out specialists. Free estimate.",
+    "Apartment cleaning in Naperville, IL. Studios, 1-, 2-, and 3-bedroom units across 60540, 60563, 60564 & 60565. Move-out specialists. Free estimate.",
 };
 
 const faqSchema = {

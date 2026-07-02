@@ -5,12 +5,12 @@ import LeadForm from "@/components/LeadForm";
 export const metadata: Metadata = {
   title: "Move Out Cleaning Services New Lenox IL",
   description:
-    "Move-out cleaning in New Lenox IL by DSM Cleaning Solutions. Get your deposit back. Fully insured. Call (815) 246-2113.",
+    "Move-out cleaning in New Lenox, IL. DSM Cleaning Solutions helps you get your deposit back. Fully insured. Free estimate.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-new-lenox-il" },
   openGraph: {
     title: "Move Out Cleaning Services New Lenox IL",
     description:
-      "Move-out cleaning in New Lenox IL by DSM Cleaning Solutions. Get your deposit back. Fully insured. Call (815) 246-2113.",
+      "Move-out cleaning in New Lenox, IL. DSM Cleaning Solutions helps you get your deposit back. Fully insured. Free estimate.",
     url: "https://www.dsmcleaningsolutions.com/move-out-cleaning-new-lenox-il",
   },
   twitter: {
@@ -23,27 +23,27 @@ const faqs = [
   {
     question: "Can you help me get my security deposit back in New Lenox, IL?",
     answer:
-      "Yes Ã¢â‚¬â€ our New Lenox move-out cleaning is specifically designed to meet landlord inspection standards. We clean every surface, inside every appliance, and inside every cabinet so your property looks move-in ready and gives you the best possible chance of getting your full security deposit back.",
+      "Yes - our New Lenox move-out cleaning is specifically designed to meet landlord inspection standards. We clean every surface, inside every appliance, and inside every cabinet so your property looks move-in ready and gives you the best possible chance of getting your full security deposit back.",
   },
   {
     question: "How far in advance should I book move-out cleaning in New Lenox?",
     answer:
-      "We recommend booking at least 3Ã¢â‚¬â€œ5 days before your move-out date to secure your preferred time slot. That said, we do our best to accommodate last-minute requests in New Lenox Ã¢â‚¬â€ give us a call at (815) 246-2113 and we'll see what we can do.",
+      "We recommend booking at least 3-5 days before your move-out date to secure your preferred time slot. That said, we do our best to accommodate last-minute requests in New Lenox - give us a call at (815) 246-2113 and we'll see what we can do.",
   },
   {
     question: "Do you clean appliances during New Lenox move-out cleans?",
     answer:
-      "Yes Ã¢â‚¬â€ appliances are a central part of our move-out cleaning checklist. We clean inside and outside the oven, inside and outside the refrigerator (including all drawers and shelves), inside the microwave, and the dishwasher interior. These are the areas New Lenox landlords and property managers inspect most closely.",
+      "Yes - appliances are a central part of our move-out cleaning checklist. We clean inside and outside the oven, inside and outside the refrigerator (including all drawers and shelves), inside the microwave, and the dishwasher interior. These are the areas New Lenox landlords and property managers inspect most closely.",
   },
   {
     question: "How long does a move-out clean take in New Lenox?",
     answer:
-      "A move-out clean in New Lenox typically takes 4Ã¢â‚¬â€œ7 hours for an average-sized home in zip code 60451. Larger homes in Sanctuary or Pheasant Run Estates that haven't been professionally cleaned recently may take longer. We'll give you an accurate time estimate when you contact us.",
+      "A move-out clean in New Lenox typically takes 4-7 hours for an average-sized home in zip code 60451. Larger homes in Sanctuary or Pheasant Run Estates that haven't been professionally cleaned recently may take longer. We'll give you an accurate time estimate when you contact us.",
   },
   {
     question: "Do you serve zip code 60451 in New Lenox for move-out cleaning?",
     answer:
-      "Yes Ã¢â‚¬â€ we serve all of New Lenox, including zip code 60451 and all neighborhoods: Sanctuary, Spencer Pointe, Grand Crossing, Savanna Hills, and Pheasant Run Estates. We're based in nearby Romeoville and serve New Lenox regularly alongside our Joliet and Lockport clients.",
+      "Yes - we serve all of New Lenox, including zip code 60451 and all neighborhoods: Sanctuary, Spencer Pointe, Grand Crossing, Savanna Hills, and Pheasant Run Estates. We're based in nearby Romeoville and serve New Lenox regularly alongside our Joliet and Lockport clients.",
   },
 ];
 
@@ -71,7 +71,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Move-out cleaning in New Lenox IL by DSM Cleaning Solutions. Get your deposit back. Fully insured. Call (815) 246-2113.",
+    "Move-out cleaning in New Lenox, IL. DSM Cleaning Solutions helps you get your deposit back. Fully insured. Free estimate.",
 };
 
 const faqSchema = {
@@ -137,12 +137,12 @@ const checklist = [
 ];
 
 const trustCards = [
-  { icon: "Ã°Å¸â€™Â°", title: "Deposit-Back Focused", desc: "Designed to meet landlord inspection standards in New Lenox, IL." },
-  { icon: "Ã°Å¸â€ºÂ¡Ã¯Â¸Â", title: "Fully Insured & Bonded", desc: "Background-checked team. Every New Lenox job fully covered." },
-  { icon: "Ã¢Å“â€¦", title: "48-Hour Guarantee", desc: "If your landlord isn't satisfied, we re-clean at no charge." },
-  { icon: "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§", title: "Family Owned", desc: "Based in nearby Romeoville Ã¢â‚¬â€ your trusted southwest suburbs neighbors." },
-  { icon: "Ã°Å¸â€œâ€¦", title: "Flexible Scheduling", desc: "Book around your move-out timeline in New Lenox." },
-  { icon: "Ã°Å¸â€œÂ", title: "Serving New Lenox", desc: "All neighborhoods in zip code 60451." },
+  { icon: "", title: "Deposit-Back Focused", desc: "Designed to meet landlord inspection standards in New Lenox, IL." },
+  { icon: "", title: "Fully Insured & Bonded", desc: "Background-checked team. Every New Lenox job fully covered." },
+  { icon: "", title: "48-Hour Guarantee", desc: "If your landlord isn't satisfied, we re-clean at no charge." },
+  { icon: "", title: "Family Owned", desc: "Based in nearby Romeoville - your trusted southwest suburbs neighbors." },
+  { icon: "", title: "Flexible Scheduling", desc: "Book around your move-out timeline in New Lenox." },
+  { icon: "", title: "Serving New Lenox", desc: "All neighborhoods in zip code 60451." },
 ];
 
 export default function MoveOutCleaningNewLenoxPage() {
@@ -173,12 +173,12 @@ export default function MoveOutCleaningNewLenoxPage() {
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               Moving out of your New Lenox home or rental? DSM Cleaning Solutions delivers a thorough,
-              landlord-inspection-ready clean throughout New Lenox Ã¢â‚¬â€ including Sanctuary, Spencer Pointe,
+              landlord-inspection-ready clean throughout New Lenox - including Sanctuary, Spencer Pointe,
               Grand Crossing, and Pheasant Run Estates. Get your full deposit back.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
-              <a href="tel:+18152462113" className="btn-outline-white btn-lg">Ã°Å¸â€œÅ¾ (815) 246-2113</a>
+              <a href="tel:+18152462113" className="btn-outline-white btn-lg"> (815) 246-2113</a>
             </div>
           </div>
         </div>
@@ -188,7 +188,7 @@ export default function MoveOutCleaningNewLenoxPage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["Ã¢Å“â€¦ Fully Insured & Bonded", "Ã°Å¸Å’Â¿ Eco-Friendly Products", "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§ Family Owned", "Ã¢Â­Â 5-Star Rated", "Ã¢Å“â€Ã¯Â¸Â Satisfaction Guaranteed"].map(
+            {["Fully Insured & Bonded", "Eco-Friendly Products", "Family Owned", "5-Star Rated", "Satisfaction Guaranteed"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -203,21 +203,21 @@ export default function MoveOutCleaningNewLenoxPage() {
             <strong>Move-out cleaning in New Lenox, IL</strong> is about one thing: getting your security deposit back.
             Landlords and property managers throughout New Lenox (zip code 60451) conduct thorough
             move-out inspections, and the areas that generate the most deposit disputes are always
-            the same Ã¢â‚¬â€ oven interior, refrigerator drawers, bathroom grout, cabinet interiors, and
+            the same - oven interior, refrigerator drawers, bathroom grout, cabinet interiors, and
             ceiling fans. Our move-out cleaning service covers every one of them.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
             We&apos;re a family-owned cleaning company based in Romeoville, just minutes from New Lenox.
             We&apos;ve helped renters across Sanctuary, Spencer Pointe, Grand Crossing, Savanna Hills,
             and Pheasant Run Estates pass their move-out inspections and walk away with their full deposits.
-            Our team follows a detailed, landlord-focused checklist that covers every room Ã¢â‚¬â€ not just
+            Our team follows a detailed, landlord-focused checklist that covers every room - not just
             the visible surfaces.
           </p>
           <p className="text-gray-600 leading-relaxed">
             New Lenox is just a short drive from both{" "}
             <Link href="/move-out-cleaning-joliet-il" className="text-brand-green font-semibold hover:underline">Joliet</Link> and{" "}
             <Link href="/move-out-cleaning-lockport-il" className="text-brand-green font-semibold hover:underline">Lockport</Link>, and we
-            serve all three markets regularly. Every job is backed by our 48-hour satisfaction guarantee Ã¢â‚¬â€
+            serve all three markets regularly. Every job is backed by our 48-hour satisfaction guarantee  - 
             if your landlord flags anything within 48 hours, we come back and make it right at no charge.
             Learn more on our main{" "}
             <Link href="/move-out-cleaning" className="text-brand-green font-semibold hover:underline">move-out cleaning page</Link>.
@@ -281,12 +281,12 @@ export default function MoveOutCleaningNewLenoxPage() {
           <p className="text-gray-600 mb-4 leading-relaxed">
             Move-out cleaning in New Lenox typically ranges from $150 to $325 for most homes and
             apartments in zip code 60451, depending on the size and condition of the property. A
-            2-bedroom apartment near the Metra Rock Island Line might run $150Ã¢â‚¬â€œ$200, while a larger
-            home in Sanctuary or Pheasant Run Estates could run $250Ã¢â‚¬â€œ$350.
+            2-bedroom apartment near the Metra Rock Island Line might run $150-$200, while a larger
+            home in Sanctuary or Pheasant Run Estates could run $250-$350.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
             Every estimate is free and no-obligation. We&apos;ll give you an honest quote upfront based
-            on your home&apos;s specific details Ã¢â‚¬â€ and you&apos;ll know exactly what you&apos;re getting before
+            on your home&apos;s specific details - and you&apos;ll know exactly what you&apos;re getting before
             we start.
           </p>
           <Link href="/contact" className="btn-primary">Get My Free New Lenox Quote</Link>
@@ -350,13 +350,13 @@ export default function MoveOutCleaningNewLenoxPage() {
               <h2 className="text-4xl font-bold mb-4">Get Your Free New Lenox Move-Out Quote</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Don&apos;t leave your deposit on the table. Get your free move-out cleaning quote for
-                New Lenox, IL Ã¢â‚¬â€ we respond within 1 business day and back every job with our
+                New Lenox, IL - we respond within 1 business day and back every job with our
                 48-hour satisfaction guarantee.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                Ã°Å¸â€œÅ¾ (815) 246-2113
+                 (815) 246-2113
               </a>
-              <p className="text-white/80">Family-owned Ã‚Â· Eco-friendly Ã‚Â· Fully insured Ã‚Â· Satisfaction guaranteed</p>
+              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <LeadForm />

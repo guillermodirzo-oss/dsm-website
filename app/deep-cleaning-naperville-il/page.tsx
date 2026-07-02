@@ -5,12 +5,12 @@ import LeadForm from "@/components/LeadForm";
 export const metadata: Metadata = {
   title: "Deep Cleaning Service Naperville IL",
   description:
-    "Professional deep cleaning in Naperville, IL. Thorough top-to-bottom clean by a 5-star rated team. 48-hr satisfaction guarantee. (815) 246-2113.",
+    "Professional deep cleaning in Naperville, IL. Serving 60540, 60563, 60564 and 60565. Eco-friendly, fully insured, 48-hour satisfaction guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-naperville-il" },
   openGraph: {
     title: "Deep Cleaning Service Naperville IL | DSM Cleaning Solutions",
     description:
-      "Professional deep cleaning in Naperville, IL. Thorough top-to-bottom clean by a 5-star rated team. 48-hr satisfaction guarantee. (815) 246-2113.",
+      "Professional deep cleaning in Naperville, IL. Serving 60540, 60563, 60564 and 60565. Eco-friendly, fully insured, 48-hour satisfaction guarantee. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning-naperville-il",
   },
   twitter: {
@@ -23,27 +23,27 @@ const faqs = [
   {
     question: "How long does a deep cleaning take in Naperville, IL?",
     answer:
-      "Deep cleaning in Naperville typically takes 3Ã¢â‚¬â€œ6 hours based on your home&apos;s size and condition. A townhome near Downtown Naperville or Cress Creek might take 3Ã¢â‚¬â€œ4 hours, while a larger home in White Eagle or Hobson West could take 5Ã¢â‚¬â€œ6 hours.",
+      "Deep cleaning in Naperville typically takes 3-6 hours based on your home&apos;s size and condition. A townhome near Downtown Naperville or Cress Creek might take 3-4 hours, while a larger home in White Eagle or Hobson West could take 5-6 hours.",
   },
   {
     question: "Do you serve the White Eagle and Ashbury neighborhoods in Naperville?",
     answer:
-      "Yes Ã¢â‚¬â€ we serve all of Naperville including White Eagle, Ashbury, Cress Creek, Hobson West, and all areas within zip codes 60540, 60563, 60564, and 60565.",
+      "Yes - we serve all of Naperville including White Eagle, Ashbury, Cress Creek, Hobson West, and all areas within zip codes 60540, 60563, 60564, and 60565.",
   },
   {
     question: "How much does deep cleaning cost in Naperville, IL?",
     answer:
-      "Deep cleaning in Naperville starts around $200 for smaller homes. Most homes in Naperville fall in the $250Ã¢â‚¬â€œ$400 range depending on square footage, bedroom/bathroom count, and condition. Contact us for a free, personalized estimate.",
+      "Deep cleaning in Naperville starts around $200 for smaller homes. Most homes in Naperville fall in the $250-$400 range depending on square footage, bedroom/bathroom count, and condition. Contact us for a free, personalized estimate.",
   },
   {
     question: "Do I need to be home for my deep cleaning in Naperville?",
     answer:
-      "No Ã¢â‚¬â€ you don&apos;t need to be home. Many Naperville clients provide a spare key or keypad code. Our team is fully background-checked, insured, and bonded on every job.",
+      "No - you don&apos;t need to be home. Many Naperville clients provide a spare key or keypad code. Our team is fully background-checked, insured, and bonded on every job.",
   },
   {
     question: "Is DSM Cleaning Solutions insured in Naperville, IL?",
     answer:
-      "Yes Ã¢â‚¬â€ DSM Cleaning Solutions is fully insured and bonded in Illinois, including Naperville. You can book with confidence knowing your home is protected on every visit.",
+      "Yes - DSM Cleaning Solutions is fully insured and bonded in Illinois, including Naperville. You can book with confidence knowing your home is protected on every visit.",
   },
 ];
 
@@ -134,12 +134,12 @@ const checklist = [
 ];
 
 const trustCards = [
-  { icon: "Ã°Å¸Å’Â¿", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products Ã¢â‚¬â€ safe for Naperville families." },
-  { icon: "Ã°Å¸â€ºÂ¡Ã¯Â¸Â", title: "Fully Insured & Bonded", desc: "Background-checked team. Every job fully covered." },
-  { icon: "Ã¢Å“â€¦", title: "48-Hour Guarantee", desc: "Not satisfied? We re-clean at no charge within 48 hours." },
-  { icon: "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§", title: "Family Owned", desc: "Local southwest suburbs business, not a national franchise." },
-  { icon: "Ã°Å¸â€œâ€¦", title: "7 Days a Week", desc: "Scheduling that works around your busy Naperville life." },
-  { icon: "Ã°Å¸â€œÂ", title: "Serving Naperville", desc: "All neighborhoods Ã¢â‚¬â€ 60540, 60563, 60564 & 60565." },
+  { icon: "", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products - safe for Naperville families." },
+  { icon: "", title: "Fully Insured & Bonded", desc: "Background-checked team. Every job fully covered." },
+  { icon: "", title: "48-Hour Guarantee", desc: "Not satisfied? We re-clean at no charge within 48 hours." },
+  { icon: "", title: "Family Owned", desc: "Local southwest suburbs business, not a national franchise." },
+  { icon: "", title: "7 Days a Week", desc: "Scheduling that works around your busy Naperville life." },
+  { icon: "", title: "Serving Naperville", desc: "All neighborhoods - 60540, 60563, 60564 & 60565." },
 ];
 
 export default function DeepCleaningNapervillePage() {
@@ -171,11 +171,11 @@ export default function DeepCleaningNapervillePage() {
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               DSM Cleaning Solutions brings a thorough, detail-first deep clean to Naperville homes across
               all four zip codes. From White Eagle to Cress Creek, we scrub every surface, grout line,
-              and appliance Ã¢â‚¬â€ backed by our satisfaction guarantee.
+              and appliance - backed by our satisfaction guarantee.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
-              <a href="tel:+18152462113" className="btn-outline-white btn-lg">Ã°Å¸â€œÅ¾ (815) 246-2113</a>
+              <a href="tel:+18152462113" className="btn-outline-white btn-lg"> (815) 246-2113</a>
             </div>
           </div>
         </div>
@@ -185,7 +185,7 @@ export default function DeepCleaningNapervillePage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["Ã¢Å“â€¦ Fully Insured & Bonded", "Ã°Å¸Å’Â¿ Eco-Friendly Products", "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§ Family Owned", "Ã¢Â­Â 5-Star Rated", "Ã¢Å“â€Ã¯Â¸Â Satisfaction Guaranteed"].map(
+            {["Fully Insured & Bonded", "Eco-Friendly Products", "Family Owned", "5-Star Rated", "Satisfaction Guaranteed"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -198,18 +198,18 @@ export default function DeepCleaningNapervillePage() {
           <h2 className="section-heading mb-6">Professional Deep Cleaning Services in Naperville, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Deep cleaning in Naperville, IL requires a team that understands the high standards Naperville
-            homeowners expect Ã¢â‚¬â€ and that&apos;s exactly what DSM Cleaning Solutions delivers. We serve the full
+            homeowners expect - and that&apos;s exactly what DSM Cleaning Solutions delivers. We serve the full
             city across zip codes 60540, 60563, 60564, and 60565, covering neighborhoods like Cress Creek,
             Hobson West, Ashbury, and White Eagle with a comprehensive, room-by-room deep clean.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Naperville is home to some of the most beautiful neighborhoods in the Chicago area Ã¢â‚¬â€ and those
+            Naperville is home to some of the most beautiful neighborhoods in the Chicago area - and those
             homes deserve a cleaning service that matches. Whether you live near the iconic Riverwalk, the
             Centennial Beach area, or in one of Naperville&apos;s newer subdivisions, our team arrives fully
             equipped and ready to tackle every inch of your home.
           </p>
           <p className="text-gray-600 leading-relaxed">
-            We use professional-grade, eco-friendly cleaning products throughout every deep cleaning job Ã¢â‚¬â€
+            We use professional-grade, eco-friendly cleaning products throughout every deep cleaning job  - 
             no harsh chemicals that linger after we leave. DSM is family-owned and based right in the
             southwest suburbs, giving us a community commitment that national cleaning chains simply
             can&apos;t match.
@@ -272,13 +272,13 @@ export default function DeepCleaningNapervillePage() {
           <h2 className="section-heading mb-6">How Much Does Deep Cleaning Cost in Naperville, IL?</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Deep cleaning in Naperville starts around $200 and varies based on the size of your home and its
-            current condition. Most Naperville homes Ã¢â‚¬â€ particularly the larger single-family homes in
-            Ashbury or White Eagle Ã¢â‚¬â€ fall in the $280Ã¢â‚¬â€œ$420 range. Condos and townhomes near Downtown Naperville
+            current condition. Most Naperville homes - particularly the larger single-family homes in
+            Ashbury or White Eagle - fall in the $280-$420 range. Condos and townhomes near Downtown Naperville
             are typically at the lower end of the scale.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
             We provide every client with a free, no-obligation estimate before we start. You&apos;ll know
-            exactly what to expect Ã¢â‚¬â€ no hidden fees, no surprises. Just an honest quote from a
+            exactly what to expect - no hidden fees, no surprises. Just an honest quote from a
             family-owned local business.
           </p>
           <Link href="/contact" className="btn-primary">Get My Free Naperville Quote</Link>
@@ -338,12 +338,12 @@ export default function DeepCleaningNapervillePage() {
               <h2 className="text-4xl font-bold mb-4">Book Your Deep Cleaning in Naperville Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Get a free quote for deep cleaning in Naperville, IL. We serve all four zip codes and
-                every neighborhood Ã¢â‚¬â€ and we back every job with our 48-hour satisfaction guarantee.
+                every neighborhood - and we back every job with our 48-hour satisfaction guarantee.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                Ã°Å¸â€œÅ¾ (815) 246-2113
+                 (815) 246-2113
               </a>
-              <p className="text-white/80">Family-owned Ã‚Â· Eco-friendly Ã‚Â· Fully insured Ã‚Â· Satisfaction guaranteed</p>
+              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <LeadForm />

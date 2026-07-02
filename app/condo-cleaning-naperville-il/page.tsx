@@ -5,12 +5,12 @@ import LeadForm from "@/components/LeadForm";
 export const metadata: Metadata = {
   title: "Condo Cleaning Services Naperville IL",
   description:
-    "Condo cleaning services in Naperville IL by DSM Cleaning Solutions. Trusted insured eco-friendly. Call (815) 246-2113.",
+    "Condo cleaning services in Naperville IL by DSM Cleaning Solutions. Trusted, insured, eco-friendly. Free estimate.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/condo-cleaning-naperville-il" },
   openGraph: {
     title: "Condo Cleaning Services Naperville IL | DSM Cleaning Solutions",
     description:
-      "Condo cleaning services in Naperville IL by DSM Cleaning Solutions. Trusted insured eco-friendly. Call (815) 246-2113.",
+      "Condo cleaning services in Naperville IL by DSM Cleaning Solutions. Trusted, insured, eco-friendly. Free estimate.",
     url: "https://www.dsmcleaningsolutions.com/condo-cleaning-naperville-il",
     siteName: "DSM Cleaning Solutions",
     images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "Condo Cleaning Naperville IL" }],
@@ -73,7 +73,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Professional condo cleaning in Naperville, IL. DSM Cleaning Solutions serves high-rise and low-rise condos across 60540, 60563, 60564 & 60565. Eco-friendly, fully insured, recurring plans available.",
+    "Condo cleaning in Naperville, IL. High-rise and low-rise condos across 60540, 60563, 60564 & 60565. Eco-friendly, fully insured, recurring plans available.",
 };
 
 const faqSchema = {

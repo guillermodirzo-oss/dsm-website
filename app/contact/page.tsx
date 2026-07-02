@@ -5,12 +5,12 @@ import LeadForm from "@/components/LeadForm";
 export const metadata: Metadata = {
   title: "Contact Us | Free Cleaning Estimate",
   description:
-    "Contact DSM Cleaning Solutions for a free house cleaning estimate in Plainfield, Romeoville, Naperville & Bolingbrook IL. Call (815) 246-2113 today.",
+    "Contact DSM Cleaning Solutions for a free house cleaning estimate in Plainfield, Romeoville, Naperville & Bolingbrook IL. We respond within 1 business day.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/contact" },
   openGraph: {
     title: "Contact DSM Cleaning Solutions | Free Estimate",
     description:
-      "Contact DSM Cleaning Solutions for a free house cleaning estimate in Plainfield, Romeoville, Naperville & Bolingbrook IL. Call (815) 246-2113 today.",
+      "Contact DSM Cleaning Solutions for a free house cleaning estimate in Plainfield, Romeoville, Naperville & Bolingbrook IL. We respond within 1 business day.",
     url: "https://www.dsmcleaningsolutions.com/contact",
     siteName: "DSM Cleaning Solutions",
     images: [

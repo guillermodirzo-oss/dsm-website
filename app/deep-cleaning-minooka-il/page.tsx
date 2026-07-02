@@ -5,12 +5,12 @@ import LeadForm from "@/components/LeadForm";
 export const metadata: Metadata = {
   title: "Deep Cleaning Services Minooka IL",
   description:
-    "Professional deep cleaning in Minooka IL by DSM Cleaning Solutions. Family owned, fully insured, 48-hr guarantee. Call (815) 246-2113.",
+    "Professional deep cleaning in Minooka, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-minooka-il" },
   openGraph: {
     title: "Deep Cleaning Services Minooka IL",
     description:
-      "Professional deep cleaning in Minooka IL by DSM Cleaning Solutions. Family owned, fully insured, 48-hr guarantee. Call (815) 246-2113.",
+      "Professional deep cleaning in Minooka, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning-minooka-il",
   },
   twitter: {
@@ -23,12 +23,12 @@ const faqs = [
   {
     question: "Do you offer deep cleaning in Minooka, IL?",
     answer:
-      "Yes Ã¢â‚¬â€ DSM Cleaning Solutions provides professional deep cleaning throughout Minooka, IL (zip code 60447), including Minooka Acres, Heritage Fields, Fox Run, Aux Sable Creek Estates, and Old Town Minooka. We're based in nearby Romeoville and serve all of Minooka and the surrounding Grundy and Will County communities.",
+      "Yes - DSM Cleaning Solutions provides professional deep cleaning throughout Minooka, IL (zip code 60447), including Minooka Acres, Heritage Fields, Fox Run, Aux Sable Creek Estates, and Old Town Minooka. We're based in nearby Romeoville and serve all of Minooka and the surrounding Grundy and Will County communities.",
   },
   {
     question: "How far is DSM from Minooka, IL?",
     answer:
-      "Our base is in Romeoville, IL Ã¢â‚¬â€ approximately 20Ã¢â‚¬â€œ30 minutes from most Minooka neighborhoods depending on traffic. We serve Minooka regularly alongside our Joliet and Shorewood clients throughout Will and Grundy counties.",
+      "Our base is in Romeoville, IL - approximately 20-30 minutes from most Minooka neighborhoods depending on traffic. We serve Minooka regularly alongside our Joliet and Shorewood clients throughout Will and Grundy counties.",
   },
   {
     question: "What neighborhoods in Minooka do you serve?",
@@ -38,12 +38,12 @@ const faqs = [
   {
     question: "Is your deep cleaning team insured in Minooka?",
     answer:
-      "Yes Ã¢â‚¬â€ DSM Cleaning Solutions is fully insured and bonded in Illinois, covering all Minooka service areas. Every team member is background-checked and we carry full liability insurance on every job, so you can book with complete confidence.",
+      "Yes - DSM Cleaning Solutions is fully insured and bonded in Illinois, covering all Minooka service areas. Every team member is background-checked and we carry full liability insurance on every job, so you can book with complete confidence.",
   },
   {
     question: "How often should Minooka homes get deep cleaned?",
     answer:
-      "We recommend a professional deep clean at least once or twice a year for most Minooka homes. Newly built homes benefit from a deep clean after construction dust and debris settle in. Households with pets, allergies, or young children benefit from deep cleaning every 3Ã¢â‚¬â€œ4 months. Many Minooka clients pair a seasonal deep clean with our recurring standard cleaning service.",
+      "We recommend a professional deep clean at least once or twice a year for most Minooka homes. Newly built homes benefit from a deep clean after construction dust and debris settle in. Households with pets, allergies, or young children benefit from deep cleaning every 3-4 months. Many Minooka clients pair a seasonal deep clean with our recurring standard cleaning service.",
   },
 ];
 
@@ -71,7 +71,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Professional deep cleaning in Minooka IL by DSM Cleaning Solutions. Family owned, fully insured, 48-hr guarantee. Call (815) 246-2113.",
+    "Professional deep cleaning in Minooka, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
 };
 
 const faqSchema = {
@@ -134,12 +134,12 @@ const checklist = [
 ];
 
 const trustCards = [
-  { icon: "Ã°Å¸Å’Â¿", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products safe for kids and pets." },
-  { icon: "Ã°Å¸â€ºÂ¡Ã¯Â¸Â", title: "Fully Insured & Bonded", desc: "Background-checked team. Your Minooka home is fully protected." },
-  { icon: "Ã¢Å“â€¦", title: "48-Hour Guarantee", desc: "We re-clean anything that isn't right within 48 hours." },
-  { icon: "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§", title: "Family Owned", desc: "Based in nearby Romeoville Ã¢â‚¬â€ your southwest suburbs neighbors." },
-  { icon: "Ã°Å¸â€œâ€¦", title: "7 Days a Week", desc: "Available 8amÃ¢â‚¬â€œ6pm, 7 days a week for your Minooka schedule." },
-  { icon: "Ã°Å¸â€œÂ", title: "Serving Minooka", desc: "All neighborhoods in zip code 60447." },
+  { icon: "", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products safe for kids and pets." },
+  { icon: "", title: "Fully Insured & Bonded", desc: "Background-checked team. Your Minooka home is fully protected." },
+  { icon: "", title: "48-Hour Guarantee", desc: "We re-clean anything that isn't right within 48 hours." },
+  { icon: "", title: "Family Owned", desc: "Based in nearby Romeoville - your southwest suburbs neighbors." },
+  { icon: "", title: "7 Days a Week", desc: "Available 8am-6pm, 7 days a week for your Minooka schedule." },
+  { icon: "", title: "Serving Minooka", desc: "All neighborhoods in zip code 60447." },
 ];
 
 export default function DeepCleaningMinookaPage() {
@@ -170,13 +170,13 @@ export default function DeepCleaningMinookaPage() {
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               DSM Cleaning Solutions delivers a thorough, top-to-bottom deep clean for homes across
-              Minooka Ã¢â‚¬â€ from Heritage Fields and Fox Run to Aux Sable Creek Estates and Old Town
+              Minooka - from Heritage Fields and Fox Run to Aux Sable Creek Estates and Old Town
               Minooka. Whether your home is newly built or well-established, we clean every surface
               inside and out.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
-              <a href="tel:+18152462113" className="btn-outline-white btn-lg">Ã°Å¸â€œÅ¾ (815) 246-2113</a>
+              <a href="tel:+18152462113" className="btn-outline-white btn-lg"> (815) 246-2113</a>
             </div>
           </div>
         </div>
@@ -186,7 +186,7 @@ export default function DeepCleaningMinookaPage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["Ã¢Å“â€¦ Fully Insured & Bonded", "Ã°Å¸Å’Â¿ Eco-Friendly Products", "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§ Family Owned", "Ã¢Â­Â 5-Star Rated", "Ã¢Å“â€Ã¯Â¸Â Satisfaction Guaranteed"].map(
+            {["Fully Insured & Bonded", "Eco-Friendly Products", "Family Owned", "5-Star Rated", "Satisfaction Guaranteed"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -198,14 +198,14 @@ export default function DeepCleaningMinookaPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading mb-6">Professional Deep Cleaning Services in Minooka, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            <strong>Deep cleaning in Minooka, IL</strong> is our specialty Ã¢â‚¬â€ and DSM Cleaning Solutions brings
+            <strong>Deep cleaning in Minooka, IL</strong> is our specialty - and DSM Cleaning Solutions brings
             the same meticulous, detail-focused approach to every home we serve. Whether you live in
             Minooka Acres, Heritage Fields, Fox Run, Aux Sable Creek Estates, or Old Town Minooka,
             our team covers all of Minooka (zip code 60447) with a comprehensive clean that goes far
             beyond your regular maintenance routine.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Minooka is one of the fastest-growing communities in the southwest Chicago suburbs Ã¢â‚¬â€
+            Minooka is one of the fastest-growing communities in the southwest Chicago suburbs  - 
             with new construction bringing hundreds of families to neighborhoods like Heritage Fields
             and Fox Run each year. New builds especially benefit from a professional deep clean after
             the construction phase: construction dust settles deep into vents, window sills, and
@@ -214,7 +214,7 @@ export default function DeepCleaningMinookaPage() {
             know this corridor of Will and Grundy counties well.
           </p>
           <p className="text-gray-600 leading-relaxed">
-            We use only eco-friendly, non-toxic products Ã¢â‚¬â€ safe for your family, pets, and all
+            We use only eco-friendly, non-toxic products - safe for your family, pets, and all
             surfaces including the newer finishes and materials common in Minooka&apos;s newly built
             homes. Conveniently located near <Link href="/deep-cleaning-joliet-il" className="text-brand-green font-semibold hover:underline">Joliet</Link> and{" "}
             <Link href="/deep-cleaning-shorewood-il" className="text-brand-green font-semibold hover:underline">Shorewood</Link>, we serve
@@ -229,7 +229,7 @@ export default function DeepCleaningMinookaPage() {
           <div className="text-center mb-12">
             <h2 className="section-heading">What&apos;s Included in Our Deep Cleaning in Minooka, IL</h2>
             <p className="section-subheading mx-auto">
-              Every room in your Minooka home Ã¢â‚¬â€ cleaned top to bottom.
+              Every room in your Minooka home - cleaned top to bottom.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -279,13 +279,13 @@ export default function DeepCleaningMinookaPage() {
           <p className="text-gray-600 mb-4 leading-relaxed">
             Deep cleaning in Minooka starts around $200 for smaller homes and scales based on the
             number of bedrooms and bathrooms, the size of the home, and how long it&apos;s been since
-            your last professional clean. Most Minooka homes fall in the $225Ã¢â‚¬â€œ$350 range. Newer
+            your last professional clean. Most Minooka homes fall in the $225-$350 range. Newer
             construction homes may require additional attention to vents, tracks, and hard-to-reach
             areas where construction dust has settled.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
             We always provide a free, no-obligation estimate before any work begins. You&apos;ll know
-            exactly what to expect before we arrive at your Minooka home Ã¢â‚¬â€ no surprises.
+            exactly what to expect before we arrive at your Minooka home - no surprises.
             Contact us at (815) 246-2113 or fill out the form below.
           </p>
           <Link href="/contact" className="btn-primary">Get My Free Minooka Quote</Link>
@@ -349,13 +349,13 @@ export default function DeepCleaningMinookaPage() {
               <h2 className="text-4xl font-bold mb-4">Book Your Deep Cleaning in Minooka Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Ready for a Minooka home that&apos;s clean from top to bottom? Get your free deep cleaning
-                quote Ã¢â‚¬â€ we respond within 1 business day and back every job with our 48-hour satisfaction
+                quote - we respond within 1 business day and back every job with our 48-hour satisfaction
                 guarantee.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                Ã°Å¸â€œÅ¾ (815) 246-2113
+                 (815) 246-2113
               </a>
-              <p className="text-white/80">Family-owned Ã‚Â· Eco-friendly Ã‚Â· Fully insured Ã‚Â· Satisfaction guaranteed</p>
+              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <LeadForm />

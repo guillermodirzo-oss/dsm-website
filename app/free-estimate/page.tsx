@@ -5,12 +5,12 @@ import LeadForm from "@/components/LeadForm";
 export const metadata: Metadata = {
   title: "Free House Cleaning Estimate Romeoville & Plainfield IL",
   description:
-    "Get a free house cleaning estimate in Romeoville and Plainfield IL. No obligation. DSM Cleaning Solutions — call (815) 246-2113 today.",
+    "Get a free house cleaning estimate in Romeoville and Plainfield IL. No obligation. DSM Cleaning Solutions responds within 1 business day.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/free-estimate" },
   openGraph: {
     title: "Free House Cleaning Estimate Romeoville & Plainfield IL | DSM Cleaning Solutions",
     description:
-      "Get a free house cleaning estimate in Romeoville and Plainfield IL. No obligation. DSM Cleaning Solutions — call (815) 246-2113 today.",
+      "Get a free house cleaning estimate in Romeoville and Plainfield IL. No obligation. DSM Cleaning Solutions responds within 1 business day.",
     url: "https://www.dsmcleaningsolutions.com/free-estimate",
     siteName: "DSM Cleaning Solutions",
     images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "Free Cleaning Estimate Romeoville Plainfield IL" }],

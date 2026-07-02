@@ -5,12 +5,12 @@ import LeadForm from "@/components/LeadForm";
 export const metadata: Metadata = {
   title: "Deep Cleaning Services Westmont IL",
   description:
-    "Professional deep cleaning in Westmont IL by DSM Cleaning Solutions. Family owned, fully insured, 48-hr guarantee. Call (815) 246-2113.",
+    "Professional deep cleaning in Westmont, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-westmont-il" },
   openGraph: {
     title: "Deep Cleaning Services Westmont IL",
     description:
-      "Professional deep cleaning in Westmont IL by DSM Cleaning Solutions. Family owned, fully insured, 48-hr guarantee. Call (815) 246-2113.",
+      "Professional deep cleaning in Westmont, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning-westmont-il",
   },
   twitter: {
@@ -23,12 +23,12 @@ const faqs = [
   {
     question: "Do you offer deep cleaning in Westmont, IL?",
     answer:
-      "Yes Ã¢â‚¬â€ DSM Cleaning Solutions provides professional deep cleaning throughout Westmont, IL (zip code 60559), including Westmont Downtown, Oakwood Estates, the Waterfall Glen area, the Cass Avenue Corridor, and the Williams Street District. We serve all of Westmont and the surrounding DuPage County suburbs.",
+      "Yes - DSM Cleaning Solutions provides professional deep cleaning throughout Westmont, IL (zip code 60559), including Westmont Downtown, Oakwood Estates, the Waterfall Glen area, the Cass Avenue Corridor, and the Williams Street District. We serve all of Westmont and the surrounding DuPage County suburbs.",
   },
   {
     question: "How far is DSM Cleaning Solutions from Westmont?",
     answer:
-      "We're based in the southwest Chicago suburbs and serve Westmont regularly, typically about 25Ã¢â‚¬â€œ35 minutes from our Romeoville base. We schedule Westmont jobs as part of our regular DuPage and Will County routes, so you'll get the same punctual, professional service our regular clients expect.",
+      "We're based in the southwest Chicago suburbs and serve Westmont regularly, typically about 25-35 minutes from our Romeoville base. We schedule Westmont jobs as part of our regular DuPage and Will County routes, so you'll get the same punctual, professional service our regular clients expect.",
   },
   {
     question: "What neighborhoods in Westmont do you serve?",
@@ -38,12 +38,12 @@ const faqs = [
   {
     question: "Is your deep cleaning team insured in Westmont?",
     answer:
-      "Yes Ã¢â‚¬â€ DSM Cleaning Solutions is fully insured and bonded in Illinois, covering all Westmont service areas. Every team member is background-checked and we carry full liability insurance on every job, so you can book with complete confidence.",
+      "Yes - DSM Cleaning Solutions is fully insured and bonded in Illinois, covering all Westmont service areas. Every team member is background-checked and we carry full liability insurance on every job, so you can book with complete confidence.",
   },
   {
     question: "How often should Westmont homes get a professional deep clean?",
     answer:
-      "We recommend a professional deep clean at least once or twice a year for most Westmont homes. Westmont's established neighborhoods have many older homes that benefit from thorough seasonal deep cleans to address built-up grime, grout, and hard-to-reach areas. Households with pets or allergies benefit from deep cleaning every 3Ã¢â‚¬â€œ4 months.",
+      "We recommend a professional deep clean at least once or twice a year for most Westmont homes. Westmont's established neighborhoods have many older homes that benefit from thorough seasonal deep cleans to address built-up grime, grout, and hard-to-reach areas. Households with pets or allergies benefit from deep cleaning every 3-4 months.",
   },
 ];
 
@@ -71,7 +71,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Professional deep cleaning in Westmont IL by DSM Cleaning Solutions. Family owned, fully insured, 48-hr guarantee. Call (815) 246-2113.",
+    "Professional deep cleaning in Westmont, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
 };
 
 const faqSchema = {
@@ -134,12 +134,12 @@ const checklist = [
 ];
 
 const trustCards = [
-  { icon: "Ã°Å¸Å’Â¿", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products safe for kids and pets." },
-  { icon: "Ã°Å¸â€ºÂ¡Ã¯Â¸Â", title: "Fully Insured & Bonded", desc: "Background-checked team. Your Westmont home is fully protected." },
-  { icon: "Ã¢Å“â€¦", title: "48-Hour Guarantee", desc: "We re-clean anything that isn't right within 48 hours." },
-  { icon: "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§", title: "Family Owned", desc: "Based in the southwest Chicago suburbs Ã¢â‚¬â€ your local neighbors." },
-  { icon: "Ã°Å¸â€œâ€¦", title: "7 Days a Week", desc: "Available 8amÃ¢â‚¬â€œ6pm, 7 days a week for your Westmont schedule." },
-  { icon: "Ã°Å¸â€œÂ", title: "Serving Westmont", desc: "All neighborhoods in zip code 60559." },
+  { icon: "", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products safe for kids and pets." },
+  { icon: "", title: "Fully Insured & Bonded", desc: "Background-checked team. Your Westmont home is fully protected." },
+  { icon: "", title: "48-Hour Guarantee", desc: "We re-clean anything that isn't right within 48 hours." },
+  { icon: "", title: "Family Owned", desc: "Based in the southwest Chicago suburbs - your local neighbors." },
+  { icon: "", title: "7 Days a Week", desc: "Available 8am-6pm, 7 days a week for your Westmont schedule." },
+  { icon: "", title: "Serving Westmont", desc: "All neighborhoods in zip code 60559." },
 ];
 
 export default function DeepCleaningWestmontPage() {
@@ -170,13 +170,13 @@ export default function DeepCleaningWestmontPage() {
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               DSM Cleaning Solutions delivers a thorough, top-to-bottom deep clean for homes across
-              Westmont Ã¢â‚¬â€ from Westmont Downtown and Oakwood Estates to the Cass Avenue Corridor and
+              Westmont - from Westmont Downtown and Oakwood Estates to the Cass Avenue Corridor and
               Williams Street District. Every surface scrubbed, every grout line restored, every
               appliance cleaned inside and out.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
-              <a href="tel:+18152462113" className="btn-outline-white btn-lg">Ã°Å¸â€œÅ¾ (815) 246-2113</a>
+              <a href="tel:+18152462113" className="btn-outline-white btn-lg"> (815) 246-2113</a>
             </div>
           </div>
         </div>
@@ -186,7 +186,7 @@ export default function DeepCleaningWestmontPage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["Ã¢Å“â€¦ Fully Insured & Bonded", "Ã°Å¸Å’Â¿ Eco-Friendly Products", "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§ Family Owned", "Ã¢Â­Â 5-Star Rated", "Ã¢Å“â€Ã¯Â¸Â Satisfaction Guaranteed"].map(
+            {["Fully Insured & Bonded", "Eco-Friendly Products", "Family Owned", "5-Star Rated", "Satisfaction Guaranteed"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -198,14 +198,14 @@ export default function DeepCleaningWestmontPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading mb-6">Professional Deep Cleaning Services in Westmont, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            <strong>Deep cleaning in Westmont, IL</strong> is our specialty Ã¢â‚¬â€ and DSM Cleaning Solutions brings
+            <strong>Deep cleaning in Westmont, IL</strong> is our specialty - and DSM Cleaning Solutions brings
             the same meticulous, detail-focused approach to every home we serve. Whether you live in
             Westmont Downtown, Oakwood Estates, the Waterfall Glen area, the Cass Avenue Corridor, or
             the Williams Street District, our team covers all of Westmont (zip code 60559) with a
             comprehensive clean that goes far beyond your regular maintenance routine.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Westmont is an established DuPage County suburb with a mix of classic and newer homes Ã¢â‚¬â€
+            Westmont is an established DuPage County suburb with a mix of classic and newer homes  - 
             many of which benefit enormously from a professional deep clean. Older homes along the
             Cass Avenue Corridor and near the Metra Burlington Northern line tend to accumulate
             grime in grout lines, behind appliances, and along baseboards that regular cleaning
@@ -214,7 +214,7 @@ export default function DeepCleaningWestmontPage() {
             results we deliver throughout DuPage and Will counties.
           </p>
           <p className="text-gray-600 leading-relaxed">
-            We use only eco-friendly, non-toxic products Ã¢â‚¬â€ safe for your family, pets, and all
+            We use only eco-friendly, non-toxic products - safe for your family, pets, and all
             surfaces. Whether you&apos;re preparing for a seasonal reset near Ty Warner Park or getting
             your home ready before a big event, our Westmont deep cleaning service delivers.
             Conveniently located near <Link href="/deep-cleaning-bolingbrook-il" className="text-brand-green font-semibold hover:underline">Bolingbrook</Link> and{" "}
@@ -230,7 +230,7 @@ export default function DeepCleaningWestmontPage() {
           <div className="text-center mb-12">
             <h2 className="section-heading">What&apos;s Included in Our Deep Cleaning in Westmont, IL</h2>
             <p className="section-subheading mx-auto">
-              Every room in your Westmont home Ã¢â‚¬â€ cleaned top to bottom.
+              Every room in your Westmont home - cleaned top to bottom.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -280,13 +280,13 @@ export default function DeepCleaningWestmontPage() {
           <p className="text-gray-600 mb-4 leading-relaxed">
             Deep cleaning in Westmont starts around $200 for smaller homes and scales based on the
             number of bedrooms and bathrooms, the size of the home, and how long it&apos;s been since
-            your last professional clean. Most Westmont homes fall in the $225Ã¢â‚¬â€œ$325 range. Homes
+            your last professional clean. Most Westmont homes fall in the $225-$325 range. Homes
             with older fixtures, tile grout, or basement areas may run slightly higher due to the
             extra detail work required.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
             We always provide a free, no-obligation estimate before any work begins. You&apos;ll know
-            exactly what to expect before we arrive at your Westmont home Ã¢â‚¬â€ no surprises.
+            exactly what to expect before we arrive at your Westmont home - no surprises.
             Contact us at (815) 246-2113 or fill out the form below.
           </p>
           <Link href="/contact" className="btn-primary">Get My Free Westmont Quote</Link>
@@ -350,13 +350,13 @@ export default function DeepCleaningWestmontPage() {
               <h2 className="text-4xl font-bold mb-4">Book Your Deep Cleaning in Westmont Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Ready for a Westmont home that&apos;s clean from top to bottom? Get your free deep cleaning
-                quote Ã¢â‚¬â€ we respond within 1 business day and back every job with our 48-hour satisfaction
+                quote - we respond within 1 business day and back every job with our 48-hour satisfaction
                 guarantee.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                Ã°Å¸â€œÅ¾ (815) 246-2113
+                 (815) 246-2113
               </a>
-              <p className="text-white/80">Family-owned Ã‚Â· Eco-friendly Ã‚Â· Fully insured Ã‚Â· Satisfaction guaranteed</p>
+              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <LeadForm />

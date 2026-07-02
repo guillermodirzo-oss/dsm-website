@@ -7,7 +7,7 @@ import ReviewCard from "@/components/ReviewCard";
 export const metadata: Metadata = {
   title: "Deep Cleaning Service in Romeoville & Plainfield IL | DSM Cleaning Solutions",
   description:
-    "Professional deep cleaning for homes in Romeoville, Plainfield & Bolingbrook. Perfect before a big event, after winter, or for a fresh start. Book your deep clean today.",
+    "Professional deep cleaning for homes in Romeoville, Plainfield & Bolingbrook. Perfect before a big event, after winter, or for a fresh start. Free quote.",
   keywords: [
     "deep cleaning Romeoville IL",
     "deep house cleaning Romeoville",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Deep Cleaning Service Plainfield IL | DSM Cleaning Solutions",
     description:
-      "Professional deep cleaning in Plainfield & Romeoville IL. We scrub baseboards, grout, appliances & more. 5-star rated team. 48-hr satisfaction guarantee. Book online in 2 min.",
+      "Professional deep cleaning in Plainfield & Romeoville IL. We scrub baseboards, grout, appliances & more. 5-star rated, 48-hr satisfaction guarantee.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning",
     siteName: "DSM Cleaning Solutions",
     images: [
@@ -104,7 +104,7 @@ const serviceSchema = {
   },
   areaServed: ["Romeoville, IL", "Plainfield, IL", "Naperville, IL", "Bolingbrook, IL"],
   description:
-    "Professional deep cleaning service for homes and apartments in Romeoville, IL and surrounding suburbs. Thorough top-to-bottom cleaning using eco-friendly products.",
+    "Professional deep cleaning service for homes in Romeoville, IL and surrounding suburbs. Thorough room-by-room cleaning using eco-friendly products.",
   offers: {
     "@type": "Offer",
     availability: "https://schema.org/InStock",

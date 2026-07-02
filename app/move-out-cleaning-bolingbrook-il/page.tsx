@@ -5,12 +5,12 @@ import LeadForm from "@/components/LeadForm";
 export const metadata: Metadata = {
   title: "Move-Out Cleaning Service in Bolingbrook IL | DSM Cleaning Solutions",
   description:
-    "Move-out cleaning in Bolingbrook, IL. DSM Cleaning Solutions helps renters and homeowners leave their property spotless. 5-star rated, 48-hour guarantee. Book online.",
+    "Move-out cleaning in Bolingbrook, IL. Deposit-back cleaning for renters and homeowners. Eco-friendly, fully insured, 48-hour guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-bolingbrook-il" },
   openGraph: {
     title: "Move-Out Cleaning Service in Bolingbrook IL | DSM Cleaning Solutions",
     description:
-      "Move-out cleaning in Bolingbrook, IL. DSM Cleaning Solutions helps renters and homeowners leave their property spotless. 5-star rated, 48-hour guarantee. Book online.",
+      "Move-out cleaning in Bolingbrook, IL. Deposit-back cleaning for renters and homeowners. Eco-friendly, fully insured, 48-hour guarantee. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/move-out-cleaning-bolingbrook-il",
   },
   twitter: {
@@ -71,7 +71,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Move-out cleaning in Bolingbrook IL by DSM Cleaning Solutions. Get your deposit back. Fully insured. Call (815) 246-2113.",
+    "Move-out cleaning in Bolingbrook IL by DSM Cleaning Solutions. Get your deposit back. Fully insured. Free estimate.",
 };
 
 const faqSchema = {

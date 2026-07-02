@@ -5,12 +5,12 @@ import LeadForm from "@/components/LeadForm";
 export const metadata: Metadata = {
   title: "Eco Friendly House Cleaning Plainfield IL",
   description:
-    "Eco-friendly house cleaning in Plainfield IL by DSM Cleaning Solutions. Safe for kids and pets. Fully insured. Call (815) 246-2113.",
+    "Eco-friendly house cleaning in Plainfield IL by DSM Cleaning Solutions. Safe for kids and pets. Fully insured. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/eco-friendly-cleaning-plainfield-il" },
   openGraph: {
     title: "Eco Friendly House Cleaning Plainfield IL | DSM Cleaning Solutions",
     description:
-      "Eco-friendly house cleaning in Plainfield IL by DSM Cleaning Solutions. Safe for kids and pets. Fully insured. Call (815) 246-2113.",
+      "Eco-friendly house cleaning in Plainfield IL by DSM Cleaning Solutions. Safe for kids and pets. Fully insured. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/eco-friendly-cleaning-plainfield-il",
     siteName: "DSM Cleaning Solutions",
     images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "Eco Friendly Cleaning Plainfield IL" }],
@@ -73,7 +73,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Professional eco-friendly house cleaning in Plainfield, IL. DSM Cleaning Solutions uses non-toxic, biodegradable products safe for kids and pets. Serving 60544 and 60585.",
+    "Eco-friendly house cleaning in Plainfield, IL. Non-toxic, biodegradable products safe for kids and pets. Serving 60544 and 60585. Free estimate.",
 };
 
 const faqSchema = {

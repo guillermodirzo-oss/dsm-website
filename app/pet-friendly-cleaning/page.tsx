@@ -69,7 +69,7 @@ const serviceSchema = {
   },
   areaServed: ["Romeoville, IL", "Plainfield, IL", "Naperville, IL", "Bolingbrook, IL", "Joliet, IL"],
   description:
-    "Pet-safe, non-toxic house cleaning for dog and cat owners throughout the southwest Chicago suburbs. DSM Cleaning Solutions uses biodegradable products safe for pets during and after cleaning.",
+    "Pet-safe, non-toxic house cleaning for dog and cat owners in the southwest Chicago suburbs. Biodegradable products safe for pets during and after cleaning.",
 };
 
 const faqSchema = {

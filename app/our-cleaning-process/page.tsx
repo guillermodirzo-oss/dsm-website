@@ -69,7 +69,7 @@ const serviceSchema = {
   },
   areaServed: ["Romeoville, IL", "Plainfield, IL", "Naperville, IL", "Bolingbrook, IL", "Joliet, IL"],
   description:
-    "Step-by-step overview of the DSM Cleaning Solutions process — from booking to recurring service. Professional house cleaning in Romeoville, IL and the southwest Chicago suburbs.",
+    "Step-by-step overview of the DSM Cleaning Solutions process - from booking to recurring service. Professional house cleaning in Romeoville, IL.",
 };
 
 const faqSchema = {

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
       "Deep Cleaning Special — $75 Off + Free Oven Clean | DSM Cleaning Solutions",
   },
   description:
-    "Does your home actually need a deep clean? Most do. Save $75 + get your oven cleaned free with DSM Cleaning Solutions. Serving Romeoville, Plainfield, Bolingbrook, Crest Hill, Shorewood & Lockport.",
+    "Save $75 on your deep clean plus free oven cleaning with DSM Cleaning Solutions. Serving Romeoville, Plainfield, Bolingbrook, Crest Hill, Shorewood & Lockport.",
   robots: { index: false, follow: false },
 };
 

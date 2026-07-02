@@ -6,13 +6,13 @@ import LeadForm from "@/components/LeadForm";
 export const metadata: Metadata = {
   title: "Spring Cleaning Special — $75 Off",
   description:
-    "Get $75 off your spring deep cleaning in Romeoville, Plainfield, Bolingbrook, Lockport, Shorewood & Crest Hill. Free oven cleaning included — a $40 value. Family-owned, fully insured. Limited May spots.",
+    "Get $75 off your spring deep cleaning in Romeoville, Plainfield, Bolingbrook, Lockport & Shorewood. Free oven cleaning included. Limited spots available.",
   robots: { index: false, follow: false },
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/spring-special" },
   openGraph: {
     title: "Spring Cleaning Special — $75 Off | DSM Cleaning Solutions",
     description:
-      "Get $75 off your spring deep cleaning in Romeoville, Plainfield, Bolingbrook, Lockport, Shorewood & Crest Hill. Free oven cleaning included — a $40 value. Limited May spots.",
+      "Get $75 off your spring deep cleaning in Romeoville, Plainfield, Bolingbrook, Lockport & Shorewood. Free oven cleaning included. Limited spots available.",
     url: "https://www.dsmcleaningsolutions.com/spring-special",
     siteName: "DSM Cleaning Solutions",
     images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions — Spring Cleaning Special $75 Off" }],

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/standard-cleaning" },
   openGraph: {
     title: "Standard Cleaning Service Plainfield IL | DSM Cleaning Solutions",
-    description: "Recurring house cleaning in Plainfield & Romeoville IL starting from $120. Vetted, insured cleaners. Weekly, bi-weekly or monthly. 5-star rated. Get a free quote today.",
+    description: "Recurring house cleaning in Plainfield & Romeoville IL from $120. Vetted, insured cleaners. Weekly, bi-weekly, or monthly. 5-star rated. Free quote today.",
     url: "https://www.dsmcleaningsolutions.com/standard-cleaning",
     siteName: "DSM Cleaning Solutions",
     images: [
@@ -83,7 +83,7 @@ export default function StandardCleaningPage() {
               },
             },
             areaServed: ["Romeoville, IL", "Plainfield, IL", "Naperville, IL", "Bolingbrook, IL"],
-            description: "Professional standard house cleaning in Romeoville, IL. Recurring or one-time residential cleaning tailored to your home and schedule. Eco-friendly, fully insured.",
+            description: "Professional standard house cleaning in Romeoville, IL. Recurring or one-time service tailored to your schedule. Eco-friendly, fully insured. Free estimate.",
           }),
         }}
       />

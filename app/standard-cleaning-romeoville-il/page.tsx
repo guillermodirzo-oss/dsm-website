@@ -5,12 +5,12 @@ import LeadForm from "@/components/LeadForm";
 export const metadata: Metadata = {
   title: "Standard Cleaning Services Romeoville IL",
   description:
-    "House cleaning in Romeoville, IL you can count on. DSM Cleaning Solutions offers weekly, biweekly & monthly plans Ã¢â‚¬â€ family owned & fully insured.",
+    "House cleaning in Romeoville, IL you can count on. DSM Cleaning Solutions offers weekly, biweekly & monthly plans - family owned & fully insured.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/standard-cleaning-romeoville-il" },
   openGraph: {
     title: "Standard Cleaning Services Romeoville IL",
     description:
-      "House cleaning in Romeoville, IL you can count on. DSM Cleaning Solutions offers weekly, biweekly & monthly plans Ã¢â‚¬â€ family owned & fully insured.",
+      "House cleaning in Romeoville, IL you can count on. DSM Cleaning Solutions offers weekly, biweekly & monthly plans - family owned & fully insured.",
     url: "https://www.dsmcleaningsolutions.com/standard-cleaning-romeoville-il",
   },
   twitter: {
@@ -23,27 +23,27 @@ const faqs = [
   {
     question: "How often should I schedule standard cleaning in Romeoville, IL?",
     answer:
-      "Most Romeoville homeowners choose biweekly cleaning Ã¢â‚¬â€ it&apos;s the sweet spot between cost and cleanliness. Families with pets or young children often find weekly service most effective. If you maintain between visits, monthly is also a great option.",
+      "Most Romeoville homeowners choose biweekly cleaning - it&apos;s the sweet spot between cost and cleanliness. Families with pets or young children often find weekly service most effective. If you maintain between visits, monthly is also a great option.",
   },
   {
     question: "Do you serve the Windstone and Grand Haven neighborhoods in Romeoville?",
     answer:
-      "Yes Ã¢â‚¬â€ we serve all of Romeoville (60446) including Windstone, Grand Haven, Hidden Lakes, and every other neighborhood throughout the city.",
+      "Yes - we serve all of Romeoville (60446) including Windstone, Grand Haven, Hidden Lakes, and every other neighborhood throughout the city.",
   },
   {
     question: "How much does standard cleaning cost in Romeoville, IL?",
     answer:
-      "Standard cleaning in Romeoville starts around $120Ã¢â‚¬â€œ$180 depending on the size of your home. Recurring clients receive a discounted rate. Contact us for a free estimate tailored to your specific home.",
+      "Standard cleaning in Romeoville starts around $120-$180 depending on the size of your home. Recurring clients receive a discounted rate. Contact us for a free estimate tailored to your specific home.",
   },
   {
     question: "Do I need to be home during my standard cleaning in Romeoville?",
     answer:
-      "No Ã¢â‚¬â€ you don&apos;t need to be home. Many of our Romeoville clients provide a key or door code and come home to a perfectly clean house. Our team is fully insured, bonded, and background-checked.",
+      "No - you don&apos;t need to be home. Many of our Romeoville clients provide a key or door code and come home to a perfectly clean house. Our team is fully insured, bonded, and background-checked.",
   },
   {
     question: "Is DSM Cleaning Solutions based in Romeoville, IL?",
     answer:
-      "Yes Ã¢â‚¬â€ DSM Cleaning Solutions is actually headquartered right here in Romeoville. We&apos;re a locally owned, family-operated business serving our neighbors throughout the community and surrounding southwest suburbs.",
+      "Yes - DSM Cleaning Solutions is actually headquartered right here in Romeoville. We&apos;re a locally owned, family-operated business serving our neighbors throughout the community and surrounding southwest suburbs.",
   },
 ];
 
@@ -71,7 +71,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "House cleaning in Romeoville, IL you can count on. DSM Cleaning Solutions offers weekly, biweekly & monthly plans Ã¢â‚¬â€ family owned & fully insured.",
+    "House cleaning in Romeoville, IL you can count on. DSM Cleaning Solutions offers weekly, biweekly & monthly plans - family owned & fully insured.",
 };
 
 const faqSchema = {
@@ -131,12 +131,12 @@ const checklist = [
 ];
 
 const trustCards = [
-  { icon: "Ã°Å¸Å’Â¿", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products Ã¢â‚¬â€ safer for your Romeoville home." },
-  { icon: "Ã°Å¸â€ºÂ¡Ã¯Â¸Â", title: "Fully Insured & Bonded", desc: "Background-checked team. Every job fully protected." },
-  { icon: "Ã¢Å“â€¦", title: "48-Hour Guarantee", desc: "We re-clean anything that isn&apos;t right Ã¢â‚¬â€ no questions asked." },
-  { icon: "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§", title: "Family Owned", desc: "Romeoville-based and community-focused Ã¢â‚¬â€ your real neighbors." },
-  { icon: "Ã°Å¸â€œâ€¦", title: "7 Days a Week", desc: "Flexible scheduling that works around your life." },
-  { icon: "Ã°Å¸â€œÂ", title: "Serving Romeoville", desc: "All neighborhoods in zip code 60446." },
+  { icon: "", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products - safer for your Romeoville home." },
+  { icon: "", title: "Fully Insured & Bonded", desc: "Background-checked team. Every job fully protected." },
+  { icon: "", title: "48-Hour Guarantee", desc: "We re-clean anything that isn&apos;t right - no questions asked." },
+  { icon: "", title: "Family Owned", desc: "Romeoville-based and community-focused - your real neighbors." },
+  { icon: "", title: "7 Days a Week", desc: "Flexible scheduling that works around your life." },
+  { icon: "", title: "Serving Romeoville", desc: "All neighborhoods in zip code 60446." },
 ];
 
 export default function StandardCleaningRomeovillePage() {
@@ -166,13 +166,13 @@ export default function StandardCleaningRomeovillePage() {
               Standard Cleaning in Romeoville, IL
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              DSM Cleaning Solutions is Romeoville&apos;s own Ã¢â‚¬â€ a locally based, family-owned cleaning
+              DSM Cleaning Solutions is Romeoville&apos;s own - a locally based, family-owned cleaning
               company that serves Windstone, Hidden Lakes, Grand Haven, and every neighborhood in
               60446 with reliable, consistent house cleaning on your schedule.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
-              <a href="tel:+18152462113" className="btn-outline-white btn-lg">Ã°Å¸â€œÅ¾ (815) 246-2113</a>
+              <a href="tel:+18152462113" className="btn-outline-white btn-lg"> (815) 246-2113</a>
             </div>
           </div>
         </div>
@@ -182,7 +182,7 @@ export default function StandardCleaningRomeovillePage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["Ã¢Å“â€¦ Fully Insured & Bonded", "Ã°Å¸Å’Â¿ Eco-Friendly Products", "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§ Family Owned", "Ã¢Â­Â 5-Star Rated", "Ã¢Å“â€Ã¯Â¸Â Satisfaction Guaranteed"].map(
+            {["Fully Insured & Bonded", "Eco-Friendly Products", "Family Owned", "5-Star Rated", "Satisfaction Guaranteed"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -194,21 +194,21 @@ export default function StandardCleaningRomeovillePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading mb-6">House Cleaning in Romeoville, IL You Can Count On</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            House cleaning in Romeoville, IL is what we do best Ã¢â‚¬â€ and as a company that calls
+            House cleaning in Romeoville, IL is what we do best - and as a company that calls
             Romeoville home, we take that responsibility seriously. DSM Cleaning Solutions serves
             the entire city (zip code 60446), including neighborhoods like Windstone, Hidden Lakes,
             and Grand Haven, with a standard cleaning service that&apos;s consistent, thorough, and
             completely reliable every time.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            We know Romeoville families lead full, busy lives Ã¢â‚¬â€ and coming home to a clean house
+            We know Romeoville families lead full, busy lives - and coming home to a clean house
             makes a real difference. That&apos;s why we offer weekly, biweekly, and monthly plans that
             fit your schedule. Our recurring clients get the same professional team each visit,
             which means our cleaners learn the details of your home and deliver better results
             over time.
           </p>
           <p className="text-gray-600 leading-relaxed">
-            Everything we use is eco-friendly and non-toxic Ã¢â‚¬â€ because your family and your pets
+            Everything we use is eco-friendly and non-toxic - because your family and your pets
             matter. And since we&apos;re based right here in Romeoville, when you call us, you&apos;re
             reaching a neighbor who genuinely cares about the work they do in your community.
           </p>
@@ -221,7 +221,7 @@ export default function StandardCleaningRomeovillePage() {
           <div className="text-center mb-12">
             <h2 className="section-heading">What&apos;s Included in Our Standard Cleaning in Romeoville, IL</h2>
             <p className="section-subheading mx-auto">
-              Every visit covers every room Ã¢â‚¬â€ here&apos;s exactly what our Romeoville team cleans.
+              Every visit covers every room - here&apos;s exactly what our Romeoville team cleans.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -269,14 +269,14 @@ export default function StandardCleaningRomeovillePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading mb-6">How Much Does Standard Cleaning Cost in Romeoville, IL?</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Standard cleaning in Romeoville starts around $120Ã¢â‚¬â€œ$180 for most homes, with pricing
+            Standard cleaning in Romeoville starts around $120-$180 for most homes, with pricing
             based on the number of bedrooms, bathrooms, and your preferred frequency. Recurring
-            clients Ã¢â‚¬â€ especially those booking weekly or biweekly service Ã¢â‚¬â€ receive a discounted
+            clients - especially those booking weekly or biweekly service - receive a discounted
             rate on every visit as a thank-you for their loyalty.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
             We provide a free estimate for every new Romeoville client before we schedule anything.
-            No pressure, no contracts required Ã¢â‚¬â€ just a straightforward quote from your local
+            No pressure, no contracts required - just a straightforward quote from your local
             cleaning team.
           </p>
           <Link href="/contact" className="btn-primary">Get My Free Romeoville Quote</Link>
@@ -336,13 +336,13 @@ export default function StandardCleaningRomeovillePage() {
               <h2 className="text-4xl font-bold mb-4">Book Your Standard Cleaning in Romeoville Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Your neighbors at DSM Cleaning Solutions are ready to keep your Romeoville home
-                spotless. Get your free quote today Ã¢â‚¬â€ we serve all of 60446 and back every
+                spotless. Get your free quote today - we serve all of 60446 and back every
                 visit with our 48-hour satisfaction guarantee.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                Ã°Å¸â€œÅ¾ (815) 246-2113
+                 (815) 246-2113
               </a>
-              <p className="text-white/80">Locally based Ã‚Â· Eco-friendly Ã‚Â· Fully insured Ã‚Â· Satisfaction guaranteed</p>
+              <p className="text-white/80">Locally based · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <LeadForm />

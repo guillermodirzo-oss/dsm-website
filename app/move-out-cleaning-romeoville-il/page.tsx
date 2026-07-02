@@ -5,12 +5,12 @@ import LeadForm from "@/components/LeadForm";
 export const metadata: Metadata = {
   title: "Move-Out Cleaning Romeoville IL | 5-Star Rated",
   description:
-    "Trusted move-out cleaning in Romeoville by DSM Cleaning Solutions. 5.0 stars, 47 reviews, 48-hr guarantee. Book your cleaning today Ã¢â‚¬â€ (815) 246-2113.",
+    "Trusted move-out cleaning in Romeoville by DSM Cleaning Solutions. 5-star rated, 47 reviews, 48-hr guarantee. Eco-friendly, fully insured. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-romeoville-il" },
   openGraph: {
     title: "Move-Out Cleaning Romeoville IL | 5-Star Rated | DSM Cleaning",
     description:
-      "Trusted move-out cleaning in Romeoville by DSM Cleaning Solutions. 5.0 stars, 47 reviews, 48-hr guarantee. Book your cleaning today Ã¢â‚¬â€ (815) 246-2113.",
+      "Trusted move-out cleaning in Romeoville by DSM Cleaning Solutions. 5-star rated, 47 reviews, 48-hr guarantee. Eco-friendly, fully insured. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/move-out-cleaning-romeoville-il",
   },
   twitter: {
@@ -23,27 +23,27 @@ const faqs = [
   {
     question: "How long does a move-out cleaning take in Romeoville, IL?",
     answer:
-      "Most move-out cleanings in Romeoville take 4Ã¢â‚¬â€œ7 hours depending on home size and condition. Smaller apartments may take around 4 hours, while larger homes in Grand Haven or Windstone can take 6Ã¢â‚¬â€œ7 hours or more.",
+      "Most move-out cleanings in Romeoville take 4-7 hours depending on home size and condition. Smaller apartments may take around 4 hours, while larger homes in Grand Haven or Windstone can take 6-7 hours or more.",
   },
   {
     question: "Do you clean empty apartments and rental homes in Romeoville?",
     answer:
-      "Yes Ã¢â‚¬â€ we specialize in cleaning empty properties for both outgoing tenants and incoming renters throughout Romeoville (zip code 60446), including all neighborhoods like Windstone, Hidden Lakes, and Grand Haven.",
+      "Yes - we specialize in cleaning empty properties for both outgoing tenants and incoming renters throughout Romeoville (zip code 60446), including all neighborhoods like Windstone, Hidden Lakes, and Grand Haven.",
   },
   {
     question: "How much does move-out cleaning cost in Romeoville, IL?",
     answer:
-      "Move-out cleaning in Romeoville starts around $150Ã¢â‚¬â€œ$250 for most homes. Pricing depends on the size of the property and its current condition. Contact us for a free, no-obligation estimate before your move-out date.",
+      "Move-out cleaning in Romeoville starts around $150-$250 for most homes. Pricing depends on the size of the property and its current condition. Contact us for a free, no-obligation estimate before your move-out date.",
   },
   {
     question: "Will your Romeoville move-out cleaning help me get my deposit back?",
     answer:
-      "That&apos;s our goal. Our move-out cleaning checklist is designed specifically to meet Romeoville landlord standards Ã¢â‚¬â€ including cleaning inside all appliances, cabinets, closets, grout lines, and every area a property manager is likely to inspect.",
+      "That&apos;s our goal. Our move-out cleaning checklist is designed specifically to meet Romeoville landlord standards - including cleaning inside all appliances, cabinets, closets, grout lines, and every area a property manager is likely to inspect.",
   },
   {
     question: "Is DSM Cleaning Solutions locally based in Romeoville for move-out cleaning?",
     answer:
-      "Yes Ã¢â‚¬â€ DSM Cleaning Solutions is headquartered right here in Romeoville. We know the local rental market, understand local landlord expectations, and take pride in delivering results that help Romeoville tenants get their deposits back.",
+      "Yes - DSM Cleaning Solutions is headquartered right here in Romeoville. We know the local rental market, understand local landlord expectations, and take pride in delivering results that help Romeoville tenants get their deposits back.",
   },
 ];
 
@@ -71,7 +71,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Move-out & move-in cleaning in Romeoville, IL (60446). DSM Cleaning Solutions Ã¢â‚¬â€ locally owned, deposit-back guarantee, eco-friendly products.",
+    "Move-out & move-in cleaning in Romeoville, IL (60446). DSM Cleaning Solutions - locally owned, deposit-back guarantee, eco-friendly products.",
 };
 
 const faqSchema = {
@@ -137,12 +137,12 @@ const checklist = [
 ];
 
 const trustCards = [
-  { icon: "Ã°Å¸â€™Â°", title: "Deposit-Back Focused", desc: "Our checklist is built to pass Romeoville landlord inspections." },
-  { icon: "Ã°Å¸â€ºÂ¡Ã¯Â¸Â", title: "Fully Insured & Bonded", desc: "Background-checked team. Every Romeoville job fully covered." },
-  { icon: "Ã¢Å“â€¦", title: "48-Hour Guarantee", desc: "We re-clean at no charge if anything doesn&apos;t pass inspection." },
-  { icon: "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§", title: "Family Owned", desc: "Romeoville-based Ã¢â‚¬â€ we know this community and its standards." },
-  { icon: "Ã°Å¸â€œâ€¦", title: "Flexible Scheduling", desc: "We work around your move-out timeline, including weekends." },
-  { icon: "Ã°Å¸â€œÂ", title: "Serving Romeoville", desc: "All neighborhoods in zip code 60446." },
+  { icon: "", title: "Deposit-Back Focused", desc: "Our checklist is built to pass Romeoville landlord inspections." },
+  { icon: "", title: "Fully Insured & Bonded", desc: "Background-checked team. Every Romeoville job fully covered." },
+  { icon: "", title: "48-Hour Guarantee", desc: "We re-clean at no charge if anything doesn&apos;t pass inspection." },
+  { icon: "", title: "Family Owned", desc: "Romeoville-based - we know this community and its standards." },
+  { icon: "", title: "Flexible Scheduling", desc: "We work around your move-out timeline, including weekends." },
+  { icon: "", title: "Serving Romeoville", desc: "All neighborhoods in zip code 60446." },
 ];
 
 export default function MoveOutCleaningRomeovillePage() {
@@ -179,7 +179,7 @@ export default function MoveOutCleaningRomeovillePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
-              <a href="tel:+18152462113" className="btn-outline-white btn-lg">Ã°Å¸â€œÅ¾ (815) 246-2113</a>
+              <a href="tel:+18152462113" className="btn-outline-white btn-lg"> (815) 246-2113</a>
             </div>
           </div>
         </div>
@@ -189,7 +189,7 @@ export default function MoveOutCleaningRomeovillePage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["Ã¢Å“â€¦ Fully Insured & Bonded", "Ã°Å¸Å’Â¿ Eco-Friendly Products", "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§ Family Owned", "Ã¢Â­Â 5-Star Rated", "Ã¢Å“â€Ã¯Â¸Â Satisfaction Guaranteed"].map(
+            {["Fully Insured & Bonded", "Eco-Friendly Products", "Family Owned", "5-Star Rated", "Satisfaction Guaranteed"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -202,14 +202,14 @@ export default function MoveOutCleaningRomeovillePage() {
           <h2 className="section-heading mb-6">Move-Out & Move-In Cleaning in Romeoville, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Move-out and move-in cleaning in Romeoville, IL is at the heart of what DSM Cleaning
-            Solutions does Ã¢â‚¬â€ and as a company based right here in 60446, we understand the local
+            Solutions does - and as a company based right here in 60446, we understand the local
             rental market better than anyone. Romeoville renters in Windstone, Hidden Lakes, and
             Grand Haven trust us to deliver the kind of comprehensive clean that satisfies
             landlord inspections and protects their security deposit.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Moving is already stressful enough. Our Romeoville move-out cleaning service takes the
-            cleaning completely off your plate. We handle every room, every appliance, every surface Ã¢â‚¬â€
+            cleaning completely off your plate. We handle every room, every appliance, every surface  - 
             working from a detailed checklist that leaves nothing to chance. From cleaning inside the
             refrigerator to scrubbing grout lines in every bathroom, we cover every area a landlord
             is likely to inspect.
@@ -217,7 +217,7 @@ export default function MoveOutCleaningRomeovillePage() {
           <p className="text-gray-600 leading-relaxed">
             We also serve Romeoville landlords preparing units for new tenants and homeowners getting
             ready to sell. Every job uses eco-friendly, non-toxic products and is backed by our
-            48-hour satisfaction guarantee Ã¢â‚¬â€ because your Romeoville deposit matters, and so does
+            48-hour satisfaction guarantee - because your Romeoville deposit matters, and so does
             our reputation in this community.
           </p>
         </div>
@@ -229,7 +229,7 @@ export default function MoveOutCleaningRomeovillePage() {
           <div className="text-center mb-12">
             <h2 className="section-heading">What&apos;s Included in Our Move-Out Cleaning in Romeoville, IL</h2>
             <p className="section-subheading mx-auto">
-              Comprehensive coverage of every room Ã¢â‚¬â€ designed to pass any Romeoville property inspection.
+              Comprehensive coverage of every room - designed to pass any Romeoville property inspection.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -277,14 +277,14 @@ export default function MoveOutCleaningRomeovillePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading mb-6">How Much Does Move-Out Cleaning Cost in Romeoville, IL?</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Move-out cleaning in Romeoville starts around $150Ã¢â‚¬â€œ$250 for a typical rental home and
+            Move-out cleaning in Romeoville starts around $150-$250 for a typical rental home and
             scales based on the size of the property and its current condition. Most homes in Romeoville
-            (60446) fall within the $175Ã¢â‚¬â€œ$325 range. Larger properties with multiple bathrooms or
+            (60446) fall within the $175-$325 range. Larger properties with multiple bathrooms or
             significant buildup may be priced higher.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
-            We recommend booking at least 3Ã¢â‚¬â€œ5 days before your Romeoville move-out date to guarantee
-            availability. For urgent situations, call us at (815) 246-2113 Ã¢â‚¬â€ as a local company, we
+            We recommend booking at least 3-5 days before your Romeoville move-out date to guarantee
+            availability. For urgent situations, call us at (815) 246-2113 - as a local company, we
             do our best to accommodate last-minute requests. All estimates are free with no obligation.
           </p>
           <Link href="/contact" className="btn-primary">Get My Free Romeoville Quote</Link>
@@ -344,13 +344,13 @@ export default function MoveOutCleaningRomeovillePage() {
               <h2 className="text-4xl font-bold mb-4">Book Your Move-Out Cleaning in Romeoville Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Your neighbors at DSM Cleaning Solutions are ready to help with your Romeoville
-                move-out. Get a free quote today Ã¢â‚¬â€ we back every job with our deposit-back guarantee
+                move-out. Get a free quote today - we back every job with our deposit-back guarantee
                 and 48-hour satisfaction promise.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                Ã°Å¸â€œÅ¾ (815) 246-2113
+                 (815) 246-2113
               </a>
-              <p className="text-white/80">Locally based Ã‚Â· Eco-friendly Ã‚Â· Fully insured Ã‚Â· Deposit-back focused</p>
+              <p className="text-white/80">Locally based · Eco-friendly · Fully insured · Deposit-back focused</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <LeadForm />

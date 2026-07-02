@@ -70,7 +70,7 @@ const serviceSchema = {
   },
   areaServed: ["Romeoville, IL", "Plainfield, IL", "Naperville, IL", "Bolingbrook, IL", "Joliet, IL"],
   description:
-    "Family-owned, fully insured, background-checked house cleaning service in Romeoville, IL. 5-star rated with a 48-hour satisfaction guarantee. Serving the southwest Chicago suburbs.",
+    "Family-owned, fully insured, background-checked house cleaning in Romeoville, IL. 5-star rated, 48-hour satisfaction guarantee. Southwest Chicago suburbs.",
 };
 
 const faqSchema = {

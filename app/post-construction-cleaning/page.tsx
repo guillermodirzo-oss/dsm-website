@@ -78,7 +78,7 @@ export default function PostConstructionCleaningPage() {
       },
     },
     areaServed: ["Romeoville, IL", "Plainfield, IL", "Naperville, IL", "Bolingbrook, IL"],
-    description: "Professional post-construction and renovation cleanup in Romeoville, IL. We remove dust, debris, and construction residue from new builds and renovation projects.",
+    description: "Professional post-construction cleanup in Romeoville, IL. We remove dust, debris, and construction residue from new builds and renovation projects.",
   };
 
   const breadcrumbSchema = {

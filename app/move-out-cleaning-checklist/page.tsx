@@ -76,7 +76,7 @@ const serviceSchema = {
   },
   areaServed: ["Romeoville, IL", "Plainfield, IL", "Naperville, IL", "Bolingbrook, IL"],
   description:
-    "Complete move-out cleaning checklist for Illinois renters. DSM Cleaning Solutions provides professional move-out cleaning in the southwest Chicago suburbs to help renters recover their full security deposit.",
+    "Move-out cleaning checklist for Illinois renters. DSM Cleaning Solutions helps tenants in the southwest Chicago suburbs recover their full security deposit.",
 };
 
 const breadcrumbSchema = {

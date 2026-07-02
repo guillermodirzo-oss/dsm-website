@@ -5,12 +5,12 @@ import LeadForm from "@/components/LeadForm";
 export const metadata: Metadata = {
   title: "Airbnb Cleaning Services Naperville IL",
   description:
-    "Airbnb turnover cleaning in Naperville IL by DSM Cleaning Solutions. Fast reliable service for hosts. Call (815) 246-2113.",
+    "Airbnb turnover cleaning in Naperville IL by DSM Cleaning Solutions. Fast, reliable service for Airbnb and VRBO hosts. Fully insured. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/airbnb-cleaning-naperville-il" },
   openGraph: {
     title: "Airbnb Cleaning Services Naperville IL | DSM Cleaning Solutions",
     description:
-      "Airbnb turnover cleaning in Naperville IL by DSM Cleaning Solutions. Fast reliable service for hosts. Call (815) 246-2113.",
+      "Airbnb turnover cleaning in Naperville IL by DSM Cleaning Solutions. Fast, reliable service for Airbnb and VRBO hosts. Fully insured. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/airbnb-cleaning-naperville-il",
     siteName: "DSM Cleaning Solutions",
     images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "Airbnb Cleaning Naperville IL" }],
@@ -73,7 +73,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Professional Airbnb and short-term rental turnover cleaning in Naperville, IL. Fast same-day service, linen reset, supply restocking. DSM Cleaning Solutions — (815) 246-2113.",
+    "Airbnb & short-term rental turnover cleaning in Naperville, IL. Same-day service, linen reset, supply restocking. DSM Cleaning Solutions. Free estimate.",
 };
 
 const faqSchema = {

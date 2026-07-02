@@ -7,7 +7,7 @@ import ReviewCard from "@/components/ReviewCard";
 export const metadata: Metadata = {
   title: "Move-Out Cleaning Services in Romeoville & Plainfield IL | DSM Cleaning Solutions",
   description:
-    "Moving out? DSM Cleaning Solutions handles the deep clean so you get your security deposit back. Serving Romeoville, Plainfield & Bolingbrook. Call (815) 246-2113.",
+    "Moving out? DSM Cleaning Solutions handles the deep clean so you get your security deposit back. Serving Romeoville, Plainfield & Bolingbrook.",
   keywords: [
     "move out cleaning Romeoville IL",
     "move in cleaning Romeoville IL",
@@ -66,7 +66,7 @@ const serviceSchema = {
   },
   areaServed: ["Romeoville, IL", "Plainfield, IL", "Naperville, IL", "Bolingbrook, IL"],
   description:
-    "Professional move-out and move-in cleaning service for homes and apartments in Romeoville and surrounding areas. Designed to help tenants get their full security deposit back.",
+    "Professional move-out cleaning for homes in Romeoville and surrounding areas. Designed to help tenants get their full security deposit back. 48-hour guarantee.",
 };
 
 const faqSchema = {

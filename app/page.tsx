@@ -8,7 +8,7 @@ import { ScrollIndicator, StickyMobileBar } from "@/components/HomepageScrollWid
 export const metadata: Metadata = {
   title: "House Cleaning Romeoville IL",
   description:
-    "Professional house cleaning in Romeoville & Plainfield IL. Family-owned, eco-friendly, fully insured. 5-star rated. Free estimates. Call (815) 246-2113.",
+    "Professional house cleaning in Romeoville & Plainfield IL. Family-owned, eco-friendly, fully insured. 5-star rated. Free estimates.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com" },
   openGraph: {
     type: "website",
@@ -31,14 +31,14 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "DSM Cleaning Solutions | House Cleaning Romeoville & Plainfield IL",
     description:
-      "Professional house cleaning in Romeoville, Plainfield, Naperville & Bolingbrook IL. Family owned & insured. Call (815) 246-2113.",
+      "Professional house cleaning in Romeoville, Plainfield, Naperville & Bolingbrook IL. Family owned, eco-friendly & insured. Free estimate.",
     images: ["/hero-image.png"],
   },
 };
 
 const services = [
   { icon: "🏠", title: "Standard House Cleaning", description: "Recurring or one-time residential cleaning tailored to your home and schedule.", slug: "/standard-cleaning" },
-  { icon: "🧹", title: "Deep Cleaning", description: "Thorough top-to-bottom cleaning of every surface, corner, and fixture in your home.", slug: "/deep-cleaning" },
+  { icon: "🧹", title: "Deep Cleaning", description: "Thorough cleaning of every surface, corner, and fixture in your home.", slug: "/deep-cleaning" },
   { icon: "📦", title: "Move-Out / Move-In Cleaning", description: "Get your full deposit back or start fresh in your new home with our detail-focused cleaning.", slug: "/move-out-cleaning" },
   { icon: "📅", title: "Recurring Maid Service", description: "Weekly, biweekly, or monthly cleaning plans to keep your home consistently spotless.", slug: "/recurring-cleaning" },
   { icon: "🌿", title: "Eco-Friendly Green Cleaning", description: "Safe for kids and pets — we use non-toxic, environmentally responsible products.", slug: "/eco-friendly-cleaning" },

@@ -5,12 +5,12 @@ import LeadForm from "@/components/LeadForm";
 export const metadata: Metadata = {
   title: "Deep Cleaning Service in Bolingbrook IL | DSM Cleaning Solutions",
   description:
-    "Professional deep cleaning in Bolingbrook, IL. DSM Cleaning Solutions delivers thorough, detail-oriented deep cleans for homes across Bolingbrook. 5-star rated. Book today.",
+    "Professional deep cleaning in Bolingbrook, IL. Thorough service for every home. Eco-friendly, fully insured, 48-hour satisfaction guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-bolingbrook-il" },
   openGraph: {
     title: "Deep Cleaning Service in Bolingbrook IL | DSM Cleaning Solutions",
     description:
-      "Professional deep cleaning in Bolingbrook, IL. DSM Cleaning Solutions delivers thorough, detail-oriented deep cleans for homes across Bolingbrook. 5-star rated. Book today.",
+      "Professional deep cleaning in Bolingbrook, IL. Thorough service for every home. Eco-friendly, fully insured, 48-hour satisfaction guarantee. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning-bolingbrook-il",
   },
   twitter: {
@@ -71,7 +71,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Professional deep cleaning in Bolingbrook IL by DSM Cleaning Solutions. Family owned, fully insured. 48-hr guarantee. Call (815) 246-2113.",
+    "Professional deep cleaning in Bolingbrook IL by DSM Cleaning Solutions. Family owned, fully insured, 48-hr satisfaction guarantee. Free quote.",
 };
 
 const faqSchema = {

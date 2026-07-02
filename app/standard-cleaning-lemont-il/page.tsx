@@ -5,12 +5,12 @@ import LeadForm from "@/components/LeadForm";
 export const metadata: Metadata = {
   title: "Standard Cleaning Services Lemont IL",
   description:
-    "Recurring house cleaning in Lemont IL by DSM Cleaning Solutions. Trusted, insured & eco-friendly. Call (815) 246-2113.",
+    "Recurring house cleaning in Lemont, IL. DSM Cleaning Solutions - trusted, insured & eco-friendly. Free estimate.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/standard-cleaning-lemont-il" },
   openGraph: {
     title: "Standard Cleaning Services Lemont IL",
     description:
-      "Recurring house cleaning in Lemont IL by DSM Cleaning Solutions. Trusted, insured & eco-friendly. Call (815) 246-2113.",
+      "Recurring house cleaning in Lemont, IL. DSM Cleaning Solutions - trusted, insured & eco-friendly. Free estimate.",
     url: "https://www.dsmcleaningsolutions.com/standard-cleaning-lemont-il",
   },
   twitter: {
@@ -28,12 +28,12 @@ const faqs = [
   {
     question: "Do you bring eco-friendly products to Lemont homes?",
     answer:
-      "Yes Ã¢â‚¬â€ we arrive fully equipped with all our eco-friendly, non-toxic cleaning products and equipment. You don't need to supply a thing. Our green products are safe for children and pets throughout your Lemont home, and they're effective on all the surfaces common in Lemont's well-appointed homes.",
+      "Yes - we arrive fully equipped with all our eco-friendly, non-toxic cleaning products and equipment. You don't need to supply a thing. Our green products are safe for children and pets throughout your Lemont home, and they're effective on all the surfaces common in Lemont's well-appointed homes.",
   },
   {
     question: "Are your cleaners background checked for Lemont?",
     answer:
-      "Yes Ã¢â‚¬â€ every member of our cleaning team is background-checked, insured, and bonded. We take the security of your Lemont home seriously, whether you're present during the clean or not.",
+      "Yes - every member of our cleaning team is background-checked, insured, and bonded. We take the security of your Lemont home seriously, whether you're present during the clean or not.",
   },
   {
     question: "What zip codes in Lemont do you serve?",
@@ -43,7 +43,7 @@ const faqs = [
   {
     question: "Can I set up a recurring cleaning plan in Lemont?",
     answer:
-      "Absolutely Ã¢â‚¬â€ we offer weekly, biweekly, and monthly recurring cleaning plans for Lemont homes. All plans include the same thorough checklist; the frequency is simply adjusted to your household's needs and budget. Contact us at (815) 246-2113 to set up your Lemont recurring plan.",
+      "Absolutely - we offer weekly, biweekly, and monthly recurring cleaning plans for Lemont homes. All plans include the same thorough checklist; the frequency is simply adjusted to your household's needs and budget. Contact us at (815) 246-2113 to set up your Lemont recurring plan.",
   },
 ];
 
@@ -71,7 +71,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Recurring house cleaning in Lemont IL by DSM Cleaning Solutions. Trusted, insured & eco-friendly. Call (815) 246-2113.",
+    "Recurring house cleaning in Lemont, IL. DSM Cleaning Solutions - trusted, insured & eco-friendly. Free estimate.",
 };
 
 const faqSchema = {
@@ -131,12 +131,12 @@ const checklist = [
 ];
 
 const trustCards = [
-  { icon: "Ã°Å¸Å’Â¿", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products safe for your Lemont family." },
-  { icon: "Ã°Å¸â€ºÂ¡Ã¯Â¸Â", title: "Fully Insured & Bonded", desc: "Background-checked team. Your Lemont home is fully protected." },
-  { icon: "Ã¢Å“â€¦", title: "48-Hour Guarantee", desc: "We re-clean anything that isn't right within 48 hours." },
-  { icon: "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§", title: "Family Owned", desc: "Based in nearby Romeoville Ã¢â‚¬â€ your southwest suburbs neighbors." },
-  { icon: "Ã°Å¸â€œâ€¦", title: "7 Days a Week", desc: "Available 8amÃ¢â‚¬â€œ6pm, 7 days a week for your Lemont schedule." },
-  { icon: "Ã°Å¸â€œÂ", title: "Serving Lemont", desc: "All neighborhoods in zip code 60439." },
+  { icon: "", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products safe for your Lemont family." },
+  { icon: "", title: "Fully Insured & Bonded", desc: "Background-checked team. Your Lemont home is fully protected." },
+  { icon: "", title: "48-Hour Guarantee", desc: "We re-clean anything that isn't right within 48 hours." },
+  { icon: "", title: "Family Owned", desc: "Based in nearby Romeoville - your southwest suburbs neighbors." },
+  { icon: "", title: "7 Days a Week", desc: "Available 8am-6pm, 7 days a week for your Lemont schedule." },
+  { icon: "", title: "Serving Lemont", desc: "All neighborhoods in zip code 60439." },
 ];
 
 export default function StandardCleaningLemontPage() {
@@ -166,13 +166,13 @@ export default function StandardCleaningLemontPage() {
               Standard Cleaning Services in Lemont, IL
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              DSM Cleaning Solutions provides reliable, recurring house cleaning for Lemont homes Ã¢â‚¬â€
+              DSM Cleaning Solutions provides reliable, recurring house cleaning for Lemont homes  - 
               from Historic Downtown and Centennial Crossing to Covington Knolls, Burning Tree Estates,
-              and Heritage Lake. Weekly, biweekly, or monthly Ã¢â‚¬â€ on your schedule, every time.
+              and Heritage Lake. Weekly, biweekly, or monthly - on your schedule, every time.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
-              <a href="tel:+18152462113" className="btn-outline-white btn-lg">Ã°Å¸â€œÅ¾ (815) 246-2113</a>
+              <a href="tel:+18152462113" className="btn-outline-white btn-lg"> (815) 246-2113</a>
             </div>
           </div>
         </div>
@@ -182,7 +182,7 @@ export default function StandardCleaningLemontPage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["Ã¢Å“â€¦ Fully Insured & Bonded", "Ã°Å¸Å’Â¿ Eco-Friendly Products", "Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€˜Â©Ã¢â‚¬ÂÃ°Å¸â€˜Â§ Family Owned", "Ã¢Â­Â 5-Star Rated", "Ã¢Å“â€Ã¯Â¸Â Satisfaction Guaranteed"].map(
+            {["Fully Insured & Bonded", "Eco-Friendly Products", "Family Owned", "5-Star Rated", "Satisfaction Guaranteed"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -195,7 +195,7 @@ export default function StandardCleaningLemontPage() {
           <h2 className="section-heading mb-6">Trusted Standard Cleaning Services in Lemont, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             <strong>Standard house cleaning in Lemont, IL</strong> keeps your home consistently presentable between
-            deeper cleans Ã¢â‚¬â€ and DSM Cleaning Solutions makes it easy. Whether you live in Historic
+            deeper cleans - and DSM Cleaning Solutions makes it easy. Whether you live in Historic
             Downtown Lemont, Centennial Crossing, Covington Knolls, or Heritage Lake, our team covers
             all of Lemont (zip code 60439) with a reliable, detailed clean you can count on visit after visit.
           </p>
@@ -205,13 +205,13 @@ export default function StandardCleaningLemontPage() {
             Lemont, and we&apos;re proud to serve the discerning homeowners throughout this community. Our
             standard cleaning service covers all the essentials: kitchens, bathrooms, bedrooms, and
             living areas cleaned thoroughly on a schedule that works for you. No shortcuts, no rushed
-            visits Ã¢â‚¬â€ just consistent quality every time.
+            visits - just consistent quality every time.
           </p>
           <p className="text-gray-600 leading-relaxed">
             Lemont sits conveniently close to both <Link href="/standard-cleaning-bolingbrook-il" className="text-brand-green font-semibold hover:underline">Bolingbrook</Link> and{" "}
             <Link href="/standard-cleaning-joliet-il" className="text-brand-green font-semibold hover:underline">Joliet</Link>, and we
             serve all three communities as part of our regular route. Our eco-friendly, non-toxic products
-            are safe for your children and pets Ã¢â‚¬â€ and our background-checked team treats every Lemont
+            are safe for your children and pets - and our background-checked team treats every Lemont
             home with the respect it deserves.
           </p>
         </div>
@@ -223,7 +223,7 @@ export default function StandardCleaningLemontPage() {
           <div className="text-center mb-12">
             <h2 className="section-heading">What&apos;s Included in Our Standard Cleaning in Lemont, IL</h2>
             <p className="section-subheading mx-auto">
-              A thorough, consistent clean for your Lemont home Ã¢â‚¬â€ every visit.
+              A thorough, consistent clean for your Lemont home - every visit.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -273,13 +273,13 @@ export default function StandardCleaningLemontPage() {
           <p className="text-gray-600 mb-4 leading-relaxed">
             Standard cleaning in Lemont starts around $120 for smaller homes and scales with the
             size of your home, the number of rooms, and how frequently you schedule service. Lemont&apos;s
-            larger single-family homes typically fall in the $150Ã¢â‚¬â€œ$220 per visit range. Recurring
-            clients receive preferred pricing Ã¢â‚¬â€ biweekly and weekly clients pay less per visit than
+            larger single-family homes typically fall in the $150-$220 per visit range. Recurring
+            clients receive preferred pricing - biweekly and weekly clients pay less per visit than
             one-time bookings.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
             Every estimate is free and no-obligation. We&apos;ll assess your Lemont home&apos;s needs and
-            give you a clear, upfront quote before we begin Ã¢â‚¬â€ no surprises on cleaning day.
+            give you a clear, upfront quote before we begin - no surprises on cleaning day.
           </p>
           <Link href="/contact" className="btn-primary">Get My Free Lemont Quote</Link>
         </div>
@@ -341,13 +341,13 @@ export default function StandardCleaningLemontPage() {
             <div className="text-white">
               <h2 className="text-4xl font-bold mb-4">Book Your Standard Cleaning in Lemont Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                Ready for a consistently clean Lemont home? Get your free standard cleaning quote Ã¢â‚¬â€
+                Ready for a consistently clean Lemont home? Get your free standard cleaning quote  - 
                 we respond within 1 business day and back every job with our 48-hour satisfaction guarantee.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                Ã°Å¸â€œÅ¾ (815) 246-2113
+                 (815) 246-2113
               </a>
-              <p className="text-white/80">Family-owned Ã‚Â· Eco-friendly Ã‚Â· Fully insured Ã‚Â· Satisfaction guaranteed</p>
+              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <LeadForm />

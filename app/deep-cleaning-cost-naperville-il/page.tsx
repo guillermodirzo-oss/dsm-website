@@ -73,7 +73,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Deep cleaning pricing guide for Naperville, IL. DSM Cleaning Solutions offers professional deep cleaning in zip codes 60540, 60563, 60564 & 60565. Flat-rate quotes, no hidden fees.",
+    "Deep cleaning pricing guide for Naperville, IL. Serving 60540, 60563, 60564 & 60565. Flat-rate quotes, no hidden fees. Get your free estimate today.",
 };
 
 const faqSchema = {
