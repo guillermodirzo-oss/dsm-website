@@ -1,9 +1,9 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
-import LeadForm from "@/components/LeadForm";
+import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 
 export const metadata: Metadata = {
-  title: "Deep Cleaning Downers Grove IL",
+  title: "Deep Cleaning Downers Grove IL | DSM Cleaning Solutions",
   description:
     "Professional deep cleaning in Downers Grove, IL. Reliable, thorough service for Downers Grove families. Fully insured, 48-hour guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning/downers-grove" },
@@ -12,70 +12,67 @@ export const metadata: Metadata = {
     description:
       "Professional deep cleaning in Downers Grove, IL. Reliable, thorough service for Downers Grove families. Fully insured, 48-hour guarantee. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning/downers-grove",
-    siteName: "DSM Cleaning Solutions",
   },
-  twitter: {
-    card: "summary_large_image",
-    images: ["/hero-image.png"],
-  },
+  twitter: { card: "summary_large_image", images: ["/hero-image.png"] },
 };
+
+const faqs = [
+  {
+    q: "What does a deep cleaning include in Downers Grove?",
+    a: "We clean inside the oven, degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. Every room gets thorough attention.",
+  },
+  {
+    q: "How long does a deep clean take in Downers Grove?",
+    a: "Most Downers Grove homes take 3 to 5 hours depending on size. We take the time needed and do not rush through the job.",
+  },
+  {
+    q: "Do I need to be home during the cleaning?",
+    a: "You do not need to be home. Many Downers Grove clients provide a key or lockbox code. We take care of everything and lock up when we leave.",
+  },
+  {
+    q: "How much does a deep cleaning cost in Downers Grove IL?",
+    a: "Pricing typically starts around $225 for smaller homes. A 3 to 4 bedroom home generally runs $275 to $375 depending on size and condition. Contact us for a free, no-obligation quote.",
+  },
+  {
+    q: "Do you serve all parts of Downers Grove?",
+    a: "Yes. We serve downtown Downers Grove, the Fairmount area, and all surrounding neighborhoods throughout Downers Grove, IL 60515 and 60516.",
+  },
+];
 
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
+  name: "Deep Cleaning Services Downers Grove IL",
   serviceType: "Deep Cleaning",
-  name: "Deep Cleaning in Downers Grove, IL",
-  provider: {
-    "@type": "LocalBusiness",
-    "@id": "https://www.dsmcleaningsolutions.com/#business",
-    name: "DSM Cleaning Solutions",
-    telephone: "+18152462113",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Romeoville",
-      addressRegion: "IL",
-      postalCode: "60446",
-      addressCountry: "US",
-    },
-  },
   areaServed: {
     "@type": "City",
     name: "Downers Grove",
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
+  provider: { "@id": "https://www.dsmcleaningsolutions.com/#business" },
   description:
-    "Reliable deep cleaning in Downers Grove, IL for busy families. Eco-friendly, fully insured, 48-hour satisfaction guarantee.",
+    "Professional deep cleaning for homes in Downers Grove, IL. Includes oven cleaning, grout scrubbing, baseboard wiping, and full room detail.",
+  offers: {
+    "@type": "Offer",
+    priceCurrency: "USD",
+    price: "225",
+    priceSpecification: {
+      "@type": "PriceSpecification",
+      minPrice: "225",
+      maxPrice: "375",
+      priceCurrency: "USD",
+    },
+  },
 };
 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How much does deep cleaning cost in Downers Grove, IL?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Deep cleaning in Downers Grove starts around $225 after seasonal discounts. Most homes in Downers Grove - a mix of 1940s-era homes and newer builds - fall in the $250-$425 range depending on size and condition. We provide free, no-obligation estimates before every job.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you serve all of Downers Grove, IL?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes - we serve all of Downers Grove across both zip codes: 60515 and 60516. From downtown Downers Grove and the Metra BNSF area to neighborhoods near Lyman Woods and Belmont Prairie, our team covers the full village. We also serve nearby Oak Brook, Westmont, Lisle, and Woodridge.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does a deep cleaning take in Downers Grove?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Most deep cleanings in Downers Grove take 3-5 hours for a typical single-family home. Larger homes or those with more bathrooms and finished basements may take up to 6 hours. We always finish what we start - no room gets skipped.",
-      },
-    },
-  ],
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
 };
 
 const breadcrumbSchema = {
@@ -83,29 +80,10 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dsmcleaningsolutions.com" },
-    { "@type": "ListItem", position: 2, name: "Deep Cleaning", item: "https://www.dsmcleaningsolutions.com/deep-cleaning" },
-    { "@type": "ListItem", position: 3, name: "Deep Cleaning in Downers Grove", item: "https://www.dsmcleaningsolutions.com/deep-cleaning/downers-grove" },
+    { "@type": "ListItem", position: 2, name: "Deep Cleaning", item: "https://www.dsmcleaningsolutions.com/deep-cleaning/downers-grove" },
+    { "@type": "ListItem", position: 3, name: "Downers Grove IL" },
   ],
 };
-
-
-const faqs = [
-  {
-    question: "How much does deep cleaning cost in Downers Grove, IL?",
-    answer:
-      "Deep cleaning in Downers Grove starts around $225 after seasonal discounts. Most homes in Downers Grove - a mix of 1940s-era homes and newer builds - fall in the $250-$425 range depending on size and condition. We provide free, no-obligation estimates before every job.",
-  },
-  {
-    question: "Do you serve all of Downers Grove, IL?",
-    answer:
-      "Yes - we serve all of Downers Grove across both zip codes: 60515 and 60516. From downtown Downers Grove and the Metra BNSF area to neighborhoods near Lyman Woods and Belmont Prairie, our team covers the full village. We also serve nearby Oak Brook, Westmont, Lisle, and Woodridge.",
-  },
-  {
-    question: "How long does a deep cleaning take in Downers Grove?",
-    answer:
-      "Most deep cleanings in Downers Grove take 3-5 hours for a typical single-family home. Larger homes or those with more bathrooms and finished basements may take up to 6 hours. We always finish what we start - no room gets skipped.",
-  },
-];
 
 const checklist = [
   {
@@ -156,15 +134,6 @@ const checklist = [
   },
 ];
 
-const trustCards = [
-  { icon: "", title: "Eco-Friendly", desc: "Non-toxic products - safe for Downers Grove families, kids, and pets." },
-  { icon: "", title: "Fully Insured & Bonded", desc: "Background-checked team. Your home is fully covered on every visit." },
-  { icon: "", title: "48-Hour Guarantee", desc: "Not satisfied? We re-clean at no charge within 48 hours." },
-  { icon: "", title: "Family Owned", desc: "Local southwest suburbs business - not a national franchise." },
-  { icon: "", title: "7 Days a Week", desc: "Flexible scheduling for busy Downers Grove families." },
-  { icon: "", title: "Serving Downers Grove", desc: "All of Downers Grove - zip codes 60515 & 60516." },
-];
-
 export default function DeepCleaningDownersGrovePage() {
   return (
     <>
@@ -182,213 +151,313 @@ export default function DeepCleaningDownersGrovePage() {
       />
 
       {/* HERO */}
-      <section className="bg-gradient-to-br from-brand-green-dark via-brand-green to-brand-green-light text-white py-16 md:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-2 text-sm text-white/70 mb-4">
-              <Link href="/" className="hover:text-white">Home</Link>
-              <span>/</span>
-              <Link href="/deep-cleaning" className="hover:text-white">Deep Cleaning</Link>
-              <span>/</span>
-              <span className="text-white">Downers Grove</span>
+      <section
+        style={{ background: "linear-gradient(135deg, #1a4731 0%, #2d6a4f 100%)" }}
+        className="text-white py-16 px-4"
+      >
+        <div className="max-w-5xl mx-auto">
+          <nav className="text-sm mb-4 opacity-80">
+            <Link href="/" className="hover:underline">Home</Link>
+            <span className="mx-2">/</span>
+            <span>Deep Cleaning Downers Grove IL</span>
+          </nav>
+          <div className="flex flex-col md:flex-row gap-10 items-center">
+            <div className="flex-1">
+              <h1 className="text-3xl md:text-4xl font-bold mb-3 leading-tight">
+                Deep Cleaning Services in Downers Grove, IL
+              </h1>
+              <div className="flex items-center gap-2 mb-3">
+                <span style={{ color: "#FFA869" }} className="text-xl">★★★★★</span>
+                <span className="text-sm opacity-90">5.0 — 42 reviews on Google</span>
+              </div>
+              <p className="text-lg font-semibold mb-2">
+                Reliable, thorough deep cleaning for Downers Grove families.
+              </p>
+              <p className="opacity-90 mb-6 leading-relaxed">
+                DSM Cleaning Solutions serves Downers Grove, IL with professional deep cleaning that covers every room. Eco-friendly products, fully insured, and a 48-hour satisfaction guarantee on every job.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href="#quote-form"
+                  style={{ backgroundColor: "#E8721C" }}
+                  className="text-white font-bold px-6 py-3 rounded-lg hover:opacity-90 transition"
+                >
+                  Get a Free Quote
+                </a>
+                <a
+                  href="tel:+18152462113"
+                  className="border-2 border-white text-white font-bold px-6 py-3 rounded-lg hover:bg-white hover:text-green-900 transition"
+                >
+                  Call (815) 246-2113
+                </a>
+              </div>
             </div>
-            <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-6">
-              Deep Cleaning in Downers Grove, IL
-            </h1>
-            <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              DSM Cleaning Solutions brings reliable, top-to-bottom deep cleaning to Downers Grove
-              families - thorough from the first room to the last, eco-friendly, and backed by our
-              48-hour satisfaction guarantee. Serving all of Downers Grove, 60515 &amp; 60516.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact" className="inline-block bg-white text-brand-green font-bold py-4 px-8 rounded-lg hover:bg-brand-green-50 transition-colors text-lg text-center">
-                Get a Free Quote
-              </Link>
-              <a href="tel:+18152462113" className="inline-block bg-transparent text-white font-bold py-4 px-8 rounded-lg border-2 border-white hover:bg-white/10 transition-colors text-lg text-center">
-                 (815) 246-2113
-              </a>
+            <div className="flex-shrink-0 w-full md:w-80">
+              <img
+                src="/Work%20Pictures/double-vanity-bathroom-clean-naperville-il.jpg"
+                alt="Deep cleaned bathroom in Downers Grove IL"
+                className="rounded-xl shadow-lg w-full object-cover"
+                style={{ maxHeight: "280px" }}
+              />
             </div>
           </div>
         </div>
       </section>
 
       {/* TRUST BAR */}
-      <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["Fully Insured & Bonded", "Eco-Friendly Products", "Family Owned", "5-Star Rated · 47 Reviews", "48-Hour Satisfaction Guarantee"].map(
-              (item) => <span key={item} className="whitespace-nowrap">{item}</span>
-            )}
+      <section className="bg-white border-b py-5 px-4">
+        <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-6 text-sm text-gray-700 font-medium">
+          <span>✅ Family Owned &amp; Operated</span>
+          <span>✅ Eco-Friendly Products</span>
+          <span>✅ Fully Insured</span>
+          <span>✅ 48-Hour Satisfaction Guarantee</span>
+        </div>
+      </section>
+
+      {/* SEO CONTENT */}
+      <section className="py-12 px-4 bg-gray-50">
+        <div className="max-w-3xl mx-auto prose prose-gray">
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Downers Grove is a busy community in DuPage County with active families and homes that get a lot of use. We serve homeowners in downtown Downers Grove, the Fairmount area, and throughout the 60515 and 60516 zip codes. Whether life has gotten in the way of keeping up with cleaning or you just want a real deep clean, we can help.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Our deep cleaning is not a rush job. We spend real time in each room. In the kitchen we get inside the oven, degrease the stovetop, and scrub the sink. In bathrooms we scrub grout lines and clean everything from fixtures to floors. In bedrooms and living areas we dust ceiling fans, wipe baseboards, clean window sills, and vacuum under furniture.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            We use eco-friendly, non-toxic products on every job and back our work with a 48-hour satisfaction guarantee. If something is not right, contact us and we will come back to fix it at no charge.
+          </p>
+        </div>
+      </section>
+
+      {/* ANCHOR REVIEW */}
+      <section className="py-10 px-4" style={{ backgroundColor: "#FFF4EE" }}>
+        <div className="max-w-2xl mx-auto text-center">
+          <p style={{ color: "#E8622A" }} className="text-5xl font-serif leading-none mb-3">&ldquo;</p>
+          <p className="text-gray-800 text-lg leading-relaxed italic mb-4">
+            I have a busy schedule and cleaning always falls behind. DSM gave my house a real reset. Every room looked great and I did not have to do a thing.
+          </p>
+          <p className="font-semibold text-gray-700">Jennifer O., Downers Grove IL</p>
+          <div className="flex justify-center mt-2">
+            <span style={{ color: "#FFA869" }}>★★★★★</span>
           </div>
         </div>
       </section>
 
-      {/* INTRO */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading mb-6">Professional Deep Cleaning Services in Downers Grove, IL</h2>
-          <p className="text-gray-600 mb-4 leading-relaxed">
-            Deep cleaning in Downers Grove, IL means showing up on time, doing the work thoroughly, and
-            leaving the home genuinely cleaner - not just surface-level tidy. That&apos;s the standard DSM
-            Cleaning Solutions holds itself to in every home we clean across Downers Grove&apos;s 60515 and
-            60516 zip codes.
-          </p>
-          <p className="text-gray-600 mb-4 leading-relaxed">
-            Downers Grove has a wonderful variety of housing - classic bungalows and two-flats near the
-            downtown and Metra BNSF corridor, alongside newer construction throughout the 60516 area and
-            near Lyman Woods. Our team is experienced with both, adapting our deep cleaning approach to
-            the unique character of each home while maintaining the same high standard throughout.
-          </p>
-          <p className="text-gray-600 leading-relaxed">
-            Busy families in Downers Grove rely on DSM because we follow through on what we promise  - 
-            every room, every time. We use eco-friendly, non-toxic products safe for kids and pets, and
-            we back every single deep clean with our 48-hour satisfaction guarantee.
-          </p>
+      {/* WHY DSM */}
+      <section className="py-14 px-4 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-800 text-center mb-10">
+            Why Downers Grove Homeowners Choose DSM
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="font-bold text-gray-800 mb-2">We Are Local</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                DSM is a small, family-run business. We are not a franchise. You work with a team that cares about doing good work and building trust in the communities we serve.
+              </p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="font-bold text-gray-800 mb-2">We Cover What Others Skip</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Inside the oven, grout lines, baseboards, ceiling fans, under furniture, window sills. Our deep clean gets into every corner that standard cleaning leaves behind.
+              </p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="font-bold text-gray-800 mb-2">Eco-Friendly Products</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                We use plant-based, non-toxic products on every job. Safe for your family, kids, and pets. No harsh chemical smell when we are done.
+              </p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="font-bold text-gray-800 mb-2">48-Hour Guarantee</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                If anything is not right after we leave, contact us within 48 hours and we will come back to fix it. No charge. We want you satisfied with every job.
+              </p>
+            </div>
+          </div>
+          <div className="text-center">
+            <img
+              src="/Work%20Pictures/Google%20Post%20Image%20-%20Cleaning%20Service%20(1).png"
+              alt="DSM Cleaning Solutions team in Downers Grove IL"
+              className="rounded-xl shadow-md mx-auto"
+              style={{ maxWidth: "560px", width: "100%" }}
+            />
+          </div>
         </div>
       </section>
 
       {/* CHECKLIST */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="section-heading">What&apos;s Included in Our Deep Cleaning in Downers Grove, IL</h2>
-            <p className="section-subheading mx-auto">
-              A complete room-by-room breakdown of every deep cleaning job we perform in Downers Grove.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <section className="py-14 px-4 bg-gray-50">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-800 text-center mb-2">
+            What We Clean in Your Downers Grove Home
+          </h2>
+          <p className="text-center text-gray-500 text-sm mb-10">
+            Every deep clean includes all of the following
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
             {checklist.map((section) => (
-              <div key={section.room} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <h3 className="font-bold text-lg text-brand-green mb-4 border-b border-brand-green-100 pb-2">
-                  {section.room}
-                </h3>
-                <ul className="space-y-2">
+              <div key={section.room} className="bg-white rounded-xl p-5 shadow-sm">
+                <h3 className="font-bold text-gray-800 mb-3 border-b pb-2">{section.room}</h3>
+                <ul className="space-y-1">
                   {section.items.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-gray-700">
-                      <svg className="w-4 h-4 text-brand-green mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      {item}
+                    <li key={item} className="text-sm text-gray-600 flex items-start gap-2">
+                      <span className="text-green-600 mt-0.5">✓</span>
+                      <span>{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* WHY CHOOSE DSM */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="section-heading">Why Downers Grove Families Choose DSM Cleaning Solutions</h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {trustCards.map((card) => (
-              <div key={card.title} className="text-center p-6 rounded-xl bg-brand-green-50 border border-brand-green-100">
-                <span className="text-4xl block mb-3">{card.icon}</span>
-                <h3 className="font-bold text-lg text-gray-900 mb-2">{card.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{card.desc}</p>
-              </div>
-            ))}
+          <div className="text-center">
+            <a
+              href="#quote-form"
+              style={{ backgroundColor: "#E8721C" }}
+              className="text-white font-bold px-8 py-3 rounded-lg hover:opacity-90 transition inline-block"
+            >
+              Book Your Deep Clean
+            </a>
           </div>
         </div>
       </section>
 
       {/* PRICING */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading mb-6">How Much Does Deep Cleaning Cost in Downers Grove, IL?</h2>
-          <p className="text-gray-600 mb-4 leading-relaxed">
-            Deep cleaning in Downers Grove starts around $225 after seasonal discounts. The village&apos;s
-            mix of property sizes means pricing varies - compact historic homes near downtown may run
-            $225-$300, while larger newer builds with finished basements and multiple bathrooms typically
-            fall in the $350-$425 range.
+      <section className="py-12 px-4 bg-white">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">
+            Deep Cleaning Prices in Downers Grove IL
+          </h2>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Pricing for deep cleaning in Downers Grove typically starts around $225. A 3 to 4 bedroom home generally runs $275 to $375 depending on size and condition. Every quote is free with no obligation.
           </p>
-          <p className="text-gray-600 mb-8 leading-relaxed">
-            We provide every Downers Grove client with a free, no-obligation estimate before any work
-            begins. Straightforward pricing, no hidden fees, and a satisfaction guarantee built in.
+          <p className="text-gray-600 leading-relaxed mb-6">
+            We price by the job so you know the cost before we start. Fill out the form below or give us a call for a fast, accurate quote.
           </p>
-          <Link href="/contact" className="btn-primary">Get My Free Downers Grove Quote</Link>
+          <a
+            href="#quote-form"
+            style={{ backgroundColor: "#E8721C" }}
+            className="text-white font-bold px-8 py-3 rounded-lg hover:opacity-90 transition inline-block"
+          >
+            Get a Free Quote
+          </a>
+        </div>
+      </section>
+
+      {/* 3-REVIEW BLOCK */}
+      <section className="py-14 px-4 bg-gray-50">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-800 text-center mb-10">
+            What Downers Grove Clients Are Saying
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <div className="flex mb-3">
+                <span style={{ color: "#FFA869" }}>★★★★★</span>
+              </div>
+              <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
+                &ldquo;Solid service. On time, professional, and thorough. My kitchen looked brand new when they were done.&rdquo;
+              </p>
+              <p className="text-sm font-semibold text-gray-600">Mike A., Downers Grove IL</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <div className="flex mb-3">
+                <span style={{ color: "#FFA869" }}>★★★★★</span>
+              </div>
+              <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
+                &ldquo;Very happy with the results. The team worked hard and paid attention to details I would have missed.&rdquo;
+              </p>
+              <p className="text-sm font-semibold text-gray-600">Sarah C., Downers Grove IL</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <div className="flex mb-3">
+                <span style={{ color: "#FFA869" }}>★★★★★</span>
+              </div>
+              <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
+                &ldquo;Great local cleaning service. Will book again without hesitation.&rdquo;
+              </p>
+              <p className="text-sm font-semibold text-gray-600">Ryan B., Downers Grove IL</p>
+            </div>
+          </div>
+          <div className="text-center">
+            <a
+              href="https://g.co/kgs/KFkN2MX"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-700 font-semibold hover:underline text-sm"
+            >
+              Read all 42 reviews on Google →
+            </a>
+          </div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="section-heading">Downers Grove Deep Cleaning FAQs</h2>
-          </div>
-          <div className="space-y-4">
-            {faqs.map((faq, i) => (
-              <details key={i} className="bg-gray-50 border border-gray-200 rounded-xl group">
-                <summary className="flex items-center justify-between p-5 cursor-pointer font-semibold text-gray-900 hover:text-brand-green">
-                  <h3 className="text-left pr-4">{faq.question}</h3>
-                  <svg className="w-5 h-5 text-brand-green flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
+      <section className="py-14 px-4 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-800 text-center mb-8">
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-3">
+            {faqs.map((faq) => (
+              <details key={faq.q} className="border border-gray-200 rounded-lg">
+                <summary className="px-5 py-4 font-semibold text-gray-800 cursor-pointer hover:bg-gray-50 list-none flex justify-between items-center">
+                  {faq.q}
+                  <span className="text-gray-400 ml-4">+</span>
                 </summary>
-                <div className="px-5 pb-5">
-                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-                </div>
+                <div className="px-5 pb-4 text-gray-600 text-sm leading-relaxed">{faq.a}</div>
               </details>
             ))}
           </div>
         </div>
       </section>
 
-      {/* NEARBY AREAS */}
-      <section className="py-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">We Also Offer Deep Cleaning in Nearby Cities</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <Link href="/deep-cleaning/oak-brook" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Oak Brook</h3>
-              <p className="text-sm text-gray-600">Serving all of Oak Brook (60523).</p>
-            </Link>
-            <Link href="/deep-cleaning/hinsdale" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Hinsdale</h3>
-              <p className="text-sm text-gray-600">Serving 60521 &amp; 60522.</p>
-            </Link>
-            <Link href="/deep-cleaning/burr-ridge" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Burr Ridge</h3>
-              <p className="text-sm text-gray-600">Serving all of Burr Ridge (60527).</p>
-            </Link>
-            <Link href="/deep-cleaning/naperville" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Naperville</h3>
-              <p className="text-sm text-gray-600">Serving 60540, 60563, 60564 &amp; 60565.</p>
-            </Link>
-            <Link href="/downers-grove-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">All Cleaning Services in Downers Grove</h3>
-              <p className="text-sm text-gray-600">Deep, standard, recurring, and move-out cleaning in Downers Grove, IL.</p>
-            </Link>
-            <Link href="/deep-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">View Full Deep Cleaning Service</h3>
-              <p className="text-sm text-gray-600">Learn more about what&apos;s included in every deep clean.</p>
-            </Link>
+      {/* FINAL CTA + FORM */}
+      <section
+        id="quote-form"
+        style={{ background: "linear-gradient(135deg, #E8721C 0%, #c45a10 100%)" }}
+        className="py-16 px-4"
+      >
+        <div className="max-w-2xl mx-auto text-center text-white mb-8">
+          <h2 className="text-2xl font-bold mb-2">Get a Free Deep Cleaning Quote in Downers Grove</h2>
+          <p className="opacity-90">
+            Fill out the form below and we will get back to you fast. No commitment required.
+          </p>
+        </div>
+        <div className="max-w-xl mx-auto bg-white rounded-2xl shadow-xl p-8">
+          <div className="text-center mb-6">
+            <div className="flex justify-center mb-1">
+              <span style={{ color: "#FFD8BC" }} className="text-2xl">★★★★★</span>
+            </div>
+            <p className="text-sm text-gray-500">Trusted by Downers Grove homeowners — 42 five-star reviews</p>
           </div>
+          <CityDeepCleanForm />
         </div>
       </section>
 
-      {/* CONTACT CTA */}
-      <section id="contact" className="py-16 bg-gradient-to-br from-orange-500 to-orange-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div className="text-white">
-              <h2 className="text-4xl font-bold mb-4">Book Your Deep Cleaning in Downers Grove Today</h2>
-              <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                Get a free quote for deep cleaning in Downers Grove, IL. We serve both zip codes and every
-                neighborhood - backed by our 48-hour satisfaction guarantee.
-              </p>
-              <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                 (815) 246-2113
-              </a>
-              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
-            </div>
-            <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
-              <LeadForm />
-            </div>
+      {/* NEARBY CITIES */}
+      <section className="py-12 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-lg font-bold text-gray-700 mb-6">We Also Serve Nearby Cities</h2>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              href="/deep-cleaning-westmont-il"
+              className="px-5 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-green-700 hover:text-green-700 transition"
+            >
+              Deep Cleaning Westmont IL
+            </Link>
+            <Link
+              href="/deep-cleaning/oak-brook"
+              className="px-5 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-green-700 hover:text-green-700 transition"
+            >
+              Deep Cleaning Oak Brook IL
+            </Link>
+            <Link
+              href="/deep-cleaning-naperville-il"
+              className="px-5 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-green-700 hover:text-green-700 transition"
+            >
+              Deep Cleaning Naperville IL
+            </Link>
           </div>
         </div>
       </section>

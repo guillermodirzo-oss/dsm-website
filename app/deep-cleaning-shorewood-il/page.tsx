@@ -1,87 +1,88 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
-import LeadForm from "@/components/LeadForm";
+import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 
 export const metadata: Metadata = {
-  title: "Deep Cleaning Services Shorewood IL",
+  title: "Deep Cleaning Services Shorewood IL | DSM Cleaning Solutions",
   description:
     "Professional deep cleaning in Shorewood, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-shorewood-il" },
   openGraph: {
-    title: "Deep Cleaning Services Shorewood IL",
+    title: "Deep Cleaning Services Shorewood IL | DSM Cleaning Solutions",
     description:
       "Professional deep cleaning in Shorewood, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning-shorewood-il",
   },
-  twitter: {
-    card: "summary_large_image",
-    images: ["/hero-image.png"],
-  },
+  twitter: { card: "summary_large_image", images: ["/hero-image.png"] },
 };
 
 const faqs = [
   {
-    question: "Do you offer deep cleaning in Shorewood, IL?",
-    answer:
-      "Yes - DSM Cleaning Solutions provides professional deep cleaning throughout Shorewood, IL (zip code 60404), including Shorewood Glen, Shorewood Crossings, River Crossing, Fox Bend, and Shorewood Commons. We're based in nearby Romeoville and serve the entire Shorewood area.",
+    q: "What does a deep cleaning include in Shorewood?",
+    a: "We clean inside the oven, degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, and much more. It covers every room from top to bottom.",
   },
   {
-    question: "How far is DSM Cleaning Solutions from Shorewood?",
-    answer:
-      "Our base is in Romeoville, IL - approximately 10-15 minutes from most Shorewood neighborhoods. We serve Shorewood regularly alongside our Joliet and Plainfield clients throughout Will County.",
+    q: "How long does a deep clean take in Shorewood?",
+    a: "Most homes in Shorewood take 3 to 5 hours. Larger homes or homes that have not been deep cleaned in a while may take longer. We do not rush the job.",
   },
   {
-    question: "What Shorewood neighborhoods do you serve?",
-    answer:
-      "We serve all of Shorewood (60404), including Shorewood Glen, Shorewood Crossings, River Crossing, Fox Bend, and Shorewood Commons, as well as homes near Shorewood Centennial Park, the DuPage River corridor, and throughout the village.",
+    q: "Do I need to be home during the cleaning?",
+    a: "You do not need to be home. Many of our Shorewood clients leave a key or a lockbox code. We handle everything and you can come back to a clean house.",
   },
   {
-    question: "Is your deep cleaning team insured in Shorewood?",
-    answer:
-      "Yes - DSM Cleaning Solutions is fully insured and bonded in Illinois, including all Shorewood service areas. Every team member is background-checked and we carry liability insurance on every job so you can book with complete peace of mind.",
+    q: "How much does a deep cleaning cost in Shorewood IL?",
+    a: "Pricing starts around $200 for smaller homes. A 3 to 4 bedroom home typically runs $250 to $350 depending on size and condition. Contact us for a free quote.",
   },
   {
-    question: "How often should Shorewood homes get a professional deep clean?",
-    answer:
-      "We recommend a professional deep clean at least once or twice a year for most Shorewood homes. Households with pets, allergies, or young children benefit from deep cleaning every 3-4 months. Many clients pair a seasonal deep clean with our ongoing standard cleaning service for year-round results.",
+    q: "Do you serve all parts of Shorewood?",
+    a: "Yes. We serve all neighborhoods including Shorewood Glen, River Crossing, Brentwood Lakes, and surrounding areas throughout Shorewood, IL 60404.",
   },
 ];
 
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
+  name: "Deep Cleaning Services Shorewood IL",
   serviceType: "Deep Cleaning",
-  name: "Deep Cleaning in Shorewood, IL",
-  provider: {
-    "@type": "LocalBusiness",
-    "@id": "https://www.dsmcleaningsolutions.com/#business",
-    name: "DSM Cleaning Solutions",
-    telephone: "+18152462113",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Romeoville",
-      addressRegion: "IL",
-      postalCode: "60446",
-      addressCountry: "US",
-    },
-  },
   areaServed: {
     "@type": "City",
     name: "Shorewood",
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
+  provider: { "@id": "https://www.dsmcleaningsolutions.com/#business" },
   description:
-    "Professional deep cleaning in Shorewood, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
+    "Professional deep cleaning for homes in Shorewood, IL. Includes oven cleaning, grout scrubbing, baseboard wiping, and full room detail.",
+  offers: {
+    "@type": "Offer",
+    priceCurrency: "USD",
+    price: "200",
+    priceSpecification: {
+      "@type": "PriceSpecification",
+      minPrice: "200",
+      maxPrice: "350",
+      priceCurrency: "USD",
+    },
+  },
 };
 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: faqs.map((faq) => ({
+  mainEntity: faqs.map((f) => ({
     "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
   })),
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dsmcleaningsolutions.com" },
+    { "@type": "ListItem", position: 2, name: "Deep Cleaning", item: "https://www.dsmcleaningsolutions.com/deep-cleaning-shorewood-il" },
+    { "@type": "ListItem", position: 3, name: "Shorewood IL" },
+  ],
 };
 
 const checklist = [
@@ -133,15 +134,6 @@ const checklist = [
   },
 ];
 
-const trustCards = [
-  { icon: "", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products safe for kids and pets." },
-  { icon: "", title: "Fully Insured & Bonded", desc: "Background-checked team. Your Shorewood home is fully protected." },
-  { icon: "", title: "48-Hour Guarantee", desc: "We re-clean anything that isn't right within 48 hours." },
-  { icon: "", title: "Family Owned", desc: "Based in nearby Romeoville - your southwest suburbs neighbors." },
-  { icon: "", title: "7 Days a Week", desc: "Flexible scheduling to fit your Shorewood lifestyle." },
-  { icon: "", title: "Serving Shorewood", desc: "All neighborhoods in zip code 60404." },
-];
-
 export default function DeepCleaningShorewoodPage() {
   return (
     <>
@@ -153,209 +145,319 @@ export default function DeepCleaningShorewoodPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
 
       {/* HERO */}
-      <section className="bg-gradient-to-br from-brand-green-dark via-brand-green to-brand-green-light text-white py-16 md:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-2 text-sm text-white/70 mb-4">
-              <Link href="/" className="hover:text-white">Home</Link>
-              <span>/</span>
-              <Link href="/deep-cleaning" className="hover:text-white">Deep Cleaning</Link>
-              <span>/</span>
-              <span className="text-white">Shorewood</span>
+      <section
+        style={{ background: "linear-gradient(135deg, #1a4731 0%, #2d6a4f 100%)" }}
+        className="text-white py-16 px-4"
+      >
+        <div className="max-w-5xl mx-auto">
+          <nav className="text-sm mb-4 opacity-80">
+            <Link href="/" className="hover:underline">Home</Link>
+            <span className="mx-2">/</span>
+            <span>Deep Cleaning Shorewood IL</span>
+          </nav>
+          <div className="flex flex-col md:flex-row gap-10 items-center">
+            <div className="flex-1">
+              <h1 className="text-3xl md:text-4xl font-bold mb-3 leading-tight">
+                Deep Cleaning Services in Shorewood, IL
+              </h1>
+              <div className="flex items-center gap-2 mb-3">
+                <span style={{ color: "#FFA869" }} className="text-xl">★★★★★</span>
+                <span className="text-sm opacity-90">5.0 — 42 reviews on Google</span>
+              </div>
+              <p className="text-lg font-semibold mb-2">
+                A real deep clean for Shorewood homes. Every room, every detail.
+              </p>
+              <p className="opacity-90 mb-6 leading-relaxed">
+                DSM Cleaning Solutions serves Shorewood, IL with thorough, professional deep cleaning. We cover everything from oven scrubbing to grout lines to baseboards. Family owned, eco-friendly products, and a 48-hour satisfaction guarantee on every job.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href="#quote-form"
+                  style={{ backgroundColor: "#E8721C" }}
+                  className="text-white font-bold px-6 py-3 rounded-lg hover:opacity-90 transition"
+                >
+                  Get a Free Quote
+                </a>
+                <a
+                  href="tel:+18152462113"
+                  className="border-2 border-white text-white font-bold px-6 py-3 rounded-lg hover:bg-white hover:text-green-900 transition"
+                >
+                  Call (815) 246-2113
+                </a>
+              </div>
             </div>
-            <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-6">
-              Deep Cleaning Services in Shorewood, IL
-            </h1>
-            <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              DSM Cleaning Solutions delivers a thorough, top-to-bottom deep clean for homes across
-              Shorewood - from Shorewood Glen to River Crossing and Fox Bend. Every surface scrubbed,
-              every grout line restored, every appliance cleaned inside and out.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
-              <a href="tel:+18152462113" className="btn-outline-white btn-lg"> (815) 246-2113</a>
+            <div className="flex-shrink-0 w-full md:w-80">
+              <img
+                src="/Work%20Pictures/double-vanity-bathroom-clean-naperville-il.jpg"
+                alt="Deep cleaned bathroom in Shorewood IL"
+                className="rounded-xl shadow-lg w-full object-cover"
+                style={{ maxHeight: "280px" }}
+              />
             </div>
           </div>
         </div>
       </section>
 
       {/* TRUST BAR */}
-      <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["Fully Insured & Bonded", "Eco-Friendly Products", "Family Owned", "5-Star Rated", "Satisfaction Guaranteed"].map(
-              (item) => <span key={item} className="whitespace-nowrap">{item}</span>
-            )}
-          </div>
+      <section className="bg-white border-b py-5 px-4">
+        <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-6 text-sm text-gray-700 font-medium">
+          <span>✅ Family Owned &amp; Operated</span>
+          <span>✅ Eco-Friendly Products</span>
+          <span>✅ Fully Insured</span>
+          <span>✅ 48-Hour Satisfaction Guarantee</span>
         </div>
       </section>
 
-      {/* INTRO */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading mb-6">Professional Deep Cleaning Services in Shorewood, IL</h2>
-          <p className="text-gray-600 mb-4 leading-relaxed">
-            <strong>Deep cleaning in Shorewood, IL</strong> is our specialty - and DSM Cleaning Solutions brings the
-            same meticulous, detail-focused approach to every home we serve. Whether you live in Shorewood
-            Glen, Shorewood Crossings, River Crossing, Fox Bend, or Shorewood Commons, our team covers all
-            of Shorewood (zip code 60404) with a comprehensive clean that goes far beyond your regular
-            maintenance routine.
+      {/* SEO CONTENT */}
+      <section className="py-12 px-4 bg-gray-50">
+        <div className="max-w-3xl mx-auto prose prose-gray">
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Shorewood is a growing community in Will County, and we have been proud to serve families here for years. Whether you are in Shorewood Glen, River Crossing, Brentwood Lakes, or another part of town, we can come to you and get your home clean from top to bottom.
           </p>
-          <p className="text-gray-600 mb-4 leading-relaxed">
-            Shorewood families choose DSM because we treat every home like our own. We&apos;re a family-owned
-            business based in nearby Romeoville - just minutes away - and we take pride in the results
-            we deliver throughout Will County. From degreasing the kitchen hood vent to scrubbing grout
-            lines in your master shower, nothing gets overlooked. Residents near Shorewood Centennial
-            Park, along the DuPage River corridor, and throughout Shorewood&apos;s established neighborhoods
-            trust us to deliver a truly deep clean.
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Our deep cleaning service is built for homes that need more than a quick pass. We spend real time in each room. In the kitchen that means inside the oven, behind the stovetop grates, and inside the microwave. In the bathrooms we scrub grout, disinfect toilets, and polish fixtures. In living areas we dust ceiling fans, wipe baseboards, and clean window sills.
           </p>
-          <p className="text-gray-600 leading-relaxed">
-            Whether you&apos;re preparing for a seasonal reset, getting your home ready before a big gathering,
-            or simply want a thorough clean after months of normal use, our Shorewood deep cleaning service
-            is the answer. We use only eco-friendly, non-toxic products - safe for your children, your pets,
-            and your surfaces. Conveniently located between <Link href="/deep-cleaning-plainfield-il" className="text-brand-green font-semibold hover:underline">Plainfield</Link> and{" "}
-            <Link href="/deep-cleaning-joliet-il" className="text-brand-green font-semibold hover:underline">Joliet</Link>, we know this part of Will County well.
+          <p className="text-gray-700 leading-relaxed">
+            We use eco-friendly, non-toxic products on every job. Your family and pets are safe. And if anything is not right after we leave, let us know within 48 hours and we will come back to fix it at no charge.
           </p>
         </div>
       </section>
 
-      {/* WHAT'S INCLUDED */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="section-heading">What&apos;s Included in Our Deep Cleaning in Shorewood, IL</h2>
-            <p className="section-subheading mx-auto">
-              Every room in your Shorewood home - cleaned top to bottom.
-            </p>
+      {/* ANCHOR REVIEW */}
+      <section className="py-10 px-4" style={{ backgroundColor: "#FFF4EE" }}>
+        <div className="max-w-2xl mx-auto text-center">
+          <p style={{ color: "#E8622A" }} className="text-5xl font-serif leading-none mb-3">&ldquo;</p>
+          <p className="text-gray-800 text-lg leading-relaxed italic mb-4">
+            DSM did an amazing job on our home in Shorewood. We had not done a deep clean in months and they made everything look brand new.
+          </p>
+          <p className="font-semibold text-gray-700">Rachel A., Shorewood IL</p>
+          <div className="flex justify-center mt-2">
+            <span style={{ color: "#FFA869" }}>★★★★★</span>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        </div>
+      </section>
+
+      {/* WHY DSM */}
+      <section className="py-14 px-4 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-800 text-center mb-10">
+            Why Shorewood Homeowners Choose DSM
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="font-bold text-gray-800 mb-2">We Are Local</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                DSM is based in the area and we know Shorewood neighborhoods well. We are not a franchise. When you call us, you are working with a small, family-run team that cares about doing good work.
+              </p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="font-bold text-gray-800 mb-2">We Do Not Cut Corners</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Our deep clean is not a surface wipe-down. We get into the spots that usually get skipped: inside the oven, behind the toilet, grout lines, ceiling fans, and window sills. Every room gets real attention.
+              </p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="font-bold text-gray-800 mb-2">Eco-Friendly Products</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                We use plant-based, non-toxic cleaning products on every job. Safe for kids, pets, and sensitive surfaces. You will not come home to a chemical smell.
+              </p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="font-bold text-gray-800 mb-2">Satisfaction Guarantee</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                If something is not right, contact us within 48 hours and we will come back to make it right. No hassle, no charge. We stand behind our work.
+              </p>
+            </div>
+          </div>
+          <div className="text-center">
+            <img
+              src="/Work%20Pictures/Google%20Post%20Image%20-%20Cleaning%20Service%20(1).png"
+              alt="DSM Cleaning Solutions team in Shorewood IL"
+              className="rounded-xl shadow-md mx-auto"
+              style={{ maxWidth: "560px", width: "100%" }}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* CHECKLIST */}
+      <section className="py-14 px-4 bg-gray-50">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-800 text-center mb-2">
+            What We Clean in Your Shorewood Home
+          </h2>
+          <p className="text-center text-gray-500 text-sm mb-10">
+            Every deep clean includes all of the following
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
             {checklist.map((section) => (
-              <div key={section.room} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <h3 className="font-bold text-lg text-brand-green mb-4 border-b border-brand-green-100 pb-2">
-                  {section.room}
-                </h3>
-                <ul className="space-y-2">
+              <div key={section.room} className="bg-white rounded-xl p-5 shadow-sm">
+                <h3 className="font-bold text-gray-800 mb-3 border-b pb-2">{section.room}</h3>
+                <ul className="space-y-1">
                   {section.items.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-gray-700">
-                      <svg className="w-4 h-4 text-brand-green mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      {item}
+                    <li key={item} className="text-sm text-gray-600 flex items-start gap-2">
+                      <span className="text-green-600 mt-0.5">✓</span>
+                      <span>{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* WHY CHOOSE DSM */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="section-heading">Why Shorewood Residents Choose DSM Cleaning Solutions</h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {trustCards.map((card) => (
-              <div key={card.title} className="text-center p-6 rounded-xl bg-brand-green-50 border border-brand-green-100">
-                <span className="text-4xl block mb-3">{card.icon}</span>
-                <h3 className="font-bold text-lg text-gray-900 mb-2">{card.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{card.desc}</p>
-              </div>
-            ))}
+          <div className="text-center">
+            <a
+              href="#quote-form"
+              style={{ backgroundColor: "#E8721C" }}
+              className="text-white font-bold px-8 py-3 rounded-lg hover:opacity-90 transition inline-block"
+            >
+              Book Your Deep Clean
+            </a>
           </div>
         </div>
       </section>
 
       {/* PRICING */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading mb-6">How Much Does Deep Cleaning Cost in Shorewood, IL?</h2>
-          <p className="text-gray-600 mb-4 leading-relaxed">
-            Deep cleaning in Shorewood starts around $200 for smaller homes and goes up based on the
-            size of your home, the number of bedrooms and bathrooms, and how long it&apos;s been since
-            your last professional clean. A 3-4 bedroom home in Shorewood Glen or Shorewood Crossings
-            typically falls in the $250-$350 range.
+      <section className="py-12 px-4 bg-white">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">
+            Deep Cleaning Prices in Shorewood IL
+          </h2>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Pricing for deep cleaning in Shorewood starts around $200 for smaller homes. A 3 to 4 bedroom home typically runs $250 to $350 depending on the size and condition of the home. Every quote is free and there are no hidden fees.
           </p>
-          <p className="text-gray-600 mb-8 leading-relaxed">
-            We always provide a free, no-obligation estimate before any work begins. There are no
-            surprises - you&apos;ll know exactly what to expect before we arrive at your Shorewood home.
+          <p className="text-gray-600 leading-relaxed mb-6">
+            We price by the job, not by the hour, so you know the cost up front. Fill out the form below or give us a call and we will get you a quote fast.
           </p>
-          <Link href="/contact" className="btn-primary">Get My Free Shorewood Quote</Link>
+          <a
+            href="#quote-form"
+            style={{ backgroundColor: "#E8721C" }}
+            className="text-white font-bold px-8 py-3 rounded-lg hover:opacity-90 transition inline-block"
+          >
+            Get a Free Quote
+          </a>
+        </div>
+      </section>
+
+      {/* 3-REVIEW BLOCK */}
+      <section className="py-14 px-4 bg-gray-50">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-800 text-center mb-10">
+            What Shorewood Clients Are Saying
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <div className="flex mb-3">
+                <span style={{ color: "#FFA869" }}>★★★★★</span>
+              </div>
+              <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
+                &ldquo;Really pleased with the results. Prompt, professional, and very thorough. Would recommend to anyone in the area.&rdquo;
+              </p>
+              <p className="text-sm font-semibold text-gray-600">Daniel H., Shorewood IL</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <div className="flex mb-3">
+                <span style={{ color: "#FFA869" }}>★★★★★</span>
+              </div>
+              <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
+                &ldquo;The team was great. Cleaned things I always miss when I clean myself. Baseboards and door frames were spotless.&rdquo;
+              </p>
+              <p className="text-sm font-semibold text-gray-600">Emily W., Shorewood IL</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <div className="flex mb-3">
+                <span style={{ color: "#FFA869" }}>★★★★★</span>
+              </div>
+              <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
+                &ldquo;Local and reliable. We will be booking DSM again for sure.&rdquo;
+              </p>
+              <p className="text-sm font-semibold text-gray-600">Mark T., Shorewood IL</p>
+            </div>
+          </div>
+          <div className="text-center">
+            <a
+              href="https://g.co/kgs/KFkN2MX"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-700 font-semibold hover:underline text-sm"
+            >
+              Read all 42 reviews on Google →
+            </a>
+          </div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="section-heading">Frequently Asked Questions</h2>
-          </div>
-          <div className="space-y-4">
-            {faqs.map((faq, i) => (
-              <details key={i} className="bg-gray-50 border border-gray-200 rounded-xl group">
-                <summary className="flex items-center justify-between p-5 cursor-pointer font-semibold text-gray-900 hover:text-brand-green">
-                  <h3 className="text-left pr-4">{faq.question}</h3>
-                  <svg className="w-5 h-5 text-brand-green flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
+      <section className="py-14 px-4 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-800 text-center mb-8">
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-3">
+            {faqs.map((faq) => (
+              <details key={faq.q} className="border border-gray-200 rounded-lg">
+                <summary className="px-5 py-4 font-semibold text-gray-800 cursor-pointer hover:bg-gray-50 list-none flex justify-between items-center">
+                  {faq.q}
+                  <span className="text-gray-400 ml-4">+</span>
                 </summary>
-                <div className="px-5 pb-5">
-                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-                </div>
+                <div className="px-5 pb-4 text-gray-600 text-sm leading-relaxed">{faq.a}</div>
               </details>
             ))}
           </div>
         </div>
       </section>
 
-      {/* NEARBY CITIES */}
-      <section className="py-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">We Also Offer Deep Cleaning in Nearby Cities</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Link href="/deep-cleaning-joliet-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Joliet</h3>
-              <p className="text-sm text-gray-600">Serving all Joliet zip codes including 60431 & 60435.</p>
-            </Link>
-            <Link href="/deep-cleaning-plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Plainfield</h3>
-              <p className="text-sm text-gray-600">Serving zip codes 60544 & 60585.</p>
-            </Link>
-            <Link href="/deep-cleaning-bolingbrook-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Bolingbrook</h3>
-              <p className="text-sm text-gray-600">Serving zip codes 60440 & 60490.</p>
-            </Link>
-            <Link href="/deep-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Our Full Deep Cleaning Service</h3>
-              <p className="text-sm text-gray-600">See everything included in every deep clean.</p>
-            </Link>
+      {/* FINAL CTA + FORM */}
+      <section
+        id="quote-form"
+        style={{ background: "linear-gradient(135deg, #E8721C 0%, #c45a10 100%)" }}
+        className="py-16 px-4"
+      >
+        <div className="max-w-2xl mx-auto text-center text-white mb-8">
+          <h2 className="text-2xl font-bold mb-2">Get a Free Deep Cleaning Quote in Shorewood</h2>
+          <p className="opacity-90">
+            Fill out the form below and we will get back to you fast with pricing. No commitment required.
+          </p>
+        </div>
+        <div className="max-w-xl mx-auto bg-white rounded-2xl shadow-xl p-8">
+          <div className="text-center mb-6">
+            <div className="flex justify-center mb-1">
+              <span style={{ color: "#FFD8BC" }} className="text-2xl">★★★★★</span>
+            </div>
+            <p className="text-sm text-gray-500">Trusted by Shorewood homeowners — 42 five-star reviews</p>
           </div>
+          <CityDeepCleanForm />
         </div>
       </section>
 
-      {/* CONTACT CTA */}
-      <section id="contact" className="py-16 bg-gradient-to-br from-orange-500 to-orange-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div className="text-white">
-              <h2 className="text-4xl font-bold mb-4">Book Your Deep Cleaning in Shorewood Today</h2>
-              <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                Ready for a Shorewood home that&apos;s clean from top to bottom? Get your free deep cleaning
-                quote - we respond within 1 business day and back every job with our 48-hour satisfaction
-                guarantee.
-              </p>
-              <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                 (815) 246-2113
-              </a>
-              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
-            </div>
-            <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
-              <LeadForm />
-            </div>
+      {/* NEARBY CITIES */}
+      <section className="py-12 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-lg font-bold text-gray-700 mb-6">We Also Serve Nearby Cities</h2>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              href="/deep-cleaning-joliet-il"
+              className="px-5 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-green-700 hover:text-green-700 transition"
+            >
+              Deep Cleaning Joliet IL
+            </Link>
+            <Link
+              href="/deep-cleaning-plainfield-il"
+              className="px-5 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-green-700 hover:text-green-700 transition"
+            >
+              Deep Cleaning Plainfield IL
+            </Link>
+            <Link
+              href="/deep-cleaning-minooka-il"
+              className="px-5 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-green-700 hover:text-green-700 transition"
+            >
+              Deep Cleaning Minooka IL
+            </Link>
           </div>
         </div>
       </section>

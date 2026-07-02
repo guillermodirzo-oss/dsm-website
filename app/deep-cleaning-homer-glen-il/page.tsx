@@ -1,87 +1,88 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
-import LeadForm from "@/components/LeadForm";
+import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 
 export const metadata: Metadata = {
-  title: "Deep Cleaning Services Homer Glen IL",
+  title: "Deep Cleaning Services Homer Glen IL | DSM Cleaning Solutions",
   description:
     "Professional deep cleaning in Homer Glen, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-homer-glen-il" },
   openGraph: {
-    title: "Deep Cleaning Services Homer Glen IL",
+    title: "Deep Cleaning Services Homer Glen IL | DSM Cleaning Solutions",
     description:
       "Professional deep cleaning in Homer Glen, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning-homer-glen-il",
   },
-  twitter: {
-    card: "summary_large_image",
-    images: ["/hero-image.png"],
-  },
+  twitter: { card: "summary_large_image", images: ["/hero-image.png"] },
 };
 
 const faqs = [
   {
-    question: "Do you offer deep cleaning in Homer Glen, IL?",
-    answer:
-      "Yes - DSM Cleaning Solutions provides professional deep cleaning throughout Homer Glen, IL (zip code 60491), including Homer Lakes, Farmington Lakes, The Highlands, Tamarack Fairways, and Homer Glen Estates. We're based in nearby Romeoville and serve all of Homer Glen regularly.",
+    q: "What is included in a deep cleaning in Homer Glen?",
+    a: "We clean inside the oven, degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. Every room gets full attention.",
   },
   {
-    question: "How far is DSM Cleaning Solutions from Homer Glen?",
-    answer:
-      "Our base is in Romeoville, IL - approximately 15-20 minutes from most Homer Glen neighborhoods. We serve Homer Glen regularly alongside our Joliet, Lockport, and Bolingbrook clients throughout Will County.",
+    q: "How long does a deep clean take in Homer Glen?",
+    a: "Most Homer Glen homes take 3 to 5 hours. Larger homes or homes that have not been deep cleaned in a while may take a bit longer. We take the time to do it right.",
   },
   {
-    question: "What neighborhoods in Homer Glen do you serve?",
-    answer:
-      "We serve all of Homer Glen (60491), including Homer Lakes, Farmington Lakes, The Highlands, Tamarack Fairways, and Homer Glen Estates, as well as homes near Lake Katherine Nature Center, Hadley Valley Preserve, and along the 151st Street Corridor.",
+    q: "Do I have to be home for the cleaning?",
+    a: "You do not have to be home. Many of our Homer Glen clients provide a key or lockbox code. We take care of everything and lock up when we leave.",
   },
   {
-    question: "Is your team insured for deep cleaning in Homer Glen?",
-    answer:
-      "Yes - DSM Cleaning Solutions is fully insured and bonded in Illinois, including all Homer Glen service areas. Every team member is background-checked and we carry full liability insurance on every job, so you can book with complete confidence.",
+    q: "How much does a deep cleaning cost in Homer Glen IL?",
+    a: "Pricing starts around $200 for smaller homes. A 3 to 4 bedroom home typically runs $250 to $350 depending on size and condition. Contact us for a free, no-obligation quote.",
   },
   {
-    question: "How often should Homer Glen homes get deep cleaned?",
-    answer:
-      "Given the larger home sizes common in Homer Glen, we recommend a professional deep clean at least twice a year - spring and fall. Homes with pets, allergies, or young children benefit from deep cleaning every 3-4 months. Many Homer Glen clients pair a seasonal deep clean with our ongoing standard cleaning service for year-round results.",
+    q: "Do you serve all of Homer Glen?",
+    a: "Yes. We cover the Homer Glen downtown area, the 143rd Street corridor, and all surrounding neighborhoods in Homer Glen, IL 60491.",
   },
 ];
 
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
+  name: "Deep Cleaning Services Homer Glen IL",
   serviceType: "Deep Cleaning",
-  name: "Deep Cleaning in Homer Glen, IL",
-  provider: {
-    "@type": "LocalBusiness",
-    "@id": "https://www.dsmcleaningsolutions.com/#business",
-    name: "DSM Cleaning Solutions",
-    telephone: "+18152462113",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Romeoville",
-      addressRegion: "IL",
-      postalCode: "60446",
-      addressCountry: "US",
-    },
-  },
   areaServed: {
     "@type": "City",
     name: "Homer Glen",
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
+  provider: { "@id": "https://www.dsmcleaningsolutions.com/#business" },
   description:
-    "Professional deep cleaning in Homer Glen, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
+    "Professional deep cleaning for homes in Homer Glen, IL. Includes oven cleaning, grout scrubbing, baseboard wiping, and full room detail.",
+  offers: {
+    "@type": "Offer",
+    priceCurrency: "USD",
+    price: "200",
+    priceSpecification: {
+      "@type": "PriceSpecification",
+      minPrice: "200",
+      maxPrice: "350",
+      priceCurrency: "USD",
+    },
+  },
 };
 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: faqs.map((faq) => ({
+  mainEntity: faqs.map((f) => ({
     "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
   })),
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dsmcleaningsolutions.com" },
+    { "@type": "ListItem", position: 2, name: "Deep Cleaning", item: "https://www.dsmcleaningsolutions.com/deep-cleaning-homer-glen-il" },
+    { "@type": "ListItem", position: 3, name: "Homer Glen IL" },
+  ],
 };
 
 const checklist = [
@@ -133,15 +134,6 @@ const checklist = [
   },
 ];
 
-const trustCards = [
-  { icon: "", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products safe for kids and pets." },
-  { icon: "", title: "Fully Insured & Bonded", desc: "Background-checked team. Your Homer Glen home is fully protected." },
-  { icon: "", title: "48-Hour Guarantee", desc: "We re-clean anything that isn't right within 48 hours." },
-  { icon: "", title: "Family Owned", desc: "Based in nearby Romeoville - your southwest suburbs neighbors." },
-  { icon: "", title: "7 Days a Week", desc: "Available 8am-6pm, 7 days a week for your Homer Glen schedule." },
-  { icon: "", title: "Serving Homer Glen", desc: "All neighborhoods in zip code 60491." },
-];
-
 export default function DeepCleaningHomerGlenPage() {
   return (
     <>
@@ -153,212 +145,319 @@ export default function DeepCleaningHomerGlenPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
 
       {/* HERO */}
-      <section className="bg-gradient-to-br from-brand-green-dark via-brand-green to-brand-green-light text-white py-16 md:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-2 text-sm text-white/70 mb-4">
-              <Link href="/" className="hover:text-white">Home</Link>
-              <span>/</span>
-              <Link href="/deep-cleaning" className="hover:text-white">Deep Cleaning</Link>
-              <span>/</span>
-              <span className="text-white">Homer Glen</span>
+      <section
+        style={{ background: "linear-gradient(135deg, #1a4731 0%, #2d6a4f 100%)" }}
+        className="text-white py-16 px-4"
+      >
+        <div className="max-w-5xl mx-auto">
+          <nav className="text-sm mb-4 opacity-80">
+            <Link href="/" className="hover:underline">Home</Link>
+            <span className="mx-2">/</span>
+            <span>Deep Cleaning Homer Glen IL</span>
+          </nav>
+          <div className="flex flex-col md:flex-row gap-10 items-center">
+            <div className="flex-1">
+              <h1 className="text-3xl md:text-4xl font-bold mb-3 leading-tight">
+                Deep Cleaning Services in Homer Glen, IL
+              </h1>
+              <div className="flex items-center gap-2 mb-3">
+                <span style={{ color: "#FFA869" }} className="text-xl">★★★★★</span>
+                <span className="text-sm opacity-90">5.0 — 42 reviews on Google</span>
+              </div>
+              <p className="text-lg font-semibold mb-2">
+                Deep cleaning for Homer Glen homes. We take the time to do it right.
+              </p>
+              <p className="opacity-90 mb-6 leading-relaxed">
+                DSM Cleaning Solutions serves Homer Glen, IL with thorough, professional deep cleaning. From the oven to the baseboards, we cover every room. Family owned, eco-friendly products, and a 48-hour satisfaction guarantee on every job.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href="#quote-form"
+                  style={{ backgroundColor: "#E8721C" }}
+                  className="text-white font-bold px-6 py-3 rounded-lg hover:opacity-90 transition"
+                >
+                  Get a Free Quote
+                </a>
+                <a
+                  href="tel:+18152462113"
+                  className="border-2 border-white text-white font-bold px-6 py-3 rounded-lg hover:bg-white hover:text-green-900 transition"
+                >
+                  Call (815) 246-2113
+                </a>
+              </div>
             </div>
-            <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-6">
-              Deep Cleaning Services in Homer Glen, IL
-            </h1>
-            <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              DSM Cleaning Solutions delivers a thorough, top-to-bottom deep clean for homes across
-              Homer Glen - from Homer Lakes and Farmington Lakes to The Highlands, Tamarack Fairways,
-              and Homer Glen Estates. Large homes demand a thorough clean - and that&apos;s exactly what
-              we deliver.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
-              <a href="tel:+18152462113" className="btn-outline-white btn-lg"> (815) 246-2113</a>
+            <div className="flex-shrink-0 w-full md:w-80">
+              <img
+                src="/Work%20Pictures/double-vanity-bathroom-clean-naperville-il.jpg"
+                alt="Deep cleaned bathroom in Homer Glen IL"
+                className="rounded-xl shadow-lg w-full object-cover"
+                style={{ maxHeight: "280px" }}
+              />
             </div>
           </div>
         </div>
       </section>
 
       {/* TRUST BAR */}
-      <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["Fully Insured & Bonded", "Eco-Friendly Products", "Family Owned", "5-Star Rated", "Satisfaction Guaranteed"].map(
-              (item) => <span key={item} className="whitespace-nowrap">{item}</span>
-            )}
-          </div>
+      <section className="bg-white border-b py-5 px-4">
+        <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-6 text-sm text-gray-700 font-medium">
+          <span>✅ Family Owned &amp; Operated</span>
+          <span>✅ Eco-Friendly Products</span>
+          <span>✅ Fully Insured</span>
+          <span>✅ 48-Hour Satisfaction Guarantee</span>
         </div>
       </section>
 
-      {/* INTRO */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading mb-6">Professional Deep Cleaning Services in Homer Glen, IL</h2>
-          <p className="text-gray-600 mb-4 leading-relaxed">
-            <strong>Deep cleaning in Homer Glen, IL</strong> is our specialty - and DSM Cleaning Solutions brings
-            the same meticulous, detail-focused approach to every home we serve. Whether you live in Homer
-            Lakes, Farmington Lakes, The Highlands, Tamarack Fairways, or Homer Glen Estates, our team
-            covers all of Homer Glen (zip code 60491) with a comprehensive clean that goes far beyond
-            your regular maintenance routine.
+      {/* SEO CONTENT */}
+      <section className="py-12 px-4 bg-gray-50">
+        <div className="max-w-3xl mx-auto prose prose-gray">
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Homer Glen is a quiet residential community in Will County with a lot of larger homes. We know that a big house means more ground to cover, and we do not rush. Every room gets the same level of attention whether you have two bedrooms or five.
           </p>
-          <p className="text-gray-600 mb-4 leading-relaxed">
-            Homer Glen is known throughout Will County for its upscale, spacious homes - and larger homes
-            mean more surface area, more rooms, and more corners that need professional attention. We&apos;re
-            a family-owned business based in nearby Romeoville, and we specialize in exactly this kind
-            of detailed, high-standard cleaning that Homer Glen homeowners expect. From homes backing
-            up to Hadley Valley Preserve to the newer builds along the 151st Street Corridor, our team
-            has experience cleaning Homer Glen&apos;s largest and most beautiful properties.
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Our deep cleaning covers the spots that standard cleaning skips. In the kitchen we clean inside the oven, degrease the hood vent, and scrub the sink. In the bathrooms we get into the grout, polish the fixtures, and clean behind the toilet. In bedrooms and living areas we dust ceiling fans, clean window sills, and wipe down every baseboard.
           </p>
-          <p className="text-gray-600 leading-relaxed">
-            Whether you&apos;re preparing for a seasonal reset, hosting a large gathering, or simply want
-            a thorough clean after months of use, our Homer Glen deep cleaning service delivers.
-            We use only eco-friendly, non-toxic products - safe for your family, pets, and surfaces.
-            Conveniently close to both <Link href="/deep-cleaning-lockport-il" className="text-brand-green font-semibold hover:underline">Lockport</Link> and{" "}
-            <Link href="/deep-cleaning-joliet-il" className="text-brand-green font-semibold hover:underline">Joliet</Link>, we know Will County well.
+          <p className="text-gray-700 leading-relaxed">
+            We use eco-friendly, non-toxic products on every job and stand behind our work with a 48-hour guarantee. If something is not right, let us know and we will come back to fix it at no charge.
           </p>
         </div>
       </section>
 
-      {/* WHAT'S INCLUDED */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="section-heading">What&apos;s Included in Our Deep Cleaning in Homer Glen, IL</h2>
-            <p className="section-subheading mx-auto">
-              Every room in your Homer Glen home - cleaned top to bottom.
-            </p>
+      {/* ANCHOR REVIEW */}
+      <section className="py-10 px-4" style={{ backgroundColor: "#FFF4EE" }}>
+        <div className="max-w-2xl mx-auto text-center">
+          <p style={{ color: "#E8622A" }} className="text-5xl font-serif leading-none mb-3">&ldquo;</p>
+          <p className="text-gray-800 text-lg leading-relaxed italic mb-4">
+            I have a large home and was worried the team would rush through it. They did not. Every room got the attention it needed. Very happy with the results.
+          </p>
+          <p className="font-semibold text-gray-700">Donna S., Homer Glen IL</p>
+          <div className="flex justify-center mt-2">
+            <span style={{ color: "#FFA869" }}>★★★★★</span>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        </div>
+      </section>
+
+      {/* WHY DSM */}
+      <section className="py-14 px-4 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-800 text-center mb-10">
+            Why Homer Glen Homeowners Choose DSM
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="font-bold text-gray-800 mb-2">We Are Local</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                DSM is a local, family-run business. We are not a national franchise. When you work with us, you get a team that is invested in doing good work and building a reputation in the community.
+              </p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="font-bold text-gray-800 mb-2">We Do Not Rush</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Larger homes need more time. We do not cut our cleaning short to fit a schedule. Every room gets the attention it deserves, no matter how big your home is.
+              </p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="font-bold text-gray-800 mb-2">Eco-Friendly Products</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                We use plant-based, non-toxic cleaning products on every job. Safe for your family, your kids, and your pets. No harsh chemical smell when we leave.
+              </p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="font-bold text-gray-800 mb-2">48-Hour Guarantee</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                If anything is not right after we leave, contact us within 48 hours and we will come back to fix it. No charge, no hassle. We stand behind every job.
+              </p>
+            </div>
+          </div>
+          <div className="text-center">
+            <img
+              src="/Work%20Pictures/Google%20Post%20Image%20-%20Cleaning%20Service%20(1).png"
+              alt="DSM Cleaning Solutions team in Homer Glen IL"
+              className="rounded-xl shadow-md mx-auto"
+              style={{ maxWidth: "560px", width: "100%" }}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* CHECKLIST */}
+      <section className="py-14 px-4 bg-gray-50">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-800 text-center mb-2">
+            What We Clean in Your Homer Glen Home
+          </h2>
+          <p className="text-center text-gray-500 text-sm mb-10">
+            Every deep clean includes all of the following
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
             {checklist.map((section) => (
-              <div key={section.room} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <h3 className="font-bold text-lg text-brand-green mb-4 border-b border-brand-green-100 pb-2">
-                  {section.room}
-                </h3>
-                <ul className="space-y-2">
+              <div key={section.room} className="bg-white rounded-xl p-5 shadow-sm">
+                <h3 className="font-bold text-gray-800 mb-3 border-b pb-2">{section.room}</h3>
+                <ul className="space-y-1">
                   {section.items.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-gray-700">
-                      <svg className="w-4 h-4 text-brand-green mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      {item}
+                    <li key={item} className="text-sm text-gray-600 flex items-start gap-2">
+                      <span className="text-green-600 mt-0.5">✓</span>
+                      <span>{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* WHY CHOOSE DSM */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="section-heading">Why Homer Glen Residents Choose DSM Cleaning Solutions</h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {trustCards.map((card) => (
-              <div key={card.title} className="text-center p-6 rounded-xl bg-brand-green-50 border border-brand-green-100">
-                <span className="text-4xl block mb-3">{card.icon}</span>
-                <h3 className="font-bold text-lg text-gray-900 mb-2">{card.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{card.desc}</p>
-              </div>
-            ))}
+          <div className="text-center">
+            <a
+              href="#quote-form"
+              style={{ backgroundColor: "#E8721C" }}
+              className="text-white font-bold px-8 py-3 rounded-lg hover:opacity-90 transition inline-block"
+            >
+              Book Your Deep Clean
+            </a>
           </div>
         </div>
       </section>
 
       {/* PRICING */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading mb-6">How Much Does Deep Cleaning Cost in Homer Glen, IL?</h2>
-          <p className="text-gray-600 mb-4 leading-relaxed">
-            Deep cleaning in Homer Glen starts around $225 for mid-size homes and scales with the
-            size of your home, the number of bedrooms and bathrooms, and how long it&apos;s been since
-            your last professional clean. Homer Glen&apos;s larger homes - particularly in The Highlands,
-            Tamarack Fairways, and Homer Glen Estates - typically fall in the $300-$450 range,
-            reflecting the additional rooms and square footage that come with upscale homes in this area.
+      <section className="py-12 px-4 bg-white">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">
+            Deep Cleaning Prices in Homer Glen IL
+          </h2>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Pricing for deep cleaning in Homer Glen starts around $200 for smaller homes. A 3 to 4 bedroom home typically runs $250 to $350 depending on size and condition. Every quote is free and there are no surprise fees.
           </p>
-          <p className="text-gray-600 mb-8 leading-relaxed">
-            We always provide a free, no-obligation estimate before any work begins. There are no
-            surprises - you&apos;ll know exactly what to expect before we arrive at your Homer Glen home.
-            Contact us at (815) 246-2113 or fill out the form below.
+          <p className="text-gray-600 leading-relaxed mb-6">
+            We price by the job, not by the hour. You know the total cost before we start. Fill out the form below or give us a call to get a fast quote.
           </p>
-          <Link href="/contact" className="btn-primary">Get My Free Homer Glen Quote</Link>
+          <a
+            href="#quote-form"
+            style={{ backgroundColor: "#E8721C" }}
+            className="text-white font-bold px-8 py-3 rounded-lg hover:opacity-90 transition inline-block"
+          >
+            Get a Free Quote
+          </a>
+        </div>
+      </section>
+
+      {/* 3-REVIEW BLOCK */}
+      <section className="py-14 px-4 bg-gray-50">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-800 text-center mb-10">
+            What Homer Glen Clients Are Saying
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <div className="flex mb-3">
+                <span style={{ color: "#FFA869" }}>★★★★★</span>
+              </div>
+              <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
+                &ldquo;Great experience. Easy to book and the team was professional and efficient. My house looked amazing after.&rdquo;
+              </p>
+              <p className="text-sm font-semibold text-gray-600">Greg P., Homer Glen IL</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <div className="flex mb-3">
+                <span style={{ color: "#FFA869" }}>★★★★★</span>
+              </div>
+              <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
+                &ldquo;DSM cleaned my house before I listed it for sale and my realtor was impressed. Made a real difference.&rdquo;
+              </p>
+              <p className="text-sm font-semibold text-gray-600">Kathleen R., Homer Glen IL</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <div className="flex mb-3">
+                <span style={{ color: "#FFA869" }}>★★★★★</span>
+              </div>
+              <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
+                &ldquo;Reliable and professional. Exactly what I was looking for.&rdquo;
+              </p>
+              <p className="text-sm font-semibold text-gray-600">Joe M., Homer Glen IL</p>
+            </div>
+          </div>
+          <div className="text-center">
+            <a
+              href="https://g.co/kgs/KFkN2MX"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-700 font-semibold hover:underline text-sm"
+            >
+              Read all 42 reviews on Google →
+            </a>
+          </div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="section-heading">Frequently Asked Questions</h2>
-          </div>
-          <div className="space-y-4">
-            {faqs.map((faq, i) => (
-              <details key={i} className="bg-gray-50 border border-gray-200 rounded-xl group">
-                <summary className="flex items-center justify-between p-5 cursor-pointer font-semibold text-gray-900 hover:text-brand-green">
-                  <h3 className="text-left pr-4">{faq.question}</h3>
-                  <svg className="w-5 h-5 text-brand-green flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
+      <section className="py-14 px-4 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-800 text-center mb-8">
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-3">
+            {faqs.map((faq) => (
+              <details key={faq.q} className="border border-gray-200 rounded-lg">
+                <summary className="px-5 py-4 font-semibold text-gray-800 cursor-pointer hover:bg-gray-50 list-none flex justify-between items-center">
+                  {faq.q}
+                  <span className="text-gray-400 ml-4">+</span>
                 </summary>
-                <div className="px-5 pb-5">
-                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-                </div>
+                <div className="px-5 pb-4 text-gray-600 text-sm leading-relaxed">{faq.a}</div>
               </details>
             ))}
           </div>
         </div>
       </section>
 
-      {/* NEARBY CITIES */}
-      <section className="py-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">We Also Offer Deep Cleaning in Nearby Cities</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Link href="/deep-cleaning-lockport-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Lockport</h3>
-              <p className="text-sm text-gray-600">Serving all of Lockport (60441).</p>
-            </Link>
-            <Link href="/deep-cleaning-joliet-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Joliet</h3>
-              <p className="text-sm text-gray-600">Serving all Joliet zip codes including 60431 &amp; 60435.</p>
-            </Link>
-            <Link href="/deep-cleaning-bolingbrook-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Bolingbrook</h3>
-              <p className="text-sm text-gray-600">Serving zip codes 60440 &amp; 60490.</p>
-            </Link>
-            <Link href="/deep-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Our Full Deep Cleaning Service</h3>
-              <p className="text-sm text-gray-600">See everything included in every deep clean.</p>
-            </Link>
+      {/* FINAL CTA + FORM */}
+      <section
+        id="quote-form"
+        style={{ background: "linear-gradient(135deg, #E8721C 0%, #c45a10 100%)" }}
+        className="py-16 px-4"
+      >
+        <div className="max-w-2xl mx-auto text-center text-white mb-8">
+          <h2 className="text-2xl font-bold mb-2">Get a Free Deep Cleaning Quote in Homer Glen</h2>
+          <p className="opacity-90">
+            Fill out the form below and we will get back to you fast. No commitment required.
+          </p>
+        </div>
+        <div className="max-w-xl mx-auto bg-white rounded-2xl shadow-xl p-8">
+          <div className="text-center mb-6">
+            <div className="flex justify-center mb-1">
+              <span style={{ color: "#FFD8BC" }} className="text-2xl">★★★★★</span>
+            </div>
+            <p className="text-sm text-gray-500">Trusted by Homer Glen homeowners — 42 five-star reviews</p>
           </div>
+          <CityDeepCleanForm />
         </div>
       </section>
 
-      {/* CONTACT CTA */}
-      <section id="contact" className="py-16 bg-gradient-to-br from-orange-500 to-orange-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div className="text-white">
-              <h2 className="text-4xl font-bold mb-4">Book Your Deep Cleaning in Homer Glen Today</h2>
-              <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                Ready for a Homer Glen home that&apos;s clean from top to bottom? Get your free deep cleaning
-                quote - we respond within 1 business day and back every job with our 48-hour satisfaction
-                guarantee.
-              </p>
-              <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                 (815) 246-2113
-              </a>
-              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
-            </div>
-            <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
-              <LeadForm />
-            </div>
+      {/* NEARBY CITIES */}
+      <section className="py-12 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-lg font-bold text-gray-700 mb-6">We Also Serve Nearby Cities</h2>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              href="/deep-cleaning-lockport-il"
+              className="px-5 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-green-700 hover:text-green-700 transition"
+            >
+              Deep Cleaning Lockport IL
+            </Link>
+            <Link
+              href="/deep-cleaning-lemont-il"
+              className="px-5 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-green-700 hover:text-green-700 transition"
+            >
+              Deep Cleaning Lemont IL
+            </Link>
+            <Link
+              href="/deep-cleaning-joliet-il"
+              className="px-5 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-green-700 hover:text-green-700 transition"
+            >
+              Deep Cleaning Joliet IL
+            </Link>
           </div>
         </div>
       </section>
