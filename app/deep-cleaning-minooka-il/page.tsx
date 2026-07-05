@@ -233,9 +233,9 @@ export default function DeepCleaningMinookaPage() {
         <div className="max-w-2xl mx-auto text-center">
           <p style={{ color: "#E8622A" }} className="text-5xl font-serif leading-none mb-3">&ldquo;</p>
           <p className="text-gray-800 text-lg leading-relaxed italic mb-4">
-            Did not expect to find a cleaning service willing to come out to Minooka but DSM made it easy. Great job on every room.
+            I&apos;m so glad DSM Cleaning Services was recommended to us by our realtor! They are fantastic, and their website makes arranging cleanings so easy. I highly recommend them -- I will be using them many more times!
           </p>
-          <p className="font-semibold text-gray-700">Heather C., Minooka IL</p>
+          <p className="font-semibold text-gray-700">Julie Gaubatz</p>
           <div className="flex justify-center mt-2">
             <span style={{ color: "#FFA869" }}>★★★★★</span>
           </div>
@@ -355,27 +355,27 @@ export default function DeepCleaningMinookaPage() {
                 <span style={{ color: "#FFA869" }}>★★★★★</span>
               </div>
               <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
-                &ldquo;Professional and thorough. My house has not been this clean since we moved in. Will be booking again.&rdquo;
+                &ldquo;We are very happy with DSM Cleaning Solutions. They do an excellent job and would hire them again&rdquo;
               </p>
-              <p className="text-sm font-semibold text-gray-600">Scott B., Minooka IL</p>
+              <p className="text-sm font-semibold text-gray-600">Bill A.</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm">
               <div className="flex mb-3">
                 <span style={{ color: "#FFA869" }}>★★★★★</span>
               </div>
               <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
-                &ldquo;Easy to schedule, on time, and excellent work. Highly recommend.&rdquo;
+                &ldquo;This service is consistently perfect! And, I love the website interface -- it makes everything easy and customizable.&rdquo;
               </p>
-              <p className="text-sm font-semibold text-gray-600">Laura M., Minooka IL</p>
+              <p className="text-sm font-semibold text-gray-600">Julie G.</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm">
               <div className="flex mb-3">
                 <span style={{ color: "#FFA869" }}>★★★★★</span>
               </div>
               <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
-                &ldquo;Great service and great people. Happy to have found DSM.&rdquo;
+                &ldquo;As always everything was great.&rdquo;
               </p>
-              <p className="text-sm font-semibold text-gray-600">Dave R., Minooka IL</p>
+              <p className="text-sm font-semibold text-gray-600">Pati M.</p>
             </div>
           </div>
           <div className="text-center">

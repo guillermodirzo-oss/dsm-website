@@ -233,9 +233,9 @@ export default function DeepCleaningHomerGlenPage() {
         <div className="max-w-2xl mx-auto text-center">
           <p style={{ color: "#E8622A" }} className="text-5xl font-serif leading-none mb-3">&ldquo;</p>
           <p className="text-gray-800 text-lg leading-relaxed italic mb-4">
-            I have a large home and was worried the team would rush through it. They did not. Every room got the attention it needed. Very happy with the results.
+            I highly recommend, customer since 2024 🍊🍊🍊
           </p>
-          <p className="font-semibold text-gray-700">Donna S., Homer Glen IL</p>
+          <p className="font-semibold text-gray-700">Jae M.</p>
           <div className="flex justify-center mt-2">
             <span style={{ color: "#FFA869" }}>★★★★★</span>
           </div>
@@ -355,27 +355,27 @@ export default function DeepCleaningHomerGlenPage() {
                 <span style={{ color: "#FFA869" }}>★★★★★</span>
               </div>
               <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
-                &ldquo;Great experience. Easy to book and the team was professional and efficient. My house looked amazing after.&rdquo;
+                &ldquo;We are very happy with DSM Cleaning Solutions. They do an excellent job and would hire them again&rdquo;
               </p>
-              <p className="text-sm font-semibold text-gray-600">Greg P., Homer Glen IL</p>
+              <p className="text-sm font-semibold text-gray-600">Bill A.</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm">
               <div className="flex mb-3">
                 <span style={{ color: "#FFA869" }}>★★★★★</span>
               </div>
               <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
-                &ldquo;DSM cleaned my house before I listed it for sale and my realtor was impressed. Made a real difference.&rdquo;
+                &ldquo;I&apos;m so glad DSM Cleaning Services was recommended to us by our realtor! They are fantastic, and their website makes arranging cleanings so easy. I highly recommend them -- I will be using them many more times!&rdquo;
               </p>
-              <p className="text-sm font-semibold text-gray-600">Kathleen R., Homer Glen IL</p>
+              <p className="text-sm font-semibold text-gray-600">Julie Gaubatz</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm">
               <div className="flex mb-3">
                 <span style={{ color: "#FFA869" }}>★★★★★</span>
               </div>
               <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
-                &ldquo;Reliable and professional. Exactly what I was looking for.&rdquo;
+                &ldquo;As always everything was great.&rdquo;
               </p>
-              <p className="text-sm font-semibold text-gray-600">Joe M., Homer Glen IL</p>
+              <p className="text-sm font-semibold text-gray-600">Pati M.</p>
             </div>
           </div>
           <div className="text-center">

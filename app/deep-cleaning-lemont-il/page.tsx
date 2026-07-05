@@ -260,10 +260,10 @@ export default function DeepCleaningLemontPage() {
             <span className="text-6xl font-serif leading-none absolute top-6 left-8" style={{ color: "#E8622A" }}>&ldquo;</span>
             <blockquote className="pt-8">
               <p className="text-gray-800 text-lg leading-relaxed mb-5 italic">
-                I was skeptical at first but DSM completely won me over. Every room was spotless. My oven looked brand new and I had not cleaned it in years.
+                I&apos;m so glad DSM Cleaning Services was recommended to us by our realtor! They are fantastic, and their website makes arranging cleanings so easy. I highly recommend them -- I will be using them many more times!
               </p>
               <footer>
-                <p className="font-bold text-gray-900">Christine B., Lemont IL <span className="text-amber-400">★★★★★</span></p>
+                <p className="font-bold text-gray-900">Julie Gaubatz <span className="text-amber-400">★★★★★</span></p>
                 <p className="text-sm text-gray-400 mt-1">One of our 42 five-star Google reviews</p>
               </footer>
             </blockquote>
@@ -374,20 +374,20 @@ export default function DeepCleaningLemontPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative">
               <span className="text-4xl font-serif leading-none absolute top-4 left-5 text-orange-300">&ldquo;</span>
-              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">Professional and efficient. They got my house cleaner than I ever could on my own. Will absolutely book again.</p>
-              <p className="font-semibold text-gray-900 text-sm">Anthony R., Lemont IL</p>
+              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">We are very happy with DSM Cleaning Solutions. They do an excellent job and would hire them again</p>
+              <p className="font-semibold text-gray-900 text-sm">Bill A.</p>
               <p className="text-amber-400 text-sm">★★★★★</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative">
               <span className="text-4xl font-serif leading-none absolute top-4 left-5 text-orange-300">&ldquo;</span>
-              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">Great team. Showed up on time and worked hard the whole time. Bathroom grout has never looked so good.</p>
-              <p className="font-semibold text-gray-900 text-sm">Michelle K., Lemont IL</p>
+              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">This service is consistently perfect! And, I love the website interface -- it makes everything easy and customizable.</p>
+              <p className="font-semibold text-gray-900 text-sm">Julie G.</p>
               <p className="text-amber-400 text-sm">★★★★★</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative">
               <span className="text-4xl font-serif leading-none absolute top-4 left-5 text-orange-300">&ldquo;</span>
-              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">Happy to support a local business that actually delivers. DSM is the best.</p>
-              <p className="font-semibold text-gray-900 text-sm">Paul G., Lemont IL</p>
+              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">As always everything was great.</p>
+              <p className="font-semibold text-gray-900 text-sm">Pati M.</p>
               <p className="text-amber-400 text-sm">★★★★★</p>
             </div>
           </div>

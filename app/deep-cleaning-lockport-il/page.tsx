@@ -260,10 +260,10 @@ export default function DeepCleaningLockportPage() {
             <span className="text-6xl font-serif leading-none absolute top-6 left-8" style={{ color: "#E8622A" }}>&ldquo;</span>
             <blockquote className="pt-8">
               <p className="text-gray-800 text-lg leading-relaxed mb-5 italic">
-                Had DSM come out before the holidays and they did an amazing job. The whole house felt fresh and clean. Guests kept asking who cleaned for us.
+                We are very happy with DSM Cleaning Solutions. They do an excellent job and would hire them again
               </p>
               <footer>
-                <p className="font-bold text-gray-900">Nicole F., Lockport IL <span className="text-amber-400">★★★★★</span></p>
+                <p className="font-bold text-gray-900">Bill A. <span className="text-amber-400">★★★★★</span></p>
                 <p className="text-sm text-gray-400 mt-1">One of our 42 five-star Google reviews</p>
               </footer>
             </blockquote>
@@ -374,20 +374,20 @@ export default function DeepCleaningLockportPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative">
               <span className="text-4xl font-serif leading-none absolute top-4 left-5 text-orange-300">&ldquo;</span>
-              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">Really glad I found DSM. Local, professional, and they actually care about doing a good job. My kitchen and bathrooms were perfect.</p>
-              <p className="font-semibold text-gray-900 text-sm">Brian A., Lockport IL</p>
+              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">This service is consistently perfect! And, I love the website interface -- it makes everything easy and customizable.</p>
+              <p className="font-semibold text-gray-900 text-sm">Julie G.</p>
               <p className="text-amber-400 text-sm">★★★★★</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative">
               <span className="text-4xl font-serif leading-none absolute top-4 left-5 text-orange-300">&ldquo;</span>
-              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">On time, friendly, and left my house looking better than it has in years. Highly recommend to anyone in Lockport.</p>
-              <p className="font-semibold text-gray-900 text-sm">Diane C., Lockport IL</p>
+              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">As always everything was great.</p>
+              <p className="font-semibold text-gray-900 text-sm">Pati M.</p>
               <p className="text-amber-400 text-sm">★★★★★</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative">
               <span className="text-4xl font-serif leading-none absolute top-4 left-5 text-orange-300">&ldquo;</span>
-              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">Solid local business. Easy to work with and great results every time.</p>
-              <p className="font-semibold text-gray-900 text-sm">Steve H., Lockport IL</p>
+              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">I highly recommend, customer since 2024 🍊🍊🍊</p>
+              <p className="font-semibold text-gray-900 text-sm">Jae M.</p>
               <p className="text-amber-400 text-sm">★★★★★</p>
             </div>
           </div>

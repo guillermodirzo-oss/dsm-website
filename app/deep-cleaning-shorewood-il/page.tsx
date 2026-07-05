@@ -233,9 +233,9 @@ export default function DeepCleaningShorewoodPage() {
         <div className="max-w-2xl mx-auto text-center">
           <p style={{ color: "#E8622A" }} className="text-5xl font-serif leading-none mb-3">&ldquo;</p>
           <p className="text-gray-800 text-lg leading-relaxed italic mb-4">
-            DSM did an amazing job on our home in Shorewood. We had not done a deep clean in months and they made everything look brand new.
+            As always everything was great.
           </p>
-          <p className="font-semibold text-gray-700">Rachel A., Shorewood IL</p>
+          <p className="font-semibold text-gray-700">Pati M.</p>
           <div className="flex justify-center mt-2">
             <span style={{ color: "#FFA869" }}>★★★★★</span>
           </div>
@@ -355,27 +355,27 @@ export default function DeepCleaningShorewoodPage() {
                 <span style={{ color: "#FFA869" }}>★★★★★</span>
               </div>
               <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
-                &ldquo;Really pleased with the results. Prompt, professional, and very thorough. Would recommend to anyone in the area.&rdquo;
+                &ldquo;We are very happy with DSM Cleaning Solutions. They do an excellent job and would hire them again&rdquo;
               </p>
-              <p className="text-sm font-semibold text-gray-600">Daniel H., Shorewood IL</p>
+              <p className="text-sm font-semibold text-gray-600">Bill A.</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm">
               <div className="flex mb-3">
                 <span style={{ color: "#FFA869" }}>★★★★★</span>
               </div>
               <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
-                &ldquo;The team was great. Cleaned things I always miss when I clean myself. Baseboards and door frames were spotless.&rdquo;
+                &ldquo;I&apos;m so glad DSM Cleaning Services was recommended to us by our realtor! They are fantastic, and their website makes arranging cleanings so easy. I highly recommend them -- I will be using them many more times!&rdquo;
               </p>
-              <p className="text-sm font-semibold text-gray-600">Emily W., Shorewood IL</p>
+              <p className="text-sm font-semibold text-gray-600">Julie Gaubatz</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm">
               <div className="flex mb-3">
                 <span style={{ color: "#FFA869" }}>★★★★★</span>
               </div>
               <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
-                &ldquo;Local and reliable. We will be booking DSM again for sure.&rdquo;
+                &ldquo;I highly recommend, customer since 2024 🍊🍊🍊&rdquo;
               </p>
-              <p className="text-sm font-semibold text-gray-600">Mark T., Shorewood IL</p>
+              <p className="text-sm font-semibold text-gray-600">Jae M.</p>
             </div>
           </div>
           <div className="text-center">

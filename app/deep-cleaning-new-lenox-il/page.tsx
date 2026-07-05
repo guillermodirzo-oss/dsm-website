@@ -233,9 +233,9 @@ export default function DeepCleaningNewLenoxPage() {
         <div className="max-w-2xl mx-auto text-center">
           <p style={{ color: "#E8622A" }} className="text-5xl font-serif leading-none mb-3">&ldquo;</p>
           <p className="text-gray-800 text-lg leading-relaxed italic mb-4">
-            DSM came out to do a deep clean before we hosted Thanksgiving. The house was spotless. Family kept asking how we got everything so clean.
+            We are very happy with DSM Cleaning Solutions. They do an excellent job and would hire them again
           </p>
-          <p className="font-semibold text-gray-700">Diane L., New Lenox IL</p>
+          <p className="font-semibold text-gray-700">Bill A.</p>
           <div className="flex justify-center mt-2">
             <span style={{ color: "#FFA869" }}>★★★★★</span>
           </div>
@@ -355,27 +355,27 @@ export default function DeepCleaningNewLenoxPage() {
                 <span style={{ color: "#FFA869" }}>★★★★★</span>
               </div>
               <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
-                &ldquo;Booked them on short notice and they came through. Fast, professional, and the results were great.&rdquo;
+                &ldquo;This service is consistently perfect! And, I love the website interface -- it makes everything easy and customizable.&rdquo;
               </p>
-              <p className="text-sm font-semibold text-gray-600">Tim B., New Lenox IL</p>
+              <p className="text-sm font-semibold text-gray-600">Julie G.</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm">
               <div className="flex mb-3">
                 <span style={{ color: "#FFA869" }}>★★★★★</span>
               </div>
               <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
-                &ldquo;My kitchen and bathrooms needed serious work. DSM handled both with no problems. Will book monthly from now on.&rdquo;
+                &ldquo;As always everything was great.&rdquo;
               </p>
-              <p className="text-sm font-semibold text-gray-600">Amanda F., New Lenox IL</p>
+              <p className="text-sm font-semibold text-gray-600">Pati M.</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm">
               <div className="flex mb-3">
                 <span style={{ color: "#FFA869" }}>★★★★★</span>
               </div>
               <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
-                &ldquo;Trustworthy local company. Easy to work with and excellent results.&rdquo;
+                &ldquo;I highly recommend, customer since 2024 🍊🍊🍊&rdquo;
               </p>
-              <p className="text-sm font-semibold text-gray-600">Gary S., New Lenox IL</p>
+              <p className="text-sm font-semibold text-gray-600">Jae M.</p>
             </div>
           </div>
           <div className="text-center">

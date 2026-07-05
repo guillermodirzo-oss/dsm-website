@@ -233,9 +233,9 @@ export default function DeepCleaningBurrRidgePage() {
         <div className="max-w-2xl mx-auto text-center">
           <p style={{ color: "#E8622A" }} className="text-5xl font-serif leading-none mb-3">&ldquo;</p>
           <p className="text-gray-800 text-lg leading-relaxed italic mb-4">
-            DSM did a great job on our Burr Ridge home. Professional, detail-oriented, and easy to work with. The results spoke for themselves.
+            We are very happy with DSM Cleaning Solutions. They do an excellent job and would hire them again
           </p>
-          <p className="font-semibold text-gray-700">Patricia L., Burr Ridge IL</p>
+          <p className="font-semibold text-gray-700">Bill A.</p>
           <div className="flex justify-center mt-2">
             <span style={{ color: "#FFA869" }}>★★★★★</span>
           </div>
@@ -355,27 +355,27 @@ export default function DeepCleaningBurrRidgePage() {
                 <span style={{ color: "#FFA869" }}>★★★★★</span>
               </div>
               <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
-                &ldquo;Excellent deep clean. Every room was spotless and the team was respectful of our home throughout.&rdquo;
+                &ldquo;This service is consistently perfect! And, I love the website interface -- it makes everything easy and customizable.&rdquo;
               </p>
-              <p className="text-sm font-semibold text-gray-600">Thomas R., Burr Ridge IL</p>
+              <p className="text-sm font-semibold text-gray-600">Julie G.</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm">
               <div className="flex mb-3">
                 <span style={{ color: "#FFA869" }}>★★★★★</span>
               </div>
               <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
-                &ldquo;We have used other services before and DSM is the best. Thorough and professional.&rdquo;
+                &ldquo;As always everything was great.&rdquo;
               </p>
-              <p className="text-sm font-semibold text-gray-600">Catherine M., Burr Ridge IL</p>
+              <p className="text-sm font-semibold text-gray-600">Pati M.</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm">
               <div className="flex mb-3">
                 <span style={{ color: "#FFA869" }}>★★★★★</span>
               </div>
               <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
-                &ldquo;Outstanding service. Would not hesitate to recommend DSM to anyone in Burr Ridge.&rdquo;
+                &ldquo;I highly recommend, customer since 2024 🍊🍊🍊&rdquo;
               </p>
-              <p className="text-sm font-semibold text-gray-600">Robert H., Burr Ridge IL</p>
+              <p className="text-sm font-semibold text-gray-600">Jae M.</p>
             </div>
           </div>
           <div className="text-center">

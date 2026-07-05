@@ -233,9 +233,9 @@ export default function DeepCleaningHinsdalePage() {
         <div className="max-w-2xl mx-auto text-center">
           <p style={{ color: "#E8622A" }} className="text-5xl font-serif leading-none mb-3">&ldquo;</p>
           <p className="text-gray-800 text-lg leading-relaxed italic mb-4">
-            We have high standards for our home and DSM met every one of them. Detailed, careful, and professional from start to finish.
+            This service is consistently perfect! And, I love the website interface -- it makes everything easy and customizable.
           </p>
-          <p className="font-semibold text-gray-700">Margaret D., Hinsdale IL</p>
+          <p className="font-semibold text-gray-700">Julie G.</p>
           <div className="flex justify-center mt-2">
             <span style={{ color: "#FFA869" }}>★★★★★</span>
           </div>
@@ -355,27 +355,27 @@ export default function DeepCleaningHinsdalePage() {
                 <span style={{ color: "#FFA869" }}>★★★★★</span>
               </div>
               <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
-                &ldquo;Excellent service. My home looked immaculate after DSM came through. Kitchen and bathrooms were the highlight.&rdquo;
+                &ldquo;We are very happy with DSM Cleaning Solutions. They do an excellent job and would hire them again&rdquo;
               </p>
-              <p className="text-sm font-semibold text-gray-600">Edward K., Hinsdale IL</p>
+              <p className="text-sm font-semibold text-gray-600">Bill A.</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm">
               <div className="flex mb-3">
                 <span style={{ color: "#FFA869" }}>★★★★★</span>
               </div>
               <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
-                &ldquo;Worth every dollar. The team was respectful of our home and did a fantastic job.&rdquo;
+                &ldquo;As always everything was great.&rdquo;
               </p>
-              <p className="text-sm font-semibold text-gray-600">Claire B., Hinsdale IL</p>
+              <p className="text-sm font-semibold text-gray-600">Pati M.</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm">
               <div className="flex mb-3">
                 <span style={{ color: "#FFA869" }}>★★★★★</span>
               </div>
               <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
-                &ldquo;Professional and reliable. Exactly the standard we were looking for.&rdquo;
+                &ldquo;I highly recommend, customer since 2024 🍊🍊🍊&rdquo;
               </p>
-              <p className="text-sm font-semibold text-gray-600">William S., Hinsdale IL</p>
+              <p className="text-sm font-semibold text-gray-600">Jae M.</p>
             </div>
           </div>
           <div className="text-center">

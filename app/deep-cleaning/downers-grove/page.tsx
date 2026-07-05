@@ -233,9 +233,9 @@ export default function DeepCleaningDownersGrovePage() {
         <div className="max-w-2xl mx-auto text-center">
           <p style={{ color: "#E8622A" }} className="text-5xl font-serif leading-none mb-3">&ldquo;</p>
           <p className="text-gray-800 text-lg leading-relaxed italic mb-4">
-            I have a busy schedule and cleaning always falls behind. DSM gave my house a real reset. Every room looked great and I did not have to do a thing.
+            I highly recommend, customer since 2024 🍊🍊🍊
           </p>
-          <p className="font-semibold text-gray-700">Jennifer O., Downers Grove IL</p>
+          <p className="font-semibold text-gray-700">Jae M.</p>
           <div className="flex justify-center mt-2">
             <span style={{ color: "#FFA869" }}>★★★★★</span>
           </div>
@@ -355,27 +355,27 @@ export default function DeepCleaningDownersGrovePage() {
                 <span style={{ color: "#FFA869" }}>★★★★★</span>
               </div>
               <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
-                &ldquo;Solid service. On time, professional, and thorough. My kitchen looked brand new when they were done.&rdquo;
+                &ldquo;We are very happy with DSM Cleaning Solutions. They do an excellent job and would hire them again&rdquo;
               </p>
-              <p className="text-sm font-semibold text-gray-600">Mike A., Downers Grove IL</p>
+              <p className="text-sm font-semibold text-gray-600">Bill A.</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm">
               <div className="flex mb-3">
                 <span style={{ color: "#FFA869" }}>★★★★★</span>
               </div>
               <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
-                &ldquo;Very happy with the results. The team worked hard and paid attention to details I would have missed.&rdquo;
+                &ldquo;I&apos;m so glad DSM Cleaning Services was recommended to us by our realtor! They are fantastic, and their website makes arranging cleanings so easy. I highly recommend them -- I will be using them many more times!&rdquo;
               </p>
-              <p className="text-sm font-semibold text-gray-600">Sarah C., Downers Grove IL</p>
+              <p className="text-sm font-semibold text-gray-600">Julie Gaubatz</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm">
               <div className="flex mb-3">
                 <span style={{ color: "#FFA869" }}>★★★★★</span>
               </div>
               <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
-                &ldquo;Great local cleaning service. Will book again without hesitation.&rdquo;
+                &ldquo;As always everything was great.&rdquo;
               </p>
-              <p className="text-sm font-semibold text-gray-600">Ryan B., Downers Grove IL</p>
+              <p className="text-sm font-semibold text-gray-600">Pati M.</p>
             </div>
           </div>
           <div className="text-center">

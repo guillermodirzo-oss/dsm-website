@@ -260,10 +260,10 @@ export default function DeepCleaningBolingbrookPage() {
             <span className="text-6xl font-serif leading-none absolute top-6 left-8" style={{ color: "#E8622A" }}>&ldquo;</span>
             <blockquote className="pt-8">
               <p className="text-gray-800 text-lg leading-relaxed mb-5 italic">
-                I put off deep cleaning my house for way too long. DSM made it painless. They showed up on time and did not stop until everything was done right.
+                As always everything was great.
               </p>
               <footer>
-                <p className="font-bold text-gray-900">Angela C., Bolingbrook IL <span className="text-amber-400">★★★★★</span></p>
+                <p className="font-bold text-gray-900">Pati M. <span className="text-amber-400">★★★★★</span></p>
                 <p className="text-sm text-gray-400 mt-1">One of our 42 five-star Google reviews</p>
               </footer>
             </blockquote>
@@ -374,20 +374,20 @@ export default function DeepCleaningBolingbrookPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative">
               <span className="text-4xl font-serif leading-none absolute top-4 left-5 text-orange-300">&ldquo;</span>
-              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">Booked them for a move-in clean at my new place in Bolingbrook. The apartment was left dirty by the previous tenant and DSM made it feel brand new.</p>
-              <p className="font-semibold text-gray-900 text-sm">Kevin R., Bolingbrook IL</p>
+              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">We are very happy with DSM Cleaning Solutions. They do an excellent job and would hire them again</p>
+              <p className="font-semibold text-gray-900 text-sm">Bill A.</p>
               <p className="text-amber-400 text-sm">★★★★★</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative">
               <span className="text-4xl font-serif leading-none absolute top-4 left-5 text-orange-300">&ldquo;</span>
-              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">Super professional team. My bathrooms and kitchen looked amazing. I have already recommended them to two neighbors.</p>
-              <p className="font-semibold text-gray-900 text-sm">Lisa M., Bolingbrook IL</p>
+              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">I&apos;m so glad DSM Cleaning Services was recommended to us by our realtor! They are fantastic, and their website makes arranging cleanings so easy. I highly recommend them -- I will be using them many more times!</p>
+              <p className="font-semibold text-gray-900 text-sm">Julie Gaubatz</p>
               <p className="text-amber-400 text-sm">★★★★★</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative">
               <span className="text-4xl font-serif leading-none absolute top-4 left-5 text-orange-300">&ldquo;</span>
-              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">Great local business. Memo is easy to work with and the team does excellent work.</p>
-              <p className="font-semibold text-gray-900 text-sm">Frank D., Bolingbrook IL</p>
+              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">I highly recommend, customer since 2024 🍊🍊🍊</p>
+              <p className="font-semibold text-gray-900 text-sm">Jae M.</p>
               <p className="text-amber-400 text-sm">★★★★★</p>
             </div>
           </div>

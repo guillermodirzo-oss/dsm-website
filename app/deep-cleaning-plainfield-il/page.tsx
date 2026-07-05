@@ -309,10 +309,10 @@ export default function DeepCleaningPlainfieldPage() {
             <span className="text-6xl font-serif leading-none absolute top-6 left-8" style={{ color: "#E8622A" }}>&ldquo;</span>
             <blockquote className="pt-8">
               <p className="text-gray-800 text-lg leading-relaxed mb-5 italic">
-                I was embarrassed by how dirty my house had gotten. DSM came in and I couldn&apos;t believe it. My kitchen alone looked brand new. Worth every penny and I&apos;ve already booked them again.
+                We are very happy with DSM Cleaning Solutions. They do an excellent job and would hire them again
               </p>
               <footer>
-                <p className="font-bold text-gray-900">Maria G., Plainfield IL <span className="text-amber-400">★★★★★</span></p>
+                <p className="font-bold text-gray-900">Bill A. <span className="text-amber-400">★★★★★</span></p>
                 <p className="text-sm text-gray-400 mt-1">One of our 42 five-star Google reviews</p>
               </footer>
             </blockquote>
@@ -461,28 +461,22 @@ export default function DeepCleaningPlainfieldPage() {
 
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative">
               <span className="text-4xl font-serif leading-none absolute top-4 left-5 text-orange-300">&ldquo;</span>
-              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">
-                Scheduled a deep clean before my in-laws visited and DSM absolutely delivered. Every corner was spotless. My mother-in-law asked who cleaned my house. That never happens.
-              </p>
-              <p className="font-semibold text-gray-900 text-sm">Jennifer M., Plainfield IL</p>
+              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">This service is consistently perfect! And, I love the website interface -- it makes everything easy and customizable.</p>
+              <p className="font-semibold text-gray-900 text-sm">Julie G.</p>
               <p className="text-amber-400 text-sm">★★★★★</p>
             </div>
 
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative">
               <span className="text-4xl font-serif leading-none absolute top-4 left-5 text-orange-300">&ldquo;</span>
-              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">
-                They got to things I didn&apos;t even think to ask about. Tops of the door frames, behind the toilet, inside the microwave. Really thorough and the whole team was great to work with.
-              </p>
-              <p className="font-semibold text-gray-900 text-sm">Carlos R., Plainfield IL</p>
+              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">As always everything was great.</p>
+              <p className="font-semibold text-gray-900 text-sm">Pati M.</p>
               <p className="text-amber-400 text-sm">★★★★★</p>
             </div>
 
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative">
               <span className="text-4xl font-serif leading-none absolute top-4 left-5 text-orange-300">&ldquo;</span>
-              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">
-                Best cleaning service in the area. I&apos;ve tried two others and DSM is on a different level. The kitchen and bathrooms looked brand new. Will not be using anyone else.
-              </p>
-              <p className="font-semibold text-gray-900 text-sm">Ashley T., Plainfield IL</p>
+              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">I highly recommend, customer since 2024 🍊🍊🍊</p>
+              <p className="font-semibold text-gray-900 text-sm">Jae M.</p>
               <p className="text-amber-400 text-sm">★★★★★</p>
             </div>
 

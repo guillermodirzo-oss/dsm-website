@@ -260,10 +260,10 @@ export default function DeepCleaningJolietPage() {
             <span className="text-6xl font-serif leading-none absolute top-6 left-8" style={{ color: "#E8622A" }}>&ldquo;</span>
             <blockquote className="pt-8">
               <p className="text-gray-800 text-lg leading-relaxed mb-5 italic">
-                I have three kids and a dog and my house needed serious help. DSM came in and I could not believe how clean everything was. Worth every penny.
+                I highly recommend, customer since 2024 🍊🍊🍊
               </p>
               <footer>
-                <p className="font-bold text-gray-900">Maria V., Joliet IL <span className="text-amber-400">★★★★★</span></p>
+                <p className="font-bold text-gray-900">Jae M. <span className="text-amber-400">★★★★★</span></p>
                 <p className="text-sm text-gray-400 mt-1">One of our 42 five-star Google reviews</p>
               </footer>
             </blockquote>
@@ -374,20 +374,20 @@ export default function DeepCleaningJolietPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative">
               <span className="text-4xl font-serif leading-none absolute top-4 left-5 text-orange-300">&ldquo;</span>
-              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">Very professional and thorough. They cleaned things I did not even think to ask about. Baseboards, door frames, behind the toilet. All of it.</p>
-              <p className="font-semibold text-gray-900 text-sm">Robert S., Joliet IL</p>
+              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">We are very happy with DSM Cleaning Solutions. They do an excellent job and would hire them again</p>
+              <p className="font-semibold text-gray-900 text-sm">Bill A.</p>
               <p className="text-amber-400 text-sm">★★★★★</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative">
               <span className="text-4xl font-serif leading-none absolute top-4 left-5 text-orange-300">&ldquo;</span>
-              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">Great experience from start to finish. Easy to book, showed up on time, and did a fantastic job. Will book again.</p>
-              <p className="font-semibold text-gray-900 text-sm">Tanya B., Joliet IL</p>
+              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">I&apos;m so glad DSM Cleaning Services was recommended to us by our realtor! They are fantastic, and their website makes arranging cleanings so easy. I highly recommend them -- I will be using them many more times!</p>
+              <p className="font-semibold text-gray-900 text-sm">Julie Gaubatz</p>
               <p className="text-amber-400 text-sm">★★★★★</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative">
               <span className="text-4xl font-serif leading-none absolute top-4 left-5 text-orange-300">&ldquo;</span>
-              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">Best cleaning company in the Joliet area. Do not hesitate to book them.</p>
-              <p className="font-semibold text-gray-900 text-sm">Carlos P., Joliet IL</p>
+              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">As always everything was great.</p>
+              <p className="font-semibold text-gray-900 text-sm">Pati M.</p>
               <p className="text-amber-400 text-sm">★★★★★</p>
             </div>
           </div>

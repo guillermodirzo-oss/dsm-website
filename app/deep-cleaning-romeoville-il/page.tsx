@@ -260,10 +260,10 @@ export default function DeepCleaningRomeovillePage() {
             <span className="text-6xl font-serif leading-none absolute top-6 left-8" style={{ color: "#E8622A" }}>&ldquo;</span>
             <blockquote className="pt-8">
               <p className="text-gray-800 text-lg leading-relaxed mb-5 italic">
-                My house was a mess after a long winter and I had no idea where to start. DSM came in and just took care of everything. The bathrooms alone were worth every penny.
+                I&apos;m so glad DSM Cleaning Services was recommended to us by our realtor! They are fantastic, and their website makes arranging cleanings so easy. I highly recommend them -- I will be using them many more times!
               </p>
               <footer>
-                <p className="font-bold text-gray-900">Sandra L., Romeoville IL <span className="text-amber-400">★★★★★</span></p>
+                <p className="font-bold text-gray-900">Julie Gaubatz <span className="text-amber-400">★★★★★</span></p>
                 <p className="text-sm text-gray-400 mt-1">One of our 42 five-star Google reviews</p>
               </footer>
             </blockquote>
@@ -374,20 +374,20 @@ export default function DeepCleaningRomeovillePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative">
               <span className="text-4xl font-serif leading-none absolute top-4 left-5 text-orange-300">&ldquo;</span>
-              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">Booked them for a deep clean before putting my house on the market. Agent said it was one of the cleanest showings she had seen in a while. Highly recommend.</p>
-              <p className="font-semibold text-gray-900 text-sm">David K., Romeoville IL</p>
+              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">We are very happy with DSM Cleaning Solutions. They do an excellent job and would hire them again</p>
+              <p className="font-semibold text-gray-900 text-sm">Bill A.</p>
               <p className="text-amber-400 text-sm">★★★★★</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative">
               <span className="text-4xl font-serif leading-none absolute top-4 left-5 text-orange-300">&ldquo;</span>
-              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">On time, professional, and thorough. They cleaned things I completely forgot about. My kitchen hood vent looked brand new.</p>
-              <p className="font-semibold text-gray-900 text-sm">Rosa M., Romeoville IL</p>
+              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">This service is consistently perfect! And, I love the website interface -- it makes everything easy and customizable.</p>
+              <p className="font-semibold text-gray-900 text-sm">Julie G.</p>
               <p className="text-amber-400 text-sm">★★★★★</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative">
               <span className="text-4xl font-serif leading-none absolute top-4 left-5 text-orange-300">&ldquo;</span>
-              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">Best cleaning service I have used in Romeoville. Will be booking monthly from here on out.</p>
-              <p className="font-semibold text-gray-900 text-sm">James T., Romeoville IL</p>
+              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">As always everything was great.</p>
+              <p className="font-semibold text-gray-900 text-sm">Pati M.</p>
               <p className="text-amber-400 text-sm">★★★★★</p>
             </div>
           </div>

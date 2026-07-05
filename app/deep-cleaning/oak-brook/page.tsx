@@ -233,9 +233,9 @@ export default function DeepCleaningOakBrookPage() {
         <div className="max-w-2xl mx-auto text-center">
           <p style={{ color: "#E8622A" }} className="text-5xl font-serif leading-none mb-3">&ldquo;</p>
           <p className="text-gray-800 text-lg leading-relaxed italic mb-4">
-            DSM did an outstanding job on our Oak Brook home. Every detail was taken care of and the team was professional throughout.
+            As always everything was great.
           </p>
-          <p className="font-semibold text-gray-700">Barbara N., Oak Brook IL</p>
+          <p className="font-semibold text-gray-700">Pati M.</p>
           <div className="flex justify-center mt-2">
             <span style={{ color: "#FFA869" }}>★★★★★</span>
           </div>
@@ -355,27 +355,27 @@ export default function DeepCleaningOakBrookPage() {
                 <span style={{ color: "#FFA869" }}>★★★★★</span>
               </div>
               <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
-                &ldquo;High quality service. They cleaned areas I had never even thought about. Very impressive.&rdquo;
+                &ldquo;We are very happy with DSM Cleaning Solutions. They do an excellent job and would hire them again&rdquo;
               </p>
-              <p className="text-sm font-semibold text-gray-600">Charles F., Oak Brook IL</p>
+              <p className="text-sm font-semibold text-gray-600">Bill A.</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm">
               <div className="flex mb-3">
                 <span style={{ color: "#FFA869" }}>★★★★★</span>
               </div>
               <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
-                &ldquo;Prompt, professional, and the results were excellent. Our home looked better than it has in years.&rdquo;
+                &ldquo;I&apos;m so glad DSM Cleaning Services was recommended to us by our realtor! They are fantastic, and their website makes arranging cleanings so easy. I highly recommend them -- I will be using them many more times!&rdquo;
               </p>
-              <p className="text-sm font-semibold text-gray-600">Nancy W., Oak Brook IL</p>
+              <p className="text-sm font-semibold text-gray-600">Julie Gaubatz</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm">
               <div className="flex mb-3">
                 <span style={{ color: "#FFA869" }}>★★★★★</span>
               </div>
               <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
-                &ldquo;Would recommend to anyone looking for a quality deep clean in the Oak Brook area.&rdquo;
+                &ldquo;I highly recommend, customer since 2024 🍊🍊🍊&rdquo;
               </p>
-              <p className="text-sm font-semibold text-gray-600">George T., Oak Brook IL</p>
+              <p className="text-sm font-semibold text-gray-600">Jae M.</p>
             </div>
           </div>
           <div className="text-center">

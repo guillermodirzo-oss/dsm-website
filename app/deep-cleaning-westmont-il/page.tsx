@@ -260,10 +260,10 @@ export default function DeepCleaningWestmontPage() {
             <span className="text-6xl font-serif leading-none absolute top-6 left-8" style={{ color: "#E8622A" }}>&ldquo;</span>
             <blockquote className="pt-8">
               <p className="text-gray-800 text-lg leading-relaxed mb-5 italic">
-                My house had not had a real deep clean in over a year. DSM came in and took care of every room. The difference was night and day.
+                This service is consistently perfect! And, I love the website interface -- it makes everything easy and customizable.
               </p>
               <footer>
-                <p className="font-bold text-gray-900">Susan T., Westmont IL <span className="text-amber-400">★★★★★</span></p>
+                <p className="font-bold text-gray-900">Julie G. <span className="text-amber-400">★★★★★</span></p>
                 <p className="text-sm text-gray-400 mt-1">One of our 42 five-star Google reviews</p>
               </footer>
             </blockquote>
@@ -374,20 +374,20 @@ export default function DeepCleaningWestmontPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative">
               <span className="text-4xl font-serif leading-none absolute top-4 left-5 text-orange-300">&ldquo;</span>
-              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">Easy to schedule, showed up when they said they would, and did a great job. My kitchen and bathrooms were spotless.</p>
-              <p className="font-semibold text-gray-900 text-sm">Jason M., Westmont IL</p>
+              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">We are very happy with DSM Cleaning Solutions. They do an excellent job and would hire them again</p>
+              <p className="font-semibold text-gray-900 text-sm">Bill A.</p>
               <p className="text-amber-400 text-sm">★★★★★</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative">
               <span className="text-4xl font-serif leading-none absolute top-4 left-5 text-orange-300">&ldquo;</span>
-              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">I have used other cleaning services before and DSM is the best by far. Detail-oriented and professional.</p>
-              <p className="font-semibold text-gray-900 text-sm">Linda P., Westmont IL</p>
+              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">As always everything was great.</p>
+              <p className="font-semibold text-gray-900 text-sm">Pati M.</p>
               <p className="text-amber-400 text-sm">★★★★★</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative">
               <span className="text-4xl font-serif leading-none absolute top-4 left-5 text-orange-300">&ldquo;</span>
-              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">Great local team. My house has never been cleaner.</p>
-              <p className="font-semibold text-gray-900 text-sm">Richard K., Westmont IL</p>
+              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">I highly recommend, customer since 2024 🍊🍊🍊</p>
+              <p className="font-semibold text-gray-900 text-sm">Jae M.</p>
               <p className="text-amber-400 text-sm">★★★★★</p>
             </div>
           </div>
