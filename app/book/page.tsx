@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Book a Cleaning | $75 Off",
   description:
-    "Limited May offer: $75 off your deep cleaning + free oven cleaning ($40 value) in Romeoville, Plainfield, Bolingbrook, Lockport, Shorewood & Crest Hill. 5-star rated. 48-hour guarantee. Book in 2 minutes.",
+    "Book your house cleaning with DSM Cleaning Solutions. Get $75 off plus free oven cleaning this summer. Family-owned, eco-friendly, and fully insured.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/book" },
   openGraph: {
     title: "Book a Cleaning — $75 Off + Free Oven Cleaning | DSM Cleaning Solutions",
     description:
-      "Limited May offer: $75 off your deep cleaning + free oven cleaning in Romeoville, Plainfield, Bolingbrook & surrounding suburbs. 5-star rated. Book in 2 minutes.",
+      "Limited summer offer: $75 off your deep cleaning + free oven cleaning in Romeoville, Plainfield, Bolingbrook & surrounding suburbs. 5-star rated. Book in 2 minutes.",
     url: "https://www.dsmcleaningsolutions.com/book",
     siteName: "DSM Cleaning Solutions",
     images: [
@@ -24,14 +25,14 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Book a Cleaning — $75 Off + Free Oven Cleaning | DSM Cleaning Solutions",
     description:
-      "Limited May offer: $75 off your deep cleaning + free oven cleaning in Romeoville, Plainfield & surrounding suburbs.",
+      "Limited summer offer: $75 off your deep cleaning + free oven cleaning in Romeoville, Plainfield & surrounding suburbs.",
     images: ["/hero-image.png"],
   },
 };
 
 const PHONE = "(815) 246-2113";
 const PHONE_HREF = "tel:+18152462113";
-const COUPON = "SPRING75";
+const COUPON = "SUMMER75";
 const ORANGE = "#E8721C";
 const NAVY = "#1B2B5E";
 
@@ -46,29 +47,25 @@ const valueStack = [
   { item: "Trained, Background-Checked Cleaners", value: "Included" },
   { item: "48-Hour Re-Clean Guarantee", value: "Included" },
   { item: "FREE Oven Deep Clean, Summer Bonus", value: "$40 value" },
-  { item: "May Discount Code: SPRING75", value: "− $75 off" },
+  { item: "Summer Discount Code: SUMMER75", value: "− $75 off" },
 ];
 
 const reviews = [
   {
-    name: "Maria R.",
-    city: "Romeoville, IL",
-    text: "DSM showed up on time, cleaned every corner I forgot existed, and left my house smelling amazing. I booked them again before they even left.",
+    name: "Julie Gaubatz",
+    text: "I'm so glad DSM Cleaning Services was recommended to us by our realtor! They are fantastic, and their website makes arranging cleanings so easy. I highly recommend them -- I will be using them many more times!",
   },
   {
-    name: "Jennifer T.",
-    city: "Plainfield, IL",
-    text: "I was skeptical about letting a cleaning company in, but they were professional, thorough, and so easy to work with. The house looked brand new.",
+    name: "Bill Aros",
+    text: "We are very happy with DSM Cleaning Solutions. They do an excellent job and would hire them again",
   },
   {
-    name: "Robert M.",
-    city: "Bolingbrook, IL",
-    text: "Used DSM for a move-out clean and got my full deposit back. My landlord said it was the best condition he'd ever seen a unit in. Worth every penny.",
+    name: "Julie G",
+    text: "This service is consistently perfect! And, I love the website interface -- it makes everything easy and customizable.",
   },
   {
-    name: "Sarah K.",
-    city: "Lockport, IL",
-    text: "Unbelievable attention to detail. They cleaned things I didn't even think to ask about. The oven looked brand new. Will never use anyone else.",
+    name: "Jae Mac",
+    text: "I highly recommend, customer since 2024 🍊🍊🍊",
   },
 ];
 
@@ -141,7 +138,7 @@ export default function BookPage() {
 
           {/* Trust bar */}
           <div className="flex flex-wrap justify-center gap-3 sm:gap-6 text-sm font-semibold text-gray-600 mb-10">
-            <span>⭐ 5.0 Stars · 47 Reviews</span>
+            <span>⭐ 5.0 Stars · 42 Reviews</span>
             <span>✅ 48-Hour Guarantee</span>
             <span>🔒 Insured &amp; Bonded</span>
             <span>🌿 Eco-Friendly</span>
@@ -156,6 +153,42 @@ export default function BookPage() {
             Claim My $75 Off and Book Now →
           </a>
           <p className="text-gray-400 text-sm">No credit card required to get started · Instant confirmation</p>
+        </div>
+      </section>
+
+      {/* ════════════ PHOTO STRIP — below hero, before offer ════════════ */}
+      <section className="bg-white pb-10 px-4">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="relative h-52 rounded-lg overflow-hidden">
+            <Image
+              src="/Work%20Pictures/double-vanity-bathroom-clean-naperville-il.jpg"
+              alt="Double vanity bathroom after professional deep cleaning in Naperville IL"
+              fill
+              className="object-cover"
+              sizes="(max-width: 640px) 100vw, 33vw"
+              loading="lazy"
+            />
+          </div>
+          <div className="relative h-52 rounded-lg overflow-hidden">
+            <Image
+              src="/Work%20Pictures/bathtub-shower-deep-clean-plainfield-il.jpg"
+              alt="Bathtub and shower scrubbed clean by DSM Cleaning Solutions in Plainfield IL"
+              fill
+              className="object-cover"
+              sizes="(max-width: 640px) 100vw, 33vw"
+              loading="lazy"
+            />
+          </div>
+          <div className="relative h-52 rounded-lg overflow-hidden">
+            <Image
+              src="/Work%20Pictures/living-room-hardwood-floors-plainfield-il.jpg"
+              alt="Living room with hardwood floors cleaned and polished in Plainfield IL"
+              fill
+              className="object-cover"
+              sizes="(max-width: 640px) 100vw, 33vw"
+              loading="lazy"
+            />
+          </div>
         </div>
       </section>
 
@@ -174,7 +207,7 @@ export default function BookPage() {
 
           <div className="rounded-2xl overflow-hidden border" style={{ borderColor: "rgba(147,175,212,0.2)" }}>
             {valueStack.map((row, i) => {
-              const isBonus = row.item.includes("FREE Oven") || row.item.includes("SPRING75");
+              const isBonus = row.item.includes("FREE Oven") || row.item.includes("SUMMER75");
               return (
                 <div
                   key={row.item}
@@ -209,7 +242,7 @@ export default function BookPage() {
             <div className="px-5 py-5 flex items-center justify-between border-t" style={{ borderColor: "rgba(232,114,28,0.3)", backgroundColor: "rgba(232,114,28,0.08)" }}>
               <div>
                 <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "#93afd4" }}>Your Total Value</p>
-                <p className="font-extrabold text-white text-lg">$115+ in savings this May</p>
+                <p className="font-extrabold text-white text-lg">$115+ in savings this summer</p>
               </div>
               <div className="text-right">
                 <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "#93afd4" }}>You Pay From</p>
@@ -256,7 +289,7 @@ export default function BookPage() {
               {
                 step: "1",
                 title: "Book Below in 2 Minutes",
-                desc: "Fill out the quick form, pick your date, apply code SPRING75. That's it. No phone tag, no waiting.",
+                desc: "Fill out the quick form, pick your date, apply code SUMMER75. That's it. No phone tag, no waiting.",
               },
               {
                 step: "2",
@@ -324,7 +357,7 @@ export default function BookPage() {
             <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-2 tracking-tight">
               Your Neighbors Already Love Us
             </h2>
-            <p className="text-gray-500 text-sm">47 five-star reviews · Romeoville, Plainfield, Bolingbrook &amp; surrounding areas</p>
+            <p className="text-gray-500 text-sm">42 five-star reviews · Romeoville, Plainfield, Bolingbrook &amp; surrounding areas</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-8">
@@ -334,10 +367,21 @@ export default function BookPage() {
                 <p className="text-gray-700 text-sm leading-relaxed flex-1">&ldquo;{r.text}&rdquo;</p>
                 <div>
                   <p className="font-bold text-gray-900 text-sm">{r.name}</p>
-                  <p className="text-gray-400 text-xs">{r.city}</p>
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Work photo near reviews */}
+          <div className="relative h-64 rounded-2xl overflow-hidden mb-8">
+            <Image
+              src="/Work%20Pictures/bedroom-cleaning-service-bolingbrook-il.jpg"
+              alt="Bedroom cleaned and organized by DSM Cleaning Solutions in Bolingbrook IL"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 1024px"
+              loading="lazy"
+            />
           </div>
 
           <div className="text-center">
@@ -348,7 +392,7 @@ export default function BookPage() {
               className="text-sm font-semibold hover:underline"
               style={{ color: ORANGE }}
             >
-              Read all 47 reviews on Google →
+              Read all 42 reviews on Google →
             </a>
           </div>
         </div>
@@ -396,7 +440,7 @@ export default function BookPage() {
           </div>
 
           {/* Form header */}
-          <div className="text-center mb-8">
+          <div className="text-center mb-6">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-2 tracking-tight">
               Book Your Cleaning. Takes Less Than 2 Minutes.
             </h2>
@@ -406,6 +450,13 @@ export default function BookPage() {
                 {PHONE}
               </a>
             </p>
+          </div>
+
+          {/* Star rating social proof above the embed */}
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-8 text-sm">
+            <span style={{ color: ORANGE, fontSize: "1.1rem", letterSpacing: "0.05em" }}>★★★★★</span>
+            <span className="font-bold text-gray-900">5.0 · 42 Google Reviews</span>
+            <span className="text-gray-500">· Trusted by homeowners across the southwest suburbs</span>
           </div>
 
           {/* BookingKoala embed — skeleton shown while iframe loads */}
