@@ -111,6 +111,101 @@ export const blogPosts: BlogPost[] = [
 <p>A surface wipe-down won't get the oven interior, the grout, the baseboards, or the ceiling fans. DSM Cleaning Solutions' deep cleaning service in Bolingbrook covers every corner — and every visit is backed by our 48-hour satisfaction guarantee. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> today and schedule your deep clean.</p>`,
   },
   {
+    slug: "house-cleaning-service-naperville-il",
+    title: "House Cleaning Service in Naperville, IL - What to Expect and How to Book",
+    metaTitle: "House Cleaning Service in Naperville IL - What to Expect and How to Book",
+    metaDescription:
+      "Looking for a reliable house cleaning service in Naperville, IL? DSM Cleaning Solutions offers recurring and one-time cleaning with a 48-hour satisfaction guarantee. See what's included.",
+    date: "July 5, 2026",
+    dateISO: "2026-07-05",
+    author: "DSM Cleaning Solutions",
+    excerpt:
+      "Finding a reliable house cleaning service in Naperville, IL doesn't have to be complicated. DSM Cleaning Solutions offers standard recurring cleanings, one-time deep cleans, and move-out cleaning throughout Naperville, backed by a 48-hour satisfaction guarantee on every job.",
+    faqSchema: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What's the difference between a standard cleaning and a deep cleaning in Naperville?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "A standard cleaning is maintenance for a home that's already in good shape. It covers counters, floors, bathrooms, and visible surfaces on a consistent schedule. A deep cleaning goes much further: oven interiors, grout lines, baseboard scrubbing, cabinet interiors, ceiling fans, and every surface that routine visits don't reach. Most clients new to professional cleaning start with a deep clean to establish a clean baseline, then shift to recurring standard cleanings to maintain it.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How often should I schedule recurring house cleaning service?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Most Naperville homeowners choose bi-weekly service. It's frequent enough that the home stays consistently clean, and it's manageable in terms of cost. Larger households with kids or pets sometimes prefer weekly visits. Monthly is a good fit for clients who do some cleaning themselves but want a professional reset on a regular schedule.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do you bring your own cleaning supplies and equipment?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Our team brings everything needed for the job: supplies, equipment, and products. You don't need to have anything on hand. If you have a preference for specific products due to allergies, sensitivities, or a preference for certain brands, let us know when you book and we'll accommodate where we can.",
+          },
+        },
+      ],
+    },
+    content: `<p>Finding a reliable house cleaning service in <a href="/naperville-il" class="text-brand-green font-semibold hover:underline">Naperville, IL</a> means finding a team you can trust to show up on time, clean thoroughly, and respect your home. DSM Cleaning Solutions has been serving Naperville and the surrounding southwest suburbs with professional cleaning services that fit your schedule and your home. Whether you need a one-time deep clean before the holidays, a fresh start after a long winter, or a recurring cleaning service to keep your home consistently clean, here's what to expect when you book with us.</p>
+
+<h2>What Types of Cleaning Does DSM Offer in Naperville?</h2>
+<p>We offer three types of cleaning service for Naperville homeowners:</p>
+<ul>
+  <li><strong>Recurring cleaning:</strong> our most popular service. You choose weekly, bi-weekly, or monthly visits, and our team maintains your home on a consistent schedule. <a href="/recurring-cleaning" class="text-brand-green font-semibold hover:underline">Recurring cleaning</a> is ideal for busy households that want a reliably clean home without the time commitment.</li>
+  <li><strong>Deep cleaning:</strong> a thorough top-to-bottom clean that covers baseboards, cabinet interiors, grout, oven interiors, ceiling fans, and every surface that routine maintenance doesn't reach. A <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> is the right starting point before transitioning to a recurring plan, or as a standalone seasonal reset.</li>
+  <li><strong>Move-out cleaning:</strong> designed for renters and homeowners vacating a property. This includes everything in a deep clean plus interior refrigerator and oven cleaning, making it the right choice for anyone preparing for a landlord walkthrough or final property handoff. See our <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning</a> service for full details.</li>
+</ul>
+<p>If you're not sure which service fits your situation, call us at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> and we'll help you figure out the right option.</p>
+
+<h2>What's Included in a Standard House Cleaning?</h2>
+<p>A standard recurring cleaning covers the surfaces and areas that need regular attention to keep a home looking and feeling clean. Here's what our Naperville team takes care of on every visit:</p>
+<ul>
+  <li><strong>Kitchen:</strong> countertops wiped and sanitized, stovetop cleaned, exterior of appliances wiped down, sink scrubbed and disinfected, cabinet exteriors wiped, floor swept and mopped</li>
+  <li><strong>Bathrooms:</strong> toilet scrubbed inside and out, tub and shower cleaned, sink and faucet scrubbed, mirror wiped streak-free, floor cleaned</li>
+  <li><strong>Bedrooms:</strong> all surfaces dusted, floors vacuumed and mopped, bedding straightened if present</li>
+  <li><strong>Living areas:</strong> furniture dusted, floors vacuumed and mopped, visible surfaces wiped, light switches wiped</li>
+  <li><strong>Throughout the home:</strong> trash emptied and bins wiped, door handles wiped</li>
+</ul>
+<p>A standard cleaning keeps a well-maintained home in excellent shape between deep cleans. If your home hasn't had a professional cleaning in more than a few months, a deep clean first is the better starting point.</p>
+
+<h2>How Does the Booking Process Work?</h2>
+<p>Booking with DSM is straightforward. You can <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> through our website or call us directly at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a>. Either way, we'll ask a few basic questions about your home: square footage, number of bedrooms and bathrooms, what type of cleaning you're looking for, and your preferred schedule. We use that information to give you an accurate quote before anything is confirmed.</p>
+<p>Once you're booked, our team arrives at the scheduled time with their own supplies and equipment. You don't need to provide anything. After each visit, if anything wasn't done to your satisfaction, contact us within 48 hours and we'll come back and fix it at no charge.</p>
+
+<h2>How Much Does House Cleaning Cost in Naperville, IL?</h2>
+<p>Cleaning costs in Naperville depend on the size of your home, the type of cleaning, and how frequently you schedule service. A one-bedroom apartment is priced differently than a 4-bedroom house with three bathrooms. Recurring clients pay less per visit than one-time bookings because the home stays cleaner between appointments and requires less time to maintain.</p>
+<p>We don't list flat rates on the website because a number that's accurate for one home will be wrong for another. The fastest way to get an accurate price is to call us or book online. We'll have a quote for you before you commit to anything.</p>
+
+<h2>Why Naperville Homeowners Choose DSM Cleaning Solutions</h2>
+<ul>
+  <li><strong>Locally owned and operated.</strong> DSM Cleaning Solutions is a family business serving Naperville and the southwest suburbs. We're not a national franchise. Our reputation here matters to us directly.</li>
+  <li><strong>Background-checked and fully insured.</strong> Every cleaner on our team passes a background check before their first appointment. We carry full liability insurance on every job.</li>
+  <li><strong>48-hour satisfaction guarantee.</strong> If anything is missed or falls short of the standard, contact us within 48 hours and we'll come back to fix it at no additional charge.</li>
+  <li><strong>Consistent 5-star reviews.</strong> Our Google reviews come from Naperville homeowners who book repeatedly because the quality is consistent. Read what our clients say before you decide.</li>
+</ul>
+
+<h2>Serving Naperville and Nearby Communities</h2>
+<p>In addition to Naperville, DSM Cleaning Solutions serves the surrounding southwest suburbs including <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield</a>, <a href="/romeoville-il" class="text-brand-green font-semibold hover:underline">Romeoville</a>, <a href="/bolingbrook-il" class="text-brand-green font-semibold hover:underline">Bolingbrook</a>, Joliet, and Lockport. If you're in the Naperville area and looking for reliable local cleaners, there's a good chance we're already cleaning homes on your street.</p>
+
+<h2>Frequently Asked Questions About House Cleaning in Naperville</h2>
+
+<h3>What's the difference between a standard cleaning and a deep cleaning in Naperville?</h3>
+<p>A standard cleaning is maintenance for a home that's already in good shape. It covers counters, floors, bathrooms, and visible surfaces on a consistent schedule. A deep cleaning goes much further: oven interiors, grout lines, baseboard scrubbing, cabinet interiors, ceiling fans, and every surface that routine visits don't reach. Most clients new to professional cleaning start with a deep clean to establish a clean baseline, then shift to recurring standard cleanings to maintain it.</p>
+
+<h3>How often should I schedule recurring house cleaning service?</h3>
+<p>Most Naperville homeowners choose bi-weekly service. It's frequent enough that the home stays consistently clean, and it's manageable in terms of cost. Larger households with kids or pets sometimes prefer weekly visits. Monthly is a good fit for clients who do some cleaning themselves but want a professional reset on a regular schedule. We'll help you figure out the right frequency based on your home and your situation when you call.</p>
+
+<h3>Do you bring your own cleaning supplies and equipment?</h3>
+<p>Yes. Our team brings everything needed for the job: supplies, equipment, and products. You don't need to have anything on hand. If you have a preference for specific products due to allergies, sensitivities, or a preference for certain brands, let us know when you book and we'll accommodate where we can.</p>
+
+<p>Ready to schedule your first cleaning? Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> today and get your Naperville home on a consistent cleaning schedule.</p>`,
+  },
+  {
     slug: "move-out-cleaning-lockport-il",
     title: "Move-Out Cleaning in Lockport, IL - Checklist, Costs and How to Book",
     metaTitle: "Move-Out Cleaning in Lockport IL - Checklist, Costs and How to Book",
