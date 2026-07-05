@@ -152,8 +152,7 @@ export default function DeepCleaningShorewoodPage() {
 
       {/* HERO */}
       <section
-        style={{ background: "linear-gradient(135deg, #1a4731 0%, #2d6a4f 100%)" }}
-        className="text-white py-16 px-4"
+        className="bg-gradient-to-br from-brand-green-dark via-brand-green to-brand-green-light text-white py-16 px-4"
       >
         <div className="max-w-5xl mx-auto">
           <nav className="text-sm mb-4 opacity-80">
@@ -302,7 +301,7 @@ export default function DeepCleaningShorewoodPage() {
                 <ul className="space-y-1">
                   {section.items.map((item) => (
                     <li key={item} className="text-sm text-gray-600 flex items-start gap-2">
-                      <span className="text-green-600 mt-0.5">✓</span>
+                      <span className="text-brand-green mt-0.5">✓</span>
                       <span>{item}</span>
                     </li>
                   ))}
@@ -384,7 +383,7 @@ export default function DeepCleaningShorewoodPage() {
               href="https://g.co/kgs/KFkN2MX"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-green-700 font-semibold hover:underline text-sm"
+              className="text-brand-green font-semibold hover:underline text-sm"
             >
               Read all 42 reviews on Google →
             </a>
@@ -442,19 +441,19 @@ export default function DeepCleaningShorewoodPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/deep-cleaning-joliet-il"
-              className="px-5 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-green-700 hover:text-green-700 transition"
+              className="px-5 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-brand-green hover:text-brand-green transition"
             >
               Deep Cleaning Joliet IL
             </Link>
             <Link
               href="/deep-cleaning-plainfield-il"
-              className="px-5 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-green-700 hover:text-green-700 transition"
+              className="px-5 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-brand-green hover:text-brand-green transition"
             >
               Deep Cleaning Plainfield IL
             </Link>
             <Link
               href="/deep-cleaning-minooka-il"
-              className="px-5 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-green-700 hover:text-green-700 transition"
+              className="px-5 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-brand-green hover:text-brand-green transition"
             >
               Deep Cleaning Minooka IL
             </Link>
