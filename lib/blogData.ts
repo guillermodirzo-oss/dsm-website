@@ -111,6 +111,83 @@ export const blogPosts: BlogPost[] = [
 <p>A surface wipe-down won't get the oven interior, the grout, the baseboards, or the ceiling fans. DSM Cleaning Solutions' deep cleaning service in Bolingbrook covers every corner — and every visit is backed by our 48-hour satisfaction guarantee. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> today and schedule your deep clean.</p>`,
   },
   {
+    slug: "how-to-prepare-for-a-deep-cleaning-service",
+    title: "How to Prepare for a Deep Cleaning Service - What to Do Before the Cleaners Arrive",
+    metaTitle: "How to Prepare for a Deep Cleaning Service - What to Do Before the Cleaners Arrive",
+    metaDescription:
+      "Booking a deep cleaning service? Here's exactly how to prepare your home so the cleaners can focus on the deep work and you get the most out of every minute.",
+    date: "July 6, 2026",
+    dateISO: "2026-07-06",
+    author: "DSM Cleaning Solutions",
+    excerpt:
+      "You hired a cleaning service, so you shouldn't have to clean first. But a few simple things done before the team arrives will make a real difference in what they can accomplish. Here's exactly what to do and what to skip.",
+    faqSchema: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Do I need to clean before the cleaners arrive?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "No. You don't need to pre-clean anything before a deep cleaning appointment. The whole point is that the team handles what you can't or don't want to do yourself. The one thing worth doing is picking up loose clutter off floors and surfaces, because that helps the team get straight to cleaning rather than spending time moving things. Other than that, leave it as is. The team expects to clean a home that needs cleaning, not one that's already been tidied.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Should I be home during the deep cleaning?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "It's up to you. Plenty of clients stay home and some prefer to be out of the way while the team works. Either option is fine. If you're home, you're welcome to go about your normal day. If you're not home, just make sure the team has a way in and that your contact information is reachable. The main advantage of being home is that you can point out specific areas or answer questions on the spot. The main advantage of not being home is that you come back to a finished clean without any of the noise and disruption.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What if I forgot to mention something when I booked?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Just tell the team when they arrive. The walkthrough at the start of the appointment is exactly for this. If you realized there's a bathroom that needs extra attention, a room you forgot to include, or a specific area you'd like them to skip, say it at the start. The team can adjust the plan from there. If you want to reach out before the appointment, you can also call DSM directly at (815) 246-2113 and we'll make a note for the team.",
+          },
+        },
+      ],
+    },
+    content: `<p>The most common question people have before their first <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> appointment: do I need to clean before the cleaners get here? The honest answer is no. You hired a cleaning service because you need the home cleaned. But a few simple things done before the team arrives will make a real difference in what they're able to accomplish. Here's what actually matters and what you can skip.</p>
+
+<h2>Pick Up Clutter Off the Floors and Surfaces</h2>
+<p>This is the one that makes the biggest difference. Cleaners can't vacuum a floor covered in toys, and they can't properly wipe a counter buried under mail and random items. Spending 10 to 15 minutes picking up loose clutter before they arrive means every minute of the appointment goes toward actual cleaning. You don't have to organize anything. Just get items off the floors and clear the main surfaces so there's nothing in the way.</p>
+
+<h2>Put Away Dishes or Load the Dishwasher</h2>
+<p>If the sink is full of dishes when the team arrives, those dishes have to be dealt with before the sink can be properly scrubbed. A deep clean is about getting into the sink itself, not the dishes in it. Clear the sink the night before or the morning of the appointment. Load the dishwasher, stack things to the side, or wash them quickly. It doesn't need to be perfect, just out of the way.</p>
+
+<h2>Let Them Know About Problem Areas</h2>
+<p>If there's a specific area you're worried about, say something. A tub that's been building up mildew. An oven interior that hasn't been touched in a long time. A bathroom that's a bigger job than the rest of the house. Mention it when you book or when the team arrives. That way they know to allocate more time to the areas that need it most and don't spend extra time on areas that are already in good shape. You know your home better than they do going in. That context is useful.</p>
+
+<h2>Secure Pets in Another Room</h2>
+<p>Even friendly pets slow the work down. A dog that follows the team from room to room or a cat that darts under every piece of furniture being moved makes the job take longer and sometimes means certain areas get skipped. If you can put your pets in a bedroom, a crate, or a section of the house that's already been cleaned, it keeps the team moving and your pets comfortable at the same time.</p>
+
+<h2>Make Sure They Can Access Every Room</h2>
+<p>This sounds obvious but it comes up. Unlock any doors to rooms that need cleaning. Move furniture blocking access to baseboards or areas under cabinets that are part of the scope. If you have a specific closet or cabinet you'd like cleaned inside, make sure it's accessible. The team won't go digging through locked rooms or move large pieces of furniture without being asked. A quick walk-through of the home before they arrive to check for anything in the way will save time on the day.</p>
+
+<h2>You Don't Need to Be Home — But Here's What to Know If You're Not</h2>
+<p>Many DSM clients in <a href="/naperville-il" class="text-brand-green font-semibold hover:underline">Naperville</a>, <a href="/romeoville-il" class="text-brand-green font-semibold hover:underline">Romeoville</a>, <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield</a>, and the surrounding area aren't home when the team cleans. That's completely fine. Just make sure there's a clear way for the team to get in, whether that's a key, a lockbox code, or a garage code. Leave your phone number reachable in case a question comes up mid-clean. And if there are areas you specifically want skipped or any special instructions, send those in writing before the appointment so nothing gets missed.</p>
+
+<h2>What to Expect When the Team Arrives</h2>
+<p>When the team shows up, they'll do a quick walkthrough of the home, confirm any specific requests you've mentioned, and then get to work. A deep clean on a typical three-bedroom home takes several hours. Plan for the team to be there the majority of the morning or afternoon depending on the size of the home and what it needs. You don't need to hover or check in on them. The team knows what a deep clean covers and will work through the home room by room. If anything comes up, they'll reach out.</p>
+
+<h2>Frequently Asked Questions About Preparing for a Deep Clean</h2>
+
+<h3>Do I need to clean before the cleaners arrive?</h3>
+<p>No. You don't need to pre-clean anything before a deep cleaning appointment. The whole point is that the team handles what you can't or don't want to do yourself. The one thing worth doing is picking up loose clutter off floors and surfaces, because that helps the team get straight to cleaning rather than spending time moving things. Other than that, leave it as is. The team expects to clean a home that needs cleaning, not one that's already been tidied.</p>
+
+<h3>Should I be home during the deep cleaning?</h3>
+<p>It's up to you. Plenty of clients stay home and some prefer to be out of the way while the team works. Either option is fine. If you're home, you're welcome to go about your normal day. If you're not home, just make sure the team has a way in and that your contact information is reachable. The main advantage of being home is that you can point out specific areas or answer questions on the spot. The main advantage of not being home is that you come back to a finished clean without any of the noise and disruption.</p>
+
+<h3>What if I forgot to mention something when I booked?</h3>
+<p>Just tell the team when they arrive. The walkthrough at the start of the appointment is exactly for this. If you realized there's a bathroom that needs extra attention, a room you forgot to include, or a specific area you'd like them to skip, say it at the start. The team can adjust the plan from there. If you want to reach out before the appointment, you can also call DSM directly at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> and we'll make a note for the team.</p>
+
+<p>The prep is minimal. That's the whole point of hiring someone. If you're ready to get your home properly cleaned, call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a>. Every deep clean is backed by DSM's 48-hour satisfaction guarantee. If anything was missed, we come back and fix it at no charge.</p>`,
+  },
+  {
     slug: "signs-you-need-a-deep-clean-plainfield-il",
     title: "7 Signs Your Plainfield Home Needs a Deep Clean",
     metaTitle: "7 Signs Your Plainfield Home Needs a Deep Clean",
