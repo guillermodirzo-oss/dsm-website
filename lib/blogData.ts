@@ -168,7 +168,7 @@ export const blogPosts: BlogPost[] = [
 <h2>Make Sure They Can Access Every Room</h2>
 <p>This sounds obvious but it comes up. Unlock any doors to rooms that need cleaning. Move furniture blocking access to baseboards or areas under cabinets that are part of the scope. If you have a specific closet or cabinet you'd like cleaned inside, make sure it's accessible. The team won't go digging through locked rooms or move large pieces of furniture without being asked. A quick walk-through of the home before they arrive to check for anything in the way will save time on the day.</p>
 
-<h2>You Don't Need to Be Home — But Here's What to Know If You're Not</h2>
+<h2>Not Going to Be Home? Here's What to Know</h2>
 <p>Many DSM clients in <a href="/naperville-il" class="text-brand-green font-semibold hover:underline">Naperville</a>, <a href="/romeoville-il" class="text-brand-green font-semibold hover:underline">Romeoville</a>, <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield</a>, and the surrounding area aren't home when the team cleans. That's completely fine. Just make sure there's a clear way for the team to get in, whether that's a key, a lockbox code, or a garage code. Leave your phone number reachable in case a question comes up mid-clean. And if there are areas you specifically want skipped or any special instructions, send those in writing before the appointment so nothing gets missed.</p>
 
 <h2>What to Expect When the Team Arrives</h2>
