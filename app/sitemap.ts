@@ -269,6 +269,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/blog/first-time-hiring-cleaning-service-bolingbrook`,
+      lastModified: new Date("2026-07-06"),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/blog/deep-cleaning-service-naperville-checklist`,
       lastModified: new Date("2026-07-06"),
       changeFrequency: "monthly" as const,
