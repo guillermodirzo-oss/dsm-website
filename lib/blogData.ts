@@ -111,6 +111,129 @@ export const blogPosts: BlogPost[] = [
 <p>A surface wipe-down won't get the oven interior, the grout, the baseboards, or the ceiling fans. DSM Cleaning Solutions' deep cleaning service in Bolingbrook covers every corner — and every visit is backed by our 48-hour satisfaction guarantee. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> today and schedule your deep clean.</p>`,
   },
   {
+    slug: "deep-cleaning-service-naperville-checklist",
+    title: "Deep Cleaning Checklist for Naperville Homeowners - What Gets Cleaned and What Doesn't",
+    metaTitle: "Deep Cleaning Checklist for Naperville Homeowners - What Gets Cleaned and What Doesn't",
+    metaDescription:
+      "Wondering exactly what a professional deep cleaning covers in Naperville? Here's the full room-by-room checklist DSM uses — and what's not included so there are no surprises.",
+    date: "July 6, 2026",
+    dateISO: "2026-07-06",
+    author: "DSM Cleaning Solutions",
+    excerpt:
+      "One of the most common questions before booking a deep clean is 'what exactly do you clean?' This post breaks down exactly what DSM covers room by room in Naperville homes, and what's not included so there are no surprises at the door.",
+    faqSchema: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Is the refrigerator interior included in a deep clean?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "No. Cleaning the inside of the refrigerator is not part of a standard deep clean. It's included in DSM's move-out cleaning service, which is designed for homes being vacated. The reasoning is practical: cleaning the refrigerator interior properly takes significant time, and most clients don't need it done on a regular deep clean. If you want it added to a standard deep clean, ask when you book and we can discuss adding it as an extra.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do you clean inside all the cabinets?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, cabinet interiors are included in a standard deep clean. The team wipes down the inside of kitchen cabinets as part of the scope. This does not include reorganizing or going through the contents — it's cleaning the cabinet surfaces themselves. If cabinets are heavily packed, it may affect how thoroughly the interiors can be accessed, so it helps to clear them out ahead of the appointment if possible.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What if I want to add something not on the standard checklist?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Just ask. The best time to mention it is when you book, so the team can plan for the extra time. You can also bring it up during the walkthrough when the team first arrives. Some add-ons take more time than others, so it helps to mention them early rather than at the end of the appointment when the team is wrapping up. DSM is straightforward about what's included and what costs more — no surprises.",
+          },
+        },
+      ],
+    },
+    content: `<p>One of the most common questions before booking a <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> in <a href="/naperville-il" class="text-brand-green font-semibold hover:underline">Naperville</a> is simple: what exactly do you clean? Fair question. This post breaks down exactly what DSM covers room by room, and what's not included, so there are zero surprises when the team shows up.</p>
+
+<h2>Kitchen Deep Cleaning Checklist</h2>
+<p>The kitchen takes the most time in a deep clean because it has the most surfaces that collect grease, residue, and buildup. Here's what the team covers:</p>
+<ul>
+  <li>Oven interior scrubbed with racks removed and cleaned separately</li>
+  <li>Stovetop and burner grates degreased</li>
+  <li>Hood vent cleaned</li>
+  <li>Microwave cleaned inside and out</li>
+  <li>Refrigerator exterior wiped down</li>
+  <li>All cabinet interiors and exteriors wiped down</li>
+  <li>Countertops cleaned and sanitized</li>
+  <li>Sink scrubbed and disinfected</li>
+  <li>Floor swept and mopped</li>
+</ul>
+<p>One thing worth clarifying upfront: the refrigerator interior is not included in a standard deep clean. It's only part of DSM's <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning</a> service, which is designed for homes being fully vacated. If you want the inside of the refrigerator cleaned during a regular deep clean, ask when you book and we'll go over the options.</p>
+
+<h2>Bathroom Deep Cleaning Checklist</h2>
+<p>Bathrooms get a full scrub on a deep clean, not just a surface wipe. Here's what's covered in every bathroom:</p>
+<ul>
+  <li>Toilet scrubbed inside and out, including the base and behind the bowl</li>
+  <li>Tub and shower walls and floor scrubbed</li>
+  <li>Grout lines cleaned</li>
+  <li>Sink and faucet scrubbed</li>
+  <li>Mirror cleaned streak-free</li>
+  <li>Vanity exterior wiped down</li>
+  <li>Floor scrubbed</li>
+</ul>
+<p>Grout is one of the things people notice most after a deep clean. Regular cleaning doesn't get into it, so by the time a deep clean happens the grout lines in the tub and shower are often visibly darker than they should be. The team addresses that specifically as part of the bathroom scope.</p>
+
+<h2>Bedroom Deep Cleaning Checklist</h2>
+<p>Bedrooms get the detail work that routine visits skip:</p>
+<ul>
+  <li>Ceiling fans dusted and wiped</li>
+  <li>Baseboards wiped down by hand</li>
+  <li>Closet interiors wiped</li>
+  <li>All furniture surfaces dusted</li>
+  <li>Window sills and inside glass cleaned</li>
+  <li>Floors vacuumed and mopped</li>
+</ul>
+<p>Ceiling fans and baseboards are the two areas in a bedroom that make the biggest visible difference after a deep clean. Both collect dust steadily and both get skipped in routine cleaning, so by the time a deep clean rolls around there's usually noticeable buildup on both.</p>
+
+<h2>Living Areas Deep Cleaning Checklist</h2>
+<p>Living rooms, dining rooms, and common areas get the same level of attention as the rest of the home:</p>
+<ul>
+  <li>Ceiling fans dusted and wiped</li>
+  <li>Baseboards wiped down</li>
+  <li>Blinds wiped</li>
+  <li>Furniture dusted</li>
+  <li>Floors vacuumed and mopped</li>
+  <li>Light switches and outlet covers wiped</li>
+  <li>Door frames wiped</li>
+</ul>
+
+<h2>What's Not Included in a Standard Deep Clean</h2>
+<p>Being upfront about this matters. Here's what a standard DSM deep clean does not include:</p>
+<ul>
+  <li><strong>Refrigerator interior</strong> — included in move-out cleaning only</li>
+  <li><strong>Exterior windows</strong> — outside window glass is not part of the scope</li>
+  <li><strong>Carpet shampooing or steam cleaning</strong> — vacuuming is included, but deep carpet cleaning is a separate service</li>
+  <li><strong>Wall washing</strong> — spot cleaning of visible marks may happen, but full wall washing is not included</li>
+  <li><strong>Garage cleaning</strong> — not included</li>
+  <li><strong>Laundry</strong> — not included</li>
+</ul>
+<p>If there's something specific you want that isn't on the standard list, ask when you book. The answer might be yes, it might cost extra, or it might fall under a different service. Either way, you'll know before the team arrives.</p>
+
+<h2>How Long Does a Deep Clean Take in Naperville?</h2>
+<p>The honest answer is that it depends on the size of the home and how long it's been since the last thorough clean. A two-bedroom apartment that's been reasonably maintained might take three to four hours. A four-bedroom house that hasn't had a proper deep clean in a year can easily run five to seven hours or more. Homes with heavier buildup take longer because the work takes longer, and the team doesn't cut corners to hit a time target. The job gets done right. DSM gives you a time estimate when you book based on the details of your home so you can plan accordingly.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Is the refrigerator interior included in a deep clean?</h3>
+<p>No. Cleaning the inside of the refrigerator is not part of a standard deep clean. It's included in DSM's move-out cleaning service, which is designed for homes being vacated. The reasoning is practical: cleaning the refrigerator interior properly takes significant time, and most clients don't need it done on a regular deep clean. If you want it added to a standard deep clean, ask when you book and we can discuss adding it as an extra.</p>
+
+<h3>Do you clean inside all the cabinets?</h3>
+<p>Yes, cabinet interiors are included in a standard deep clean. The team wipes down the inside of kitchen cabinets as part of the scope. This does not include reorganizing or going through the contents. It's cleaning the cabinet surfaces themselves. If cabinets are heavily packed, it may affect how thoroughly the interiors can be accessed, so it helps to clear them out ahead of the appointment if that's practical.</p>
+
+<h3>What if I want to add something not on the standard checklist?</h3>
+<p>Just ask. The best time to mention it is when you book, so the team can plan for the extra time. You can also bring it up during the walkthrough when the team first arrives. Some add-ons take more time than others, so it helps to mention them early rather than at the end of the appointment when the team is wrapping up. DSM is straightforward about what's included and what costs more. No surprises.</p>
+
+<p>If you want to see this checklist in action, book a deep clean with DSM. We also serve <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield</a>, <a href="/romeoville-il" class="text-brand-green font-semibold hover:underline">Romeoville</a>, and the surrounding southwest suburbs. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a>. Every deep clean is backed by DSM's 48-hour satisfaction guarantee. If anything was missed, we come back and fix it at no charge.</p>`,
+  },
+  {
     slug: "how-to-prepare-for-a-deep-cleaning-service",
     title: "How to Prepare for a Deep Cleaning Service - What to Do Before the Cleaners Arrive",
     metaTitle: "How to Prepare for a Deep Cleaning Service - What to Do Before the Cleaners Arrive",
