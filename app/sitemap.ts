@@ -269,6 +269,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/blog/signs-you-need-a-deep-clean-plainfield-il`,
+      lastModified: new Date("2026-07-06"),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/blog/deep-clean-vs-regular-cleaning`,
       lastModified: new Date("2026-07-06"),
       changeFrequency: "monthly" as const,
