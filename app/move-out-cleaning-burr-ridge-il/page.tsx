@@ -1,46 +1,46 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
-  title: "Move-Out Cleaning Bolingbrook IL | DSM Cleaning Solutions",
+  title: "Move-Out Cleaning Burr Ridge IL | DSM Cleaning Solutions",
   description:
-    "Move-out cleaning in Bolingbrook, IL built to get your deposit back. DSM Cleaning — 5-star rated, 42 Google reviews, 48-hr guarantee. Free quote.",
-  alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-bolingbrook-il" },
+    "Move-out cleaning in Burr Ridge, IL for home sellers. DSM Cleaning Solutions delivers walkthrough-ready cleans in zip code 60527. Fully insured. Free estimate.",
+  alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-burr-ridge-il" },
   openGraph: {
-    title: "Move-Out Cleaning Bolingbrook IL | DSM Cleaning Solutions",
+    title: "Move-Out Cleaning Burr Ridge IL | DSM Cleaning Solutions",
     description:
-      "Move-out cleaning in Bolingbrook, IL built to get your deposit back. DSM Cleaning — 5-star rated, 42 Google reviews, 48-hr guarantee. Free quote.",
-    url: "https://www.dsmcleaningsolutions.com/move-out-cleaning-bolingbrook-il",
+      "Move-out cleaning in Burr Ridge, IL. Home sellers trust DSM for spotless, walkthrough-ready cleans. Fully insured, 48-hr guarantee.",
+    url: "https://www.dsmcleaningsolutions.com/move-out-cleaning-burr-ridge-il",
   },
   twitter: { card: "summary_large_image", images: ["/hero-image.png"] },
 };
 
 const faqs = [
   {
-    question: "Will your move-out cleaning help me get my deposit back in Bolingbrook?",
+    question: "Can you get my Burr Ridge home walkthrough-ready for the final inspection?",
     answer:
-      "Yes — our Bolingbrook move-out cleaning is specifically designed to meet landlord inspection standards. We clean every surface, inside every appliance, and inside every cabinet so your property looks move-in ready and maximizes your chances of getting your full security deposit back.",
+      "Yes — that's exactly what we're built for. Our Burr Ridge move-out cleaning is designed to meet the standards buyers and their agents look for during final walkthroughs. We clean every surface, inside every appliance, and inside every cabinet so your Burr Ridge home makes the best possible impression and the sale stays on track.",
   },
   {
-    question: "How far in advance should I book move-out cleaning in Bolingbrook?",
+    question: "How far in advance should I book move-out cleaning in Burr Ridge?",
     answer:
-      "We recommend booking at least 3-5 days before your move-out date to secure your preferred time slot. That said, we do our best to accommodate last-minute requests in Bolingbrook — give us a call at (815) 246-2113 and we'll see what we can do.",
+      "We recommend booking at least 3-5 days before your move-out date to secure your preferred time slot in Burr Ridge. That said, we do our best to accommodate last-minute requests — give us a call at (815) 246-2113 and we'll see what we can do.",
   },
   {
-    question: "Do you clean appliances during Bolingbrook move-out cleans?",
+    question: "Do you clean inside appliances during Burr Ridge move-out cleans?",
     answer:
-      "Yes — appliances are a key part of our move-out cleaning. We clean inside and outside the oven, inside and outside the refrigerator, inside the microwave, and the dishwasher interior. These are the areas landlords inspect most closely.",
+      "Yes — appliances are a central part of our move-out cleaning checklist. We clean inside and outside the oven, inside and outside the refrigerator (including all drawers and shelves), inside the microwave, and the dishwasher interior. These are the areas Burr Ridge buyers and property managers inspect most closely.",
   },
   {
-    question: "How long does a move-out clean take in Bolingbrook?",
+    question: "How long does a Burr Ridge move-out clean take?",
     answer:
-      "A move-out clean in Bolingbrook typically takes 4-7 hours for an average-sized home. Larger homes in Stillwater or Lakewood Estates, or properties that haven't been professionally cleaned in a while, may take longer. We'll give you an accurate time estimate when you contact us.",
+      "A move-out clean in Burr Ridge typically takes 5-8 hours given the larger home sizes common in zip code 60527. Properties near Burr Ridge Village Center or County Line Road with multiple bedrooms and bathrooms may require more time. We'll give you an accurate estimate when you contact us.",
   },
   {
-    question: "Do you offer same-day move-out cleaning in Bolingbrook?",
+    question: "Do you serve all of Burr Ridge, IL 60527?",
     answer:
-      "We try our best to accommodate urgent requests in Bolingbrook. Same-day availability depends on our schedule, so call us as early as possible at (815) 246-2113. We understand moving timelines can be tight and we'll do everything we can to help.",
+      "Yes — we serve all of Burr Ridge, including zip code 60527 and all neighborhoods: the Burr Ridge Village Center area and the County Line Road area. We serve Burr Ridge as part of our DuPage County route and work regularly alongside our Hinsdale, Lemont, and Westmont clients.",
   },
 ];
 
@@ -48,7 +48,7 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   serviceType: "Move Out Cleaning",
-  name: "Move-Out Cleaning in Bolingbrook, IL",
+  name: "Move-Out Cleaning in Burr Ridge, IL",
   provider: {
     "@type": "LocalBusiness",
     "@id": "https://www.dsmcleaningsolutions.com/#business",
@@ -64,11 +64,11 @@ const serviceSchema = {
   },
   areaServed: {
     "@type": "City",
-    name: "Bolingbrook",
+    name: "Burr Ridge",
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Move-out cleaning in Bolingbrook, IL built to get your deposit back. DSM Cleaning Solutions serves 60440 & 60490. Landlord-approved, eco-friendly.",
+    "Move-out cleaning in Burr Ridge, IL for home sellers. Walkthrough-ready cleans in zip code 60527. Fully insured. Free estimate.",
 };
 
 const faqSchema = {
@@ -154,7 +154,7 @@ const trustBadges = [
   },
   {
     title: "48-Hr Satisfaction Guarantee",
-    desc: "Not happy? We come back and fix it free.",
+    desc: "Walkthrough-ready, or we come back and re-clean free.",
     icon: (
       <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -173,12 +173,12 @@ const trustBadges = [
 ];
 
 const reviews3 = [
-  { name: "Pati Mangano", text: "As always everything was great." },
+  { name: "Bill Aros", text: "We are very happy with DSM Cleaning Solutions. They do an excellent job and would hire them again." },
   { name: "Julie G.", text: "This service is consistently perfect! And, I love the website interface -- it makes everything easy and customizable." },
-  { name: "Jae Mac", text: "I highly recommend, customer since 2024 🍊🍊🍊" },
+  { name: "Pati Mangano", text: "As always everything was great." },
 ];
 
-export default function MoveOutCleaningBolingbrookPage() {
+export default function MoveOutCleaningBurrRidgePage() {
   return (
     <>
       <script
@@ -200,28 +200,31 @@ export default function MoveOutCleaningBolingbrookPage() {
                 <span>/</span>
                 <Link href="/move-out-cleaning" className="hover:text-white">Move-Out Cleaning</Link>
                 <span>/</span>
-                <span className="text-white">Bolingbrook</span>
+                <span className="text-white">Burr Ridge</span>
               </div>
               <p className="text-sm font-semibold mb-4" style={{ color: "#FFA869" }}>★★★★★ 5.0 · 42 Google Reviews</p>
               <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-4">
-                Move-Out Cleaning in Bolingbrook, IL
+                Move-Out Cleaning in Burr Ridge, IL
               </h1>
-              <p className="text-xl font-semibold text-white/95 mb-4">Get Your Deposit Back. Guaranteed.</p>
+              <p className="text-xl font-semibold text-white/95 mb-4">
+                Spotless for the Final Walkthrough. Every Time.
+              </p>
               <p className="text-lg text-white/85 mb-8 leading-relaxed">
-                DSM Cleaning Solutions delivers a landlord-approved, deposit-back move-out clean for
-                Bolingbrook homes and apartments. We serve all of 60440 and 60490 — from Naperville
-                Acres to Americana Estates — with a comprehensive clean built to pass any inspection.
+                Selling your Burr Ridge home or moving out of a rental? DSM Cleaning Solutions
+                delivers a thorough, buyer-ready clean throughout Burr Ridge (zip code 60527) —
+                including the Burr Ridge Village Center area and County Line Road area. Your home
+                will be walkthrough-ready, or we come back and re-clean at no charge.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="#quote-form" className="btn-white btn-lg">Get a Free Quote</a>
+                <a href="#quote-form" className="btn-white btn-lg">Get My Home Walkthrough-Ready</a>
                 <a href="tel:+18152462113" className="btn-outline-white btn-lg">(815) 246-2113</a>
               </div>
             </div>
             <div className="hidden lg:block">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/Work%20Pictures/apartment-move-out-cleaning-joliet-il.jpg"
-                alt="Move-out cleaning in Bolingbrook IL — DSM Cleaning Solutions"
+                src="/Work%20Pictures/double-vanity-bathroom-clean-naperville-il.jpg"
+                alt="Move-out cleaning in Burr Ridge IL — DSM Cleaning Solutions"
                 className="rounded-2xl shadow-2xl w-full object-cover max-h-96"
               />
             </div>
@@ -255,10 +258,12 @@ export default function MoveOutCleaningBolingbrookPage() {
             <span className="absolute top-6 left-8 text-6xl font-serif leading-none select-none" style={{ color: "#E8622A" }}>&ldquo;</span>
             <div className="pt-8">
               <p className="text-gray-800 text-lg leading-relaxed font-medium">
-                We are very happy with DSM Cleaning Solutions. They do an excellent job and would hire them again.
+                I&rsquo;m so glad DSM Cleaning Services was recommended to us by our realtor! They are fantastic,
+                and their website makes arranging cleanings so easy. I highly recommend them — I will be
+                using them many more times!
               </p>
               <div className="mt-4">
-                <p className="font-bold text-gray-900">Bill Aros</p>
+                <p className="font-bold text-gray-900">Julie Gaubatz</p>
                 <p className="text-sm font-semibold" style={{ color: "#FFA869" }}>★★★★★ Google Review</p>
               </div>
             </div>
@@ -269,25 +274,26 @@ export default function MoveOutCleaningBolingbrookPage() {
       {/* INTRO */}
       <section className="py-14 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading mb-6">Move-Out Cleaning in Bolingbrook, IL — Built to Get Your Deposit Back</h2>
+          <h2 className="section-heading mb-6">Professional Move-Out Cleaning in Burr Ridge, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Move-out cleaning in Bolingbrook, IL is one of DSM Cleaning Solutions&rsquo; most requested
-            services — and for good reason. Bolingbrook renters in Naperville Acres, Americana
-            Estates, Pheasant Chase, and across zip codes 60440 and 60490 trust us to deliver the
-            kind of deep, comprehensive clean that meets even the strictest landlord standards and
-            maximizes the chance of getting their full security deposit back.
+            Burr Ridge is known for its upscale, estate-style homes — properties where buyers
+            have high expectations and buyer&rsquo;s agents leave no corner unchecked during the
+            final walkthrough. Our Burr Ridge move-out cleaning service is built for exactly
+            that standard. We clean at the level Burr Ridge homes require.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Our Bolingbrook move-out cleaning service isn&rsquo;t a surface-level wipe-down. We clean inside
-            every appliance, inside every cabinet, inside every closet — every corner of the empty
-            home that a landlord or property manager is likely to inspect. The goal is simple: leave
-            the property in better condition than when you first moved in.
+            We&rsquo;re a family-owned cleaning company serving all of Burr Ridge (zip code 60527),
+            including the Burr Ridge Village Center area and County Line Road area. Our team
+            follows a detailed, room-by-room checklist that covers every surface a buyer&rsquo;s agent
+            will look at — inside every appliance, inside every cabinet, every grout line, every
+            baseboard. Nothing is skipped.
           </p>
           <p className="text-gray-600 leading-relaxed">
-            We also serve landlords and property managers in Bolingbrook who need reliable turnover
-            cleaning between tenants, and home sellers who want their property looking its absolute
-            best before listing. Whatever your reason for booking, DSM brings the same thorough
-            standard to every move-out job in Bolingbrook.
+            Every job is backed by our 48-hour satisfaction guarantee — walkthrough-ready, or
+            we come back and re-clean at no charge. We serve Burr Ridge alongside nearby{" "}
+            <Link href="/move-out-cleaning-hinsdale-il" className="text-brand-green font-semibold hover:underline">Hinsdale</Link>,{" "}
+            <Link href="/move-out-cleaning-lemont-il" className="text-brand-green font-semibold hover:underline">Lemont</Link>, and{" "}
+            <Link href="/move-out-cleaning-westmont-il" className="text-brand-green font-semibold hover:underline">Westmont</Link>.
           </p>
         </div>
       </section>
@@ -296,9 +302,9 @@ export default function MoveOutCleaningBolingbrookPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="section-heading">What&rsquo;s Included in Our Move-Out Cleaning in Bolingbrook, IL</h2>
+            <h2 className="section-heading">What&rsquo;s Included in Our Move-Out Cleaning in Burr Ridge, IL</h2>
             <p className="section-subheading mx-auto">
-              A comprehensive checklist designed to pass landlord inspection in Bolingbrook.
+              A complete, buyer-ready clean for your Burr Ridge home.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -321,14 +327,13 @@ export default function MoveOutCleaningBolingbrookPage() {
             ))}
           </div>
 
-          {/* Mid-page CTA */}
           <div className="text-center mt-12">
             <a
               href="#quote-form"
               className="inline-flex items-center gap-2 font-bold text-white text-lg px-8 py-4 rounded-full transition-all hover:opacity-90 active:scale-95"
               style={{ backgroundColor: "#E8622A", boxShadow: "0 4px 20px rgba(232,114,28,0.35)" }}
             >
-              Book My Move-Out Clean
+              Get My Home Walkthrough-Ready
             </a>
           </div>
         </div>
@@ -338,14 +343,14 @@ export default function MoveOutCleaningBolingbrookPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="section-heading">Why Bolingbrook Renters Choose DSM Cleaning Solutions</h2>
+            <h2 className="section-heading">Why Burr Ridge Home Sellers Choose DSM Cleaning Solutions</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "Deposit-Back Focused", desc: "Our checklist is built specifically for landlord inspections in Bolingbrook — every appliance, every cabinet, every corner.", icon: "💵" },
-              { title: "48-Hour Re-Clean Promise", desc: "If your landlord finds anything after we leave, we come back and fix it free within 48 hours.", icon: "🔄" },
-              { title: "Fully Insured & Bonded", desc: "Licensed and liability-insured on every job. You and your landlord can book with total confidence.", icon: "🛡️" },
-              { title: "Family-Owned & Local", desc: "Based in nearby Romeoville — your trusted southwest suburbs neighbors. Memo answers his own phone.", icon: "🏠" },
+              { title: "Walkthrough-Ready Results", desc: "Our checklist covers every area buyers inspect — ovens, fridges, grout lines, cabinet interiors, baseboards, mirrors.", icon: "💵" },
+              { title: "48-Hour Re-Clean Promise", desc: "If your buyer&rsquo;s agent flags anything after we leave, we come back and fix it free within 48 hours.", icon: "🔄" },
+              { title: "Fully Insured & Bonded", desc: "Licensed and liability-insured on every job. Your listing agent and buyers can proceed with confidence.", icon: "🛡️" },
+              { title: "Family-Owned & Local", desc: "Serving Burr Ridge and DuPage County from nearby Romeoville. Memo answers his own phone.", icon: "🏠" },
             ].map((card) => (
               <div key={card.title} className="text-center p-6 rounded-xl border border-gray-100 shadow-sm">
                 <span className="text-4xl block mb-3">{card.icon}</span>
@@ -412,21 +417,21 @@ export default function MoveOutCleaningBolingbrookPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">We Also Offer Move-Out Cleaning in Nearby Cities</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Link href="/move-out-cleaning-joliet-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning in Joliet</h3>
-              <p className="text-sm text-gray-600">Serving all Joliet zip codes including 60431 & 60435.</p>
+            <Link href="/move-out-cleaning-hinsdale-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning in Hinsdale</h3>
+              <p className="text-sm text-gray-600">Serving zip code 60521.</p>
             </Link>
-            <Link href="/move-out-cleaning-plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning in Plainfield</h3>
-              <p className="text-sm text-gray-600">Serving zip codes 60544 & 60585.</p>
+            <Link href="/move-out-cleaning-lemont-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning in Lemont</h3>
+              <p className="text-sm text-gray-600">Serving zip code 60439.</p>
             </Link>
-            <Link href="/move-out-cleaning-romeoville-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning in Romeoville</h3>
-              <p className="text-sm text-gray-600">Serving all of Romeoville, IL (60446).</p>
+            <Link href="/move-out-cleaning-westmont-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning in Westmont</h3>
+              <p className="text-sm text-gray-600">Serving zip code 60559.</p>
             </Link>
             <Link href="/move-out-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Our Full Move-Out Cleaning Service</h3>
-              <p className="text-sm text-gray-600">See our complete move-out checklist.</p>
+              <p className="text-sm text-gray-600">See everything included in every move-out clean.</p>
             </Link>
           </div>
         </div>
@@ -437,16 +442,16 @@ export default function MoveOutCleaningBolingbrookPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="text-white">
-              <h2 className="text-4xl font-bold mb-4">Book Your Move-Out Cleaning in Bolingbrook Today</h2>
+              <h2 className="text-4xl font-bold mb-4">Get Your Free Burr Ridge Move-Out Quote</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                Moving out in Bolingbrook, IL? Get your free quote today. We serve all Bolingbrook
-                zip codes — 60440 and 60490 — and back every move-out job with our 48-hour
-                satisfaction guarantee — deposit back or we re-clean at no charge.
+                Get your free move-out cleaning quote for Burr Ridge, IL — we respond within
+                1 business day and back every job with our 48-hour satisfaction guarantee.
+                Walkthrough-ready, or we come back and re-clean at no charge.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
                 (815) 246-2113
               </a>
-              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Deposit-back focused</p>
+              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl p-8 shadow-xl">
               <LeadForm defaultService="Move-In / Move-Out Cleaning" />

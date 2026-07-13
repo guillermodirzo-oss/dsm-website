@@ -6,12 +6,12 @@ import { submitToHubspot } from "@/lib/submitToHubspot";
 
 type Step1 = {
   firstname: string;
+  phone: string;
   email: string;
   service_type: string;
 };
 
 type Step2 = {
-  phone: string;
   bedrooms: string;
   bathrooms: string;
   square_footage: string;
@@ -51,6 +51,7 @@ export default function LeadForm({
   const [step, setStep] = useState(1);
   const [step1, setStep1] = useState<Step1>({
     firstname: "",
+    phone: "",
     email: "",
     service_type: "",
   });
@@ -60,8 +61,8 @@ export default function LeadForm({
       setStep1((prev) => ({ ...prev, service_type: defaultService }));
     }
   }, [defaultService]);
+
   const [step2, setStep2] = useState<Step2>({
-    phone: "",
     bedrooms: "",
     bathrooms: "",
     square_footage: "",
@@ -79,12 +80,13 @@ export default function LeadForm({
 
   function handleNext(e: React.FormEvent) {
     e.preventDefault();
-    // Fire Step 1 data immediately — HubSpot can create the contact even if they abandon Step 2
     submitToHubspot({
       firstname: step1.firstname,
+      phone: step1.phone,
+      mobilephone: step1.phone,
       email: step1.email,
       service_type: step1.service_type,
-    }).catch(() => {}); // fire-and-forget, never block the UI
+    }).catch(() => {});
     setStep(2);
   }
 
@@ -96,8 +98,8 @@ export default function LeadForm({
       await submitToHubspot({
         firstname: step1.firstname,
         email: step1.email,
-        phone: step2.phone,
-        mobilephone: step2.phone,
+        phone: step1.phone,
+        mobilephone: step1.phone,
         service_type: step1.service_type,
         bedrooms: step2.bedrooms,
         bathrooms: step2.bathrooms,
@@ -150,6 +152,20 @@ export default function LeadForm({
               />
             </div>
             <div>
+              <label htmlFor="lf-phone" className={labelClass}>Phone Number</label>
+              <input
+                id="lf-phone"
+                name="phone"
+                type="tel"
+                required
+                autoComplete="tel"
+                placeholder="(815) 000-0000"
+                value={step1.phone}
+                onChange={handleStep1Change}
+                className={inputClass}
+              />
+            </div>
+            <div>
               <label htmlFor="lf-email" className={labelClass}>Email Address</label>
               <input
                 id="lf-email"
@@ -181,9 +197,11 @@ export default function LeadForm({
             </div>
           </div>
 
+          <p className="mt-3 text-xs text-gray-400 text-center">Step 2 just asks about your home - takes 30 seconds</p>
+
           <button
             type="submit"
-            className="mt-6 w-full font-bold text-white rounded-full py-3.5 px-6 text-base transition-all duration-200 hover:opacity-90 active:scale-95"
+            className="mt-4 w-full font-bold text-white rounded-full py-3.5 px-6 text-base transition-all duration-200 hover:opacity-90 active:scale-95"
             style={{ backgroundColor: "#E8721C", boxShadow: "0 4px 15px rgba(232,114,28,0.35)" }}
           >
             Next →
@@ -192,20 +210,6 @@ export default function LeadForm({
       ) : (
         <form onSubmit={handleSubmit} noValidate>
           <div className="space-y-4">
-            <div>
-              <label htmlFor="lf-phone" className={labelClass}>Phone Number</label>
-              <input
-                id="lf-phone"
-                name="phone"
-                type="tel"
-                required
-                autoComplete="tel"
-                placeholder="(815) 000-0000"
-                value={step2.phone}
-                onChange={handleStep2Change}
-                className={inputClass}
-              />
-            </div>
             <div>
               <label htmlFor="lf-bedrooms" className={labelClass}>Bedrooms</label>
               <select
@@ -269,7 +273,7 @@ export default function LeadForm({
               onClick={() => setStep(1)}
               className="flex-shrink-0 font-semibold text-gray-600 rounded-full py-3.5 px-5 text-sm border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all duration-200"
             >
-              ← Back
+              Back
             </button>
             <button
               type="submit"

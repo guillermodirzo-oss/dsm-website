@@ -3,27 +3,24 @@ import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
-  title: "Move Out Cleaning Services Lockport IL",
+  title: "Move-Out Cleaning Lockport IL | DSM Cleaning Solutions",
   description:
-    "Move-out cleaning in Lockport, IL. DSM Cleaning Solutions helps you get your deposit back. Fully insured. Free estimate.",
+    "Move-out cleaning in Lockport, IL. DSM Cleaning Solutions helps you get your deposit back. Fully insured, 48-hr guarantee. Free estimate.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-lockport-il" },
   openGraph: {
-    title: "Move Out Cleaning Services Lockport IL",
+    title: "Move-Out Cleaning Lockport IL | DSM Cleaning Solutions",
     description:
-      "Move-out cleaning in Lockport, IL. DSM Cleaning Solutions helps you get your deposit back. Fully insured. Free estimate.",
+      "Move-out cleaning in Lockport, IL. DSM Cleaning Solutions helps you get your deposit back. Fully insured, 48-hr guarantee. Free estimate.",
     url: "https://www.dsmcleaningsolutions.com/move-out-cleaning-lockport-il",
   },
-  twitter: {
-    card: "summary_large_image",
-    images: ["/hero-image.png"],
-  },
+  twitter: { card: "summary_large_image", images: ["/hero-image.png"] },
 };
 
 const faqs = [
   {
     question: "Can you help me get my security deposit back in Lockport?",
     answer:
-      "Yes - our Lockport move-out cleaning is specifically designed to meet landlord inspection standards. We clean every surface, inside every appliance, and inside every cabinet so your property looks move-in ready and you have the best possible chance of getting your full security deposit back.",
+      "Yes — our Lockport move-out cleaning is specifically designed to meet landlord inspection standards. We clean every surface, inside every appliance, and inside every cabinet so your property looks move-in ready and you have the best possible chance of getting your full security deposit back.",
   },
   {
     question: "How far in advance should I book move-out cleaning in Lockport?",
@@ -33,7 +30,7 @@ const faqs = [
   {
     question: "Do you clean inside appliances during Lockport move-out cleans?",
     answer:
-      "Yes - appliances are a core part of our move-out service. We clean inside and outside the oven (including oven racks), inside and outside the refrigerator, inside the microwave, and the dishwasher interior. These are the areas most likely to be flagged during a landlord inspection.",
+      "Yes — appliances are a core part of our move-out service. We clean inside and outside the oven (including oven racks), inside and outside the refrigerator, inside the microwave, and the dishwasher interior. These are the areas most likely to be flagged during a landlord inspection.",
   },
   {
     question: "How long does a Lockport move-out clean take?",
@@ -43,7 +40,7 @@ const faqs = [
   {
     question: "Do you serve all zip codes in Lockport IL 60441?",
     answer:
-      "Yes - we serve all of Lockport, IL under zip code 60441, including Lockport Estates, Heritage Woods, Milne Grove, Downtown Lockport, Dellwood Park, and all surrounding areas. If you're in Lockport, we come to you.",
+      "Yes — we serve all of Lockport, IL under zip code 60441, including Lockport Estates, Heritage Woods, Milne Grove, Downtown Lockport, Dellwood Park, and all surrounding areas. If you're in Lockport, we come to you.",
   },
 ];
 
@@ -116,7 +113,7 @@ const checklist = [
     items: [
       "Clean inside all closets",
       "Wipe all baseboards and door frames",
-      "Clean window sills/tracks/glass",
+      "Clean window sills and inside glass",
       "Wipe all light switches and outlet covers",
       "Clean ceiling fans",
       "Vacuum all carpets",
@@ -136,13 +133,49 @@ const checklist = [
   },
 ];
 
-const trustCards = [
-  { icon: "", title: "Deposit-Back Focused", desc: "Designed to meet landlord inspection standards in Lockport, IL." },
-  { icon: "", title: "Fully Insured & Bonded", desc: "Background-checked team. Every Lockport job fully covered." },
-  { icon: "", title: "48-Hour Guarantee", desc: "If your landlord isn't satisfied, we re-clean at no charge." },
-  { icon: "", title: "Family Owned", desc: "Based in nearby Romeoville - your trusted southwest suburbs neighbors." },
-  { icon: "", title: "Flexible Scheduling", desc: "Book around your move-out timeline in Lockport." },
-  { icon: "", title: "Serving Lockport", desc: "All neighborhoods throughout zip code 60441." },
+const trustBadges = [
+  {
+    title: "Fully Insured & Bonded",
+    desc: "Licensed and liability-insured on every job.",
+    icon: (
+      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Background-Checked Team",
+    desc: "Every cleaner verified before entering your home.",
+    icon: (
+      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+      </svg>
+    ),
+  },
+  {
+    title: "48-Hr Satisfaction Guarantee",
+    desc: "Not happy? We come back and fix it free.",
+    icon: (
+      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Family-Owned & Local",
+    desc: "Memo answers his own phone. We live here too.",
+    icon: (
+      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+      </svg>
+    ),
+  },
+];
+
+const reviews3 = [
+  { name: "Pati Mangano", text: "As always everything was great." },
+  { name: "Julie G.", text: "This service is consistently perfect! And, I love the website interface -- it makes everything easy and customizable." },
+  { name: "Jae Mac", text: "I highly recommend, customer since 2024 🍊🍊🍊" },
 ];
 
 export default function MoveOutCleaningLockportPage() {
@@ -158,57 +191,95 @@ export default function MoveOutCleaningLockportPage() {
       />
 
       {/* HERO */}
-      <section className="bg-gradient-to-br from-brand-green-dark via-brand-green to-brand-green-light text-white py-16 md:py-20">
+      <section className="bg-gradient-to-br from-brand-green-dark via-brand-green to-brand-green-light text-white pt-12 pb-10 md:pt-16 md:pb-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-2 text-sm text-white/70 mb-4">
-              <Link href="/" className="hover:text-white">Home</Link>
-              <span>/</span>
-              <Link href="/move-out-cleaning" className="hover:text-white">Move-Out Cleaning</Link>
-              <span>/</span>
-              <span className="text-white">Lockport</span>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div>
+              <div className="flex items-center gap-2 text-sm text-white/70 mb-4">
+                <Link href="/" className="hover:text-white">Home</Link>
+                <span>/</span>
+                <Link href="/move-out-cleaning" className="hover:text-white">Move-Out Cleaning</Link>
+                <span>/</span>
+                <span className="text-white">Lockport</span>
+              </div>
+              <p className="text-sm font-semibold mb-4" style={{ color: "#FFA869" }}>★★★★★ 5.0 · 42 Google Reviews</p>
+              <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-4">
+                Move-Out Cleaning in Lockport, IL
+              </h1>
+              <p className="text-xl font-semibold text-white/95 mb-4">Get Your Deposit Back. Guaranteed.</p>
+              <p className="text-lg text-white/85 mb-8 leading-relaxed">
+                DSM Cleaning Solutions delivers a landlord-approved, deposit-back move-out clean for
+                Lockport homes and apartments throughout zip code 60441 — from Lockport Estates to
+                Dellwood Park — with a comprehensive clean built to pass any inspection.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a href="#quote-form" className="btn-white btn-lg">Get a Free Quote</a>
+                <a href="tel:+18152462113" className="btn-outline-white btn-lg">(815) 246-2113</a>
+              </div>
             </div>
-            <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-6">
-              Move-Out Cleaning in Lockport, IL
-            </h1>
-            <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              DSM Cleaning Solutions delivers a landlord-approved, deposit-back move-out clean for
-              Lockport homes and apartments throughout zip code 60441 - from Lockport Estates to
-              Dellwood Park - with a comprehensive clean built to pass any inspection.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
-              <a href="tel:+18152462113" className="btn-outline-white btn-lg"> (815) 246-2113</a>
+            <div className="hidden lg:block">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/Work%20Pictures/apartment-move-out-cleaning-joliet-il.jpg"
+                alt="Move-out cleaning in Lockport IL — DSM Cleaning Solutions"
+                className="rounded-2xl shadow-2xl w-full object-cover max-h-96"
+              />
             </div>
           </div>
         </div>
       </section>
 
       {/* TRUST BAR */}
-      <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
+      <section className="bg-white border-b border-gray-100 py-10 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["Fully Insured & Bonded", "Eco-Friendly Products", "Family Owned", "5-Star Rated", "Satisfaction Guaranteed"].map(
-              (item) => <span key={item} className="whitespace-nowrap">{item}</span>
-            )}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            {trustBadges.map((badge) => (
+              <div key={badge.title} className="flex flex-col items-center text-center gap-3 p-4">
+                <div className="w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "#E8622A" }}>
+                  {badge.icon}
+                </div>
+                <div>
+                  <p className="font-bold text-gray-900 text-sm">{badge.title}</p>
+                  <p className="text-xs text-gray-500 mt-1">{badge.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ANCHOR REVIEW */}
+      <section className="py-10 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="rounded-2xl p-8 md:p-10 relative" style={{ backgroundColor: "#FFF4EE" }}>
+            <span className="absolute top-6 left-8 text-6xl font-serif leading-none select-none" style={{ color: "#E8622A" }}>&ldquo;</span>
+            <div className="pt-8">
+              <p className="text-gray-800 text-lg leading-relaxed font-medium">
+                We are very happy with DSM Cleaning Solutions. They do an excellent job and would hire them again.
+              </p>
+              <div className="mt-4">
+                <p className="font-bold text-gray-900">Bill Aros</p>
+                <p className="text-sm font-semibold" style={{ color: "#FFA869" }}>★★★★★ Google Review</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* INTRO */}
-      <section className="py-16 bg-white">
+      <section className="py-14 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading mb-6">Move-Out Cleaning in Lockport, IL - Built to Get Your Deposit Back</h2>
+          <h2 className="section-heading mb-6">Move-Out Cleaning in Lockport, IL — Built to Get Your Deposit Back</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Move-out cleaning in Lockport, IL is one of DSM Cleaning Solutions&apos; most requested
+            Move-out cleaning in Lockport, IL is one of DSM Cleaning Solutions&rsquo; most requested
             services in Will County. Lockport renters in Lockport Estates, Heritage Woods, Milne
             Grove, and across zip code 60441 trust us to deliver the kind of deep, comprehensive
             clean that meets even the strictest landlord standards and gives them the best possible
             chance of getting their full security deposit returned.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Our Lockport move-out cleaning isn&apos;t a surface-level wipe-down. We clean inside every
-            appliance, inside every cabinet, inside every closet - every corner that a landlord
+            Our Lockport move-out cleaning isn&rsquo;t a surface-level wipe-down. We clean inside every
+            appliance, inside every cabinet, inside every closet — every corner that a landlord
             or property manager is likely to inspect. The goal is simple: leave the property in
             better condition than when you first moved in. DSM is based in nearby Romeoville, so
             we can respond quickly and work around your move-out schedule without issue.
@@ -222,11 +293,11 @@ export default function MoveOutCleaningLockportPage() {
         </div>
       </section>
 
-      {/* WHAT'S INCLUDED */}
+      {/* CHECKLIST */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="section-heading">What&apos;s Included in Our Move-Out Cleaning in Lockport, IL</h2>
+            <h2 className="section-heading">What&rsquo;s Included in Our Move-Out Cleaning in Lockport, IL</h2>
             <p className="section-subheading mx-auto">
               A comprehensive checklist designed to pass landlord inspection in Lockport.
             </p>
@@ -250,6 +321,16 @@ export default function MoveOutCleaningLockportPage() {
               </div>
             ))}
           </div>
+
+          <div className="text-center mt-12">
+            <a
+              href="#quote-form"
+              className="inline-flex items-center gap-2 font-bold text-white text-lg px-8 py-4 rounded-full transition-all hover:opacity-90 active:scale-95"
+              style={{ backgroundColor: "#E8622A", boxShadow: "0 4px 20px rgba(232,114,28,0.35)" }}
+            >
+              Book My Move-Out Clean
+            </a>
+          </div>
         </div>
       </section>
 
@@ -259,9 +340,14 @@ export default function MoveOutCleaningLockportPage() {
           <div className="text-center mb-12">
             <h2 className="section-heading">Why Lockport Residents Choose DSM Cleaning Solutions</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {trustCards.map((card) => (
-              <div key={card.title} className="text-center p-6 rounded-xl bg-brand-green-50 border border-brand-green-100">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { title: "Deposit-Back Focused", desc: "Our checklist is built specifically for landlord inspections in Lockport — every appliance, every cabinet, every corner.", icon: "💵" },
+              { title: "48-Hour Re-Clean Promise", desc: "If your landlord finds anything after we leave, we come back and fix it free within 48 hours.", icon: "🔄" },
+              { title: "Fully Insured & Bonded", desc: "Licensed and liability-insured on every job. You and your landlord can book with total confidence.", icon: "🛡️" },
+              { title: "Family-Owned & Local", desc: "Based in nearby Romeoville — your trusted southwest suburbs neighbors. Memo answers his own phone.", icon: "🏠" },
+            ].map((card) => (
+              <div key={card.title} className="text-center p-6 rounded-xl border border-gray-100 shadow-sm">
                 <span className="text-4xl block mb-3">{card.icon}</span>
                 <h3 className="font-bold text-lg text-gray-900 mb-2">{card.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{card.desc}</p>
@@ -271,22 +357,29 @@ export default function MoveOutCleaningLockportPage() {
         </div>
       </section>
 
-      {/* PRICING */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading mb-6">How Much Does Move-Out Cleaning Cost in Lockport, IL?</h2>
-          <p className="text-gray-600 mb-4 leading-relaxed">
-            Move-out cleaning in Lockport starts around $150-$250 for most homes, depending on size,
-            number of bathrooms, and current condition. Larger homes in Lockport Estates or Heritage
-            Woods with multiple bathrooms and full appliance cleaning may be priced higher. We
-            recommend booking at least 3-5 days before your move-out date to secure your preferred
-            slot.
-          </p>
-          <p className="text-gray-600 mb-8 leading-relaxed">
-            Every Lockport client receives a free, no-obligation estimate before booking. We&apos;re
-            transparent about our pricing - no surprises, no hidden add-ons after the job.
-          </p>
-          <Link href="/contact" className="btn-primary">Get My Free Lockport Quote</Link>
+      {/* 3-REVIEW BLOCK */}
+      <section className="py-14 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            {reviews3.map((r) => (
+              <div key={r.name} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative">
+                <p className="text-sm font-semibold" style={{ color: "#FFA869" }}>★★★★★</p>
+                <p className="text-gray-700 text-sm leading-relaxed mt-3">{r.text}</p>
+                <p className="mt-4 font-semibold text-gray-900 text-sm">{r.name}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center">
+            <a
+              href="https://www.google.com/search?q=DSM+Cleaning+Solutions+Romeoville+IL+Reviews"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-semibold underline"
+              style={{ color: "#E8622A" }}
+            >
+              Read all 42 reviews on Google
+            </a>
+          </div>
         </div>
       </section>
 
@@ -339,24 +432,24 @@ export default function MoveOutCleaningLockportPage() {
         </div>
       </section>
 
-      {/* CONTACT CTA */}
-      <section id="contact" className="py-16 bg-gradient-to-br from-orange-500 to-orange-600">
+      {/* QUOTE FORM CTA */}
+      <section id="quote-form" className="py-16 bg-gradient-to-br from-orange-500 to-orange-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="text-white">
               <h2 className="text-4xl font-bold mb-4">Book Your Move-Out Cleaning in Lockport Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Moving out in Lockport, IL? Get your free quote today. We serve all of 60441 and
-                back every move-out job with our satisfaction guarantee - your deposit back or
+                back every move-out job with our satisfaction guarantee — your deposit back or
                 we re-clean at no charge.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                 (815) 246-2113
+                (815) 246-2113
               </a>
               <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Deposit-back focused</p>
             </div>
-            <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
-              <LeadForm />
+            <div className="bg-white rounded-2xl p-8 shadow-xl">
+              <LeadForm defaultService="Move-In / Move-Out Cleaning" />
             </div>
           </div>
         </div>

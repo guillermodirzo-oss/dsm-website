@@ -3,20 +3,17 @@ import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
-  title: "Move-Out Cleaning Romeoville IL | 5-Star Rated",
+  title: "Move-Out Cleaning Romeoville IL | 5-Star Rated | DSM Cleaning",
   description:
-    "Trusted move-out cleaning in Romeoville by DSM Cleaning Solutions. 5-star rated, 47 reviews, 48-hr guarantee. Eco-friendly, fully insured. Free quote.",
+    "Trusted move-out cleaning in Romeoville by DSM Cleaning Solutions. 5-star rated, 42 reviews, 48-hr guarantee. Eco-friendly, fully insured. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-romeoville-il" },
   openGraph: {
     title: "Move-Out Cleaning Romeoville IL | 5-Star Rated | DSM Cleaning",
     description:
-      "Trusted move-out cleaning in Romeoville by DSM Cleaning Solutions. 5-star rated, 47 reviews, 48-hr guarantee. Eco-friendly, fully insured. Free quote.",
+      "Trusted move-out cleaning in Romeoville by DSM Cleaning Solutions. 5-star rated, 42 reviews, 48-hr guarantee. Eco-friendly, fully insured. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/move-out-cleaning-romeoville-il",
   },
-  twitter: {
-    card: "summary_large_image",
-    images: ["/hero-image.png"],
-  },
+  twitter: { card: "summary_large_image", images: ["/hero-image.png"] },
 };
 
 const faqs = [
@@ -28,7 +25,7 @@ const faqs = [
   {
     question: "Do you clean empty apartments and rental homes in Romeoville?",
     answer:
-      "Yes - we specialize in cleaning empty properties for both outgoing tenants and incoming renters throughout Romeoville (zip code 60446), including all neighborhoods like Windstone, Hidden Lakes, and Grand Haven.",
+      "Yes — we specialize in cleaning empty properties for both outgoing tenants and incoming renters throughout Romeoville (zip code 60446), including all neighborhoods like Windstone, Hidden Lakes, and Grand Haven.",
   },
   {
     question: "How much does move-out cleaning cost in Romeoville, IL?",
@@ -38,12 +35,12 @@ const faqs = [
   {
     question: "Will your Romeoville move-out cleaning help me get my deposit back?",
     answer:
-      "That&apos;s our goal. Our move-out cleaning checklist is designed specifically to meet Romeoville landlord standards - including cleaning inside all appliances, cabinets, closets, grout lines, and every area a property manager is likely to inspect.",
+      "That's our goal. Our move-out cleaning checklist is designed specifically to meet Romeoville landlord standards — including cleaning inside all appliances, cabinets, closets, grout lines, and every area a property manager is likely to inspect.",
   },
   {
     question: "Is DSM Cleaning Solutions locally based in Romeoville for move-out cleaning?",
     answer:
-      "Yes - DSM Cleaning Solutions is headquartered right here in Romeoville. We know the local rental market, understand local landlord expectations, and take pride in delivering results that help Romeoville tenants get their deposits back.",
+      "Yes — DSM Cleaning Solutions is headquartered right here in Romeoville. We know the local rental market, understand local landlord expectations, and take pride in delivering results that help Romeoville tenants get their deposits back.",
   },
 ];
 
@@ -71,7 +68,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Move-out & move-in cleaning in Romeoville, IL (60446). DSM Cleaning Solutions - locally owned, deposit-back guarantee, eco-friendly products.",
+    "Move-out & move-in cleaning in Romeoville, IL (60446). DSM Cleaning Solutions — locally owned, deposit-back guarantee, eco-friendly products.",
 };
 
 const faqSchema = {
@@ -116,7 +113,7 @@ const checklist = [
     items: [
       "Clean inside all closets",
       "Wipe all baseboards and door frames",
-      "Clean window sills/tracks/glass",
+      "Clean window sills and inside glass",
       "Wipe all light switches and outlet covers",
       "Clean ceiling fans",
       "Vacuum all carpets",
@@ -136,13 +133,49 @@ const checklist = [
   },
 ];
 
-const trustCards = [
-  { icon: "", title: "Deposit-Back Focused", desc: "Our checklist is built to pass Romeoville landlord inspections." },
-  { icon: "", title: "Fully Insured & Bonded", desc: "Background-checked team. Every Romeoville job fully covered." },
-  { icon: "", title: "48-Hour Guarantee", desc: "We re-clean at no charge if anything doesn&apos;t pass inspection." },
-  { icon: "", title: "Family Owned", desc: "Romeoville-based - we know this community and its standards." },
-  { icon: "", title: "Flexible Scheduling", desc: "We work around your move-out timeline, including weekends." },
-  { icon: "", title: "Serving Romeoville", desc: "All neighborhoods in zip code 60446." },
+const trustBadges = [
+  {
+    title: "Fully Insured & Bonded",
+    desc: "Licensed and liability-insured on every job.",
+    icon: (
+      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Background-Checked Team",
+    desc: "Every cleaner verified before entering your home.",
+    icon: (
+      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+      </svg>
+    ),
+  },
+  {
+    title: "48-Hr Satisfaction Guarantee",
+    desc: "Not happy? We come back and fix it free.",
+    icon: (
+      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Family-Owned & Local",
+    desc: "Memo answers his own phone. We live here too.",
+    icon: (
+      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+      </svg>
+    ),
+  },
+];
+
+const reviews3 = [
+  { name: "Pati Mangano", text: "As always everything was great." },
+  { name: "Julie G.", text: "This service is consistently perfect! And, I love the website interface -- it makes everything easy and customizable." },
+  { name: "Jae Mac", text: "I highly recommend, customer since 2024 🍊🍊🍊" },
 ];
 
 export default function MoveOutCleaningRomeovillePage() {
@@ -158,58 +191,96 @@ export default function MoveOutCleaningRomeovillePage() {
       />
 
       {/* HERO */}
-      <section className="bg-gradient-to-br from-brand-green-dark via-brand-green to-brand-green-light text-white py-16 md:py-20">
+      <section className="bg-gradient-to-br from-brand-green-dark via-brand-green to-brand-green-light text-white pt-12 pb-10 md:pt-16 md:pb-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-2 text-sm text-white/70 mb-4">
-              <Link href="/" className="hover:text-white">Home</Link>
-              <span>/</span>
-              <Link href="/move-out-cleaning" className="hover:text-white">Move-Out Cleaning</Link>
-              <span>/</span>
-              <span className="text-white">Romeoville</span>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div>
+              <div className="flex items-center gap-2 text-sm text-white/70 mb-4">
+                <Link href="/" className="hover:text-white">Home</Link>
+                <span>/</span>
+                <Link href="/move-out-cleaning" className="hover:text-white">Move-Out Cleaning</Link>
+                <span>/</span>
+                <span className="text-white">Romeoville</span>
+              </div>
+              <p className="text-sm font-semibold mb-4" style={{ color: "#FFA869" }}>★★★★★ 5.0 · 42 Google Reviews</p>
+              <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-4">
+                Move-Out Cleaning in Romeoville, IL
+              </h1>
+              <p className="text-xl font-semibold text-white/95 mb-4">Get Your Deposit Back. Guaranteed.</p>
+              <p className="text-lg text-white/85 mb-8 leading-relaxed">
+                DSM Cleaning Solutions is Romeoville&rsquo;s local move-out cleaning expert. Based right here
+                in 60446, we deliver a thorough, deposit-back focused clean for renters, landlords,
+                and home sellers throughout Windstone, Hidden Lakes, Grand Haven, and every
+                neighborhood in Romeoville.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a href="#quote-form" className="btn-white btn-lg">Get a Free Quote</a>
+                <a href="tel:+18152462113" className="btn-outline-white btn-lg">(815) 246-2113</a>
+              </div>
             </div>
-            <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-6">
-              Move-Out Cleaning in Romeoville, IL
-            </h1>
-            <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              DSM Cleaning Solutions is Romeoville&apos;s local move-out cleaning expert. Based right here
-              in 60446, we deliver a thorough, deposit-back focused clean for renters, landlords,
-              and home sellers throughout Windstone, Hidden Lakes, Grand Haven, and every
-              neighborhood in Romeoville.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
-              <a href="tel:+18152462113" className="btn-outline-white btn-lg"> (815) 246-2113</a>
+            <div className="hidden lg:block">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/Work%20Pictures/laundry-room-move-out-clean-romeoville-il.jpg"
+                alt="Move-out cleaning in Romeoville IL — DSM Cleaning Solutions"
+                className="rounded-2xl shadow-2xl w-full object-cover max-h-96"
+              />
             </div>
           </div>
         </div>
       </section>
 
       {/* TRUST BAR */}
-      <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
+      <section className="bg-white border-b border-gray-100 py-10 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["Fully Insured & Bonded", "Eco-Friendly Products", "Family Owned", "5-Star Rated", "Satisfaction Guaranteed"].map(
-              (item) => <span key={item} className="whitespace-nowrap">{item}</span>
-            )}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            {trustBadges.map((badge) => (
+              <div key={badge.title} className="flex flex-col items-center text-center gap-3 p-4">
+                <div className="w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "#E8622A" }}>
+                  {badge.icon}
+                </div>
+                <div>
+                  <p className="font-bold text-gray-900 text-sm">{badge.title}</p>
+                  <p className="text-xs text-gray-500 mt-1">{badge.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ANCHOR REVIEW */}
+      <section className="py-10 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="rounded-2xl p-8 md:p-10 relative" style={{ backgroundColor: "#FFF4EE" }}>
+            <span className="absolute top-6 left-8 text-6xl font-serif leading-none select-none" style={{ color: "#E8622A" }}>&ldquo;</span>
+            <div className="pt-8">
+              <p className="text-gray-800 text-lg leading-relaxed font-medium">
+                We are very happy with DSM Cleaning Solutions. They do an excellent job and would hire them again.
+              </p>
+              <div className="mt-4">
+                <p className="font-bold text-gray-900">Bill Aros</p>
+                <p className="text-sm font-semibold" style={{ color: "#FFA869" }}>★★★★★ Google Review</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* INTRO */}
-      <section className="py-16 bg-white">
+      <section className="py-14 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading mb-6">Move-Out & Move-In Cleaning in Romeoville, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Move-out and move-in cleaning in Romeoville, IL is at the heart of what DSM Cleaning
-            Solutions does - and as a company based right here in 60446, we understand the local
+            Solutions does — and as a company based right here in 60446, we understand the local
             rental market better than anyone. Romeoville renters in Windstone, Hidden Lakes, and
             Grand Haven trust us to deliver the kind of comprehensive clean that satisfies
             landlord inspections and protects their security deposit.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Moving is already stressful enough. Our Romeoville move-out cleaning service takes the
-            cleaning completely off your plate. We handle every room, every appliance, every surface  - 
+            cleaning completely off your plate. We handle every room, every appliance, every surface —
             working from a detailed checklist that leaves nothing to chance. From cleaning inside the
             refrigerator to scrubbing grout lines in every bathroom, we cover every area a landlord
             is likely to inspect.
@@ -217,19 +288,19 @@ export default function MoveOutCleaningRomeovillePage() {
           <p className="text-gray-600 leading-relaxed">
             We also serve Romeoville landlords preparing units for new tenants and homeowners getting
             ready to sell. Every job uses eco-friendly, non-toxic products and is backed by our
-            48-hour satisfaction guarantee - because your Romeoville deposit matters, and so does
+            48-hour satisfaction guarantee — because your Romeoville deposit matters, and so does
             our reputation in this community.
           </p>
         </div>
       </section>
 
-      {/* WHAT'S INCLUDED */}
+      {/* CHECKLIST */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="section-heading">What&apos;s Included in Our Move-Out Cleaning in Romeoville, IL</h2>
+            <h2 className="section-heading">What&rsquo;s Included in Our Move-Out Cleaning in Romeoville, IL</h2>
             <p className="section-subheading mx-auto">
-              Comprehensive coverage of every room - designed to pass any Romeoville property inspection.
+              Comprehensive coverage of every room — designed to pass any Romeoville property inspection.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -251,6 +322,17 @@ export default function MoveOutCleaningRomeovillePage() {
               </div>
             ))}
           </div>
+
+          {/* Mid-page CTA */}
+          <div className="text-center mt-12">
+            <a
+              href="#quote-form"
+              className="inline-flex items-center gap-2 font-bold text-white text-lg px-8 py-4 rounded-full transition-all hover:opacity-90 active:scale-95"
+              style={{ backgroundColor: "#E8622A", boxShadow: "0 4px 20px rgba(232,114,28,0.35)" }}
+            >
+              Book My Move-Out Clean
+            </a>
+          </div>
         </div>
       </section>
 
@@ -260,9 +342,14 @@ export default function MoveOutCleaningRomeovillePage() {
           <div className="text-center mb-12">
             <h2 className="section-heading">Why Romeoville Residents Choose DSM Cleaning Solutions</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {trustCards.map((card) => (
-              <div key={card.title} className="text-center p-6 rounded-xl bg-brand-green-50 border border-brand-green-100">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { title: "Deposit-Back Focused", desc: "Our checklist is built specifically for landlord inspections — every appliance, every cabinet, every corner.", icon: "💵" },
+              { title: "48-Hour Re-Clean Promise", desc: "If your landlord finds anything after we leave, we come back and fix it free within 48 hours.", icon: "🔄" },
+              { title: "Fully Insured & Bonded", desc: "Licensed and liability-insured on every job. You and your landlord can book with total confidence.", icon: "🛡️" },
+              { title: "Based Right Here in Romeoville", desc: "We're your neighbors — we know this community, this rental market, and these landlord expectations.", icon: "🏠" },
+            ].map((card) => (
+              <div key={card.title} className="text-center p-6 rounded-xl border border-gray-100 shadow-sm">
                 <span className="text-4xl block mb-3">{card.icon}</span>
                 <h3 className="font-bold text-lg text-gray-900 mb-2">{card.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{card.desc}</p>
@@ -272,22 +359,29 @@ export default function MoveOutCleaningRomeovillePage() {
         </div>
       </section>
 
-      {/* PRICING */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading mb-6">How Much Does Move-Out Cleaning Cost in Romeoville, IL?</h2>
-          <p className="text-gray-600 mb-4 leading-relaxed">
-            Move-out cleaning in Romeoville starts around $150-$250 for a typical rental home and
-            scales based on the size of the property and its current condition. Most homes in Romeoville
-            (60446) fall within the $175-$325 range. Larger properties with multiple bathrooms or
-            significant buildup may be priced higher.
-          </p>
-          <p className="text-gray-600 mb-8 leading-relaxed">
-            We recommend booking at least 3-5 days before your Romeoville move-out date to guarantee
-            availability. For urgent situations, call us at (815) 246-2113 - as a local company, we
-            do our best to accommodate last-minute requests. All estimates are free with no obligation.
-          </p>
-          <Link href="/contact" className="btn-primary">Get My Free Romeoville Quote</Link>
+      {/* 3-REVIEW BLOCK */}
+      <section className="py-14 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            {reviews3.map((r) => (
+              <div key={r.name} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative">
+                <p className="text-sm font-semibold" style={{ color: "#FFA869" }}>★★★★★</p>
+                <p className="text-gray-700 text-sm leading-relaxed mt-3">{r.text}</p>
+                <p className="mt-4 font-semibold text-gray-900 text-sm">{r.name}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center">
+            <a
+              href="https://www.google.com/search?q=DSM+Cleaning+Solutions+Romeoville+IL+Reviews"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-semibold underline"
+              style={{ color: "#E8622A" }}
+            >
+              Read all 42 reviews on Google
+            </a>
+          </div>
         </div>
       </section>
 
@@ -336,24 +430,24 @@ export default function MoveOutCleaningRomeovillePage() {
         </div>
       </section>
 
-      {/* CONTACT CTA */}
-      <section id="contact" className="py-16 bg-gradient-to-br from-orange-500 to-orange-600">
+      {/* QUOTE FORM CTA */}
+      <section id="quote-form" className="py-16 bg-gradient-to-br from-orange-500 to-orange-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="text-white">
               <h2 className="text-4xl font-bold mb-4">Book Your Move-Out Cleaning in Romeoville Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Your neighbors at DSM Cleaning Solutions are ready to help with your Romeoville
-                move-out. Get a free quote today - we back every job with our deposit-back guarantee
+                move-out. Get a free quote today — we back every job with our deposit-back guarantee
                 and 48-hour satisfaction promise.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
-                 (815) 246-2113
+                (815) 246-2113
               </a>
               <p className="text-white/80">Locally based · Eco-friendly · Fully insured · Deposit-back focused</p>
             </div>
-            <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
-              <LeadForm />
+            <div className="bg-white rounded-2xl p-8 shadow-xl">
+              <LeadForm defaultService="Move-In / Move-Out Cleaning" />
             </div>
           </div>
         </div>
