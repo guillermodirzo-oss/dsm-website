@@ -20,7 +20,7 @@ const faqs = [
   {
     question: "Can you help me get my security deposit back in Lockport?",
     answer:
-      "Yes — our Lockport move-out cleaning is specifically designed to meet landlord inspection standards. We clean every surface, inside every appliance, and inside every cabinet so your property looks move-in ready and you have the best possible chance of getting your full security deposit back.",
+      "Yes, our Lockport move-out cleaning is specifically designed to meet landlord inspection standards. We clean every surface, inside every appliance, and inside every cabinet so your property looks move-in ready and you have the best possible chance of getting your full security deposit back.",
   },
   {
     question: "How far in advance should I book move-out cleaning in Lockport?",
@@ -30,7 +30,7 @@ const faqs = [
   {
     question: "Do you clean inside appliances during Lockport move-out cleans?",
     answer:
-      "Yes — appliances are a core part of our move-out service. We clean inside and outside the oven (including oven racks), inside and outside the refrigerator, inside the microwave, and the dishwasher interior. These are the areas most likely to be flagged during a landlord inspection.",
+      "Yes, appliances are a core part of our move-out service. We clean inside and outside the oven (including oven racks), inside and outside the refrigerator, inside the microwave, and the dishwasher interior. These are the areas most likely to be flagged during a landlord inspection.",
   },
   {
     question: "How long does a Lockport move-out clean take?",
@@ -40,7 +40,7 @@ const faqs = [
   {
     question: "Do you serve all zip codes in Lockport IL 60441?",
     answer:
-      "Yes — we serve all of Lockport, IL under zip code 60441, including Lockport Estates, Heritage Woods, Milne Grove, Downtown Lockport, Dellwood Park, and all surrounding areas. If you're in Lockport, we come to you.",
+      "Yes, we serve all of Lockport, IL under zip code 60441, including Lockport Estates, Heritage Woods, Milne Grove, Downtown Lockport, Dellwood Park, and all surrounding areas. If you're in Lockport, we come to you.",
   },
 ];
 
@@ -174,7 +174,7 @@ const trustBadges = [
 
 const reviews3 = [
   { name: "Pati Mangano", text: "As always everything was great." },
-  { name: "Julie G.", text: "This service is consistently perfect! And, I love the website interface -- it makes everything easy and customizable." },
+  { name: "Julie G.", text: "This service is consistently perfect! I love the website interface. It makes everything easy and customizable." },
   { name: "Jae Mac", text: "I highly recommend, customer since 2024 🍊🍊🍊" },
 ];
 
@@ -209,8 +209,8 @@ export default function MoveOutCleaningLockportPage() {
               <p className="text-xl font-semibold text-white/95 mb-4">Get Your Deposit Back. Guaranteed.</p>
               <p className="text-lg text-white/85 mb-8 leading-relaxed">
                 DSM Cleaning Solutions delivers a landlord-approved, deposit-back move-out clean for
-                Lockport homes and apartments throughout zip code 60441 — from Lockport Estates to
-                Dellwood Park — with a comprehensive clean built to pass any inspection.
+                Lockport homes and apartments throughout zip code 60441, from Lockport Estates to
+                Dellwood Park, with a comprehensive clean built to pass any inspection.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="#quote-form" className="btn-white btn-lg">Get a Free Quote</a>
@@ -269,7 +269,7 @@ export default function MoveOutCleaningLockportPage() {
       {/* INTRO */}
       <section className="py-14 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading mb-6">Move-Out Cleaning in Lockport, IL — Built to Get Your Deposit Back</h2>
+          <h2 className="section-heading mb-6">Move-Out Cleaning in Lockport, IL: Built to Get Your Deposit Back</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Move-out cleaning in Lockport, IL is one of DSM Cleaning Solutions&rsquo; most requested
             services in Will County. Lockport renters in Lockport Estates, Heritage Woods, Milne
@@ -279,7 +279,7 @@ export default function MoveOutCleaningLockportPage() {
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Our Lockport move-out cleaning isn&rsquo;t a surface-level wipe-down. We clean inside every
-            appliance, inside every cabinet, inside every closet — every corner that a landlord
+            appliance, inside every cabinet, inside every closet, every corner that a landlord
             or property manager is likely to inspect. The goal is simple: leave the property in
             better condition than when you first moved in. DSM is based in nearby Romeoville, so
             we can respond quickly and work around your move-out schedule without issue.
@@ -342,10 +342,10 @@ export default function MoveOutCleaningLockportPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "Deposit-Back Focused", desc: "Our checklist is built specifically for landlord inspections in Lockport — every appliance, every cabinet, every corner.", icon: "💵" },
+              { title: "Deposit-Back Focused", desc: "Our checklist is built specifically for landlord inspections in Lockport: every appliance, every cabinet, every corner.", icon: "💵" },
               { title: "48-Hour Re-Clean Promise", desc: "If your landlord finds anything after we leave, we come back and fix it free within 48 hours.", icon: "🔄" },
               { title: "Fully Insured & Bonded", desc: "Licensed and liability-insured on every job. You and your landlord can book with total confidence.", icon: "🛡️" },
-              { title: "Family-Owned & Local", desc: "Based in nearby Romeoville — your trusted southwest suburbs neighbors. Memo answers his own phone.", icon: "🏠" },
+              { title: "Family-Owned & Local", desc: "Based in nearby Romeoville, your trusted southwest suburbs neighbors. Memo answers his own phone.", icon: "🏠" },
             ].map((card) => (
               <div key={card.title} className="text-center p-6 rounded-xl border border-gray-100 shadow-sm">
                 <span className="text-4xl block mb-3">{card.icon}</span>
@@ -440,7 +440,7 @@ export default function MoveOutCleaningLockportPage() {
               <h2 className="text-4xl font-bold mb-4">Book Your Move-Out Cleaning in Lockport Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Moving out in Lockport, IL? Get your free quote today. We serve all of 60441 and
-                back every move-out job with our satisfaction guarantee — your deposit back or
+                back every move-out job with our satisfaction guarantee. Deposit back, or
                 we re-clean at no charge.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">

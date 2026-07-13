@@ -20,17 +20,17 @@ const faqs = [
   {
     question: "Will your move-out cleaning help me get my deposit back in Joliet?",
     answer:
-      "Yes — our Joliet move-out cleaning is specifically designed to meet landlord inspection standards. We clean every surface, inside every appliance, and inside every cabinet so your property looks move-in ready and maximizes your chances of getting your full security deposit back.",
+      "Yes, our Joliet move-out cleaning is specifically designed to meet landlord inspection standards. We clean every surface, inside every appliance, and inside every cabinet so your property looks move-in ready and maximizes your chances of getting your full security deposit back.",
   },
   {
     question: "How far in advance should I book move-out cleaning in Joliet?",
     answer:
-      "We recommend booking at least 3-5 days before your move-out date to secure your preferred time slot. That said, we do our best to accommodate last-minute requests in Joliet — give us a call at (815) 246-2113 and we'll see what we can do.",
+      "We recommend booking at least 3-5 days before your move-out date to secure your preferred time slot. That said, we do our best to accommodate last-minute requests in Joliet. Give us a call at (815) 246-2113 and we'll see what we can do.",
   },
   {
     question: "Do you clean appliances during Joliet move-out cleans?",
     answer:
-      "Yes — appliances are a key part of our move-out cleaning. We clean inside and outside the oven, inside and outside the refrigerator, inside the microwave, and the dishwasher interior. These are the areas landlords inspect most closely.",
+      "Yes, appliances are a key part of our move-out cleaning. We clean inside and outside the oven, inside and outside the refrigerator, inside the microwave, and the dishwasher interior. These are the areas landlords inspect most closely.",
   },
   {
     question: "How long does a move-out clean take in Joliet?",
@@ -174,7 +174,7 @@ const trustBadges = [
 
 const reviews3 = [
   { name: "Pati Mangano", text: "As always everything was great." },
-  { name: "Julie G.", text: "This service is consistently perfect! And, I love the website interface -- it makes everything easy and customizable." },
+  { name: "Julie G.", text: "This service is consistently perfect! I love the website interface. It makes everything easy and customizable." },
   { name: "Jae Mac", text: "I highly recommend, customer since 2024 🍊🍊🍊" },
 ];
 
@@ -209,8 +209,8 @@ export default function MoveOutCleaningJolietPage() {
               <p className="text-xl font-semibold text-white/95 mb-4">Get Your Deposit Back. Guaranteed.</p>
               <p className="text-lg text-white/85 mb-8 leading-relaxed">
                 DSM Cleaning Solutions delivers a landlord-approved, deposit-back move-out clean for
-                Joliet homes and apartments. We serve all Joliet zip codes — 60431, 60432, 60433,
-                60435, and 60436 — with a comprehensive clean built to pass any inspection.
+                Joliet homes and apartments. We serve all Joliet zip codes (60431, 60432, 60433,
+                60435, and 60436) with a comprehensive clean built to pass any inspection.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="#quote-form" className="btn-white btn-lg">Get a Free Quote</a>
@@ -269,7 +269,7 @@ export default function MoveOutCleaningJolietPage() {
       {/* INTRO */}
       <section className="py-14 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading mb-6">Move-Out Cleaning in Joliet, IL — Built to Get Your Deposit Back</h2>
+          <h2 className="section-heading mb-6">Move-Out Cleaning in Joliet, IL: Built to Get Your Deposit Back</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Move-out cleaning in Joliet, IL is one of DSM Cleaning Solutions&rsquo; most requested services.
             Joliet renters in Ingalls Park, Rock Run, Forest Park, Woodgate, and across zip codes
@@ -279,7 +279,7 @@ export default function MoveOutCleaningJolietPage() {
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Our Joliet move-out cleaning isn&rsquo;t a surface-level wipe-down. We clean inside every
-            appliance, inside every cabinet, inside every closet — every corner that a landlord or
+            appliance, inside every cabinet, inside every closet, every corner that a landlord or
             property manager is likely to inspect. The goal is simple: leave the property in better
             condition than when you first moved in. DSM is based just 10 miles away in Romeoville,
             so we can respond quickly and schedule around your move-out timeline.
@@ -343,10 +343,10 @@ export default function MoveOutCleaningJolietPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "Deposit-Back Focused", desc: "Our checklist is built specifically for landlord inspections in Joliet — every appliance, every cabinet, every corner.", icon: "💵" },
+              { title: "Deposit-Back Focused", desc: "Our checklist is built specifically for landlord inspections in Joliet: every appliance, every cabinet, every corner.", icon: "💵" },
               { title: "48-Hour Re-Clean Promise", desc: "If your landlord finds anything after we leave, we come back and fix it free within 48 hours.", icon: "🔄" },
               { title: "Fully Insured & Bonded", desc: "Licensed and liability-insured on every job. You and your landlord can book with total confidence.", icon: "🛡️" },
-              { title: "Family-Owned & Local", desc: "Based just 10 miles away in Romeoville — your trusted southwest suburbs neighbors. Memo answers his own phone.", icon: "🏠" },
+              { title: "Family-Owned & Local", desc: "Based just 10 miles away in Romeoville, your trusted southwest suburbs neighbors. Memo answers his own phone.", icon: "🏠" },
             ].map((card) => (
               <div key={card.title} className="text-center p-6 rounded-xl border border-gray-100 shadow-sm">
                 <span className="text-4xl block mb-3">{card.icon}</span>
@@ -441,7 +441,7 @@ export default function MoveOutCleaningJolietPage() {
               <h2 className="text-4xl font-bold mb-4">Book Your Move-Out Cleaning in Joliet Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Moving out in Joliet, IL? Get your free quote today. We serve all Joliet zip codes
-                and back every move-out job with our satisfaction guarantee — your deposit back or
+                and back every move-out job with our satisfaction guarantee. Deposit back, or
                 we re-clean at no charge.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">

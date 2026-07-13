@@ -20,17 +20,17 @@ const faqs = [
   {
     question: "Can you get my Burr Ridge home walkthrough-ready for the final inspection?",
     answer:
-      "Yes — that's exactly what we're built for. Our Burr Ridge move-out cleaning is designed to meet the standards buyers and their agents look for during final walkthroughs. We clean every surface, inside every appliance, and inside every cabinet so your Burr Ridge home makes the best possible impression and the sale stays on track.",
+      "Yes, that's exactly what we're built for. Our Burr Ridge move-out cleaning is designed to meet the standards buyers and their agents look for during final walkthroughs. We clean every surface, inside every appliance, and inside every cabinet so your Burr Ridge home makes the best possible impression and the sale stays on track.",
   },
   {
     question: "How far in advance should I book move-out cleaning in Burr Ridge?",
     answer:
-      "We recommend booking at least 3-5 days before your move-out date to secure your preferred time slot in Burr Ridge. That said, we do our best to accommodate last-minute requests — give us a call at (815) 246-2113 and we'll see what we can do.",
+      "We recommend booking at least 3-5 days before your move-out date to secure your preferred time slot in Burr Ridge. That said, we do our best to accommodate last-minute requests. Give us a call at (815) 246-2113 and we'll see what we can do.",
   },
   {
     question: "Do you clean inside appliances during Burr Ridge move-out cleans?",
     answer:
-      "Yes — appliances are a central part of our move-out cleaning checklist. We clean inside and outside the oven, inside and outside the refrigerator (including all drawers and shelves), inside the microwave, and the dishwasher interior. These are the areas Burr Ridge buyers and property managers inspect most closely.",
+      "Yes, appliances are a central part of our move-out cleaning checklist. We clean inside and outside the oven, inside and outside the refrigerator (including all drawers and shelves), inside the microwave, and the dishwasher interior. These are the areas Burr Ridge buyers and property managers inspect most closely.",
   },
   {
     question: "How long does a Burr Ridge move-out clean take?",
@@ -40,7 +40,7 @@ const faqs = [
   {
     question: "Do you serve all of Burr Ridge, IL 60527?",
     answer:
-      "Yes — we serve all of Burr Ridge, including zip code 60527 and all neighborhoods: the Burr Ridge Village Center area and the County Line Road area. We serve Burr Ridge as part of our DuPage County route and work regularly alongside our Hinsdale, Lemont, and Westmont clients.",
+      "Yes, we serve all of Burr Ridge, including zip code 60527 and all neighborhoods: the Burr Ridge Village Center area and the County Line Road area. We serve Burr Ridge as part of our DuPage County route and work regularly alongside our Hinsdale, Lemont, and Westmont clients.",
   },
 ];
 
@@ -174,7 +174,7 @@ const trustBadges = [
 
 const reviews3 = [
   { name: "Bill Aros", text: "We are very happy with DSM Cleaning Solutions. They do an excellent job and would hire them again." },
-  { name: "Julie G.", text: "This service is consistently perfect! And, I love the website interface -- it makes everything easy and customizable." },
+  { name: "Julie G.", text: "This service is consistently perfect! I love the website interface. It makes everything easy and customizable." },
   { name: "Pati Mangano", text: "As always everything was great." },
 ];
 
@@ -211,7 +211,7 @@ export default function MoveOutCleaningBurrRidgePage() {
               </p>
               <p className="text-lg text-white/85 mb-8 leading-relaxed">
                 Selling your Burr Ridge home or moving out of a rental? DSM Cleaning Solutions
-                delivers a thorough, buyer-ready clean throughout Burr Ridge (zip code 60527) —
+                delivers a thorough, buyer-ready clean throughout Burr Ridge (zip code 60527),
                 including the Burr Ridge Village Center area and County Line Road area. Your home
                 will be walkthrough-ready, or we come back and re-clean at no charge.
               </p>
@@ -259,7 +259,7 @@ export default function MoveOutCleaningBurrRidgePage() {
             <div className="pt-8">
               <p className="text-gray-800 text-lg leading-relaxed font-medium">
                 I&rsquo;m so glad DSM Cleaning Services was recommended to us by our realtor! They are fantastic,
-                and their website makes arranging cleanings so easy. I highly recommend them — I will be
+                and their website makes arranging cleanings so easy. I highly recommend them. I will be
                 using them many more times!
               </p>
               <div className="mt-4">
@@ -276,7 +276,7 @@ export default function MoveOutCleaningBurrRidgePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading mb-6">Professional Move-Out Cleaning in Burr Ridge, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Burr Ridge is known for its upscale, estate-style homes — properties where buyers
+            Burr Ridge is known for its upscale, estate-style homes, properties where buyers
             have high expectations and buyer&rsquo;s agents leave no corner unchecked during the
             final walkthrough. Our Burr Ridge move-out cleaning service is built for exactly
             that standard. We clean at the level Burr Ridge homes require.
@@ -285,11 +285,11 @@ export default function MoveOutCleaningBurrRidgePage() {
             We&rsquo;re a family-owned cleaning company serving all of Burr Ridge (zip code 60527),
             including the Burr Ridge Village Center area and County Line Road area. Our team
             follows a detailed, room-by-room checklist that covers every surface a buyer&rsquo;s agent
-            will look at — inside every appliance, inside every cabinet, every grout line, every
+            will look at, inside every appliance, inside every cabinet, every grout line, every
             baseboard. Nothing is skipped.
           </p>
           <p className="text-gray-600 leading-relaxed">
-            Every job is backed by our 48-hour satisfaction guarantee — walkthrough-ready, or
+            Every job is backed by our 48-hour satisfaction guarantee. Walkthrough-ready, or
             we come back and re-clean at no charge. We serve Burr Ridge alongside nearby{" "}
             <Link href="/move-out-cleaning-hinsdale-il" className="text-brand-green font-semibold hover:underline">Hinsdale</Link>,{" "}
             <Link href="/move-out-cleaning-lemont-il" className="text-brand-green font-semibold hover:underline">Lemont</Link>, and{" "}
@@ -347,7 +347,7 @@ export default function MoveOutCleaningBurrRidgePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "Walkthrough-Ready Results", desc: "Our checklist covers every area buyers inspect — ovens, fridges, grout lines, cabinet interiors, baseboards, mirrors.", icon: "💵" },
+              { title: "Walkthrough-Ready Results", desc: "Our checklist covers every area buyers inspect: ovens, fridges, grout lines, cabinet interiors, baseboards, mirrors.", icon: "💵" },
               { title: "48-Hour Re-Clean Promise", desc: "If your buyer&rsquo;s agent flags anything after we leave, we come back and fix it free within 48 hours.", icon: "🔄" },
               { title: "Fully Insured & Bonded", desc: "Licensed and liability-insured on every job. Your listing agent and buyers can proceed with confidence.", icon: "🛡️" },
               { title: "Family-Owned & Local", desc: "Serving Burr Ridge and DuPage County from nearby Romeoville. Memo answers his own phone.", icon: "🏠" },
@@ -444,7 +444,7 @@ export default function MoveOutCleaningBurrRidgePage() {
             <div className="text-white">
               <h2 className="text-4xl font-bold mb-4">Get Your Free Burr Ridge Move-Out Quote</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                Get your free move-out cleaning quote for Burr Ridge, IL — we respond within
+                Get your free move-out cleaning quote for Burr Ridge, IL. We respond within
                 1 business day and back every job with our 48-hour satisfaction guarantee.
                 Walkthrough-ready, or we come back and re-clean at no charge.
               </p>

@@ -25,22 +25,22 @@ const faqs = [
   {
     question: "Do you serve all Naperville neighborhoods and zip codes?",
     answer:
-      "Yes — we serve all of Naperville including zip codes 60540, 60563, 60564, and 60565. We clean in Cress Creek, Hobson West, Ashbury, White Eagle, and all surrounding neighborhoods. Just let us know your address when you request a quote.",
+      "Yes, we serve all of Naperville including zip codes 60540, 60563, 60564, and 60565. We clean in Cress Creek, Hobson West, Ashbury, White Eagle, and all surrounding neighborhoods. Just let us know your address when you request a quote.",
   },
   {
     question: "What does move-out cleaning cost in Naperville?",
     answer:
-      "Move-out cleaning in Naperville is priced based on the size of your home and its current condition. We provide free estimates — just fill out our quote form or call (815) 246-2113 and we'll give you an accurate number without any surprises.",
+      "Move-out cleaning in Naperville is priced based on the size of your home and its current condition. We provide free estimates. Just fill out our quote form or call (815) 246-2113 and we'll give you an accurate number without any surprises.",
   },
   {
     question: "Will your clean help me get my security deposit back?",
     answer:
-      "Yes — that's exactly what our move-out clean is designed for. We follow a landlord-focused checklist that covers every area property managers inspect: oven interior, refrigerator, cabinet interiors, baseboards, bathroom grout, and more. We back every job with a 48-hour satisfaction guarantee — if your landlord finds anything, we come back and fix it free.",
+      "Yes, that's exactly what our move-out clean is designed for. We follow a landlord-focused checklist that covers every area property managers inspect: oven interior, refrigerator, cabinet interiors, baseboards, bathroom grout, and more. We back every job with a 48-hour satisfaction guarantee. If your landlord finds anything, we come back and fix it free.",
   },
   {
     question: "Are you insured and bonded for cleaning in Naperville, IL?",
     answer:
-      "Yes — DSM Cleaning Solutions is fully licensed, insured, and bonded. All of our cleaners pass background checks before entering any home. You can book with total confidence whether you're a renter, landlord, or home seller.",
+      "Yes, DSM Cleaning Solutions is fully licensed, insured, and bonded. All of our cleaners pass background checks before entering any home. You can book with total confidence whether you're a renter, landlord, or home seller.",
   },
 ];
 
@@ -174,7 +174,7 @@ const trustBadges = [
 
 const reviews3 = [
   { name: "Pati Mangano", text: "As always everything was great." },
-  { name: "Julie G.", text: "This service is consistently perfect! And, I love the website interface -- it makes everything easy and customizable." },
+  { name: "Julie G.", text: "This service is consistently perfect! I love the website interface. It makes everything easy and customizable." },
   { name: "Jae Mac", text: "I highly recommend, customer since 2024 🍊🍊🍊" },
 ];
 
@@ -212,7 +212,7 @@ export default function MoveOutCleaningNapervillePage() {
               <p className="text-lg text-white/85 mb-8 leading-relaxed">
                 Whether you&rsquo;re a renter who wants every dollar of your deposit back, a landlord
                 preparing a unit for the next tenant, or a home seller in Cress Creek or Ashbury
-                who needs a spotless property before the final walkthrough — DSM Cleaning Solutions
+                who needs a spotless property before the final walkthrough. DSM Cleaning Solutions
                 delivers a thorough, professional move-out clean across all of Naperville
                 (zip codes 60540, 60563, 60564, 60565).
               </p>
@@ -284,13 +284,13 @@ export default function MoveOutCleaningNapervillePage() {
           <p className="text-gray-600 mb-4 leading-relaxed">
             DSM Cleaning Solutions serves all of Naperville (zip codes 60540, 60563, 60564, and 60565)
             with a comprehensive move-out cleaning checklist built for exactly these situations.
-            We cover every surface, every appliance inside and out, every cabinet, and every bathroom
-            — the areas that always come up in both landlord disputes and buyer walkthroughs.
+            We cover every surface, every appliance inside and out, every cabinet, and every bathroom,
+            the areas that always come up in both landlord disputes and buyer walkthroughs.
           </p>
           <p className="text-gray-600 leading-relaxed">
             We&rsquo;re a family-owned team based in nearby Romeoville. We work throughout the southwest
             suburbs and bring the same careful attention to every Naperville home regardless of size.
-            Every job is backed by our 48-hour satisfaction guarantee — if anything gets flagged
+            Every job is backed by our 48-hour satisfaction guarantee. If anything gets flagged
             within 48 hours of our visit, we come back and re-clean at no charge.
           </p>
         </div>
@@ -345,10 +345,10 @@ export default function MoveOutCleaningNapervillePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "Deposit-Back Focused", desc: "Our checklist covers every area Naperville landlords inspect — ovens, fridges, grout, cabinet interiors, baseboards.", icon: "💵" },
+              { title: "Deposit-Back Focused", desc: "Our checklist covers every area Naperville landlords inspect: ovens, fridges, grout, cabinet interiors, baseboards.", icon: "💵" },
               { title: "48-Hour Re-Clean Promise", desc: "If your landlord or buyer agent finds anything after we leave, we come back and fix it free within 48 hours.", icon: "🔄" },
               { title: "Fully Insured & Bonded", desc: "Licensed and liability-insured on every job in Naperville. You and your landlord can book with total confidence.", icon: "🛡️" },
-              { title: "Family-Owned & Local", desc: "Based in nearby Romeoville — serving Naperville and the southwest suburbs every week. Memo answers his own phone.", icon: "🏠" },
+              { title: "Family-Owned & Local", desc: "Based in nearby Romeoville, serving Naperville and the southwest suburbs every week. Memo answers his own phone.", icon: "🏠" },
             ].map((card) => (
               <div key={card.title} className="text-center p-6 rounded-xl border border-gray-100 shadow-sm">
                 <span className="text-4xl block mb-3">{card.icon}</span>

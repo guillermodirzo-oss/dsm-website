@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 
@@ -20,17 +20,17 @@ const faqs = [
   {
     question: "Can you get my Hinsdale home walkthrough-ready for the final inspection?",
     answer:
-      "Yes — that's exactly what we're built for. Our Hinsdale move-out cleaning is designed to meet the standards buyers and their agents look for during final walkthroughs. We clean every surface, inside every appliance, and inside every cabinet so your Hinsdale home makes the best possible impression and the sale stays on track.",
+      "Yes, that's exactly what we're built for. Our Hinsdale move-out cleaning is designed to meet the standards buyers and their agents look for during final walkthroughs. We clean every surface, inside every appliance, and inside every cabinet so your Hinsdale home makes the best possible impression and the sale stays on track.",
   },
   {
     question: "How far in advance should I book move-out cleaning in Hinsdale?",
     answer:
-      "We recommend booking at least 3-5 days before your move-out date to secure your preferred time slot in Hinsdale. That said, we do our best to accommodate last-minute requests — give us a call at (815) 246-2113 and we'll see what we can do.",
+      "We recommend booking at least 3-5 days before your move-out date to secure your preferred time slot in Hinsdale. That said, we do our best to accommodate last-minute requests. Give us a call at (815) 246-2113 and we'll see what we can do.",
   },
   {
     question: "Do you clean inside appliances during Hinsdale move-out cleans?",
     answer:
-      "Yes — appliances are a central part of our move-out cleaning checklist. We clean inside and outside the oven, inside and outside the refrigerator (including all drawers and shelves), inside the microwave, and the dishwasher interior. These are the areas Hinsdale buyers and property managers inspect most closely.",
+      "Yes, appliances are a central part of our move-out cleaning checklist. We clean inside and outside the oven, inside and outside the refrigerator (including all drawers and shelves), inside the microwave, and the dishwasher interior. These are the areas Hinsdale buyers and property managers inspect most closely.",
   },
   {
     question: "How long does a Hinsdale move-out clean take?",
@@ -40,7 +40,7 @@ const faqs = [
   {
     question: "Do you serve all of Hinsdale, IL 60521?",
     answer:
-      "Yes — we serve all of Hinsdale, including zip code 60521 and all neighborhoods: Downtown Hinsdale and West Hinsdale. We serve Hinsdale as part of our DuPage County route and work regularly alongside our Westmont, Oak Brook, and Burr Ridge clients.",
+      "Yes, we serve all of Hinsdale, including zip code 60521 and all neighborhoods: Downtown Hinsdale and West Hinsdale. We serve Hinsdale as part of our DuPage County route and work regularly alongside our Westmont, Oak Brook, and Burr Ridge clients.",
   },
 ];
 
@@ -174,7 +174,7 @@ const trustBadges = [
 
 const reviews3 = [
   { name: "Bill Aros", text: "We are very happy with DSM Cleaning Solutions. They do an excellent job and would hire them again." },
-  { name: "Julie G.", text: "This service is consistently perfect! And, I love the website interface -- it makes everything easy and customizable." },
+  { name: "Julie G.", text: "This service is consistently perfect! I love the website interface. It makes everything easy and customizable." },
   { name: "Pati Mangano", text: "As always everything was great." },
 ];
 
@@ -211,7 +211,7 @@ export default function MoveOutCleaningHinsdalePage() {
               </p>
               <p className="text-lg text-white/85 mb-8 leading-relaxed">
                 Selling your Hinsdale home? DSM Cleaning Solutions delivers a thorough, buyer-ready
-                clean throughout Hinsdale (zip code 60521) — including Downtown Hinsdale and West
+                clean throughout Hinsdale (zip code 60521), including Downtown Hinsdale and West
                 Hinsdale. Your home will be walkthrough-ready, or we come back and re-clean at no charge.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -258,7 +258,7 @@ export default function MoveOutCleaningHinsdalePage() {
             <div className="pt-8">
               <p className="text-gray-800 text-lg leading-relaxed font-medium">
                 I&rsquo;m so glad DSM Cleaning Services was recommended to us by our realtor! They are fantastic,
-                and their website makes arranging cleanings so easy. I highly recommend them — I will be
+                and their website makes arranging cleanings so easy. I highly recommend them. I will be
                 using them many more times!
               </p>
               <div className="mt-4">
@@ -284,12 +284,12 @@ export default function MoveOutCleaningHinsdalePage() {
           <p className="text-gray-600 mb-4 leading-relaxed">
             We&rsquo;re a family-owned cleaning company serving all of Hinsdale (zip code 60521),
             including Downtown Hinsdale and West Hinsdale. Our team follows a detailed,
-            room-by-room checklist that covers every surface a buyer&rsquo;s agent will look at —
+            room-by-room checklist that covers every surface a buyer&rsquo;s agent will look at,
             inside every appliance, inside every cabinet, every grout line, every baseboard.
             Nothing is skipped.
           </p>
           <p className="text-gray-600 leading-relaxed">
-            Every job is backed by our 48-hour satisfaction guarantee — walkthrough-ready, or
+            Every job is backed by our 48-hour satisfaction guarantee. Walkthrough-ready, or
             we come back and re-clean at no charge. We serve Hinsdale alongside nearby{" "}
             <Link href="/move-out-cleaning-westmont-il" className="text-brand-green font-semibold hover:underline">Westmont</Link>,{" "}
             <Link href="/move-out-cleaning-oak-brook-il" className="text-brand-green font-semibold hover:underline">Oak Brook</Link>, and{" "}
@@ -347,7 +347,7 @@ export default function MoveOutCleaningHinsdalePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "Walkthrough-Ready Results", desc: "Our checklist covers every area buyers inspect — ovens, fridges, grout lines, cabinet interiors, baseboards, mirrors.", icon: "💵" },
+              { title: "Walkthrough-Ready Results", desc: "Our checklist covers every area buyers inspect: ovens, fridges, grout lines, cabinet interiors, baseboards, mirrors.", icon: "💵" },
               { title: "48-Hour Re-Clean Promise", desc: "If your buyer&rsquo;s agent flags anything after we leave, we come back and fix it free within 48 hours.", icon: "🔄" },
               { title: "Fully Insured & Bonded", desc: "Licensed and liability-insured on every job. Your listing agent and buyers can proceed with confidence.", icon: "🛡️" },
               { title: "Family-Owned & Local", desc: "Serving Hinsdale and DuPage County from nearby Romeoville. Memo answers his own phone.", icon: "🏠" },
@@ -444,7 +444,7 @@ export default function MoveOutCleaningHinsdalePage() {
             <div className="text-white">
               <h2 className="text-4xl font-bold mb-4">Get Your Free Hinsdale Move-Out Quote</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                Get your free move-out cleaning quote for Hinsdale, IL — we respond within
+                Get your free move-out cleaning quote for Hinsdale, IL. We respond within
                 1 business day and back every job with our 48-hour satisfaction guarantee.
                 Walkthrough-ready, or we come back and re-clean at no charge.
               </p>

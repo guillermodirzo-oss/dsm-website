@@ -20,17 +20,17 @@ const faqs = [
   {
     question: "Can you get my Lemont home walkthrough-ready for the final inspection?",
     answer:
-      "Yes — that's exactly what we're built for. Our Lemont move-out cleaning is designed to meet the standards buyers and their agents look for during final walkthroughs. We clean every surface, inside every appliance, and inside every cabinet so your Lemont home makes the best possible impression and the sale stays on track.",
+      "Yes, that's exactly what we're built for. Our Lemont move-out cleaning is designed to meet the standards buyers and their agents look for during final walkthroughs. We clean every surface, inside every appliance, and inside every cabinet so your Lemont home makes the best possible impression and the sale stays on track.",
   },
   {
     question: "How far in advance should I book move-out cleaning in Lemont?",
     answer:
-      "We recommend booking at least 3-5 days before your move-out date to secure your preferred time slot in Lemont. That said, we do our best to accommodate last-minute requests — give us a call at (815) 246-2113 and we'll see what we can do.",
+      "We recommend booking at least 3-5 days before your move-out date to secure your preferred time slot in Lemont. That said, we do our best to accommodate last-minute requests. Give us a call at (815) 246-2113 and we'll see what we can do.",
   },
   {
     question: "Do you clean inside appliances during Lemont move-out cleans?",
     answer:
-      "Yes — appliances are a central part of our move-out cleaning checklist. We clean inside and outside the oven, inside and outside the refrigerator (including all drawers and shelves), inside the microwave, and the dishwasher interior. These are the areas Lemont buyers and property managers inspect most closely.",
+      "Yes, appliances are a central part of our move-out cleaning checklist. We clean inside and outside the oven, inside and outside the refrigerator (including all drawers and shelves), inside the microwave, and the dishwasher interior. These are the areas Lemont buyers and property managers inspect most closely.",
   },
   {
     question: "How long does a move-out clean take in Lemont, IL?",
@@ -40,7 +40,7 @@ const faqs = [
   {
     question: "Do you serve all of Lemont, IL 60439?",
     answer:
-      "Yes — we serve all of Lemont, including zip code 60439 and all neighborhoods: Historic Downtown Lemont, Centennial Crossing, Covington Knolls, Burning Tree Estates, and Heritage Lake. We're based in nearby Romeoville and serve Lemont regularly alongside our Bolingbrook and Joliet clients.",
+      "Yes, we serve all of Lemont, including zip code 60439 and all neighborhoods: Historic Downtown Lemont, Centennial Crossing, Covington Knolls, Burning Tree Estates, and Heritage Lake. We're based in nearby Romeoville and serve Lemont regularly alongside our Bolingbrook and Joliet clients.",
   },
 ];
 
@@ -174,7 +174,7 @@ const trustBadges = [
 
 const reviews3 = [
   { name: "Bill Aros", text: "We are very happy with DSM Cleaning Solutions. They do an excellent job and would hire them again." },
-  { name: "Julie G.", text: "This service is consistently perfect! And, I love the website interface -- it makes everything easy and customizable." },
+  { name: "Julie G.", text: "This service is consistently perfect! I love the website interface. It makes everything easy and customizable." },
   { name: "Pati Mangano", text: "As always everything was great." },
 ];
 
@@ -211,7 +211,7 @@ export default function MoveOutCleaningLemontPage() {
               </p>
               <p className="text-lg text-white/85 mb-8 leading-relaxed">
                 Selling your Lemont home or moving out of a rental? DSM Cleaning Solutions
-                delivers a thorough, buyer-ready clean throughout Lemont — including Historic
+                delivers a thorough, buyer-ready clean throughout Lemont, including Historic
                 Downtown, Centennial Crossing, Covington Knolls, Burning Tree Estates, and
                 Heritage Lake. Your home will be walkthrough-ready, or we come back and
                 re-clean at no charge.
@@ -260,7 +260,7 @@ export default function MoveOutCleaningLemontPage() {
             <div className="pt-8">
               <p className="text-gray-800 text-lg leading-relaxed font-medium">
                 I&rsquo;m so glad DSM Cleaning Services was recommended to us by our realtor! They are fantastic,
-                and their website makes arranging cleanings so easy. I highly recommend them — I will be
+                and their website makes arranging cleanings so easy. I highly recommend them. I will be
                 using them many more times!
               </p>
               <div className="mt-4">
@@ -279,18 +279,18 @@ export default function MoveOutCleaningLemontPage() {
           <p className="text-gray-600 mb-4 leading-relaxed">
             When you&rsquo;re selling a home in Lemont, the final walkthrough is the last chance to
             make an impression that keeps the deal together. Buyers and their agents look at
-            everything — inside the oven, in the grout lines, behind appliances, under the
+            everything: inside the oven, in the grout lines, behind appliances, under the
             sink. Our Lemont move-out cleaning service is built to pass that inspection every time.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
             We&rsquo;re a family-owned cleaning company based in Romeoville, just minutes from Lemont.
             We&rsquo;ve cleaned homes across Historic Downtown Lemont, Centennial Crossing, Covington
             Knolls, Burning Tree Estates, and Heritage Lake for sellers and renters who needed
-            a spotless result — not just a surface wipe-down. Our team follows a detailed,
+            a spotless result, not just a surface wipe-down. Our team follows a detailed,
             room-by-room checklist that covers every area a walkthrough will touch.
           </p>
           <p className="text-gray-600 leading-relaxed">
-            Every job is backed by our 48-hour satisfaction guarantee — walkthrough-ready, or
+            Every job is backed by our 48-hour satisfaction guarantee. Walkthrough-ready, or
             we come back and re-clean at no charge. We serve Lemont alongside nearby{" "}
             <Link href="/move-out-cleaning-burr-ridge-il" className="text-brand-green font-semibold hover:underline">Burr Ridge</Link> and{" "}
             <Link href="/move-out-cleaning-hinsdale-il" className="text-brand-green font-semibold hover:underline">Hinsdale</Link>.
@@ -347,10 +347,10 @@ export default function MoveOutCleaningLemontPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "Walkthrough-Ready Results", desc: "Our checklist covers every area buyers inspect — ovens, fridges, grout lines, cabinet interiors, baseboards, mirrors.", icon: "💵" },
+              { title: "Walkthrough-Ready Results", desc: "Our checklist covers every area buyers inspect: ovens, fridges, grout lines, cabinet interiors, baseboards, mirrors.", icon: "💵" },
               { title: "48-Hour Re-Clean Promise", desc: "If your buyer's agent or landlord flags anything after we leave, we come back and fix it free within 48 hours.", icon: "🔄" },
               { title: "Fully Insured & Bonded", desc: "Licensed and liability-insured on every job. Your listing agent and buyers can proceed with confidence.", icon: "🛡️" },
-              { title: "Family-Owned & Local", desc: "Based in nearby Romeoville — serving Lemont and the southwest suburbs every week. Memo answers his own phone.", icon: "🏠" },
+              { title: "Family-Owned & Local", desc: "Based in nearby Romeoville, serving Lemont and the southwest suburbs every week. Memo answers his own phone.", icon: "🏠" },
             ].map((card) => (
               <div key={card.title} className="text-center p-6 rounded-xl border border-gray-100 shadow-sm">
                 <span className="text-4xl block mb-3">{card.icon}</span>
@@ -444,7 +444,7 @@ export default function MoveOutCleaningLemontPage() {
             <div className="text-white">
               <h2 className="text-4xl font-bold mb-4">Get Your Free Lemont Move-Out Quote</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                Get your free move-out cleaning quote for Lemont, IL — we respond within
+                Get your free move-out cleaning quote for Lemont, IL. We respond within
                 1 business day and back every job with our 48-hour satisfaction guarantee.
                 Walkthrough-ready, or we come back and re-clean at no charge.
               </p>

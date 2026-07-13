@@ -25,7 +25,7 @@ const faqs = [
   {
     question: "Do you clean empty apartments and rental homes in Romeoville?",
     answer:
-      "Yes — we specialize in cleaning empty properties for both outgoing tenants and incoming renters throughout Romeoville (zip code 60446), including all neighborhoods like Windstone, Hidden Lakes, and Grand Haven.",
+      "Yes, we specialize in cleaning empty properties for both outgoing tenants and incoming renters throughout Romeoville (zip code 60446), including all neighborhoods like Windstone, Hidden Lakes, and Grand Haven.",
   },
   {
     question: "How much does move-out cleaning cost in Romeoville, IL?",
@@ -35,12 +35,12 @@ const faqs = [
   {
     question: "Will your Romeoville move-out cleaning help me get my deposit back?",
     answer:
-      "That's our goal. Our move-out cleaning checklist is designed specifically to meet Romeoville landlord standards — including cleaning inside all appliances, cabinets, closets, grout lines, and every area a property manager is likely to inspect.",
+      "That's our goal. Our move-out cleaning checklist is designed specifically to meet Romeoville landlord standards, including cleaning inside all appliances, cabinets, closets, grout lines, and every area a property manager is likely to inspect.",
   },
   {
     question: "Is DSM Cleaning Solutions locally based in Romeoville for move-out cleaning?",
     answer:
-      "Yes — DSM Cleaning Solutions is headquartered right here in Romeoville. We know the local rental market, understand local landlord expectations, and take pride in delivering results that help Romeoville tenants get their deposits back.",
+      "Yes, DSM Cleaning Solutions is headquartered right here in Romeoville. We know the local rental market, understand local landlord expectations, and work to help Romeoville tenants get their deposits back.",
   },
 ];
 
@@ -68,7 +68,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Move-out & move-in cleaning in Romeoville, IL (60446). DSM Cleaning Solutions — locally owned, deposit-back guarantee, eco-friendly products.",
+    "Move-out & move-in cleaning in Romeoville, IL (60446). DSM Cleaning Solutions, locally owned, deposit-back guarantee, eco-friendly products.",
 };
 
 const faqSchema = {
@@ -174,7 +174,7 @@ const trustBadges = [
 
 const reviews3 = [
   { name: "Pati Mangano", text: "As always everything was great." },
-  { name: "Julie G.", text: "This service is consistently perfect! And, I love the website interface -- it makes everything easy and customizable." },
+  { name: "Julie G.", text: "This service is consistently perfect! I love the website interface. It makes everything easy and customizable." },
   { name: "Jae Mac", text: "I highly recommend, customer since 2024 🍊🍊🍊" },
 ];
 
@@ -273,14 +273,14 @@ export default function MoveOutCleaningRomeovillePage() {
           <h2 className="section-heading mb-6">Move-Out & Move-In Cleaning in Romeoville, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Move-out and move-in cleaning in Romeoville, IL is at the heart of what DSM Cleaning
-            Solutions does — and as a company based right here in 60446, we understand the local
+            Solutions does, and as a company based right here in 60446, we understand the local
             rental market better than anyone. Romeoville renters in Windstone, Hidden Lakes, and
             Grand Haven trust us to deliver the kind of comprehensive clean that satisfies
             landlord inspections and protects their security deposit.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Moving is already stressful enough. Our Romeoville move-out cleaning service takes the
-            cleaning completely off your plate. We handle every room, every appliance, every surface —
+            cleaning completely off your plate. We handle every room, every appliance, every surface,
             working from a detailed checklist that leaves nothing to chance. From cleaning inside the
             refrigerator to scrubbing grout lines in every bathroom, we cover every area a landlord
             is likely to inspect.
@@ -288,7 +288,7 @@ export default function MoveOutCleaningRomeovillePage() {
           <p className="text-gray-600 leading-relaxed">
             We also serve Romeoville landlords preparing units for new tenants and homeowners getting
             ready to sell. Every job uses eco-friendly, non-toxic products and is backed by our
-            48-hour satisfaction guarantee — because your Romeoville deposit matters, and so does
+            48-hour satisfaction guarantee, because your Romeoville deposit matters, and so does
             our reputation in this community.
           </p>
         </div>
@@ -300,7 +300,7 @@ export default function MoveOutCleaningRomeovillePage() {
           <div className="text-center mb-12">
             <h2 className="section-heading">What&rsquo;s Included in Our Move-Out Cleaning in Romeoville, IL</h2>
             <p className="section-subheading mx-auto">
-              Comprehensive coverage of every room — designed to pass any Romeoville property inspection.
+              Comprehensive coverage of every room, designed to pass any Romeoville property inspection.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -344,10 +344,10 @@ export default function MoveOutCleaningRomeovillePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "Deposit-Back Focused", desc: "Our checklist is built specifically for landlord inspections — every appliance, every cabinet, every corner.", icon: "💵" },
+              { title: "Deposit-Back Focused", desc: "Our checklist is built specifically for landlord inspections: every appliance, every cabinet, every corner.", icon: "💵" },
               { title: "48-Hour Re-Clean Promise", desc: "If your landlord finds anything after we leave, we come back and fix it free within 48 hours.", icon: "🔄" },
               { title: "Fully Insured & Bonded", desc: "Licensed and liability-insured on every job. You and your landlord can book with total confidence.", icon: "🛡️" },
-              { title: "Based Right Here in Romeoville", desc: "We're your neighbors — we know this community, this rental market, and these landlord expectations.", icon: "🏠" },
+              { title: "Based Right Here in Romeoville", desc: "We're your neighbors. We know this community, this rental market, and these landlord expectations.", icon: "🏠" },
             ].map((card) => (
               <div key={card.title} className="text-center p-6 rounded-xl border border-gray-100 shadow-sm">
                 <span className="text-4xl block mb-3">{card.icon}</span>
@@ -438,7 +438,7 @@ export default function MoveOutCleaningRomeovillePage() {
               <h2 className="text-4xl font-bold mb-4">Book Your Move-Out Cleaning in Romeoville Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Your neighbors at DSM Cleaning Solutions are ready to help with your Romeoville
-                move-out. Get a free quote today — we back every job with our deposit-back guarantee
+                move-out. Get a free quote today. We back every job with our deposit-back guarantee
                 and 48-hour satisfaction promise.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">

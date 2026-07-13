@@ -5,12 +5,12 @@ import LeadForm from "@/components/LeadForm";
 export const metadata: Metadata = {
   title: "Move-Out Cleaning Plainfield IL | DSM Cleaning Solutions",
   description:
-    "Move-out cleaning in Plainfield IL built to get your deposit back. DSM Cleaning — 5-star rated, 42 Google reviews, 48-hr guarantee. Free quote.",
+    "Move-out cleaning in Plainfield IL built to get your deposit back. DSM Cleaning: 5-star rated, 42 Google reviews, 48-hr guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-plainfield-il" },
   openGraph: {
     title: "Move-Out Cleaning Plainfield IL | DSM Cleaning Solutions",
     description:
-      "Move-out cleaning in Plainfield IL built to get your deposit back. DSM Cleaning — 5-star rated, 42 Google reviews, 48-hr guarantee. Free quote.",
+      "Move-out cleaning in Plainfield IL built to get your deposit back. DSM Cleaning: 5-star rated, 42 Google reviews, 48-hr guarantee. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/move-out-cleaning-plainfield-il",
   },
   twitter: { card: "summary_large_image", images: ["/hero-image.png"] },
@@ -20,12 +20,12 @@ const faqs = [
   {
     question: "How long does a move-out cleaning take in Plainfield, IL?",
     answer:
-      "A move-out clean in Plainfield typically takes 4-7 hours for an average-sized home. Larger homes — like those in Grande Park or Lakewood Falls — may take longer. We'll give you an accurate time estimate when you contact us.",
+      "A move-out clean in Plainfield typically takes 4-7 hours for an average-sized home. Larger homes (like those in Grande Park or Lakewood Falls) may take longer. We'll give you an accurate time estimate when you contact us.",
   },
   {
     question: "Do you serve the Settlers Ridge and Springbank neighborhoods in Plainfield for move-out cleaning?",
     answer:
-      "Yes — we provide move-out cleaning throughout all of Plainfield, including Settlers Ridge, Springbank, Lakewood Falls, Grande Park, and all areas in zip codes 60544 and 60585.",
+      "Yes, we provide move-out cleaning throughout all of Plainfield, including Settlers Ridge, Springbank, Lakewood Falls, Grande Park, and all areas in zip codes 60544 and 60585.",
   },
   {
     question: "How much does move-out cleaning cost in Plainfield, IL?",
@@ -35,12 +35,12 @@ const faqs = [
   {
     question: "Does move-out cleaning in Plainfield include inside cabinets?",
     answer:
-      "Yes — our Plainfield move-out cleaning is comprehensive. We clean inside all kitchen and bathroom cabinets and drawers, closets, and all built-in storage to meet landlord inspection standards.",
+      "Yes, our Plainfield move-out cleaning is comprehensive. We clean inside all kitchen and bathroom cabinets and drawers, closets, and all built-in storage to meet landlord inspection standards.",
   },
   {
     question: "Is DSM Cleaning Solutions insured for move-out cleaning in Plainfield, IL?",
     answer:
-      "Yes — DSM Cleaning Solutions is fully insured and bonded for every job in Plainfield, IL. You and your landlord can book with complete confidence.",
+      "Yes, DSM Cleaning Solutions is fully insured and bonded for every job in Plainfield, IL. You and your landlord can book with complete confidence.",
   },
 ];
 
@@ -179,7 +179,7 @@ const reviews3 = [
   },
   {
     name: "Julie G.",
-    text: "This service is consistently perfect! And, I love the website interface -- it makes everything easy and customizable.",
+    text: "This service is consistently perfect! I love the website interface. It makes everything easy and customizable.",
   },
   {
     name: "Jae Mac",
@@ -218,8 +218,8 @@ export default function MoveOutCleaningPlainfieldPage() {
               <p className="text-xl font-semibold text-white/95 mb-4">Get Your Deposit Back. Guaranteed.</p>
               <p className="text-lg text-white/85 mb-8 leading-relaxed">
                 DSM Cleaning Solutions delivers a landlord-approved, deposit-back move-out clean for
-                Plainfield homes and apartments. We serve all of 60544 and 60585 — from Settlers Ridge
-                to Grande Park — with a comprehensive clean built to pass any inspection.
+                Plainfield homes and apartments. We serve all of 60544 and 60585, from Settlers Ridge
+                to Grande Park, with a comprehensive clean built to pass any inspection.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="#quote-form" className="btn-white btn-lg">Get a Free Quote</a>
@@ -278,9 +278,9 @@ export default function MoveOutCleaningPlainfieldPage() {
       {/* INTRO */}
       <section className="py-14 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading mb-6">Move-Out Cleaning in Plainfield, IL — Built to Get Your Deposit Back</h2>
+          <h2 className="section-heading mb-6">Move-Out Cleaning in Plainfield, IL: Built to Get Your Deposit Back</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Move-out cleaning in Plainfield, IL is one of DSM Cleaning Solutions&rsquo; most requested services —
+            Move-out cleaning in Plainfield, IL is one of DSM Cleaning Solutions&rsquo; most requested services,
             and it&rsquo;s easy to understand why. Plainfield renters in Settlers Ridge, Lakewood Falls,
             Springbank, and across zip codes 60544 and 60585 trust us to deliver the kind of deep,
             comprehensive clean that meets even the strictest landlord standards and maximizes the
@@ -288,7 +288,7 @@ export default function MoveOutCleaningPlainfieldPage() {
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Our Plainfield move-out cleaning service isn&rsquo;t a surface-level wipe-down. We clean inside
-            every appliance, inside every cabinet, inside every closet — every corner of the empty
+            every appliance, inside every cabinet, inside every closet, every corner of the empty
             home that a landlord or property manager is likely to inspect. The goal is simple: leave
             the property in better condition than when you first moved in.
           </p>
@@ -351,7 +351,7 @@ export default function MoveOutCleaningPlainfieldPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "Deposit-Back Focused", desc: "Our checklist is built specifically for landlord inspections — every appliance, every cabinet, every corner.", icon: "💵" },
+              { title: "Deposit-Back Focused", desc: "Our checklist is built specifically for landlord inspections: every appliance, every cabinet, every corner.", icon: "💵" },
               { title: "48-Hour Re-Clean Promise", desc: "If your landlord finds anything after we leave, we come back and fix it free within 48 hours.", icon: "🔄" },
               { title: "Fully Insured & Bonded", desc: "Licensed and liability-insured on every job. You and your landlord can book with total confidence.", icon: "🛡️" },
               { title: "Family-Owned & Local", desc: "Based right here in the southwest suburbs. Memo answers his own phone and stands behind every clean.", icon: "🏠" },
@@ -445,7 +445,7 @@ export default function MoveOutCleaningPlainfieldPage() {
               <h2 className="text-4xl font-bold mb-4">Book Your Move-Out Cleaning in Plainfield Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Moving out in Plainfield, IL? Get your free quote today. We serve all of 60544 and 60585
-                and back every move-out job with our satisfaction guarantee — your deposit back or
+                and back every move-out job with our satisfaction guarantee. Deposit back, or
                 we re-clean at no charge.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">

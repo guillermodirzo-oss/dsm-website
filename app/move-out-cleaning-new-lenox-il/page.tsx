@@ -20,17 +20,17 @@ const faqs = [
   {
     question: "Can you help me get my security deposit back in New Lenox, IL?",
     answer:
-      "Yes — our New Lenox move-out cleaning is specifically designed to meet landlord inspection standards. We clean every surface, inside every appliance, and inside every cabinet so your property looks move-in ready and gives you the best possible chance of getting your full security deposit back.",
+      "Yes, our New Lenox move-out cleaning is specifically designed to meet landlord inspection standards. We clean every surface, inside every appliance, and inside every cabinet so your property looks move-in ready and gives you the best possible chance of getting your full security deposit back.",
   },
   {
     question: "How far in advance should I book move-out cleaning in New Lenox?",
     answer:
-      "We recommend booking at least 3-5 days before your move-out date to secure your preferred time slot. That said, we do our best to accommodate last-minute requests in New Lenox — give us a call at (815) 246-2113 and we'll see what we can do.",
+      "We recommend booking at least 3-5 days before your move-out date to secure your preferred time slot. That said, we do our best to accommodate last-minute requests in New Lenox. Give us a call at (815) 246-2113 and we'll see what we can do.",
   },
   {
     question: "Do you clean appliances during New Lenox move-out cleans?",
     answer:
-      "Yes — appliances are a central part of our move-out cleaning checklist. We clean inside and outside the oven, inside and outside the refrigerator (including all drawers and shelves), inside the microwave, and the dishwasher interior. These are the areas New Lenox landlords and property managers inspect most closely.",
+      "Yes, appliances are a central part of our move-out cleaning checklist. We clean inside and outside the oven, inside and outside the refrigerator (including all drawers and shelves), inside the microwave, and the dishwasher interior. These are the areas New Lenox landlords and property managers inspect most closely.",
   },
   {
     question: "How long does a move-out clean take in New Lenox?",
@@ -40,7 +40,7 @@ const faqs = [
   {
     question: "Do you serve zip code 60451 in New Lenox for move-out cleaning?",
     answer:
-      "Yes — we serve all of New Lenox, including zip code 60451 and all neighborhoods: Sanctuary, Spencer Pointe, Grand Crossing, Savanna Hills, and Pheasant Run Estates. We're based in nearby Romeoville and serve New Lenox regularly alongside our Joliet and Lockport clients.",
+      "Yes, we serve all of New Lenox, including zip code 60451 and all neighborhoods: Sanctuary, Spencer Pointe, Grand Crossing, Savanna Hills, and Pheasant Run Estates. We're based in nearby Romeoville and serve New Lenox regularly alongside our Joliet and Lockport clients.",
   },
 ];
 
@@ -174,7 +174,7 @@ const trustBadges = [
 
 const reviews3 = [
   { name: "Pati Mangano", text: "As always everything was great." },
-  { name: "Julie G.", text: "This service is consistently perfect! And, I love the website interface -- it makes everything easy and customizable." },
+  { name: "Julie G.", text: "This service is consistently perfect! I love the website interface. It makes everything easy and customizable." },
   { name: "Jae Mac", text: "I highly recommend, customer since 2024 🍊🍊🍊" },
 ];
 
@@ -209,7 +209,7 @@ export default function MoveOutCleaningNewLenoxPage() {
               <p className="text-xl font-semibold text-white/95 mb-4">Get Your Deposit Back. Guaranteed.</p>
               <p className="text-lg text-white/85 mb-8 leading-relaxed">
                 Moving out of your New Lenox home or rental? DSM Cleaning Solutions delivers a thorough,
-                landlord-inspection-ready clean throughout New Lenox — including Sanctuary, Spencer Pointe,
+                landlord-inspection-ready clean throughout New Lenox, including Sanctuary, Spencer Pointe,
                 Grand Crossing, and Pheasant Run Estates. Get your full deposit back.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -274,22 +274,22 @@ export default function MoveOutCleaningNewLenoxPage() {
             Move-out cleaning in New Lenox, IL is about one thing: getting your security deposit back.
             Landlords and property managers throughout New Lenox (zip code 60451) conduct thorough
             move-out inspections, and the areas that generate the most deposit disputes are always
-            the same — oven interior, refrigerator drawers, bathroom grout, cabinet interiors, and
+            the same: oven interior, refrigerator drawers, bathroom grout, cabinet interiors, and
             ceiling fans. Our move-out cleaning service covers every one of them.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
             We&rsquo;re a family-owned cleaning company based in Romeoville, just minutes from New Lenox.
             We&rsquo;ve helped renters across Sanctuary, Spencer Pointe, Grand Crossing, Savanna Hills,
             and Pheasant Run Estates pass their move-out inspections and walk away with their full deposits.
-            Our team follows a detailed, landlord-focused checklist that covers every room — not just
-            the visible surfaces.
+            Our team follows a detailed, landlord-focused checklist that covers every room,
+            not just the visible surfaces.
           </p>
           <p className="text-gray-600 leading-relaxed">
             New Lenox is just a short drive from both{" "}
             <Link href="/move-out-cleaning-joliet-il" className="text-brand-green font-semibold hover:underline">Joliet</Link> and{" "}
             <Link href="/move-out-cleaning-lockport-il" className="text-brand-green font-semibold hover:underline">Lockport</Link>, and we
-            serve all three markets regularly. Every job is backed by our 48-hour satisfaction guarantee —
-            if your landlord flags anything within 48 hours, we come back and make it right at no charge.
+            serve all three markets regularly. Every job is backed by our 48-hour satisfaction guarantee.
+            If your landlord flags anything within 48 hours, we come back and make it right at no charge.
           </p>
         </div>
       </section>
@@ -343,10 +343,10 @@ export default function MoveOutCleaningNewLenoxPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "Deposit-Back Focused", desc: "Our checklist is built specifically for landlord inspections in New Lenox — every appliance, every cabinet, every corner.", icon: "💵" },
+              { title: "Deposit-Back Focused", desc: "Our checklist is built specifically for landlord inspections in New Lenox: every appliance, every cabinet, every corner.", icon: "💵" },
               { title: "48-Hour Re-Clean Promise", desc: "If your landlord finds anything after we leave, we come back and fix it free within 48 hours.", icon: "🔄" },
               { title: "Fully Insured & Bonded", desc: "Licensed and liability-insured on every job. You and your landlord can book with total confidence.", icon: "🛡️" },
-              { title: "Family-Owned & Local", desc: "Based in nearby Romeoville — your trusted southwest suburbs neighbors. Memo answers his own phone.", icon: "🏠" },
+              { title: "Family-Owned & Local", desc: "Based in nearby Romeoville, your trusted southwest suburbs neighbors. Memo answers his own phone.", icon: "🏠" },
             ].map((card) => (
               <div key={card.title} className="text-center p-6 rounded-xl border border-gray-100 shadow-sm">
                 <span className="text-4xl block mb-3">{card.icon}</span>
@@ -441,7 +441,7 @@ export default function MoveOutCleaningNewLenoxPage() {
               <h2 className="text-4xl font-bold mb-4">Get Your Free New Lenox Move-Out Quote</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Don&rsquo;t leave your deposit on the table. Get your free move-out cleaning quote for
-                New Lenox, IL — we respond within 1 business day and back every job with our
+                New Lenox, IL. We respond within 1 business day and back every job with our
                 48-hour satisfaction guarantee.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
