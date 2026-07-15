@@ -30,8 +30,8 @@ const faqs = [
     a: "You do not need to be home. Many Oak Brook clients provide a key or lockbox code. We handle everything carefully and lock up when we leave.",
   },
   {
-    q: "How much does a deep cleaning cost in Oak Brook IL?",
-    a: "Pricing for Oak Brook homes typically starts around $250. A 3 to 4 bedroom home generally runs $350 to $500 depending on size and scope. Contact us for a free quote.",
+    q: "What if my quote comes in higher than the range listed?",
+    a: "The ranges listed cover typical homes in that bedroom count. If your home runs bigger, has more bathrooms, or needs extra attention, your quote might land higher. We always confirm your exact price before we book anything. No surprises.",
   },
   {
     q: "Do you serve both Oak Brook Center area and Butler National area?",
@@ -328,10 +328,13 @@ export default function DeepCleaningOakBrookPage() {
             Deep Cleaning Prices in Oak Brook IL
           </h2>
           <p className="text-gray-600 leading-relaxed mb-4">
-            Pricing for deep cleaning in Oak Brook typically starts around $250. A 3 to 4 bedroom home generally runs $350 to $500 depending on size and scope of the job. Every quote is free with no obligation.
+            Pricing for deep cleaning in Oak Brook typically starts around $250. A 3 to 4 bedroom home generally runs $350 to $500 depending on your home&rsquo;s exact size, bedroom count, and bathroom count. Every quote is free with no obligation.
           </p>
           <p className="text-gray-600 leading-relaxed mb-6">
             We price by the job so you know the total up front. Fill out the form below or call us for a fast, accurate quote.
+          </p>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Your price depends on three things: how big your home is, how many bedrooms it has, and how many bathrooms it has. The ranges above cover typical homes in that bedroom range. If your home runs bigger or has extra bathrooms, your quote might land higher. We&rsquo;ll always confirm your exact price with you before we book anything. No surprises after we show up.
           </p>
           <a
             href="#quote-form"

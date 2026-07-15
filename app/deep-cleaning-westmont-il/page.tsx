@@ -28,9 +28,9 @@ const faqs = [
       "Yes — we serve all Westmont neighborhoods including the downtown area, Cass Avenue corridor, and all areas within zip code 60559.",
   },
   {
-    question: "How much does deep cleaning cost in Westmont, IL?",
+    question: "What if my quote comes in higher than the range listed?",
     answer:
-      "Deep cleaning in Westmont starts around $225 and increases based on home size and current condition. Contact us for a free, no-obligation quote tailored to your specific home.",
+      "The ranges listed cover typical homes in that bedroom count. If your home runs bigger, has more bathrooms, or needs extra attention, your quote might land higher. We always confirm your exact price before we book anything. No surprises.",
   },
   {
     question: "Do I need to be home during the deep cleaning in Westmont?",
@@ -355,11 +355,14 @@ export default function DeepCleaningWestmontPage() {
             Deep cleaning in Westmont starts around $225 for smaller homes and goes up based on the
             size of your home, the number of bedrooms and bathrooms, and how long it&apos;s been since
             your last professional clean. A 3-4 bedroom home near the Westmont downtown area or
-            Cass Avenue corridor typically falls in the $275-$375 range.
+            Cass Avenue corridor typically falls in the $275-$375 range, depending on your home&rsquo;s exact size, bedroom count, and bathroom count.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
             We always give you a free estimate before anything starts. No surprises. You&apos;ll know
             the price before we show up at your Westmont home.
+          </p>
+          <p className="text-gray-600 mb-4 leading-relaxed">
+            Your price depends on three things: how big your home is, how many bedrooms it has, and how many bathrooms it has. The ranges above cover typical homes in that bedroom range. If your home runs bigger or has extra bathrooms, your quote might land higher. We&rsquo;ll always confirm your exact price with you before we book anything. No surprises after we show up.
           </p>
           <a href="#quote-form" className="inline-flex items-center gap-2 font-bold text-white rounded-full px-8 py-4 text-base transition-all hover:opacity-90 active:scale-95 shadow-md" style={{ backgroundColor: "#E8721C" }}>
             Get My Free Westmont Quote

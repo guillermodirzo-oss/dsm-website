@@ -30,8 +30,8 @@ const faqs = [
     a: "You do not need to be home. Many of our Shorewood clients leave a key or a lockbox code. We handle everything and you can come back to a clean house.",
   },
   {
-    q: "How much does a deep cleaning cost in Shorewood IL?",
-    a: "Pricing starts around $200 for smaller homes. A 3 to 4 bedroom home typically runs $250 to $350 depending on size and condition. Contact us for a free quote.",
+    q: "What if my quote comes in higher than the range listed?",
+    a: "The ranges listed cover typical homes in that bedroom count. If your home runs bigger, has more bathrooms, or needs extra attention, your quote might land higher. We always confirm your exact price before we book anything. No surprises.",
   },
   {
     q: "Do you serve all parts of Shorewood?",
@@ -328,10 +328,13 @@ export default function DeepCleaningShorewoodPage() {
             Deep Cleaning Prices in Shorewood IL
           </h2>
           <p className="text-gray-600 leading-relaxed mb-4">
-            Pricing for deep cleaning in Shorewood starts around $200 for smaller homes. A 3 to 4 bedroom home typically runs $250 to $350 depending on the size and condition of the home. Every quote is free and there are no hidden fees.
+            Pricing for deep cleaning in Shorewood starts around $200 for smaller homes. A 3 to 4 bedroom home typically runs $250 to $350 depending on your home&rsquo;s exact size, bedroom count, and bathroom count. Every quote is free and there are no hidden fees.
           </p>
           <p className="text-gray-600 leading-relaxed mb-6">
             We price by the job, not by the hour, so you know the cost up front. Fill out the form below or give us a call and we will get you a quote fast.
+          </p>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Your price depends on three things: how big your home is, how many bedrooms it has, and how many bathrooms it has. The ranges above cover typical homes in that bedroom range. If your home runs bigger or has extra bathrooms, your quote might land higher. We&rsquo;ll always confirm your exact price with you before we book anything. No surprises after we show up.
           </p>
           <a
             href="#quote-form"

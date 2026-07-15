@@ -42,7 +42,7 @@ const faqs = [
   {
     question: "How much does move-out cleaning cost?",
     answer:
-      "Move-out cleaning with DSM Cleaning Solutions starts at $480 for a 2-bedroom/1-bath home, $660 for a 3-bedroom/2-bath, and $870+ for a 4-bedroom home. The price covers a complete, thorough clean from top to bottom — every item on this checklist. Compare that to a typical security deposit of $1,000–$2,000+, and professional move-out cleaning is a straightforward investment. Contact us for your free Plainfield or Naperville move-out quote.",
+      "Move-out cleaning with DSM Cleaning Solutions starts at $480 for a 2-bedroom/1-bath home, $660 for a 3-bedroom/2-bath, and $870+ for a 4-bedroom/2.5-bath home. The price covers a complete, thorough clean from top to bottom — every item on this checklist. Compare that to a typical security deposit of $1,000–$2,000+, and professional move-out cleaning is a straightforward investment. Contact us for your free Plainfield or Naperville move-out quote.",
   },
 ];
 
@@ -363,6 +363,9 @@ export default function MoveOutCleaningChecklistPage() {
           <p className="text-gray-600 leading-relaxed">
             Every move-out clean is backed by our 48-hour satisfaction guarantee. If your landlord
             finds something we missed, contact us and we&apos;ll return to address it at no charge.
+          </p>
+          <p className="text-gray-600 mb-4 leading-relaxed mt-4">
+            Your price depends on three things: how big your home is, how many bedrooms it has, and how many bathrooms it has. The ranges above cover typical homes in that bedroom range. If your home runs bigger or has extra bathrooms, your quote might land higher. We&rsquo;ll always confirm your exact price with you before we book anything. No surprises after we show up.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
             <Link href="/move-out-cleaning" className="btn-primary">Learn About Move-Out Cleaning</Link>

@@ -30,8 +30,8 @@ const faqs = [
     a: "Yes. We serve Minooka and surrounding areas in Grundy and Kendall County. Getting a cleaning team out to Minooka is easy. Fill out the form or give us a call.",
   },
   {
-    q: "How much does a deep cleaning cost in Minooka IL?",
-    a: "Pricing starts around $200 for smaller homes. A 3 to 4 bedroom home typically runs $250 to $350 depending on size and condition. We offer free quotes with no obligation.",
+    q: "What if my quote comes in higher than the range listed?",
+    a: "The ranges listed cover typical homes in that bedroom count. If your home runs bigger, has more bathrooms, or needs extra attention, your quote might land higher. We always confirm your exact price before we book anything. No surprises.",
   },
   {
     q: "Which areas of Minooka do you clean?",
@@ -328,10 +328,13 @@ export default function DeepCleaningMinookaPage() {
             Deep Cleaning Prices in Minooka IL
           </h2>
           <p className="text-gray-600 leading-relaxed mb-4">
-            Pricing for deep cleaning in Minooka starts around $200 for smaller homes. A 3 to 4 bedroom home typically runs $250 to $350 depending on size and condition. Every quote is free and there are no hidden fees.
+            Pricing for deep cleaning in Minooka starts around $200 for smaller homes. A 3 to 4 bedroom home typically runs $250 to $350 depending on your home&rsquo;s exact size, bedroom count, and bathroom count. Every quote is free and there are no hidden fees.
           </p>
           <p className="text-gray-600 leading-relaxed mb-6">
             We price by the job, not by the hour, so you know the total before we start. Fill out the form below or give us a call for a fast quote.
+          </p>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Your price depends on three things: how big your home is, how many bedrooms it has, and how many bathrooms it has. The ranges above cover typical homes in that bedroom range. If your home runs bigger or has extra bathrooms, your quote might land higher. We&rsquo;ll always confirm your exact price with you before we book anything. No surprises after we show up.
           </p>
           <a
             href="#quote-form"

@@ -30,8 +30,8 @@ const faqs = [
     a: "You do not need to be home. Many Downers Grove clients provide a key or lockbox code. We take care of everything and lock up when we leave.",
   },
   {
-    q: "How much does a deep cleaning cost in Downers Grove IL?",
-    a: "Pricing typically starts around $225 for smaller homes. A 3 to 4 bedroom home generally runs $275 to $375 depending on size and condition. Contact us for a free, no-obligation quote.",
+    q: "What if my quote comes in higher than the range listed?",
+    a: "The ranges listed cover typical homes in that bedroom count. If your home runs bigger, has more bathrooms, or needs extra attention, your quote might land higher. We always confirm your exact price before we book anything. No surprises.",
   },
   {
     q: "Do you serve all parts of Downers Grove?",
@@ -328,10 +328,13 @@ export default function DeepCleaningDownersGrovePage() {
             Deep Cleaning Prices in Downers Grove IL
           </h2>
           <p className="text-gray-600 leading-relaxed mb-4">
-            Pricing for deep cleaning in Downers Grove typically starts around $225. A 3 to 4 bedroom home generally runs $275 to $375 depending on size and condition. Every quote is free with no obligation.
+            Pricing for deep cleaning in Downers Grove typically starts around $225. A 3 to 4 bedroom home generally runs $275 to $375 depending on your home&rsquo;s exact size, bedroom count, and bathroom count. Every quote is free with no obligation.
           </p>
           <p className="text-gray-600 leading-relaxed mb-6">
             We price by the job so you know the cost before we start. Fill out the form below or give us a call for a fast, accurate quote.
+          </p>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Your price depends on three things: how big your home is, how many bedrooms it has, and how many bathrooms it has. The ranges above cover typical homes in that bedroom range. If your home runs bigger or has extra bathrooms, your quote might land higher. We&rsquo;ll always confirm your exact price with you before we book anything. No surprises after we show up.
           </p>
           <a
             href="#quote-form"

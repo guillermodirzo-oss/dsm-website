@@ -166,6 +166,7 @@ export default function OneTimeCleaningPage() {
                   </div>
                 ))}
                 <p className="text-xs text-gray-500 mt-4">*First-time or one-time cleans may take longer than recurring visits. Prices are estimates — contact us for a free custom quote.</p>
+                <p className="text-xs text-gray-400 mt-2">Bathrooms and square footage also factor into your final price. We&rsquo;ll confirm your exact number before you book, free, no obligation.</p>
               </div>
               <div className="bg-orange-50 border border-orange-100 rounded-2xl p-5">
                 <h4 className="font-bold text-gray-900 mb-2">💡 Want to save money long-term?</h4>
