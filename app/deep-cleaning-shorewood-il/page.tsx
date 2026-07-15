@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import CityDeepCleanForm from "@/components/CityDeepCleanForm";
+import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 
 export const metadata: Metadata = {
   title: "Deep Cleaning Services Shorewood IL | DSM Cleaning Solutions",
@@ -327,22 +328,15 @@ export default function DeepCleaningShorewoodPage() {
           <h2 className="text-2xl font-bold text-gray-800 mb-4">
             Deep Cleaning Prices in Shorewood IL
           </h2>
-          <p className="text-gray-600 leading-relaxed mb-4">
-            Pricing for deep cleaning in Shorewood starts around $200 for smaller homes. A 3 to 4 bedroom home typically runs $250 to $350 depending on your home&rsquo;s exact size, bedroom count, and bathroom count. Every quote is free and there are no hidden fees.
-          </p>
-          <p className="text-gray-600 leading-relaxed mb-6">
-            We price by the job, not by the hour, so you know the cost up front. Fill out the form below or give us a call and we will get you a quote fast.
-          </p>
+          <div className="text-gray-600 leading-relaxed mb-4">{DEEP_CLEANING_PRICING_COPY}</div>
           <p className="text-gray-600 leading-relaxed mb-4">
             Your price depends on three things: how big your home is, how many bedrooms it has, and how many bathrooms it has. The ranges above cover typical homes in that bedroom range. If your home runs bigger or has extra bathrooms, your quote might land higher. We&rsquo;ll always confirm your exact price with you before we book anything. No surprises after we show up.
           </p>
-          <a
-            href="#quote-form"
-            style={{ backgroundColor: "#E8721C" }}
-            className="text-white font-bold px-8 py-3 rounded-lg hover:opacity-90 transition inline-block"
-          >
-            Get a Free Quote
-          </a>
+          <p className="text-gray-600 text-sm mb-4">Want your exact price right now? See it in about 2 minutes below. Prefer we call you instead? Fill out the quick form.</p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link href="/book" className="text-white font-bold px-8 py-3 rounded-lg hover:opacity-90 transition inline-block text-center" style={{ backgroundColor: "#E8622A" }}>See Your Exact Price</Link>
+            <a href="#quote-form" className="font-bold px-8 py-3 rounded-lg border-2 transition inline-block text-center hover:bg-orange-50" style={{ borderColor: "#E8622A", color: "#E8622A" }}>Get a Free Quote</a>
+          </div>
         </div>
       </section>
 
