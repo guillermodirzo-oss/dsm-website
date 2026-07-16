@@ -197,7 +197,7 @@ export default function DeepCleaningHomerGlenPage() {
                 src="/Work%20Pictures/double-vanity-bathroom-clean-naperville-il.jpg"
                 alt="Deep cleaned bathroom in Homer Glen IL"
                 className="rounded-xl shadow-lg w-full object-cover"
-                style={{ maxHeight: "280px" }}
+                style={{ maxHeight: "340px" }}
               />
             </div>
           </div>

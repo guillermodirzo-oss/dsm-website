@@ -350,14 +350,14 @@ export default function DeepCleaningLemontPage() {
 
       {/* PRICING */}
       <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">How Much Does Deep Cleaning Cost in Lemont, IL?</h2>
           <div className="text-gray-600 mb-4 leading-relaxed">{DEEP_CLEANING_PRICING_COPY}</div>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Your price depends on three things: how big your home is, how many bedrooms it has, and how many bathrooms it has. The ranges above cover typical homes in that bedroom range. If your home runs bigger or has extra bathrooms, your quote might land higher. We&rsquo;ll always confirm your exact price with you before we book anything. No surprises after we show up.
           </p>
           <p className="text-gray-600 text-sm mb-4">Want your exact price right now? See it in about 2 minutes below. Prefer we call you instead? Fill out the quick form.</p>
-          <div className="flex flex-col sm:flex-row gap-3">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/book" className="inline-flex items-center justify-center font-bold text-white rounded-full px-8 py-4 text-base transition-all hover:opacity-90 active:scale-95 shadow-md" style={{ backgroundColor: "#E8622A" }}>See Your Exact Price</Link>
             <a href="#quote-form" className="inline-flex items-center justify-center font-bold rounded-full px-8 py-4 text-base transition-all hover:bg-orange-50 active:scale-95 border-2" style={{ borderColor: "#E8622A", color: "#E8622A" }}>Get a Free Quote</a>
           </div>

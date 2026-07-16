@@ -155,8 +155,7 @@ export default function DeepCleaningPage() {
 
       {/* HERO */}
       <section
-        style={{ background: "linear-gradient(135deg, #1a4731 0%, #2d6a4f 100%)" }}
-        className="text-white py-16 px-4"
+        className="bg-gradient-to-br from-brand-green-dark via-brand-green to-brand-green-light text-white py-16 px-4"
       >
         <div className="max-w-5xl mx-auto">
           <nav className="text-sm mb-4 opacity-80">
@@ -200,7 +199,7 @@ export default function DeepCleaningPage() {
                 src="/Work%20Pictures/double-vanity-bathroom-clean-naperville-il.jpg"
                 alt="Professional deep cleaning results in Romeoville and Plainfield IL"
                 className="rounded-xl shadow-lg w-full object-cover"
-                style={{ maxHeight: "280px" }}
+                style={{ maxHeight: "340px" }}
               />
             </div>
           </div>
