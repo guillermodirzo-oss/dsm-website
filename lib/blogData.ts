@@ -111,6 +111,93 @@ export const blogPosts: BlogPost[] = [
 <p>A surface wipe-down won't get the oven interior, the grout, the baseboards, or the ceiling fans. DSM Cleaning Solutions' deep cleaning service in Bolingbrook covers every corner — and every visit is backed by our 48-hour satisfaction guarantee. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> today and schedule your deep clean.</p>`,
   },
   {
+    slug: "move-out-cleaning-vs-deep-cleaning",
+    title: "Move-Out Cleaning vs Deep Cleaning - Which One Do You Need?",
+    metaTitle: "Move-Out Cleaning vs Deep Cleaning - Which One Do You Need?",
+    metaDescription:
+      "Not sure whether to book a move-out cleaning or a deep cleaning? Here's exactly how they differ, what each one covers, and how to pick the right one for your situation.",
+    date: "July 16, 2026",
+    dateISO: "2026-07-16",
+    author: "DSM Cleaning Solutions",
+    excerpt:
+      "Deep cleaning and move-out cleaning both go beyond a standard visit, but they're built for different situations. Here's the plain-language breakdown of what each covers, where they differ, and how to pick the right one without guessing.",
+    faqSchema: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Is move-out cleaning more expensive than deep cleaning?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Usually a little more, yes. The difference is mainly the refrigerator interior and the fact that move-out cleans are scoped around what landlords inspect at tenant turnover. The exact price depends on the size of the home and its current condition. Call (815) 246-2113 or book online for a quote based on your specific home. We'll ask a few questions and give you a number before anything is confirmed.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I book a move-out cleaning even if I own the home?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Some homeowners book move-out cleans when selling a property and want it thoroughly cleaned before staging or before new owners take possession. The scope is the same. If you want the refrigerator interior included and the full inspection-level detail, the move-out cleaning is the right service regardless of whether a landlord is involved.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What if I'm moving into a new home? Which service do I need?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "A deep cleaning is the right call when you're moving into a home. You want the place cleaned before your belongings go in, but the move-out inspection checklist doesn't apply here. A deep cleaning covers every room in detail and gets the home genuinely ready to live in.",
+          },
+        },
+      ],
+    },
+    content: `<p>These two services sound similar but they're not the same thing. A <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> and a <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning</a> both go further than a regular visit, but they're built for different situations. Book the wrong one and you might end up short on what you actually need. This post breaks down exactly what each covers, where they differ, and how to pick the right one.</p>
+
+<h2>What Is a Deep Cleaning?</h2>
+<p>A deep cleaning is a thorough one-time clean for a home you're living in. It goes well beyond what a regular maintenance visit covers. The oven interior gets scrubbed. Cabinet interiors get wiped down. Baseboards, ceiling fans, window sills, and grout lines in the bathroom all get addressed, not just the easy-to-reach surfaces.</p>
+<p>People book deep cleans for a lot of different reasons. Moving into a new place and wanting it professionally cleaned before unpacking. The home hasn't had a real professional clean in six months or more. A seasonal reset before winter or spring. Hosting guests for a holiday or an event. Whatever the reason, a deep cleaning brings the home to a level that regular maintenance cleaning doesn't reach.</p>
+
+<h2>What Is a Move-Out Cleaning?</h2>
+<p>A move-out cleaning covers everything in a deep cleaning: oven interior, cabinet interiors, baseboards, grout, ceiling fans, and window sills. The key addition is the refrigerator interior. That's not included in a standard deep cleaning, but landlords almost always check it during move-out inspections.</p>
+<p>Landlords know renters typically pull their food out and leave the fridge without cleaning the shelves, drawers, and door seals. It's one of the first things they open at move-out. A proper move-out cleaning includes it as a standard part of the scope, not an add-on.</p>
+<p>Move-out cleaning is scoped around tenant turnover. The goal isn't a reset for someone staying in the home. It's a clean that satisfies the conditions for getting a security deposit returned.</p>
+
+<h2>Key Differences Side by Side</h2>
+<p>Here's where the two services actually diverge:</p>
+<ul>
+  <li><strong>Refrigerator interior:</strong> Included in move-out cleaning. Not included in a standard deep cleaning. If you need the inside of the refrigerator cleaned, book the move-out service.</li>
+  <li><strong>Purpose:</strong> Deep cleaning is for people staying in the home. Move-out cleaning is for people handing back the keys and wanting their deposit returned.</li>
+  <li><strong>Who books it:</strong> Deep cleans are popular with homeowners doing a seasonal reset, people moving into a home for the first time, and renters staying put. Move-out cleans are almost always booked by renters at the end of a lease or property owners preparing a unit between tenants.</li>
+  <li><strong>Detail level:</strong> Both services are thorough. Move-out cleaning follows a tighter, inspection-focused checklist built around what landlords actually check.</li>
+</ul>
+
+<h2>Which One Is Right for Your Situation?</h2>
+<p>Book a move-out cleaning if you're moving out of a rental and need the security deposit back, a landlord walkthrough is scheduled and the unit needs to pass, or you're preparing a rental property between tenants.</p>
+<p>Book a deep cleaning if you're moving into a home and want it professionally cleaned before your things go in, the home hasn't had a thorough professional clean in several months, you want a seasonal reset, or you're a homeowner cleaning baseboards, grout, and appliances without any landlord involved.</p>
+<p>A simple way to think about it: if there's a landlord inspection coming, book the move-out clean. If there isn't, book the deep clean.</p>
+
+<h2>Can You Book a Deep Clean Instead of a Move-Out Clean to Save Money?</h2>
+<p>You can, but there's a real risk. The refrigerator interior won't be covered, and that's one of the first things a landlord checks. If the inspection comes back with a deduction for a dirty refrigerator, you've spent money on a professional clean and still lost part of the deposit.</p>
+<p>Move-out cleaning is designed specifically for this situation. If getting the deposit back is the goal, the right service is the one built around that goal. The difference in cost between a deep clean and a move-out clean is usually small compared to a typical security deposit deduction.</p>
+
+<h2>What DSM Offers for Both Services</h2>
+<p>DSM Cleaning Solutions offers both deep cleaning and move-out cleaning across the southwest suburbs. We serve <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield</a>, <a href="/naperville-il" class="text-brand-green font-semibold hover:underline">Naperville</a>, <a href="/romeoville-il" class="text-brand-green font-semibold hover:underline">Romeoville</a>, Bolingbrook, Joliet, and Lockport. Both services come with our 48-hour satisfaction guarantee. If anything wasn't done right, we come back and fix it at no charge.</p>
+<p>Booking is simple. Call or book online, tell us the size of your home and what you need, and we'll confirm your appointment and quote before any work is scheduled.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Is move-out cleaning more expensive than deep cleaning?</h3>
+<p>Usually a little more, yes. The difference is mainly the refrigerator interior and the fact that move-out cleans are scoped around what landlords inspect at tenant turnover. The exact price depends on the size of the home and its current condition. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> for a quote based on your specific home. We'll ask a few questions and give you a number before anything is confirmed.</p>
+
+<h3>Can I book a move-out cleaning even if I own the home?</h3>
+<p>Yes. Some homeowners book move-out cleans when selling a property and want it thoroughly cleaned before staging or before new owners take possession. The scope is the same. If you want the refrigerator interior included and the full inspection-level detail, the move-out cleaning is the right service regardless of whether a landlord is involved.</p>
+
+<h3>What if I'm moving into a new home? Which service do I need?</h3>
+<p>A deep cleaning is the right call when you're moving into a home. You want the place cleaned before your belongings go in, but the move-out inspection checklist doesn't apply here. A deep cleaning covers every room in detail and gets the home genuinely ready to live in. Most new homeowners and renters moving in book the deep cleaning service for exactly this reason.</p>
+
+<p>Still not sure which one fits your situation? Just call. We can figure it out in a couple of minutes. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> and we'll get you set up with the right service.</p>`,
+  },
+  {
     slug: "how-to-get-security-deposit-back-joliet-il",
     title: "How to Get Your Full Security Deposit Back in Joliet, IL",
     metaTitle: "How to Get Your Full Security Deposit Back in Joliet, IL",
