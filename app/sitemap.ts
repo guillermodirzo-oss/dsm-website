@@ -281,6 +281,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/blog/end-of-lease-cleaning-checklist-naperville`,
+      lastModified: new Date("2026-07-16"),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/blog/move-out-cleaning-vs-deep-cleaning`,
       lastModified: new Date("2026-07-16"),
       changeFrequency: "monthly" as const,

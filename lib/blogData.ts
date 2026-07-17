@@ -111,6 +111,134 @@ export const blogPosts: BlogPost[] = [
 <p>A surface wipe-down won't get the oven interior, the grout, the baseboards, or the ceiling fans. DSM Cleaning Solutions' deep cleaning service in Bolingbrook covers every corner — and every visit is backed by our 48-hour satisfaction guarantee. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> today and schedule your deep clean.</p>`,
   },
   {
+    slug: "end-of-lease-cleaning-checklist-naperville",
+    title: "End of Lease Cleaning Checklist for Naperville Renters",
+    metaTitle: "End of Lease Cleaning Checklist for Naperville Renters",
+    metaDescription:
+      "Moving out of your Naperville rental? Use this end of lease cleaning checklist to make sure nothing gets missed — and learn how DSM can handle it all for you.",
+    date: "July 16, 2026",
+    dateISO: "2026-07-16",
+    author: "DSM Cleaning Solutions",
+    excerpt:
+      "Losing part of your security deposit over cleaning is more common than most renters expect. This checklist covers every room landlords inspect during a Naperville move-out, plus the spots most tenants miss and how to decide whether to do it yourself or hire a professional.",
+    faqSchema: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "How long does it take to do a move-out clean in Naperville?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "A two-bedroom apartment typically takes four to six hours when you're being thorough. A three or four bedroom home can take six to eight hours or more depending on the condition and how long it's been since any professional cleaning was done. Plan for a full day if you're doing it yourself. Trying to rush a move-out clean is how people miss things and end up losing deposit money over something small.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What's the most common reason landlords withhold deposits in Naperville?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Cleaning. By a wide margin. Damage claims come up, but cleaning is the most common reason renters don't get their full deposit back. The oven interior, the refrigerator, and the bathrooms are the most frequently cited areas. Landlords in Naperville have seen enough move-outs to know exactly where to look, and they check those spots every time.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can DSM clean just the kitchen and bathrooms if the rest is fine?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. If the bedrooms and living areas are already in good shape, we can focus the clean on the kitchen and bathrooms specifically. Just let us know when you call or book online and we'll put together the right scope for your situation. The goal is to get you what you actually need, not to add rooms to the job that don't need attention.",
+          },
+        },
+      ],
+    },
+    content: `<p>Moving out is already a lot to manage. The last thing you want is a letter two weeks after you hand back the keys saying the landlord kept part of your deposit for cleaning. This checklist covers everything <a href="/naperville-il" class="text-brand-green font-semibold hover:underline">Naperville</a> landlords and property managers actually check during a move-out inspection, so you can go through the unit room by room and not miss the spots that cost people money.</p>
+
+<h2>Kitchen Checklist</h2>
+<p>The kitchen takes the most time in a move-out clean because it has the most areas landlords scrutinize. Work through this room first:</p>
+<ul>
+  <li>Oven interior scrubbed with racks removed and cleaned separately</li>
+  <li>Broiler drawer wiped out</li>
+  <li>Stovetop, burners, and drip pans degreased</li>
+  <li>Hood vent cleaned</li>
+  <li>Refrigerator interior cleaned completely: shelves, drawers, and door seals</li>
+  <li>Refrigerator exterior wiped down including the top</li>
+  <li>All cabinet interiors and exteriors wiped</li>
+  <li>Countertops cleaned and sanitized</li>
+  <li>Sink scrubbed and faucet cleaned</li>
+  <li>Microwave cleaned inside and out</li>
+  <li>Floor swept and mopped, including under the stove and refrigerator</li>
+</ul>
+<p>Once you've finished, open the oven and every cabinet for a second look. The oven interior and the cabinet shelves are the spots people think they cleaned but didn't get all the way through the first time.</p>
+
+<h2>Bathroom Checklist</h2>
+<p>Bathrooms are the second most closely inspected room after the kitchen. These areas show up on almost every deduction list:</p>
+<ul>
+  <li>Toilet scrubbed inside the bowl, around the seat and lid, the exterior, the base, and behind</li>
+  <li>Tub and shower walls scrubbed</li>
+  <li>Shower floor scrubbed</li>
+  <li>Grout lines cleaned throughout</li>
+  <li>Sink and faucet scrubbed</li>
+  <li>Mirror cleaned streak-free</li>
+  <li>Vanity exterior and drawers wiped</li>
+  <li>Floor scrubbed, including the corners and around the toilet base</li>
+</ul>
+<p>The grout and the area around the toilet base are the two spots that consistently catch people off guard. They look acceptable from a standing position and only show the buildup when you get close. Landlords get close.</p>
+
+<h2>Bedroom Checklist</h2>
+<p>Bedrooms are more straightforward than kitchens and bathrooms, but a few spots get missed regularly:</p>
+<ul>
+  <li>Closet interiors wiped down, including shelving and the floor inside</li>
+  <li>Baseboards wiped</li>
+  <li>Window sills cleaned</li>
+  <li>Ceiling fans dusted, including the blades and housing</li>
+  <li>All surfaces dusted</li>
+  <li>Floors vacuumed and mopped</li>
+</ul>
+<p>Closet interiors and ceiling fans are the most commonly missed. Closets often get skipped entirely because they weren't part of any regular cleaning routine during the lease. Check both before you sign off on a room.</p>
+
+<h2>Living Areas Checklist</h2>
+<p>Living rooms and common areas tend to look fine at a glance but have specific spots that need attention:</p>
+<ul>
+  <li>Baseboards wiped throughout</li>
+  <li>Ceiling fans dusted</li>
+  <li>Blinds wiped down, both sides</li>
+  <li>Floors vacuumed and mopped</li>
+  <li>Light switches and outlet covers wiped</li>
+  <li>Door frames wiped</li>
+  <li>Walls spot-cleaned where there are marks or scuffs</li>
+</ul>
+<p>Blinds are worth setting aside real time for. Dusty or dirty blinds are easy for a landlord to notice and straightforward to clean if you actually do it rather than rushing past them.</p>
+
+<h2>The Things Most Renters Forget</h2>
+<p>These are the items that show up on deduction lists most often. If you're short on time, prioritize these six areas above everything else:</p>
+<ul>
+  <li><strong>Inside the oven.</strong> Most renters wipe the outside and skip the interior. Landlords open the oven on every inspection. If it's dirty in there, it gets noted.</li>
+  <li><strong>The refrigerator interior.</strong> Pulling out the food isn't enough. The shelves, drawers, and door seals all need to be wiped down completely. It's one of the first things landlords check.</li>
+  <li><strong>Grout lines in the bathroom.</strong> Surface spray doesn't clean grout. You have to scrub, and it takes time. Don't rush past it.</li>
+  <li><strong>Baseboards throughout the home.</strong> They collect dust and scuff marks over the course of a lease and are easy to overlook because you stop noticing them after a while.</li>
+  <li><strong>Inside the kitchen cabinets.</strong> Cabinet shelves collect crumbs, spills, and residue over months or years. Most renters never clean them during the lease, so they're in rough shape by move-out.</li>
+  <li><strong>Behind and around the toilet base.</strong> This spot gets checked on every inspection. It's not comfortable to clean, which is exactly why it gets skipped.</li>
+</ul>
+
+<h2>Should You DIY or Hire a Professional?</h2>
+<p>If the unit is in decent shape, you have a full day to dedicate to it, and you're willing to work through every item on this checklist, you can do a move-out clean yourself. This list gives you everything you need to go through it systematically.</p>
+<p>That said, a few situations make hiring a professional worth it. If the unit needs significant work, if you're short on time during a busy move week, or if you want the peace of mind of a guarantee, a professional <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning</a> is a smart call. DSM's move-out cleaning covers everything on this checklist and comes with a 48-hour satisfaction guarantee. If your landlord finds something that wasn't done right, we come back and fix it at no charge. We also offer <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> for residents who aren't moving but want a thorough professional clean. If you're moving out of a rental, the move-out service is what you need.</p>
+<p>DSM serves Naperville, <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield</a>, <a href="/romeoville-il" class="text-brand-green font-semibold hover:underline">Romeoville</a>, Bolingbrook, Joliet, and Lockport. If you're moving out of a rental anywhere in the southwest suburbs, we likely already clean homes in your neighborhood.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>How long does it take to do a move-out clean in Naperville?</h3>
+<p>A two-bedroom apartment typically takes four to six hours when you're being thorough. A three or four bedroom home can take six to eight hours or more, depending on the condition and how long it's been since any professional cleaning was done. Plan for a full day if you're doing it yourself. Trying to rush a move-out clean is how people miss things and end up losing deposit money over something that wouldn't have taken long to address.</p>
+
+<h3>What's the most common reason landlords withhold deposits in Naperville?</h3>
+<p>Cleaning. By a wide margin. Damage claims come up, but cleaning is the most common reason renters don't get their full deposit back. The oven interior, the refrigerator, and the bathrooms are the most frequently cited areas. Landlords in Naperville have seen enough move-outs to know exactly where to look, and they check those spots every time.</p>
+
+<h3>Can DSM clean just the kitchen and bathrooms if the rest is fine?</h3>
+<p>Yes. If the bedrooms and living areas are already in good shape, we can focus the clean on the kitchen and bathrooms specifically. Just let us know when you call or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> and we'll put together the right scope for your situation. The goal is to get you what you need, not to add rooms to the job that don't need attention.</p>
+
+<p>Whether you're doing it yourself or bringing in a professional team, don't leave anything on this list unchecked. Landlords in Naperville know what to look for. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> and we'll handle it all for you.</p>`,
+  },
+  {
     slug: "move-out-cleaning-vs-deep-cleaning",
     title: "Move-Out Cleaning vs Deep Cleaning - Which One Do You Need?",
     metaTitle: "Move-Out Cleaning vs Deep Cleaning - Which One Do You Need?",
