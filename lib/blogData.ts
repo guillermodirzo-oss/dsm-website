@@ -111,6 +111,93 @@ export const blogPosts: BlogPost[] = [
 <p>A surface wipe-down won't get the oven interior, the grout, the baseboards, or the ceiling fans. DSM Cleaning Solutions' deep cleaning service in Bolingbrook covers every corner — and every visit is backed by our 48-hour satisfaction guarantee. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> today and schedule your deep clean.</p>`,
   },
   {
+    slug: "move-out-cleaning-cost-plainfield-il",
+    title: "How Much Does Move-Out Cleaning Cost in Plainfield, IL? (2026 Guide)",
+    metaTitle: "How Much Does Move-Out Cleaning Cost in Plainfield, IL? (2026 Guide)",
+    metaDescription:
+      "Wondering what move-out cleaning costs in Plainfield, IL? Here's what affects the price, what's included, and why it's almost always worth it to protect your security deposit.",
+    date: "July 16, 2026",
+    dateISO: "2026-07-16",
+    author: "DSM Cleaning Solutions",
+    excerpt:
+      "Move-out cleaning is one of those things people put off pricing until the last minute. This guide covers what drives the cost in Plainfield, what a realistic range looks like, and whether hiring a professional makes sense compared to risking your security deposit.",
+    faqSchema: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Is move-out cleaning more expensive than a deep cleaning?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Usually, yes. A move-out clean includes the refrigerator interior and is specifically scoped for rental inspection requirements. A regular deep cleaning is designed for homeowners doing a seasonal reset or a first-time professional clean. The refrigerator interior alone adds meaningful time to the job, and the overall scope of a move-out clean is focused on passing a landlord's checklist. When you call or book, we'll make sure you're getting the right service for your situation.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do I need to be present for the move-out cleaning?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "No. Most clients aren't home during the clean. You just need to make sure there's a way for the team to get in, whether that's a key, a lockbox code, or a garage code. Let us know the access details when you book and someone can be reached by phone if a question comes up during the job.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How do I get an accurate quote for my Plainfield home?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Call (815) 246-2113 or book online. We'll ask about the size of your home, the number of bathrooms, and when you need it done. We'll give you a quote before anything is confirmed. No estimates that change at the door.",
+          },
+        },
+      ],
+    },
+    content: `<p>Move-out cleaning is one of those things people put off pricing until the last minute. Then they're scrambling to find someone a week before they hand in the keys. This guide covers what affects the cost of <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning</a> in <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield</a>, what a realistic price range looks like, and whether it's worth it compared to taking a chance on your security deposit.</p>
+
+<h2>What Affects the Cost of Move-Out Cleaning in Plainfield</h2>
+<p>Several things drive the price up or down. The biggest factor is the size of the home. A studio or one-bedroom apartment costs less to clean than a 3-bedroom house with two and a half bathrooms. More rooms means more time, and pricing reflects that directly.</p>
+<p>The number of bathrooms matters a lot too. Bathrooms take real time to clean properly when you're doing it right. Scrubbing grout, getting behind the toilet, and cleaning the tub thoroughly adds up. A home with three bathrooms costs more than one with a single full bath.</p>
+<p>Condition of the unit is the other major variable. If the home has been kept up during the lease, the move-out clean is faster. If it's been a few years since a real scrub, there's more work to do and the price reflects that. Some renters also need add-ons like carpet cleaning or exterior window washing. Those are typically priced separately and added to the base move-out clean.</p>
+
+<h2>What a Realistic Price Range Looks Like</h2>
+<p>Move-out cleans in Plainfield run more than a standard recurring cleaning visit because the level of detail required is different. A regular cleaning maintains a home that's already in decent shape. A move-out clean has to pass a landlord's inspection, which means getting into the oven, the refrigerator interior, grout lines, and cabinet shelves that may not have been touched in months or years.</p>
+<p>For a smaller apartment, you're generally looking at a few hundred dollars. A larger single-family home with multiple bathrooms runs higher. The condition of the unit plays a role in the final number too. A home that's been well maintained costs less than one that needs significant work on every surface.</p>
+<p>Quotes vary by company and by the specifics of your home. The most accurate way to get a real number is to call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a>. We'll ask a few questions and give you a quote before anything is scheduled.</p>
+
+<h2>What's Included at That Price</h2>
+<p>A professional move-out clean should cover every area a landlord is going to check. Here's what DSM's move-out cleaning includes:</p>
+<ul>
+  <li><strong>Kitchen:</strong> oven interior and racks scrubbed, stovetop and burners degreased, hood vent cleaned, refrigerator interior and exterior cleaned, cabinet interiors and exteriors wiped, countertops sanitized, sink scrubbed, microwave inside and out, floor swept and mopped</li>
+  <li><strong>Bathrooms:</strong> toilet scrubbed inside and out including the base, tub and shower walls and floor scrubbed, grout cleaned, sink and faucet scrubbed, mirror cleaned streak-free, floor scrubbed</li>
+  <li><strong>Throughout the home:</strong> baseboards wiped, ceiling fans dusted, blinds wiped, all floors vacuumed and mopped, window sills cleaned, light switches wiped</li>
+</ul>
+<p>This scope is more detailed than a regular cleaning visit because the purpose is different. A regular cleaning maintains a clean home. A move-out clean has to satisfy a landlord's checklist.</p>
+
+<h2>Is It Worth Hiring a Professional for Move-Out Cleaning in Plainfield?</h2>
+<p>Run the numbers. If your security deposit is $1,500 and a professional move-out cleaning costs $350, you're spending a fraction of what's at risk to protect all of it. For most renters, that math is easy.</p>
+<p>There's also the time factor. Most people finishing a move are exhausted. You've been packing, coordinating, and managing logistics for days. A landlord-ready clean requires real attention to detail in the kitchen, the bathrooms, and every other part of the unit. Doing it yourself at the end of a move, when you're tired and under time pressure, is exactly when things get missed. A professional team handles it while you focus on getting settled into your new place.</p>
+
+<h2>What Happens If You Don't Get a Professional Clean</h2>
+<p>If the unit isn't left in acceptable condition, the landlord can deduct cleaning costs from the security deposit. Under Illinois law, they have the right to do this as long as they document it properly and send itemized deductions within 30 days of move-out.</p>
+<p>Here's what most renters don't realize: landlords typically charge their own cleaning rates or hire their own vendors, and those costs are often higher than what you'd pay a professional cleaning company upfront. Getting a professional clean before you hand back the keys almost always costs less than the deduction you'd face if you skip it. It's also a cleaner situation in every sense. You leave the unit clean, you get your deposit back, and you're done.</p>
+
+<h2>Why DSM Is the Right Call for Move-Out Cleaning in Plainfield</h2>
+<p>DSM Cleaning Solutions is a locally owned, family-run cleaning company based in the southwest suburbs. Every cleaner on our team passes a background check before their first job, and we carry full liability insurance on every clean. We serve Plainfield, <a href="/naperville-il" class="text-brand-green font-semibold hover:underline">Naperville</a>, <a href="/romeoville-il" class="text-brand-green font-semibold hover:underline">Romeoville</a>, Bolingbrook, Joliet, and Lockport.</p>
+<p>Every move-out clean comes with our 48-hour satisfaction guarantee. If your landlord finds something during the inspection that wasn't cleaned properly, call us within 48 hours and we'll send a team back to fix it at no charge. No back and forth. We want to get it right.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Is move-out cleaning more expensive than a deep cleaning?</h3>
+<p>Usually, yes. A move-out clean includes the refrigerator interior and is specifically scoped for rental inspection requirements. A regular <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> is designed for homeowners doing a seasonal reset or a first-time professional clean without a landlord inspection involved. The refrigerator interior alone adds meaningful time to the job, and the overall scope of a move-out clean is focused on passing a landlord's checklist. When you call or book, we'll make sure you're getting the right service for your situation.</p>
+
+<h3>Do I need to be present for the move-out cleaning?</h3>
+<p>No. Most clients aren't home during the clean. You just need to make sure there's a way for the team to get in, whether that's a key, a lockbox code, or a garage code. Let us know the access details when you book and someone can always be reached by phone if a question comes up during the job. Many clients drop off the key the day before and pick it up when the clean is done.</p>
+
+<h3>How do I get an accurate quote for my Plainfield home?</h3>
+<p>Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a>. We'll ask about the size of your home, how many bathrooms, and when you need it done. We give you a quote before anything is confirmed. No estimates that shift at the door, no surprise fees after the fact.</p>
+
+<p>Don't leave your deposit to chance over cleaning. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> and we'll get it handled.</p>`,
+  },
+  {
     slug: "end-of-lease-cleaning-checklist-naperville",
     title: "End of Lease Cleaning Checklist for Naperville Renters",
     metaTitle: "End of Lease Cleaning Checklist for Naperville Renters",
