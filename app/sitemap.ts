@@ -281,6 +281,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/blog/how-to-get-security-deposit-back-joliet-il`,
+      lastModified: new Date("2026-07-16"),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/blog/how-to-prepare-for-a-deep-cleaning-service`,
       lastModified: new Date("2026-07-06"),
       changeFrequency: "monthly" as const,

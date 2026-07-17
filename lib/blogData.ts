@@ -111,6 +111,102 @@ export const blogPosts: BlogPost[] = [
 <p>A surface wipe-down won't get the oven interior, the grout, the baseboards, or the ceiling fans. DSM Cleaning Solutions' deep cleaning service in Bolingbrook covers every corner — and every visit is backed by our 48-hour satisfaction guarantee. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> today and schedule your deep clean.</p>`,
   },
   {
+    slug: "how-to-get-security-deposit-back-joliet-il",
+    title: "How to Get Your Full Security Deposit Back in Joliet, IL",
+    metaTitle: "How to Get Your Full Security Deposit Back in Joliet, IL",
+    metaDescription:
+      "Moving out of your Joliet rental? Here's what landlords actually check, what gets deducted, and how a professional move-out cleaning helps you get every dollar of your deposit back.",
+    date: "July 16, 2026",
+    dateISO: "2026-07-16",
+    author: "DSM Cleaning Solutions",
+    excerpt:
+      "Losing part of your deposit is one of the most frustrating ways to end a lease. This post breaks down exactly what Joliet landlords are allowed to deduct for, what they inspect at move-out, and how a professional move-out cleaning helps you walk away with your full deposit.",
+    faqSchema: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "How far in advance should I book a move-out cleaning in Joliet?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Book as soon as you know your move-out date. End-of-month dates are especially busy. That's when most leases turn over, and availability gets tight fast. Most renters who wait until the last week have trouble finding an open slot. Booking one to two weeks out gives you a confirmed appointment before keys go back, which is when the cleaning needs to happen.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Does the cleaning include inside the oven and refrigerator?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Both are included in our move-out cleaning service. The oven interior and racks get scrubbed. The refrigerator gets cleaned completely inside and out, including shelves, drawers, and door seals. This is part of what makes move-out cleaning a different scope from a standard deep cleaning visit. Those two appliances alone add significant time to the job, and they're the first things most landlords check.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What if my landlord still tries to charge me after the cleaning?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Call us. If the cleaning was completed and your landlord is disputing something that falls within our scope, we'll come back within 48 hours to address it. If something was missed, we fix it. Illinois law requires landlords to send itemized deduction statements within 30 days of move-out. Having a documented record of when the cleaning was done and what was covered gives you a clear position if you need to dispute a charge.",
+          },
+        },
+      ],
+    },
+    content: `<p>Losing part of your security deposit is one of the most frustrating parts of moving. You paid rent on time, you kept up with the place, and now the landlord is taking money back over cleaning. Landlords in <a href="/joliet-il" class="text-brand-green font-semibold hover:underline">Joliet</a> and across Will County have the legal right to do exactly that if the unit isn't left in acceptable condition. This post covers what they're actually allowed to deduct for, what they look at during the inspection, and what you can do before you hand back the keys.</p>
+
+<h2>What Illinois Landlords Are Legally Allowed to Deduct For</h2>
+<p>Under Illinois law, a landlord can deduct from your security deposit for three things: unpaid rent, damage beyond normal wear and tear, and cleaning if the unit isn't returned in a reasonably clean condition. Most renters understand the first two. Cleaning is the one they underestimate. A dirty oven, a bathroom that wasn't scrubbed, or a refrigerator left with residue inside can each justify a deduction. The landlord doesn't have to overlook it. And if they have photos, you don't have much to push back on.</p>
+
+<h2>What Joliet Landlords Actually Inspect at Move-Out</h2>
+<p>Landlords check the same areas every time because those are the spots renters consistently miss. Here's what gets looked at:</p>
+<ul>
+  <li>Oven interior and broiler drawer</li>
+  <li>Stovetop, drip pans, and grates</li>
+  <li>Refrigerator interior including shelves, drawers, and door seals</li>
+  <li>Bathroom grout in the shower and around the tub</li>
+  <li>The base and back of the toilet</li>
+  <li>Baseboards in every room</li>
+  <li>Window sills and tracks</li>
+  <li>Blinds and light switches</li>
+  <li>Cabinet interiors in the kitchen and bathrooms</li>
+  <li>Floors, including under the stove and refrigerator</li>
+</ul>
+<p>The inspection isn't random. They know where to look, and they'll find it if it's there.</p>
+
+<h2>What Most Renters Get Wrong When Cleaning Before Move-Out</h2>
+<p>The most common mistake is treating a move-out clean like a regular weekly clean. Wiping the stovetop looks fine to you but doesn't touch the grease in the drip pans. Spraying the shower doesn't clean the grout. Running a mop over the floor misses the corners and the baseboards entirely.</p>
+<p>Ovens are where most renters lose money. People put it off or figure it looks okay. Then the landlord opens the door, and that's the first thing on the deduction list. Same with the refrigerator. Most renters empty it out and consider the job done. Landlords expect it wiped down completely, including the shelves, drawers, and door seals.</p>
+<p>Cabinet interiors are another consistent miss. If you never cleaned inside your kitchen cabinets during the lease, there's likely two or three years of crumbs, spills, and residue in there. That shows up in a thorough inspection.</p>
+
+<h2>Why a Professional Move-Out Clean Is Worth It</h2>
+<p>Do the math. If your security deposit is $1,500 and a professional <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning</a> costs $350, you're spending a small fraction of what's at risk to protect all of it. That's a straightforward trade.</p>
+<p>The time factor matters too. A proper move-out clean in a two or three bedroom apartment takes four to six hours when done right. That's a full day of your time during a week when you're already coordinating movers, utility transfers, and address changes. Having a professional team handle it frees you up to manage everything else that needs to happen during a move.</p>
+
+<h2>What DSM's Move-Out Cleaning Covers in Joliet</h2>
+<p>DSM's <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning</a> service covers everything a Joliet landlord is going to check. Here's what's included:</p>
+<ul>
+  <li><strong>Kitchen:</strong> oven interior and racks scrubbed, stovetop and grates degreased, refrigerator interior and exterior cleaned including all shelves and door seals, cabinet interiors and exteriors wiped, sink scrubbed, countertops sanitized, floor swept and mopped</li>
+  <li><strong>Bathrooms:</strong> toilet scrubbed inside and out including the base and behind the bowl, tub and shower walls and floor scrubbed, grout cleaned, sink and faucet scrubbed, mirror cleaned streak-free, floor scrubbed</li>
+  <li><strong>Throughout the home:</strong> baseboards wiped, blinds dusted, ceiling fans cleaned, window sills and tracks wiped, light switches cleaned, all floors vacuumed and mopped</li>
+</ul>
+<p>We also serve renters moving within the area in <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield</a> and <a href="/romeoville-il" class="text-brand-green font-semibold hover:underline">Romeoville</a>.</p>
+
+<h2>The 48-Hour Guarantee</h2>
+<p>If your landlord walks through after the cleaning and finds something that wasn't done to their standard, call DSM within 48 hours. We send a team back at no charge. That guarantee matters specifically for move-out cleans because the landlord inspection is the real test of the work. The job isn't done right unless it holds up under their walk-through.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>How far in advance should I book a move-out cleaning in Joliet?</h3>
+<p>Book as soon as you know your move-out date. End-of-month dates are especially busy. That's when most leases turn over, and availability gets tight fast. Most renters who wait until the last week have trouble finding an open slot. Booking one to two weeks out gives you a confirmed appointment before keys go back, which is when the cleaning needs to happen.</p>
+
+<h3>Does the cleaning include inside the oven and refrigerator?</h3>
+<p>Yes. Both are included in our move-out cleaning service. The oven interior and racks get scrubbed. The refrigerator gets cleaned completely inside and out, including shelves, drawers, and door seals. This is part of what makes move-out cleaning a different scope from a standard <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> visit. Those two appliances alone add significant time to the job, and they're the first things most landlords check.</p>
+
+<h3>What if my landlord still tries to charge me after the cleaning?</h3>
+<p>Call us. If the cleaning was completed and your landlord is disputing something that falls within our scope, we'll come back within 48 hours to address it. If something was missed, we fix it. Illinois law requires landlords to send itemized deduction statements within 30 days of move-out. Having a documented record of when the cleaning was done and what was covered gives you a clear position if you need to dispute a charge.</p>
+
+<p>Don't risk losing your deposit over something you can fix before the inspection. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> and we'll get your Joliet rental ready for the walk-through.</p>`,
+  },
+  {
     slug: "first-time-hiring-cleaning-service-bolingbrook",
     title: "First Time Hiring a Cleaning Service in Bolingbrook? Here's What to Expect",
     metaTitle: "First Time Hiring a Cleaning Service in Bolingbrook? Here's What to Expect",
