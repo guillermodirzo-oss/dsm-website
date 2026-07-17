@@ -111,6 +111,109 @@ export const blogPosts: BlogPost[] = [
 <p>A surface wipe-down won't get the oven interior, the grout, the baseboards, or the ceiling fans. DSM Cleaning Solutions' deep cleaning service in Bolingbrook covers every corner — and every visit is backed by our 48-hour satisfaction guarantee. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> today and schedule your deep clean.</p>`,
   },
   {
+    slug: "what-landlords-check-move-out-will-county",
+    title: "What Landlords Actually Check During Move-Out in Will County, IL",
+    metaTitle: "What Landlords Actually Check During Move-Out in Will County, IL",
+    metaDescription:
+      "Moving out of a Will County rental? Here's exactly what landlords and property managers inspect during move-out walkthroughs — and how to make sure you pass.",
+    date: "July 16, 2026",
+    dateISO: "2026-07-16",
+    author: "DSM Cleaning Solutions",
+    excerpt:
+      "Most renters think they know what a landlord inspects at move-out. They're usually wrong about at least a few things. This post covers the actual areas property managers in Will County walk through — oven interior, grout, baseboards, blinds, and more — so you know exactly what to focus on.",
+    faqSchema: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Can a landlord charge for cleaning if I leave the place mostly clean?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Under Illinois law, a landlord can deduct cleaning costs if the unit isn't left in a reasonably clean condition. 'Mostly clean' isn't a legal standard. If the oven interior is dirty, the refrigerator wasn't wiped out, or the bathrooms have visible buildup, those can all be cited as reasons to withhold part of the deposit. The standard is whether the unit is reasonably clean, not whether it looks clean at a glance.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How long does a landlord have to return my deposit in Illinois?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Under the Illinois Security Deposit Return Act, landlords must return the deposit within 30 days of move-out. If they're making deductions, they must send an itemized written statement of the deductions along with any remaining balance within that same 30-day window. If they miss the deadline without sending itemized deductions, the tenant may have grounds to recover the full deposit.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Is it worth getting a professional move-out clean in Will County?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "For most renters, yes. A professional move-out clean typically costs less than the deposit deduction a landlord would charge for the same issues. Add in the time it takes to do a thorough job yourself at the end of a move, and hiring a professional usually makes sense. DSM's move-out cleaning covers every item on a landlord's checklist and comes with a 48-hour satisfaction guarantee.",
+          },
+        },
+      ],
+    },
+    content: `<p>Most renters think they know what a landlord inspects at move-out. They're usually wrong about at least a few things. This post covers what property managers in <a href="/romeoville-il" class="text-brand-green font-semibold hover:underline">Romeoville</a>, <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield</a>, <a href="/bolingbrook-il" class="text-brand-green font-semibold hover:underline">Bolingbrook</a>, <a href="/joliet-il" class="text-brand-green font-semibold hover:underline">Joliet</a>, and Lockport actually check during a move-out walkthrough, so you know exactly what to focus on before you hand back the keys.</p>
+
+<h2>The Kitchen Gets the Most Scrutiny</h2>
+<p>The kitchen is where most deposit deductions come from. Landlords know it takes real work to clean properly, and they check it thoroughly. Here's what they look at:</p>
+<ul>
+  <li>Oven interior and racks. This is the single most common source of cleaning deductions. Landlords open the oven every time. If there's baked-on grease or residue inside, it gets noted.</li>
+  <li>Stovetop, drip pans, and burners. Surface wiping doesn't get the grease out from under the drip pans. Inspectors know the difference.</li>
+  <li>Refrigerator interior. Shelves, drawers, and door seals. Most renters pull out the food and consider it done. Landlords check every shelf and drawer.</li>
+  <li>Refrigerator exterior, including the top. Dust and residue collect on the top and sides and are easy to spot.</li>
+  <li>All cabinet interiors and drawers. Crumbs, spills, and residue build up inside cabinets over a lease term. Landlords open all of them.</li>
+  <li>Hood vent above the stove. Grease collects in the filter and on the underside. Easy to miss, easy to notice on inspection.</li>
+  <li>Microwave inside and out.</li>
+  <li>Sink, faucet, and countertops. Soap scum, staining, and residue around the faucet base get flagged.</li>
+</ul>
+<p>The oven interior and the refrigerator are the two areas that show up most often on deduction lists. If you take care of nothing else, take care of those two.</p>
+
+<h2>Bathrooms Are the Second Biggest Area</h2>
+<p>Bathrooms get a close look because they're one of the first signs of whether a tenant maintained the place. Here's what inspectors check:</p>
+<ul>
+  <li>Toilet inside the bowl, around the seat and lid, the exterior, the base, and behind. Grime around the toilet base is one of the most common flags.</li>
+  <li>Tub and shower walls, floor, and door or curtain rod area.</li>
+  <li>Grout lines throughout the bathroom. This is a major one. Dark or discolored grout tells a landlord that the bathroom wasn't scrubbed regularly. Surface spray doesn't clean grout. You have to scrub it.</li>
+  <li>Sink, faucet, and drain.</li>
+  <li>Mirror and vanity exterior.</li>
+  <li>Vanity interior and drawers.</li>
+  <li>Floor, including corners and behind the toilet.</li>
+</ul>
+<p>If the grout looks dark in photos a landlord takes during inspection, that's documentation. It's worth taking the time to scrub it properly before they come through.</p>
+
+<h2>Floors Throughout the Home</h2>
+<p>Floors get checked in every room. For carpet, landlords look for stains, odors, and dirt buildup beyond normal wear. Minor carpet wear from foot traffic is considered normal. Stains and embedded dirt are not. For hardwood and vinyl floors, they're looking at whether the floor was cleaned or just swept. Mopping matters.</p>
+<p>Baseboards are a consistent miss. They collect dust and scuff marks over the course of a lease and are easy to overlook because you stop noticing them after a while. Landlords notice. Wipe them down in every room before the inspection.</p>
+
+<h2>Walls, Doors, and Light Fixtures</h2>
+<p>Landlords check walls for marks, scuffs, and damage. Small nail holes from hanging pictures are generally considered normal wear. Large holes, crayon marks, or significant scuffing are a different story. Door frames get wiped with a finger to check for dust and grime buildup. Light switches and outlet covers get wiped too. They're small things, but they show up on a detailed checklist.</p>
+<p>Ceiling fans get inspected for dust. Dusty blades are easy to notice from below. Wipe the blades and the housing before inspection. Blinds are checked for dust, damage, and broken slats. A missing or broken slat can be cited as damage.</p>
+
+<h2>Windows and Blinds</h2>
+<p>Window sills collect grime, dust, and sometimes dead bugs or moisture residue. Landlords check them because they're a visible indicator of whether the unit was maintained. The inside glass gets checked for streaks and residue. If the blinds are dusty or have buildup on them, that gets noted too.</p>
+<p>This is one of the areas renters often rush through or skip. Window sills with visible grime in a landlord's inspection photos make it hard to dispute a deduction.</p>
+
+<h2>What "Normal Wear and Tear" Means in Illinois</h2>
+<p>Under Illinois law, landlords cannot deduct for damage that qualifies as normal wear and tear. That includes things like paint fading from sunlight, small nail holes left from hanging pictures, and carpet wear from regular foot traffic over a long tenancy.</p>
+<p>What they can charge for: cleaning if the unit isn't returned in a reasonably clean condition, damage beyond normal use like large holes in walls or broken fixtures, and stains or burns that weren't there before the tenancy. If you think a deduction is unfair, the itemized statement the landlord is required to send within 30 days is your starting point for pushing back.</p>
+
+<h2>How a Professional Move-Out Clean Addresses All of This</h2>
+<p>DSM's <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning</a> service is specifically built around what landlords check. Every item in this post is covered: oven interior and racks, refrigerator interior and exterior, all cabinet interiors and drawers, bathroom grout, toilet base, baseboards, ceiling fans, blinds, window sills, and every floor surface in the home. This is a different scope than a standard <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> visit, which is designed for homeowners staying in the home rather than for passing a landlord inspection.</p>
+<p>Every move-out clean comes with our 48-hour satisfaction guarantee. If your landlord finds something during the walkthrough that wasn't done right, call us within 48 hours and we'll send a team back at no charge. That guarantee exists because the landlord inspection is the real test of the work, and we want to make sure you pass it.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Can a landlord charge for cleaning if I leave the place mostly clean?</h3>
+<p>Yes. Under Illinois law, a landlord can deduct cleaning costs if the unit isn't left in a reasonably clean condition. "Mostly clean" isn't a legal standard. If the oven interior is dirty, the refrigerator wasn't wiped out, or the bathrooms have visible buildup, those can all be cited as reasons to withhold part of the deposit. The standard is whether the unit is reasonably clean, not whether it looks acceptable at a glance from the doorway.</p>
+
+<h3>How long does a landlord have to return my deposit in Illinois?</h3>
+<p>Under the Illinois Security Deposit Return Act, landlords must return the deposit within 30 days of move-out. If they're making deductions, they must send an itemized written statement of those deductions along with any remaining balance within that same 30-day window. If the landlord misses the deadline without providing itemized deductions, the tenant may have legal grounds to recover the full deposit. Keep records of your move-out date and any communication with the landlord after you hand back the keys.</p>
+
+<h3>Is it worth getting a professional move-out clean in Will County?</h3>
+<p>For most renters, yes. A professional move-out clean typically costs less than the deduction a landlord would charge for the same cleaning issues. Add in the time it takes to do a thorough job yourself at the end of a move, when you're exhausted and under time pressure, and hiring a professional usually makes sense. DSM's move-out cleaning covers every item on a landlord's checklist and comes with a 48-hour satisfaction guarantee. If the inspection turns up something that wasn't done right, we come back and fix it.</p>
+
+<p>Don't guess what the landlord is going to look at. Now you know. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> and we'll take care of every item on their checklist.</p>`,
+  },
+  {
     slug: "move-out-cleaning-cost-plainfield-il",
     title: "How Much Does Move-Out Cleaning Cost in Plainfield, IL? (2026 Guide)",
     metaTitle: "How Much Does Move-Out Cleaning Cost in Plainfield, IL? (2026 Guide)",
