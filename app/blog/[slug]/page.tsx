@@ -52,12 +52,11 @@ export default function BlogPostPage({
   const post = blogPosts.find((p) => p.slug === params.slug);
   if (!post) notFound();
 
-  // IMPORTANT: This schema must NOT include aggregateRating or a LocalBusiness type.
+  // IMPORTANT: This schema must NOT include aggregateRating, a LocalBusiness type, or a publisher field.
   // The root layout (app/layout.tsx) already injects LocalBusiness + aggregateRating globally.
-  // Adding it again here — or linking author/publisher back to the same entity via url —
-  // causes Google to detect "Review has multiple aggregate ratings" in Search Console.
+  // Adding publisher here (even without aggregateRating) causes Google to entity-match "DSM Cleaning
+  // Solutions" back to the LocalBusiness and report "Review has multiple aggregate ratings" in GSC.
   // author uses Organization with name only (no url) to avoid entity-linking to the LocalBusiness.
-  // publisher uses Organization with url + logo but NO aggregateRating.
   const schema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -68,14 +67,6 @@ export default function BlogPostPage({
     author: {
       "@type": "Organization",
       name: "DSM Cleaning Solutions",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "DSM Cleaning Solutions",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://www.dsmcleaningsolutions.com/logo.png",
-      },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
