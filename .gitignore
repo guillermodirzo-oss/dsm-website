@@ -34,4 +34,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# local tool permissions (machine-specific)
+.claude/settings.local.json
+
 .vercel
