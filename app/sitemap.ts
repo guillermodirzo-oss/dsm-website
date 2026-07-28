@@ -635,12 +635,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/deep-cleaning/naperville`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
-    },
-    {
       url: `${baseUrl}/deep-cleaning/hinsdale`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,

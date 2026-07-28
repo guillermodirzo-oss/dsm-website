@@ -3123,7 +3123,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>How to Book DSM Cleaning Solutions in Naperville</h2>
 <p>Booking is simple. You can call us directly at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> for a free estimate and to schedule your preferred date — we're available Monday through Sunday, 8am–6pm. You can also <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> in just a few minutes. We serve all Naperville zip codes: 60540, 60563, 60564, and 60565 — from Cress Creek and Hobson West to River Run, Tall Grass, and every neighborhood in between.</p>
-<p>For everything specific to deep cleaning in Naperville — including pricing details and what to expect on the day — visit our dedicated <a href="/deep-cleaning/naperville" class="text-brand-green font-semibold hover:underline">deep cleaning Naperville page</a>.</p>
+<p>For everything specific to deep cleaning in Naperville — including pricing details and what to expect on the day — visit our dedicated <a href="/deep-cleaning-naperville-il" class="text-brand-green font-semibold hover:underline">deep cleaning Naperville page</a>.</p>
 
 <h2>Frequently Asked Questions</h2>
 

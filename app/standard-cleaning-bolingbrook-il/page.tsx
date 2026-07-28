@@ -3,7 +3,7 @@ import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
-  title: "House Cleaning Bolingbrook IL",
+  title: "House Cleaning Services Bolingbrook IL",
   description:
     "Recurring house cleaning in Bolingbrook, IL. Weekly, bi-weekly, and monthly maid service. Eco-friendly, fully insured, 5-star rated. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/standard-cleaning-bolingbrook-il" },
