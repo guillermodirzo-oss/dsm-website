@@ -4,7 +4,7 @@ import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 
 export const metadata: Metadata = {
-  title: "Deep Cleaning Downers Grove IL | DSM Cleaning Solutions",
+  title: "Deep Cleaning Downers Grove IL",
   description:
     "Professional deep cleaning in Downers Grove, IL. Reliable, thorough service for Downers Grove families. Fully insured, 48-hour guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning/downers-grove" },

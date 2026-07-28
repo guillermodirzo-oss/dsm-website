@@ -4,7 +4,7 @@ import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 
 export const metadata: Metadata = {
-  title: "Deep Cleaning Service in Romeoville & Plainfield IL | DSM Cleaning Solutions",
+  title: "Deep Cleaning Romeoville & Plainfield IL",
   description:
     "Professional deep cleaning for homes in Romeoville, Plainfield & Bolingbrook. Perfect before a big event, after winter, or for a fresh start. Free quote.",
   alternates: {

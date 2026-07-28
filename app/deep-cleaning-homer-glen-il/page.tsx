@@ -4,7 +4,7 @@ import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 
 export const metadata: Metadata = {
-  title: "Deep Cleaning Services Homer Glen IL | DSM Cleaning Solutions",
+  title: "Deep Cleaning Homer Glen IL",
   description:
     "Professional deep cleaning in Homer Glen, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-homer-glen-il" },

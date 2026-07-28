@@ -4,7 +4,7 @@ import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 
 export const metadata: Metadata = {
-  title: "Deep Cleaning Service in Bolingbrook IL | DSM Cleaning Solutions",
+  title: "Deep Cleaning Bolingbrook IL",
   description:
     "Professional deep cleaning in Bolingbrook, IL. Thorough service for every home. Eco-friendly, fully insured, 48-hour satisfaction guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-bolingbrook-il" },

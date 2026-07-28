@@ -4,7 +4,7 @@ import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 
 export const metadata: Metadata = {
-  title: "Deep Cleaning Oak Brook IL | DSM Cleaning Solutions",
+  title: "Deep Cleaning Oak Brook IL",
   description:
     "Professional deep cleaning in Oak Brook, IL. Premium service for luxury homes. Eco-friendly, fully insured, 48-hour satisfaction guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning/oak-brook" },

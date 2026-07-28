@@ -3,7 +3,7 @@ import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
-  title: "Move-Out Cleaning Downers Grove IL | DSM Cleaning Solutions",
+  title: "Move-Out Cleaning Downers Grove IL",
   description:
     "Move-out cleaning in Downers Grove, IL for home sellers and renters. DSM Cleaning Solutions delivers walkthrough-ready cleans in zip codes 60515 & 60516. Fully insured. Free estimate.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-downers-grove-il" },

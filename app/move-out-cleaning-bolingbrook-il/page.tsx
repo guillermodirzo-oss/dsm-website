@@ -3,7 +3,7 @@ import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
-  title: "Move-Out Cleaning Bolingbrook IL | DSM Cleaning Solutions",
+  title: "Move-Out Cleaning Bolingbrook IL",
   description:
     "Move-out cleaning in Bolingbrook, IL built to get your deposit back. DSM Cleaning: 5-star rated, 42 Google reviews, 48-hr guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-bolingbrook-il" },

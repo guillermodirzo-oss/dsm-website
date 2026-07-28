@@ -4,7 +4,7 @@ import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 
 export const metadata: Metadata = {
-  title: "Deep Cleaning Service Romeoville IL | DSM Cleaning Solutions",
+  title: "Deep Cleaning Romeoville IL",
   description:
     "Expert deep cleaning in Romeoville, IL. We scrub baseboards, appliances, bathrooms & more. 5-star rated, 48-hr satisfaction guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-romeoville-il" },

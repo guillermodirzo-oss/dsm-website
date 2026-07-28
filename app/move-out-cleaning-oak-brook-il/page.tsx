@@ -3,7 +3,7 @@ import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
-  title: "Move-Out Cleaning Oak Brook IL | DSM Cleaning Solutions",
+  title: "Move-Out Cleaning Oak Brook IL",
   description:
     "Move-out cleaning in Oak Brook, IL for home sellers. DSM Cleaning Solutions delivers walkthrough-ready cleans in zip code 60523. Fully insured. Free estimate.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-oak-brook-il" },

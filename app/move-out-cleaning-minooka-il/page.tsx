@@ -3,7 +3,7 @@ import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
-  title: "Move-Out Cleaning Minooka IL | DSM Cleaning Solutions",
+  title: "Move-Out Cleaning Minooka IL",
   description:
     "Move-out cleaning in Minooka, IL. DSM Cleaning Solutions helps you get your deposit back. Eco-friendly, fully insured, 48-hr guarantee. Free estimate.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-minooka-il" },

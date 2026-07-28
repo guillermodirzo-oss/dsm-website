@@ -4,7 +4,7 @@ import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 
 export const metadata: Metadata = {
-  title: "Deep Cleaning Burr Ridge IL | DSM Cleaning Solutions",
+  title: "Deep Cleaning Burr Ridge IL",
   description:
     "Professional deep cleaning in Burr Ridge, IL. White-glove service for executive homes. Eco-friendly, fully insured, 48-hour satisfaction guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning/burr-ridge" },

@@ -3,7 +3,7 @@ import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
-  title: "Move-Out Cleaning Homer Glen IL | DSM Cleaning Solutions",
+  title: "Move-Out Cleaning Homer Glen IL",
   description:
     "Move-out cleaning in Homer Glen, IL. DSM Cleaning Solutions helps renters recover deposits and sellers prepare for buyer walkthroughs. Fully insured. Free estimate.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-homer-glen-il" },

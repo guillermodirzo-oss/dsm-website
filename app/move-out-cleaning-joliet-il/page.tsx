@@ -3,7 +3,7 @@ import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
-  title: "Move-Out Cleaning Joliet IL | DSM Cleaning Solutions",
+  title: "Move-Out Cleaning Joliet IL",
   description:
     "Move-out cleaning in Joliet, IL. DSM Cleaning Solutions helps you get your deposit back. Fully insured, 48-hr guarantee. Free estimate.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-joliet-il" },

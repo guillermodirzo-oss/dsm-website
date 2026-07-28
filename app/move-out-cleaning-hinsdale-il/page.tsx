@@ -3,7 +3,7 @@ import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
-  title: "Move-Out Cleaning Hinsdale IL | DSM Cleaning Solutions",
+  title: "Move-Out Cleaning Hinsdale IL",
   description:
     "Move-out cleaning in Hinsdale, IL for home sellers. DSM Cleaning Solutions delivers walkthrough-ready cleans in zip code 60521. Fully insured. Free estimate.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-hinsdale-il" },

@@ -4,7 +4,7 @@ import PlainfieldForm from "./PlainfieldForm";
 import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 
 export const metadata: Metadata = {
-  title: "Deep Cleaning Service in Plainfield IL | DSM Cleaning Solutions",
+  title: "Deep Cleaning Plainfield IL",
   description:
     "Deep cleaning in Plainfield, IL done right. DSM Cleaning — detailed, thorough, and backed by a 48-hr guarantee. Book now: (815) 246-2113.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-plainfield-il" },

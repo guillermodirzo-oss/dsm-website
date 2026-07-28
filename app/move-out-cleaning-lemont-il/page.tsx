@@ -3,7 +3,7 @@ import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
-  title: "Move-Out Cleaning Lemont IL | DSM Cleaning Solutions",
+  title: "Move-Out Cleaning Lemont IL",
   description:
     "Move-out cleaning in Lemont, IL for home sellers and renters. DSM Cleaning Solutions delivers walkthrough-ready cleans. Fully insured. Free estimate.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-lemont-il" },

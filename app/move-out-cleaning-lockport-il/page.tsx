@@ -3,7 +3,7 @@ import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
-  title: "Move-Out Cleaning Lockport IL | DSM Cleaning Solutions",
+  title: "Move-Out Cleaning Lockport IL",
   description:
     "Move-out cleaning in Lockport, IL. DSM Cleaning Solutions helps you get your deposit back. Fully insured, 48-hr guarantee. Free estimate.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-lockport-il" },

@@ -3,7 +3,7 @@ import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
-  title: "Move-Out Cleaning Naperville IL | DSM Cleaning Solutions",
+  title: "Move-Out Cleaning Naperville IL",
   description:
     "Move-out cleaning in Naperville, IL. DSM Cleaning Solutions helps renters recover deposits and sellers pass walkthroughs. Fully insured. 42 Google reviews. Free estimate.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-naperville-il" },

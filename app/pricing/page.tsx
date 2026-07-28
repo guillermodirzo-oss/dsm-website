@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "House Cleaning Prices in Romeoville IL | DSM Cleaning Solutions",
+  title: "House Cleaning Prices Romeoville IL",
   description:
     "Transparent cleaning prices for homes in Romeoville, Plainfield & Bolingbrook IL. See rates for standard, deep, and move-out cleaning. No hidden fees.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/pricing" },

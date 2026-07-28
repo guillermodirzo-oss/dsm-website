@@ -4,7 +4,7 @@ import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 
 export const metadata: Metadata = {
-  title: "Deep Cleaning Service Naperville IL | DSM Cleaning Solutions",
+  title: "Deep Cleaning Naperville IL",
   description:
     "Professional deep cleaning in Naperville, IL. Serving 60540, 60563, 60564 and 60565. Eco-friendly, fully insured, 48-hour satisfaction guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-naperville-il" },

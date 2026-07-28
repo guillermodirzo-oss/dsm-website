@@ -5,7 +5,7 @@ import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
 
 export const metadata: Metadata = {
-  title: "Move-Out Cleaning Services in Romeoville & Plainfield IL | DSM Cleaning Solutions",
+  title: "Move-Out & Move-In Cleaning Romeoville",
   description:
     "Moving out? DSM Cleaning Solutions handles the deep clean so you get your security deposit back. Serving Romeoville, Plainfield & Bolingbrook.",
   keywords: [

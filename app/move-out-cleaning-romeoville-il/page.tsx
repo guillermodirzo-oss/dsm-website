@@ -3,7 +3,7 @@ import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
-  title: "Move-Out Cleaning Romeoville IL | 5-Star Rated | DSM Cleaning",
+  title: "Move-Out Cleaning Romeoville IL",
   description:
     "Trusted move-out cleaning in Romeoville by DSM Cleaning Solutions. 5-star rated, 42 reviews, 48-hr guarantee. Eco-friendly, fully insured. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-romeoville-il" },
