@@ -2,6 +2,7 @@
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
+import { pickReviews, reviewAttribution } from "@/lib/realReviews";
 
 export const metadata: Metadata = {
   title: "One-Time Cleaning Plainfield IL",
@@ -184,9 +185,13 @@ export default function OneTimeCleaningPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12"><h2 className="section-heading">What Clients Say After Their First Clean</h2></div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <ReviewCard name="Rachel B." location="Romeoville, IL" text="I booked a one-time clean before my in-laws visited and DSM completely blew me away. The house was spotless — better than it's ever looked. I've since signed up for monthly service." date="February 2025" />
-            <ReviewCard name="Derek S." location="Plainfield, IL" text="Needed a one-time clean after a renovation project and DSM delivered. They were professional, thorough, and left no dust behind. Exactly what I needed with zero hassle." date="January 2025" />
-            <ReviewCard name="Nadia H." location="Bolingbrook, IL" text="I was nervous trying a new cleaning company but the one-time option felt low-risk. After the first visit I was convinced. Already booked my second. Wonderful team!" date="March 2025" />
+            {pickReviews(3, 7).map((review) => (
+              <ReviewCard
+                key={review.name}
+                name={reviewAttribution(review)}
+                text={review.text}
+              />
+            ))}
           </div>
         </div>
       </section>

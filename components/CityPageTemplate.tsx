@@ -1,9 +1,14 @@
 ﻿import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
+import { pickReviews, reviewAttribution } from "@/lib/realReviews";
 import type { CityData } from "@/lib/cityData";
 
 export default function CityPageTemplate({ city }: { city: CityData }) {
+  // Real Google reviews only. Reviewer cities are unknown, so nothing here
+  // claims a reviewer lives in this city. The offset varies which review each
+  // city leads with; pickReviews clamps so a review never repeats on one page.
+  const cityReviews = pickReviews(3, city.slug.length);
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -305,7 +310,9 @@ export default function CityPageTemplate({ city }: { city: CityData }) {
         </div>
       </section>
 
-      {/* REVIEWS */}
+      {/* REVIEWS — the whole section is omitted when no real review is available,
+          so a bare heading never renders over an empty grid. */}
+      {cityReviews.length > 0 && (
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
@@ -318,18 +325,17 @@ export default function CityPageTemplate({ city }: { city: CityData }) {
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {city.reviews.map((review) => (
+            {cityReviews.map((review) => (
               <ReviewCard
                 key={review.name}
-                name={review.name}
-                location={review.location}
+                name={reviewAttribution(review)}
                 text={review.text}
-                date={review.date}
               />
             ))}
           </div>
         </div>
       </section>
+      )}
 
       {/* FAQ */}
       <section className="py-16 bg-gray-50">

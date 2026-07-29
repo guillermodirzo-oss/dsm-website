@@ -10,7 +10,6 @@ export interface CityData {
   neighborhoods: string[];
   landmarks: string[];
   services: Array<{ icon: string; title: string; desc: string; link: string }>;
-  reviews: Array<{ name: string; location: string; text: string; date: string }>;
   faqs: Array<{ question: string; answer: string }>;
   nearbyAreas: Array<{ city: string; href: string }>;
 }
@@ -76,26 +75,6 @@ export const cities: CityData[] = [
         title: "Apartment Cleaning Naperville",
         desc: "Professional apartment cleaning for renters and property managers throughout Naperville.",
         link: "/apartment-cleaning",
-      },
-    ],
-    reviews: [
-      {
-        name: "Jessica W.",
-        location: "Naperville, IL",
-        text: "DSM transformed my Naperville home — spotless from top to bottom. The eco-friendly products were a huge plus with my toddler running around. Professional, timely, and worth every penny.",
-        date: "March 2025",
-      },
-      {
-        name: "Tom A.",
-        location: "Naperville, IL",
-        text: "I've tried three different cleaning services in Naperville. DSM is by far the best. Consistent, thorough, and they always go above and beyond. Biweekly service for 6 months and counting.",
-        date: "January 2025",
-      },
-      {
-        name: "Priya S.",
-        location: "Naperville, IL",
-        text: "Used DSM for a deep clean before listing my Naperville home for sale. The house looked incredible — our realtor even commented on it. Got multiple offers above asking price that weekend.",
-        date: "February 2025",
       },
     ],
     faqs: [
@@ -196,26 +175,6 @@ export const cities: CityData[] = [
         link: "/apartment-cleaning",
       },
     ],
-    reviews: [
-      {
-        name: "Amanda K.",
-        location: "Bolingbrook, IL",
-        text: "DSM is so close and so good! They had availability the same week I called and did an incredible job on my whole house. I signed up for monthly service on the spot.",
-        date: "February 2025",
-      },
-      {
-        name: "Carlos M.",
-        location: "Bolingbrook, IL",
-        text: "I've had two other cleaning companies before DSM and nothing compares. Thorough, professional, and they actually care about the work. 5 stars every time.",
-        date: "January 2025",
-      },
-      {
-        name: "Lisa T.",
-        location: "Bolingbrook, IL",
-        text: "Used DSM for move-out cleaning on my Bolingbrook townhome. Got my full deposit back and the new owners even reached out to ask who cleaned it. Phenomenal.",
-        date: "March 2025",
-      },
-    ],
     faqs: [
       {
         question: "What neighborhoods in Bolingbrook does DSM Cleaning serve?",
@@ -314,26 +273,6 @@ export const cities: CityData[] = [
         link: "/apartment-cleaning",
       },
     ],
-    reviews: [
-      {
-        name: "Maria G.",
-        location: "Joliet, IL",
-        text: "DSM does my weekly cleaning and I couldn't be happier. They're consistent, thorough, and the eco-friendly products mean I don't worry about my kids. Highly recommend to any Joliet family.",
-        date: "February 2025",
-      },
-      {
-        name: "Robert H.",
-        location: "Joliet, IL",
-        text: "Called DSM for a deep clean of my Joliet home and they knocked it out of the park. Every room was perfect. I've been using them for recurring service ever since.",
-        date: "March 2025",
-      },
-      {
-        name: "Diana P.",
-        location: "Joliet, IL",
-        text: "Excellent move-out cleaning for my Joliet rental. My landlord was impressed and I got my full deposit back without any deductions. Professional and thorough.",
-        date: "January 2025",
-      },
-    ],
     faqs: [
       {
         question: "What neighborhoods in Joliet does DSM Cleaning serve?",
@@ -430,26 +369,6 @@ export const cities: CityData[] = [
         title: "Apartment Cleaning Westmont",
         desc: "Professional apartment cleaning for renters and property managers throughout Westmont.",
         link: "/apartment-cleaning",
-      },
-    ],
-    reviews: [
-      {
-        name: "Karen B.",
-        location: "Westmont, IL",
-        text: "DSM makes the drive to Westmont and it is absolutely worth it. My house has never been this consistently clean. They follow the same thorough checklist every single visit.",
-        date: "March 2025",
-      },
-      {
-        name: "Paul D.",
-        location: "Westmont, IL",
-        text: "Booked a deep clean with DSM for my Westmont condo and they exceeded every expectation. Professional, detail-oriented, and the eco-friendly products were a huge bonus.",
-        date: "January 2025",
-      },
-      {
-        name: "Susan F.",
-        location: "Westmont, IL",
-        text: "I was nervous hiring a company from out of the immediate area but DSM put all my concerns to rest. On time, thorough, and wonderful communication. I'm a regular client now.",
-        date: "February 2025",
       },
     ],
     faqs: [
@@ -555,26 +474,6 @@ export const cities: CityData[] = [
         link: "/apartment-cleaning",
       },
     ],
-    reviews: [
-      {
-        name: "Michelle R.",
-        location: "Lockport, IL",
-        text: "DSM is the best cleaning service I've found in the Lockport area. Consistent, professional, and they genuinely care about doing a great job. My home looks amazing every time.",
-        date: "February 2025",
-      },
-      {
-        name: "James O.",
-        location: "Lockport, IL",
-        text: "Used DSM for a deep clean of my Lockport home before a family event. Absolutely outstanding. Every corner was perfect. Will be booking regular service.",
-        date: "March 2025",
-      },
-      {
-        name: "Linda C.",
-        location: "Lockport, IL",
-        text: "Family-owned and it shows. DSM treats your home like it's their own. I've tried national chains and they don't come close to the personal service DSM provides.",
-        date: "January 2025",
-      },
-    ],
     faqs: [
       {
         question: "Do you clean homes in Lockport, IL?",
@@ -676,26 +575,6 @@ export const cities: CityData[] = [
         title: "Apartment Cleaning Lemont",
         desc: "Professional apartment cleaning for renters and property managers throughout Lemont.",
         link: "/apartment-cleaning",
-      },
-    ],
-    reviews: [
-      {
-        name: "Catherine M.",
-        location: "Lemont, IL",
-        text: "I found DSM through a neighbor's recommendation and I'm so glad I did. They are thorough, professional, and the eco-friendly products are perfect for our family. Excellent service.",
-        date: "February 2025",
-      },
-      {
-        name: "Brian K.",
-        location: "Lemont, IL",
-        text: "DSM did a deep clean on our Lemont home and we were blown away by the results. They cleaned areas I hadn't seen cleaned in years. Booking monthly service now.",
-        date: "March 2025",
-      },
-      {
-        name: "Helen T.",
-        location: "Lemont, IL",
-        text: "Reliable, honest, and really good at what they do. Our Lemont home looks incredible after every DSM visit. Love that they use non-toxic products.",
-        date: "January 2025",
       },
     ],
     faqs: [
@@ -801,26 +680,6 @@ export const cities: CityData[] = [
         link: "/apartment-cleaning",
       },
     ],
-    reviews: [
-      {
-        name: "Nicole S.",
-        location: "Homer Glen, IL",
-        text: "Our Homer Glen home is 3,800 sq ft and DSM handles it beautifully every time. Thorough, organized, and the team is always professional. I won't use anyone else.",
-        date: "February 2025",
-      },
-      {
-        name: "Steve J.",
-        location: "Homer Glen, IL",
-        text: "Used DSM for a deep clean on our large Homer Glen home and the results were fantastic. They spent the time it needed and didn't cut corners anywhere. Highly recommend.",
-        date: "January 2025",
-      },
-      {
-        name: "Debra W.",
-        location: "Homer Glen, IL",
-        text: "DSM has been cleaning our Homer Glen home biweekly for almost a year. Consistent, reliable, and excellent quality every single visit. Our whole family loves coming home on cleaning day.",
-        date: "March 2025",
-      },
-    ],
     faqs: [
       {
         question: "Do you offer house cleaning in Homer Glen, IL?",
@@ -922,26 +781,6 @@ export const cities: CityData[] = [
         title: "Apartment Cleaning New Lenox",
         desc: "Professional apartment cleaning for renters and property managers throughout New Lenox.",
         link: "/apartment-cleaning",
-      },
-    ],
-    reviews: [
-      {
-        name: "Kathleen R.",
-        location: "New Lenox, IL",
-        text: "DSM has been cleaning our New Lenox home monthly for 8 months and they are wonderful. Consistent, professional, and my house looks great after every visit.",
-        date: "January 2025",
-      },
-      {
-        name: "Mark S.",
-        location: "New Lenox, IL",
-        text: "Hired DSM for a deep clean before my parents visited. They did an incredible job — my mom even asked who cleaned the house. That's the best compliment possible!",
-        date: "February 2025",
-      },
-      {
-        name: "Tara B.",
-        location: "New Lenox, IL",
-        text: "Love that DSM is family-owned. You can really feel the personal care they put into their work. My New Lenox home has never been cleaner. Won't go anywhere else.",
-        date: "March 2025",
       },
     ],
     faqs: [
@@ -1047,26 +886,6 @@ export const cities: CityData[] = [
         link: "/apartment-cleaning",
       },
     ],
-    reviews: [
-      {
-        name: "Jennifer A.",
-        location: "Shorewood, IL",
-        text: "DSM is a gem in the southwest suburbs. They clean my Shorewood home biweekly and I love coming home on cleaning day. Professional and thorough every time.",
-        date: "March 2025",
-      },
-      {
-        name: "David M.",
-        location: "Shorewood, IL",
-        text: "Excellent deep cleaning service for my Shorewood home. DSM was professional, detailed, and the house was spotless when they were done. Great value.",
-        date: "January 2025",
-      },
-      {
-        name: "Sandra L.",
-        location: "Shorewood, IL",
-        text: "I was looking for a local cleaning service and DSM was recommended by a neighbor. So glad I called — they do an amazing job and are always on time and professional.",
-        date: "February 2025",
-      },
-    ],
     faqs: [
       {
         question: "Do you offer house cleaning in Shorewood, IL?",
@@ -1140,11 +959,6 @@ export const cities: CityData[] = [
       { icon: "🌿", title: "Eco-Friendly Cleaning Burr Ridge", desc: "Green cleaning using non-toxic products — safe for your Burr Ridge family and the environment.", link: "/eco-friendly-cleaning" },
       { icon: "🏢", title: "Apartment Cleaning Burr Ridge", desc: "Professional apartment and condo cleaning for Burr Ridge properties.", link: "/apartment-cleaning" },
     ],
-    reviews: [
-      { name: "Patricia H.", location: "Burr Ridge, IL", text: "Our home is 4,800 sq ft and DSM handled the deep clean flawlessly. Every room was done to a standard I hadn't seen from a cleaning service before. Methodical and truly professional.", date: "March 2025" },
-      { name: "Edward L.", location: "Burr Ridge, IL", text: "We have high expectations for our Burr Ridge home and DSM met every one of them. They treated our house with real care and got into details that other cleaners skip entirely.", date: "February 2025" },
-      { name: "Claire B.", location: "Burr Ridge, IL", text: "DSM does our deep clean every quarter. Consistent, thorough, and they use products that are safe for our children. That level of trust is hard to find.", date: "January 2025" },
-    ],
     faqs: [
       {
         question: "How much does deep cleaning cost in Burr Ridge, IL?",
@@ -1199,11 +1013,6 @@ export const cities: CityData[] = [
       { icon: "📅", title: "Recurring Maid Service Hinsdale", desc: "Consistent, scheduled cleaning plans for Hinsdale homeowners.", link: "/recurring-cleaning" },
       { icon: "🌿", title: "Eco-Friendly Cleaning Hinsdale", desc: "Non-toxic, biodegradable cleaning products safe for your Hinsdale family.", link: "/eco-friendly-cleaning" },
       { icon: "🏢", title: "Apartment Cleaning Hinsdale", desc: "Professional apartment and condo cleaning throughout Hinsdale.", link: "/apartment-cleaning" },
-    ],
-    reviews: [
-      { name: "Marilyn C.", location: "Hinsdale, IL", text: "DSM treats our Hinsdale home with the kind of care you rarely see from a cleaning service. Thorough, respectful, and they use non-toxic products I feel good about. Highly recommend.", date: "February 2025" },
-      { name: "Thomas W.", location: "Hinsdale, IL", text: "We hired DSM for a deep clean on our 1920s Hinsdale home and they were exceptional. They knew how to work carefully around older finishes while still getting everything spotless.", date: "March 2025" },
-      { name: "Sandra K.", location: "Hinsdale, IL", text: "Consistent, professional, and genuinely detail-oriented. Our Hinsdale home looks better after a DSM visit than it has since we first moved in. Worth every cent.", date: "January 2025" },
     ],
     faqs: [
       {
@@ -1260,11 +1069,6 @@ export const cities: CityData[] = [
       { icon: "🌿", title: "Eco-Friendly Cleaning Oak Brook", desc: "Non-toxic, biodegradable cleaning products safe for Oak Brook families.", link: "/eco-friendly-cleaning" },
       { icon: "🏢", title: "Apartment Cleaning Oak Brook", desc: "Professional apartment and condo cleaning throughout Oak Brook.", link: "/apartment-cleaning" },
     ],
-    reviews: [
-      { name: "Robert J.", location: "Oak Brook, IL", text: "DSM deep cleaned our Oak Brook home before a dinner party and the results were extraordinary. Every surface was immaculate. They understood this home needed premium-level care and they delivered it.", date: "March 2025" },
-      { name: "Christine L.", location: "Oak Brook, IL", text: "I've had several cleaning services over the years in Oak Brook and DSM stands apart. Professional, detail-oriented, and they always do what they say they'll do. Trust is everything in this business.", date: "January 2025" },
-      { name: "Michael T.", location: "Oak Brook, IL", text: "Quarterly deep cleans with DSM for over a year now. The consistency is what I appreciate most — every visit is as thorough as the first. Genuinely impressed by this team.", date: "February 2025" },
-    ],
     faqs: [
       {
         question: "How much does deep cleaning cost in Oak Brook, IL?",
@@ -1319,11 +1123,6 @@ export const cities: CityData[] = [
       { icon: "📅", title: "Recurring Maid Service Downers Grove", desc: "Consistent scheduled cleaning service tailored to your Downers Grove home and schedule.", link: "/recurring-cleaning" },
       { icon: "🌿", title: "Eco-Friendly Cleaning Downers Grove", desc: "Non-toxic, biodegradable products safe for your Downers Grove family and pets.", link: "/eco-friendly-cleaning" },
       { icon: "🏢", title: "Apartment Cleaning Downers Grove", desc: "Professional apartment and condo cleaning for Downers Grove renters and property managers.", link: "/apartment-cleaning" },
-    ],
-    reviews: [
-      { name: "Heather N.", location: "Downers Grove, IL", text: "DSM is exactly what I was looking for — reliable, thorough, and they show up when they say they will. Our Downers Grove home has never looked better. Finally found a cleaning service I can trust.", date: "March 2025" },
-      { name: "Kevin P.", location: "Downers Grove, IL", text: "Hired DSM for a deep clean on our older Downers Grove home. They knew how to handle the details without being rough on the finishes. Excellent work from a genuinely professional team.", date: "February 2025" },
-      { name: "Lisa A.", location: "Downers Grove, IL", text: "I have three kids and two dogs — my house needed a serious deep clean. DSM delivered. They used eco-friendly products and left every room spotless. I've already booked them for recurring service.", date: "January 2025" },
     ],
     faqs: [
       {
@@ -1408,26 +1207,6 @@ export const cities: CityData[] = [
         title: "Apartment Cleaning Minooka",
         desc: "Professional apartment cleaning for renters and property managers throughout Minooka.",
         link: "/apartment-cleaning",
-      },
-    ],
-    reviews: [
-      {
-        name: "Rachel T.",
-        location: "Minooka, IL",
-        text: "Not many cleaning companies come out to Minooka but DSM does and they are excellent. Professional, thorough, and my house looks amazing after every visit.",
-        date: "February 2025",
-      },
-      {
-        name: "Chris W.",
-        location: "Minooka, IL",
-        text: "DSM came highly recommended and they did not disappoint. Deep cleaned our Minooka home before a big family gathering and it was perfect. Will be booking regularly.",
-        date: "January 2025",
-      },
-      {
-        name: "Amy G.",
-        location: "Minooka, IL",
-        text: "Love that DSM services Minooka. They're consistent, professional, and the eco-friendly products are a huge plus for our household with young kids.",
-        date: "March 2025",
       },
     ],
     faqs: [
@@ -1533,26 +1312,6 @@ export const cities: CityData[] = [
         link: "/apartment-cleaning",
       },
     ],
-    reviews: [
-      {
-        name: "Karen L.",
-        location: "Downers Grove, IL",
-        text: "I wasn't sure about using a company from Romeoville, but DSM exceeded every expectation. Thorough, professional, and the eco-friendly products were a big plus for my family. Booked recurring service immediately.",
-        date: "March 2025",
-      },
-      {
-        name: "Michael T.",
-        location: "Downers Grove, IL",
-        text: "Used DSM for a deep clean before putting our home on the market. Our realtor was blown away — said it was the best pre-listing clean she'd seen. Multiple offers above asking. Worth every dollar.",
-        date: "February 2025",
-      },
-      {
-        name: "Sarah P.",
-        location: "Downers Grove, IL",
-        text: "Biweekly service for 4 months now and the quality has been outstanding every time. Same team, same attention to detail. Love coming home on cleaning day.",
-        date: "April 2025",
-      },
-    ],
     faqs: [
       {
         question: "Do you offer house cleaning in Downers Grove, IL?",
@@ -1654,26 +1413,6 @@ export const cities: CityData[] = [
         title: "Post-Construction Cleaning Hinsdale",
         desc: "Specialized cleaning after remodels and renovations in Hinsdale — dust, debris, and construction residue removed.",
         link: "/post-construction-cleaning",
-      },
-    ],
-    reviews: [
-      {
-        name: "Jennifer R.",
-        location: "Hinsdale, IL",
-        text: "Exceptional service. DSM cleaned our home before a dinner party and the results were flawless. They understood exactly what was needed in a home of this caliber. Booked recurring service that night.",
-        date: "March 2025",
-      },
-      {
-        name: "David H.",
-        location: "Hinsdale, IL",
-        text: "We've had cleaning services in Hinsdale before — DSM is the first that truly delivered the level of thoroughness we expected. Professional, courteous, and the eco-friendly approach was a priority for us.",
-        date: "January 2025",
-      },
-      {
-        name: "Margot S.",
-        location: "Hinsdale, IL",
-        text: "Used DSM for post-renovation cleaning after our kitchen remodel. Immaculate job — every cabinet, countertop, and surface spotless. Will be using them for monthly maintenance going forward.",
-        date: "April 2025",
       },
     ],
     faqs: [
@@ -1779,26 +1518,6 @@ export const cities: CityData[] = [
         link: "/post-construction-cleaning",
       },
     ],
-    reviews: [
-      {
-        name: "Robert C.",
-        location: "Oak Brook, IL",
-        text: "DSM cleaned our Oak Brook home before a family gathering and the results were outstanding. Every room was spotless — they didn't miss a single detail. Professional team, on time, and great communication.",
-        date: "February 2025",
-      },
-      {
-        name: "Patricia N.",
-        location: "Oak Brook, IL",
-        text: "I've been using DSM for biweekly cleaning of our Oak Brook home for six months. Consistently excellent. The same team every time and they know exactly what our home needs.",
-        date: "March 2025",
-      },
-      {
-        name: "James W.",
-        location: "Oak Brook, IL",
-        text: "Used DSM after a kitchen renovation — absolutely thorough job removing all the construction dust and debris. Highly recommend for any Oak Brook homeowner.",
-        date: "January 2025",
-      },
-    ],
     faqs: [
       {
         question: "Do you offer house cleaning in Oak Brook, IL?",
@@ -1900,26 +1619,6 @@ export const cities: CityData[] = [
         title: "Post-Construction Cleaning Burr Ridge",
         desc: "Specialized post-renovation cleaning for Burr Ridge custom homes and remodels.",
         link: "/post-construction-cleaning",
-      },
-    ],
-    reviews: [
-      {
-        name: "Christine M.",
-        location: "Burr Ridge, IL",
-        text: "DSM cleaned our Burr Ridge home and I was honestly amazed. They spent extra time on the details that most services skip. Professional, punctual, and the eco-friendly products were exactly what I wanted.",
-        date: "March 2025",
-      },
-      {
-        name: "Thomas B.",
-        location: "Burr Ridge, IL",
-        text: "Monthly recurring service for our Burr Ridge home has been seamless. Same team every time, great attention to detail, and they're always respectful of our space. Highly recommend.",
-        date: "February 2025",
-      },
-      {
-        name: "Alison F.",
-        location: "Burr Ridge, IL",
-        text: "Used DSM for move-out cleaning on our Burr Ridge home — got our full deposit back without any issues. Thorough, professional, and very easy to work with.",
-        date: "April 2025",
       },
     ],
     faqs: [

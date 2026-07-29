@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
+import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
 import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
@@ -171,7 +172,7 @@ export default function DeepCleaningPage() {
               </h1>
               <div className="flex items-center gap-2 mb-3">
                 <span style={{ color: "#FFA869" }} className="text-xl">★★★★★</span>
-                <span className="text-sm opacity-90">5.0 — 42 reviews on Google</span>
+                <span className="text-sm opacity-90">5.0 — {REVIEW_COUNT} reviews on Google</span>
               </div>
               <p className="text-lg font-semibold mb-2">
                 A real deep clean for your home. Every room, every detail.
@@ -241,9 +242,9 @@ export default function DeepCleaningPage() {
         <div className="max-w-2xl mx-auto text-center">
           <p style={{ color: "#E8622A" }} className="text-5xl font-serif leading-none mb-3">&ldquo;</p>
           <p className="text-gray-800 text-lg leading-relaxed italic mb-4">
-            My house was a mess after a long winter and I had no idea where to start. DSM came in and took care of everything. The bathrooms alone were worth every penny.
+            {REAL_REVIEWS[5].text}
           </p>
-          <p className="font-semibold text-gray-700">Sandra L., Romeoville IL</p>
+          <p className="font-semibold text-gray-700">{REAL_REVIEWS[5].name}</p>
           <div className="flex justify-center mt-2">
             <span style={{ color: "#FFA869" }}>★★★★★</span>
           </div>
@@ -357,33 +358,17 @@ export default function DeepCleaningPage() {
             What Our Clients Are Saying
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-white rounded-xl p-6 shadow-sm">
-              <div className="flex mb-3">
-                <span style={{ color: "#FFA869" }}>★★★★★</span>
+            {pickReviews(3, 0).map((review) => (
+              <div key={review.name} className="bg-white rounded-xl p-6 shadow-sm">
+                <div className="flex mb-3">
+                  <span style={{ color: "#FFA869" }}>★★★★★</span>
+                </div>
+                <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
+                  &ldquo;{review.text}&rdquo;
+                </p>
+                <p className="text-sm font-semibold text-gray-600">{reviewAttribution(review)}</p>
               </div>
-              <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
-                &ldquo;Booked them for a deep clean before putting my house on the market. Agent said it was one of the cleanest showings she had seen in a while. Highly recommend.&rdquo;
-              </p>
-              <p className="text-sm font-semibold text-gray-600">David K., Romeoville IL</p>
-            </div>
-            <div className="bg-white rounded-xl p-6 shadow-sm">
-              <div className="flex mb-3">
-                <span style={{ color: "#FFA869" }}>★★★★★</span>
-              </div>
-              <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
-                &ldquo;We hired DSM for a spring deep clean and the difference was night and day. The oven and kitchen were spotless. Professional team and easy to work with.&rdquo;
-              </p>
-              <p className="text-sm font-semibold text-gray-600">Patricia H., Plainfield IL</p>
-            </div>
-            <div className="bg-white rounded-xl p-6 shadow-sm">
-              <div className="flex mb-3">
-                <span style={{ color: "#FFA869" }}>★★★★★</span>
-              </div>
-              <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
-                &ldquo;Really pleased with the results. On time, professional, and thorough. My kitchen hood vent looked brand new. Will book again.&rdquo;
-              </p>
-              <p className="text-sm font-semibold text-gray-600">Angela C., Bolingbrook IL</p>
-            </div>
+            ))}
           </div>
           <div className="text-center">
             <a
@@ -392,7 +377,7 @@ export default function DeepCleaningPage() {
               rel="noopener noreferrer"
               className="text-green-700 font-semibold hover:underline text-sm"
             >
-              Read all 42 reviews on Google →
+              Read all {REVIEW_COUNT} reviews on Google →
             </a>
           </div>
         </div>
@@ -435,7 +420,7 @@ export default function DeepCleaningPage() {
             <div className="flex justify-center mb-1">
               <span style={{ color: "#FFD8BC" }} className="text-2xl">★★★★★</span>
             </div>
-            <p className="text-sm text-gray-500">Trusted by homeowners across the southwest suburbs — 42 five-star reviews</p>
+            <p className="text-sm text-gray-500">Trusted by homeowners across the southwest suburbs — {REVIEW_COUNT} five-star reviews</p>
           </div>
           <CityDeepCleanForm />
         </div>

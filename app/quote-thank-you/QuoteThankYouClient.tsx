@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { REAL_REVIEWS, REVIEW_COUNT } from "@/lib/realReviews";
 import Link from "next/link";
 import {
   getOrCreateExternalId,
@@ -158,11 +159,11 @@ export default function QuoteThankYouClient() {
                   </svg>
                 ))}
               </div>
-              <p className="text-xs font-semibold text-orange-600 mb-2">★★★★★ 5.0 · 47 reviews</p>
+              <p className="text-xs font-semibold text-orange-600 mb-2">★★★★★ 5.0 · {REVIEW_COUNT} reviews</p>
               <p className="text-sm text-gray-600 italic mb-1">
-                &ldquo;Got a fast response and great price. Booked same week!&rdquo;
+                &ldquo;{REAL_REVIEWS[2].text}&rdquo;
               </p>
-              <p className="text-xs text-gray-400 font-medium">— Mike T., Plainfield</p>
+              <p className="text-xs text-gray-400 font-medium">{REAL_REVIEWS[2].name}</p>
             </div>
 
             {/* Back link */}

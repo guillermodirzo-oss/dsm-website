@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
@@ -107,7 +108,7 @@ export default function SpringSpecialPage() {
             {PHONE}
           </a>
           <span className="font-semibold text-xs sm:text-sm whitespace-nowrap" style={{ color: ORANGE }}>
-            47 Five-Star Reviews <span className="text-yellow-400">★★★★★</span>
+            {REVIEW_COUNT} Five-Star Reviews <span className="text-yellow-400">★★★★★</span>
           </span>
         </div>
       </div>
@@ -164,7 +165,7 @@ export default function SpringSpecialPage() {
 
               {/* Trust line — ONE line on mobile */}
               <p className="trust-line text-gray-500 mt-1 lg:mt-0 lg:text-base">
-                Family-owned &bull; Insured &bull; 47 Five-Star Reviews
+                Family-owned &bull; Insured &bull; {REVIEW_COUNT} Five-Star Reviews
               </p>
               {/* Extended service area — desktop only */}
               <p className="hidden lg:block text-gray-500 text-sm mt-1">
@@ -366,13 +367,8 @@ export default function SpringSpecialPage() {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
-            {[
-              { text: "DSM did an incredible deep clean before we listed our home for sale. Every room was spotless — I was genuinely impressed. Worth every penny.", name: "Jennifer M.", location: "Naperville, IL" },
-              { text: "Used DSM for a move-out clean on my Plainfield home. Got my full security deposit back! Thorough, professional, and eco-friendly products.", name: "Mike T.", location: "Plainfield, IL" },
-              { text: "I have a biweekly cleaning with DSM and couldn't be happier. Reliable, trustworthy, and my house has never looked better.", name: "Jennifer R.", location: "Naperville, IL" },
-              { text: "DSM Cleaning Solutions is absolutely amazing! They transformed my home — every corner was spotless. Being a family-owned business, they truly care about quality.", name: "Sarah M.", location: "Romeoville, IL" },
-            ].map((review) => (
-              <div key={review.name + review.location} className="trust-static bg-white rounded-2xl p-5 border border-gray-200 shadow-sm">
+            {pickReviews(4, 1).map((review) => (
+              <div key={review.name} className="trust-static bg-white rounded-2xl p-5 border border-gray-200 shadow-sm">
                 <div className="flex gap-0.5 mb-3">
                   {[...Array(5)].map((_, i) => (
                     <svg key={i} className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -381,7 +377,7 @@ export default function SpringSpecialPage() {
                   ))}
                 </div>
                 <p className="text-gray-700 text-sm leading-relaxed mb-3">&ldquo;{review.text}&rdquo;</p>
-                <p className="text-gray-500 text-xs font-semibold">— {review.name}, <span className="text-gray-400">{review.location}</span></p>
+                <p className="text-gray-500 text-xs font-semibold">{reviewAttribution(review)}</p>
               </div>
             ))}
           </div>

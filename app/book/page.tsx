@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
 
 export const metadata: Metadata = {
@@ -50,24 +51,7 @@ const valueStack = [
   { item: "Summer Discount Code: SUMMER75", value: "− $75 off" },
 ];
 
-const reviews = [
-  {
-    name: "Julie Gaubatz",
-    text: "I'm so glad DSM Cleaning Services was recommended to us by our realtor! They are fantastic, and their website makes arranging cleanings so easy. I highly recommend them -- I will be using them many more times!",
-  },
-  {
-    name: "Bill Aros",
-    text: "We are very happy with DSM Cleaning Solutions. They do an excellent job and would hire them again",
-  },
-  {
-    name: "Julie G",
-    text: "This service is consistently perfect! And, I love the website interface -- it makes everything easy and customizable.",
-  },
-  {
-    name: "Jae Mac",
-    text: "I highly recommend, customer since 2024 🍊🍊🍊",
-  },
-];
+const reviews = pickReviews(4, 0);
 
 const faqs = [
   {
@@ -138,7 +122,7 @@ export default function BookPage() {
 
           {/* Trust bar */}
           <div className="flex flex-wrap justify-center gap-3 sm:gap-6 text-sm font-semibold text-gray-600 mb-10">
-            <span>⭐ 5.0 Stars · 42 Reviews</span>
+            <span>⭐ 5.0 Stars · {REVIEW_COUNT} Reviews</span>
             <span>✅ 48-Hour Guarantee</span>
             <span>🔒 Insured &amp; Bonded</span>
             <span>🌿 Eco-Friendly</span>
@@ -357,7 +341,7 @@ export default function BookPage() {
             <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-2 tracking-tight">
               Your Neighbors Already Love Us
             </h2>
-            <p className="text-gray-500 text-sm">42 five-star reviews · Romeoville, Plainfield, Bolingbrook &amp; surrounding areas</p>
+            <p className="text-gray-500 text-sm">{REVIEW_COUNT} five-star reviews · Romeoville, Plainfield, Bolingbrook &amp; surrounding areas</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-8">
@@ -392,7 +376,7 @@ export default function BookPage() {
               className="text-sm font-semibold hover:underline"
               style={{ color: ORANGE }}
             >
-              Read all 42 reviews on Google →
+              Read all {REVIEW_COUNT} reviews on Google →
             </a>
           </div>
         </div>
@@ -455,7 +439,7 @@ export default function BookPage() {
           {/* Star rating social proof above the embed */}
           <div className="flex flex-wrap items-center justify-center gap-2 mb-8 text-sm">
             <span style={{ color: ORANGE, fontSize: "1.1rem", letterSpacing: "0.05em" }}>★★★★★</span>
-            <span className="font-bold text-gray-900">5.0 · 42 Google Reviews</span>
+            <span className="font-bold text-gray-900">5.0 · {REVIEW_COUNT} Google Reviews</span>
             <span className="text-gray-500">· Trusted by homeowners across the southwest suburbs</span>
           </div>
 

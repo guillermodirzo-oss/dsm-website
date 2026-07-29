@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
+import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
 
@@ -173,11 +174,7 @@ const trustBadges = [
   },
 ];
 
-const reviews3 = [
-  { name: "Pati Mangano", text: "As always everything was great." },
-  { name: "Julie G.", text: "This service is consistently perfect! I love the website interface. It makes everything easy and customizable." },
-  { name: "Jae Mac", text: "I highly recommend, customer since 2024 🍊🍊🍊" },
-];
+const reviews3 = pickReviews(3, 8);
 
 export default function MoveOutCleaningNewLenoxPage() {
   return (
@@ -203,7 +200,7 @@ export default function MoveOutCleaningNewLenoxPage() {
                 <span>/</span>
                 <span className="text-white">New Lenox</span>
               </div>
-              <p className="text-sm font-semibold mb-4" style={{ color: "#FFA869" }}>★★★★★ 5.0 · 42 Google Reviews</p>
+              <p className="text-sm font-semibold mb-4" style={{ color: "#FFA869" }}>★★★★★ 5.0 · {REVIEW_COUNT} Google Reviews</p>
               <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-4">
                 Move-Out Cleaning in New Lenox, IL
               </h1>
@@ -381,7 +378,7 @@ export default function MoveOutCleaningNewLenoxPage() {
               className="text-sm font-semibold underline"
               style={{ color: "#E8622A" }}
             >
-              Read all 42 reviews on Google
+              Read all {REVIEW_COUNT} reviews on Google
             </a>
           </div>
         </div>

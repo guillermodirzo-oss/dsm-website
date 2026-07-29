@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
 import StickyBar from "./StickyBar";
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
 
 // ─── Static data ─────────────────────────────────────────────────────────────
 const trustBullets = [
-  { icon: "★", text: "5.0 Stars — 38 Google Reviews · 100+ Total" },
+  { icon: "★", text: "5.0 Stars on Google" },
   { icon: "🏠", text: "Family-owned & based in Romeoville" },
   { icon: "✅", text: "48-Hour Satisfaction Guarantee" },
   {
@@ -99,20 +100,7 @@ const workPhotos = [
   },
 ];
 
-const reviews = [
-  {
-    name: "Jan Forster",
-    text: "Very happy with my cleaning! My house has been neglected due to a few surgeries and I was thrilled to have a sparkling house again! Will definitely use them again! Very friendly as well!",
-  },
-  {
-    name: "Michelle Gillespie",
-    text: "Guillermo and Rocio did a wonderful job. I was at work while they cleaned but my kids were home and said they were courteous, efficient, friendly, and went above and beyond. I highly recommend them.",
-  },
-  {
-    name: "Rachel LaPapa",
-    text: "DSM Cleaning Solutions did an incredible job deep cleaning my new home before moving in. Their attention to detail was exceptional.",
-  },
-];
+const reviews = pickReviews(3, 2);
 
 // ─── Page ────────────────────────────────────────────────────────────────────
 export default function DeepCleanOfferPage() {
@@ -353,8 +341,7 @@ export default function DeepCleanOfferPage() {
           </div>
 
           <p className="text-center text-sm text-gray-400">
-            5.0 stars · 38 Google Reviews · 100+ reviews across Google, Yelp,
-            and other platforms
+            5.0 stars from {REVIEW_COUNT} Google reviews
           </p>
         </div>
       </section>

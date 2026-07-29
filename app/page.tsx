@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
+import { pickReviews, reviewAttribution, REVIEW_COUNT } from "@/lib/realReviews";
 import { ScrollIndicator, StickyMobileBar } from "@/components/HomepageScrollWidgets";
 
 export const metadata: Metadata = {
@@ -299,14 +300,18 @@ export default function HomePage() {
             <h2 className="section-heading text-4xl md:text-5xl">What Romeoville Families Are Saying</h2>
             <Link href="/reviews" className="inline-flex items-center justify-center gap-2 mt-3 hover:opacity-80 transition-opacity">
               <span className="text-yellow-400 text-2xl">★★★★★</span>
-              <span className="text-gray-400 font-medium">5.0 average · 47+ reviews</span>
+              <span className="text-gray-400 font-medium">5.0 average · {REVIEW_COUNT} reviews</span>
             </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <ReviewCard name="Sarah M." location="Romeoville, IL" text="DSM Cleaning Solutions is absolutely amazing! They transformed my home — every corner was spotless. Being a family-owned business, they truly care about the quality of their work. Highly recommend!" date="November 2024" />
-            <ReviewCard name="Mike T." location="Plainfield, IL" text="Used DSM for a move-out clean on my Plainfield home. Got my full security deposit back! They are thorough, professional, and use eco-friendly products. Will definitely use them again." date="December 2024" />
-            <ReviewCard name="Jennifer R." location="Bolingbrook, IL" text="I have a biweekly cleaning with DSM and I couldn't be happier. The team is reliable, trustworthy, and my house has never looked better. Love the eco-friendly products — safe for my kids and dogs!" date="January 2025" />
+            {pickReviews(3, 0).map((review) => (
+              <ReviewCard
+                key={review.name}
+                name={reviewAttribution(review)}
+                text={review.text}
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -370,7 +375,7 @@ export default function HomePage() {
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-yellow-400">★★★★★</span>
                 </div>
-                <p className="font-bold text-gray-900 text-sm">47+ Reviews</p>
+                <p className="font-bold text-gray-900 text-sm">{REVIEW_COUNT} Reviews</p>
                 <p className="text-xs text-gray-400 mt-0.5">5.0 avg rating</p>
               </Link>
               {/* Floating badge */}

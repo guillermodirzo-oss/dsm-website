@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
+import { pickReviews, reviewAttribution } from "@/lib/realReviews";
 
 export const metadata: Metadata = {
   title: "Recurring Maid Service Romeoville IL",
@@ -394,24 +395,13 @@ export default function RecurringCleaningPage() {
             <h2 className="section-heading">What Our Recurring Clients Say</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <ReviewCard
-              name="Jennifer R."
-              location="Romeoville, IL"
-              text="I've had biweekly cleaning with DSM for over a year now. They are so reliable and thorough. My house always looks amazing after they come. I love that they use eco-friendly products too — safe for my dogs!"
-              date="January 2025"
-            />
-            <ReviewCard
-              name="Carlos M."
-              location="Bolingbrook, IL"
-              text="DSM does my weekly cleaning and I couldn't be happier. The same team comes every time so they know my home perfectly. I never have to give instructions anymore — they just handle it."
-              date="November 2024"
-            />
-            <ReviewCard
-              name="Patricia L."
-              location="Plainfield, IL"
-              text="I switched from a national cleaning company to DSM and it was the best decision. More affordable, better quality, and they actually care about doing a good job. Family-owned makes a difference!"
-              date="February 2025"
-            />
+            {pickReviews(3, 5).map((review) => (
+              <ReviewCard
+                key={review.name}
+                name={reviewAttribution(review)}
+                text={review.text}
+              />
+            ))}
           </div>
         </div>
       </section>

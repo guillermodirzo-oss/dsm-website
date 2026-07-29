@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
+import { pickReviews, reviewAttribution } from "@/lib/realReviews";
 
 export const metadata: Metadata = {
   title: "House Cleaning Service Romeoville IL",
@@ -248,9 +249,13 @@ export default function StandardCleaningPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12"><h2 className="section-heading">What Our Clients Say</h2></div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <ReviewCard name="Ashley B." location="Romeoville, IL" text="DSM has been cleaning my home biweekly for 8 months. They are so consistent and thorough — I never have to check their work. My house always smells amazing when I get home!" date="February 2025" />
-            <ReviewCard name="Robert K." location="Plainfield, IL" text="Switched from a big national company to DSM and the difference is night and day. More personal, more thorough, and I love that they use green cleaning products. Highly recommend!" date="January 2025" />
-            <ReviewCard name="Maria G." location="Bolingbrook, IL" text="I get a monthly cleaning and it's exactly what I needed. They're in and out efficiently, everything is spotless, and the team is always friendly and professional." date="March 2025" />
+            {pickReviews(3, 8).map((review) => (
+              <ReviewCard
+                key={review.name}
+                name={reviewAttribution(review)}
+                text={review.text}
+              />
+            ))}
           </div>
         </div>
       </section>

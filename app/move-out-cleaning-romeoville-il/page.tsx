@@ -1,17 +1,18 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
+import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
   title: "Move-Out Cleaning Romeoville IL",
   description:
-    "Trusted move-out cleaning in Romeoville by DSM Cleaning Solutions. 5-star rated, 42 reviews, 48-hr guarantee. Eco-friendly, fully insured. Free quote.",
+    "Trusted move-out cleaning in Romeoville by DSM Cleaning Solutions. 5-star rated, 45 reviews, 48-hr guarantee. Eco-friendly, fully insured. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-romeoville-il" },
   openGraph: {
     title: "Move-Out Cleaning Romeoville IL | 5-Star Rated | DSM Cleaning",
     description:
-      "Trusted move-out cleaning in Romeoville by DSM Cleaning Solutions. 5-star rated, 42 reviews, 48-hr guarantee. Eco-friendly, fully insured. Free quote.",
+      "Trusted move-out cleaning in Romeoville by DSM Cleaning Solutions. 5-star rated, 45 reviews, 48-hr guarantee. Eco-friendly, fully insured. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/move-out-cleaning-romeoville-il",
   },
   twitter: { card: "summary_large_image", images: ["/hero-image.png"] },
@@ -173,11 +174,7 @@ const trustBadges = [
   },
 ];
 
-const reviews3 = [
-  { name: "Pati Mangano", text: "As always everything was great." },
-  { name: "Julie G.", text: "This service is consistently perfect! I love the website interface. It makes everything easy and customizable." },
-  { name: "Jae Mac", text: "I highly recommend, customer since 2024 🍊🍊🍊" },
-];
+const reviews3 = pickReviews(3, 6);
 
 export default function MoveOutCleaningRomeovillePage() {
   return (
@@ -203,7 +200,7 @@ export default function MoveOutCleaningRomeovillePage() {
                 <span>/</span>
                 <span className="text-white">Romeoville</span>
               </div>
-              <p className="text-sm font-semibold mb-4" style={{ color: "#FFA869" }}>★★★★★ 5.0 · 42 Google Reviews</p>
+              <p className="text-sm font-semibold mb-4" style={{ color: "#FFA869" }}>★★★★★ 5.0 · {REVIEW_COUNT} Google Reviews</p>
               <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-4">
                 Move-Out Cleaning in Romeoville, IL
               </h1>
@@ -383,7 +380,7 @@ export default function MoveOutCleaningRomeovillePage() {
               className="text-sm font-semibold underline"
               style={{ color: "#E8622A" }}
             >
-              Read all 42 reviews on Google
+              Read all {REVIEW_COUNT} reviews on Google
             </a>
           </div>
         </div>

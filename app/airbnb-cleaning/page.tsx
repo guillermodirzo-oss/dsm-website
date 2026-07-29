@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
+import { pickReviews, reviewAttribution } from "@/lib/realReviews";
 
 export const metadata: Metadata = {
   title: "Airbnb Cleaning Plainfield IL",
@@ -247,9 +248,13 @@ export default function AirbnbCleaningPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12"><h2 className="section-heading">What Airbnb Hosts Are Saying</h2></div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <ReviewCard name="Kevin L." location="Romeoville, IL" text="I manage 3 Airbnb properties and DSM handles all my turnovers. They're fast, thorough, and my guests consistently mention cleanliness in their 5-star reviews. Best decision I made as a host." date="February 2025" />
-            <ReviewCard name="Angela T." location="Plainfield, IL" text="DSM saved my Airbnb after I had two bad reviews about cleanliness. Since switching to them, I've had nothing but 5-star ratings on cleanliness. They are absolutely worth it." date="March 2025" />
-            <ReviewCard name="David N." location="Bolingbrook, IL" text="Same-day turnovers, always on time, and they even restock my toiletries. I don't have to worry about my rental at all — DSM just handles it. Incredible service." date="January 2025" />
+            {pickReviews(3, 6).map((review) => (
+              <ReviewCard
+                key={review.name}
+                name={reviewAttribution(review)}
+                text={review.text}
+              />
+            ))}
           </div>
         </div>
       </section>

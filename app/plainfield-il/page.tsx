@@ -2,6 +2,7 @@
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
+import { pickReviews, reviewAttribution } from "@/lib/realReviews";
 
 export const metadata: Metadata = {
   title: "House Cleaning Plainfield IL",
@@ -422,24 +423,13 @@ export default function PlainfieldPage() {
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <ReviewCard
-              name="Mike T."
-              location="Plainfield, IL"
-              text="Used DSM for a move-out clean on my Plainfield home. Got my full security deposit back! They are thorough, professional, and use eco-friendly products. Absolutely will use them again."
-              date="December 2024"
-            />
-            <ReviewCard
-              name="Patricia L."
-              location="Plainfield, IL"
-              text="DSM does my biweekly cleaning in Plainfield and I love them. They show up on time, do a fantastic job, and communicate clearly. Much better than the national chains I've tried."
-              date="February 2025"
-            />
-            <ReviewCard
-              name="Nancy V."
-              location="Plainfield, IL"
-              text="I hired DSM for a deep cleaning of our Plainfield home before we moved in. Absolutely incredible job. Every room was immaculate. They even cleaned inside the cabinets and closets!"
-              date="March 2025"
-            />
+            {pickReviews(3, 10).map((review) => (
+              <ReviewCard
+                key={review.name}
+                name={reviewAttribution(review)}
+                text={review.text}
+              />
+            ))}
           </div>
         </div>
       </section>

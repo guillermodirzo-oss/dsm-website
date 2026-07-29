@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
+import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
 import PlainfieldForm from "./PlainfieldForm";
 import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
@@ -183,7 +184,7 @@ export default function DeepCleaningPlainfieldPage() {
 
               {/* Inline social proof */}
               <p className="text-sm font-semibold mb-4" style={{ color: "#FFA869" }}>
-                ★★★★★ 5.0 · 42 Google Reviews
+                ★★★★★ 5.0 · {REVIEW_COUNT} Google Reviews
               </p>
 
               {/* Subheadline */}
@@ -314,11 +315,11 @@ export default function DeepCleaningPlainfieldPage() {
             <span className="text-6xl font-serif leading-none absolute top-6 left-8" style={{ color: "#E8622A" }}>&ldquo;</span>
             <blockquote className="pt-8">
               <p className="text-gray-800 text-lg leading-relaxed mb-5 italic">
-                We are very happy with DSM Cleaning Solutions. They do an excellent job and would hire them again
+                {REAL_REVIEWS[2].text}
               </p>
               <footer>
-                <p className="font-bold text-gray-900">Bill A. <span className="text-amber-400">★★★★★</span></p>
-                <p className="text-sm text-gray-400 mt-1">One of our 42 five-star Google reviews</p>
+                <p className="font-bold text-gray-900">{REAL_REVIEWS[2].name} <span className="text-amber-400">★★★★★</span></p>
+                <p className="text-sm text-gray-400 mt-1">One of our {REVIEW_COUNT} five-star Google reviews</p>
               </footer>
             </blockquote>
           </div>
@@ -458,26 +459,14 @@ export default function DeepCleaningPlainfieldPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-            <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative">
-              <span className="text-4xl font-serif leading-none absolute top-4 left-5 text-orange-300">&ldquo;</span>
-              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">This service is consistently perfect! And, I love the website interface -- it makes everything easy and customizable.</p>
-              <p className="font-semibold text-gray-900 text-sm">Julie G.</p>
-              <p className="text-amber-400 text-sm">★★★★★</p>
-            </div>
-
-            <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative">
-              <span className="text-4xl font-serif leading-none absolute top-4 left-5 text-orange-300">&ldquo;</span>
-              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">As always everything was great.</p>
-              <p className="font-semibold text-gray-900 text-sm">Pati M.</p>
-              <p className="text-amber-400 text-sm">★★★★★</p>
-            </div>
-
-            <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative">
-              <span className="text-4xl font-serif leading-none absolute top-4 left-5 text-orange-300">&ldquo;</span>
-              <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">I highly recommend, customer since 2024 🍊🍊🍊</p>
-              <p className="font-semibold text-gray-900 text-sm">Jae M.</p>
-              <p className="text-amber-400 text-sm">★★★★★</p>
-            </div>
+            {pickReviews(3, 6).map((review) => (
+              <div key={review.name} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative">
+                <span className="text-4xl font-serif leading-none absolute top-4 left-5 text-orange-300">&ldquo;</span>
+                <p className="text-gray-700 leading-relaxed text-sm pt-6 mb-4">{review.text}</p>
+                <p className="font-semibold text-gray-900 text-sm">{reviewAttribution(review)}</p>
+                <p className="text-amber-400 text-sm">★★★★★</p>
+              </div>
+            ))}
 
           </div>
 
@@ -488,7 +477,7 @@ export default function DeepCleaningPlainfieldPage() {
               rel="noopener noreferrer"
               className="text-brand-green font-semibold hover:underline text-sm"
             >
-              Read all 42 reviews on Google →
+              Read all {REVIEW_COUNT} reviews on Google →
             </a>
           </div>
         </div>

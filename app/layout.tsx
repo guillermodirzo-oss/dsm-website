@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { REVIEW_COUNT, REVIEW_RATING } from "@/lib/realReviews";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
@@ -133,8 +134,8 @@ export default function RootLayout({
               // caused by two schemas sharing the same @id with conflicting aggregateRating.
               aggregateRating: {
                 "@type": "AggregateRating",
-                ratingValue: "5.0",
-                reviewCount: "47",
+                ratingValue: REVIEW_RATING,
+                reviewCount: String(REVIEW_COUNT),
                 bestRating: "5",
                 worstRating: "1",
               },

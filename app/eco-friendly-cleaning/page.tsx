@@ -2,6 +2,7 @@
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
+import { pickReviews, reviewAttribution } from "@/lib/realReviews";
 
 export const metadata: Metadata = {
   title: "Eco-Friendly Cleaning Plainfield IL",
@@ -178,9 +179,13 @@ export default function EcoFriendlyCleaningPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12"><h2 className="section-heading">What Families Are Saying</h2></div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <ReviewCard name="Jennifer R." location="Romeoville, IL" text="I specifically looked for a company that uses eco-friendly products because of my young kids. DSM is perfect — the house is spotless and I have zero worries about chemical residue." date="January 2025" />
-            <ReviewCard name="Tom H." location="Plainfield, IL" text="My dog would always get sick after our old cleaning company came. Switched to DSM for their green products and the difference is amazing. No more issues and the house is just as clean!" date="December 2024" />
-            <ReviewCard name="Sandra L." location="Naperville, IL" text="As someone with asthma, the fumes from regular cleaners are awful. DSM uses eco-friendly products and I can breathe normally in my own home on cleaning day. Total game-changer." date="February 2025" />
+            {pickReviews(3, 1).map((review) => (
+              <ReviewCard
+                key={review.name}
+                name={reviewAttribution(review)}
+                text={review.text}
+              />
+            ))}
           </div>
         </div>
       </section>

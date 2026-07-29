@@ -1,17 +1,18 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
+import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
   title: "Move-Out Cleaning Naperville IL",
   description:
-    "Move-out cleaning in Naperville, IL. DSM Cleaning Solutions helps renters recover deposits and sellers pass walkthroughs. Fully insured. 42 Google reviews. Free estimate.",
+    "Move-out cleaning in Naperville, IL. DSM Cleaning Solutions helps renters recover deposits and sellers pass walkthroughs. Fully insured. 45 Google reviews. Free estimate.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-naperville-il" },
   openGraph: {
     title: "Move-Out Cleaning Naperville IL | DSM Cleaning Solutions",
     description:
-      "Move-out cleaning in Naperville, IL. Renters and home sellers trust DSM. Fully insured, 48-hr guarantee, 42 Google reviews.",
+      "Move-out cleaning in Naperville, IL. Renters and home sellers trust DSM. Fully insured, 48-hr guarantee, 45 Google reviews.",
     url: "https://www.dsmcleaningsolutions.com/move-out-cleaning-naperville-il",
   },
   twitter: { card: "summary_large_image", images: ["/hero-image.png"] },
@@ -173,11 +174,7 @@ const trustBadges = [
   },
 ];
 
-const reviews3 = [
-  { name: "Pati Mangano", text: "As always everything was great." },
-  { name: "Julie G.", text: "This service is consistently perfect! I love the website interface. It makes everything easy and customizable." },
-  { name: "Jae Mac", text: "I highly recommend, customer since 2024 🍊🍊🍊" },
-];
+const reviews3 = pickReviews(3, 5);
 
 export default function MoveOutCleaningNapervillePage() {
   return (
@@ -203,7 +200,7 @@ export default function MoveOutCleaningNapervillePage() {
                 <span>/</span>
                 <span className="text-white">Naperville</span>
               </div>
-              <p className="text-sm font-semibold mb-4" style={{ color: "#FFA869" }}>★★★★★ 5.0 · 42 Google Reviews</p>
+              <p className="text-sm font-semibold mb-4" style={{ color: "#FFA869" }}>★★★★★ 5.0 · {REVIEW_COUNT} Google Reviews</p>
               <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-4">
                 Move-Out Cleaning in Naperville, IL
               </h1>
@@ -384,7 +381,7 @@ export default function MoveOutCleaningNapervillePage() {
               className="text-sm font-semibold underline"
               style={{ color: "#E8622A" }}
             >
-              Read all 42 reviews on Google
+              Read all {REVIEW_COUNT} reviews on Google
             </a>
           </div>
         </div>

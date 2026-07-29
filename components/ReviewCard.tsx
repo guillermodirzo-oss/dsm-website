@@ -1,8 +1,10 @@
 interface ReviewCardProps {
   name: string;
-  location: string;
+  /** Omitted when the reviewer's city is unknown. Google does not publish it. */
+  location?: string;
   text: string;
-  date: string;
+  /** Omitted unless a date was visible and unambiguous on the source review. */
+  date?: string;
 }
 
 export default function ReviewCard({ name, location, text, date }: ReviewCardProps) {
@@ -23,10 +25,10 @@ export default function ReviewCard({ name, location, text, date }: ReviewCardPro
           </div>
           <div>
             <p className="font-bold text-gray-900 text-sm">{name}</p>
-            <p className="text-xs text-gray-400">{location}</p>
+            {location ? <p className="text-xs text-gray-400">{location}</p> : null}
           </div>
         </div>
-        <p className="text-xs text-gray-300">{date}</p>
+        {date ? <p className="text-xs text-gray-300">{date}</p> : null}
       </div>
     </div>
   );

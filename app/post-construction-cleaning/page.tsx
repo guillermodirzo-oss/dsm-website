@@ -2,6 +2,7 @@
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
+import { pickReviews, reviewAttribution } from "@/lib/realReviews";
 
 export const metadata: Metadata = {
   title: "Post-Construction Cleaning IL",
@@ -206,9 +207,13 @@ export default function PostConstructionCleaningPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12"><h2 className="section-heading">What Builders & Homeowners Say</h2></div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <ReviewCard name="Mike D." location="Romeoville, IL" text="We just finished a full kitchen remodel and the drywall dust was everywhere. DSM came in and made it look brand new — every surface spotless. Couldn't believe the transformation." date="March 2025" />
-            <ReviewCard name="Linda F." location="Plainfield, IL" text="I use DSM for every new build I complete. They do a thorough 3-phase clean and my clients are always blown away by the final result. Professional, reliable, and worth every penny." date="January 2025" />
-            <ReviewCard name="Carlos R." location="Bolingbrook, IL" text="After our basement was finished, the mess was unbelievable. DSM handled the post-construction cleanup perfectly. Every corner, every vent, every fixture — spotless. Highly recommend!" date="February 2025" />
+            {pickReviews(3, 2).map((review) => (
+              <ReviewCard
+                key={review.name}
+                name={reviewAttribution(review)}
+                text={review.text}
+              />
+            ))}
           </div>
         </div>
       </section>

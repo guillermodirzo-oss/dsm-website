@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
+import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
 
@@ -173,11 +174,7 @@ const trustBadges = [
   },
 ];
 
-const reviews3 = [
-  { name: "Bill Aros", text: "We are very happy with DSM Cleaning Solutions. They do an excellent job and would hire them again." },
-  { name: "Julie G.", text: "This service is consistently perfect! I love the website interface. It makes everything easy and customizable." },
-  { name: "Pati Mangano", text: "As always everything was great." },
-];
+const reviews3 = pickReviews(3, 7);
 
 export default function MoveOutCleaningLemontPage() {
   return (
@@ -203,7 +200,7 @@ export default function MoveOutCleaningLemontPage() {
                 <span>/</span>
                 <span className="text-white">Lemont</span>
               </div>
-              <p className="text-sm font-semibold mb-4" style={{ color: "#FFA869" }}>★★★★★ 5.0 · 42 Google Reviews</p>
+              <p className="text-sm font-semibold mb-4" style={{ color: "#FFA869" }}>★★★★★ 5.0 · {REVIEW_COUNT} Google Reviews</p>
               <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-4">
                 Move-Out Cleaning in Lemont, IL
               </h1>
@@ -385,7 +382,7 @@ export default function MoveOutCleaningLemontPage() {
               className="text-sm font-semibold underline"
               style={{ color: "#E8622A" }}
             >
-              Read all 42 reviews on Google
+              Read all {REVIEW_COUNT} reviews on Google
             </a>
           </div>
         </div>

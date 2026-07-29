@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
+import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
 import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
@@ -169,7 +170,7 @@ export default function DeepCleaningMinookaPage() {
               </h1>
               <div className="flex items-center gap-2 mb-3">
                 <span style={{ color: "#FFA869" }} className="text-xl">★★★★★</span>
-                <span className="text-sm opacity-90">5.0 — 42 reviews on Google</span>
+                <span className="text-sm opacity-90">5.0 — {REVIEW_COUNT} reviews on Google</span>
               </div>
               <p className="text-lg font-semibold mb-2">
                 Professional deep cleaning that comes to you in Minooka.
@@ -354,33 +355,17 @@ export default function DeepCleaningMinookaPage() {
             What Minooka Clients Are Saying
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-white rounded-xl p-6 shadow-sm">
-              <div className="flex mb-3">
-                <span style={{ color: "#FFA869" }}>★★★★★</span>
+            {pickReviews(3, 7).map((review) => (
+              <div key={review.name} className="bg-white rounded-xl p-6 shadow-sm">
+                <div className="flex mb-3">
+                  <span style={{ color: "#FFA869" }}>★★★★★</span>
+                </div>
+                <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
+                  &ldquo;{review.text}&rdquo;
+                </p>
+                <p className="text-sm font-semibold text-gray-600">{reviewAttribution(review)}</p>
               </div>
-              <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
-                &ldquo;We are very happy with DSM Cleaning Solutions. They do an excellent job and would hire them again&rdquo;
-              </p>
-              <p className="text-sm font-semibold text-gray-600">Bill A.</p>
-            </div>
-            <div className="bg-white rounded-xl p-6 shadow-sm">
-              <div className="flex mb-3">
-                <span style={{ color: "#FFA869" }}>★★★★★</span>
-              </div>
-              <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
-                &ldquo;This service is consistently perfect! And, I love the website interface -- it makes everything easy and customizable.&rdquo;
-              </p>
-              <p className="text-sm font-semibold text-gray-600">Julie G.</p>
-            </div>
-            <div className="bg-white rounded-xl p-6 shadow-sm">
-              <div className="flex mb-3">
-                <span style={{ color: "#FFA869" }}>★★★★★</span>
-              </div>
-              <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
-                &ldquo;As always everything was great.&rdquo;
-              </p>
-              <p className="text-sm font-semibold text-gray-600">Pati M.</p>
-            </div>
+            ))}
           </div>
           <div className="text-center">
             <a
@@ -389,7 +374,7 @@ export default function DeepCleaningMinookaPage() {
               rel="noopener noreferrer"
               className="text-brand-green font-semibold hover:underline text-sm"
             >
-              Read all 42 reviews on Google →
+              Read all {REVIEW_COUNT} reviews on Google →
             </a>
           </div>
         </div>
@@ -432,7 +417,7 @@ export default function DeepCleaningMinookaPage() {
             <div className="flex justify-center mb-1">
               <span style={{ color: "#FFD8BC" }} className="text-2xl">★★★★★</span>
             </div>
-            <p className="text-sm text-gray-500">Trusted by Minooka homeowners — 42 five-star reviews</p>
+            <p className="text-sm text-gray-500">Trusted by Minooka homeowners — {REVIEW_COUNT} five-star reviews</p>
           </div>
           <CityDeepCleanForm />
         </div>

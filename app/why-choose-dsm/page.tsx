@@ -2,6 +2,7 @@
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
+import { pickReviews, reviewAttribution, REVIEW_COUNT } from "@/lib/realReviews";
 
 export const metadata: Metadata = {
   title: "Why Choose DSM Cleaning Solutions Romeoville IL",
@@ -130,7 +131,7 @@ const trustItems = [
   { label: "Background-Checked Team", icon: "✔️" },
   { label: "Licensed Professional Service", icon: "📋" },
   { label: "5-Star Google Rating", icon: "⭐" },
-  { label: "47+ Verified Reviews", icon: "💬" },
+  { label: "{REVIEW_COUNT} Verified Reviews", icon: "💬" },
   { label: "Serving Southwest Suburbs Since Founding", icon: "📍" },
 ];
 
@@ -170,7 +171,7 @@ export default function WhyChooseDSMPage() {
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               Family-owned. Fully insured. Background-checked team. Eco-friendly products.
-              48-hour satisfaction guarantee. 5-star rated by 47+ families across Romeoville,
+              48-hour satisfaction guarantee. 5-star rated by {REVIEW_COUNT} families across Romeoville,
               Plainfield, Naperville, and the southwest Chicago suburbs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -260,7 +261,7 @@ export default function WhyChooseDSMPage() {
               </div>
               <div>
                 <div className="text-4xl font-bold text-brand-green mb-1">5★</div>
-                <div className="text-white/80 text-sm">Google rating from 47+ verified reviews across our service area</div>
+                <div className="text-white/80 text-sm">Google rating from {REVIEW_COUNT} verified reviews across our service area</div>
               </div>
               <div>
                 <div className="text-4xl font-bold text-brand-green mb-1">100%</div>
@@ -281,30 +282,13 @@ export default function WhyChooseDSMPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <ReviewCard
-              name="Maria G."
-              location="Romeoville, IL"
-              text="DSM has been cleaning our home for over a year and I couldn&apos;t be happier. The same team comes every time, they know exactly how we like things, and the house always looks incredible when they leave."
-              date="March 2025"
-            />
-            <ReviewCard
-              name="Derek T."
-              location="Plainfield, IL"
-              text="I was nervous about letting a cleaning company into my home but DSM made the whole process easy. Background-checked team, fully insured, and they actually showed up on time. Five stars without hesitation."
-              date="January 2025"
-            />
-            <ReviewCard
-              name="Ashley M."
-              location="Naperville, IL"
-              text="We switched from a national chain to DSM and the difference is night and day. More thorough, better products, and I can actually talk to a real person when I have a question. Local businesses for the win."
-              date="February 2025"
-            />
-            <ReviewCard
-              name="James R."
-              location="Bolingbrook, IL"
-              text="Used DSM for a move-out clean and they went above and beyond. Got my full deposit back, which never happens. They were professional, fast, and the price matched the quote exactly. Highly recommend."
-              date="April 2025"
-            />
+            {pickReviews(4, 0).map((review) => (
+              <ReviewCard
+                key={review.name}
+                name={reviewAttribution(review)}
+                text={review.text}
+              />
+            ))}
           </div>
           <div className="text-center mt-8">
             <Link href="/reviews" className="btn-primary">Read All Reviews</Link>

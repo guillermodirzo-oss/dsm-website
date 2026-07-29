@@ -1,17 +1,18 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
+import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
   title: "Move-Out Cleaning Bolingbrook IL",
   description:
-    "Move-out cleaning in Bolingbrook, IL built to get your deposit back. DSM Cleaning: 5-star rated, 42 Google reviews, 48-hr guarantee. Free quote.",
+    "Move-out cleaning in Bolingbrook, IL built to get your deposit back. DSM Cleaning: 5-star rated, 45 Google reviews, 48-hr guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-bolingbrook-il" },
   openGraph: {
     title: "Move-Out Cleaning Bolingbrook IL | DSM Cleaning Solutions",
     description:
-      "Move-out cleaning in Bolingbrook, IL built to get your deposit back. DSM Cleaning: 5-star rated, 42 Google reviews, 48-hr guarantee. Free quote.",
+      "Move-out cleaning in Bolingbrook, IL built to get your deposit back. DSM Cleaning: 5-star rated, 45 Google reviews, 48-hr guarantee. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/move-out-cleaning-bolingbrook-il",
   },
   twitter: { card: "summary_large_image", images: ["/hero-image.png"] },
@@ -173,11 +174,7 @@ const trustBadges = [
   },
 ];
 
-const reviews3 = [
-  { name: "Pati Mangano", text: "As always everything was great." },
-  { name: "Julie G.", text: "This service is consistently perfect! I love the website interface. It makes everything easy and customizable." },
-  { name: "Jae Mac", text: "I highly recommend, customer since 2024 🍊🍊🍊" },
-];
+const reviews3 = pickReviews(3, 0);
 
 export default function MoveOutCleaningBolingbrookPage() {
   return (
@@ -203,7 +200,7 @@ export default function MoveOutCleaningBolingbrookPage() {
                 <span>/</span>
                 <span className="text-white">Bolingbrook</span>
               </div>
-              <p className="text-sm font-semibold mb-4" style={{ color: "#FFA869" }}>★★★★★ 5.0 · 42 Google Reviews</p>
+              <p className="text-sm font-semibold mb-4" style={{ color: "#FFA869" }}>★★★★★ 5.0 · {REVIEW_COUNT} Google Reviews</p>
               <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-4">
                 Move-Out Cleaning in Bolingbrook, IL
               </h1>
@@ -380,7 +377,7 @@ export default function MoveOutCleaningBolingbrookPage() {
               className="text-sm font-semibold underline"
               style={{ color: "#E8622A" }}
             >
-              Read all 42 reviews on Google
+              Read all {REVIEW_COUNT} reviews on Google
             </a>
           </div>
         </div>

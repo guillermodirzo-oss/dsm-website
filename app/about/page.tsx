@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
+import { pickReviews, reviewAttribution } from "@/lib/realReviews";
 
 export const metadata: Metadata = {
   title: "Meet the DSM Cleaning Team | Romeoville IL",
@@ -345,24 +346,13 @@ export default function AboutPage() {
             <h2 className="section-heading text-4xl md:text-5xl">What Our Clients Say About Us</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <ReviewCard
-              name="Sarah M."
-              location="Romeoville, IL"
-              text="DSM Cleaning Solutions is absolutely amazing! They transformed my home — every corner was spotless. Being a family-owned business, they truly care about quality."
-              date="November 2024"
-            />
-            <ReviewCard
-              name="Mike T."
-              location="Plainfield, IL"
-              text="Used DSM for a move-out clean. Got my full security deposit back! Thorough, professional, and eco-friendly products. Absolutely will use them again."
-              date="December 2024"
-            />
-            <ReviewCard
-              name="Jennifer R."
-              location="Bolingbrook, IL"
-              text="I have a biweekly cleaning with DSM and couldn&apos;t be happier. Reliable, trustworthy, and my house has never looked better. Love the eco-friendly products."
-              date="January 2025"
-            />
+            {pickReviews(3, 3).map((review) => (
+              <ReviewCard
+                key={review.name}
+                name={reviewAttribution(review)}
+                text={review.text}
+              />
+            ))}
           </div>
         </div>
       </section>

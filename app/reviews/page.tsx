@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { REAL_REVIEWS, REVIEW_COUNT, reviewAttribution } from "@/lib/realReviews";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -33,44 +34,7 @@ export const metadata: Metadata = {
 const GOOGLE_REVIEW_URL =
   "https://www.google.com/search?q=DSM+Cleaning+Solutions+Romeoville+IL#lrd=0x880e614a12f4a4d5:0x1,1,,,,";
 
-const reviews = [
-  {
-    name: "Sarah M.",
-    location: "Romeoville, IL",
-    date: "November 2024",
-    text: "DSM Cleaning Solutions is absolutely amazing! They transformed my home — every corner was spotless. Being a family-owned business, they truly care about the quality of their work. Highly recommend!",
-  },
-  {
-    name: "Mike T.",
-    location: "Plainfield, IL",
-    date: "December 2024",
-    text: "Used DSM for a move-out clean on my Plainfield home. Got my full security deposit back! They are thorough, professional, and use eco-friendly products. Will definitely use them again.",
-  },
-  {
-    name: "Jennifer R.",
-    location: "Bolingbrook, IL",
-    date: "January 2025",
-    text: "I have a biweekly cleaning with DSM and I couldn't be happier. The team is reliable, trustworthy, and my house has never looked better. Love the eco-friendly products — safe for my kids and dogs!",
-  },
-  {
-    name: "Maria G.",
-    location: "Joliet, IL",
-    date: "February 2025",
-    text: "DSM does my weekly cleaning and I couldn't be happier. They're consistent, thorough, and the eco-friendly products mean I don't worry about my kids. Highly recommend to any Joliet family.",
-  },
-  {
-    name: "Robert H.",
-    location: "Joliet, IL",
-    date: "March 2025",
-    text: "Called DSM for a deep clean of my Joliet home and they knocked it out of the park. Every room was perfect. I've been using them for recurring service ever since.",
-  },
-  {
-    name: "Diana P.",
-    location: "Joliet, IL",
-    date: "January 2025",
-    text: "Excellent move-out cleaning for my Joliet rental. My landlord was impressed and I got my full deposit back without any deductions. Professional and thorough.",
-  },
-];
+const reviews = REAL_REVIEWS;
 
 // aggregateRating lives in layout.tsx (global LocalBusiness entity with @id "#business").
 // Keeping it here too would cause the "Review has multiple aggregate ratings" GSC error
@@ -91,56 +55,12 @@ const reviewSchema = {
     postalCode: "60446",
     addressCountry: "US",
   },
-  review: [
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Sarah M." },
-      datePublished: "2024-11-01",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      reviewBody:
-        "DSM Cleaning Solutions is absolutely amazing! They transformed my home — every corner was spotless. Being a family-owned business, they truly care about the quality of their work. Highly recommend!",
-    },
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Mike T." },
-      datePublished: "2024-12-01",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      reviewBody:
-        "Used DSM for a move-out clean on my Plainfield home. Got my full security deposit back! They are thorough, professional, and use eco-friendly products. Will definitely use them again.",
-    },
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Jennifer R." },
-      datePublished: "2025-01-01",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      reviewBody:
-        "I have a biweekly cleaning with DSM and I couldn't be happier. The team is reliable, trustworthy, and my house has never looked better. Love the eco-friendly products — safe for my kids and dogs!",
-    },
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Maria G." },
-      datePublished: "2025-02-01",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      reviewBody:
-        "DSM does my weekly cleaning and I couldn't be happier. They're consistent, thorough, and the eco-friendly products mean I don't worry about my kids. Highly recommend to any Joliet family.",
-    },
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Robert H." },
-      datePublished: "2025-03-01",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      reviewBody:
-        "Called DSM for a deep clean of my Joliet home and they knocked it out of the park. Every room was perfect. I've been using them for recurring service ever since.",
-    },
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Diana P." },
-      datePublished: "2025-01-01",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      reviewBody:
-        "Excellent move-out cleaning for my Joliet rental. My landlord was impressed and I got my full deposit back without any deductions. Professional and thorough.",
-    },
-  ],
+  review: REAL_REVIEWS.map((r) => ({
+    "@type": "Review",
+    author: { "@type": "Person", name: r.name },
+    reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+    reviewBody: r.text,
+  })),
 };
 
 function StarRating() {
@@ -158,8 +78,8 @@ function ReviewCard({
   text,
 }: {
   name: string;
-  location: string;
-  date: string;
+  location?: string;
+  date?: string;
   text: string;
 }) {
   return (
@@ -177,9 +97,11 @@ function ReviewCard({
         </div>
         <div>
           <p className="font-bold text-gray-900 text-sm">{name}</p>
-          <p className="text-xs text-gray-500">
-            {location} &middot; {date}
-          </p>
+          {(location || date) ? (
+            <p className="text-xs text-gray-500">
+              {[location, date].filter(Boolean).join(" · ")}
+            </p>
+          ) : null}
         </div>
         {/* Google G icon */}
         <div className="ml-auto">
@@ -224,7 +146,7 @@ export default function ReviewsPage() {
               <span className="text-yellow-300 text-3xl leading-none">★★★★★</span>
               <div>
                 <span className="text-white font-bold text-xl">5.0</span>
-                <span className="text-white/75 text-base ml-2">average · 47 reviews</span>
+                <span className="text-white/75 text-base ml-2">average · {REVIEW_COUNT} reviews</span>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -257,7 +179,7 @@ export default function ReviewsPage() {
             <div className="text-center">
               <p className="text-7xl font-extrabold text-brand-green leading-none mb-2">5.0</p>
               <div className="text-yellow-400 text-3xl mb-1">★★★★★</div>
-              <p className="text-sm text-gray-500 font-medium">Based on 47 reviews</p>
+              <p className="text-sm text-gray-500 font-medium">Based on {REVIEW_COUNT} reviews</p>
             </div>
 
             {/* Divider */}
@@ -302,9 +224,7 @@ export default function ReviewsPage() {
             {reviews.map((review) => (
               <ReviewCard
                 key={review.name}
-                name={review.name}
-                location={review.location}
-                date={review.date}
+                name={reviewAttribution(review)}
                 text={review.text}
               />
             ))}
