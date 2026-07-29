@@ -1,9 +1,18 @@
 /**
  * CANONICAL SOURCE OF TRUTH FOR CUSTOMER REVIEWS.
  *
- * Every review below was transcribed verbatim from the DSM Cleaning Solutions
- * Google Business Profile. Screenshots of the source feed are kept in
- * public/Reviews/ as evidence.
+ * Holds 13 reviews, all verbatim from the DSM Cleaning Solutions Google
+ * Business Profile.
+ *
+ * Sourcing: 11 were transcribed from screenshots of the live review feed, kept
+ * in public/Reviews/ as evidence. The remaining two, Michelle Gillespie and
+ * Jan Forster, came from prior page content rather than those screenshots
+ * (recovered verbatim from commit cd18bcf, app/deep-clean-offer/page.tsx) and
+ * were confirmed genuine separately. A third from that same block, Rachel
+ * LaPapa, remains excluded pending confirmation.
+ *
+ * REVIEW_COUNT is the live Google total and is unrelated to how many review
+ * texts are stored here. Adding text for a review does not change the count.
  *
  * RULES — read before editing:
  *  1. Never add a review that is not on the live Google profile. Fabricated
@@ -29,6 +38,22 @@ export interface RealReview {
 }
 
 export const REAL_REVIEWS: RealReview[] = [
+  // Michelle's and Jan's reviews lead the array on purpose. pickReviews() draws
+  // from index 0 upward, so these surface on the most pages. Michelle names
+  // Guillermo and Rocio directly, which is the strongest social proof on the
+  // site; Jan's is specific and human.
+  {
+    name: "Michelle Gillespie",
+    city: "",
+    text: "Guillermo and Rocio did a wonderful job. I was at work while they cleaned but my kids were home and said they were courteous, efficient, friendly, and went above and beyond. I highly recommend them.",
+    rating: 5,
+  },
+  {
+    name: "Jan Forster",
+    city: "",
+    text: "Very happy with my cleaning! My house has been neglected due to a few surgeries and I was thrilled to have a sparkling house again! Will definitely use them again! Very friendly as well!",
+    rating: 5,
+  },
   {
     name: "Thomas Cheng",
     city: "",

@@ -418,15 +418,14 @@ export default function DeepCleanOfferPage() {
             </p>
           </div>
 
-          {/* Jan Forster review — above second form */}
+          {/* Featured review above the second form. Jan Forster is index 1 in
+              REAL_REVIEWS; the text is never copied into this file. */}
           <blockquote className="max-w-xl mx-auto mb-8 text-center">
             <p className="text-gray-600 italic leading-relaxed text-base">
-              &ldquo;Very happy with my cleaning! My house has been neglected due
-              to a few surgeries and I was thrilled to have a sparkling house
-              again! Will definitely use them again! Very friendly as well!&rdquo;
+              &ldquo;{REAL_REVIEWS[1].text}&rdquo;
             </p>
             <footer className="mt-3 text-sm font-semibold text-gray-700">
-              — Jan Forster{" "}
+              {reviewAttribution(REAL_REVIEWS[1])}{" "}
               <span className="text-amber-400 not-italic">★★★★★</span>
               <span className="font-normal text-gray-400"> · Google Review</span>
             </footer>
