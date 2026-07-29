@@ -64,7 +64,7 @@ const faqs = [
   },
   {
     q: "Is the free oven cleaning really free?",
-    a: "Yes, completely free through July. Our oven deep clean is normally a $40 add-on. Book before July 31 and it's included at no charge.",
+    a: "Yes, completely free through August 31. Our oven deep clean is normally a $40 add-on. Book before then and it's included at no charge.",
   },
   {
     q: "What if I'm not happy with the clean?",
@@ -85,7 +85,7 @@ export default function BookPage() {
     <>
       {/* ════════════ STICKY TOP BAR ════════════ */}
       <div className="sticky top-0 z-50 text-white py-2.5 px-4 text-center text-sm font-semibold" style={{ backgroundColor: ORANGE }}>
-        🔥 $75 Off + Free Oven Cleaning ($40 value) through July · Use Code&nbsp;
+        🔥 $75 Off + Free Oven Cleaning ($40 value) through August 31 · Use Code&nbsp;
         <span className="bg-white font-black px-2 py-0.5 rounded tracking-widest" style={{ color: ORANGE }}>
           {COUPON}
         </span>
@@ -254,7 +254,7 @@ export default function BookPage() {
             >
               Lock In My Spot Now →
             </a>
-            <p className="text-xs mt-3" style={{ color: "#93afd4" }}>Offer expires July 31. Spots are limited.</p>
+            <p className="text-xs mt-3" style={{ color: "#93afd4" }}>Offer expires August 31. Spots are limited.</p>
           </div>
         </div>
       </section>
@@ -419,7 +419,7 @@ export default function BookPage() {
               <span className="font-black tracking-widest px-2 py-0.5 rounded" style={{ backgroundColor: ORANGE, color: "#fff" }}>
                 {COUPON}
               </span>{" "}
-              at checkout · Free oven cleaning added automatically · Offer expires July 31
+              at checkout · Free oven cleaning added automatically · Offer expires August 31
             </p>
           </div>
 
