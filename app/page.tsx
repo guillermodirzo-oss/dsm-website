@@ -527,7 +527,7 @@ export default function HomePage() {
       <section id="contact" className="py-20 bg-gradient-to-br from-orange-500 via-orange-500 to-orange-600 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80&auto=format&fit=crop')",
+            backgroundImage: "radial-gradient(circle at 20% 25%, rgba(255,255,255,0.55), rgba(255,255,255,0) 45%), radial-gradient(circle at 80% 75%, rgba(255,255,255,0.35), rgba(255,255,255,0) 50%), linear-gradient(135deg, rgba(255,255,255,0.18), rgba(0,0,0,0.12))",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }} />

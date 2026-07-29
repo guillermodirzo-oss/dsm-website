@@ -153,18 +153,25 @@ export default function RootLayout({
         <Analytics />
         <SpeedInsights />
         <GoogleAnalytics gaId="G-ZNH3HYZHQN" />
-        {/* Microsoft Clarity — session recordings & heatmaps */}
-        <Script id="microsoft-clarity" strategy="afterInteractive">
+        {/* Microsoft Clarity — session recordings & heatmaps.
+            lazyOnload: this is passive observability, nothing on the page depends
+            on it, so it has no business competing for the main thread during load. */}
+        <Script id="microsoft-clarity" strategy="lazyOnload">
           {`(function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
           })(window,document,"clarity","script","wljkdhzea7");`}
         </Script>
+        {/* HubSpot loader — chat widget, analytics and banner.
+            The single most expensive third party on the page (597 KiB / ~997 ms).
+            The chat bubble is not above the fold and forms post through
+            lib/submitToHubspot.ts server-side, so deferring it costs nothing
+            functional. */}
         <Script
           id="hs-script-loader"
           src="//js.hs-scripts.com/246258605.js"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
       </body>
     </html>
