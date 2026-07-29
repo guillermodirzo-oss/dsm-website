@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 
@@ -195,9 +196,13 @@ export default function DeepCleaningPage() {
               </div>
             </div>
             <div className="flex-shrink-0 w-full md:w-80">
-              <img
-                src="/Work%20Pictures/double-vanity-bathroom-clean-naperville-il.jpg"
+              <Image
+                src="/work-photos/double-vanity-bathroom-clean-naperville-il.jpg"
                 alt="Professional deep cleaning results in Romeoville and Plainfield IL"
+                width={1920}
+                height={2560}
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="rounded-xl shadow-lg w-full object-cover"
                 style={{ maxHeight: "340px" }}
               />
@@ -278,9 +283,12 @@ export default function DeepCleaningPage() {
             </div>
           </div>
           <div className="text-center">
-            <img
-              src="/Work%20Pictures/Google%20Post%20Image%20-%20Cleaning%20Service%20(1).png"
+            <Image
+              src="/work-photos/google-post-image-cleaning-service-1.jpg"
               alt="DSM Cleaning Solutions team serving Romeoville, Plainfield, Bolingbrook and Naperville"
+              width={940}
+              height={788}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="rounded-xl shadow-md mx-auto"
               style={{ maxWidth: "560px", width: "100%" }}
             />

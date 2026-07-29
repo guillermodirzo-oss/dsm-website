@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import PlainfieldForm from "./PlainfieldForm";
 import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 
@@ -214,10 +215,13 @@ export default function DeepCleaningPlainfieldPage() {
 
             {/* Hero image */}
             <div className="mt-6 lg:mt-0">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/Work%20Pictures/double-vanity-bathroom-clean-naperville-il.jpg"
+              <Image
+                src="/work-photos/double-vanity-bathroom-clean-naperville-il.jpg"
                 alt="Professionally cleaned double vanity bathroom by DSM Cleaning Solutions"
+                width={1920}
+                height={2560}
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="w-full rounded-xl object-cover shadow-lg"
                 style={{ maxHeight: "340px" }}
               />
@@ -378,10 +382,12 @@ export default function DeepCleaningPlainfieldPage() {
           </div>
 
           {/* Second photo */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/Work%20Pictures/Google%20Post%20Image%20-%20Cleaning%20Service%20(1).png"
+          <Image
+            src="/work-photos/google-post-image-cleaning-service-1.jpg"
             alt="Professionally cleaned kitchen in Plainfield, IL by DSM Cleaning Solutions"
+            width={940}
+            height={788}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="w-full rounded-xl object-cover mt-10 shadow-sm"
             style={{ maxHeight: "360px" }}
           />

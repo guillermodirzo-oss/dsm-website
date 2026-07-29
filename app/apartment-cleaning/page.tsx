@@ -182,7 +182,7 @@ export default function ApartmentCleaningPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/apartment-bathroom-cleaning-naperville-il.jpg"
+                src="/work-photos/apartment-bathroom-cleaning-naperville-il.jpg"
                 alt="Clean apartment bathroom professionally cleaned by DSM Cleaning Solutions in Naperville IL"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
@@ -191,7 +191,7 @@ export default function ApartmentCleaningPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/apartment-move-out-cleaning-joliet-il.jpg"
+                src="/work-photos/apartment-move-out-cleaning-joliet-il.jpg"
                 alt="Clean apartment with parquet hardwood floors after professional cleaning service in Joliet IL"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
@@ -200,7 +200,7 @@ export default function ApartmentCleaningPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/bedroom-cleaning-service-bolingbrook-il.jpg"
+                src="/work-photos/bedroom-cleaning-service-bolingbrook-il.jpg"
                 alt="Clean bedroom maintained with recurring apartment cleaning service in Bolingbrook IL"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"

@@ -213,7 +213,7 @@ export default function AirbnbCleaningPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/master-bedroom-airbnb-cleaning-bolingbrook-il.jpg"
+                src="/work-photos/master-bedroom-airbnb-cleaning-bolingbrook-il.jpg"
                 alt="Clean furnished bedroom guest-ready after Airbnb turnover cleaning in Bolingbrook IL"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
@@ -222,7 +222,7 @@ export default function AirbnbCleaningPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/shower-deep-clean-romeoville-il.jpg"
+                src="/work-photos/shower-deep-clean-romeoville-il.jpg"
                 alt="Sparkling clean glass shower after Airbnb bathroom turnover cleaning in Romeoville IL"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
@@ -231,7 +231,7 @@ export default function AirbnbCleaningPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/living-room-hardwood-floors-plainfield-il.jpg"
+                src="/work-photos/living-room-hardwood-floors-plainfield-il.jpg"
                 alt="Spotless living room after short-term rental turnover cleaning in Plainfield IL"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"

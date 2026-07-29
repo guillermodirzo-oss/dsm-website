@@ -103,7 +103,7 @@ export default function StandardCleaningPage() {
 
       {/* HERO */}
       <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-orange-900 text-white py-20 md:py-28 overflow-hidden">
-        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url('/Work%20Pictures/living-room-hardwood-floors-plainfield-il.jpg')", backgroundSize: "cover", backgroundPosition: "center" }} />
+        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url('/work-photos/living-room-hardwood-floors-plainfield-il.jpg')", backgroundSize: "cover", backgroundPosition: "center" }} />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 text-sm text-white/50 mb-5">
             <Link href="/" className="hover:text-white">Home</Link><span>/</span><span className="text-white">Standard House Cleaning</span>
@@ -214,7 +214,7 @@ export default function StandardCleaningPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/living-room-hardwood-floors-plainfield-il.jpg"
+                src="/work-photos/living-room-hardwood-floors-plainfield-il.jpg"
                 alt="Clean living room with dark hardwood floors maintained with recurring house cleaning in Plainfield IL"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -223,7 +223,7 @@ export default function StandardCleaningPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/bedroom-cleaning-service-bolingbrook-il.jpg"
+                src="/work-photos/bedroom-cleaning-service-bolingbrook-il.jpg"
                 alt="Clean bedroom with hardwood floors after standard maid service in Bolingbrook IL"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -232,7 +232,7 @@ export default function StandardCleaningPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/apartment-bathroom-cleaning-naperville-il.jpg"
+                src="/work-photos/apartment-bathroom-cleaning-naperville-il.jpg"
                 alt="Sparkling clean bathroom after standard house cleaning service in Naperville IL"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"

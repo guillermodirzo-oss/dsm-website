@@ -351,7 +351,7 @@ export default function MoveOutCleaningPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/laundry-room-move-out-clean-romeoville-il.jpg"
+                src="/work-photos/laundry-room-move-out-clean-romeoville-il.jpg"
                 alt="Clean laundry room ready for move-out inspection by DSM Cleaning Solutions in Romeoville IL"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
@@ -360,7 +360,7 @@ export default function MoveOutCleaningPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/bathroom-shower-tub-deep-clean-plainfield-il.jpg"
+                src="/work-photos/bathroom-shower-tub-deep-clean-plainfield-il.jpg"
                 alt="Bathroom with walk-in shower deep cleaned for move-out inspection in Plainfield IL"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
@@ -369,7 +369,7 @@ export default function MoveOutCleaningPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/apartment-move-out-cleaning-joliet-il.jpg"
+                src="/work-photos/apartment-move-out-cleaning-joliet-il.jpg"
                 alt="Empty apartment with spotless parquet floors after professional move-out cleaning in Joliet IL"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"

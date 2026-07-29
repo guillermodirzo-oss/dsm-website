@@ -88,14 +88,19 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* ─── HERO ─── */}
-      <section
-        className="relative min-h-[92vh] flex items-center justify-center overflow-hidden"
-        style={{
-          backgroundImage: "url('/hero-image.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center 60%",
-        }}
-      >
+      <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
+        {/* LCP element. Rendered through next/image with priority so it is
+            preloaded and served as AVIF/WebP; as a CSS background it was
+            discovered late and downloaded at full size. */}
+        <Image
+          src="/hero-image.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+          style={{ objectPosition: "center 60%" }}
+        />
         {/* Dark overlay — lightened so image shows clearly */}
         <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/30" />
         {/* Orange tint */}
@@ -256,12 +261,12 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
-              { src: "/Work%20Pictures/Google Post Image - Cleaning Service (1).png",  alt: "Professional deep cleaning service in Plainfield IL — sparkling clean kitchen by DSM Cleaning Solutions", caption: "Kitchen Deep Clean · Plainfield, IL" },
-              { src: "/Work%20Pictures/shower-deep-clean-romeoville-il.jpg",            alt: "Glass shower and stone tile bathroom after professional deep cleaning in Romeoville IL", caption: "Bathroom Deep Clean · Romeoville, IL" },
-              { src: "/Work%20Pictures/living-room-hardwood-floors-plainfield-il.jpg",  alt: "Clean living room with dark hardwood floors — recurring maid service in Plainfield IL", caption: "Living Room · Standard Cleaning" },
-              { src: "/Work%20Pictures/double-vanity-bathroom-clean-naperville-il.jpg", alt: "Double vanity bathroom cleaned and polished by DSM Cleaning Solutions in Naperville IL", caption: "Vanity & Bathroom · Naperville, IL" },
-              { src: "/Work%20Pictures/bedroom-cleaning-service-bolingbrook-il.jpg",    alt: "Spotless bedroom after recurring house cleaning service in Bolingbrook IL", caption: "Master Bedroom · Bolingbrook, IL" },
-              { src: "/Work%20Pictures/Google Post Image - Cleaning Service (25).png", alt: "Professional cleaner at work in a southwest Chicago suburb home — DSM Cleaning Solutions", caption: "Move-Out Clean · Romeoville, IL" },
+              { src: "/work-photos/google-post-image-cleaning-service-1.jpg",  alt: "Professional deep cleaning service in Plainfield IL — sparkling clean kitchen by DSM Cleaning Solutions", caption: "Kitchen Deep Clean · Plainfield, IL" },
+              { src: "/work-photos/shower-deep-clean-romeoville-il.jpg",            alt: "Glass shower and stone tile bathroom after professional deep cleaning in Romeoville IL", caption: "Bathroom Deep Clean · Romeoville, IL" },
+              { src: "/work-photos/living-room-hardwood-floors-plainfield-il.jpg",  alt: "Clean living room with dark hardwood floors — recurring maid service in Plainfield IL", caption: "Living Room · Standard Cleaning" },
+              { src: "/work-photos/double-vanity-bathroom-clean-naperville-il.jpg", alt: "Double vanity bathroom cleaned and polished by DSM Cleaning Solutions in Naperville IL", caption: "Vanity & Bathroom · Naperville, IL" },
+              { src: "/work-photos/bedroom-cleaning-service-bolingbrook-il.jpg",    alt: "Spotless bedroom after recurring house cleaning service in Bolingbrook IL", caption: "Master Bedroom · Bolingbrook, IL" },
+              { src: "/work-photos/google-post-image-cleaning-service-25.jpg", alt: "Professional cleaner at work in a southwest Chicago suburb home — DSM Cleaning Solutions", caption: "Move-Out Clean · Romeoville, IL" },
             ].map((photo) => (
               <div key={photo.src} className="group">
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
@@ -352,7 +357,7 @@ export default function HomePage() {
               {/* Image with overlay card */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-orange-100 h-[500px]">
                 <Image
-                  src="/Work%20Pictures/shower-tile-cleaning-romeoville-il.jpg"
+                  src="/work-photos/shower-tile-cleaning-romeoville-il.jpg"
                   alt="Spotless shower tile cleaned by DSM Cleaning Solutions in Romeoville IL"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"

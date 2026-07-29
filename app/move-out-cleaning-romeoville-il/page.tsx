@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
@@ -219,10 +220,13 @@ export default function MoveOutCleaningRomeovillePage() {
               </div>
             </div>
             <div className="hidden lg:block">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/Work%20Pictures/laundry-room-move-out-clean-romeoville-il.jpg"
+              <Image
+                src="/work-photos/laundry-room-move-out-clean-romeoville-il.jpg"
                 alt="Move-out cleaning in Romeoville IL — DSM Cleaning Solutions"
+                width={1920}
+                height={2560}
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="rounded-2xl shadow-2xl w-full object-cover max-h-96"
               />
             </div>

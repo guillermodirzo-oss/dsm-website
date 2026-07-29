@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 
@@ -182,10 +183,13 @@ export default function DeepCleaningRomeovillePage() {
               </div>
             </div>
             <div className="mt-6 lg:mt-0">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/Work%20Pictures/double-vanity-bathroom-clean-naperville-il.jpg"
+              <Image
+                src="/work-photos/double-vanity-bathroom-clean-naperville-il.jpg"
                 alt="Professionally cleaned bathroom by DSM Cleaning Solutions in Romeoville IL"
+                width={1920}
+                height={2560}
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="w-full rounded-xl object-cover shadow-lg"
                 style={{ maxHeight: "340px" }}
               />
@@ -308,10 +312,12 @@ export default function DeepCleaningRomeovillePage() {
               <p className="text-gray-600 text-sm leading-relaxed">Based right here in Romeoville. Not a national franchise. Memo answers his own phone. Call or text him directly.</p>
             </div>
           </div>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/Work%20Pictures/Google%20Post%20Image%20-%20Cleaning%20Service%20(1).png"
+          <Image
+            src="/work-photos/google-post-image-cleaning-service-1.jpg"
             alt="Professionally cleaned kitchen in Romeoville, IL by DSM Cleaning Solutions"
+            width={940}
+            height={788}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="w-full rounded-xl object-cover mt-10 shadow-sm"
             style={{ maxHeight: "360px" }}
           />

@@ -161,7 +161,7 @@ export default function BookPage() {
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div className="relative h-52 rounded-lg overflow-hidden">
             <Image
-              src="/Work%20Pictures/double-vanity-bathroom-clean-naperville-il.jpg"
+              src="/work-photos/double-vanity-bathroom-clean-naperville-il.jpg"
               alt="Double vanity bathroom after professional deep cleaning in Naperville IL"
               fill
               className="object-cover"
@@ -171,7 +171,7 @@ export default function BookPage() {
           </div>
           <div className="relative h-52 rounded-lg overflow-hidden">
             <Image
-              src="/Work%20Pictures/bathtub-shower-deep-clean-plainfield-il.jpg"
+              src="/work-photos/bathtub-shower-deep-clean-plainfield-il.jpg"
               alt="Bathtub and shower scrubbed clean by DSM Cleaning Solutions in Plainfield IL"
               fill
               className="object-cover"
@@ -181,7 +181,7 @@ export default function BookPage() {
           </div>
           <div className="relative h-52 rounded-lg overflow-hidden">
             <Image
-              src="/Work%20Pictures/living-room-hardwood-floors-plainfield-il.jpg"
+              src="/work-photos/living-room-hardwood-floors-plainfield-il.jpg"
               alt="Living room with hardwood floors cleaned and polished in Plainfield IL"
               fill
               className="object-cover"
@@ -375,7 +375,7 @@ export default function BookPage() {
           {/* Work photo near reviews */}
           <div className="relative h-64 rounded-2xl overflow-hidden mb-8">
             <Image
-              src="/Work%20Pictures/bedroom-cleaning-service-bolingbrook-il.jpg"
+              src="/work-photos/bedroom-cleaning-service-bolingbrook-il.jpg"
               alt="Bedroom cleaned and organized by DSM Cleaning Solutions in Bolingbrook IL"
               fill
               className="object-cover"

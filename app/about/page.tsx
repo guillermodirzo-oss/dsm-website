@@ -213,7 +213,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="relative aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/Google Post Image - Cleaning Service (25).png"
+                src="/work-photos/google-post-image-cleaning-service-25.jpg"
                 alt="DSM Cleaning Solutions professional cleaner at work in a Plainfield IL home"
                 fill
                 sizes="(max-width: 768px) 50vw, 25vw"
@@ -222,7 +222,7 @@ export default function AboutPage() {
             </div>
             <div className="relative aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/shower-deep-clean-romeoville-il.jpg"
+                src="/work-photos/shower-deep-clean-romeoville-il.jpg"
                 alt="Glass shower deep cleaned to sparkling perfection by DSM Cleaning Solutions in Romeoville IL"
                 fill
                 sizes="(max-width: 768px) 50vw, 25vw"
@@ -231,7 +231,7 @@ export default function AboutPage() {
             </div>
             <div className="relative aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/living-room-hardwood-floors-plainfield-il.jpg"
+                src="/work-photos/living-room-hardwood-floors-plainfield-il.jpg"
                 alt="Clean living room with hardwood floors after house cleaning by DSM Cleaning Solutions in Plainfield IL"
                 fill
                 sizes="(max-width: 768px) 50vw, 25vw"
@@ -240,7 +240,7 @@ export default function AboutPage() {
             </div>
             <div className="relative aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
-                src="/Work%20Pictures/Google Post Image - Cleaning Service (1).png"
+                src="/work-photos/google-post-image-cleaning-service-1.jpg"
                 alt="Clean modern kitchen with granite island after professional cleaning in Plainfield IL"
                 fill
                 sizes="(max-width: 768px) 50vw, 25vw"

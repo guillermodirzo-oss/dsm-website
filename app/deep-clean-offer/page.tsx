@@ -68,32 +68,32 @@ const regularItems: { text: string; included: boolean }[] = [
 
 const workPhotos = [
   {
-    src: "/Work%20Pictures/shower-deep-clean-romeoville-il.jpg",
+    src: "/work-photos/shower-deep-clean-romeoville-il.jpg",
     alt: "Deep cleaned glass shower — Romeoville IL",
     caption: "Shower deep clean — Romeoville",
   },
   {
-    src: "/Work%20Pictures/double-vanity-bathroom-clean-naperville-il.jpg",
+    src: "/work-photos/double-vanity-bathroom-clean-naperville-il.jpg",
     alt: "Double vanity bathroom after deep cleaning — Naperville IL",
     caption: "Master bath — Naperville",
   },
   {
-    src: "/Work%20Pictures/double-sink-bathroom-deep-clean-plainfield-il.jpg",
+    src: "/work-photos/double-sink-bathroom-deep-clean-plainfield-il.jpg",
     alt: "Double sink bathroom after deep cleaning — Plainfield IL",
     caption: "Full bathroom — Plainfield",
   },
   {
-    src: "/Work%20Pictures/living-room-hardwood-floors-plainfield-il.jpg",
+    src: "/work-photos/living-room-hardwood-floors-plainfield-il.jpg",
     alt: "Gleaming hardwood floors after professional cleaning — Plainfield IL",
     caption: "Hardwood floors — Plainfield",
   },
   {
-    src: "/Work%20Pictures/master-bedroom-airbnb-cleaning-bolingbrook-il.jpg",
+    src: "/work-photos/master-bedroom-airbnb-cleaning-bolingbrook-il.jpg",
     alt: "Clean master bedroom — Bolingbrook IL",
     caption: "Master bedroom — Bolingbrook",
   },
   {
-    src: "/Work%20Pictures/bathtub-shower-deep-clean-plainfield-il.jpg",
+    src: "/work-photos/bathtub-shower-deep-clean-plainfield-il.jpg",
     alt: "Full bathroom deep clean with tub and shower — Plainfield IL",
     caption: "Bathroom deep clean — Plainfield",
   },
