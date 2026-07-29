@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
-import { pickReviews, reviewAttribution, REVIEW_COUNT } from "@/lib/realReviews";
+import { pickReviews, reviewAttribution, REVIEW_COUNT, REVIEW_RATING } from "@/lib/realReviews";
 import { ScrollIndicator, StickyMobileBar } from "@/components/HomepageScrollWidgets";
 
 export const metadata: Metadata = {
@@ -50,7 +50,7 @@ const services = [
 ];
 
 const faqs = [
-  { question: "How much does house cleaning cost in Romeoville, IL?", answer: "Pricing depends on the size of your home and the type of cleaning needed. Standard recurring cleanings typically start around $120–$180 for an average home. Contact us for a free, no-obligation estimate." },
+  { question: "How much does house cleaning cost in Romeoville, IL?", answer: "Standard cleaning starts at $160 for a 2-bedroom home. Your price depends on the number of bedrooms and bathrooms and your square footage, and we confirm the exact price with you before anything is booked." },
   { question: "Are you insured and bonded?", answer: "Yes — DSM Cleaning Solutions is fully insured and bonded. You can have complete peace of mind knowing your home and belongings are protected every time we clean." },
   { question: "Do you use eco-friendly cleaning products?", answer: "Absolutely. We use non-toxic, eco-friendly cleaning products that are safe for children, pets, and the environment. Our green cleaning approach delivers a deep clean without harsh chemicals." },
   { question: "Can I book cleaning online?", answer: "Yes! You can book directly through our online booking page or call us at (815) 246-2113. We respond within 1 business day." },
@@ -108,24 +108,46 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-t from-orange-900/20 via-transparent to-transparent" />
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          {/* Badge */}
-          <Link href="/reviews" className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 mb-8 hover:bg-white/20 transition-colors">
-            <span className="text-yellow-400 text-sm">★★★★★</span>
-            <span className="text-white/90 text-sm font-medium">5-Star Rated · Romeoville &amp; Plainfield, IL</span>
-          </Link>
-
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-[1.05] tracking-tight mb-6">
-            Professional House<br />
+          {/* Spacing is deliberately tight on mobile so the primary CTA, the
+              rating and the offer all clear the fold at 390px. 69% of traffic
+              is mobile. Widen the rhythm at sm and above, not below. */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-[1.08] tracking-tight mb-4">
+            Come Home to a House That&apos;s{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-orange-400">
-              Cleaning Services
+              Actually Clean.
             </span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed font-light">
-            Family-owned, eco-friendly cleaning you can trust. Fully insured and satisfaction guaranteed.
+          <p className="text-base sm:text-lg md:text-xl text-white/85 mb-3 max-w-2xl mx-auto leading-relaxed">
+            House cleaning in Romeoville, Plainfield, Naperville and the southwest
+            suburbs. Family-owned, fully insured, and every clean is backed by our
+            48-hour guarantee.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          {/* Rating, matching the treatment on the deep cleaning city pages.
+              Counts come from lib/realReviews.ts, never hardcoded. */}
+          <Link
+            href="/reviews"
+            className="inline-block text-sm font-semibold mb-4 hover:underline"
+            style={{ color: "#FFA869" }}
+          >
+            ★★★★★ {REVIEW_RATING} · {REVIEW_COUNT} Google Reviews
+          </Link>
+
+          {/* Offer. Terms mirror /book exactly so the two pages never disagree. */}
+          <div className="mb-6">
+            <p
+              className="inline-block rounded-full px-4 py-2 text-sm sm:text-base font-bold text-white shadow-lg"
+              style={{ backgroundColor: "#E8622A" }}
+            >
+              $75 off your first deep clean, plus free oven cleaning, a $40 value.
+            </p>
+            <p className="text-white/70 text-xs sm:text-sm mt-2">
+              Use code <span className="font-bold text-white">SUMMER75</span> through August 31.
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href="/contact"
               className="w-full md:w-auto inline-block font-extrabold text-base text-white text-center py-4 px-9 rounded-full active:scale-95 transition-all duration-200 shadow-2xl"
@@ -150,7 +172,7 @@ export default function HomePage() {
           </div>
 
           {/* Trust indicators */}
-          <div className="flex flex-wrap justify-center gap-6 mt-12 text-white/60 text-sm">
+          <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 mt-7 text-white/60 text-sm">
             {["✓ Family Owned", "✓ Fully Insured", "✓ Eco-Friendly", "✓ Satisfaction Guaranteed"].map((t) => (
               <span key={t} className="font-medium">{t}</span>
             ))}
@@ -268,15 +290,18 @@ export default function HomePage() {
               { src: "/work-photos/double-vanity-bathroom-clean-naperville-il.jpg", alt: "Double vanity bathroom cleaned and polished by DSM Cleaning Solutions in Naperville IL", caption: "Vanity & Bathroom · Naperville, IL" },
               { src: "/work-photos/bedroom-cleaning-service-bolingbrook-il.jpg",    alt: "Spotless bedroom after recurring house cleaning service in Bolingbrook IL", caption: "Master Bedroom · Bolingbrook, IL" },
               { src: "/work-photos/google-post-image-cleaning-service-25.jpg", alt: "Professional cleaner at work in a southwest Chicago suburb home — DSM Cleaning Solutions", caption: "Move-Out Clean · Romeoville, IL" },
+            // Static imagery. The lift-and-zoom hover this used to have made
+            // every photo look clickable when it goes nowhere, so the
+            // affordance is removed rather than faked.
             ].map((photo) => (
-              <div key={photo.src} className="group">
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+              <div key={photo.src}>
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md">
                   <Image
                     src={photo.src}
                     alt={photo.alt}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover"
                   />
                 </div>
                 <p className="text-xs text-gray-400 font-medium text-center mt-2.5 tracking-wide">{photo.caption}</p>
@@ -300,7 +325,7 @@ export default function HomePage() {
             <h2 className="section-heading text-4xl md:text-5xl">What Romeoville Families Are Saying</h2>
             <Link href="/reviews" className="inline-flex items-center justify-center gap-2 mt-3 hover:opacity-80 transition-opacity">
               <span className="text-yellow-400 text-2xl">★★★★★</span>
-              <span className="text-gray-400 font-medium">5.0 average · {REVIEW_COUNT} reviews</span>
+              <span className="text-gray-400 font-medium">{REVIEW_RATING} average · {REVIEW_COUNT} reviews</span>
             </Link>
           </div>
 
@@ -344,7 +369,9 @@ export default function HomePage() {
                   { label: "Years in Business", value: "5+" },
                   { label: "Happy Clients", value: "500+" },
                   { label: "Cities Served", value: "10+" },
-                  { label: "Satisfaction Rate", value: "100%" },
+                  // Replaces an unverifiable "100% Satisfaction Rate" with a
+                  // number anyone can check on the Google profile.
+                  { label: "Five-Star Reviews", value: String(REVIEW_COUNT) },
                 ].map((stat) => (
                   <div key={stat.label} className="bg-orange-50 rounded-2xl p-5 text-center border border-orange-100">
                     <p className="text-3xl font-bold text-brand-green">{stat.value}</p>

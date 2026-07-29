@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface ReviewCardProps {
   name: string;
   /** Omitted when the reviewer's city is unknown. Google does not publish it. */
@@ -7,9 +9,18 @@ interface ReviewCardProps {
   date?: string;
 }
 
+/**
+ * The card lifts and shadows on hover, which reads as clickable, so it is a
+ * real link. Previously it was a bare div with the same hover treatment, which
+ * made every review card a dead click. It points at /reviews, which was barely
+ * linked from anywhere.
+ */
 export default function ReviewCard({ name, location, text, date }: ReviewCardProps) {
   return (
-    <div className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 hover:shadow-xl hover:shadow-orange-50 hover:-translate-y-1 transition-all duration-300">
+    <Link
+      href="/reviews"
+      className="block bg-white rounded-2xl p-7 shadow-sm border border-gray-100 hover:shadow-xl hover:shadow-orange-50 hover:-translate-y-1 transition-all duration-300"
+    >
       <div className="flex items-center gap-1 mb-4">
         {[...Array(5)].map((_, i) => (
           <svg key={i} className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
@@ -30,6 +41,6 @@ export default function ReviewCard({ name, location, text, date }: ReviewCardPro
         </div>
         {date ? <p className="text-xs text-gray-300">{date}</p> : null}
       </div>
-    </div>
+    </Link>
   );
 }
