@@ -4,9 +4,6 @@ import {
   DEEP_CLEANING_TIERS,
   STANDARD_CLEANING_TIERS,
   MOVE_OUT_TIERS,
-  BEDROOM_ADDONS,
-  BATHROOM_ADDONS,
-  SQFT_ROWS,
   OFFER,
   isOfferActive,
   discountedPrice,
@@ -62,7 +59,7 @@ const faqs = [
     q: "How much does deep cleaning cost?",
     a: `Deep cleaning starts at ${formatPrice(
       startingPrice(DEEP_CLEANING_TIERS)
-    )}. It covers what a standard clean skips, like inside the oven, grout lines, baseboards, inside cabinets and window sills. Pricing varies with home size, and you get an exact quote online.`,
+    )}. It covers what a standard clean skips, like inside the oven, grout lines, baseboards, doors and window sills. Pricing varies with home size, and you get an exact quote online.`,
   },
   {
     q: "How much does move-out cleaning cost?",
@@ -126,7 +123,7 @@ const serviceCards: ServiceCard[] = [
     // Internal pricing mechanics are not shown to customers. This says what
     // they actually get for the higher price instead.
     scope:
-      "Covers what standard skips: inside the oven, grout lines, baseboards, inside cabinets and window sills.",
+      "Covers what standard skips: inside the oven, grout lines, baseboards, doors and window sills.",
     badge: "Most Popular",
     color: "border-orange-200",
     headerBg: "bg-orange-50",
@@ -151,12 +148,6 @@ const serviceCards: ServiceCard[] = [
     tiers: MOVE_OUT_TIERS,
   },
 ];
-
-const bedroomAddons = BEDROOM_ADDONS;
-
-const bathroomAddons = BATHROOM_ADDONS;
-
-const sqftRows = SQFT_ROWS;
 
 
 export default function PricingPage() {
@@ -185,7 +176,7 @@ export default function PricingPage() {
             </h1>
             <p className="text-xl text-white/90 mb-6 leading-relaxed">
               No hourly guessing. No hidden fees. Your price is calculated upfront based on your
-              home size, bedrooms, bathrooms, and service type — and you pay exactly that.
+              home size, bedrooms, bathrooms, and service type, and you pay exactly that.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -212,7 +203,7 @@ export default function PricingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
             {[
-              "💰 Flat-Rate — Never Hourly",
+              "💰 Flat-Rate, Never Hourly",
               "🚫 No Hidden Fees",
               "🧴 All Supplies Included",
               "✅ Instant Online Quote",
@@ -325,7 +316,7 @@ export default function PricingPage() {
           {/* Instant quote CTA under cards */}
           <div className="mt-8 text-center">
             <p className="text-gray-500 text-sm mb-4">
-              Prices vary based on your specific home. Get your exact quote in seconds — no commitment required.
+              Prices vary based on your specific home. Get your exact quote in seconds. No commitment required.
             </p>
             <Link
               href="/book"
@@ -339,115 +330,6 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* ─── HOW OUR PRICING WORKS ─── */}
-      <section className="py-16 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="section-heading">How Our Pricing Works</h2>
-            <p className="section-subheading mx-auto">
-              Your total price is calculated from four simple factors. Add them up and you know exactly what you&apos;ll pay.
-            </p>
-          </div>
-
-          {/* Formula Banner */}
-          <div className="bg-brand-green-50 border border-brand-green-100 rounded-2xl px-6 py-5 mb-10 text-center">
-            <p className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-2">Pricing Formula</p>
-            <p className="text-lg font-bold text-gray-900">
-              Total = Service Type + Bedroom Add-On + Bathroom Add-On + Square Footage Base
-            </p>
-            <p className="text-sm text-gray-500 mt-2">All prices are flat rate. No hidden fees and no hourly charges.</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-            {/* Factor 1 — Service Type */}
-            <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-8 h-8 rounded-full bg-brand-green flex items-center justify-center text-white font-bold text-sm flex-shrink-0">1</div>
-                <h3 className="font-bold text-lg text-gray-900">Service Type</h3>
-              </div>
-              <div className="space-y-2">
-                {/* Shows what each service starts at instead of the internal
-                    internal mechanics, which customers do not need. */}
-                {[
-                  { label: "Standard Cleaning", value: `From ${formatPrice(startingPrice(STANDARD_CLEANING_TIERS))}` },
-                  { label: "Deep Cleaning", value: `From ${formatPrice(startingPrice(DEEP_CLEANING_TIERS))}` },
-                  { label: "Move-In / Out Cleaning", value: `From ${formatPrice(startingPrice(MOVE_OUT_TIERS))}` },
-                ].map((row) => (
-                  <div key={row.label} className="flex items-center justify-between bg-white rounded-lg px-4 py-2.5 border border-gray-100">
-                    <span className="text-sm text-gray-700">{row.label}</span>
-                    <span className="text-sm font-bold text-gray-900">{row.value}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Factor 2 — Bedrooms */}
-            <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-8 h-8 rounded-full bg-brand-green flex items-center justify-center text-white font-bold text-sm flex-shrink-0">2</div>
-                <h3 className="font-bold text-lg text-gray-900">Bedroom Add-On</h3>
-              </div>
-              <div className="space-y-2">
-                {bedroomAddons.map((row) => (
-                  <div key={row.label} className="flex items-center justify-between bg-white rounded-lg px-4 py-2.5 border border-gray-100">
-                    <span className="text-sm text-gray-700">{row.label}</span>
-                    <span className={`text-sm font-bold ${row.price === "Included" ? "text-brand-green" : "text-gray-900"}`}>{row.price}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Factor 3 — Bathrooms */}
-            <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-8 h-8 rounded-full bg-brand-green flex items-center justify-center text-white font-bold text-sm flex-shrink-0">3</div>
-                <h3 className="font-bold text-lg text-gray-900">Bathroom Add-On</h3>
-              </div>
-              <div className="space-y-2">
-                {bathroomAddons.map((row) => (
-                  <div key={row.label} className="flex items-center justify-between bg-white rounded-lg px-4 py-2.5 border border-gray-100">
-                    <span className="text-sm text-gray-700">{row.label}</span>
-                    <span className={`text-sm font-bold ${row.price === "Included" ? "text-brand-green" : "text-gray-900"}`}>{row.price}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Factor 4 — Square Footage */}
-            <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-8 h-8 rounded-full bg-brand-green flex items-center justify-center text-white font-bold text-sm flex-shrink-0">4</div>
-                <h3 className="font-bold text-lg text-gray-900">Square Footage Base</h3>
-              </div>
-              <p className="text-xs text-gray-500 mb-3">Base price by home size and service type:</p>
-              <div className="overflow-x-auto">
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className="border-b border-gray-200">
-                      <th className="text-left py-2 text-xs font-bold text-gray-500 uppercase tracking-wide">Size</th>
-                      <th className="text-right py-2 text-xs font-bold text-gray-500 uppercase tracking-wide">Std</th>
-                      <th className="text-right py-2 text-xs font-bold text-gray-500 uppercase tracking-wide">Deep</th>
-                      <th className="text-right py-2 text-xs font-bold text-gray-500 uppercase tracking-wide">Move</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-gray-100">
-                    {sqftRows.map((row) => (
-                      <tr key={row.range} className="bg-white even:bg-gray-50/50">
-                        <td className="py-2 text-gray-700 pr-2 text-xs">{row.range}</td>
-                        <td className="py-2 text-right font-semibold text-gray-900">{row.standard}</td>
-                        <td className="py-2 text-right font-semibold text-gray-900">{row.deep}</td>
-                        <td className="py-2 text-right font-semibold text-gray-900">{row.moveout}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ─── CALCULATOR NOTE / INSTANT QUOTE ─── */}
       <section className="py-14 bg-orange-50 border-t border-orange-100">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -457,7 +339,7 @@ export default function PricingPage() {
           </h2>
           <p className="text-gray-600 leading-relaxed mb-6 text-lg">
             Use our online booking form to get an instant quote based on your specific home size
-            and service type — no obligation required. Takes less than 2 minutes.
+            and service type. No obligation, and it takes less than 2 minutes.
           </p>
           <Link
             href="/book"
@@ -472,7 +354,7 @@ export default function PricingPage() {
             <a href="tel:+18152462113" className="font-bold text-brand-green hover:underline">
               (815) 246-2113
             </a>{" "}
-            — we&apos;re happy to walk you through pricing over the phone.
+            and we&apos;re happy to walk you through pricing over the phone.
           </p>
         </div>
       </section>
