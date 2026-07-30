@@ -1,3 +1,10 @@
+import {
+  STANDARD_CLEANING_TIERS,
+  DEEP_CLEANING_TIERS,
+  startingPrice,
+  formatPrice,
+} from "./pricing";
+
 export interface CityData {
   name: string;
   slug: string;
@@ -86,7 +93,7 @@ export const cities: CityData[] = [
       {
         question: "How much does house cleaning cost in Naperville, IL?",
         answer:
-          "Pricing depends on your home size and the type of service. Standard recurring cleanings typically start around $120–$180. Deep cleanings start around $200. Contact us for a free, no-obligation estimate.",
+          `Your price comes down to how big your home is and which service you pick. Standard cleaning starts at ${formatPrice(startingPrice(STANDARD_CLEANING_TIERS))} and a deep clean starts at ${formatPrice(startingPrice(DEEP_CLEANING_TIERS))}. Reach out and we'll put together a free estimate, no obligation.`,
       },
       {
         question: "Do you offer same-day or same-week cleaning in Naperville?",
@@ -189,7 +196,7 @@ export const cities: CityData[] = [
       {
         question: "How much does house cleaning cost in Bolingbrook?",
         answer:
-          "Pricing depends on home size and service type. Standard cleanings start around $120–$180 and deep cleanings start around $200. Contact us for a free, no-obligation estimate.",
+          `It depends on the size of your home and what you need done. Standard cleaning begins at ${formatPrice(startingPrice(STANDARD_CLEANING_TIERS))}, while deep cleaning begins at ${formatPrice(startingPrice(DEEP_CLEANING_TIERS))}. Get in touch and we'll send a free estimate with no strings attached.`,
       },
       {
         question: "Are you insured to clean homes in Bolingbrook, IL?",
@@ -292,7 +299,7 @@ export const cities: CityData[] = [
       {
         question: "How much does house cleaning cost in Joliet?",
         answer:
-          "Standard cleanings start around $120–$180 for an average home. Deep cleanings start around $200+. Call or contact us for a free estimate tailored to your Joliet home.",
+          `Standard cleaning starts at ${formatPrice(startingPrice(STANDARD_CLEANING_TIERS))} for an average home, and deep cleaning starts at ${formatPrice(startingPrice(DEEP_CLEANING_TIERS))}. Call or message us and we'll work out a free estimate for your Joliet home.`,
       },
       {
         question: "Do you bring your own cleaning supplies to Joliet?",
@@ -1321,7 +1328,7 @@ export const cities: CityData[] = [
       {
         question: "How much does house cleaning cost in Downers Grove?",
         answer:
-          "Pricing is based on home size and service type. Standard recurring cleanings typically start around $120–$180. Deep cleanings start around $200. Contact us for a free, no-obligation estimate.",
+          `Two things set the price: the size of your home and the service you choose. Standard cleaning runs from ${formatPrice(startingPrice(STANDARD_CLEANING_TIERS))} and deep cleaning from ${formatPrice(startingPrice(DEEP_CLEANING_TIERS))}. Ask us for a free estimate whenever you're ready.`,
       },
       {
         question: "Do you use eco-friendly products in Downers Grove homes?",
