@@ -1,5 +1,25 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import {
+  DEEP_CLEANING_TIERS,
+  STANDARD_CLEANING_TIERS,
+  MOVE_OUT_TIERS,
+  BEDROOM_ADDONS,
+  BATHROOM_ADDONS,
+  SQFT_ROWS,
+  OFFER,
+  isOfferActive,
+  discountedPrice,
+  startingPrice,
+  formatPrice,
+  tierLabel,
+  type PriceTier,
+  type ServiceKey,
+} from "@/lib/pricing";
+
+// Re-render hourly so the SUMMER75 offer expires on its own after
+// OFFER.endDate without anyone shipping a change.
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "House Cleaning Prices Romeoville IL",
@@ -30,155 +50,29 @@ export const metadata: Metadata = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How much does standard cleaning cost?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Standard cleaning starts at $160 for a 2-bedroom home and varies based on square footage and number of bathrooms. Use our online booking form for an exact quote.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How much does deep cleaning cost?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Deep cleaning includes a $200 service upcharge and starts at $315 for a 2-bedroom home. Pricing varies based on home size. Get an exact quote online.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How much does move-out cleaning cost?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Move-out cleaning includes a $300 service upcharge and starts at $480 for a 2-bedroom home. Pricing varies based on home size and number of bathrooms.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you charge by the hour or flat rate?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We charge flat rates — never by the hour. Your price is calculated based on your home size, number of bedrooms and bathrooms, and the service type selected. No surprises.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Are there any hidden fees?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Never. We bring all supplies and equipment at no extra charge. The price quoted is exactly what you pay.",
-      },
-    },
-  ],
-};
-
-const serviceCards = [
-  {
-    icon: "🏠",
-    name: "Standard Cleaning",
-    upcharge: null,
-    badge: null,
-    color: "border-brand-green-100",
-    headerBg: "bg-brand-green-50",
-    badgeBg: null,
-    href: "/standard-cleaning",
-    tagline: "Recurring or one-time routine cleaning",
-    examples: [
-      { label: "2 bed · 1 bath · 1,000–1,499 sq ft", price: "$160" },
-      { label: "3 bed · 2 bath · 1,500–1,999 sq ft", price: "$240" },
-      { label: "4 bed · 2.5 bath · 2,500–2,999 sq ft", price: "$360" },
-      { label: "5 bed · 3 bath · 3,500–3,999 sq ft", price: "$540" },
-    ],
-  },
-  {
-    icon: "🧹",
-    name: "Deep Cleaning",
-    upcharge: "$200 service upcharge included",
-    badge: "Most Popular",
-    color: "border-orange-200",
-    headerBg: "bg-orange-50",
-    badgeBg: "bg-orange-500",
-    href: "/deep-cleaning",
-    tagline: "Top-to-bottom detail clean — baselines & move-ins",
-    examples: [
-      { label: "2 bed · 1 bath · 1,000–1,499 sq ft", price: "$315" },
-      { label: "3 bed · 2 bath · 1,500–1,999 sq ft", price: "$440" },
-      { label: "4 bed · 2.5 bath · 2,500–2,999 sq ft", price: "$625" },
-      { label: "5 bed · 3 bath · 3,500–3,999 sq ft", price: "$840" },
-    ],
-  },
-  {
-    icon: "📦",
-    name: "Move-In / Move-Out Cleaning",
-    upcharge: "$300 service upcharge included",
-    badge: null,
-    color: "border-blue-100",
-    headerBg: "bg-blue-50",
-    badgeBg: null,
-    href: "/move-out-cleaning",
-    tagline: "Landlord-approved · deposit-back focused",
-    examples: [
-      { label: "2 bed · 1 bath · 1,000–1,499 sq ft", price: "$480" },
-      { label: "3 bed · 2 bath · 1,500–1,999 sq ft", price: "$560" },
-      { label: "4 bed · 2.5 bath · 2,500–2,999 sq ft", price: "$695" },
-      { label: "5 bed · 3 bath · 3,500–3,999 sq ft", price: "$890" },
-    ],
-  },
-];
-
-const bedroomAddons = [
-  { label: "0–1 bedrooms", price: "Included" },
-  { label: "2 bedrooms", price: "+$15" },
-  { label: "3 bedrooms", price: "+$30" },
-  { label: "4 bedrooms", price: "+$45" },
-  { label: "5 bedrooms", price: "+$60" },
-  { label: "6 bedrooms", price: "+$75" },
-];
-
-const bathroomAddons = [
-  { label: "1 bathroom", price: "Included" },
-  { label: "1.5 bathrooms", price: "Included" },
-  { label: "2 bathrooms", price: "+$25" },
-  { label: "2.5 bathrooms", price: "+$35" },
-  { label: "3 bathrooms", price: "+$50" },
-  { label: "3.5 bathrooms", price: "+$60" },
-  { label: "4 bathrooms", price: "+$75" },
-  { label: "4.5 bathrooms", price: "+$85" },
-  { label: "5 bathrooms", price: "+$100" },
-];
-
-const sqftRows = [
-  { range: "1,000–1,499 sq ft", standard: "$145", deep: "$100", moveout: "$165" },
-  { range: "1,500–1,999 sq ft", standard: "$185", deep: "$185", moveout: "$205" },
-  { range: "2,000–2,499 sq ft", standard: "$255", deep: "$255", moveout: "$275" },
-  { range: "2,500–2,999 sq ft", standard: "$290", deep: "$350", moveout: "$320" },
-  { range: "3,000–3,499 sq ft", standard: "$340", deep: "$400", moveout: "$380" },
-  { range: "3,500–3,999 sq ft", standard: "$420", deep: "$520", moveout: "$470" },
-  { range: "4,000–4,499 sq ft", standard: "$520", deep: "$620", moveout: "$570" },
-  { range: "4,500–4,999 sq ft", standard: "$600", deep: "$750", moveout: "$670" },
-];
-
+// Prices interpolate from lib/pricing.ts so these answers cannot go stale.
 const faqs = [
   {
     q: "How much does standard cleaning cost?",
-    a: "Standard cleaning starts at $160 for a 2-bedroom home and varies based on square footage and number of bathrooms. Use our online booking form for an exact quote.",
+    a: `Standard cleaning starts at ${formatPrice(
+      startingPrice(STANDARD_CLEANING_TIERS)
+    )} for a 2-bedroom home. Your price depends on square footage and the number of bathrooms. Use our online booking form for an exact quote.`,
   },
   {
     q: "How much does deep cleaning cost?",
-    a: "Deep cleaning includes a $200 service upcharge and starts at $315 for a 2-bedroom home. Pricing varies based on home size. Get an exact quote online.",
+    a: `Deep cleaning starts at ${formatPrice(
+      startingPrice(DEEP_CLEANING_TIERS)
+    )}. It covers what a standard clean skips, like inside the oven, grout lines, baseboards, inside cabinets and window sills. Pricing varies with home size, and you get an exact quote online.`,
   },
   {
     q: "How much does move-out cleaning cost?",
-    a: "Move-out cleaning includes a $300 service upcharge and starts at $480 for a 2-bedroom home. Pricing varies based on home size and number of bathrooms.",
+    a: `Move-out cleaning starts at ${formatPrice(
+      startingPrice(MOVE_OUT_TIERS)
+    )} for a 2-bedroom home. It is built to pass a landlord walkthrough, so it includes inside the fridge, cabinets and every appliance. Pricing varies with home size and the number of bathrooms.`,
   },
   {
     q: "Do you charge by the hour or flat rate?",
-    a: "We charge flat rates — never by the hour. Your price is calculated based on your home size, number of bedrooms and bathrooms, and the service type selected. No surprises.",
+    a: "We charge flat rates, never by the hour. Your price is calculated from your home size, the number of bedrooms and bathrooms, and the service you pick. No surprises.",
   },
   {
     q: "Are there any hidden fees?",
@@ -186,7 +80,90 @@ const faqs = [
   },
 ];
 
+// Built from the same faqs array the page renders, so the visible answer and
+// the schema answer cannot drift apart.
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
+  })),
+};
+
+type ServiceCard = {
+  icon: string;
+  name: string;
+  scope: string | null;
+  badge: string | null;
+  color: string;
+  headerBg: string;
+  badgeBg: string | null;
+  href: string;
+  tagline: string;
+  service: ServiceKey;
+  tiers: PriceTier[];
+};
+
+const serviceCards: ServiceCard[] = [
+  {
+    icon: "🏠",
+    name: "Standard Cleaning",
+    scope: null,
+    badge: null,
+    color: "border-brand-green-100",
+    headerBg: "bg-brand-green-50",
+    badgeBg: null,
+    href: "/standard-cleaning",
+    tagline: "Recurring or one-time routine cleaning",
+    service: "standard",
+    tiers: STANDARD_CLEANING_TIERS,
+  },
+  {
+    icon: "🧹",
+    name: "Deep Cleaning",
+    // Internal pricing mechanics are not shown to customers. This says what
+    // they actually get for the higher price instead.
+    scope:
+      "Covers what standard skips: inside the oven, grout lines, baseboards, inside cabinets and window sills.",
+    badge: "Most Popular",
+    color: "border-orange-200",
+    headerBg: "bg-orange-50",
+    badgeBg: "bg-orange-500",
+    href: "/deep-cleaning",
+    tagline: "Detail clean for baselines and move-ins",
+    service: "deep",
+    tiers: DEEP_CLEANING_TIERS,
+  },
+  {
+    icon: "📦",
+    name: "Move-In / Move-Out Cleaning",
+    scope:
+      "Everything in a deep clean plus inside the fridge, inside cabinets and drawers, and every appliance.",
+    badge: null,
+    color: "border-blue-100",
+    headerBg: "bg-blue-50",
+    badgeBg: null,
+    href: "/move-out-cleaning",
+    tagline: "Landlord-approved · deposit-back focused",
+    service: "moveout",
+    tiers: MOVE_OUT_TIERS,
+  },
+];
+
+const bedroomAddons = BEDROOM_ADDONS;
+
+const bathroomAddons = BATHROOM_ADDONS;
+
+const sqftRows = SQFT_ROWS;
+
+
 export default function PricingPage() {
+  // Evaluated at render time. With revalidate = 3600 above, the offer stops
+  // showing within an hour of OFFER.endDate passing, with no code change.
+  const offerLive = isOfferActive();
+
   return (
     <>
       <script
@@ -279,10 +256,19 @@ export default function PricingPage() {
                       <p className="text-xs text-gray-500 mt-0.5">{svc.tagline}</p>
                     </div>
                   </div>
-                  {svc.upcharge && (
+                  {svc.scope && (
                     <div className="mt-3 bg-white/70 rounded-lg px-3 py-2 text-xs font-semibold text-gray-700 border border-gray-200">
-                      ℹ️ {svc.upcharge}
+                      ℹ️ {svc.scope}
                     </div>
+                  )}
+                  {/* Offer context sits once per card, not on every price row. */}
+                  {svc.service === OFFER.appliesTo && offerLive && (
+                    <p
+                      className="mt-3 text-xs font-bold"
+                      style={{ color: "#E8622A" }}
+                    >
+                      ${OFFER.discount} off every deep clean with code {OFFER.code}, through August 31.
+                    </p>
                   )}
                 </div>
 
@@ -292,14 +278,33 @@ export default function PricingPage() {
                     Example Prices
                   </p>
                   <div className="space-y-3">
-                    {svc.examples.map((ex) => (
-                      <div key={ex.label} className="flex items-center justify-between gap-3">
-                        <span className="text-sm text-gray-600 leading-tight">{ex.label}</span>
-                        <span className="text-lg font-bold text-gray-900 whitespace-nowrap flex-shrink-0">
-                          Starting at {ex.price}
-                        </span>
-                      </div>
-                    ))}
+                    {svc.tiers.map((tier) => {
+                      const label = tierLabel(tier);
+                      const sale = discountedPrice(tier.price, svc.service);
+                      return (
+                        <div key={label} className="flex items-center justify-between gap-3">
+                          <span className="text-sm text-gray-600 leading-tight">{label}</span>
+                          {/* min-h keeps the row the same height whether or not a
+                              struck price is present, so CLS stays at 0. */}
+                          <span className="text-lg font-bold text-gray-900 whitespace-nowrap flex-shrink-0 min-h-[1.75rem] flex items-center gap-2">
+                            {sale === null ? (
+                              <>Starting at {formatPrice(tier.price)}</>
+                            ) : (
+                              <>
+                                <s className="text-sm font-medium text-gray-400">
+                                  <span className="sr-only">Regular price </span>
+                                  {formatPrice(tier.price)}
+                                </s>
+                                <span style={{ color: "#E8622A" }}>
+                                  <span className="sr-only">Sale price </span>
+                                  {formatPrice(sale)}
+                                </span>
+                              </>
+                            )}
+                          </span>
+                        </div>
+                      );
+                    })}
                   </div>
                   <div className="mt-5 pt-4 border-t border-gray-100">
                     <Link
@@ -348,9 +353,9 @@ export default function PricingPage() {
           <div className="bg-brand-green-50 border border-brand-green-100 rounded-2xl px-6 py-5 mb-10 text-center">
             <p className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-2">Pricing Formula</p>
             <p className="text-lg font-bold text-gray-900">
-              Total = Service Upcharge + Bedroom Add-On + Bathroom Add-On + Square Footage Base
+              Total = Service Type + Bedroom Add-On + Bathroom Add-On + Square Footage Base
             </p>
-            <p className="text-sm text-gray-500 mt-2">All prices are flat rate — no hidden fees and no hourly charges.</p>
+            <p className="text-sm text-gray-500 mt-2">All prices are flat rate. No hidden fees and no hourly charges.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -359,13 +364,15 @@ export default function PricingPage() {
             <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-8 h-8 rounded-full bg-brand-green flex items-center justify-center text-white font-bold text-sm flex-shrink-0">1</div>
-                <h3 className="font-bold text-lg text-gray-900">Service Type Upcharge</h3>
+                <h3 className="font-bold text-lg text-gray-900">Service Type</h3>
               </div>
               <div className="space-y-2">
+                {/* Shows what each service starts at instead of the internal
+                    internal mechanics, which customers do not need. */}
                 {[
-                  { label: "Standard Cleaning", value: "No upcharge" },
-                  { label: "Deep Cleaning", value: "+$200" },
-                  { label: "Move-In / Out Cleaning", value: "+$300" },
+                  { label: "Standard Cleaning", value: `From ${formatPrice(startingPrice(STANDARD_CLEANING_TIERS))}` },
+                  { label: "Deep Cleaning", value: `From ${formatPrice(startingPrice(DEEP_CLEANING_TIERS))}` },
+                  { label: "Move-In / Out Cleaning", value: `From ${formatPrice(startingPrice(MOVE_OUT_TIERS))}` },
                 ].map((row) => (
                   <div key={row.label} className="flex items-center justify-between bg-white rounded-lg px-4 py-2.5 border border-gray-100">
                     <span className="text-sm text-gray-700">{row.label}</span>
