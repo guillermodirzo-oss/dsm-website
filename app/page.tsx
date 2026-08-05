@@ -110,13 +110,13 @@ export default function HomePage() {
             preloaded and served as AVIF/WebP; as a CSS background it was
             discovered late and downloaded at full size. */}
         <Image
-          src="/work-photos/hero-home.jpg"
+          src="/work-photos/hero-kitchen-home.jpg"
           alt=""
           fill
           priority
           sizes="100vw"
           className="object-cover"
-          style={{ objectPosition: "center 55%" }}
+          style={{ objectPosition: "center 50%" }}
         />
         {/* Dark overlay — lightened so image shows clearly */}
         <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/30" />
@@ -312,9 +312,9 @@ export default function HomePage() {
               // a grid, so the weaker one was dropped rather than padding.
               // Captions with no city are the new drops, whose location is unknown.
               { src: "/work-photos/oven-interior-deep-cleaning.jpg", alt: "Oven interior cleaned down to bare enamel during a DSM Cleaning Solutions deep clean", caption: "Oven Deep Clean" },
-              { src: "/work-photos/cooktop-grates-deep-cleaning.jpg", alt: "Gas cooktop with degreased burner grates and polished stainless steel after a DSM Cleaning Solutions deep clean", caption: "Cooktop Deep Clean" },
+              { src: "/work-photos/marble-bathroom-deep-cleaning.jpg", alt: "Marble tiled bathroom with a scrubbed tub surround and floor tile catching the light after a DSM Cleaning Solutions deep clean", caption: "Bathroom Deep Clean" },
               { src: "/work-photos/empty-room-move-out-cleaning.jpg", alt: "Empty bedroom with fresh vacuum lines in the carpet after a DSM Cleaning Solutions move-out cleaning", caption: "Move-Out Clean" },
-              { src: "/work-photos/empty-apartment-parquet-move-out.jpg", alt: "Empty apartment with parquet floor polished to a shine after a DSM Cleaning Solutions move-out cleaning", caption: "Move-Out Clean · Joliet, IL" },
+              { src: "/work-photos/closet-move-out-cleaning.jpg", alt: "Empty walk-in closet with bare white shelving and a polished hardwood floor after a DSM Cleaning Solutions move-out cleaning", caption: "Move-Out Clean" },
               { src: "/work-photos/walk-in-shower-glass-house-cleaning.jpg", alt: "Walk-in shower with streak-free glass doors and a spotless tiled pan after house cleaning by DSM Cleaning Solutions", caption: "Bathroom · House Cleaning" },
             // Static imagery. The lift-and-zoom hover this used to have made
             // every photo look clickable when it goes nowhere, so the
