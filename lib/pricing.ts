@@ -81,14 +81,71 @@ export function discountedPrice(
   return price - OFFER.discount;
 }
 
+/**
+ * Recurring frequency discounts.
+ *
+ * STANDARD CLEANING ONLY. Deep cleaning and move-out are one-time services by
+ * nature and take no frequency discount, so nothing else may use these.
+ * Verified against BookingKoala.
+ *
+ * Biweekly is flagged popular because it is the most-booked residential
+ * frequency: 10 biweekly against 9 weekly and 4 monthly in the July data.
+ */
+export interface Frequency {
+  id: "onetime" | "monthly" | "biweekly" | "weekly";
+  label: string; // "Every 2 weeks"
+  discount: number; // 0.15
+  popular?: boolean;
+}
+
+export const STANDARD_FREQUENCIES: Frequency[] = [
+  { id: "onetime", label: "One-time", discount: 0 },
+  { id: "monthly", label: "Monthly", discount: 0.1 },
+  { id: "biweekly", label: "Every 2 weeks", discount: 0.15, popular: true },
+  { id: "weekly", label: "Weekly", discount: 0.2 },
+];
+
+/** The frequencies that actually carry a discount, for rendering the save block. */
+export const DISCOUNTED_FREQUENCIES = STANDARD_FREQUENCIES.filter((f) => f.discount > 0);
+
+/**
+ * Price for a tier at a given frequency.
+ *
+ * Deliberately does NOT round to whole dollars: the multiplication is taken
+ * exactly and only snapped to the nearest cent to kill binary float noise.
+ * Rounding to dollars would be an invented rule.
+ *
+ * Two combinations land on a half dollar, both at the 15% biweekly rate:
+ * $370 becomes $314.50 and $530 becomes $450.50. Neither is currently rendered
+ * anywhere, since the card shows percentages plus one worked example on the
+ * $240 tier, which is exact. Before any UI surfaces a per-tier recurring price,
+ * confirm against BookingKoala whether it shows the half dollar or rounds, and
+ * change this one line if it rounds.
+ */
+export function recurringPrice(basePrice: number, frequency: Frequency): number {
+  return Math.round(basePrice * (1 - frequency.discount) * 100) / 100;
+}
+
 /** Lowest price in a tier list, for "starts at" copy. */
 export function startingPrice(tiers: PriceTier[]): number {
   return Math.min(...tiers.map((t) => t.price));
 }
 
-/** "$630" */
+/** "10%" from 0.10, so the percentage is never written by hand in a page. */
+export function formatDiscount(discount: number): string {
+  return `${Math.round(discount * 100)}%`;
+}
+
+/**
+ * "$630", and "$314.50" when a value carries cents. Whole dollars never show
+ * a decimal, so every existing caller renders exactly as before.
+ */
 export function formatPrice(price: number): string {
-  return `$${price.toLocaleString("en-US")}`;
+  const hasCents = Math.round(price * 100) % 100 !== 0;
+  return `$${price.toLocaleString("en-US", {
+    minimumFractionDigits: hasCents ? 2 : 0,
+    maximumFractionDigits: 2,
+  })}`;
 }
 
 /** "2 bed · 1 bath · 1,000-1,499 sq ft" */

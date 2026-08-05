@@ -11,6 +11,10 @@ import {
   startingPrice,
   formatPrice,
   tierLabel,
+  recurringPrice,
+  formatDiscount,
+  DISCOUNTED_FREQUENCIES,
+  STANDARD_FREQUENCIES,
   type PriceTier,
   type ServiceKey,
 } from "@/lib/pricing";
@@ -162,10 +166,22 @@ const serviceCards: ServiceCard[] = [
 ];
 
 
+// Worked example for the recurring block. Both the tier and the frequency are
+// looked up from the data, so the sentence cannot drift from the rate card.
+const RECURRING_EXAMPLE_TIER =
+  STANDARD_CLEANING_TIERS.find((t) => t.beds === "3 bed") ?? STANDARD_CLEANING_TIERS[0];
+const RECURRING_EXAMPLE_FREQUENCY =
+  STANDARD_FREQUENCIES.find((f) => f.popular) ?? STANDARD_FREQUENCIES[1];
+
 export default function PricingPage() {
   // Evaluated at render time. With revalidate = 3600 above, the offer stops
   // showing within an hour of OFFER.endDate passing, with no code change.
   const offerLive = isOfferActive();
+  const recurringExample = {
+    tier: RECURRING_EXAMPLE_TIER,
+    frequency: RECURRING_EXAMPLE_FREQUENCY,
+    price: recurringPrice(RECURRING_EXAMPLE_TIER.price, RECURRING_EXAMPLE_FREQUENCY),
+  };
 
   return (
     <>
@@ -328,6 +344,59 @@ export default function PricingPage() {
                       );
                     })}
                   </div>
+
+                  {/* Recurring frequency discounts. Standard cleaning only:
+                      deep and move-out are one-time services and take no
+                      frequency discount. Kept deliberately quiet in grey so it
+                      reads as information, not as a second promotion competing
+                      with the SUMMER75 offer on the deep cleaning card. */}
+                  {svc.service === "standard" && (
+                    <div className="mt-5 pt-4 border-t border-gray-100">
+                      <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">
+                        Book recurring and save
+                      </p>
+                      <div className="space-y-1.5">
+                        {DISCOUNTED_FREQUENCIES.map((freq) => (
+                          <div
+                            key={freq.id}
+                            className={`flex items-baseline justify-between gap-3 rounded-lg px-2.5 py-1.5 ${
+                              freq.popular ? "bg-gray-50" : ""
+                            }`}
+                          >
+                            <span className="text-sm text-gray-600">
+                              {freq.label}
+                              {freq.popular && (
+                                <span
+                                  className="ml-2 text-[11px] font-semibold"
+                                  style={{ color: "#E8622A" }}
+                                >
+                                  Most popular
+                                </span>
+                              )}
+                            </span>
+                            <span className="text-sm font-bold text-gray-900 whitespace-nowrap flex-shrink-0">
+                              {formatDiscount(freq.discount)} off
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                      {/* One worked example turns the percentages into real
+                          money. Both figures derive from the tier and frequency
+                          data, never hand-written. */}
+                      <p className="mt-3 text-xs text-gray-500 leading-relaxed">
+                        A {recurringExample.tier.beds} / {recurringExample.tier.baths} home is{" "}
+                        <span className="font-semibold text-gray-700">
+                          {formatPrice(recurringExample.tier.price)}
+                        </span>{" "}
+                        one-time, or{" "}
+                        <span className="font-semibold text-gray-700">
+                          {formatPrice(recurringExample.price)}
+                        </span>{" "}
+                        {recurringExample.frequency.label.toLowerCase()}.
+                      </p>
+                    </div>
+                  )}
+
                   <div className="mt-5 pt-4 border-t border-gray-100">
                     <Link
                       href={svc.href}
