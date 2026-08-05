@@ -65,7 +65,10 @@ export function StickyMobileBar() {
       style={{
         opacity: visible ? 1 : 0,
         pointerEvents: visible ? "auto" : "none",
-        background: "#1a5c38",
+        // Dark neutral, not orange. The Book Now button inside is #E8721C and
+        // an orange bar would swallow it. On a dark bar the orange CTA is the
+        // brightest thing on the screen, which is the point of a sticky bar.
+        background: "#111827",
         boxShadow: "0 -4px 20px rgba(0,0,0,0.2)",
       }}
       aria-hidden={!visible}
