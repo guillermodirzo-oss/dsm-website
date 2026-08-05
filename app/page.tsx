@@ -110,13 +110,13 @@ export default function HomePage() {
             preloaded and served as AVIF/WebP; as a CSS background it was
             discovered late and downloaded at full size. */}
         <Image
-          src="/hero-image.png"
+          src="/work-photos/hero-home.jpg"
           alt=""
           fill
           priority
           sizes="100vw"
           className="object-cover"
-          style={{ objectPosition: "center 60%" }}
+          style={{ objectPosition: "center 55%" }}
         />
         {/* Dark overlay — lightened so image shows clearly */}
         <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/30" />
@@ -152,12 +152,17 @@ export default function HomePage() {
 
           {/* Offer. Terms mirror /book exactly so the two pages never disagree. */}
           <div className="mb-6">
-            <p
-              className="inline-block rounded-full px-4 py-2 text-sm sm:text-base font-bold text-white shadow-lg"
+            {/* This was a div styled to look like a button, which is where
+                Clarity recorded dead clicks. It is a real anchor now, so it is
+                keyboard focusable and actually goes to the lead form. Smooth
+                scrolling comes from scroll-behavior in globals.css. */}
+            <a
+              href="#contact"
+              className="inline-block rounded-full px-4 py-2 text-sm sm:text-base font-bold text-white shadow-lg hover:brightness-110 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-95 transition-all duration-200"
               style={{ backgroundColor: "#E8622A" }}
             >
               $75 off your first deep clean, plus free oven cleaning, a $40 value.
-            </p>
+            </a>
             <p className="text-white/70 text-xs sm:text-sm mt-2">
               Use code <span className="font-bold text-white">SUMMER75</span> through August 31.
             </p>
@@ -303,12 +308,14 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
-              { src: "/work-photos/google-post-image-cleaning-service-1.jpg",  alt: "Professional deep cleaning service in Plainfield IL — sparkling clean kitchen by DSM Cleaning Solutions", caption: "Kitchen Deep Clean · Plainfield, IL" },
-              { src: "/work-photos/shower-deep-clean-romeoville-il.jpg",            alt: "Glass shower and stone tile bathroom after professional deep cleaning in Romeoville IL", caption: "Bathroom Deep Clean · Romeoville, IL" },
-              { src: "/work-photos/living-room-hardwood-floors-plainfield-il.jpg",  alt: "Clean living room with dark hardwood floors — recurring maid service in Plainfield IL", caption: "Living Room · Standard Cleaning" },
-              { src: "/work-photos/double-vanity-bathroom-clean-naperville-il.jpg", alt: "Double vanity bathroom cleaned and polished by DSM Cleaning Solutions in Naperville IL", caption: "Vanity & Bathroom · Naperville, IL" },
-              { src: "/work-photos/bedroom-cleaning-service-bolingbrook-il.jpg",    alt: "Spotless bedroom after recurring house cleaning service in Bolingbrook IL", caption: "Master Bedroom · Bolingbrook, IL" },
-              { src: "/work-photos/google-post-image-cleaning-service-25.jpg", alt: "Professional cleaner at work in a southwest Chicago suburb home — DSM Cleaning Solutions", caption: "Move-Out Clean · Romeoville, IL" },
+              // Five, not six. The two shower frames read as near-duplicates in
+              // a grid, so the weaker one was dropped rather than padding.
+              // Captions with no city are the new drops, whose location is unknown.
+              { src: "/work-photos/oven-interior-deep-cleaning.jpg", alt: "Oven interior cleaned down to bare enamel during a DSM Cleaning Solutions deep clean", caption: "Oven Deep Clean" },
+              { src: "/work-photos/cooktop-grates-deep-cleaning.jpg", alt: "Gas cooktop with degreased burner grates and polished stainless steel after a DSM Cleaning Solutions deep clean", caption: "Cooktop Deep Clean" },
+              { src: "/work-photos/empty-room-move-out-cleaning.jpg", alt: "Empty bedroom with fresh vacuum lines in the carpet after a DSM Cleaning Solutions move-out cleaning", caption: "Move-Out Clean" },
+              { src: "/work-photos/empty-apartment-parquet-move-out.jpg", alt: "Empty apartment with parquet floor polished to a shine after a DSM Cleaning Solutions move-out cleaning", caption: "Move-Out Clean · Joliet, IL" },
+              { src: "/work-photos/walk-in-shower-glass-house-cleaning.jpg", alt: "Walk-in shower with streak-free glass doors and a spotless tiled pan after house cleaning by DSM Cleaning Solutions", caption: "Bathroom · House Cleaning" },
             // Static imagery. The lift-and-zoom hover this used to have made
             // every photo look clickable when it goes nowhere, so the
             // affordance is removed rather than faked.
@@ -408,7 +415,7 @@ export default function HomePage() {
               {/* Image with overlay card */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-orange-100 h-[500px]">
                 <Image
-                  src="/work-photos/shower-tile-cleaning-romeoville-il.jpg"
+                  src="/work-photos/team-member-vacuuming.jpg"
                   alt="Spotless shower tile cleaned by DSM Cleaning Solutions in Romeoville IL"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
