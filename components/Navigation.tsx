@@ -79,6 +79,16 @@ export default function Navigation() {
 
           {/* CTA + Phone */}
           <div className="hidden md:flex items-center gap-3">
+            {/* For existing customers. Kept as a quiet text link, to the left of
+                the phone number, so it is findable without competing with Book Now. */}
+            <Link
+              href="https://dsmcleaningsolutions.bookingkoala.com/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-gray-500 hover:text-brand-green font-medium transition-colors"
+            >
+              Log In
+            </Link>
             <a href="tel:+18152462113" className="text-sm text-gray-600 font-semibold hover:text-brand-green transition-colors">
               (815) 246-2113
             </a>

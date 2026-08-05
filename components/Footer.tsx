@@ -46,6 +46,9 @@ export default function Footer() {
                 { label: "Apartment Cleaning", href: "/apartment-cleaning" },
                 { label: "Post-Construction Cleaning", href: "/post-construction-cleaning" },
                 { label: "Airbnb / Short-Term Rental", href: "/airbnb-cleaning" },
+                // Homepage no longer cards this one, so the footer is its only
+                // internal link. Removing it would strand the page.
+                { label: "One-Time Cleaning", href: "/one-time-cleaning" },
               ].map((item) => (
                 <li key={item.label}><Link href={item.href} {...(item.href.startsWith("https://") ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="hover:text-white transition-colors">{item.label}</Link></li>
               ))}

@@ -37,16 +37,32 @@ export const metadata: Metadata = {
   },
 };
 
+// Three services, not nine. Standard, recurring and one-time are the same
+// service at different frequencies, and eco-friendly products are used on
+// every job, so neither earned its own card. The six pages dropped from here
+// keep their internal links in the footer.
 const services = [
-  { icon: "🏠", title: "Standard House Cleaning", description: "Recurring or one-time residential cleaning tailored to your home and schedule.", slug: "/standard-cleaning" },
-  { icon: "🧹", title: "Deep Cleaning", description: "Thorough cleaning of every surface, corner, and fixture in your home.", slug: "/deep-cleaning" },
-  { icon: "📦", title: "Move-Out / Move-In Cleaning", description: "Get your full deposit back or start fresh in your new home with our detail-focused cleaning.", slug: "/move-out-cleaning" },
-  { icon: "📅", title: "Recurring Maid Service", description: "Weekly, biweekly, or monthly cleaning plans to keep your home consistently spotless.", slug: "/recurring-cleaning" },
-  { icon: "🌿", title: "Eco-Friendly Green Cleaning", description: "Safe for kids and pets — we use non-toxic, environmentally responsible products.", slug: "/eco-friendly-cleaning" },
-  { icon: "🏢", title: "Apartment Cleaning", description: "Specialized apartment cleaning for renters and property managers in the southwest suburbs.", slug: "/apartment-cleaning" },
-  { icon: "🔨", title: "Post-Construction Cleaning", description: "Dust, debris, and residue removal after renovations or new construction projects.", slug: "/post-construction-cleaning" },
-  { icon: "🛏️", title: "Airbnb / Short-Term Rental", description: "Fast, reliable turnover cleaning between guests to maintain your 5-star rating.", slug: "/airbnb-cleaning" },
-  { icon: "✨", title: "One-Time Cleaning", description: "No commitment required. Perfect for special occasions or giving your home a reset.", slug: "/one-time-cleaning" },
+  {
+    icon: "🏠",
+    title: "House Cleaning",
+    description:
+      "Your regular clean, whether that is every week or just the once. Weekly, biweekly and monthly plans cost less per visit.",
+    slug: "/standard-cleaning",
+  },
+  {
+    icon: "🧹",
+    title: "Deep Cleaning",
+    description:
+      "For everything a standard clean skips. Inside the oven, grout lines, baseboards and inside the cabinets.",
+    slug: "/deep-cleaning",
+  },
+  {
+    icon: "📦",
+    title: "Move-In / Move-Out Cleaning",
+    description:
+      "Built to pass a landlord walkthrough so you get your deposit back, or to start clean in a place someone else just left.",
+    slug: "/move-out-cleaning",
+  },
 ];
 
 const faqs = [
@@ -214,15 +230,18 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {/* Three across on desktop, stacked on mobile. Wider gaps and taller
+              cards than the old nine-up grid, because picking a service is now
+              the main decision on this page. */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {services.map((service) => (
               <Link key={service.title} href={service.slug}
-                className="bg-white rounded-2xl p-7 border border-gray-100 hover:shadow-xl hover:shadow-orange-100 hover:-translate-y-1 transition-all duration-300 group">
-                <span className="text-4xl block mb-5">{service.icon}</span>
-                <h3 className="font-bold text-lg text-gray-900 mb-2 group-hover:text-brand-green transition-colors tracking-tight">
+                className="bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-xl hover:shadow-orange-100 hover:-translate-y-1 transition-all duration-300 group flex flex-col">
+                <span className="text-5xl block mb-5">{service.icon}</span>
+                <h3 className="font-bold text-xl text-gray-900 mb-3 group-hover:text-brand-green transition-colors tracking-tight">
                   {service.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{service.description}</p>
+                <p className="text-gray-500 text-sm leading-relaxed flex-1">{service.description}</p>
                 <div className="mt-5 flex items-center gap-1 text-brand-green font-semibold text-sm">
                   Learn more
                   <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
