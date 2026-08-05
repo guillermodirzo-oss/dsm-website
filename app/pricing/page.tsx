@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   DEEP_CLEANING_TIERS,
   STANDARD_CLEANING_TIERS,
@@ -101,6 +102,8 @@ type ServiceCard = {
   tagline: string;
   service: ServiceKey;
   tiers: PriceTier[];
+  photo: string;
+  photoAlt: string;
 };
 
 const serviceCards: ServiceCard[] = [
@@ -116,6 +119,9 @@ const serviceCards: ServiceCard[] = [
     tagline: "Recurring or one-time routine cleaning",
     service: "standard",
     tiers: STANDARD_CLEANING_TIERS,
+    photo: "/work-photos/kitchen-standard-cleaning.jpg",
+    photoAlt:
+      "Clean kitchen with polished stainless steel appliances and clear countertops after standard house cleaning by DSM Cleaning Solutions",
   },
   {
     icon: "🧹",
@@ -132,6 +138,9 @@ const serviceCards: ServiceCard[] = [
     tagline: "Detail clean for baselines and move-ins",
     service: "deep",
     tiers: DEEP_CLEANING_TIERS,
+    photo: "/work-photos/oven-interior-deep-cleaning.jpg",
+    photoAlt:
+      "Oven interior cleaned down to bare enamel during a DSM Cleaning Solutions deep clean",
   },
   {
     icon: "📦",
@@ -146,6 +155,9 @@ const serviceCards: ServiceCard[] = [
     tagline: "Landlord-approved · deposit-back focused",
     service: "moveout",
     tiers: MOVE_OUT_TIERS,
+    photo: "/work-photos/empty-room-move-out-cleaning.jpg",
+    photoAlt:
+      "Empty bedroom with fresh vacuum lines in the carpet after a DSM Cleaning Solutions move-out cleaning",
   },
 ];
 
@@ -261,6 +273,25 @@ export default function PricingPage() {
                       ${OFFER.discount} off every deep clean with code {OFFER.code}, through August 31.
                     </p>
                   )}
+                </div>
+
+                {/* Work photo. Sits inside the card body between the header and
+                    the price ladder: the header keeps the offer and the colour
+                    coding high on mobile, then the photo sets context, then the
+                    numbers answer the question.
+
+                    Explicit width and height plus h-auto reserve the 4:3 box
+                    before the file loads, so this cannot shift layout. No
+                    priority prop: these are below the fold. */}
+                <div className="px-6 pt-5">
+                  <Image
+                    src={svc.photo}
+                    alt={svc.photoAlt}
+                    width={1200}
+                    height={900}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="w-full h-auto rounded-xl border border-gray-100"
+                  />
                 </div>
 
                 {/* Pricing Examples */}

@@ -38,3 +38,7 @@ next-env.d.ts
 .claude/settings.local.json
 
 .vercel
+
+# photo drop folder, never commit or deploy raw originals
+_incoming/
+**/_incoming/
