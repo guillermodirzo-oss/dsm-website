@@ -609,6 +609,18 @@ export default function HomePage() {
 
           {/* BookingKoala Embedded Form */}
           <div className="bg-white rounded-3xl shadow-2xl shadow-black/20 p-6 md:p-8">
+            {/* Matches the trust line style used on the deep cleaning page.
+                No defaultService here: this is the general homepage form, so
+                the Service Type dropdown inside LeadForm stays unselected
+                rather than locking to one service. */}
+            <div className="text-center mb-6">
+              <div className="flex justify-center mb-1">
+                <span style={{ color: "#FFD8BC" }} className="text-2xl">★★★★★</span>
+              </div>
+              <p className="text-sm text-gray-500">
+                Trusted by homeowners across the southwest suburbs, {REVIEW_COUNT} five-star reviews
+              </p>
+            </div>
             <LeadForm />
           </div>
 
