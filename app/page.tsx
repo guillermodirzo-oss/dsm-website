@@ -179,17 +179,6 @@ export default function HomePage() {
             <a href="tel:+18152462113" className="btn-outline-white btn-lg text-base w-full md:w-auto">
               📞 (815) 246-2113
             </a>
-            <Link
-              href="https://dsmcleaningsolutions.bookingkoala.com/login"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full md:w-auto inline-flex items-center justify-center gap-2 font-semibold text-base text-white/80 text-center py-4 px-7 rounded-full border border-white/30 hover:border-white/60 hover:text-white hover:bg-white/10 transition-all duration-200"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-              </svg>
-              Log In
-            </Link>
           </div>
 
           {/* Trust indicators */}
@@ -315,7 +304,7 @@ export default function HomePage() {
               { src: "/work-photos/empty-room-move-out-cleaning.jpg", alt: "Empty bedroom with fresh vacuum lines in the carpet after a DSM Cleaning Solutions move-out cleaning", caption: "Move-Out Clean" },
               { src: "/work-photos/closet-move-out-cleaning.jpg", alt: "Empty walk-in closet with bare white shelving and a polished hardwood floor after a DSM Cleaning Solutions move-out cleaning", caption: "Move-Out Clean" },
               { src: "/work-photos/walk-in-shower-glass-house-cleaning.jpg", alt: "Walk-in shower with streak-free glass doors and a spotless tiled pan after house cleaning by DSM Cleaning Solutions", caption: "Bathroom · House Cleaning" },
-              { src: "/work-photos/living-room-house-cleaning.jpg", alt: "Empty living room with plank flooring polished until it reflects the window light after house cleaning by DSM Cleaning Solutions", caption: "Living Room · House Cleaning" },
+              { src: "/work-photos/google-post-image-cleaning-service-1.jpg", alt: "Full kitchen with dark wood cabinets, granite countertops and stainless appliances after house cleaning by DSM Cleaning Solutions", caption: "Kitchen · House Cleaning" },
             // Static imagery. The lift-and-zoom hover this used to have made
             // every photo look clickable when it goes nowhere, so the
             // affordance is removed rather than faked.
