@@ -4,15 +4,15 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 /**
- * HomepageScrollWidgets — client-only interactive elements for app/page.tsx.
+ * HomepageScrollWidgets, client-only interactive elements for app/page.tsx.
  *
  * Split into a separate "use client" component so app/page.tsx stays a
  * server component (preserving its static generation benefits) while still
  * getting interactive scroll behaviour.
  *
  * Exports:
- *   ScrollIndicator   — animated bouncing chevron; clicking scrolls to #services
- *   StickyMobileBar   — fixed bottom bar on mobile, fades in after 300px scroll
+ *   ScrollIndicator   animated bouncing chevron; clicking scrolls to #services
+ *   StickyMobileBar   fixed bottom bar on mobile, fades in after 300px scroll
  */
 
 export function ScrollIndicator() {

@@ -67,7 +67,7 @@ const services = [
 
 const faqs = [
   { question: "How much does house cleaning cost in Romeoville, IL?", answer: "Standard cleaning starts at $160 for a 2-bedroom home. Your price depends on the number of bedrooms and bathrooms and your square footage, and we confirm the exact price with you before anything is booked." },
-  { question: "Are you insured and bonded?", answer: "Yes — DSM Cleaning Solutions is fully insured and bonded. You can have complete peace of mind knowing your home and belongings are protected every time we clean." },
+  { question: "Are you insured and bonded?", answer: "Yes. DSM Cleaning Solutions is fully insured and bonded. You can have complete peace of mind knowing your home and belongings are protected every time we clean." },
   { question: "Do you use eco-friendly cleaning products?", answer: "Absolutely. We use non-toxic, eco-friendly cleaning products that are safe for children, pets, and the environment. Our green cleaning approach delivers a deep clean without harsh chemicals." },
   { question: "Can I book cleaning online?", answer: "Yes! You can book directly through our online booking page or call us at (815) 246-2113. We respond within 1 business day." },
   { question: "What areas do you serve?", answer: "We primarily serve Romeoville and Plainfield, IL, and extend to Naperville, Bolingbrook, Joliet, Westmont, and the surrounding southwest Chicago suburbs." },
@@ -118,7 +118,7 @@ export default function HomePage() {
           className="object-cover"
           style={{ objectPosition: "center 50%" }}
         />
-        {/* Dark overlay — lightened so image shows clearly */}
+        {/* Dark overlay, lightened so image shows clearly */}
         <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/30" />
         {/* Orange tint */}
         <div className="absolute inset-0 bg-gradient-to-t from-orange-900/20 via-transparent to-transparent" />
@@ -200,7 +200,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Scroll indicator — clickable, scrolls to #services */}
+        {/* Scroll indicator, clickable, scrolls to #services */}
         <ScrollIndicator />
       </section>
 
@@ -231,7 +231,7 @@ export default function HomePage() {
             <p className="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">What We Do</p>
             <h2 className="section-heading text-4xl md:text-5xl">Every Clean, Done Right</h2>
             <p className="section-subheading mx-auto text-lg">
-              From one-time deep cleans to recurring maid service — we have a plan for every home.
+              From one-time deep cleans to recurring maid service, we have a plan for every home.
             </p>
           </div>
 
@@ -269,9 +269,9 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 relative">
             {[
-              { step: "01", title: "Book Online", desc: "Fill out our quick form or call us. Tell us about your home — we'll confirm fast.", icon: "📋" },
+              { step: "01", title: "Book Online", desc: "Fill out our quick form or call us. Tell us about your home and we'll confirm fast.", icon: "📋" },
               { step: "02", title: "We Show Up", desc: "Our professional, background-checked team arrives on time with all eco-friendly supplies.", icon: "🚗" },
-              { step: "03", title: "You Relax", desc: "Come home to a spotlessly clean house. Satisfaction guaranteed — we'll make it right.", icon: "😊" },
+              { step: "03", title: "You Relax", desc: "Come home to a spotlessly clean house. Satisfaction guaranteed. We'll make it right.", icon: "😊" },
             ].map((item, i) => (
               <div key={item.step} className="relative text-center group">
                 <div className="w-16 h-16 bg-gradient-to-br from-brand-green to-brand-green-dark rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-orange-200 group-hover:scale-110 transition-transform duration-300">
@@ -308,14 +308,14 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
-              // Five, not six. The two shower frames read as near-duplicates in
-              // a grid, so the weaker one was dropped rather than padding.
-              // Captions with no city are the new drops, whose location is unknown.
+              // Six tiles, two per service. Captions without a city are the new drops,
+              // whose location is unknown; do not invent one.
               { src: "/work-photos/oven-interior-deep-cleaning.jpg", alt: "Oven interior cleaned down to bare enamel during a DSM Cleaning Solutions deep clean", caption: "Oven Deep Clean" },
               { src: "/work-photos/marble-bathroom-deep-cleaning.jpg", alt: "Marble tiled bathroom with a scrubbed tub surround and floor tile catching the light after a DSM Cleaning Solutions deep clean", caption: "Bathroom Deep Clean" },
               { src: "/work-photos/empty-room-move-out-cleaning.jpg", alt: "Empty bedroom with fresh vacuum lines in the carpet after a DSM Cleaning Solutions move-out cleaning", caption: "Move-Out Clean" },
               { src: "/work-photos/closet-move-out-cleaning.jpg", alt: "Empty walk-in closet with bare white shelving and a polished hardwood floor after a DSM Cleaning Solutions move-out cleaning", caption: "Move-Out Clean" },
               { src: "/work-photos/walk-in-shower-glass-house-cleaning.jpg", alt: "Walk-in shower with streak-free glass doors and a spotless tiled pan after house cleaning by DSM Cleaning Solutions", caption: "Bathroom · House Cleaning" },
+              { src: "/work-photos/living-room-house-cleaning.jpg", alt: "Empty living room with plank flooring polished until it reflects the window light after house cleaning by DSM Cleaning Solutions", caption: "Living Room · House Cleaning" },
             // Static imagery. The lift-and-zoom hover this used to have made
             // every photo look clickable when it goes nowhere, so the
             // affordance is removed rather than faked.
@@ -377,16 +377,16 @@ export default function HomePage() {
               <p className="text-gray-500 mb-5 leading-relaxed">
                 DSM Cleaning Solutions was born right here in Romeoville, IL (zip code 60446). As a family-owned
                 and operated cleaning company, we understand that inviting someone into your home is a matter of
-                trust — and we take that responsibility seriously.
+                trust, and we take that responsibility seriously.
               </p>
               <p className="text-gray-500 mb-5 leading-relaxed">
-                We serve families throughout Romeoville — from Lakewood Falls and Windstone to Hidden Lakes and
-                Grand Haven — and across the entire southwest Chicago suburbs. Whether you live near the Isle a
+                We serve families throughout Romeoville, from Lakewood Falls and Windstone to Hidden Lakes and
+                Grand Haven, and across the entire southwest Chicago suburbs. Whether you live near the Isle a
                 la Cache Museum or along Romeo Lake, we&apos;re your true local neighbors.
               </p>
               <p className="text-gray-500 mb-8 leading-relaxed">
                 Our commitment to eco-friendly cleaning means we use non-toxic, biodegradable products that are
-                safe for children, pets, and the environment — because Romeoville families deserve a clean home
+                safe for children, pets, and the environment, because Romeoville families deserve a clean home
                 they can feel good about.
               </p>
 
@@ -473,7 +473,7 @@ export default function HomePage() {
               <h2 className="section-heading text-3xl md:text-4xl mb-4">Romeoville Neighborhoods We Serve</h2>
               <p className="text-gray-500 mb-5 leading-relaxed">
                 Based in Romeoville, IL (60446), DSM Cleaning Solutions knows every corner of this community.
-                We clean homes throughout every neighborhood — from the newest developments to established
+                We clean homes throughout every neighborhood, from the newest developments to established
                 subdivisions we&apos;ve served for years.
               </p>
               <div className="grid grid-cols-2 gap-2 mb-5">
@@ -492,7 +492,7 @@ export default function HomePage() {
             <div>
               <h3 className="font-bold text-xl text-gray-900 mb-4">Local Romeoville Landmarks</h3>
               <p className="text-gray-500 mb-4 text-sm leading-relaxed">
-                We&apos;re proud to call Romeoville home — and to serve the families who live near these
+                We&apos;re proud to call Romeoville home, and to serve the families who live near these
                 well-known local landmarks:
               </p>
               <div className="space-y-2">
@@ -641,7 +641,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Sticky mobile "Book Now" bar — fades in after 300px scroll, hidden on md+ */}
+      {/* Sticky mobile "Book Now" bar, fades in after 300px scroll, hidden on md+ */}
       <StickyMobileBar />
     </>
   );

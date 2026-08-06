@@ -82,6 +82,16 @@ export default function Navigation() {
             <a href="tel:+18152462113" className="text-sm text-gray-600 font-semibold hover:text-brand-green transition-colors">
               (815) 246-2113
             </a>
+            {/* Existing customers. Sits beside Book Now as a quiet text link so
+                it is findable without competing with the primary CTA. */}
+            <Link
+              href="https://dsmcleaningsolutions.bookingkoala.com/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-gray-500 hover:text-brand-green font-medium transition-colors"
+            >
+              Log In
+            </Link>
             <Link href="/book" className="btn-primary text-sm">
               Book Now
             </Link>
@@ -113,7 +123,7 @@ export default function Navigation() {
                 Home
               </Link>
 
-              {/* Services — expandable */}
+              {/* Services, expandable */}
               <div>
                 <button
                   onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
@@ -180,7 +190,7 @@ export default function Navigation() {
               ))}
             </div>
 
-            {/* CTA buttons — always visible at bottom */}
+            {/* CTA buttons, always visible at bottom */}
             <div className="px-4 py-4 border-t border-gray-100 flex flex-col gap-2 bg-white">
               <Link href="https://dsmcleaningsolutions.bookingkoala.com/login"
                 onClick={() => { setMenuOpen(false); setMobileServicesOpen(false); }}
