@@ -48,8 +48,20 @@ export function ScrollIndicator() {
   );
 }
 
-export function StickyMobileBar() {
+interface StickyMobileBarProps {
+  /**
+   * Where "Book Now" goes. Defaults to "/book" so every existing call site,
+   * including the homepage, renders exactly as before. Pass an in-page
+   * anchor like "#quote-form" to point at a page's own lead form instead;
+   * that renders a plain <a> so the same-page scroll works without a route
+   * change.
+   */
+  bookHref?: string;
+}
+
+export function StickyMobileBar({ bookHref = "/book" }: StickyMobileBarProps = {}) {
   const [visible, setVisible] = useState(false);
+  const isAnchor = bookHref.startsWith("#");
 
   useEffect(() => {
     const onScroll = () => setVisible(window.scrollY > 300);
@@ -81,18 +93,33 @@ export function StickyMobileBar() {
         >
           📞 (815) 246-2113
         </a>
-        <Link
-          href="/book"
-          className="flex-1 flex items-center justify-center text-center font-bold text-sm rounded-full my-2 px-4 hover:opacity-90 active:scale-95 transition-all duration-200"
-          style={{
-            backgroundColor: "#E8721C",
-            color: "#fff",
-            minHeight: "44px",
-            boxShadow: "0 4px 15px rgba(232,114,28,0.4)",
-          }}
-        >
-          Book Now →
-        </Link>
+        {isAnchor ? (
+          <a
+            href={bookHref}
+            className="flex-1 flex items-center justify-center text-center font-bold text-sm rounded-full my-2 px-4 hover:opacity-90 active:scale-95 transition-all duration-200"
+            style={{
+              backgroundColor: "#E8721C",
+              color: "#fff",
+              minHeight: "44px",
+              boxShadow: "0 4px 15px rgba(232,114,28,0.4)",
+            }}
+          >
+            Book Now →
+          </a>
+        ) : (
+          <Link
+            href={bookHref}
+            className="flex-1 flex items-center justify-center text-center font-bold text-sm rounded-full my-2 px-4 hover:opacity-90 active:scale-95 transition-all duration-200"
+            style={{
+              backgroundColor: "#E8721C",
+              color: "#fff",
+              minHeight: "44px",
+              boxShadow: "0 4px 15px rgba(232,114,28,0.4)",
+            }}
+          >
+            Book Now →
+          </Link>
+        )}
       </div>
     </div>
   );

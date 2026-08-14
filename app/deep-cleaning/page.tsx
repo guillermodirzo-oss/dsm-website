@@ -3,6 +3,7 @@ import Link from "next/link";
 import { REAL_REVIEWS, REVIEW_COUNT, REVIEW_RATING, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
 import CityDeepCleanForm from "@/components/CityDeepCleanForm";
+import { StickyMobileBar } from "@/components/HomepageScrollWidgets";
 import {
   DEEP_CLEANING_TIERS,
   OFFER,
@@ -183,19 +184,21 @@ export default function DeepCleaningPage() {
           </nav>
           <div className="flex flex-col md:flex-row gap-10 items-center">
             <div className="flex-1">
+              {/* Order is H1, subheading, rating, offer, CTAs: the same
+                  sequence as the homepage hero, verified to clear the fold
+                  at 390px. */}
               <h1 className="text-3xl md:text-4xl font-bold mb-3 leading-tight">
-                Professional Deep Cleaning Services in Romeoville, Plainfield, Bolingbrook &amp; Naperville
+                Deep Cleaning That Gets Inside the Oven.
               </h1>
-              <div className="flex items-center gap-2 mb-3">
+              <p className="text-lg font-semibold mb-4 opacity-95">
+                Grout lines, baseboards, ceiling fans, behind the stovetop. Deep cleaning in Romeoville, Plainfield, Naperville, Bolingbrook and the southwest suburbs.
+              </p>
+
+              {/* Rating. Counts come from lib/realReviews.ts, never hardcoded. */}
+              <Link href="/reviews" className="inline-flex items-center gap-2 mb-5 hover:underline">
                 <span style={{ color: "#FFA869" }} className="text-xl">★★★★★</span>
-                <span className="text-sm opacity-90">5.0 — {REVIEW_COUNT} reviews on Google</span>
-              </div>
-              <p className="text-lg font-semibold mb-2">
-                A real deep clean for your home. Every room, every detail.
-              </p>
-              <p className="opacity-90 mb-6 leading-relaxed">
-                DSM Cleaning Solutions is a family-owned cleaning company serving the southwest Chicago suburbs. Eco-friendly products and a 48-hour satisfaction guarantee on every job.
-              </p>
+                <span className="text-sm opacity-90">{REVIEW_RATING} · {REVIEW_COUNT} Google Reviews</span>
+              </Link>
 
               {/* Offer. Terms mirror /book and the homepage exactly, including
                   the $40 oven cleaning value, so no page disagrees with another.
@@ -233,11 +236,13 @@ export default function DeepCleaningPage() {
               </div>
             </div>
             <div className="flex-shrink-0 w-full md:w-80">
+              {/* Ties directly to the headline. Real evidence, not a tidy
+                  room: bare enamel, not a staged vanity shot. */}
               <Image
-                src="/work-photos/double-vanity-bathroom-clean-naperville-il.jpg"
-                alt="Professional deep cleaning results in Romeoville and Plainfield IL"
-                width={1920}
-                height={2560}
+                src="/work-photos/oven-interior-deep-cleaning.jpg"
+                alt="Oven interior cleaned down to bare enamel during a DSM Cleaning Solutions deep clean"
+                width={1200}
+                height={900}
                 priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="rounded-xl shadow-lg w-full object-cover"
@@ -262,10 +267,10 @@ export default function DeepCleaningPage() {
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto prose prose-gray">
           <p className="text-gray-700 leading-relaxed mb-4">
-            DSM Cleaning Solutions has been serving homeowners in Romeoville, Plainfield, Bolingbrook, and Naperville since we started. These are our home communities. When you hire us for a deep clean, you get a team that knows the area, cares about the work, and shows up on time.
+            DSM Cleaning Solutions has been serving homeowners in Romeoville, Plainfield, Bolingbrook, and Naperville for over 5 years. These are our home communities. When you hire us for a deep clean, you get a team that knows the area, cares about the work, and shows up on time.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Our deep cleaning is built for homes that need more than a weekly maintenance clean. That means getting inside the oven, scrubbing bathroom grout, cleaning behind the stovetop grates, wiping every baseboard, and dusting ceiling fans in every room. We do not skip the spots that other services miss.
+            Our deep cleaning is built for homes that need more than a weekly maintenance clean. That means getting inside the oven, scrubbing bathroom grout, cleaning behind the stovetop grates, wiping every baseboard, and dusting ceiling fans in every room.
           </p>
           <p className="text-gray-700 leading-relaxed">
             We use eco-friendly, non-toxic products on every job. Safe for your whole family including pets. And if anything is not right after we leave, contact us within 48 hours and we will come back to fix it at no charge.
@@ -273,16 +278,30 @@ export default function DeepCleaningPage() {
         </div>
       </section>
 
-      {/* ANCHOR REVIEW */}
+      {/* ANCHOR REVIEW, paired with a photo so the SEO content above it and
+          the WHY DSM section below it are not two consecutive text-only
+          blocks. */}
       <section className="py-10 px-4" style={{ backgroundColor: "#FFF4EE" }}>
-        <div className="max-w-2xl mx-auto text-center">
-          <p style={{ color: "#E8622A" }} className="text-5xl font-serif leading-none mb-3">&ldquo;</p>
-          <p className="text-gray-800 text-lg leading-relaxed italic mb-4">
-            {REAL_REVIEWS[5].text}
-          </p>
-          <p className="font-semibold text-gray-700">{REAL_REVIEWS[5].name}</p>
-          <div className="flex justify-center mt-2">
-            <span style={{ color: "#FFA869" }}>★★★★★</span>
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div className="order-2 md:order-1">
+            <Image
+              src="/work-photos/marble-bathroom-deep-cleaning.jpg"
+              alt="Marble tiled bathroom with a scrubbed tub surround and floor tile catching the light after a DSM Cleaning Solutions deep clean"
+              width={760}
+              height={570}
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="rounded-2xl shadow-md w-full h-auto object-cover"
+            />
+          </div>
+          <div className="order-1 md:order-2 text-center md:text-left">
+            <p style={{ color: "#E8622A" }} className="text-5xl font-serif leading-none mb-3">&ldquo;</p>
+            <p className="text-gray-800 text-lg leading-relaxed italic mb-4">
+              {REAL_REVIEWS[5].text}
+            </p>
+            <p className="font-semibold text-gray-700">{REAL_REVIEWS[5].name}</p>
+            <div className="flex justify-center md:justify-start mt-2">
+              <span style={{ color: "#FFA869" }}>★★★★★</span>
+            </div>
           </div>
         </div>
       </section>
@@ -297,11 +316,11 @@ export default function DeepCleaningPage() {
             <div className="bg-gray-50 rounded-xl p-6">
               <h3 className="font-bold text-gray-800 mb-2">We Are Local</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                DSM is a small, family-run business based in the area. We are not a franchise. Romeoville, Plainfield, Bolingbrook, and Naperville are our home communities. When you work with us you get a team that is personally invested in doing good work.
+                DSM is a small, family-run business based in the southwest suburbs, not a franchise. Romeoville, Plainfield, Bolingbrook, and Naperville are our home communities. Memo answers his own phone. Call or text him directly.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="font-bold text-gray-800 mb-2">We Do Not Cut Corners</h3>
+              <h3 className="font-bold text-gray-800 mb-2">We Get Every Detail</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
                 Our deep clean is not a surface wipe-down. We get into the spots that usually get skipped: inside the oven, behind the toilet, grout lines, ceiling fan blades, baseboards, and window sills. Every room gets real attention.
               </p>
@@ -321,8 +340,8 @@ export default function DeepCleaningPage() {
           </div>
           <div className="text-center">
             <Image
-              src="/work-photos/google-post-image-cleaning-service-1.jpg"
-              alt="DSM Cleaning Solutions team serving Romeoville, Plainfield, Bolingbrook and Naperville"
+              src="/work-photos/google-post-image-cleaning-service-25.jpg"
+              alt="DSM Cleaning Solutions team member cleaning a light fixture during a deep clean visit"
               width={940}
               height={788}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -339,9 +358,20 @@ export default function DeepCleaningPage() {
           <h2 className="text-2xl font-bold text-gray-800 text-center mb-2">
             What We Clean in Your Home
           </h2>
-          <p className="text-center text-gray-500 text-sm mb-10">
+          <p className="text-center text-gray-500 text-sm mb-8">
             Every deep clean includes all of the following
           </p>
+          <div className="flex justify-center mb-10">
+            <Image
+              src="/work-photos/cooktop-grates-deep-cleaning.jpg"
+              alt="Gas cooktop with degreased burner grates and polished stainless steel after a DSM Cleaning Solutions deep clean"
+              width={1200}
+              height={900}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="rounded-xl shadow-md mx-auto"
+              style={{ maxWidth: "560px", width: "100%" }}
+            />
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
             {checklist.map((section) => (
               <div key={section.room} className="bg-white rounded-xl p-5 shadow-sm">
@@ -430,6 +460,22 @@ export default function DeepCleaningPage() {
         </div>
       </section>
 
+      {/* PROOF PHOTO, breaking up the pricing, reviews, FAQ and form stretch
+          that otherwise runs to the bottom of the page with no image. */}
+      <section className="py-10 px-4 bg-white">
+        <div className="max-w-3xl mx-auto text-center">
+          <Image
+            src="/work-photos/walk-in-shower-glass-house-cleaning.jpg"
+            alt="Walk-in shower with streak-free glass doors and a spotless tiled shower pan cleaned by DSM Cleaning Solutions"
+            width={1200}
+            height={900}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="rounded-xl shadow-md mx-auto"
+            style={{ maxWidth: "560px", width: "100%" }}
+          />
+        </div>
+      </section>
+
       {/* 3-REVIEW BLOCK */}
       <section className="py-14 px-4 bg-gray-50">
         <div className="max-w-5xl mx-auto">
@@ -499,7 +545,7 @@ export default function DeepCleaningPage() {
             <div className="flex justify-center mb-1">
               <span style={{ color: "#FFD8BC" }} className="text-2xl">★★★★★</span>
             </div>
-            <p className="text-sm text-gray-500">Trusted by homeowners across the southwest suburbs — {REVIEW_COUNT} five-star reviews</p>
+            <p className="text-sm text-gray-500">{REVIEW_RATING} average from {REVIEW_COUNT} Google reviews</p>
           </div>
           <CityDeepCleanForm />
         </div>
@@ -529,6 +575,12 @@ export default function DeepCleaningPage() {
           </div>
         </div>
       </section>
+
+      {/* Sticky mobile "Book Now" bar, fades in after 300px scroll. Points at
+          this page's own quote form instead of /book, matching the two
+          above-fold CTAs which also go to #quote-form rather than a
+          different page. */}
+      <StickyMobileBar bookHref="#quote-form" />
     </>
   );
 }
