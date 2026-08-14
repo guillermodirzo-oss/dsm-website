@@ -1,9 +1,21 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
-import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
+import { REAL_REVIEWS, REVIEW_COUNT, REVIEW_RATING, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
 import CityDeepCleanForm from "@/components/CityDeepCleanForm";
-import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
+import {
+  DEEP_CLEANING_TIERS,
+  OFFER,
+  isOfferActive,
+  discountedPrice,
+  formatPrice,
+  tierLabel,
+} from "@/lib/pricing";
+
+// Re-render hourly so the SUMMER75 offer expires on its own after
+// OFFER.endDate without anyone shipping a change. Same pattern as
+// app/pricing/page.tsx.
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Deep Cleaning Romeoville & Plainfield IL",
@@ -140,6 +152,10 @@ const checklist = [
 ];
 
 export default function DeepCleaningPage() {
+  // Evaluated at render time. With revalidate = 3600 above, the offer stops
+  // showing within an hour of OFFER.endDate passing, with no code change.
+  const offerLive = isOfferActive();
+
   return (
     <>
       <script
@@ -178,8 +194,28 @@ export default function DeepCleaningPage() {
                 A real deep clean for your home. Every room, every detail.
               </p>
               <p className="opacity-90 mb-6 leading-relaxed">
-                DSM Cleaning Solutions is a family-owned cleaning company serving the southwest Chicago suburbs. We do deep cleaning the right way — oven scrubbing, grout cleaning, baseboards, ceiling fans, and everything in between. Eco-friendly products and a 48-hour satisfaction guarantee on every job.
+                DSM Cleaning Solutions is a family-owned cleaning company serving the southwest Chicago suburbs. Eco-friendly products and a 48-hour satisfaction guarantee on every job.
               </p>
+
+              {/* Offer. Terms mirror /book and the homepage exactly, including
+                  the $40 oven cleaning value, so no page disagrees with another.
+                  Gated on isOfferActive() so the block disappears with no code
+                  change once OFFER.endDate passes. */}
+              {offerLive && (
+                <div className="mb-6">
+                  <a
+                    href="#quote-form"
+                    className="inline-block rounded-full px-5 py-2.5 text-sm sm:text-base font-bold shadow-lg hover:shadow-xl hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-95 transition-all duration-200"
+                    style={{ backgroundColor: "#FFF4EE", color: "#E8622A" }}
+                  >
+                    $75 off your first deep clean, plus free oven cleaning, a $40 value.
+                  </a>
+                  <p className="mt-2 text-sm opacity-80">
+                    Use code <span className="font-bold">SUMMER75</span> through August 31.
+                  </p>
+                </div>
+              )}
+
               <div className="flex flex-wrap gap-3">
                 <a
                   href="#quote-form"
@@ -334,17 +370,60 @@ export default function DeepCleaningPage() {
       </section>
 
       {/* PRICING */}
-      <section className="py-12 px-4 bg-white">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">
-            Deep Cleaning Pricing
-          </h2>
-          <div className="text-gray-600 leading-relaxed mb-4">{DEEP_CLEANING_PRICING_COPY}</div>
-          <p className="text-gray-600 leading-relaxed mb-4">
-            Your price depends on three things: how big your home is, how many bedrooms it has, and how many bathrooms it has. The ranges above cover typical homes in that bedroom range. If your home runs bigger or has extra bathrooms, your quote might land higher. We&rsquo;ll always confirm your exact price with you before we book anything. No surprises after we show up.
+      <section className="py-14 px-4 bg-white">
+        <div className="max-w-2xl mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-gray-800 mb-2">
+              Deep Cleaning Pricing
+            </h2>
+            {offerLive && (
+              <p className="text-sm font-bold" style={{ color: "#E8622A" }}>
+                ${OFFER.discount} off every deep clean with code {OFFER.code}, through August 31.
+              </p>
+            )}
+          </div>
+
+          {/* Same tier ladder and struck-price treatment as /pricing, so a
+              visitor never sees two different numbers for the same job. */}
+          <div className="bg-gray-50 rounded-2xl border border-gray-100 p-6 sm:p-8">
+            <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">
+              Example Prices
+            </p>
+            <div className="space-y-3">
+              {DEEP_CLEANING_TIERS.map((tier) => {
+                const label = tierLabel(tier);
+                const sale = discountedPrice(tier.price, "deep");
+                return (
+                  <div key={label} className="flex items-center justify-between gap-3 border-b border-gray-100 pb-3 last:border-0 last:pb-0">
+                    <span className="text-sm text-gray-600 leading-tight">{label}</span>
+                    {/* min-h keeps the row the same height whether or not a
+                        struck price is present, so CLS stays at 0. */}
+                    <span className="text-lg font-bold text-gray-900 whitespace-nowrap flex-shrink-0 min-h-[1.75rem] flex items-center gap-2">
+                      {sale === null ? (
+                        <>Starting at {formatPrice(tier.price)}</>
+                      ) : (
+                        <>
+                          <s className="text-sm font-medium text-gray-400">
+                            <span className="sr-only">Regular price </span>
+                            {formatPrice(tier.price)}
+                          </s>
+                          <span style={{ color: "#E8622A" }}>
+                            <span className="sr-only">Sale price </span>
+                            {formatPrice(sale)}
+                          </span>
+                        </>
+                      )}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          <p className="text-gray-600 leading-relaxed text-sm mt-6 text-center">
+            Your price depends on bedrooms, bathrooms and square footage. We confirm your exact price before booking anything. No surprises.
           </p>
-          <p className="text-gray-600 text-sm mb-4">Want your exact price right now? See it in about 2 minutes below. Prefer we call you instead? Fill out the quick form.</p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center mt-6">
             <Link href="/book" className="text-white font-bold px-8 py-3 rounded-lg hover:opacity-90 transition inline-block text-center" style={{ backgroundColor: "#E8622A" }}>See Your Exact Price</Link>
             <a href="#quote-form" className="font-bold px-8 py-3 rounded-lg border-2 transition inline-block text-center hover:bg-orange-50" style={{ borderColor: "#E8622A", color: "#E8622A" }}>Get a Free Quote</a>
           </div>
