@@ -172,83 +172,82 @@ export default function DeepCleaningPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      {/* HERO */}
-      <section
-        className="bg-gradient-to-br from-brand-green-dark via-brand-green to-brand-green-light text-white py-16 px-4"
-      >
-        <div className="max-w-5xl mx-auto">
-          <nav className="text-sm mb-4 opacity-80">
+      {/* HERO. Full-bleed background photo behind the text, matching the
+          homepage hero pattern: fill + priority + dark overlay, rather than
+          the small side thumbnail this used to be. This is the page's one
+          priority image. */}
+      <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
+        <Image
+          src="/work-photos/oven-interior-deep-cleaning.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+          style={{ objectPosition: "center 38%" }}
+        />
+        {/* Same two overlays as the homepage hero: a dark gradient for text
+            legibility over a busy photo, plus a faint orange tint. */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/65 via-black/45 to-black/35" />
+        <div className="absolute inset-0 bg-gradient-to-t from-orange-900/20 via-transparent to-transparent" />
+
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+          <nav className="text-sm mb-6 opacity-80 flex items-center justify-center gap-2">
             <Link href="/" className="hover:underline">Home</Link>
-            <span className="mx-2">/</span>
+            <span>/</span>
             <span>Deep Cleaning</span>
           </nav>
-          <div className="flex flex-col md:flex-row gap-10 items-center">
-            <div className="flex-1">
-              {/* Order is H1, subheading, rating, offer, CTAs: the same
-                  sequence as the homepage hero, verified to clear the fold
-                  at 390px. */}
-              <h1 className="text-3xl md:text-4xl font-bold mb-3 leading-tight">
-                Deep Cleaning That Gets Inside the Oven.
-              </h1>
-              <p className="text-lg font-semibold mb-4 opacity-95">
-                Grout lines, baseboards, ceiling fans, behind the stovetop. Deep cleaning in Romeoville, Plainfield, Naperville, Bolingbrook and the southwest suburbs.
+
+          {/* Order is H1, subheading, rating, offer, CTAs: the same sequence
+              as the homepage hero, verified to clear the fold at 390px. */}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
+            Deep Cleaning That Gets Inside the Oven.
+          </h1>
+          <p className="text-lg md:text-xl font-semibold mb-5 opacity-95 max-w-2xl mx-auto">
+            Grout lines, baseboards, ceiling fans, behind the stovetop. Deep cleaning in Romeoville, Plainfield, Naperville, Bolingbrook and the southwest suburbs.
+          </p>
+
+          {/* Rating. Counts come from lib/realReviews.ts, never hardcoded. */}
+          <Link href="/reviews" className="inline-flex items-center justify-center gap-2 mb-5 hover:underline">
+            <span style={{ color: "#FFA869" }} className="text-xl">★★★★★</span>
+            <span className="text-sm opacity-90">{REVIEW_RATING} · {REVIEW_COUNT} Google Reviews</span>
+          </Link>
+
+          {/* Offer. Solid DSM orange now that the backdrop is a dark photo
+              overlay, matching the homepage badge exactly rather than the
+              cream variant needed against the old flat gradient. Terms mirror
+              /book and the homepage, including the $40 oven cleaning value.
+              Gated on isOfferActive() so the block disappears with no code
+              change once OFFER.endDate passes. */}
+          {offerLive && (
+            <div className="mb-6">
+              <a
+                href="#quote-form"
+                className="inline-block rounded-full px-5 py-2.5 text-sm sm:text-base font-bold text-white shadow-lg hover:brightness-110 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-95 transition-all duration-200"
+                style={{ backgroundColor: "#E8622A" }}
+              >
+                $75 off your first deep clean, plus free oven cleaning, a $40 value.
+              </a>
+              <p className="mt-2 text-sm text-white/70">
+                Use code <span className="font-bold text-white">SUMMER75</span> through August 31.
               </p>
-
-              {/* Rating. Counts come from lib/realReviews.ts, never hardcoded. */}
-              <Link href="/reviews" className="inline-flex items-center gap-2 mb-5 hover:underline">
-                <span style={{ color: "#FFA869" }} className="text-xl">★★★★★</span>
-                <span className="text-sm opacity-90">{REVIEW_RATING} · {REVIEW_COUNT} Google Reviews</span>
-              </Link>
-
-              {/* Offer. Terms mirror /book and the homepage exactly, including
-                  the $40 oven cleaning value, so no page disagrees with another.
-                  Gated on isOfferActive() so the block disappears with no code
-                  change once OFFER.endDate passes. */}
-              {offerLive && (
-                <div className="mb-6">
-                  <a
-                    href="#quote-form"
-                    className="inline-block rounded-full px-5 py-2.5 text-sm sm:text-base font-bold shadow-lg hover:shadow-xl hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-95 transition-all duration-200"
-                    style={{ backgroundColor: "#FFF4EE", color: "#E8622A" }}
-                  >
-                    $75 off your first deep clean, plus free oven cleaning, a $40 value.
-                  </a>
-                  <p className="mt-2 text-sm opacity-80">
-                    Use code <span className="font-bold">SUMMER75</span> through August 31.
-                  </p>
-                </div>
-              )}
-
-              <div className="flex flex-wrap gap-3">
-                <a
-                  href="#quote-form"
-                  style={{ backgroundColor: "#E8721C" }}
-                  className="text-white font-bold px-6 py-3 rounded-lg hover:opacity-90 transition"
-                >
-                  Get a Free Quote
-                </a>
-                <a
-                  href="tel:+18152462113"
-                  className="border-2 border-white text-white font-bold px-6 py-3 rounded-lg hover:bg-white hover:text-green-900 transition"
-                >
-                  Call (815) 246-2113
-                </a>
-              </div>
             </div>
-            <div className="flex-shrink-0 w-full md:w-80">
-              {/* Ties directly to the headline. Real evidence, not a tidy
-                  room: bare enamel, not a staged vanity shot. */}
-              <Image
-                src="/work-photos/oven-interior-deep-cleaning.jpg"
-                alt="Oven interior cleaned down to bare enamel during a DSM Cleaning Solutions deep clean"
-                width={1200}
-                height={900}
-                priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                className="rounded-xl shadow-lg w-full object-cover"
-                style={{ maxHeight: "340px" }}
-              />
-            </div>
+          )}
+
+          <div className="flex flex-wrap gap-3 justify-center">
+            <a
+              href="#quote-form"
+              style={{ backgroundColor: "#E8721C" }}
+              className="text-white font-bold px-6 py-3 rounded-lg hover:opacity-90 transition"
+            >
+              Get a Free Quote
+            </a>
+            <a
+              href="tel:+18152462113"
+              className="border-2 border-white text-white font-bold px-6 py-3 rounded-lg hover:bg-white hover:text-green-900 transition"
+            >
+              Call (815) 246-2113
+            </a>
           </div>
         </div>
       </section>
