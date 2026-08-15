@@ -5,7 +5,7 @@ import {
   DEEP_CLEANING_TIERS,
   STANDARD_CLEANING_TIERS,
   MOVE_OUT_TIERS,
-  OFFER,
+  OFFERS,
   isOfferActive,
   discountedPrice,
   startingPrice,
@@ -20,7 +20,7 @@ import {
 } from "@/lib/pricing";
 
 // Re-render hourly so the SUMMER75 offer expires on its own after
-// OFFER.endDate without anyone shipping a change.
+// OFFERS.deep.endDate without anyone shipping a change.
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
@@ -175,8 +175,11 @@ const RECURRING_EXAMPLE_FREQUENCY =
 
 export default function PricingPage() {
   // Evaluated at render time. With revalidate = 3600 above, the offer stops
-  // showing within an hour of OFFER.endDate passing, with no code change.
-  const offerLive = isOfferActive();
+  // showing within an hour of OFFERS.deep.endDate passing, with no code change.
+  // This page only ever surfaces the deep cleaning offer. The move-out offer
+  // is deliberately kept off /pricing and shown only on /move-out-cleaning.
+  const offerLive = isOfferActive("deep");
+  const deepOffer = OFFERS.deep;
   const recurringExample = {
     tier: RECURRING_EXAMPLE_TIER,
     frequency: RECURRING_EXAMPLE_FREQUENCY,
@@ -280,13 +283,14 @@ export default function PricingPage() {
                       ℹ️ {svc.scope}
                     </div>
                   )}
-                  {/* Offer context sits once per card, not on every price row. */}
-                  {svc.service === OFFER.appliesTo && offerLive && (
+                  {/* Offer context sits once per card, not on every price row.
+                      Deep cleaning only: the move-out offer never appears on this page. */}
+                  {svc.service === "deep" && offerLive && deepOffer && (
                     <p
                       className="mt-3 text-xs font-bold"
                       style={{ color: "#E8622A" }}
                     >
-                      ${OFFER.discount} off every deep clean with code {OFFER.code}, through August 31.
+                      ${deepOffer.discount} off every deep clean with code {deepOffer.code}, through August 31.
                     </p>
                   )}
                 </div>
@@ -318,7 +322,11 @@ export default function PricingPage() {
                   <div className="space-y-3">
                     {svc.tiers.map((tier) => {
                       const label = tierLabel(tier);
-                      const sale = discountedPrice(tier.price, svc.service);
+                      // Deep cleaning only. Move-out now has its own live
+                      // offer in OFFERS, but it must never render here, only
+                      // on /move-out-cleaning, so this is not a generic
+                      // discountedPrice(tier.price, svc.service) call.
+                      const sale = svc.service === "deep" ? discountedPrice(tier.price, svc.service) : null;
                       return (
                         <div key={label} className="flex items-center justify-between gap-3">
                           <span className="text-sm text-gray-600 leading-tight">{label}</span>

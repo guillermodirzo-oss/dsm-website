@@ -6,7 +6,7 @@ import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 import { StickyMobileBar } from "@/components/HomepageScrollWidgets";
 import {
   DEEP_CLEANING_TIERS,
-  OFFER,
+  OFFERS,
   isOfferActive,
   discountedPrice,
   formatPrice,
@@ -14,7 +14,7 @@ import {
 } from "@/lib/pricing";
 
 // Re-render hourly so the SUMMER75 offer expires on its own after
-// OFFER.endDate without anyone shipping a change. Same pattern as
+// OFFERS.deep.endDate without anyone shipping a change. Same pattern as
 // app/pricing/page.tsx.
 export const revalidate = 3600;
 
@@ -154,8 +154,9 @@ const checklist = [
 
 export default function DeepCleaningPage() {
   // Evaluated at render time. With revalidate = 3600 above, the offer stops
-  // showing within an hour of OFFER.endDate passing, with no code change.
-  const offerLive = isOfferActive();
+  // showing within an hour of OFFERS.deep.endDate passing, with no code change.
+  const offerLive = isOfferActive("deep");
+  const deepOffer = OFFERS.deep;
 
   return (
     <>
@@ -405,9 +406,9 @@ export default function DeepCleaningPage() {
             <h2 className="text-2xl font-bold text-gray-800 mb-2">
               Deep Cleaning Pricing
             </h2>
-            {offerLive && (
+            {offerLive && deepOffer && (
               <p className="text-sm font-bold" style={{ color: "#E8622A" }}>
-                ${OFFER.discount} off every deep clean with code {OFFER.code}, through August 31.
+                ${deepOffer.discount} off every deep clean with code {deepOffer.code}, through August 31.
               </p>
             )}
           </div>

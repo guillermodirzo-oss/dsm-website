@@ -42,15 +42,25 @@ export const MOVE_OUT_TIERS: PriceTier[] = [
 
 export type ServiceKey = "standard" | "deep" | "moveout";
 
-export const OFFER = {
-  code: "SUMMER75",
-  discount: 75,
-  endDate: "2026-08-31", // inclusive
-  appliesTo: "deep" as const, // deep cleaning ONLY
+export interface Offer {
+  code: string;
+  discount: number;
+  endDate: string; // inclusive, YYYY-MM-DD
+}
+
+/**
+ * Offers keyed by the service they apply to. A service with no key here has
+ * no offer, standard cleaning included. Two offers can run concurrently with
+ * different codes and end dates, each expiring independently.
+ */
+export const OFFERS: Partial<Record<ServiceKey, Offer>> = {
+  deep: { code: "SUMMER75", discount: 75, endDate: "2026-08-31" },
+  moveout: { code: "MOVE75", discount: 75, endDate: "2026-09-30" },
 };
 
 /**
- * True while the offer is live. Auto-reverts after endDate with no code change.
+ * True while this service's offer is live. False if the service has no offer
+ * at all, or its endDate has passed. Auto-reverts with no code change.
  *
  * NOTE ON STATIC PAGES: this is evaluated at render time, and these pages are
  * statically generated, so the flip to false will not appear on the live site
@@ -61,24 +71,27 @@ export const OFFER = {
  * endDate is inclusive, so the offer runs through the last moment of that day
  * in the server's local time.
  */
-export function isOfferActive(now = new Date()): boolean {
-  const end = new Date(`${OFFER.endDate}T23:59:59.999`);
+export function isOfferActive(service: ServiceKey, now = new Date()): boolean {
+  const offer = OFFERS[service];
+  if (!offer) return false;
+  const end = new Date(`${offer.endDate}T23:59:59.999`);
   return now.getTime() <= end.getTime();
 }
 
 /**
- * Discounted price when the offer applies to this service and is live, else null.
- * Returns null for "standard" and "moveout" regardless of date: SUMMER75 is a
- * deep cleaning offer only.
+ * Discounted price when this service has a live offer, else null. Returns
+ * null for any service with no entry in OFFERS (standard cleaning, always)
+ * and for a service whose offer has expired.
  */
 export function discountedPrice(
   price: number,
   service: ServiceKey,
   now = new Date()
 ): number | null {
-  if (service !== OFFER.appliesTo) return null;
-  if (!isOfferActive(now)) return null;
-  return price - OFFER.discount;
+  const offer = OFFERS[service];
+  if (!offer) return null;
+  if (!isOfferActive(service, now)) return null;
+  return price - offer.discount;
 }
 
 /**
