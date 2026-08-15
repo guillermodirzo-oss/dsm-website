@@ -45,7 +45,7 @@ const faqs = [
   {
     question: "How much does eco-friendly cleaning cost in Plainfield?",
     answer:
-      "Eco-friendly cleaning is included in all our standard pricing — there is no premium for using non-toxic products in Plainfield. Standard cleaning starts at $160 for a 2-bed/1-bath home, deep cleaning starts at $315, and move-out cleaning starts at $480. Contact us for a free, no-obligation estimate for your Plainfield home.",
+      "Eco-friendly cleaning is included in all our standard pricing — there is no premium for using non-toxic products in Plainfield. Standard cleaning starts at $160 for a 2-bed/1-bath home, deep cleaning starts at $315, and move-out cleaning starts at $410. Contact us for a free, no-obligation estimate for your Plainfield home.",
   },
 ];
 

@@ -34,10 +34,10 @@ export const STANDARD_CLEANING_TIERS: PriceTier[] = [
 ];
 
 export const MOVE_OUT_TIERS: PriceTier[] = [
-  { beds: "2 bed", baths: "1 bath", sqft: "1,000-1,499", price: 480 },
-  { beds: "3 bed", baths: "2 bath", sqft: "1,500-1,999", price: 560 },
-  { beds: "4 bed", baths: "2.5 bath", sqft: "2,500-2,999", price: 700 },
-  { beds: "5 bed", baths: "3 bath", sqft: "3,500-3,999", price: 880 },
+  { beds: "2 bed", baths: "1 bath", sqft: "1,000-1,499", price: 410 },
+  { beds: "3 bed", baths: "2 bath", sqft: "1,500-1,999", price: 490 },
+  { beds: "4 bed", baths: "2.5 bath", sqft: "2,500-2,999", price: 630 },
+  { beds: "5 bed", baths: "3 bath", sqft: "3,500-3,999", price: 810 },
 ];
 
 export type ServiceKey = "standard" | "deep" | "moveout";

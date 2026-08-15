@@ -42,7 +42,7 @@ const faqs = [
   {
     question: "How much does move-out cleaning cost?",
     answer:
-      "Move-out cleaning with DSM Cleaning Solutions starts at $480 for a 2-bedroom/1-bath home, $660 for a 3-bedroom/2-bath, and $870+ for a 4-bedroom/2.5-bath home. The price covers a complete, thorough clean from top to bottom — every item on this checklist. Compare that to a typical security deposit of $1,000–$2,000+, and professional move-out cleaning is a straightforward investment. Contact us for your free Plainfield or Naperville move-out quote.",
+      "Move-out cleaning with DSM Cleaning Solutions starts at $410 for a 2-bedroom/1-bath home, $490 for a 3-bedroom/2-bath, and $630+ for a 4-bedroom/2.5-bath home. The price covers a complete, thorough clean from top to bottom — every item on this checklist. Compare that to a typical security deposit of $1,000–$2,000+, and professional move-out cleaning is a straightforward investment. Contact us for your free Plainfield or Naperville move-out quote.",
   },
 ];
 
@@ -331,7 +331,7 @@ export default function MoveOutCleaningChecklistPage() {
                   { factor: "Consistency", diy: "Depends on effort/energy", pro: "Systematic checklist every time" },
                   { factor: "Documentation", diy: "Self-documented", pro: "Professional service record" },
                   { factor: "Deposit recovery rate", diy: "Variable", pro: "Significantly higher" },
-                  { factor: "Cost", diy: "Your time + supplies", pro: "Starting at $480 (2 bed / 1 bath)" },
+                  { factor: "Cost", diy: "Your time + supplies", pro: "Starting at $410 (2 bed / 1 bath)" },
                 ].map((row) => (
                   <tr key={row.factor} className="hover:bg-gray-50">
                     <td className="px-6 py-3 font-medium text-gray-900">{row.factor}</td>
@@ -435,7 +435,7 @@ export default function MoveOutCleaningChecklistPage() {
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
                 📞 (815) 246-2113
               </a>
-              <p className="text-white/80">Starting at $480 · Flat-rate · Fully insured · 48-hr guarantee</p>
+              <p className="text-white/80">Starting at $410 · Flat-rate · Fully insured · 48-hr guarantee</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <LeadForm />

@@ -25,7 +25,7 @@ const faqs = [
   {
     question: "How much does house cleaning cost in Plainfield, IL?",
     answer:
-      "House cleaning in Plainfield, IL typically starts at $160 for a standard clean in a 2-bedroom/1-bath home, $315 for a deep clean, and $480 for a move-out clean in the same size home. Prices scale with bedroom and bathroom count. DSM Cleaning Solutions provides free, no-obligation estimates — contact us or call (815) 246-2113 for your exact Plainfield quote.",
+      "House cleaning in Plainfield, IL typically starts at $160 for a standard clean in a 2-bedroom/1-bath home, $315 for a deep clean, and $410 for a move-out clean in the same size home. Prices scale with bedroom and bathroom count. DSM Cleaning Solutions provides free, no-obligation estimates — contact us or call (815) 246-2113 for your exact Plainfield quote.",
   },
   {
     question: "Is deep cleaning more expensive than standard cleaning in Plainfield?",
@@ -97,10 +97,10 @@ const breadcrumbSchema = {
 };
 
 const pricingBySize = [
-  { size: "2 Bed / 1 Bath", standard: "$160", deep: "$315", moveOut: "$480" },
-  { size: "3 Bed / 2 Bath", standard: "$225", deep: "$455", moveOut: "$660" },
-  { size: "4 Bed / 2.5 Bath", standard: "$310", deep: "$630", moveOut: "$870" },
-  { size: "5 Bed / 3 Bath", standard: "$400", deep: "$830", moveOut: "$1,100+" },
+  { size: "2 Bed / 1 Bath", standard: "$160", deep: "$315", moveOut: "$410" },
+  { size: "3 Bed / 2 Bath", standard: "$225", deep: "$455", moveOut: "$490" },
+  { size: "4 Bed / 2.5 Bath", standard: "$310", deep: "$630", moveOut: "$630" },
+  { size: "5 Bed / 3 Bath", standard: "$400", deep: "$830", moveOut: "$810" },
 ];
 
 const factors = [
@@ -292,7 +292,7 @@ export default function HouseCleaningCostPlainfield() {
             <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
               <div className="flex items-center justify-between mb-3">
                 <h3 className="text-xl font-bold text-gray-900">Move-Out Cleaning</h3>
-                <span className="bg-brand-green-50 text-brand-green font-bold px-3 py-1 rounded-lg text-sm">Starting at $480</span>
+                <span className="bg-brand-green-50 text-brand-green font-bold px-3 py-1 rounded-lg text-sm">Starting at $410</span>
               </div>
               <p className="text-gray-600 leading-relaxed mb-3">
                 Move-out cleaning in Plainfield is our most comprehensive service — priced higher
@@ -392,7 +392,7 @@ export default function HouseCleaningCostPlainfield() {
             </Link>
             <Link href="/move-out-cleaning-plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning — Plainfield</h3>
-              <p className="text-sm text-gray-600">Deposit-back cleaning starting at $480.</p>
+              <p className="text-sm text-gray-600">Deposit-back cleaning starting at $410.</p>
             </Link>
           </div>
         </div>
