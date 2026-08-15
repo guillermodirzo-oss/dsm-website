@@ -174,18 +174,18 @@ export default function DeepCleaningPage() {
       />
 
       {/* HERO. Full-bleed background photo behind the text, matching the
-          homepage hero pattern: fill + priority + dark overlay, rather than
-          the small side thumbnail this used to be. This is the page's one
-          priority image. */}
+          homepage hero pattern: fill plus a dark overlay, rather than the
+          small side thumbnail this used to be. This is the only image on the
+          page eager-loaded above the fold. */}
       <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
         <Image
-          src="/work-photos/oven-interior-deep-cleaning.jpg"
+          src="/work-photos/kitchen-living-open-concept-island.jpg"
           alt=""
           fill
           priority
           sizes="100vw"
           className="object-cover"
-          style={{ objectPosition: "center 38%" }}
+          style={{ objectPosition: "center 30%" }}
         />
         {/* Same two overlays as the homepage hero: a dark gradient for text
             legibility over a busy photo, plus a faint orange tint. */}
@@ -278,30 +278,18 @@ export default function DeepCleaningPage() {
         </div>
       </section>
 
-      {/* ANCHOR REVIEW, paired with a photo so the SEO content above it and
-          the WHY DSM section below it are not two consecutive text-only
-          blocks. */}
+      {/* ANCHOR REVIEW. Text-only: its previous paired photo,
+          marble-bathroom-deep-cleaning.jpg, is also used on the homepage, and
+          every image on this page now has to be unique to it. */}
       <section className="py-10 px-4" style={{ backgroundColor: "#FFF4EE" }}>
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div className="order-2 md:order-1">
-            <Image
-              src="/work-photos/marble-bathroom-deep-cleaning.jpg"
-              alt="Marble tiled bathroom with a scrubbed tub surround and floor tile catching the light after a DSM Cleaning Solutions deep clean"
-              width={760}
-              height={570}
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="rounded-2xl shadow-md w-full h-auto object-cover"
-            />
-          </div>
-          <div className="order-1 md:order-2 text-center md:text-left">
-            <p style={{ color: "#E8622A" }} className="text-5xl font-serif leading-none mb-3">&ldquo;</p>
-            <p className="text-gray-800 text-lg leading-relaxed italic mb-4">
-              {REAL_REVIEWS[5].text}
-            </p>
-            <p className="font-semibold text-gray-700">{REAL_REVIEWS[5].name}</p>
-            <div className="flex justify-center md:justify-start mt-2">
-              <span style={{ color: "#FFA869" }}>★★★★★</span>
-            </div>
+        <div className="max-w-2xl mx-auto text-center">
+          <p style={{ color: "#E8622A" }} className="text-5xl font-serif leading-none mb-3">&ldquo;</p>
+          <p className="text-gray-800 text-lg leading-relaxed italic mb-4">
+            {REAL_REVIEWS[5].text}
+          </p>
+          <p className="font-semibold text-gray-700">{REAL_REVIEWS[5].name}</p>
+          <div className="flex justify-center mt-2">
+            <span style={{ color: "#FFA869" }}>★★★★★</span>
           </div>
         </div>
       </section>
@@ -352,7 +340,11 @@ export default function DeepCleaningPage() {
         </div>
       </section>
 
-      {/* CHECKLIST */}
+      {/* CHECKLIST. Photos sit beside the specific claim they prove instead
+          of in a standalone gallery: the Kitchen card gets the cooktop and
+          microwave shots, the Bathrooms card gets the grout and fixture
+          shots. Bedrooms/Living Areas and Whole Home have no candidate
+          photos and stay text-only. */}
       <section className="py-14 px-4 bg-gray-50">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl font-bold text-gray-800 text-center mb-2">
@@ -361,23 +353,16 @@ export default function DeepCleaningPage() {
           <p className="text-center text-gray-500 text-sm mb-8">
             Every deep clean includes all of the following
           </p>
-          <div className="flex justify-center mb-10">
-            <Image
-              src="/work-photos/cooktop-grates-deep-cleaning.jpg"
-              alt="Gas cooktop with degreased burner grates and polished stainless steel after a DSM Cleaning Solutions deep clean"
-              width={1200}
-              height={900}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className="rounded-xl shadow-md mx-auto"
-              style={{ maxWidth: "560px", width: "100%" }}
-            />
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-            {checklist.map((section) => (
-              <div key={section.room} className="bg-white rounded-xl p-5 shadow-sm">
-                <h3 className="font-bold text-gray-800 mb-3 border-b pb-2">{section.room}</h3>
+
+          <div className="space-y-6 mb-10">
+            {/* Kitchen: checklist promises inside-the-oven, degreased
+                stovetop, and inside-microwave. Cooktop and microwave photos
+                back that up directly. */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+              <div className="bg-white rounded-xl p-5 shadow-sm">
+                <h3 className="font-bold text-gray-800 mb-3 border-b pb-2">{checklist[0].room}</h3>
                 <ul className="space-y-1">
-                  {section.items.map((item) => (
+                  {checklist[0].items.map((item) => (
                     <li key={item} className="text-sm text-gray-600 flex items-start gap-2">
                       <span className="text-green-600 mt-0.5">✓</span>
                       <span>{item}</span>
@@ -385,8 +370,93 @@ export default function DeepCleaningPage() {
                   ))}
                 </ul>
               </div>
-            ))}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="relative aspect-square rounded-xl overflow-hidden shadow-sm">
+                  <Image
+                    src="/work-photos/cooktop-grates-deep-cleaning.jpg"
+                    alt="Gas cooktop with degreased burner grates and polished stainless steel after a DSM Cleaning Solutions deep clean"
+                    fill
+                    sizes="(max-width: 1024px) 50vw, 25vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative aspect-square rounded-xl overflow-hidden shadow-sm">
+                  <Image
+                    src="/work-photos/microwave-interior-spotless-1200.jpg"
+                    alt="Microwave interior open showing a spotless cavity and clean glass tray after a DSM Cleaning Solutions deep clean"
+                    fill
+                    sizes="(max-width: 1024px) 50vw, 25vw"
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Bathrooms: checklist promises grout cleaning and polished
+                faucets and fixtures, both things a standard clean skips. */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+              <div className="bg-white rounded-xl p-5 shadow-sm">
+                <h3 className="font-bold text-gray-800 mb-3 border-b pb-2">{checklist[1].room}</h3>
+                <ul className="space-y-1">
+                  {checklist[1].items.map((item) => (
+                    <li key={item} className="text-sm text-gray-600 flex items-start gap-2">
+                      <span className="text-green-600 mt-0.5">✓</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="relative aspect-square rounded-xl overflow-hidden shadow-sm">
+                  <Image
+                    src="/work-photos/shower-glass-tiled-closeup-1200.jpg"
+                    alt="Glass-enclosed shower with mosaic tile and clean grout lines after a DSM Cleaning Solutions deep clean"
+                    fill
+                    sizes="(max-width: 1024px) 50vw, 25vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative aspect-square rounded-xl overflow-hidden shadow-sm">
+                  <Image
+                    src="/work-photos/stainless-sink-basin-spotless.jpg"
+                    alt="Polished faucet and spotless stainless sink basin after a DSM Cleaning Solutions deep clean"
+                    fill
+                    sizes="(max-width: 1024px) 50vw, 25vw"
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Bedrooms & Living Areas and Whole Home: no matching photo
+                evidence, so these stay text-only rather than force a filler
+                image in. */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="bg-white rounded-xl p-5 shadow-sm">
+                <h3 className="font-bold text-gray-800 mb-3 border-b pb-2">{checklist[2].room}</h3>
+                <ul className="space-y-1">
+                  {checklist[2].items.map((item) => (
+                    <li key={item} className="text-sm text-gray-600 flex items-start gap-2">
+                      <span className="text-green-600 mt-0.5">✓</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="bg-white rounded-xl p-5 shadow-sm">
+                <h3 className="font-bold text-gray-800 mb-3 border-b pb-2">{checklist[3].room}</h3>
+                <ul className="space-y-1">
+                  {checklist[3].items.map((item) => (
+                    <li key={item} className="text-sm text-gray-600 flex items-start gap-2">
+                      <span className="text-green-600 mt-0.5">✓</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
+
           <div className="text-center">
             <a
               href="#quote-form"
@@ -457,22 +527,6 @@ export default function DeepCleaningPage() {
             <Link href="/book" className="text-white font-bold px-8 py-3 rounded-lg hover:opacity-90 transition inline-block text-center" style={{ backgroundColor: "#E8622A" }}>See Your Exact Price</Link>
             <a href="#quote-form" className="font-bold px-8 py-3 rounded-lg border-2 transition inline-block text-center hover:bg-orange-50" style={{ borderColor: "#E8622A", color: "#E8622A" }}>Get a Free Quote</a>
           </div>
-        </div>
-      </section>
-
-      {/* PROOF PHOTO, breaking up the pricing, reviews, FAQ and form stretch
-          that otherwise runs to the bottom of the page with no image. */}
-      <section className="py-10 px-4 bg-white">
-        <div className="max-w-3xl mx-auto text-center">
-          <Image
-            src="/work-photos/walk-in-shower-glass-house-cleaning.jpg"
-            alt="Walk-in shower with streak-free glass doors and a spotless tiled shower pan cleaned by DSM Cleaning Solutions"
-            width={1200}
-            height={900}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="rounded-xl shadow-md mx-auto"
-            style={{ maxWidth: "560px", width: "100%" }}
-          />
         </div>
       </section>
 
