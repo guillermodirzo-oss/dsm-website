@@ -4,6 +4,15 @@ import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
 import { pickReviews, reviewAttribution } from "@/lib/realReviews";
+import {
+  STANDARD_CLEANING_TIERS,
+  STANDARD_FREQUENCIES,
+  DISCOUNTED_FREQUENCIES,
+  recurringPrice,
+  formatDiscount,
+  formatPrice,
+  tierLabel,
+} from "@/lib/pricing";
 
 export const metadata: Metadata = {
   title: "House Cleaning Service Romeoville IL",
@@ -58,7 +67,21 @@ const faqs = [
   { question: "Do you bring your own supplies?", answer: "Yes! We bring all eco-friendly, non-toxic cleaning products and equipment. You don't need to provide anything." },
 ];
 
+// Worked example for the recurring block. Both the tier and the frequency are
+// looked up from the data, so the sentence cannot drift from the rate card.
+// Same pattern as app/pricing/page.tsx.
+const RECURRING_EXAMPLE_TIER =
+  STANDARD_CLEANING_TIERS.find((t) => t.beds === "3 bed") ?? STANDARD_CLEANING_TIERS[0];
+const RECURRING_EXAMPLE_FREQUENCY =
+  STANDARD_FREQUENCIES.find((f) => f.popular) ?? STANDARD_FREQUENCIES[1];
+
 export default function StandardCleaningPage() {
+  const recurringExample = {
+    tier: RECURRING_EXAMPLE_TIER,
+    frequency: RECURRING_EXAMPLE_FREQUENCY,
+    price: recurringPrice(RECURRING_EXAMPLE_TIER.price, RECURRING_EXAMPLE_FREQUENCY),
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
@@ -200,6 +223,83 @@ export default function StandardCleaningPage() {
                 </ul>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PRICING. Full STANDARD_CLEANING_TIERS ladder, plus the recurring
+          frequency discounts directly beneath it. This never expires, unlike
+          a seasonal coupon, and it is the highest lifetime-value decision a
+          visitor makes on this page. Standard cleaning carries no coupon
+          offer of its own, so every row is a plain starting price. */}
+      <section className="py-14 px-4 bg-white">
+        <div className="max-w-2xl mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-gray-800 mb-2">
+              Standard Cleaning Pricing
+            </h2>
+          </div>
+
+          <div className="bg-gray-50 rounded-2xl border border-gray-100 p-6 sm:p-8">
+            <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">
+              Example Prices
+            </p>
+            <div className="space-y-3">
+              {STANDARD_CLEANING_TIERS.map((tier) => {
+                const label = tierLabel(tier);
+                return (
+                  <div key={label} className="flex items-center justify-between gap-3 border-b border-gray-100 pb-3 last:border-0 last:pb-0">
+                    <span className="text-sm text-gray-600 leading-tight">{label}</span>
+                    <span className="text-lg font-bold text-gray-900 whitespace-nowrap flex-shrink-0">
+                      Starting at {formatPrice(tier.price)}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="mt-6 pt-5 border-t border-gray-200">
+              <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">
+                Book Recurring and Save
+              </p>
+              <div className="space-y-1.5">
+                {DISCOUNTED_FREQUENCIES.map((freq) => (
+                  <div
+                    key={freq.id}
+                    className={`flex items-baseline justify-between gap-3 rounded-lg px-2.5 py-1.5 ${
+                      freq.popular ? "bg-white" : ""
+                    }`}
+                  >
+                    <span className="text-sm text-gray-600">
+                      {freq.label}
+                      {freq.popular && (
+                        <span className="ml-2 text-[11px] font-semibold" style={{ color: "#E8622A" }}>
+                          Most popular
+                        </span>
+                      )}
+                    </span>
+                    <span className="text-sm font-bold text-gray-900 whitespace-nowrap flex-shrink-0">
+                      {formatDiscount(freq.discount)} off
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+                A {recurringExample.tier.beds} / {recurringExample.tier.baths} home is{" "}
+                <span className="font-semibold text-gray-800">{formatPrice(recurringExample.tier.price)}</span>{" "}
+                one-time, or{" "}
+                <span className="font-semibold text-gray-800">{formatPrice(recurringExample.price)}</span>{" "}
+                {recurringExample.frequency.label.toLowerCase()}.
+              </p>
+            </div>
+          </div>
+
+          <p className="text-gray-600 leading-relaxed text-sm mt-6 text-center">
+            Your price depends on bedrooms, bathrooms and square footage. We confirm your exact price before booking anything. No surprises.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center mt-6">
+            <Link href="/book" className="text-white font-bold px-8 py-3 rounded-lg hover:opacity-90 transition inline-block text-center" style={{ backgroundColor: "#E8622A" }}>See Your Exact Price</Link>
+            <Link href="/contact" className="font-bold px-8 py-3 rounded-lg border-2 transition inline-block text-center hover:bg-orange-50" style={{ borderColor: "#E8622A", color: "#E8622A" }}>Get a Free Quote</Link>
           </div>
         </div>
       </section>
