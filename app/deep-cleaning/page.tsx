@@ -409,8 +409,8 @@ export default function DeepCleaningPage() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="relative aspect-square rounded-xl overflow-hidden shadow-sm">
                   <Image
-                    src="/work-photos/shower-deep-clean-romeoville-il-1200.jpg"
-                    alt="Glass shower door with a streak-free finish and polished chrome showerhead and caddy after a DSM Cleaning Solutions deep clean in Romeoville, IL"
+                    src="/work-photos/shower-glass-tiled-closeup-1200.jpg"
+                    alt="Glass-enclosed shower with mosaic tile and clean grout lines after a DSM Cleaning Solutions deep clean"
                     fill
                     sizes="(max-width: 1024px) 50vw, 25vw"
                     className="object-cover"

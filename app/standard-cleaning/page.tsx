@@ -375,6 +375,15 @@ export default function StandardCleaningPage() {
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
+              <Image
+                src="/work-photos/bathroom-double-vanity-white-2-1200.jpg"
+                alt="Bathroom double vanity with a tidy countertop and fresh towels after standard house cleaning"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
           </div>
         </div>
       </section>
