@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/standard-cleaning" },
   openGraph: {
     title: "Standard Cleaning Service Plainfield IL | DSM Cleaning Solutions",
-    description: "Recurring house cleaning in Plainfield & Romeoville IL from $120. Vetted, insured cleaners. Weekly, bi-weekly, or monthly. 5-star rated. Free quote today.",
+    description: "Recurring house cleaning in Plainfield & Romeoville IL from $160. Vetted, insured cleaners. Weekly, bi-weekly, or monthly. 5-star rated. Free quote today.",
     url: "https://www.dsmcleaningsolutions.com/standard-cleaning",
     siteName: "DSM Cleaning Solutions",
     images: [
@@ -37,7 +37,7 @@ const faqSchema = {
   mainEntity: [
     { "@type": "Question", name: "What is included in a standard house cleaning?", acceptedAnswer: { "@type": "Answer", text: "Our standard cleaning covers all main living areas: vacuuming, mopping, bathroom cleaning and disinfecting, kitchen surface wipe-down, dusting, and trash removal. We can customize the checklist for your home." } },
     { "@type": "Question", name: "How often should I get a standard house cleaning?", acceptedAnswer: { "@type": "Answer", text: "Most families in Romeoville choose biweekly (every 2 weeks) service. Weekly is great for busy households or homes with pets. Monthly works well if you do light upkeep in between." } },
-    { "@type": "Question", name: "How much does standard house cleaning cost in Romeoville?", acceptedAnswer: { "@type": "Answer", text: "Standard cleaning starts around $120–$180 for an average home and varies by size and frequency. Recurring clients receive discounted rates. Contact us for a free personalized estimate." } },
+    { "@type": "Question", name: "How much does standard house cleaning cost in Romeoville?", acceptedAnswer: { "@type": "Answer", text: "Standard cleaning starts at $160 for a 2-bedroom home and varies by size, bathrooms, and frequency. Recurring clients save 10% to 20% off the one-time rate. Contact us for a free personalized estimate." } },
     { "@type": "Question", name: "Do I need to be home during the cleaning?", acceptedAnswer: { "@type": "Answer", text: "No — many clients provide a key or access code. Our fully insured and background-checked team will take excellent care of your home." } },
     { "@type": "Question", name: "Do you bring your own cleaning supplies?", acceptedAnswer: { "@type": "Answer", text: "Yes! We bring all eco-friendly, non-toxic cleaning products and equipment. You don't need to provide anything." } },
   ],
@@ -53,7 +53,7 @@ const checklist = [
 const faqs = [
   { question: "What is included in a standard house cleaning?", answer: "Our standard cleaning covers all main living areas: vacuuming, mopping, bathroom cleaning and disinfecting, kitchen surface wipe-down, dusting, and trash removal. We can customize the checklist for your home." },
   { question: "How often should I get a standard house cleaning?", answer: "Most families choose biweekly service. Weekly is great for busy households or homes with pets. Monthly works well if you do light upkeep in between." },
-  { question: "How much does standard house cleaning cost in Romeoville?", answer: "Standard cleaning starts around $120–$180 for an average home and varies by size and frequency. Recurring clients receive discounted rates. Contact us for a free personalized estimate." },
+  { question: "How much does standard house cleaning cost in Romeoville?", answer: "Standard cleaning starts at $160 for a 2-bedroom home and varies by size, bathrooms, and frequency. Recurring clients save 10% to 20% off the one-time rate. Contact us for a free personalized estimate." },
   { question: "Do I need to be home during the cleaning?", answer: "No — many clients provide a key or access code. Our fully insured and background-checked team will take excellent care of your home." },
   { question: "Do you bring your own supplies?", answer: "Yes! We bring all eco-friendly, non-toxic cleaning products and equipment. You don't need to provide anything." },
 ];
