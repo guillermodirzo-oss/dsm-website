@@ -205,7 +205,7 @@ export default function DeepCleaningPage() {
             Deep Cleaning That Gets Inside the Oven.
           </h1>
           <p className="text-lg md:text-xl font-semibold mb-5 opacity-95 max-w-2xl mx-auto">
-            Grout lines, baseboards, ceiling fans, behind the stovetop. Deep cleaning in Romeoville, Plainfield, Naperville, Bolingbrook and the southwest suburbs.
+            Grout lines, baseboards, ceiling fans. Deep cleaning in Romeoville, Plainfield, Naperville, Bolingbrook and the southwest suburbs.
           </p>
 
           {/* Rating. Counts come from lib/realReviews.ts, never hardcoded. */}
@@ -373,8 +373,8 @@ export default function DeepCleaningPage() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="relative aspect-square rounded-xl overflow-hidden shadow-sm">
                   <Image
-                    src="/work-photos/cooktop-grates-deep-cleaning.jpg"
-                    alt="Gas cooktop with degreased burner grates and polished stainless steel after a DSM Cleaning Solutions deep clean"
+                    src="/work-photos/gas-cooktop-grates-closeup-1200.jpg"
+                    alt="Five-burner gas cooktop with clean grates on a marble countertop after a DSM Cleaning Solutions deep clean"
                     fill
                     sizes="(max-width: 1024px) 50vw, 25vw"
                     className="object-cover"
@@ -409,8 +409,8 @@ export default function DeepCleaningPage() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="relative aspect-square rounded-xl overflow-hidden shadow-sm">
                   <Image
-                    src="/work-photos/shower-glass-tiled-closeup-1200.jpg"
-                    alt="Glass-enclosed shower with mosaic tile and clean grout lines after a DSM Cleaning Solutions deep clean"
+                    src="/work-photos/shower-deep-clean-romeoville-il-1200.jpg"
+                    alt="Glass shower door with a streak-free finish and polished chrome showerhead and caddy after a DSM Cleaning Solutions deep clean in Romeoville, IL"
                     fill
                     sizes="(max-width: 1024px) 50vw, 25vw"
                     className="object-cover"
