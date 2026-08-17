@@ -185,7 +185,7 @@ export default function DeepCleaningPage() {
           priority
           sizes="100vw"
           className="object-cover"
-          style={{ objectPosition: "center 30%" }}
+          style={{ objectPosition: "center 68%" }}
         />
         {/* Same two overlays as the homepage hero: a dark gradient for text
             legibility over a busy photo, plus a faint orange tint. */}
