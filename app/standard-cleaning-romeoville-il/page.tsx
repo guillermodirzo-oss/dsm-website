@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
+import { STANDARD_CLEANING_TIERS, formatPrice } from "@/lib/pricing";
 
 export const metadata: Metadata = {
   title: "Standard Cleaning Services Romeoville IL",
@@ -33,7 +34,7 @@ const faqs = [
   {
     question: "How much does standard cleaning cost in Romeoville, IL?",
     answer:
-      "Standard cleaning in Romeoville starts around $120-$180 depending on the size of your home. Recurring clients receive a discounted rate. Contact us for a free estimate tailored to your specific home.",
+      `Standard cleaning in Romeoville starts at ${formatPrice(STANDARD_CLEANING_TIERS[0].price)} for a 2-bedroom home, depending on size. Recurring clients receive a discounted rate. Contact us for a free estimate tailored to your specific home.`,
   },
   {
     question: "Do I need to be home during my standard cleaning in Romeoville?",
@@ -269,7 +270,7 @@ export default function StandardCleaningRomeovillePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading mb-6">How Much Does Standard Cleaning Cost in Romeoville, IL?</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Standard cleaning in Romeoville starts around $120-$180 for most homes, with pricing
+            Standard cleaning in Romeoville starts at {formatPrice(STANDARD_CLEANING_TIERS[0].price)} for most homes, with pricing
             based on the number of bedrooms, bathrooms, and your preferred frequency. Recurring
             clients - especially those booking weekly or biweekly service - receive a discounted
             rate on every visit as a thank-you for their loyalty.

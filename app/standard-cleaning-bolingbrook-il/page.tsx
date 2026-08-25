@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
+import { STANDARD_CLEANING_TIERS, formatPrice } from "@/lib/pricing";
 
 export const metadata: Metadata = {
   title: "House Cleaning Services Bolingbrook IL",
@@ -283,7 +284,7 @@ export default function StandardCleaningBolingbrookPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading mb-6">How Much Does Standard Cleaning Cost in Bolingbrook, IL?</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Standard cleaning in Bolingbrook starts around $120–$180 for an average-sized home, with
+            Standard cleaning in Bolingbrook starts at {formatPrice(STANDARD_CLEANING_TIERS[0].price)} for an average-sized home, with
             pricing based on the number of bedrooms, bathrooms, and your chosen frequency. Recurring
             clients who book weekly or biweekly service receive a discounted rate — the more we visit,
             the more you save.

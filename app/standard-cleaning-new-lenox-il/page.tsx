@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
+import { STANDARD_CLEANING_TIERS, formatPrice } from "@/lib/pricing";
 
 export const metadata: Metadata = {
   title: "Standard Cleaning Services New Lenox IL",
@@ -271,7 +272,7 @@ export default function StandardCleaningNewLenoxPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading mb-6">How Much Does Standard Cleaning Cost in New Lenox, IL?</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Standard cleaning in New Lenox starts around $120 for smaller homes and scales with the
+            Standard cleaning in New Lenox starts at {formatPrice(STANDARD_CLEANING_TIERS[0].price)} for smaller homes and scales with the
             size of your home, the number of rooms, and how frequently you schedule service. Recurring
             clients receive preferred pricing - biweekly and weekly clients pay less per visit than
             one-time bookings.

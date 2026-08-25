@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
+import { STANDARD_CLEANING_TIERS, formatPrice } from "@/lib/pricing";
 
 export const metadata: Metadata = {
   title: "Standard Cleaning Services Homer Glen IL",
@@ -272,10 +273,10 @@ export default function StandardCleaningHomerGlenPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading mb-6">How Much Does Standard Cleaning Cost in Homer Glen, IL?</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Standard cleaning in Homer Glen starts around $135 for smaller homes and scales with the
+            Standard cleaning in Homer Glen starts at {formatPrice(STANDARD_CLEANING_TIERS[0].price)} for smaller homes and scales with the
             size of your home, the number of rooms, and how frequently you schedule service. Homer
             Glen&apos;s larger single-family homes - many of which feature 4+ bedrooms and multiple living
-            areas - typically fall in the $175-$260 per visit range. Recurring clients receive preferred
+            areas - are priced higher based on square footage and bathroom count. Recurring clients receive preferred
             pricing - biweekly and weekly clients pay less per visit than one-time bookings.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
