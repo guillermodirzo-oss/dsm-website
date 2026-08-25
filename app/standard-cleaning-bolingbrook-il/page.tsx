@@ -1,7 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
-import { STANDARD_CLEANING_TIERS, formatPrice } from "@/lib/pricing";
+import { StickyMobileBar } from "@/components/HomepageScrollWidgets";
+import {
+  STANDARD_CLEANING_TIERS,
+  STANDARD_FREQUENCIES,
+  DISCOUNTED_FREQUENCIES,
+  recurringPrice,
+  formatDiscount,
+  formatPrice,
+} from "@/lib/pricing";
 
 export const metadata: Metadata = {
   title: "House Cleaning Services Bolingbrook IL",
@@ -29,22 +37,22 @@ const faqs = [
   {
     question: "Do you bring your own cleaning supplies to Bolingbrook homes?",
     answer:
-      "Yes — we arrive fully equipped with all our eco-friendly, non-toxic cleaning products and equipment. You don't need to supply anything. Our green products are safe for children and pets throughout your Bolingbrook home.",
+      "Yes, we arrive fully equipped with all our eco-friendly, non-toxic cleaning products and equipment. You don't need to supply anything. Our green products are safe for children and pets throughout your Bolingbrook home.",
   },
   {
     question: "Can I customize what gets cleaned each visit?",
     answer:
-      "Absolutely. We follow a detailed standard checklist on every visit, but we're flexible. Just let us know if you have priority areas — like focusing extra attention on a kitchen used for entertaining or a bathroom that gets heavy use — and we'll adjust accordingly.",
+      "Absolutely. We follow a detailed standard checklist on every visit, but we're flexible. Just let us know if you have priority areas, like focusing extra attention on a kitchen used for entertaining or a bathroom that gets heavy use, and we'll adjust accordingly.",
   },
   {
     question: "Are your cleaners background checked in Bolingbrook?",
     answer:
-      "Yes — every member of our cleaning team is background-checked, insured, and bonded. We take the security of your Bolingbrook home seriously, whether you're present during the clean or not.",
+      "Yes, every member of our cleaning team is background-checked, insured, and bonded. We take the security of your Bolingbrook home seriously, whether you're present during the clean or not.",
   },
   {
     question: "What if I need to reschedule my cleaning?",
     answer:
-      "Life happens — we understand. We ask for at least 24 hours' notice to reschedule your Bolingbrook appointment. Just give us a call at (815) 246-2113 or send us a message and we'll get you rebooked at a time that works for you.",
+      "Life happens. We ask for at least 24 hours' notice to reschedule your Bolingbrook appointment. Just give us a call at (815) 246-2113 or send us a message and we'll get you rebooked at a time that works for you.",
   },
 ];
 
@@ -145,12 +153,26 @@ const trustCards = [
   { icon: "🌿", title: "Eco-Friendly", desc: "Non-toxic, biodegradable products safe for your Bolingbrook family." },
   { icon: "🛡️", title: "Fully Insured & Bonded", desc: "Background-checked team. Your home is fully protected." },
   { icon: "✅", title: "48-Hour Guarantee", desc: "We re-clean anything that isn&apos;t right within 48 hours." },
-  { icon: "👨‍👩‍👧", title: "Family Owned", desc: "Local southwest suburbs business — not a national franchise." },
+  { icon: "👨‍👩‍👧", title: "Family Owned", desc: "Local southwest suburbs business, not a national franchise." },
   { icon: "📅", title: "7 Days a Week", desc: "Flexible scheduling to fit your busy Bolingbrook schedule." },
-  { icon: "📍", title: "Serving Bolingbrook", desc: "All neighborhoods — zip codes 60440 & 60490." },
+  { icon: "📍", title: "Serving Bolingbrook", desc: "All neighborhoods, zip codes 60440 & 60490." },
 ];
 
+// Worked example for the recurring block, derived from the tier and
+// frequency data so it cannot drift from the rate card. Same pattern as
+// app/standard-cleaning/page.tsx.
+const RECURRING_EXAMPLE_TIER =
+  STANDARD_CLEANING_TIERS.find((t) => t.beds === "3 bed") ?? STANDARD_CLEANING_TIERS[0];
+const RECURRING_EXAMPLE_FREQUENCY =
+  STANDARD_FREQUENCIES.find((f) => f.popular) ?? STANDARD_FREQUENCIES[1];
+
 export default function StandardCleaningBolingbrookPage() {
+  const recurringExample = {
+    tier: RECURRING_EXAMPLE_TIER,
+    frequency: RECURRING_EXAMPLE_FREQUENCY,
+    price: recurringPrice(RECURRING_EXAMPLE_TIER.price, RECURRING_EXAMPLE_FREQUENCY),
+  };
+
   return (
     <>
       <script
@@ -183,7 +205,7 @@ export default function StandardCleaningBolingbrookPage() {
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               DSM Cleaning Solutions keeps Bolingbrook homes spotless week after week. Whether you
               need a one-time clean or a recurring schedule in Naperville Acres, Pheasant Chase, or
-              anywhere across zip codes 60440 and 60490 — we&apos;re your trusted local cleaning team.
+              anywhere across zip codes 60440 and 60490, we&apos;re your trusted local cleaning team.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg">Get a Free Quote</Link>
@@ -210,20 +232,20 @@ export default function StandardCleaningBolingbrookPage() {
           <h2 className="section-heading mb-6">Reliable Standard House Cleaning in Bolingbrook, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Standard cleaning in Bolingbrook, IL is one of DSM Cleaning Solutions&apos; most popular
-            services — and it&apos;s easy to see why. Bolingbrook families across zip codes 60440 and
+            services, and it&apos;s easy to see why. Bolingbrook families across zip codes 60440 and
             60490 rely on us to keep their homes consistently clean, from the kitchen to the bedrooms.
             Whether you live in a newer home in Americana Estates or an established neighborhood near
             the Promenade Bolingbrook, our team shows up prepared and leaves your home spotless.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            We offer flexible scheduling to match your lifestyle — weekly, biweekly, or monthly plans
+            We offer flexible scheduling to match your lifestyle: weekly, biweekly, or monthly plans
             all available. Our biweekly service is the most popular choice among Bolingbrook families
             because it strikes the perfect balance between frequency and cost. For households with
             young children, pets, or just a very busy schedule, weekly cleaning keeps everything
             under control year-round.
           </p>
           <p className="text-gray-600 leading-relaxed">
-            Every visit follows a detailed, consistent checklist — so you always know exactly what
+            Every visit follows a detailed, consistent checklist, so you always know exactly what
             you&apos;re getting. No guessing, no surprises. Just a reliably clean home, every single time
             we visit your Bolingbrook address.
           </p>
@@ -236,7 +258,7 @@ export default function StandardCleaningBolingbrookPage() {
           <div className="text-center mb-12">
             <h2 className="section-heading">What&apos;s Included in Our Standard Cleaning in Bolingbrook, IL</h2>
             <p className="section-subheading mx-auto">
-              Every room covered on every visit — here&apos;s exactly what our Bolingbrook team cleans.
+              Every room covered on every visit. Here&apos;s exactly what our Bolingbrook team cleans.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -285,10 +307,47 @@ export default function StandardCleaningBolingbrookPage() {
           <h2 className="section-heading mb-6">How Much Does Standard Cleaning Cost in Bolingbrook, IL?</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Standard cleaning in Bolingbrook starts at {formatPrice(STANDARD_CLEANING_TIERS[0].price)} for an average-sized home, with
-            pricing based on the number of bedrooms, bathrooms, and your chosen frequency. Recurring
-            clients who book weekly or biweekly service receive a discounted rate — the more we visit,
-            the more you save.
+            pricing based on the number of bedrooms, bathrooms, and your chosen frequency.
           </p>
+
+          {/* Recurring frequency discounts. Never expires, unlike a seasonal
+              coupon, and it's the highest lifetime-value decision a visitor
+              makes on this page. */}
+          <div className="bg-white rounded-2xl border border-gray-100 p-6 mb-6">
+            <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">
+              Book Recurring and Save
+            </p>
+            <div className="space-y-1.5">
+              {DISCOUNTED_FREQUENCIES.map((freq) => (
+                <div
+                  key={freq.id}
+                  className={`flex items-baseline justify-between gap-3 rounded-lg px-2.5 py-1.5 ${
+                    freq.popular ? "bg-gray-50" : ""
+                  }`}
+                >
+                  <span className="text-sm text-gray-600">
+                    {freq.label}
+                    {freq.popular && (
+                      <span className="ml-2 text-[11px] font-semibold" style={{ color: "#E8622A" }}>
+                        Most popular
+                      </span>
+                    )}
+                  </span>
+                  <span className="text-sm font-bold text-gray-900 whitespace-nowrap flex-shrink-0">
+                    {formatDiscount(freq.discount)} off
+                  </span>
+                </div>
+              ))}
+            </div>
+            <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+              A {recurringExample.tier.beds} / {recurringExample.tier.baths} home is{" "}
+              <span className="font-semibold text-gray-800">{formatPrice(recurringExample.tier.price)}</span>{" "}
+              one-time, or{" "}
+              <span className="font-semibold text-gray-800">{formatPrice(recurringExample.price)}</span>{" "}
+              {recurringExample.frequency.label.toLowerCase()}.
+            </p>
+          </div>
+
           <p className="text-gray-600 mb-8 leading-relaxed">
             We&apos;ll provide a free, no-obligation estimate customized to your Bolingbrook home. Whether
             you&apos;re in a 2-bedroom condo in 60440 or a larger family home in 60490, we&apos;ll give you
@@ -329,7 +388,7 @@ export default function StandardCleaningBolingbrookPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <Link href="/standard-cleaning-plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Standard Cleaning in Plainfield</h3>
-              <p className="text-sm text-gray-600">Serving all of Plainfield — zip codes 60544 &amp; 60585.</p>
+              <p className="text-sm text-gray-600">Serving all of Plainfield, zip codes 60544 &amp; 60585.</p>
             </Link>
             <Link href="/standard-cleaning-naperville-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Standard Cleaning in Naperville</h3>
@@ -354,8 +413,8 @@ export default function StandardCleaningBolingbrookPage() {
             <div className="text-white">
               <h2 className="text-4xl font-bold mb-4">Book Your Standard Cleaning in Bolingbrook Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                Ready for a reliably clean home in Bolingbrook, IL? Get your free estimate today —
-                we serve all of 60440 and 60490 and back every clean with our 48-hour
+                Ready for a reliably clean home in Bolingbrook, IL? Get your free estimate today.
+                We serve all of 60440 and 60490 and back every clean with our 48-hour
                 satisfaction guarantee.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
@@ -369,6 +428,10 @@ export default function StandardCleaningBolingbrookPage() {
           </div>
         </div>
       </section>
+
+      {/* Sticky mobile "Book Now" bar, fades in after 300px scroll. 69% of
+          traffic is mobile. */}
+      <StickyMobileBar bookHref="#contact" />
     </>
   );
 }

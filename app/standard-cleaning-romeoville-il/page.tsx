@@ -1,7 +1,15 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
-import { STANDARD_CLEANING_TIERS, formatPrice } from "@/lib/pricing";
+import { StickyMobileBar } from "@/components/HomepageScrollWidgets";
+import {
+  STANDARD_CLEANING_TIERS,
+  STANDARD_FREQUENCIES,
+  DISCOUNTED_FREQUENCIES,
+  recurringPrice,
+  formatDiscount,
+  formatPrice,
+} from "@/lib/pricing";
 
 export const metadata: Metadata = {
   title: "Standard Cleaning Services Romeoville IL",
@@ -140,7 +148,21 @@ const trustCards = [
   { icon: "", title: "Serving Romeoville", desc: "All neighborhoods in zip code 60446." },
 ];
 
+// Worked example for the recurring block, derived from the tier and
+// frequency data so it cannot drift from the rate card. Same pattern as
+// app/standard-cleaning/page.tsx.
+const RECURRING_EXAMPLE_TIER =
+  STANDARD_CLEANING_TIERS.find((t) => t.beds === "3 bed") ?? STANDARD_CLEANING_TIERS[0];
+const RECURRING_EXAMPLE_FREQUENCY =
+  STANDARD_FREQUENCIES.find((f) => f.popular) ?? STANDARD_FREQUENCIES[1];
+
 export default function StandardCleaningRomeovillePage() {
+  const recurringExample = {
+    tier: RECURRING_EXAMPLE_TIER,
+    frequency: RECURRING_EXAMPLE_FREQUENCY,
+    price: recurringPrice(RECURRING_EXAMPLE_TIER.price, RECURRING_EXAMPLE_FREQUENCY),
+  };
+
   return (
     <>
       <script
@@ -271,13 +293,50 @@ export default function StandardCleaningRomeovillePage() {
           <h2 className="section-heading mb-6">How Much Does Standard Cleaning Cost in Romeoville, IL?</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Standard cleaning in Romeoville starts at {formatPrice(STANDARD_CLEANING_TIERS[0].price)} for most homes, with pricing
-            based on the number of bedrooms, bathrooms, and your preferred frequency. Recurring
-            clients - especially those booking weekly or biweekly service - receive a discounted
-            rate on every visit as a thank-you for their loyalty.
+            based on the number of bedrooms, bathrooms, and your preferred frequency.
           </p>
+
+          {/* Recurring frequency discounts. Never expires, unlike a seasonal
+              coupon, and it's the highest lifetime-value decision a visitor
+              makes on this page. */}
+          <div className="bg-white rounded-2xl border border-gray-100 p-6 mb-6">
+            <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">
+              Book Recurring and Save
+            </p>
+            <div className="space-y-1.5">
+              {DISCOUNTED_FREQUENCIES.map((freq) => (
+                <div
+                  key={freq.id}
+                  className={`flex items-baseline justify-between gap-3 rounded-lg px-2.5 py-1.5 ${
+                    freq.popular ? "bg-gray-50" : ""
+                  }`}
+                >
+                  <span className="text-sm text-gray-600">
+                    {freq.label}
+                    {freq.popular && (
+                      <span className="ml-2 text-[11px] font-semibold" style={{ color: "#E8622A" }}>
+                        Most popular
+                      </span>
+                    )}
+                  </span>
+                  <span className="text-sm font-bold text-gray-900 whitespace-nowrap flex-shrink-0">
+                    {formatDiscount(freq.discount)} off
+                  </span>
+                </div>
+              ))}
+            </div>
+            <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+              A {recurringExample.tier.beds} / {recurringExample.tier.baths} home is{" "}
+              <span className="font-semibold text-gray-800">{formatPrice(recurringExample.tier.price)}</span>{" "}
+              one-time, or{" "}
+              <span className="font-semibold text-gray-800">{formatPrice(recurringExample.price)}</span>{" "}
+              {recurringExample.frequency.label.toLowerCase()}.
+            </p>
+          </div>
+
           <p className="text-gray-600 mb-8 leading-relaxed">
             We provide a free estimate for every new Romeoville client before we schedule anything.
-            No pressure, no contracts required - just a straightforward quote from your local
+            No pressure, no contracts required, just a straightforward quote from your local
             cleaning team.
           </p>
           <Link href="/contact" className="btn-primary">Get My Free Romeoville Quote</Link>
@@ -351,6 +410,10 @@ export default function StandardCleaningRomeovillePage() {
           </div>
         </div>
       </section>
+
+      {/* Sticky mobile "Book Now" bar, fades in after 300px scroll. 69% of
+          traffic is mobile. */}
+      <StickyMobileBar bookHref="#contact" />
     </>
   );
 }
