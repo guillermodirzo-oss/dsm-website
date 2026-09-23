@@ -18,8 +18,9 @@ import {
   type PriceTier,
   type ServiceKey,
 } from "@/lib/pricing";
+import { DEEP_OFFER } from "@/lib/siteConstants";
 
-// Re-render hourly so the SUMMER75 offer expires on its own after
+// Re-render hourly so the FALL75 offer expires on its own after
 // OFFERS.deep.endDate without anyone shipping a change.
 export const revalidate = 3600;
 
@@ -290,7 +291,7 @@ export default function PricingPage() {
                       className="mt-3 text-xs font-bold"
                       style={{ color: "#E8622A" }}
                     >
-                      ${deepOffer.discount} off every deep clean with code {deepOffer.code}, through August 31.
+                      ${deepOffer.discount} off every deep clean with code {deepOffer.code}, through {DEEP_OFFER.endDate}.
                     </p>
                   )}
                 </div>
@@ -357,7 +358,7 @@ export default function PricingPage() {
                       deep and move-out are one-time services and take no
                       frequency discount. Kept deliberately quiet in grey so it
                       reads as information, not as a second promotion competing
-                      with the SUMMER75 offer on the deep cleaning card. */}
+                      with the deep cleaning offer on that card. */}
                   {svc.service === "standard" && (
                     <div className="mt-5 pt-4 border-t border-gray-100">
                       <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">

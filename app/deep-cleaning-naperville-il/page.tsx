@@ -421,7 +421,7 @@ export default function DeepCleaningNapervillePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="text-white">
               <h2 className="text-4xl font-bold mb-3">Book Your Deep Cleaning in Naperville Today</h2>
-              <p className="font-semibold mb-6" style={{ color: "#FFD8BC" }}>★★★★★ Trusted by 42 Naperville-area homeowners</p>
+              <p className="font-semibold mb-6" style={{ color: "#FFD8BC" }}>★★★★★ Trusted by {REVIEW_COUNT} Naperville-area homeowners</p>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Get your free deep cleaning quote for Naperville, IL. We usually respond the same day
                 and every job is backed by our 48-hour satisfaction guarantee.

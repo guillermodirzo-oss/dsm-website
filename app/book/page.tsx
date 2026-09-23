@@ -1,16 +1,21 @@
 import type { Metadata } from "next";
 import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
+import { DEEP_CLEANING_TIERS, formatPrice } from "@/lib/pricing";
+import { DEEP_OFFER } from "@/lib/siteConstants";
 import Image from "next/image";
 
+// The "smallest deep clean" featured on this page is the 2 bed / 1 bath
+// tier, not DEEP_CLEANING_TIERS[0] (a 1-bed tier priced lower). This is a
+// deliberate choice for the entry price shown here, not a bug.
+const ENTRY_TIER = DEEP_CLEANING_TIERS[1];
+
 export const metadata: Metadata = {
-  title: "Book a Cleaning | $75 Off",
-  description:
-    "Book your house cleaning with DSM Cleaning Solutions. Get $75 off plus free oven cleaning this summer. Family-owned, eco-friendly, and fully insured.",
+  title: `Book a Cleaning | $${DEEP_OFFER.discount} Off`,
+  description: `Book your house cleaning with DSM Cleaning Solutions. Get $${DEEP_OFFER.discount} off plus ${DEEP_OFFER.bonus} this ${DEEP_OFFER.season}. Family-owned, eco-friendly, and fully insured.`,
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/book" },
   openGraph: {
-    title: "Book a Cleaning — $75 Off + Free Oven Cleaning | DSM Cleaning Solutions",
-    description:
-      "Limited summer offer: $75 off your deep cleaning + free oven cleaning in Romeoville, Plainfield, Bolingbrook & surrounding suburbs. 5-star rated. Book in 2 minutes.",
+    title: `Book a Cleaning — $${DEEP_OFFER.discount} Off + Free Oven Cleaning | DSM Cleaning Solutions`,
+    description: `Limited ${DEEP_OFFER.season} offer: $${DEEP_OFFER.discount} off your deep cleaning + free oven cleaning in Romeoville, Plainfield, Bolingbrook & surrounding suburbs. 5-star rated. Book in 2 minutes.`,
     url: "https://www.dsmcleaningsolutions.com/book",
     siteName: "DSM Cleaning Solutions",
     images: [
@@ -24,21 +29,20 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Book a Cleaning — $75 Off + Free Oven Cleaning | DSM Cleaning Solutions",
-    description:
-      "Limited summer offer: $75 off your deep cleaning + free oven cleaning in Romeoville, Plainfield & surrounding suburbs.",
+    title: `Book a Cleaning — $${DEEP_OFFER.discount} Off + Free Oven Cleaning | DSM Cleaning Solutions`,
+    description: `Limited ${DEEP_OFFER.season} offer: $${DEEP_OFFER.discount} off your deep cleaning + free oven cleaning in Romeoville, Plainfield & surrounding suburbs.`,
     images: ["/hero-image.png"],
   },
 };
 
 const PHONE = "(815) 246-2113";
 const PHONE_HREF = "tel:+18152462113";
-const COUPON = "SUMMER75";
+const COUPON = DEEP_OFFER.code;
 const ORANGE = "#E8721C";
 const NAVY = "#1B2B5E";
 
 const valueStack = [
-  { item: "Full Deep Cleaning of Your Entire Home", value: "$300+" },
+  { item: "Full Deep Cleaning of Your Entire Home", value: `${formatPrice(ENTRY_TIER.price)}+` },
   { item: "Every Baseboard Scrubbed by Hand", value: "Included" },
   { item: "Grout & Tile Detail in Every Bathroom", value: "Included" },
   { item: "Kitchen Deep Clean: Inside and Out", value: "Included" },
@@ -47,8 +51,8 @@ const valueStack = [
   { item: "Eco-Friendly Products (Safe for Kids & Pets)", value: "Included" },
   { item: "Trained, Background-Checked Cleaners", value: "Included" },
   { item: "48-Hour Re-Clean Guarantee", value: "Included" },
-  { item: "FREE Oven Deep Clean, Summer Bonus", value: "$40 value" },
-  { item: "Summer Discount Code: SUMMER75", value: "− $75 off" },
+  { item: "FREE Oven Deep Clean, Fall Bonus", value: `$${DEEP_OFFER.bonusValue} value` },
+  { item: `Fall Discount Code: ${COUPON}`, value: `− $${DEEP_OFFER.discount} off` },
 ];
 
 const reviews = pickReviews(4, 0);
@@ -64,7 +68,7 @@ const faqs = [
   },
   {
     q: "Is the free oven cleaning really free?",
-    a: "Yes, completely free through August 31. Our oven deep clean is normally a $40 add-on. Book before then and it's included at no charge.",
+    a: `Yes, completely free through ${DEEP_OFFER.endDate}. Our oven deep clean is normally a $${DEEP_OFFER.bonusValue} add-on. Book before then and it's included at no charge.`,
   },
   {
     q: "What if I'm not happy with the clean?",
@@ -85,7 +89,7 @@ export default function BookPage() {
     <>
       {/* ════════════ STICKY TOP BAR ════════════ */}
       <div className="sticky top-0 z-50 text-white py-2.5 px-4 text-center text-sm font-semibold" style={{ backgroundColor: ORANGE }}>
-        🔥 $75 Off + Free Oven Cleaning ($40 value) through August 31 · Use Code&nbsp;
+        🔥 ${DEEP_OFFER.discount} Off + Free Oven Cleaning (${DEEP_OFFER.bonusValue} value) through {DEEP_OFFER.endDate} · Use Code&nbsp;
         <span className="bg-white font-black px-2 py-0.5 rounded tracking-widest" style={{ color: ORANGE }}>
           {COUPON}
         </span>
@@ -114,7 +118,7 @@ export default function BookPage() {
             <span style={{ color: ORANGE }}>Deep Cleaned for $75 Off</span>
           </h1>
           <p className="text-xl sm:text-2xl font-bold mb-3" style={{ color: NAVY }}>
-            Plus free oven cleaning this summer. A $40 value, on us.
+            Plus {DEEP_OFFER.bonus} this {DEEP_OFFER.season}. A ${DEEP_OFFER.bonusValue} value, on us.
           </p>
           <p className="text-gray-500 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
             Family-owned · Fully insured · Eco-friendly products · Serving Romeoville, Plainfield, Bolingbrook, Lockport, Shorewood &amp; Crest Hill
@@ -180,18 +184,18 @@ export default function BookPage() {
       <section className="py-16 px-4" style={{ backgroundColor: NAVY }}>
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-10">
-            <p className="text-xs uppercase tracking-widest font-bold mb-2" style={{ color: "#93afd4" }}>Summer Offer</p>
+            <p className="text-xs uppercase tracking-widest font-bold mb-2" style={{ color: "#93afd4" }}>Fall Offer</p>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-3 tracking-tight">
               Here&apos;s Everything You Get
             </h2>
             <p className="text-base leading-relaxed" style={{ color: "#c7d9ef" }}>
-              Everything included with your first clean this summer.
+              Everything included with your first clean this {DEEP_OFFER.season}.
             </p>
           </div>
 
           <div className="rounded-2xl overflow-hidden border" style={{ borderColor: "rgba(147,175,212,0.2)" }}>
             {valueStack.map((row, i) => {
-              const isBonus = row.item.includes("FREE Oven") || row.item.includes("SUMMER75");
+              const isBonus = row.item.includes("FREE Oven") || row.item.includes(COUPON);
               return (
                 <div
                   key={row.item}
@@ -226,11 +230,11 @@ export default function BookPage() {
             <div className="px-5 py-5 flex items-center justify-between border-t" style={{ borderColor: "rgba(232,114,28,0.3)", backgroundColor: "rgba(232,114,28,0.08)" }}>
               <div>
                 <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "#93afd4" }}>Your Total Value</p>
-                <p className="font-extrabold text-white text-lg">$115+ in savings this summer</p>
+                <p className="font-extrabold text-white text-lg">${DEEP_OFFER.discount + DEEP_OFFER.bonusValue}+ in savings this {DEEP_OFFER.season}</p>
               </div>
               <div className="text-right">
                 <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "#93afd4" }}>You Pay From</p>
-                <p className="font-extrabold text-2xl" style={{ color: ORANGE }}>$225</p>
+                <p className="font-extrabold text-2xl" style={{ color: ORANGE }}>{formatPrice(ENTRY_TIER.price - DEEP_OFFER.discount)}</p>
               </div>
             </div>
           </div>
@@ -254,7 +258,7 @@ export default function BookPage() {
             >
               Lock In My Spot Now →
             </a>
-            <p className="text-xs mt-3" style={{ color: "#93afd4" }}>Offer expires August 31. Spots are limited.</p>
+            <p className="text-xs mt-3" style={{ color: "#93afd4" }}>Offer expires {DEEP_OFFER.endDate}. Spots are limited.</p>
           </div>
         </div>
       </section>
@@ -273,7 +277,7 @@ export default function BookPage() {
               {
                 step: "1",
                 title: "Book Below in 2 Minutes",
-                desc: "Fill out the quick form, pick your date, apply code SUMMER75. That's it. No phone tag, no waiting.",
+                desc: `Fill out the quick form, pick your date, apply code ${COUPON}. That's it. No phone tag, no waiting.`,
               },
               {
                 step: "2",
@@ -419,7 +423,7 @@ export default function BookPage() {
               <span className="font-black tracking-widest px-2 py-0.5 rounded" style={{ backgroundColor: ORANGE, color: "#fff" }}>
                 {COUPON}
               </span>{" "}
-              at checkout · Free oven cleaning added automatically · Offer expires August 31
+              at checkout · Free oven cleaning added automatically · Offer expires {DEEP_OFFER.endDate}
             </p>
           </div>
 

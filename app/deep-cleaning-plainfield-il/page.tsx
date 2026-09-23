@@ -517,7 +517,7 @@ export default function DeepCleaningPlainfieldPage() {
             <div className="text-white">
               <h2 className="text-4xl font-bold mb-3">Book Your Deep Cleaning in Plainfield Today</h2>
               <p className="font-semibold text-white/90 mb-6" style={{ color: "#FFD8BC" }}>
-                ★★★★★ Trusted by 42 Plainfield-area homeowners
+                ★★★★★ Trusted by {REVIEW_COUNT} Plainfield-area homeowners
               </p>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Get your free deep cleaning quote for Plainfield, IL. We usually respond the same day

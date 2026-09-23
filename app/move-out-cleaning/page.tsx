@@ -13,6 +13,7 @@ import {
   formatPrice,
   tierLabel,
 } from "@/lib/pricing";
+import { MOVEOUT_OFFER } from "@/lib/siteConstants";
 
 // Re-render hourly so the MOVE75 offer expires on its own after
 // OFFERS.moveout.endDate without anyone shipping a change. Same pattern as
@@ -294,7 +295,7 @@ export default function MoveOutCleaningPage() {
                 $75 off your move-out clean.
               </a>
               <p className="mt-2 text-sm text-white/70">
-                Use code <span className="font-bold text-white">MOVE75</span> through September 30.
+                Use code <span className="font-bold text-white">MOVE75</span> through {MOVEOUT_OFFER.endDate}.
               </p>
             </div>
           )}
@@ -455,7 +456,7 @@ export default function MoveOutCleaningPage() {
             </h2>
             {offerLive && moveOutOffer && (
               <p className="text-sm font-bold" style={{ color: "#E8622A" }}>
-                ${moveOutOffer.discount} off your move-out clean with code {moveOutOffer.code}, through September 30.
+                ${moveOutOffer.discount} off your move-out clean with code {moveOutOffer.code}, through {MOVEOUT_OFFER.endDate}.
               </p>
             )}
           </div>

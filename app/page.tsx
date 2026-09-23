@@ -5,6 +5,7 @@ import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
 import { pickReviews, reviewAttribution, REVIEW_COUNT, REVIEW_RATING } from "@/lib/realReviews";
 import { ScrollIndicator, StickyMobileBar } from "@/components/HomepageScrollWidgets";
+import { DEEP_OFFER } from "@/lib/siteConstants";
 
 export const metadata: Metadata = {
   title: "House Cleaning Romeoville IL",
@@ -161,10 +162,10 @@ export default function HomePage() {
               className="inline-block rounded-full px-4 py-2 text-sm sm:text-base font-bold text-white shadow-lg hover:brightness-110 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-95 transition-all duration-200"
               style={{ backgroundColor: "#E8622A" }}
             >
-              $75 off your first deep clean, plus free oven cleaning, a $40 value.
+              ${DEEP_OFFER.discount} off your first deep clean, plus {DEEP_OFFER.bonus}, a ${DEEP_OFFER.bonusValue} value.
             </a>
             <p className="text-white/70 text-xs sm:text-sm mt-2">
-              Use code <span className="font-bold text-white">SUMMER75</span> through August 31.
+              Use code <span className="font-bold text-white">{DEEP_OFFER.code}</span> through {DEEP_OFFER.endDate}.
             </p>
           </div>
 

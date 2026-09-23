@@ -3,6 +3,9 @@ import Link from "next/link";
 import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
+import { isOfferActive } from "@/lib/pricing";
+import { MOVEOUT_OFFER } from "@/lib/siteConstants";
+import { MOVE_OUT_PRICING_COPY } from "@/lib/pricingCopy";
 
 export const metadata: Metadata = {
   title: "Move-Out Cleaning Downers Grove IL",
@@ -177,6 +180,8 @@ const trustBadges = [
 const reviews3 = pickReviews(3, 6);
 
 export default function MoveOutCleaningDownersGrovePage() {
+  const offerLive = isOfferActive("moveout");
+
   return (
     <>
       <script
@@ -213,6 +218,20 @@ export default function MoveOutCleaningDownersGrovePage() {
                 60516), including Downtown Downers Grove and the Fairmount area. Your home will be
                 walkthrough-ready, or we come back and re-clean at no charge.
               </p>
+              {offerLive && (
+                <div className="mb-6">
+                  <a
+                    href="#quote-form"
+                    className="inline-block rounded-full px-5 py-2.5 text-sm sm:text-base font-bold text-white shadow-lg hover:brightness-110 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-95 transition-all duration-200"
+                    style={{ backgroundColor: "#E8622A" }}
+                  >
+                    $75 off your move-out cleaning.
+                  </a>
+                  <p className="mt-2 text-sm text-white/70">
+                    Use code <span className="font-bold text-white">{MOVEOUT_OFFER.code}</span> through {MOVEOUT_OFFER.endDate}.
+                  </p>
+                </div>
+              )}
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="#quote-form" className="btn-white btn-lg">Get My Home Walkthrough-Ready</a>
                 <a href="tel:+18152462113" className="btn-outline-white btn-lg">(815) 246-2113</a>
@@ -335,6 +354,23 @@ export default function MoveOutCleaningDownersGrovePage() {
             >
               Get My Home Walkthrough-Ready
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* PRICING */}
+      <section className="py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">How Much Does Move-Out Cleaning Cost in Downers Grove, IL?</h2>
+          <div className="text-gray-600 mb-4 leading-relaxed">{MOVE_OUT_PRICING_COPY}</div>
+          {offerLive && (
+            <p className="text-gray-600 text-sm mb-4">
+              Prices above are before your ${MOVEOUT_OFFER.discount} discount. Apply code {MOVEOUT_OFFER.code} at checkout.
+            </p>
+          )}
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link href="/book" className="inline-flex items-center justify-center font-bold text-white rounded-full px-8 py-4 text-base transition-all hover:opacity-90 active:scale-95 shadow-md" style={{ backgroundColor: "#E8622A" }}>See Your Exact Price</Link>
+            <a href="#quote-form" className="inline-flex items-center justify-center font-bold rounded-full px-8 py-4 text-base transition-all hover:bg-orange-50 active:scale-95 border-2" style={{ borderColor: "#E8622A", color: "#E8622A" }}>Get a Free Quote</a>
           </div>
         </div>
       </section>

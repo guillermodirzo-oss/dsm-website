@@ -2568,7 +2568,7 @@ export const blogPosts: BlogPost[] = [
           name: "How much does move-out cleaning cost in Bolingbrook?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Professional move-out cleaning in Bolingbrook typically ranges from $150 to $250 for most apartments and smaller homes, with larger properties running $250–$350. Call (815) 246-2113 for a free, no-obligation estimate.",
+            text: "Professional move-out cleaning in Bolingbrook starts at $410 for a smaller home and runs to about $585 for a 4 bedroom. Call (815) 246-2113 for a free, no-obligation estimate.",
           },
         },
         {
@@ -2652,7 +2652,7 @@ export const blogPosts: BlogPost[] = [
 <h2>Frequently Asked Questions About Move-Out Cleaning in Bolingbrook</h2>
 
 <h3>How much does move-out cleaning cost in Bolingbrook?</h3>
-<p>Professional move-out cleaning in Bolingbrook typically ranges from $150 to $250 for most apartments and smaller homes, with larger properties running $250–$350. Call us at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> for a free, no-obligation estimate tailored to your home's size and condition.</p>
+<p>Professional move-out cleaning in Bolingbrook starts at $410 for a smaller home and runs to about $585 for a 4 bedroom. Call us at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> for a free, no-obligation estimate tailored to your home's size and condition.</p>
 
 <h3>How far in advance should I book a move-out cleaning?</h3>
 <p>We recommend booking 3–5 days before your move-out date to ensure availability. For month-end moves — the busiest period — booking a full week ahead is ideal. We serve Bolingbrook 7 days a week, including weekends.</p>

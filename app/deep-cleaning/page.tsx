@@ -12,8 +12,9 @@ import {
   formatPrice,
   tierLabel,
 } from "@/lib/pricing";
+import { DEEP_OFFER } from "@/lib/siteConstants";
 
-// Re-render hourly so the SUMMER75 offer expires on its own after
+// Re-render hourly so the FALL75 offer expires on its own after
 // OFFERS.deep.endDate without anyone shipping a change. Same pattern as
 // app/pricing/page.tsx.
 export const revalidate = 3600;
@@ -227,10 +228,10 @@ export default function DeepCleaningPage() {
                 className="inline-block rounded-full px-5 py-2.5 text-sm sm:text-base font-bold text-white shadow-lg hover:brightness-110 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-95 transition-all duration-200"
                 style={{ backgroundColor: "#E8622A" }}
               >
-                $75 off your first deep clean, plus free oven cleaning, a $40 value.
+                ${DEEP_OFFER.discount} off your first deep clean, plus {DEEP_OFFER.bonus}, a ${DEEP_OFFER.bonusValue} value.
               </a>
               <p className="mt-2 text-sm text-white/70">
-                Use code <span className="font-bold text-white">SUMMER75</span> through August 31.
+                Use code <span className="font-bold text-white">{DEEP_OFFER.code}</span> through {DEEP_OFFER.endDate}.
               </p>
             </div>
           )}
@@ -478,7 +479,7 @@ export default function DeepCleaningPage() {
             </h2>
             {offerLive && deepOffer && (
               <p className="text-sm font-bold" style={{ color: "#E8622A" }}>
-                ${deepOffer.discount} off every deep clean with code {deepOffer.code}, through August 31.
+                ${deepOffer.discount} off every deep clean with code {deepOffer.code}, through {DEEP_OFFER.endDate}.
               </p>
             )}
           </div>

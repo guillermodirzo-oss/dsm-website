@@ -129,7 +129,7 @@ export const REAL_REVIEWS: RealReview[] = [
 ];
 
 /** Live Google review count, verified 2026-07-28. */
-export const REVIEW_COUNT = 45;
+export const REVIEW_COUNT = 46;
 
 /** Live Google rating, verified 2026-07-28. */
 export const REVIEW_RATING = "5.0";

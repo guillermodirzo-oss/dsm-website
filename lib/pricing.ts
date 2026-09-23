@@ -10,6 +10,8 @@
  * 2026-07-29. If BookingKoala changes, change it here and nowhere else.
  */
 
+import { DEEP_OFFER, MOVEOUT_OFFER } from "./siteConstants";
+
 export interface PriceTier {
   beds: string; // "1 bed"
   baths: string; // "1 bath"
@@ -36,6 +38,7 @@ export const STANDARD_CLEANING_TIERS: PriceTier[] = [
 export const MOVE_OUT_TIERS: PriceTier[] = [
   { beds: "2 bed", baths: "1 bath", sqft: "1,000-1,499", price: 410 },
   { beds: "3 bed", baths: "2 bath", sqft: "1,500-1,999", price: 490 },
+  { beds: "4 bed", baths: "2.5 bath", sqft: "2,000-2,499", price: 585 },
   { beds: "4 bed", baths: "2.5 bath", sqft: "2,500-2,999", price: 630 },
   { beds: "5 bed", baths: "3 bath", sqft: "3,500-3,999", price: 810 },
 ];
@@ -52,10 +55,13 @@ export interface Offer {
  * Offers keyed by the service they apply to. A service with no key here has
  * no offer, standard cleaning included. Two offers can run concurrently with
  * different codes and end dates, each expiring independently.
+ *
+ * The code, discount and end date all come from DEEP_OFFER/MOVEOUT_OFFER in
+ * lib/siteConstants.ts, so that file is the one place to change either offer.
  */
 export const OFFERS: Partial<Record<ServiceKey, Offer>> = {
-  deep: { code: "SUMMER75", discount: 75, endDate: "2026-08-31" },
-  moveout: { code: "MOVE75", discount: 75, endDate: "2026-09-30" },
+  deep: { code: DEEP_OFFER.code, discount: DEEP_OFFER.discount, endDate: DEEP_OFFER.endDateISO },
+  moveout: { code: MOVEOUT_OFFER.code, discount: MOVEOUT_OFFER.discount, endDate: MOVEOUT_OFFER.endDateISO },
 };
 
 /**
