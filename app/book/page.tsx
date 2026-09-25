@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/book" },
   openGraph: {
     title: `Book a Cleaning — $${DEEP_OFFER.discount} Off + Free Oven Cleaning | DSM Cleaning Solutions`,
-    description: `Limited ${DEEP_OFFER.season} offer: $${DEEP_OFFER.discount} off your deep cleaning + free oven cleaning in Romeoville, Plainfield, Bolingbrook & surrounding suburbs. 5-star rated. Book in 2 minutes.`,
+    description: `Limited ${DEEP_OFFER.season} offer: $${DEEP_OFFER.discount} off your deep cleaning plus free oven cleaning in Romeoville, Plainfield, Naperville, Bolingbrook and the southwest suburbs. 5-star rated. Book in 2 minutes.`,
     url: "https://www.dsmcleaningsolutions.com/book",
     siteName: "DSM Cleaning Solutions",
     images: [
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: `Book a Cleaning — $${DEEP_OFFER.discount} Off + Free Oven Cleaning | DSM Cleaning Solutions`,
-    description: `Limited ${DEEP_OFFER.season} offer: $${DEEP_OFFER.discount} off your deep cleaning + free oven cleaning in Romeoville, Plainfield & surrounding suburbs.`,
+    description: `Limited ${DEEP_OFFER.season} offer: $${DEEP_OFFER.discount} off your deep cleaning plus free oven cleaning in Romeoville, Plainfield, Naperville, Bolingbrook and the southwest suburbs. 5-star rated. Book in 2 minutes.`,
     images: ["/hero-image.png"],
   },
 };
@@ -160,7 +160,7 @@ export default function BookPage() {
             <div className="relative h-52 rounded-lg overflow-hidden">
               <Image
                 src="/work-photos/oven-interior-deep-cleaning.jpg"
-                alt="Oven interior cleaned to bare enamel during a DSM deep clean in Romeoville IL"
+                alt="Oven interior cleaned to bare enamel during a DSM deep clean"
                 fill
                 className="object-cover"
                 sizes="(max-width: 640px) 100vw, 33vw"
@@ -173,7 +173,7 @@ export default function BookPage() {
             <div className="relative h-52 rounded-lg overflow-hidden">
               <Image
                 src="/work-photos/marble-bathroom-deep-cleaning.jpg"
-                alt="Master bath with marble tile, tub and vanity cleaned during a DSM deep clean in Romeoville IL"
+                alt="Master bath with marble tile, tub and vanity cleaned during a DSM deep clean"
                 fill
                 className="object-cover"
                 sizes="(max-width: 640px) 100vw, 33vw"
@@ -186,7 +186,7 @@ export default function BookPage() {
             <div className="relative h-52 rounded-lg overflow-hidden">
               <Image
                 src="/work-photos/hero-kitchen-home.jpg"
-                alt="Kitchen with clean quartz island, stainless appliances and backsplash after a DSM deep clean in Romeoville IL"
+                alt="Kitchen with clean quartz island, stainless appliances and backsplash after a DSM deep clean"
                 fill
                 className="object-cover"
                 sizes="(max-width: 640px) 100vw, 33vw"
@@ -382,7 +382,7 @@ export default function BookPage() {
           <div className="relative mx-auto max-w-md aspect-[4/3] rounded-2xl overflow-hidden mb-8">
             <Image
               src="/work-photos/team-member-vacuuming.jpg"
-              alt="DSM team member with a backpack vacuum cleaning floors during a deep clean in Romeoville IL"
+              alt="DSM team member with a backpack vacuum cleaning floors during a deep clean"
               fill
               className="object-cover"
               sizes="(max-width: 448px) 100vw, 448px"

@@ -161,21 +161,16 @@ const nextConfig = {
         destination: "/move-out-cleaning",
         permanent: true,
       },
+      // Old /move-in-move-out-cleaning-[city]-il URLs go to the matching
+      // /move-out-cleaning-[city]-il page. The city list is explicit, one entry
+      // per move-out page that exists, so no old URL can redirect to a 404.
       {
-        source: "/move-in-move-out-cleaning-plainfield-il",
-        destination: "/move-out-cleaning",
+        source:
+          "/move-in-move-out-cleaning-:city(bolingbrook|burr-ridge|downers-grove|hinsdale|homer-glen|joliet|lemont|lockport|minooka|naperville|new-lenox|oak-brook|plainfield|romeoville|shorewood|westmont)-il",
+        destination: "/move-out-cleaning-:city-il",
         permanent: true,
       },
-      {
-        source: "/move-in-move-out-cleaning-romeoville-il",
-        destination: "/move-out-cleaning",
-        permanent: true,
-      },
-      {
-        source: "/move-in-move-out-cleaning-naperville-il",
-        destination: "/move-out-cleaning",
-        permanent: true,
-      },
+      // Woodridge has no move-out page, so it goes to the hub.
       {
         source: "/move-in-move-out-cleaning-woodridge-il",
         destination: "/move-out-cleaning",
@@ -284,13 +279,6 @@ const nextConfig = {
         permanent: true,
       },
 
-      // Missing move-in/move-out city variant
-      {
-        source: "/move-in-move-out-cleaning-bolingbrook-il",
-        destination: "/move-out-cleaning",
-        permanent: true,
-      },
-
       // Residential / service name variants
       {
         source: "/residential",
@@ -312,6 +300,40 @@ const nextConfig = {
       {
         source: "/deep-cleaning/naperville",
         destination: "/deep-cleaning-naperville-il",
+        permanent: true,
+      },
+
+      // ─── SEARCH CONSOLE 404 CLEANUP ───────────────────────────────────────
+      // Wrong slugs and deleted pages that Google still crawls.
+      {
+        source: "/gift-card",
+        destination: "/gift-cards",
+        permanent: true,
+      },
+      {
+        source: "/terms-conditions",
+        destination: "/terms-and-conditions",
+        permanent: true,
+      },
+      {
+        source: "/blog/move-out-cleaning-services",
+        destination: "/move-out-cleaning",
+        permanent: true,
+      },
+      {
+        source: "/blog/cleaninginfo",
+        destination: "/blog",
+        permanent: true,
+      },
+      {
+        source: "/subcontractor-application",
+        destination: "/contact",
+        permanent: true,
+      },
+      // BookingKoala billing link. Send to the customer portal.
+      {
+        source: "/reauth-card",
+        destination: "https://dsmcleaningsolutions.bookingkoala.com/login",
         permanent: true,
       },
     ];
