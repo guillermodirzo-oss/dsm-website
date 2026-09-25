@@ -4,13 +4,28 @@ import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
 import { pickReviews, reviewAttribution, REVIEW_COUNT, REVIEW_RATING } from "@/lib/realReviews";
-import { ScrollIndicator, StickyMobileBar } from "@/components/HomepageScrollWidgets";
+import { ScrollIndicator } from "@/components/HomepageScrollWidgets";
+import StickyBookBar from "@/components/StickyBookBar";
 import { DEEP_OFFER } from "@/lib/siteConstants";
+import {
+  STANDARD_CLEANING_TIERS,
+  DEEP_CLEANING_TIERS,
+  MOVE_OUT_TIERS,
+  startingPrice,
+  formatPrice,
+} from "@/lib/pricing";
+
+// "From" prices for the hero line and the pricing FAQ, read from the rate card
+// so they match every other page.
+const STANDARD_FROM = formatPrice(startingPrice(STANDARD_CLEANING_TIERS));
+const DEEP_FROM = formatPrice(startingPrice(DEEP_CLEANING_TIERS));
+const MOVEOUT_FROM = formatPrice(startingPrice(MOVE_OUT_TIERS));
 
 export const metadata: Metadata = {
-  title: "House Cleaning Romeoville IL",
-  description:
-    "Professional house cleaning in Romeoville & Plainfield IL. Family-owned, eco-friendly, fully insured. 5-star rated. Free estimates.",
+  // absolute: the root layout's title template would otherwise append the
+  // brand a second time.
+  title: { absolute: `House Cleaning Romeoville & Plainfield IL | ${REVIEW_RATING} Stars | DSM` },
+  description: `Family-owned house cleaning in Romeoville, Plainfield, Naperville and the southwest suburbs. Rated ${REVIEW_RATING} by ${REVIEW_COUNT} neighbors. Deep cleans from ${DEEP_FROM}. Free quotes.`,
   alternates: { canonical: "https://www.dsmcleaningsolutions.com" },
   openGraph: {
     type: "website",
@@ -67,10 +82,10 @@ const services = [
 ];
 
 const faqs = [
-  { question: "How much does house cleaning cost in Romeoville, IL?", answer: "Standard cleaning starts at $160 for a 2-bedroom home. Your price depends on the number of bedrooms and bathrooms and your square footage, and we confirm the exact price with you before anything is booked." },
+  { question: "How much does house cleaning cost in Romeoville, IL?", answer: `Standard cleaning starts at ${STANDARD_FROM} for a 2-bedroom home. Deep cleans start at ${DEEP_FROM} and move-out cleans start at ${MOVEOUT_FROM}. Your price depends on bedrooms, bathrooms and square footage, and we confirm the exact total with you before anything is booked.` },
   { question: "Are you insured and bonded?", answer: "Yes. DSM Cleaning Solutions is fully insured and bonded. You can have complete peace of mind knowing your home and belongings are protected every time we clean." },
   { question: "Do you use eco-friendly cleaning products?", answer: "Absolutely. We use non-toxic, eco-friendly cleaning products that are safe for children, pets, and the environment. Our green cleaning approach delivers a deep clean without harsh chemicals." },
-  { question: "Can I book cleaning online?", answer: "Yes! You can book directly through our online booking page or call us at (815) 246-2113. We respond within 1 business day." },
+  { question: "Can I book cleaning online?", answer: "Yes. You can book online and see real available dates instantly, or call us at (815) 246-2113. We often have same-week availability." },
   { question: "What areas do you serve?", answer: "We primarily serve Romeoville and Plainfield, IL, and extend to Naperville, Bolingbrook, Joliet, Westmont, and the surrounding southwest Chicago suburbs." },
   { question: "What is your satisfaction guarantee?", answer: "Your satisfaction is our top priority. If you're not completely happy with our cleaning, let us know within 48 hours and we'll return to re-clean the area at no additional charge." },
 ];
@@ -106,7 +121,7 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* ─── HERO ─── */}
-      <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
+      <section id="hero" className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
         {/* LCP element. Rendered through next/image with priority so it is
             preloaded and served as AVIF/WebP; as a CSS background it was
             discovered late and downloaded at full size. */}
@@ -169,15 +184,21 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          {/* Two different jobs: book online now (/book), or leave details in
+              the on-page form (#contact). The offer line above also goes to
+              #contact. */}
+          <div className="flex flex-col md:flex-row gap-3 justify-center">
             <Link
-              href="/contact"
+              href="/book"
               className="w-full md:w-auto inline-block font-extrabold text-base text-white text-center py-4 px-9 rounded-full active:scale-95 transition-all duration-200 shadow-2xl"
               style={{ backgroundColor: "#E8721C", boxShadow: "0 8px 30px rgba(232,114,28,0.5)" }}
             >
-              Get a Free Quote →
+              Book Online in 2 Minutes →
             </Link>
-            <a href="tel:+18152462113" className="btn-outline-white btn-lg text-base w-full md:w-auto">
+            <a href="#contact" className="btn-outline-white text-base md:py-4 md:px-9 w-full md:w-auto">
+              Get a Free Quote
+            </a>
+            <a href="tel:+18152462113" className="btn-outline-white text-base md:py-4 md:px-9 w-full md:w-auto">
               📞 (815) 246-2113
             </a>
           </div>
@@ -188,6 +209,11 @@ export default function HomePage() {
               <span key={t} className="font-medium">{t}</span>
             ))}
           </div>
+
+          {/* Price anchor. Numbers come from lib/pricing.ts. */}
+          <p className="mt-4 text-white/70 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
+            House cleaning from {STANDARD_FROM}. Deep cleans from {DEEP_FROM}. Move-out from {MOVEOUT_FROM}. We confirm your exact price before anything is booked.
+          </p>
         </div>
 
         {/* Scroll indicator, clickable, scrolls to #services */}
@@ -303,8 +329,8 @@ export default function HomePage() {
               { src: "/work-photos/oven-interior-deep-cleaning.jpg", alt: "Oven interior cleaned down to bare enamel during a DSM Cleaning Solutions deep clean", caption: "Oven Deep Clean" },
               { src: "/work-photos/marble-bathroom-deep-cleaning.jpg", alt: "Marble tiled bathroom with a scrubbed tub surround and floor tile catching the light after a DSM Cleaning Solutions deep clean", caption: "Bathroom Deep Clean" },
               { src: "/work-photos/empty-room-move-out-cleaning.jpg", alt: "Empty bedroom with fresh vacuum lines in the carpet after a DSM Cleaning Solutions move-out cleaning", caption: "Move-Out Clean" },
-              { src: "/work-photos/closet-move-out-cleaning.jpg", alt: "Empty walk-in closet with bare white shelving and a polished hardwood floor after a DSM Cleaning Solutions move-out cleaning", caption: "Move-Out Clean" },
-              { src: "/work-photos/walk-in-shower-glass-house-cleaning.jpg", alt: "Walk-in shower with streak-free glass doors and a spotless tiled pan after house cleaning by DSM Cleaning Solutions", caption: "Bathroom · House Cleaning" },
+              { src: "/work-photos/closet-move-out-cleaning.jpg", alt: "Empty walk-in closet with white built-in drawers and shelving and a polished hardwood floor after a DSM Cleaning Solutions move-out cleaning", caption: "Move-Out Clean" },
+              { src: "/work-photos/walk-in-shower-glass-house-cleaning.jpg", alt: "Shower with a sliding glass door, tiled walls, built-in bench and a spotless white pan after house cleaning by DSM Cleaning Solutions", caption: "Bathroom · House Cleaning" },
               { src: "/work-photos/google-post-image-cleaning-service-1.jpg", alt: "Full kitchen with dark wood cabinets, granite countertops and stainless appliances after house cleaning by DSM Cleaning Solutions", caption: "Kitchen · House Cleaning" },
             // Static imagery. The lift-and-zoom hover this used to have made
             // every photo look clickable when it goes nowhere, so the
@@ -365,9 +391,9 @@ export default function HomePage() {
               <p className="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">Our Story</p>
               <h2 className="section-heading text-4xl md:text-5xl">A Family Business Built on Trust</h2>
               <p className="text-gray-500 mb-5 leading-relaxed">
-                DSM Cleaning Solutions was born right here in Romeoville, IL (zip code 60446). As a family-owned
-                and operated cleaning company, we understand that inviting someone into your home is a matter of
-                trust, and we take that responsibility seriously.
+                DSM Cleaning Solutions started right here in Romeoville, IL (zip code 60446) back in 2020. As a
+                family-owned and operated cleaning company, we understand that inviting someone into your home is
+                a matter of trust, and we take that responsibility seriously.
               </p>
               <p className="text-gray-500 mb-5 leading-relaxed">
                 We serve families throughout Romeoville, from Lakewood Falls and Windstone to Hidden Lakes and
@@ -382,15 +408,15 @@ export default function HomePage() {
 
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {[
-                  { label: "Years in Business", value: "5+" },
+                  { label: "Serving the Southwest Suburbs", value: "Since 2020" },
                   { label: "Happy Clients", value: "500+" },
                   { label: "Cities Served", value: "10+" },
                   // Replaces an unverifiable "100% Satisfaction Rate" with a
                   // number anyone can check on the Google profile.
                   { label: "Five-Star Reviews", value: String(REVIEW_COUNT) },
                 ].map((stat) => (
-                  <div key={stat.label} className="bg-orange-50 rounded-2xl p-5 text-center border border-orange-100">
-                    <p className="text-3xl font-bold text-brand-green">{stat.value}</p>
+                  <div key={stat.label} className="bg-orange-50 rounded-2xl p-4 sm:p-5 text-center border border-orange-100">
+                    <p className="text-2xl sm:text-3xl font-bold text-brand-green">{stat.value}</p>
                     <p className="text-xs text-gray-400 mt-1 font-medium uppercase tracking-wide">{stat.label}</p>
                   </div>
                 ))}
@@ -406,7 +432,7 @@ export default function HomePage() {
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-orange-100 h-[500px]">
                 <Image
                   src="/work-photos/team-member-vacuuming.jpg"
-                  alt="Spotless shower tile cleaned by DSM Cleaning Solutions in Romeoville IL"
+                  alt="DSM Cleaning Solutions team member with a backpack vacuum cleaning the floors during a house cleaning"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
@@ -419,12 +445,12 @@ export default function HomePage() {
                   <span className="text-yellow-400">★★★★★</span>
                 </div>
                 <p className="font-bold text-gray-900 text-sm">{REVIEW_COUNT} Reviews</p>
-                <p className="text-xs text-gray-400 mt-0.5">5.0 avg rating</p>
+                <p className="text-xs text-gray-400 mt-0.5">{REVIEW_RATING} avg rating</p>
               </Link>
               {/* Floating badge */}
               <div className="absolute -top-4 -right-4 bg-gradient-to-br from-brand-green to-brand-green-dark text-white rounded-2xl p-4 shadow-xl shadow-orange-200">
-                <p className="font-bold text-2xl">5+</p>
-                <p className="text-xs text-white/80 font-medium">Years Serving<br/>Romeoville</p>
+                <p className="font-bold text-xl">Since 2020</p>
+                <p className="text-xs text-white/80 font-medium">Serving<br/>Romeoville</p>
               </div>
             </div>
           </div>
@@ -572,7 +598,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── CONTACT / CTA ─── */}
-      <section id="contact" className="py-20 bg-gradient-to-br from-orange-500 via-orange-500 to-orange-600 relative overflow-hidden">
+      <section id="contact" className="py-20 scroll-mt-20 bg-gradient-to-br from-orange-500 via-orange-500 to-orange-600 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10"
           style={{
             backgroundImage: "radial-gradient(circle at 20% 25%, rgba(255,255,255,0.55), rgba(255,255,255,0) 45%), radial-gradient(circle at 80% 75%, rgba(255,255,255,0.35), rgba(255,255,255,0) 50%), linear-gradient(135deg, rgba(255,255,255,0.18), rgba(0,0,0,0.12))",
@@ -643,8 +669,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Sticky mobile "Book Now" bar, fades in after 300px scroll, hidden on md+ */}
-      <StickyMobileBar />
+      {/* Phone-only bottom bar. Shows once the hero is scrolled past, and hides
+          while the lead form or footer is on screen so it never covers the
+          form's submit button. */}
+      <StickyBookBar heroId="hero" hideWhenVisible={["#contact", "footer"]} />
     </>
   );
 }

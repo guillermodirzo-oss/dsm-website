@@ -51,16 +51,18 @@ export default function Navigation() {
               </button>
               <div className="absolute top-full left-0 mt-2 w-64 bg-white/95 backdrop-blur-xl shadow-2xl rounded-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 overflow-hidden">
                 <div className="p-2">
+                  {/* Order is deliberate: Google draws sitelinks partly from
+                      nav prominence, so the money services come first. */}
                   {[
-                    { label: "Standard Cleaning", href: "/standard-cleaning", icon: "🏠" },
                     { label: "Deep Cleaning", href: "/deep-cleaning", icon: "🧹" },
                     { label: "Move-Out / Move-In", href: "/move-out-cleaning", icon: "📦" },
                     { label: "Recurring Maid Service", href: "/recurring-cleaning", icon: "📅" },
-                    { label: "Eco-Friendly Cleaning", href: "/eco-friendly-cleaning", icon: "🌿" },
-                    { label: "Apartment Cleaning", href: "/apartment-cleaning", icon: "🏢" },
+                    { label: "Standard Cleaning", href: "/standard-cleaning", icon: "🏠" },
+                    { label: "One-Time Cleaning", href: "/one-time-cleaning", icon: "✨" },
                     { label: "Post-Construction", href: "/post-construction-cleaning", icon: "🔨" },
                     { label: "Airbnb / Short-Term Rental", href: "/airbnb-cleaning", icon: "🛏️" },
-                    { label: "One-Time Cleaning", href: "/one-time-cleaning", icon: "✨" },
+                    { label: "Apartment Cleaning", href: "/apartment-cleaning", icon: "🏢" },
+                    { label: "Eco-Friendly Cleaning", href: "/eco-friendly-cleaning", icon: "🌿" },
                   ].map((item) => (
                     <Link key={item.href} href={item.href} className="flex items-center gap-3 px-3 py-2.5 text-sm text-gray-700 hover:bg-brand-green-50 hover:text-brand-green rounded-xl transition-colors">
                       <span>{item.icon}</span>
@@ -142,10 +144,10 @@ export default function Navigation() {
                   <div className="mt-1 ml-3 border-l-2 border-brand-green-100 pl-3 space-y-0.5">
                     {/* Primary services */}
                     {[
-                      { label: "🏠 Standard Cleaning", href: "/standard-cleaning" },
                       { label: "🧹 Deep Cleaning", href: "/deep-cleaning" },
                       { label: "📦 Move-Out / Move-In", href: "/move-out-cleaning" },
                       { label: "📅 Recurring Maid Service", href: "/recurring-cleaning" },
+                      { label: "🏠 Standard Cleaning", href: "/standard-cleaning" },
                     ].map((item) => (
                       <Link key={item.href} href={item.href}
                         onClick={() => { setMenuOpen(false); setMobileServicesOpen(false); }}
@@ -158,11 +160,11 @@ export default function Navigation() {
                     <p className="px-3 pt-2 pb-1 text-xs font-bold text-gray-400 uppercase tracking-widest">More Services</p>
 
                     {[
-                      { label: "🌿 Eco-Friendly Cleaning", href: "/eco-friendly-cleaning" },
-                      { label: "🏢 Apartment Cleaning", href: "/apartment-cleaning" },
+                      { label: "✨ One-Time Cleaning", href: "/one-time-cleaning" },
                       { label: "🔨 Post-Construction", href: "/post-construction-cleaning" },
                       { label: "🛏️ Airbnb / Short-Term Rental", href: "/airbnb-cleaning" },
-                      { label: "✨ One-Time Cleaning", href: "/one-time-cleaning" },
+                      { label: "🏢 Apartment Cleaning", href: "/apartment-cleaning" },
+                      { label: "🌿 Eco-Friendly Cleaning", href: "/eco-friendly-cleaning" },
                     ].map((item) => (
                       <Link key={item.href} href={item.href}
                         onClick={() => { setMenuOpen(false); setMobileServicesOpen(false); }}

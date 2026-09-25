@@ -295,7 +295,7 @@ export default function DeepCleaningWestmontPage() {
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
               </div>
               <h3 className="font-bold text-gray-900 text-base mb-2">Your Home Is Protected</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">Fully insured, bonded, and background-checked. If anything goes wrong you&apos;re covered. In 5 years we&apos;ve never had a claim.</p>
+              <p className="text-gray-600 text-sm leading-relaxed">Fully insured, bonded, and background-checked. If anything goes wrong you&apos;re covered. Since 2020 we&apos;ve never had a claim.</p>
             </div>
             <div className="rounded-xl border border-gray-100 p-6 bg-gray-50 flex flex-col">
               <div className="w-12 h-12 rounded-xl bg-brand-green-50 flex items-center justify-center mb-4 text-brand-green">

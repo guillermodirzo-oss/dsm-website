@@ -268,7 +268,7 @@ export default function DeepCleaningPage() {
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto prose prose-gray">
           <p className="text-gray-700 leading-relaxed mb-4">
-            DSM Cleaning Solutions has been serving homeowners in Romeoville, Plainfield, Bolingbrook, and Naperville for over 5 years. These are our home communities. When you hire us for a deep clean, you get a team that knows the area, cares about the work, and shows up on time.
+            DSM Cleaning Solutions has been serving homeowners in Romeoville, Plainfield, Bolingbrook, and Naperville since 2020. These are our home communities. When you hire us for a deep clean, you get a team that knows the area, cares about the work, and shows up on time.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
             Our deep cleaning is built for homes that need more than a weekly maintenance clean. That means getting inside the oven, scrubbing bathroom grout, cleaning behind the stovetop grates, wiping every baseboard, and dusting ceiling fans in every room.

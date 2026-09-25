@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 };
 
 const stats = [
-  { value: "5+", label: "Years in Business" },
+  { value: "Since 2020", label: "Serving the Southwest Suburbs" },
   { value: "500+", label: "Happy Clients" },
   { value: "12+", label: "Cities Served" },
   { value: "100%", label: "Satisfaction Rate" },
@@ -105,7 +105,7 @@ export default function AboutPage() {
             url: "https://www.dsmcleaningsolutions.com",
             telephone: "+18152462113",
             description: "Family-owned, eco-friendly house cleaning service based in Romeoville, IL. Serving Plainfield, Naperville, Bolingbrook, and surrounding Chicago suburbs.",
-            foundingDate: "2019",
+            foundingDate: "2020",
             address: {
               "@type": "PostalAddress",
               addressLocality: "Romeoville",

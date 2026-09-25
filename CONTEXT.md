@@ -41,7 +41,7 @@ Romeoville, Plainfield, Naperville, Bolingbrook, Joliet — Will County and DuPa
 | `lib/cityData.ts` | Data for city+service combo page template |
 | `lib/blogData.ts` | Blog post entries |
 | `components/CityPageTemplate.tsx` | Shared template for all city/service combo pages |
-| `public/robots.txt` | Crawl rules |
+| `app/robots.ts` | Crawl rules (the only robots source; there is no public/robots.txt) |
 
 ## Form Usage Rules — Critical
 There are TWO lead forms on this site. Never mix them up.

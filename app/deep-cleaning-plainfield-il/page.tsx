@@ -354,7 +354,7 @@ export default function DeepCleaningPlainfieldPage() {
                 </svg>
               </div>
               <h3 className="font-bold text-gray-900 text-base mb-2">Your Home Is Protected</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">Fully insured, bonded, and background-checked. If anything goes wrong you&apos;re covered. In 5 years we&apos;ve never had a claim.</p>
+              <p className="text-gray-600 text-sm leading-relaxed">Fully insured, bonded, and background-checked. If anything goes wrong you&apos;re covered. Since 2020 we&apos;ve never had a claim.</p>
             </div>
 
             {/* Benefit 3 */}
