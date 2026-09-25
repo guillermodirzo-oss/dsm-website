@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
-import { DEEP_CLEANING_TIERS, formatPrice } from "@/lib/pricing";
+import { DEEP_CLEANING_TIERS, formatPrice, startingPrice } from "@/lib/pricing";
 import { DEEP_OFFER } from "@/lib/siteConstants";
 import Image from "next/image";
 
-// The "smallest deep clean" featured on this page is the 2 bed / 1 bath
-// tier, not DEEP_CLEANING_TIERS[0] (a 1-bed tier priced lower). This is a
-// deliberate choice for the entry price shown here, not a bug.
-const ENTRY_TIER = DEEP_CLEANING_TIERS[1];
+// Matches the booking widget's default (1 bed / 1 bath / 1,000-1,499 sq ft),
+// the lowest total a customer can see there before the coupon.
+const ENTRY_PRICE = startingPrice(DEEP_CLEANING_TIERS);
+
+const SERVICE_AREA_LINE =
+  "Serving Romeoville, Plainfield, Naperville, Bolingbrook, Joliet, Westmont, Lockport, Lemont, Homer Glen, Shorewood & nearby suburbs";
 
 export const metadata: Metadata = {
   title: `Book a Cleaning | $${DEEP_OFFER.discount} Off`,
@@ -42,7 +44,7 @@ const ORANGE = "#E8721C";
 const NAVY = "#1B2B5E";
 
 const valueStack = [
-  { item: "Full Deep Cleaning of Your Entire Home", value: `${formatPrice(ENTRY_TIER.price)}+` },
+  { item: "Full Deep Cleaning of Your Entire Home", value: `${formatPrice(ENTRY_PRICE)}+` },
   { item: "Every Baseboard Scrubbed by Hand", value: "Included" },
   { item: "Grout & Tile Detail in Every Bathroom", value: "Included" },
   { item: "Kitchen Deep Clean: Inside and Out", value: "Included" },
@@ -76,19 +78,26 @@ const faqs = [
   },
   {
     q: "How fast can you get me scheduled?",
-    a: "We often have same-week availability in Romeoville, Plainfield, Bolingbrook, Lockport, Shorewood, and Crest Hill. Book below and you'll see real available dates instantly.",
+    a: "We often have same-week availability in Romeoville, Plainfield, Naperville, Bolingbrook, Joliet, Westmont, Lockport, Lemont, Homer Glen, Shorewood and nearby suburbs. Book below and you'll see real available dates instantly.",
   },
   {
     q: "Are your products safe for my kids and pets?",
     a: "Always. We exclusively use eco-friendly, non-toxic products on every clean. Safe for the whole family.",
+  },
+  {
+    q: "Do you serve my area?",
+    a: "We cover Romeoville, Plainfield, Naperville, Bolingbrook, Joliet, Westmont, Lockport, Lemont, Homer Glen, New Lenox, Shorewood, Minooka and the surrounding southwest suburbs. Enter your ZIP in the form below and you'll see real available dates instantly. If we don't cover you, it'll tell you right away.",
   },
 ];
 
 export default function BookPage() {
   return (
     <>
-      {/* ════════════ STICKY TOP BAR ════════════ */}
-      <div className="sticky top-0 z-50 text-white py-2.5 px-4 text-center text-sm font-semibold" style={{ backgroundColor: ORANGE }}>
+      {/* ════════════ PROMO BAR ════════════
+          Not sticky: the site header is already sticky top-0 z-50, and a
+          second sticky bar at the same offset covered the logo and Book Now.
+          The offer repeats down the page, so this one scrolls away. */}
+      <div className="relative text-white py-2.5 px-4 text-center text-sm font-semibold" style={{ backgroundColor: ORANGE }}>
         🔥 ${DEEP_OFFER.discount} Off + Free Oven Cleaning (${DEEP_OFFER.bonusValue} value) through {DEEP_OFFER.endDate} · Use Code&nbsp;
         <span className="bg-white font-black px-2 py-0.5 rounded tracking-widest" style={{ color: ORANGE }}>
           {COUPON}
@@ -121,7 +130,7 @@ export default function BookPage() {
             Plus {DEEP_OFFER.bonus} this {DEEP_OFFER.season}. A ${DEEP_OFFER.bonusValue} value, on us.
           </p>
           <p className="text-gray-500 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-            Family-owned · Fully insured · Eco-friendly products · Serving Romeoville, Plainfield, Bolingbrook, Lockport, Shorewood &amp; Crest Hill
+            Family-owned · Fully insured · Eco-friendly products · {SERVICE_AREA_LINE}
           </p>
 
           {/* Trust bar */}
@@ -147,36 +156,45 @@ export default function BookPage() {
       {/* ════════════ PHOTO STRIP — below hero, before offer ════════════ */}
       <section className="bg-white pb-10 px-4">
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div className="relative h-52 rounded-lg overflow-hidden">
-            <Image
-              src="/work-photos/double-vanity-bathroom-clean-naperville-il.jpg"
-              alt="Double vanity bathroom after professional deep cleaning in Naperville IL"
-              fill
-              className="object-cover"
-              sizes="(max-width: 640px) 100vw, 33vw"
-              loading="lazy"
-            />
-          </div>
-          <div className="relative h-52 rounded-lg overflow-hidden">
-            <Image
-              src="/work-photos/bathtub-shower-deep-clean-plainfield-il.jpg"
-              alt="Bathtub and shower scrubbed clean by DSM Cleaning Solutions in Plainfield IL"
-              fill
-              className="object-cover"
-              sizes="(max-width: 640px) 100vw, 33vw"
-              loading="lazy"
-            />
-          </div>
-          <div className="relative h-52 rounded-lg overflow-hidden">
-            <Image
-              src="/work-photos/living-room-hardwood-floors-plainfield-il.jpg"
-              alt="Living room with hardwood floors cleaned and polished in Plainfield IL"
-              fill
-              className="object-cover"
-              sizes="(max-width: 640px) 100vw, 33vw"
-              loading="lazy"
-            />
-          </div>
+          <figure>
+            <div className="relative h-52 rounded-lg overflow-hidden">
+              <Image
+                src="/work-photos/oven-interior-deep-cleaning.jpg"
+                alt="Oven interior cleaned to bare enamel during a DSM deep clean in Romeoville IL"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, 33vw"
+                loading="lazy"
+              />
+            </div>
+            <figcaption className="mt-2 text-center text-xs text-gray-500">Oven interior</figcaption>
+          </figure>
+          <figure>
+            <div className="relative h-52 rounded-lg overflow-hidden">
+              <Image
+                src="/work-photos/marble-bathroom-deep-cleaning.jpg"
+                alt="Master bath with marble tile, tub and vanity cleaned during a DSM deep clean in Romeoville IL"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, 33vw"
+                loading="lazy"
+              />
+            </div>
+            <figcaption className="mt-2 text-center text-xs text-gray-500">Master bath</figcaption>
+          </figure>
+          <figure>
+            <div className="relative h-52 rounded-lg overflow-hidden">
+              <Image
+                src="/work-photos/hero-kitchen-home.jpg"
+                alt="Kitchen with clean quartz island, stainless appliances and backsplash after a DSM deep clean in Romeoville IL"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, 33vw"
+                loading="lazy"
+              />
+            </div>
+            <figcaption className="mt-2 text-center text-xs text-gray-500">Kitchen</figcaption>
+          </figure>
         </div>
       </section>
 
@@ -234,7 +252,7 @@ export default function BookPage() {
               </div>
               <div className="text-right">
                 <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "#93afd4" }}>You Pay From</p>
-                <p className="font-extrabold text-2xl" style={{ color: ORANGE }}>{formatPrice(ENTRY_TIER.price - DEEP_OFFER.discount)}</p>
+                <p className="font-extrabold text-2xl" style={{ color: ORANGE }}>{formatPrice(ENTRY_PRICE - DEEP_OFFER.discount)}</p>
               </div>
             </div>
           </div>
@@ -345,7 +363,7 @@ export default function BookPage() {
             <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-2 tracking-tight">
               Your Neighbors Already Love Us
             </h2>
-            <p className="text-gray-500 text-sm">{REVIEW_COUNT} five-star reviews · Romeoville, Plainfield, Bolingbrook &amp; surrounding areas</p>
+            <p className="text-gray-500 text-sm">{REVIEW_COUNT} five-star reviews · {SERVICE_AREA_LINE}</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-8">
@@ -360,14 +378,14 @@ export default function BookPage() {
             ))}
           </div>
 
-          {/* Work photo near reviews */}
-          <div className="relative h-64 rounded-2xl overflow-hidden mb-8">
+          {/* Work photo near reviews: a person in frame, 4:3 so nothing crops. */}
+          <div className="relative mx-auto max-w-md aspect-[4/3] rounded-2xl overflow-hidden mb-8">
             <Image
-              src="/work-photos/bedroom-cleaning-service-bolingbrook-il.jpg"
-              alt="Bedroom cleaned and organized by DSM Cleaning Solutions in Bolingbrook IL"
+              src="/work-photos/team-member-vacuuming.jpg"
+              alt="DSM team member with a backpack vacuum cleaning floors during a deep clean in Romeoville IL"
               fill
               className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 1024px"
+              sizes="(max-width: 448px) 100vw, 448px"
               loading="lazy"
             />
           </div>
@@ -407,7 +425,7 @@ export default function BookPage() {
       </section>
 
       {/* ════════════ SECTION 7 — BOOKING FORM ════════════ */}
-      <section id="booking-form" className="py-16 px-4" style={{ backgroundColor: "#f9fafb" }}>
+      <section id="booking-form" className="py-16 px-4 scroll-mt-20" style={{ backgroundColor: "#f9fafb" }}>
         <div className="max-w-4xl mx-auto">
 
           {/* Pre-form urgency banner */}
@@ -433,7 +451,7 @@ export default function BookPage() {
               Book Your Cleaning. Takes Less Than 2 Minutes.
             </h2>
             <p className="text-gray-500 text-sm">
-              Serving Romeoville, Plainfield, Bolingbrook, Lockport, Shorewood &amp; Crest Hill ·{" "}
+              {SERVICE_AREA_LINE} ·{" "}
               <a href={PHONE_HREF} className="font-semibold hover:underline" style={{ color: ORANGE }}>
                 {PHONE}
               </a>
@@ -441,10 +459,17 @@ export default function BookPage() {
           </div>
 
           {/* Star rating social proof above the embed */}
-          <div className="flex flex-wrap items-center justify-center gap-2 mb-8 text-sm">
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-4 text-sm">
             <span style={{ color: ORANGE, fontSize: "1.1rem", letterSpacing: "0.05em" }}>★★★★★</span>
             <span className="font-bold text-gray-900">5.0 · {REVIEW_COUNT} Google Reviews</span>
             <span className="text-gray-500">· Trusted by homeowners across the southwest suburbs</span>
+          </div>
+
+          {/* Widget hints. It won't show dates until a ZIP is entered, and its
+              total is the pre-coupon price. */}
+          <div className="text-center mb-6 space-y-1 text-sm text-gray-500">
+            <p>Enter your ZIP code first. The calendar won&apos;t show dates until you do.</p>
+            <p>The total in the form below shows before your discount. Apply {COUPON} at checkout and ${DEEP_OFFER.discount} comes off.</p>
           </div>
 
           {/* BookingKoala embed — skeleton shown while iframe loads */}
