@@ -3,7 +3,7 @@ import QuoteThankYouClient from "./QuoteThankYouClient";
 
 export const metadata: Metadata = {
   title: "We Got Your Request!",
-  description: "Thanks for reaching out. DSM Cleaning Solutions will reply within 1 business day with your free estimate.",
+  description: "Thanks for reaching out. DSM Cleaning Solutions will get back to you fast with your free estimate.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/quote-thank-you" },
   robots: {
     index: false,
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "We Got Your Request! | DSM Cleaning Solutions",
-    description: "Thanks for reaching out. DSM Cleaning Solutions will reply within 1 business day with your free estimate.",
+    description: "Thanks for reaching out. DSM Cleaning Solutions will get back to you fast with your free estimate.",
     siteName: "DSM Cleaning Solutions",
     images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions - Quote Request Received" }],
   },

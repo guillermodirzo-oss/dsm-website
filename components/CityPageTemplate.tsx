@@ -412,7 +412,7 @@ export default function CityPageTemplate({ city }: { city: CityData }) {
                 Book House Cleaning in {city.name}, IL Today
               </h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                Ready for a spotlessly clean home in {city.name}? Whether you need a one-time deep clean, a recurring maid service, or a move-out cleaning, DSM Cleaning Solutions is just a call away. We respond within 1 business day, offer flexible scheduling, and back every clean with our 48-hour satisfaction guarantee. Proudly serving all of {city.name}, IL — zip codes {city.zips.join(" & ")}.
+                Ready for a spotlessly clean home in {city.name}? Whether you need a one-time deep clean, a recurring maid service, or a move-out cleaning, DSM Cleaning Solutions is just a call away. We&apos;ll get back to you fast, offer flexible scheduling with same-week appointments usually available, and back every clean with our 48-hour satisfaction guarantee. Proudly serving all of {city.name}, IL, zip codes {city.zips.join(" & ")}.
               </p>
               <a
                 href="tel:+18152462113"

@@ -408,7 +408,7 @@ export default function ServiceAreasPage() {
           <h2 className="text-4xl font-bold text-white mb-4">Ready to Book in Your City?</h2>
           <p className="text-white/90 text-lg mb-8 leading-relaxed">
             Family-owned, eco-friendly, fully insured — and based right here in the southwest Chicago suburbs.
-            We respond within 1 business day with your free estimate.
+            We&apos;ll get back to you fast with your free estimate. Same-week appointments are usually available.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { submitToHubspot } from "@/lib/submitToHubspot";
+import { SERVICE_OPTIONS } from "@/lib/serviceOptions";
 
 type Step1 = {
   firstname: string;
@@ -16,12 +17,6 @@ type Step2 = {
   bathrooms: string;
   square_footage: string;
 };
-
-const SERVICE_OPTIONS = [
-  "Standard Cleaning",
-  "Deep Cleaning",
-  "Move-In / Move-Out Cleaning",
-];
 
 const BEDROOM_OPTIONS = ["1", "2", "3", "4", "5", "6+"];
 
@@ -69,6 +64,9 @@ export default function LeadForm({
   });
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState(false);
+  // Set synchronously, unlike `submitting` state, so a second click in the same
+  // tick returns before it can send a second request.
+  const inFlight = useRef(false);
 
   function handleStep1Change(e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) {
     setStep1((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -92,6 +90,8 @@ export default function LeadForm({
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    if (inFlight.current) return;
+    inFlight.current = true;
     setSubmitting(true);
     setError(false);
     try {
@@ -105,10 +105,12 @@ export default function LeadForm({
         bathrooms: step2.bathrooms,
         square_footage: step2.square_footage,
       });
+      // Stay locked on success. The page is navigating away, and unlocking
+      // here would let a late second click send the lead again.
       router.push("/quote-thank-you");
     } catch {
       setError(true);
-    } finally {
+      inFlight.current = false;
       setSubmitting(false);
     }
   }
@@ -262,7 +264,7 @@ export default function LeadForm({
 
           {error && (
             <p className="mt-4 text-sm text-red-600 text-center">
-              Something went wrong. Please call us at{" "}
+              Something went wrong on our end. Please try again, or call us at{" "}
               <a href="tel:+18152462113" className="font-semibold underline">(815) 246-2113</a>.
             </p>
           )}
@@ -271,7 +273,8 @@ export default function LeadForm({
             <button
               type="button"
               onClick={() => setStep(1)}
-              className="flex-shrink-0 font-semibold text-gray-600 rounded-full py-3.5 px-5 text-sm border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all duration-200"
+              disabled={submitting}
+              className="flex-shrink-0 font-semibold text-gray-600 rounded-full py-3.5 px-5 text-sm border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
             >
               Back
             </button>
@@ -281,7 +284,7 @@ export default function LeadForm({
               className="flex-1 font-bold text-white rounded-full py-3.5 px-6 text-base transition-all duration-200 hover:opacity-90 active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed"
               style={{ backgroundColor: "#E8721C", boxShadow: "0 4px 15px rgba(232,114,28,0.35)" }}
             >
-              {submitting ? "Sending…" : "Get My Free Quote →"}
+              {submitting ? "Sending..." : "Get My Free Quote →"}
             </button>
           </div>
         </form>

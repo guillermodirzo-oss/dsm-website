@@ -120,7 +120,7 @@ export default function QuoteThankYouClient() {
               We Got Your Request!
             </h1>
             <p className="text-gray-500 text-base leading-relaxed mb-10">
-              Thanks for reaching out to DSM Cleaning Solutions. We will get back to you within 1 business day with your free estimate.
+              Thanks for reaching out to DSM Cleaning Solutions. We&apos;ll get back to you fast with your free estimate. Same-week appointments are usually available.
             </p>
 
             {/* What happens next */}
@@ -130,7 +130,7 @@ export default function QuoteThankYouClient() {
                 {[
                   { step: "1", text: "Our team reviews your cleaning request" },
                   { step: "2", text: "We prepare your free custom estimate" },
-                  { step: "3", text: "We reach out within 1 business day to confirm details" },
+                  { step: "3", text: "We reach out to confirm details and find a day that works for you." },
                 ].map(({ step, text }) => (
                   <div key={step} className="flex items-start gap-4">
                     <div className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-green flex items-center justify-center text-white text-sm font-bold">

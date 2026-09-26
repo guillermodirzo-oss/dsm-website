@@ -94,7 +94,7 @@ export default function ThankYouClient() {
               <h2 className="text-lg font-bold text-gray-900 mb-5 text-center">What Happens Next?</h2>
               <div className="space-y-4">
                 {[
-                  { step: "1", text: "You will receive a confirmation email within 1 business day" },
+                  { step: "1", text: "You'll get a confirmation email from us" },
                   { step: "2", text: "Our team will reach out to confirm your appointment time" },
                   { step: "3", text: "Sit back and relax — we will handle the rest!" },
                 ].map(({ step, text }) => (

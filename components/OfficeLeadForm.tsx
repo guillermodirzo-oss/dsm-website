@@ -157,7 +157,7 @@ export default function OfficeLeadForm() {
         </div>
         <h3 className="text-xl font-bold text-gray-900 mb-2">You&apos;re all set!</h3>
         <p className="text-gray-600 text-sm max-w-xs">
-          Thank you! We&apos;ll contact you within 24 hours to schedule a walkthrough of your space.
+          Thank you! We&apos;ll get back to you fast to schedule a walkthrough of your space. Same-week visits are usually available.
         </p>
       </div>
     );

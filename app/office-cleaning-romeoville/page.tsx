@@ -78,7 +78,7 @@ const jsonLd = {
         name: "How do I get a quote for office cleaning in Romeoville?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Fill out the form on this page or call us at (815) 246-2113. We'll respond within 24 hours and schedule a free walkthrough of your Romeoville office space.",
+          text: "Fill out the form on this page or call us at (815) 246-2113. We'll get back to you fast and schedule a free walkthrough of your Romeoville office space. Same-week visits are usually available.",
         },
       },
     ],
@@ -129,7 +129,7 @@ export default function OfficeCleaningRomeovillePage() {
             </div>
             <div className="bg-white rounded-3xl shadow-2xl p-6 md:p-8">
               <h2 className="text-xl font-bold text-gray-900 mb-1">Free Romeoville Office Cleaning Quote</h2>
-              <p className="text-gray-500 text-sm mb-5">We&apos;ll contact you within 24 hours to schedule a free walkthrough.</p>
+              <p className="text-gray-500 text-sm mb-5">We&apos;ll get back to you fast to schedule a free walkthrough. Same-week visits are usually available.</p>
               <OfficeLeadForm />
             </div>
           </div>

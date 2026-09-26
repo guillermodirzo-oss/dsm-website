@@ -130,7 +130,7 @@ export default function OfficeCleaningPage() {
             </div>
             <div className="bg-white rounded-3xl shadow-2xl p-6 md:p-8">
               <h2 className="text-xl font-bold text-gray-900 mb-1">Request a Free Office Cleaning Quote</h2>
-              <p className="text-gray-500 text-sm mb-5">We&apos;ll contact you within 24 hours to schedule a walkthrough.</p>
+              <p className="text-gray-500 text-sm mb-5">We&apos;ll get back to you fast to schedule a walkthrough. Same-week visits are usually available.</p>
               <OfficeLeadForm />
             </div>
           </div>

@@ -78,7 +78,7 @@ const jsonLd = {
         name: "How do I get a free office cleaning quote in Plainfield?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Fill out the form on this page or call (815) 246-2113. We'll be in touch within 24 hours to schedule a free walkthrough of your Plainfield office.",
+          text: "Fill out the form on this page or call (815) 246-2113. We'll get back to you fast to schedule a free walkthrough of your Plainfield office. Same-week visits are usually available.",
         },
       },
     ],
@@ -129,7 +129,7 @@ export default function OfficeCleaningPlainfieldPage() {
             </div>
             <div className="bg-white rounded-3xl shadow-2xl p-6 md:p-8">
               <h2 className="text-xl font-bold text-gray-900 mb-1">Free Plainfield Office Cleaning Quote</h2>
-              <p className="text-gray-500 text-sm mb-5">We&apos;ll contact you within 24 hours to schedule a free walkthrough.</p>
+              <p className="text-gray-500 text-sm mb-5">We&apos;ll get back to you fast to schedule a free walkthrough. Same-week visits are usually available.</p>
               <OfficeLeadForm />
             </div>
           </div>

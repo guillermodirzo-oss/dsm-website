@@ -5,12 +5,12 @@ import LeadForm from "@/components/LeadForm";
 export const metadata: Metadata = {
   title: "Contact Us | Free Cleaning Estimate",
   description:
-    "Contact DSM Cleaning Solutions for a free house cleaning estimate in Plainfield, Romeoville, Naperville & Bolingbrook IL. We respond within 1 business day.",
+    "Contact DSM Cleaning Solutions for a free house cleaning estimate in Plainfield, Romeoville, Naperville & Bolingbrook IL. Same-week availability.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/contact" },
   openGraph: {
     title: "Contact DSM Cleaning Solutions | Free Estimate",
     description:
-      "Contact DSM Cleaning Solutions for a free house cleaning estimate in Plainfield, Romeoville, Naperville & Bolingbrook IL. We respond within 1 business day.",
+      "Contact DSM Cleaning Solutions for a free house cleaning estimate in Plainfield, Romeoville, Naperville & Bolingbrook IL. Same-week availability.",
     url: "https://www.dsmcleaningsolutions.com/contact",
     siteName: "DSM Cleaning Solutions",
     images: [
@@ -40,7 +40,7 @@ const faqSchema = {
       name: "How quickly do you respond to inquiries?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We respond to all inquiries within 1 business day. For faster service, call us directly at (815) 246-2113 — we answer 7 days a week.",
+        text: "We'll get back to you fast, and same-week appointments are usually available. For the quickest answer, call us directly at (815) 246-2113. We answer 7 days a week.",
       },
     },
     {
@@ -117,7 +117,7 @@ const faqs = [
   {
     question: "How quickly do you respond to inquiries?",
     answer:
-      "We respond to all inquiries within 1 business day. For faster service, call us directly at (815) 246-2113 — we answer 7 days a week.",
+      "We'll get back to you fast, and same-week appointments are usually available. For the quickest answer, call us directly at (815) 246-2113. We answer 7 days a week.",
   },
   {
     question: "Do you offer free estimates?",
@@ -236,8 +236,8 @@ export default function ContactPage() {
             <div>
               <h2 className="section-heading mb-4">Request a Free Estimate</h2>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Fill out the form and we&apos;ll get back to you within 1 business day with a free,
-                no-obligation quote. Prefer to talk now? Call us at{" "}
+                Fill out the form and we&apos;ll get back to you fast with a free,
+                no-obligation quote. Same-week appointments are usually available. Prefer to talk now? Call us at{" "}
                 <a href="tel:+18152462113" className="text-brand-green font-semibold hover:underline">
                   (815) 246-2113
                 </a>{" "}

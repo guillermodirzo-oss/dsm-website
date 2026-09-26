@@ -402,7 +402,7 @@ export default function StandardCleaningWestmontPage() {
               <h2 className="text-4xl font-bold mb-4">Book Your Standard Cleaning in Westmont Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Ready for a consistently clean Westmont home? Get your free standard cleaning quote  - 
-                we respond within 1 business day and back every job with our 48-hour satisfaction guarantee.
+                we&apos;ll get back to you fast, same-week appointments are usually available, and every job is backed by our 48-hour satisfaction guarantee.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
                  (815) 246-2113

@@ -522,7 +522,7 @@ export default function PlainfieldPage() {
             <div className="text-white">
               <h2 className="text-4xl font-bold mb-4">Book House Cleaning in Plainfield, IL Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                Ready for a spotlessly clean home in Plainfield, IL? Whether you need a one-time deep clean in Settlers Ridge, recurring maid service in Grande Park, or a move-out cleaning in Lakewood Falls, DSM Cleaning Solutions is just a call away. We respond within 1 business day and back every clean with our 48-hour satisfaction guarantee. Serving all of Plainfield — zip codes 60544 &amp; 60585.
+                Ready for a spotlessly clean home in Plainfield, IL? Whether you need a one-time deep clean in Settlers Ridge, recurring maid service in Grande Park, or a move-out cleaning in Lakewood Falls, DSM Cleaning Solutions is just a call away. We&apos;ll get back to you fast, and same-week appointments are usually available. Every clean is backed by our 48-hour satisfaction guarantee. Serving all of Plainfield, zip codes 60544 &amp; 60585.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-brand-green-50 transition-colors mb-6">
                 📞 (815) 246-2113

@@ -124,7 +124,7 @@ export default function CommercialCleaningPage() {
             </div>
             <div className="bg-white rounded-3xl shadow-2xl p-6 md:p-8">
               <h2 className="text-xl font-bold text-gray-900 mb-1">Get a Free Commercial Cleaning Quote</h2>
-              <p className="text-gray-500 text-sm mb-5">We&apos;ll respond within 24 hours and schedule a free on-site walkthrough.</p>
+              <p className="text-gray-500 text-sm mb-5">We&apos;ll get back to you fast and schedule a free on-site walkthrough. Same-week visits are usually available.</p>
               <OfficeLeadForm />
             </div>
           </div>

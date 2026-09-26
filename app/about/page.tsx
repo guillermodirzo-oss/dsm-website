@@ -364,7 +364,7 @@ export default function AboutPage() {
             Ready to Experience the DSM Difference?
           </h2>
           <p className="text-white/80 text-lg mb-8 max-w-xl mx-auto leading-relaxed">
-            Free estimates, no commitment required. We respond within 1 business day.
+            Free estimates, no commitment required. We&apos;ll get back to you fast, and same-week appointments are usually available.
           </p>
 
           <a
