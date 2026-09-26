@@ -8,7 +8,7 @@ export const SERVICE_OPTIONS = [
   "Standard Cleaning",
   "Deep Cleaning",
   "Move-In / Move-Out Cleaning",
-  "Recurring Maid Service",
+  "Recurring Cleaning",
 ] as const;
 
 export type ServiceOption = (typeof SERVICE_OPTIONS)[number];

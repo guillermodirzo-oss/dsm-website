@@ -3175,7 +3175,7 @@ export const blogPosts: BlogPost[] = [
           name: "How quickly can you get to my Bolingbrook home?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "We typically have availability within 3–5 business days for Bolingbrook customers, and often sooner. For month-end move-out cleans during peak season (May–August), booking 7–10 days in advance is recommended. Call (815) 246-2113 to check current availability.",
+            text: "Most Bolingbrook homes get booked the same week. Busy seasons like spring and move-out season can fill up a little further out, so it helps to reach out early. Call (815) 246-2113 to check current availability.",
           },
         },
       ],
@@ -3232,7 +3232,7 @@ export const blogPosts: BlogPost[] = [
 <p>You can set up weekly, biweekly, or monthly recurring cleaning when you <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> or call us at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a>. Most Bolingbrook clients start with a one-time deep clean and then transition into a biweekly plan — the most popular option for maintaining results. Recurring clients receive a discounted rate on every visit compared to one-time pricing.</p>
 
 <h3>How quickly can you get to my Bolingbrook home?</h3>
-<p>We typically have availability within 3–5 business days for Bolingbrook customers, and often sooner depending on the week. For month-end move-out cleans during peak season (May through August), booking 7–10 days in advance is recommended. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> to check current availability.</p>
+<p>Most Bolingbrook homes get booked the same week. Busy seasons like spring and move-out season can fill up a little further out, so it helps to reach out early. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> to check current availability.</p>
 
 <h3>Ready for a Professional Clean in Bolingbrook?</h3>
 <p>DSM Cleaning Solutions serves Bolingbrook and the surrounding southwest Chicago suburbs. Get a free estimate today — no obligation required. <a href="/contact" class="text-brand-green font-semibold hover:underline">Get My Free Quote</a> or call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a>.</p>`,

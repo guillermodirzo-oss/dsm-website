@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { submitToHubspot } from "@/lib/submitToHubspot";
-import { SERVICE_OPTIONS } from "@/lib/serviceOptions";
+import { SERVICE_OPTIONS, type ServiceOption } from "@/lib/serviceOptions";
+import { useInFlight, STALLED_REQUEST_MS } from "@/lib/useInFlight";
 
 type Step1 = {
   firstname: string;
@@ -39,7 +40,7 @@ export default function LeadForm({
   defaultService,
   step1Label = "Your info",
 }: {
-  defaultService?: string;
+  defaultService?: ServiceOption;
   step1Label?: string;
 }) {
   const router = useRouter();
@@ -62,11 +63,11 @@ export default function LeadForm({
     bathrooms: "",
     square_footage: "",
   });
-  const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState(false);
-  // Set synchronously, unlike `submitting` state, so a second click in the same
-  // tick returns before it can send a second request.
-  const inFlight = useRef(false);
+  // One lock per button. See lib/useInFlight.ts.
+  const nextLock = useInFlight();
+  const submitLock = useInFlight();
+  const submitting = submitLock.pending;
 
   function handleStep1Change(e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) {
     setStep1((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -78,21 +79,25 @@ export default function LeadForm({
 
   function handleNext(e: React.FormEvent) {
     e.preventDefault();
-    submitToHubspot({
-      firstname: step1.firstname,
-      phone: step1.phone,
-      mobilephone: step1.phone,
-      email: step1.email,
-      service_type: step1.service_type,
-    }).catch(() => {});
+    // The partial lead goes out once per in-flight window. A repeat click still
+    // advances, it just doesn't send the same lead again.
+    if (nextLock.begin(STALLED_REQUEST_MS)) {
+      submitToHubspot({
+        firstname: step1.firstname,
+        phone: step1.phone,
+        mobilephone: step1.phone,
+        email: step1.email,
+        service_type: step1.service_type,
+      })
+        .catch(() => {})
+        .finally(nextLock.end);
+    }
     setStep(2);
   }
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (inFlight.current) return;
-    inFlight.current = true;
-    setSubmitting(true);
+    if (!submitLock.begin()) return;
     setError(false);
     try {
       await submitToHubspot({
@@ -110,8 +115,7 @@ export default function LeadForm({
       router.push("/quote-thank-you");
     } catch {
       setError(true);
-      inFlight.current = false;
-      setSubmitting(false);
+      submitLock.end();
     }
   }
 
@@ -203,10 +207,11 @@ export default function LeadForm({
 
           <button
             type="submit"
-            className="mt-4 w-full font-bold text-white rounded-full py-3.5 px-6 text-base transition-all duration-200 hover:opacity-90 active:scale-95"
+            disabled={nextLock.pending}
+            className="mt-4 w-full font-bold text-white rounded-full py-3.5 px-6 text-base transition-all duration-200 hover:opacity-90 active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed"
             style={{ backgroundColor: "#E8721C", boxShadow: "0 4px 15px rgba(232,114,28,0.35)" }}
           >
-            Next →
+            {nextLock.pending ? "Sending..." : "Next →"}
           </button>
         </form>
       ) : (

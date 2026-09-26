@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { submitToHubspot } from "@/lib/submitToHubspot";
+import { useInFlight, STALLED_REQUEST_MS } from "@/lib/useInFlight";
 
 const BEDROOM_OPTIONS = ["1", "2", "3", "4", "5", "6+"];
 const BATHROOM_OPTIONS = ["1", "1.5", "2", "2.5", "3", "3.5", "4", "4.5", "5+"];
@@ -32,24 +33,33 @@ export default function CityDeepCleanForm() {
   const [bedrooms, setBedrooms] = useState("");
   const [bathrooms, setBathrooms] = useState("");
   const [sqft, setSqft] = useState("");
-  const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState(false);
+  // One lock per button. See lib/useInFlight.ts.
+  const nextLock = useInFlight();
+  const submitLock = useInFlight();
+  const submitting = submitLock.pending;
 
   function handleNext(e: React.FormEvent) {
     e.preventDefault();
-    submitToHubspot({
-      firstname,
-      phone,
-      mobilephone: phone,
-      email,
-      service_type: "Deep Cleaning",
-    }).catch(() => {});
+    // The partial lead goes out once per in-flight window. A repeat click still
+    // advances, it just doesn't send the same lead again.
+    if (nextLock.begin(STALLED_REQUEST_MS)) {
+      submitToHubspot({
+        firstname,
+        phone,
+        mobilephone: phone,
+        email,
+        service_type: "Deep Cleaning",
+      })
+        .catch(() => {})
+        .finally(nextLock.end);
+    }
     setStep(2);
   }
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setSubmitting(true);
+    if (!submitLock.begin()) return;
     setError(false);
     try {
       await submitToHubspot({
@@ -62,11 +72,12 @@ export default function CityDeepCleanForm() {
         bathrooms,
         square_footage: sqft,
       });
+      // Stay locked on success. The page is navigating away, and unlocking
+      // here would let a late second click send the lead again.
       router.push("/quote-thank-you");
     } catch {
       setError(true);
-    } finally {
-      setSubmitting(false);
+      submitLock.end();
     }
   }
 
@@ -140,10 +151,11 @@ export default function CityDeepCleanForm() {
           </div>
           <button
             type="submit"
-            className="mt-6 w-full font-bold text-white rounded-full py-3.5 px-6 text-base transition-all duration-200 hover:opacity-90 active:scale-95"
+            disabled={nextLock.pending}
+            className="mt-6 w-full font-bold text-white rounded-full py-3.5 px-6 text-base transition-all duration-200 hover:opacity-90 active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed"
             style={{ backgroundColor: "#E8721C", boxShadow: "0 4px 15px rgba(232,114,28,0.35)" }}
           >
-            Get My Free Quote →
+            {nextLock.pending ? "Sending..." : "Get My Free Quote →"}
           </button>
         </form>
       ) : (
@@ -198,7 +210,7 @@ export default function CityDeepCleanForm() {
 
           {error && (
             <p className="mt-4 text-sm text-red-600 text-center">
-              Something went wrong. Please call us at{" "}
+              Something went wrong on our end. Please try again, or call us at{" "}
               <a href="tel:+18152462113" className="font-semibold underline">(815) 246-2113</a>.
             </p>
           )}
@@ -207,7 +219,8 @@ export default function CityDeepCleanForm() {
             <button
               type="button"
               onClick={() => setStep(1)}
-              className="flex-shrink-0 font-semibold text-gray-600 rounded-full py-3.5 px-5 text-sm border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all duration-200"
+              disabled={submitting}
+              className="flex-shrink-0 font-semibold text-gray-600 rounded-full py-3.5 px-5 text-sm border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
             >
               ← Back
             </button>
@@ -217,7 +230,7 @@ export default function CityDeepCleanForm() {
               className="flex-1 font-bold text-white rounded-full py-3.5 px-6 text-base transition-all duration-200 hover:opacity-90 active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed"
               style={{ backgroundColor: "#E8721C", boxShadow: "0 4px 15px rgba(232,114,28,0.35)" }}
             >
-              {submitting ? "Sending…" : "Get My Free Quote →"}
+              {submitting ? "Sending..." : "Get My Free Quote →"}
             </button>
           </div>
         </form>

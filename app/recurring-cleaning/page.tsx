@@ -467,7 +467,7 @@ export default function RecurringCleaningPage() {
               <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Flexible plans</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
-              <LeadForm />
+              <LeadForm defaultService="Recurring Cleaning" />
             </div>
           </div>
         </div>
