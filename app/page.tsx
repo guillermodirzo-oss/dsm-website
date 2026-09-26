@@ -3,10 +3,10 @@ import Link from "next/link";
 import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
-import { pickReviews, reviewAttribution, REVIEW_COUNT, REVIEW_RATING } from "@/lib/realReviews";
+import { pickReviews, reviewAttribution } from "@/lib/realReviews";
 import { ScrollIndicator } from "@/components/HomepageScrollWidgets";
 import StickyBookBar from "@/components/StickyBookBar";
-import { DEEP_OFFER } from "@/lib/siteConstants";
+import { DEEP_OFFER, REVIEW_COUNT, REVIEW_RATING } from "@/lib/siteConstants";
 import {
   STANDARD_CLEANING_TIERS,
   DEEP_CLEANING_TIERS,
@@ -25,7 +25,8 @@ export const metadata: Metadata = {
   // absolute: the root layout's title template would otherwise append the
   // brand a second time.
   title: { absolute: `House Cleaning Romeoville & Plainfield IL | ${REVIEW_RATING} Stars | DSM` },
-  description: `Family-owned house cleaning in Romeoville, Plainfield, Naperville and the southwest suburbs. Rated ${REVIEW_RATING} by ${REVIEW_COUNT} neighbors. Deep cleans from ${DEEP_FROM}. Free quotes.`,
+  // No promo code or end date here: offers expire, search snippets don't.
+  description: `Romeoville house cleaning from ${STANDARD_FROM}. Rated ${REVIEW_RATING} by ${REVIEW_COUNT} local homeowners. Deep, move-out and recurring cleans. Book online in minutes.`,
   alternates: { canonical: "https://www.dsmcleaningsolutions.com" },
   openGraph: {
     type: "website",
@@ -642,7 +643,7 @@ export default function HomePage() {
                 rather than locking to one service. */}
             <div className="text-center mb-6">
               <div className="flex justify-center mb-1">
-                <span style={{ color: "#FFD8BC" }} className="text-2xl">★★★★★</span>
+                <span style={{ color: "#E8622A" }} className="text-2xl">★★★★★</span>
               </div>
               <p className="text-sm text-gray-500">
                 Trusted by homeowners across the southwest suburbs, {REVIEW_COUNT} five-star reviews

@@ -676,7 +676,7 @@ export default function MoveOutCleaningPage() {
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl p-8">
               <div className="text-center mb-6">
                 <div className="flex justify-center mb-1">
-                  <span style={{ color: "#FFD8BC" }} className="text-2xl">★★★★★</span>
+                  <span style={{ color: "#E8622A" }} className="text-2xl">★★★★★</span>
                 </div>
                 <p className="text-sm text-gray-500">{REVIEW_RATING} average from {REVIEW_COUNT} Google reviews</p>
               </div>

@@ -1,6 +1,6 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
-import { REAL_REVIEWS, REVIEW_COUNT, REVIEW_RATING, pickReviews, reviewAttribution } from "@/lib/realReviews";
+import { REAL_REVIEWS, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
 import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 import { StickyMobileBar } from "@/components/HomepageScrollWidgets";
@@ -10,26 +10,32 @@ import {
   isOfferActive,
   discountedPrice,
   formatPrice,
+  startingPrice,
   tierLabel,
 } from "@/lib/pricing";
-import { DEEP_OFFER } from "@/lib/siteConstants";
+import { DEEP_OFFER, REVIEW_COUNT, REVIEW_RATING } from "@/lib/siteConstants";
 
 // Re-render hourly so the FALL75 offer expires on its own after
 // OFFERS.deep.endDate without anyone shipping a change. Same pattern as
 // app/pricing/page.tsx.
 export const revalidate = 3600;
 
+// "From" price and review figures come from the rate card and siteConstants,
+// so the snippet can't drift from the page.
+const DEEP_FROM = formatPrice(startingPrice(DEEP_CLEANING_TIERS));
+const PAGE_TITLE = `Deep Cleaning Romeoville IL | From ${DEEP_FROM} | DSM Cleaning`;
+const PAGE_DESCRIPTION = `Deep house cleaning in Romeoville and the southwest suburbs, from ${DEEP_FROM}. Every room done in detail. Rated ${REVIEW_RATING} by ${REVIEW_COUNT} neighbors. Book online today.`;
+
 export const metadata: Metadata = {
-  title: "Deep Cleaning Romeoville & Plainfield IL",
-  description:
-    "Professional deep cleaning for homes in Romeoville, Plainfield & Bolingbrook. Perfect before a big event, after winter, or for a fresh start. Free quote.",
+  // absolute: the root layout's title template would otherwise add the brand twice.
+  title: { absolute: PAGE_TITLE },
+  description: PAGE_DESCRIPTION,
   alternates: {
     canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning",
   },
   openGraph: {
-    title: "Deep Cleaning Service in Romeoville & Plainfield IL | DSM Cleaning Solutions",
-    description:
-      "Professional deep cleaning for homes in Romeoville, Plainfield & Bolingbrook. Perfect before a big event, after winter, or for a fresh start. Free quote.",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning",
   },
   twitter: { card: "summary_large_image", images: ["/hero-image.png"] },
@@ -203,7 +209,7 @@ export default function DeepCleaningPage() {
           {/* Order is H1, subheading, rating, offer, CTAs: the same sequence
               as the homepage hero, verified to clear the fold at 390px. */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
-            Deep Cleaning That Gets Inside the Oven.
+            Deep Cleaning in Romeoville That Gets Inside the Oven.
           </h1>
           <p className="text-lg md:text-xl font-semibold mb-5 opacity-95 max-w-2xl mx-auto">
             Grout lines, baseboards, ceiling fans. Deep cleaning in Romeoville, Plainfield, Naperville, Bolingbrook and the southwest suburbs.
@@ -598,7 +604,7 @@ export default function DeepCleaningPage() {
         <div className="max-w-xl mx-auto bg-white rounded-2xl shadow-xl p-8">
           <div className="text-center mb-6">
             <div className="flex justify-center mb-1">
-              <span style={{ color: "#FFD8BC" }} className="text-2xl">★★★★★</span>
+              <span style={{ color: "#E8622A" }} className="text-2xl">★★★★★</span>
             </div>
             <p className="text-sm text-gray-500">{REVIEW_RATING} average from {REVIEW_COUNT} Google reviews</p>
           </div>
