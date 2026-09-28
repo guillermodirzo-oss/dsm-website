@@ -32,7 +32,7 @@ const nextConfig = {
       // /contact is now a real page — no redirect needed (removed old /#contact redirect)
       {
         source: "/contact-us",
-        destination: "https://dsmcleaningsolutions.bookingkoala.com/login",
+        destination: "/contact",
         permanent: true,
       },
       {
