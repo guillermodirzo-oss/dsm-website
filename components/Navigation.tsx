@@ -55,8 +55,7 @@ export default function Navigation() {
                       draws sitelinks partly from nav prominence, so the money
                       services come first and the niche pages stay in the footer. */}
                   {[
-                    { label: "Recurring Maid Service", href: "/recurring-cleaning", icon: "📅" },
-                    { label: "Standard Cleaning", href: "/standard-cleaning", icon: "🏠" },
+                    { label: "Recurring Cleaning", href: "/recurring-cleaning", icon: "📅" },
                     { label: "Deep Cleaning", href: "/deep-cleaning", icon: "🧹" },
                     { label: "Move-Out / Move-In", href: "/move-out-cleaning", icon: "📦" },
                   ].map((item) => (
@@ -142,8 +141,7 @@ export default function Navigation() {
                         niche pages (eco-friendly, apartment, one-time, pet-friendly)
                         live in the footer instead. */}
                     {[
-                      { label: "📅 Recurring Maid Service", href: "/recurring-cleaning" },
-                      { label: "🏠 Standard Cleaning", href: "/standard-cleaning" },
+                      { label: "📅 Recurring Cleaning", href: "/recurring-cleaning" },
                       { label: "🧹 Deep Cleaning", href: "/deep-cleaning" },
                       { label: "📦 Move-Out / Move-In", href: "/move-out-cleaning" },
                     ].map((item) => (

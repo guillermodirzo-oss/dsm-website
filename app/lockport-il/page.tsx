@@ -87,8 +87,8 @@ export default function LockportPage() {
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Lockport</h3>
               <p className="text-sm text-gray-600">Top-to-bottom deep cleaning for homes throughout 60441.</p>
             </Link>
-            <Link href="/standard-cleaning-lockport-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Standard Cleaning in Lockport</h3>
+            <Link href="/recurring-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Recurring Cleaning in Lockport</h3>
               <p className="text-sm text-gray-600">Weekly, biweekly & monthly recurring cleaning for Lockport homes.</p>
             </Link>
             <Link href="/move-out-cleaning-lockport-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">

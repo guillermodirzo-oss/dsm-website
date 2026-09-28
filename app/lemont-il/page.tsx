@@ -86,8 +86,8 @@ export default function LemontPage() {
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Lemont</h3>
               <p className="text-sm text-gray-600">Top-to-bottom deep cleaning for Lemont homes in zip code 60439.</p>
             </a>
-            <a href="/standard-cleaning-lemont-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Standard Cleaning in Lemont</h3>
+            <a href="/recurring-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Recurring Cleaning in Lemont</h3>
               <p className="text-sm text-gray-600">Weekly, biweekly &amp; monthly house cleaning in Lemont.</p>
             </a>
             <a href="/move-out-cleaning-lemont-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">

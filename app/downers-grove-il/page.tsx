@@ -87,7 +87,7 @@ export default function DownersGrovePage() {
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Downers Grove</h3>
               <p className="text-sm text-gray-600">Top-to-bottom deep cleaning for Downers Grove homes — every corner, appliance, and surface.</p>
             </Link>
-            <Link href="/standard-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+            <Link href="/recurring-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Recurring Maid Service Downers Grove</h3>
               <p className="text-sm text-gray-600">Weekly, biweekly, or monthly recurring cleaning for Downers Grove homeowners.</p>
             </Link>

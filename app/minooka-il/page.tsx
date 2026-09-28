@@ -85,8 +85,8 @@ export default function MinookaPage() {
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Minooka</h3>
               <p className="text-sm text-gray-600">Top-to-bottom deep cleaning for Minooka homes in zip code 60447.</p>
             </a>
-            <a href="/standard-cleaning-minooka-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Standard Cleaning in Minooka</h3>
+            <a href="/recurring-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Recurring Cleaning in Minooka</h3>
               <p className="text-sm text-gray-600">Recurring maid service and one-time standard cleans in Minooka (60447).</p>
             </a>
             <a href="/move-out-cleaning-minooka-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">

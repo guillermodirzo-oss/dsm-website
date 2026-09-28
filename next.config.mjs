@@ -123,12 +123,12 @@ const nextConfig = {
       },
       {
         source: "/house-cleaning",
-        destination: "/standard-cleaning",
+        destination: "/recurring-cleaning",
         permanent: true,
       },
       {
         source: "/cleaning-services",
-        destination: "/standard-cleaning",
+        destination: "/recurring-cleaning",
         permanent: true,
       },
       {
@@ -286,12 +286,12 @@ const nextConfig = {
       // Residential / service name variants
       {
         source: "/residential",
-        destination: "/standard-cleaning",
+        destination: "/recurring-cleaning",
         permanent: true,
       },
       {
         source: "/residential-cleaning",
-        destination: "/standard-cleaning",
+        destination: "/recurring-cleaning",
         permanent: true,
       },
       {
@@ -426,6 +426,77 @@ const nextConfig = {
       {
         source: "/blog/premium-cleaning-services",
         destination: "/",
+        permanent: true,
+      },
+
+      // ─── STANDARD CLEANING MERGED INTO RECURRING CLEANING (2026-09-27) ────
+      // /standard-cleaning is gone; recurring cleaning is the same service on
+      // a schedule and now owns this content. Each city page merges into its
+      // general city page, except Romeoville, which never had a separate
+      // general city page and goes straight to the homepage.
+      {
+        source: "/standard-cleaning",
+        destination: "/recurring-cleaning",
+        permanent: true,
+      },
+      {
+        source: "/standard-cleaning-romeoville-il",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/standard-cleaning-plainfield-il",
+        destination: "/plainfield-il",
+        permanent: true,
+      },
+      {
+        source: "/standard-cleaning-bolingbrook-il",
+        destination: "/bolingbrook-il",
+        permanent: true,
+      },
+      {
+        source: "/standard-cleaning-homer-glen-il",
+        destination: "/homer-glen-il",
+        permanent: true,
+      },
+      {
+        source: "/standard-cleaning-joliet-il",
+        destination: "/joliet-il",
+        permanent: true,
+      },
+      {
+        source: "/standard-cleaning-lemont-il",
+        destination: "/lemont-il",
+        permanent: true,
+      },
+      {
+        source: "/standard-cleaning-lockport-il",
+        destination: "/lockport-il",
+        permanent: true,
+      },
+      {
+        source: "/standard-cleaning-minooka-il",
+        destination: "/minooka-il",
+        permanent: true,
+      },
+      {
+        source: "/standard-cleaning-naperville-il",
+        destination: "/naperville-il",
+        permanent: true,
+      },
+      {
+        source: "/standard-cleaning-new-lenox-il",
+        destination: "/new-lenox-il",
+        permanent: true,
+      },
+      {
+        source: "/standard-cleaning-shorewood-il",
+        destination: "/shorewood-il",
+        permanent: true,
+      },
+      {
+        source: "/standard-cleaning-westmont-il",
+        destination: "/westmont-il",
         permanent: true,
       },
     ];

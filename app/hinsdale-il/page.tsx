@@ -87,7 +87,7 @@ export default function HinsdalePage() {
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Hinsdale</h3>
               <p className="text-sm text-gray-600">Thorough top-to-bottom deep cleaning for Hinsdale homes — every detail addressed.</p>
             </Link>
-            <Link href="/standard-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+            <Link href="/recurring-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Recurring Maid Service Hinsdale</h3>
               <p className="text-sm text-gray-600">Weekly, biweekly, or monthly cleaning for Hinsdale homeowners — consistent, professional.</p>
             </Link>

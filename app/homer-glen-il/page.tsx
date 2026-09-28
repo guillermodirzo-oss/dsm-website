@@ -86,8 +86,8 @@ export default function HomerGlenPage() {
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Homer Glen</h3>
               <p className="text-sm text-gray-600">Top-to-bottom deep cleaning for Homer Glen homes in zip code 60491.</p>
             </a>
-            <a href="/standard-cleaning-homer-glen-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Standard Cleaning in Homer Glen</h3>
+            <a href="/recurring-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Recurring Cleaning in Homer Glen</h3>
               <p className="text-sm text-gray-600">Weekly, biweekly &amp; monthly house cleaning in Homer Glen.</p>
             </a>
             <a href="/move-out-cleaning-homer-glen-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">

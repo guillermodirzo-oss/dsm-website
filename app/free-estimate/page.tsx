@@ -354,8 +354,8 @@ export default function FreeEstimatePage() {
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning</h3>
               <p className="text-sm text-gray-600">Top-to-bottom cleaning for a thorough seasonal or first-time reset.</p>
             </Link>
-            <Link href="/standard-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Standard Cleaning</h3>
+            <Link href="/recurring-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Recurring Cleaning</h3>
               <p className="text-sm text-gray-600">Recurring house cleaning for ongoing home maintenance.</p>
             </Link>
             <Link href="/contact" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">

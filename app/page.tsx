@@ -540,8 +540,8 @@ export default function HomePage() {
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Romeoville</h3>
               <p className="text-sm text-gray-600">Top-to-bottom deep cleaning for Romeoville homes (60446).</p>
             </Link>
-            <Link href="/standard-cleaning-romeoville-il" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Standard Cleaning in Romeoville</h3>
+            <Link href="/recurring-cleaning" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Recurring Cleaning in Romeoville</h3>
               <p className="text-sm text-gray-600">Weekly, biweekly & monthly house cleaning in Romeoville.</p>
             </Link>
             <Link href="/move-out-cleaning-romeoville-il" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
@@ -561,7 +561,7 @@ export default function HomePage() {
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Naperville</h3>
               <p className="text-sm text-gray-600">Top-to-bottom deep cleaning for Naperville homes (60540, 60563, 60564, 60565).</p>
             </Link>
-            <Link href="/standard-cleaning-naperville-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+            <Link href="/recurring-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">House Cleaning in Naperville</h3>
               <p className="text-sm text-gray-600">Weekly, biweekly & monthly house cleaning for Naperville families.</p>
             </Link>

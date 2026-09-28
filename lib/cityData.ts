@@ -48,12 +48,6 @@ export const cities: CityData[] = [
     landmarks: ["Riverwalk", "Centennial Beach", "Downtown Naperville"],
     services: [
       {
-        icon: "🏠",
-        title: "Standard House Cleaning in Naperville",
-        desc: "Routine house cleaning on a one-time or recurring basis. We keep your Naperville home consistently clean and comfortable.",
-        link: "/standard-cleaning",
-      },
-      {
         icon: "🧹",
         title: "Deep Cleaning in Naperville",
         desc: "Thorough top-to-bottom cleaning that tackles every corner, surface, and fixture in your Naperville home.",
@@ -145,12 +139,6 @@ export const cities: CityData[] = [
     neighborhoods: ["Naperville Acres", "Americana Estates", "Pheasant Chase", "Stillwater", "Fox Run", "Lakewood Crossing"],
     landmarks: ["Promenade Bolingbrook", "Hidden Lakes", "Pelican Harbor Aquatic Park"],
     services: [
-      {
-        icon: "🏠",
-        title: "Standard House Cleaning in Bolingbrook",
-        desc: "Routine house cleaning on a one-time or recurring basis. We keep your Bolingbrook home consistently clean and comfortable.",
-        link: "/standard-cleaning",
-      },
       {
         icon: "🧹",
         title: "Deep Cleaning in Bolingbrook",
@@ -244,12 +232,6 @@ export const cities: CityData[] = [
     landmarks: ["Rialto Theatre", "Joliet Iron Works Historic Site", "Pilcher Park Nature Center", "Splash Station"],
     services: [
       {
-        icon: "🏠",
-        title: "Standard House Cleaning in Joliet",
-        desc: "Routine house cleaning on a one-time or recurring basis. We keep your Joliet home consistently clean and comfortable.",
-        link: "/standard-cleaning",
-      },
-      {
         icon: "🧹",
         title: "Deep Cleaning in Joliet",
         desc: "Thorough top-to-bottom cleaning that tackles every corner, surface, and fixture in your Joliet home.",
@@ -341,12 +323,6 @@ export const cities: CityData[] = [
     neighborhoods: ["Westmont Crossing", "Drummond Commons", "Oakwood Estates", "Village Center District", "Cass Avenue Corridor"],
     landmarks: ["Ty Warner Park", "St. Joseph Creek Trail", "Westmont Community Park"],
     services: [
-      {
-        icon: "🏠",
-        title: "Standard House Cleaning in Westmont",
-        desc: "Routine house cleaning on a one-time or recurring basis. We keep your Westmont home consistently clean and comfortable.",
-        link: "/standard-cleaning",
-      },
       {
         icon: "🧹",
         title: "Deep Cleaning in Westmont",
@@ -445,12 +421,6 @@ export const cities: CityData[] = [
     landmarks: ["Illinois & Michigan Canal National Heritage Corridor", "Dellwood Park", "Lockport Historic District", "Will County Courthouse"],
     services: [
       {
-        icon: "🏠",
-        title: "Standard House Cleaning in Lockport",
-        desc: "Routine house cleaning on a one-time or recurring basis. We keep your Lockport home consistently clean and comfortable.",
-        link: "/standard-cleaning",
-      },
-      {
         icon: "🧹",
         title: "Deep Cleaning in Lockport",
         desc: "Thorough top-to-bottom cleaning that tackles every corner, surface, and fixture in your Lockport home.",
@@ -547,12 +517,6 @@ export const cities: CityData[] = [
     neighborhoods: ["Lemont Main Street District", "Glenmoor", "Lemont Hills", "Keepataw Forest area", "Sagamore Hills"],
     landmarks: ["Des Plaines River Valley", "Centennial Park", "Lemont Quarries", "Sandhills Wildlife Area"],
     services: [
-      {
-        icon: "🏠",
-        title: "Standard House Cleaning in Lemont",
-        desc: "Routine house cleaning on a one-time or recurring basis. We keep your Lemont home consistently clean and comfortable.",
-        link: "/standard-cleaning",
-      },
       {
         icon: "🧹",
         title: "Deep Cleaning in Lemont",
@@ -651,12 +615,6 @@ export const cities: CityData[] = [
     landmarks: ["Homer Lake Forest Preserve", "Highland Lake", "Tampier Slough Nature Area", "Messenger Woods Nature Preserve"],
     services: [
       {
-        icon: "🏠",
-        title: "Standard House Cleaning in Homer Glen",
-        desc: "Routine house cleaning on a one-time or recurring basis. We keep your Homer Glen home consistently clean and comfortable.",
-        link: "/standard-cleaning",
-      },
-      {
         icon: "🧹",
         title: "Deep Cleaning in Homer Glen",
         desc: "Thorough top-to-bottom cleaning that tackles every corner, surface, and fixture in your Homer Glen home.",
@@ -753,12 +711,6 @@ export const cities: CityData[] = [
     neighborhoods: ["Sanctuary", "White Oak", "Arbor Hills", "Spencer Crossing", "Founders Pointe"],
     landmarks: ["New Lenox Community Park", "Lincoln-Way Central High School area", "Hadley Valley Preserve", "Arbury Hills"],
     services: [
-      {
-        icon: "🏠",
-        title: "Standard House Cleaning in New Lenox",
-        desc: "Routine house cleaning on a one-time or recurring basis. We keep your New Lenox home consistently clean and comfortable.",
-        link: "/standard-cleaning",
-      },
       {
         icon: "🧹",
         title: "Deep Cleaning in New Lenox",
@@ -857,12 +809,6 @@ export const cities: CityData[] = [
     landmarks: ["Heritage Woods of Shorewood", "I&M Canal Trail", "Aux Sable Creek", "Rivervale Park"],
     services: [
       {
-        icon: "🏠",
-        title: "Standard House Cleaning in Shorewood",
-        desc: "Routine house cleaning on a one-time or recurring basis. We keep your Shorewood home consistently clean and comfortable.",
-        link: "/standard-cleaning",
-      },
-      {
         icon: "🧹",
         title: "Deep Cleaning in Shorewood",
         desc: "Thorough top-to-bottom cleaning that tackles every corner, surface, and fixture in your Shorewood home.",
@@ -960,7 +906,6 @@ export const cities: CityData[] = [
     landmarks: ["Burr Ridge Village Center", "Harveys Lake", "Route 83 corridor", "County Line Road"],
     services: [
       { icon: "🧹", title: "Deep Cleaning in Burr Ridge", desc: "Thorough top-to-bottom deep cleaning for Burr Ridge executive homes — every room, every surface, every detail.", link: "/deep-cleaning" },
-      { icon: "🏠", title: "Standard House Cleaning in Burr Ridge", desc: "Recurring weekly, biweekly, or monthly maid service to keep your Burr Ridge home consistently spotless.", link: "/standard-cleaning" },
       { icon: "📦", title: "Move-Out Cleaning Burr Ridge", desc: "Comprehensive move-out cleaning designed to satisfy even the most detail-oriented buyers and landlords.", link: "/move-out-cleaning" },
       { icon: "📅", title: "Recurring Maid Service Burr Ridge", desc: "Consistent, scheduled cleaning plans for Burr Ridge homes — your team, your schedule.", link: "/recurring-cleaning" },
       { icon: "🌿", title: "Eco-Friendly Cleaning Burr Ridge", desc: "Green cleaning using non-toxic products — safe for your Burr Ridge family and the environment.", link: "/eco-friendly-cleaning" },
@@ -1015,7 +960,6 @@ export const cities: CityData[] = [
     landmarks: ["Downtown Hinsdale", "Hinsdale Central High School area", "Metra BNSF station area", "Katherine Legge Memorial Park"],
     services: [
       { icon: "🧹", title: "Deep Cleaning in Hinsdale", desc: "Comprehensive top-to-bottom deep cleaning for Hinsdale homes — from historic properties to modern builds.", link: "/deep-cleaning" },
-      { icon: "🏠", title: "Standard House Cleaning in Hinsdale", desc: "Recurring weekly, biweekly, or monthly maid service for Hinsdale homes.", link: "/standard-cleaning" },
       { icon: "📦", title: "Move-Out Cleaning Hinsdale", desc: "Detailed move-out cleaning that meets the standards of Hinsdale's buyers, landlords, and agents.", link: "/move-out-cleaning" },
       { icon: "📅", title: "Recurring Maid Service Hinsdale", desc: "Consistent, scheduled cleaning plans for Hinsdale homeowners.", link: "/recurring-cleaning" },
       { icon: "🌿", title: "Eco-Friendly Cleaning Hinsdale", desc: "Non-toxic, biodegradable cleaning products safe for your Hinsdale family.", link: "/eco-friendly-cleaning" },
@@ -1070,7 +1014,6 @@ export const cities: CityData[] = [
     landmarks: ["Oakbrook Center", "Butler National Golf Club area", "McDonald's campus area", "Oak Brook Park District"],
     services: [
       { icon: "🧹", title: "Deep Cleaning in Oak Brook", desc: "Premium top-to-bottom deep cleaning for Oak Brook luxury homes — thorough, eco-friendly, and satisfaction guaranteed.", link: "/deep-cleaning" },
-      { icon: "🏠", title: "Standard House Cleaning in Oak Brook", desc: "Recurring weekly, biweekly, or monthly maid service for Oak Brook homes.", link: "/standard-cleaning" },
       { icon: "📦", title: "Move-Out Cleaning Oak Brook", desc: "Comprehensive move-out cleaning for Oak Brook properties — built to satisfy exacting buyer and landlord standards.", link: "/move-out-cleaning" },
       { icon: "📅", title: "Recurring Maid Service Oak Brook", desc: "Reliable, scheduled cleaning service for Oak Brook homeowners.", link: "/recurring-cleaning" },
       { icon: "🌿", title: "Eco-Friendly Cleaning Oak Brook", desc: "Non-toxic, biodegradable cleaning products safe for Oak Brook families.", link: "/eco-friendly-cleaning" },
@@ -1125,7 +1068,6 @@ export const cities: CityData[] = [
     landmarks: ["Downtown Downers Grove", "Metra BNSF commuter hub", "Lyman Woods Nature Preserve", "Belmont Prairie Nature Preserve"],
     services: [
       { icon: "🧹", title: "Deep Cleaning in Downers Grove", desc: "Comprehensive top-to-bottom deep cleaning for Downers Grove homes — from bungalows to newer builds.", link: "/deep-cleaning" },
-      { icon: "🏠", title: "Standard House Cleaning in Downers Grove", desc: "Reliable recurring weekly, biweekly, or monthly maid service for busy Downers Grove families.", link: "/standard-cleaning" },
       { icon: "📦", title: "Move-Out Cleaning Downers Grove", desc: "Thorough move-out cleaning to help Downers Grove renters and homeowners get their full security deposit back.", link: "/move-out-cleaning" },
       { icon: "📅", title: "Recurring Maid Service Downers Grove", desc: "Consistent scheduled cleaning service tailored to your Downers Grove home and schedule.", link: "/recurring-cleaning" },
       { icon: "🌿", title: "Eco-Friendly Cleaning Downers Grove", desc: "Non-toxic, biodegradable products safe for your Downers Grove family and pets.", link: "/eco-friendly-cleaning" },
@@ -1179,12 +1121,6 @@ export const cities: CityData[] = [
     neighborhoods: ["Minooka Commons", "Heritage Place", "Lakewood Trails", "Indian Trails", "Rock Run Estates"],
     landmarks: ["Minooka Community High School area", "Aux Sable Creek corridor", "Heritage Prairie Farm", "DuPage River access"],
     services: [
-      {
-        icon: "🏠",
-        title: "Standard House Cleaning in Minooka",
-        desc: "Routine house cleaning on a one-time or recurring basis. We keep your Minooka home consistently clean and comfortable.",
-        link: "/standard-cleaning",
-      },
       {
         icon: "🧹",
         title: "Deep Cleaning in Minooka",
@@ -1283,12 +1219,6 @@ export const cities: CityData[] = [
     landmarks: ["Tivoli Theatre", "Lyman Woods", "Downtown Downers Grove", "Maple Avenue Arts Center"],
     services: [
       {
-        icon: "🏠",
-        title: "Standard House Cleaning in Downers Grove",
-        desc: "Routine one-time or recurring cleaning to keep your Downers Grove home consistently fresh and tidy.",
-        link: "/standard-cleaning",
-      },
-      {
         icon: "🧹",
         title: "Deep Cleaning in Downers Grove",
         desc: "Thorough top-to-bottom cleaning covering every surface, appliance, and corner in your Downers Grove home.",
@@ -1386,12 +1316,6 @@ export const cities: CityData[] = [
     landmarks: ["Fullersburg Woods Nature Education Center", "Graue Mill", "Downtown Hinsdale", "Katherine Legge Memorial Park"],
     services: [
       {
-        icon: "🏠",
-        title: "Standard House Cleaning in Hinsdale",
-        desc: "Premium recurring or one-time house cleaning for Hinsdale homes — meticulous, professional, consistent.",
-        link: "/standard-cleaning",
-      },
-      {
         icon: "🧹",
         title: "Deep Cleaning in Hinsdale",
         desc: "Comprehensive top-to-bottom deep cleaning for Hinsdale homes — every surface, appliance, and detail addressed.",
@@ -1477,12 +1401,6 @@ export const cities: CityData[] = [
     neighborhoods: ["Ginger Creek", "Oak Brook Club", "East Oak Brook", "York Woods", "Midwest Club"],
     landmarks: ["Oak Brook Center", "Graue Mill & Museum", "Butler National Golf Club area", "McDonald's Campus"],
     services: [
-      {
-        icon: "🏠",
-        title: "Standard House Cleaning in Oak Brook",
-        desc: "Premium recurring or one-time standard cleaning for Oak Brook homes — professional, consistent, thorough.",
-        link: "/standard-cleaning",
-      },
       {
         icon: "🧹",
         title: "Deep Cleaning in Oak Brook",
@@ -1574,12 +1492,6 @@ export const cities: CityData[] = [
     neighborhoods: ["Braemoor", "The Reserve", "Harveys Lake", "Fieldstone", "Claridge Court"],
     landmarks: ["Waterfall Glen Forest Preserve", "Burr Ridge Village Center", "Salt Creek Greenway"],
     services: [
-      {
-        icon: "🏠",
-        title: "Standard House Cleaning in Burr Ridge",
-        desc: "Premium recurring or one-time standard cleaning for Burr Ridge homes — professional and consistent.",
-        link: "/standard-cleaning",
-      },
       {
         icon: "🧹",
         title: "Deep Cleaning in Burr Ridge",
@@ -1834,7 +1746,7 @@ export const comboPages: ComboPageData[] = [
     ],
     internalLinks: [
       { label: "Bolingbrook House Cleaning", href: "/bolingbrook-il" },
-      { label: "Standard Cleaning Services", href: "/standard-cleaning" },
+      { label: "Recurring Cleaning Services", href: "/recurring-cleaning" },
       { label: "Deep Cleaning Bolingbrook", href: "/deep-cleaning-bolingbrook-il" },
       { label: "Move-Out Cleaning Bolingbrook", href: "/move-out-cleaning-bolingbrook-il" },
     ],

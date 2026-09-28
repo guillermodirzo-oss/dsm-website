@@ -267,7 +267,7 @@ export default function StandardVsDeepCleaningPage() {
                 ))}
               </ul>
               <div className="mt-6">
-                <Link href="/standard-cleaning" className="btn-primary">Learn About Standard Cleaning</Link>
+                <Link href="/recurring-cleaning" className="btn-primary">Learn About Recurring Cleaning</Link>
               </div>
             </div>
             <div>
@@ -352,8 +352,8 @@ export default function StandardVsDeepCleaningPage() {
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning</h3>
               <p className="text-sm text-gray-600">Full details, pricing, and checklist for our deep cleaning service.</p>
             </Link>
-            <Link href="/standard-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Standard Cleaning</h3>
+            <Link href="/recurring-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Recurring Cleaning</h3>
               <p className="text-sm text-gray-600">Recurring house cleaning for ongoing home maintenance.</p>
             </Link>
             <Link href="/pricing" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">

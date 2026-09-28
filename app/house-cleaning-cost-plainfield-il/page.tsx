@@ -270,8 +270,8 @@ export default function HouseCleaningCostPlainfield() {
                 Perfect for maintaining a clean home week to week. Best for homes that are cleaned
                 regularly and just need upkeep.
               </p>
-              <Link href="/standard-cleaning-plainfield-il" className="text-brand-green font-semibold text-sm hover:underline">
-                Learn more about standard cleaning in Plainfield →
+              <Link href="/plainfield-il" className="text-brand-green font-semibold text-sm hover:underline">
+                Learn more about house cleaning in Plainfield →
               </Link>
             </div>
 
@@ -389,8 +389,8 @@ export default function HouseCleaningCostPlainfield() {
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning — Plainfield</h3>
               <p className="text-sm text-gray-600">Top-to-bottom deep cleaning starting at $315.</p>
             </Link>
-            <Link href="/standard-cleaning-plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Standard Cleaning — Plainfield</h3>
+            <Link href="/plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">House Cleaning — Plainfield</h3>
               <p className="text-sm text-gray-600">Recurring house cleaning starting at $145.</p>
             </Link>
             <Link href="/move-out-cleaning-plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">

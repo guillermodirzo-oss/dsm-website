@@ -37,11 +37,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/standard-cleaning`,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
       url: `${baseUrl}/eco-friendly-cleaning`,
       changeFrequency: "monthly",
       priority: 0.85,
@@ -157,21 +152,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/standard-cleaning-plainfield-il`,
-      changeFrequency: "monthly" as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/standard-cleaning-naperville-il`,
-      changeFrequency: "monthly" as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/standard-cleaning-romeoville-il`,
-      changeFrequency: "monthly" as const,
-      priority: 0.85,
-    },
-    {
       url: `${baseUrl}/move-out-cleaning-plainfield-il`,
       changeFrequency: "monthly" as const,
       priority: 0.85,
@@ -192,22 +172,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/standard-cleaning-bolingbrook-il`,
-      changeFrequency: "monthly" as const,
-      priority: 0.85,
-    },
-    {
       url: `${baseUrl}/move-out-cleaning-bolingbrook-il`,
       changeFrequency: "monthly" as const,
       priority: 0.85,
     },
     {
       url: `${baseUrl}/deep-cleaning-joliet-il`,
-      changeFrequency: "monthly" as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/standard-cleaning-joliet-il`,
       changeFrequency: "monthly" as const,
       priority: 0.85,
     },
@@ -222,22 +192,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/standard-cleaning-lockport-il`,
-      changeFrequency: "monthly" as const,
-      priority: 0.85,
-    },
-    {
       url: `${baseUrl}/move-out-cleaning-lockport-il`,
       changeFrequency: "monthly" as const,
       priority: 0.85,
     },
     {
       url: `${baseUrl}/deep-cleaning-shorewood-il`,
-      changeFrequency: "monthly" as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/standard-cleaning-shorewood-il`,
       changeFrequency: "monthly" as const,
       priority: 0.85,
     },
@@ -252,22 +212,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/standard-cleaning-lemont-il`,
-      changeFrequency: "monthly" as const,
-      priority: 0.85,
-    },
-    {
       url: `${baseUrl}/move-out-cleaning-lemont-il`,
       changeFrequency: "monthly" as const,
       priority: 0.85,
     },
     {
       url: `${baseUrl}/deep-cleaning-homer-glen-il`,
-      changeFrequency: "monthly" as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/standard-cleaning-homer-glen-il`,
       changeFrequency: "monthly" as const,
       priority: 0.85,
     },
@@ -282,11 +232,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/standard-cleaning-westmont-il`,
-      changeFrequency: "monthly" as const,
-      priority: 0.85,
-    },
-    {
       url: `${baseUrl}/move-out-cleaning-westmont-il`,
       changeFrequency: "monthly" as const,
       priority: 0.85,
@@ -297,22 +242,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/standard-cleaning-minooka-il`,
-      changeFrequency: "monthly" as const,
-      priority: 0.85,
-    },
-    {
       url: `${baseUrl}/move-out-cleaning-minooka-il`,
       changeFrequency: "monthly" as const,
       priority: 0.85,
     },
     {
       url: `${baseUrl}/deep-cleaning-new-lenox-il`,
-      changeFrequency: "monthly" as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/standard-cleaning-new-lenox-il`,
       changeFrequency: "monthly" as const,
       priority: 0.85,
     },

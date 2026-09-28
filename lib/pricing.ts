@@ -136,6 +136,31 @@ export const STANDARD_FREQUENCIES: Frequency[] = [
 export const DISCOUNTED_FREQUENCIES = STANDARD_FREQUENCIES.filter((f) => f.discount > 0);
 
 /**
+ * Recurring frequency discounts keyed by id, for direct lookup by /recurring-
+ * cleaning. Derived from STANDARD_FREQUENCIES above so it can never disagree
+ * with it: weekly 20%, every 2 weeks 15%, monthly 10%.
+ */
+export const FREQUENCY_DISCOUNTS: Record<"weekly" | "biweekly" | "monthly", number> = {
+  weekly: STANDARD_FREQUENCIES.find((f) => f.id === "weekly")!.discount,
+  biweekly: STANDARD_FREQUENCIES.find((f) => f.id === "biweekly")!.discount,
+  monthly: STANDARD_FREQUENCIES.find((f) => f.id === "monthly")!.discount,
+};
+
+/**
+ * Discounted price for a standard-clean tier at a recurring frequency. The
+ * one function every recurring price on the site must call, so a pricing
+ * card and an FAQ answer can never show two different numbers for the same
+ * plan. Same rounding rule as recurringPrice() above: exact math, snapped to
+ * the nearest cent only to kill binary float noise.
+ */
+export function recurringDiscountedPrice(
+  tier: PriceTier,
+  frequency: keyof typeof FREQUENCY_DISCOUNTS
+): number {
+  return Math.round(tier.price * (1 - FREQUENCY_DISCOUNTS[frequency]) * 100) / 100;
+}
+
+/**
  * Price for a tier at a given frequency.
  *
  * Deliberately does NOT round to whole dollars: the multiplication is taken

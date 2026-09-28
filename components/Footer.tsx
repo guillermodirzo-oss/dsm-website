@@ -33,16 +33,16 @@ export default function Footer() {
             <p className="text-xs text-gray-600 mt-1">Free estimates available</p>
           </div>
 
-          {/* Services. Core 3 first (Recurring/Standard, Deep, Move-Out/Move-In),
-              matching the nav. The niche pages below aren't in the nav or the
-              homepage anymore, so this list is their only internal link —
-              removing one here would strand that page. */}
+          {/* Services. Core 3, matching the nav: Recurring, Deep, Move-Out/
+              Move-In. Standard cleaning merged into Recurring Cleaning, so
+              it's gone from here too. The niche pages below aren't in the
+              nav or the homepage anymore, so this list is their only
+              internal link — removing one here would strand that page. */}
           <div>
             <h3 className="text-white font-bold text-sm uppercase tracking-widest mb-5">Services</h3>
             <ul className="space-y-2.5 text-sm">
               {[
-                { label: "Recurring Maid Service", href: "/recurring-cleaning" },
-                { label: "Standard House Cleaning", href: "/standard-cleaning" },
+                { label: "Recurring Cleaning", href: "/recurring-cleaning" },
                 { label: "Deep Cleaning", href: "/deep-cleaning" },
                 { label: "Move-Out / Move-In Cleaning", href: "/move-out-cleaning" },
               ].map((item) => (

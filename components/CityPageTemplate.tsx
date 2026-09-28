@@ -275,8 +275,8 @@ export default function CityPageTemplate({ city }: { city: CityData }) {
               <div className="flex items-center gap-3 mb-5">
                 <span className="text-3xl">🏠</span>
                 <div>
-                  <h3 className="font-bold text-xl text-gray-900">Standard Cleaning</h3>
-                  <Link href="/standard-cleaning" className="text-brand-green text-sm font-semibold hover:underline">View full details →</Link>
+                  <h3 className="font-bold text-xl text-gray-900">Recurring Cleaning</h3>
+                  <Link href="/recurring-cleaning" className="text-brand-green text-sm font-semibold hover:underline">View full details →</Link>
                 </div>
               </div>
               <ul className="space-y-2 text-sm text-gray-700">

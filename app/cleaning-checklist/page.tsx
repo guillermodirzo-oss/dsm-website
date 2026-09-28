@@ -305,7 +305,7 @@ export default function CleaningChecklistPage() {
               <h2 className="section-heading">Standard Cleaning Checklist</h2>
               <p className="text-gray-600 mt-2">
                 Our routine maintenance service — ideal for homes cleaned regularly.{" "}
-                <Link href="/standard-cleaning" className="text-brand-green font-semibold hover:underline">Learn more about standard cleaning →</Link>
+                <Link href="/recurring-cleaning" className="text-brand-green font-semibold hover:underline">Learn more about recurring cleaning →</Link>
               </p>
             </div>
             <ChecklistSection title="Standard Cleaning — Included Tasks" items={standardChecklist} variant="green" />
@@ -402,8 +402,8 @@ export default function CleaningChecklistPage() {
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning</h3>
               <p className="text-sm text-gray-600">Full details and pricing for our deep cleaning service.</p>
             </Link>
-            <Link href="/standard-cleaning" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Standard Cleaning</h3>
+            <Link href="/recurring-cleaning" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Recurring Cleaning</h3>
               <p className="text-sm text-gray-600">Recurring house cleaning for ongoing home maintenance.</p>
             </Link>
             <Link href="/move-out-cleaning" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">

@@ -84,8 +84,8 @@ export default function BolingbrookPage() {
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Bolingbrook</h3>
               <p className="text-sm text-gray-600">A thorough top-to-bottom deep clean for homes in 60440 & 60490.</p>
             </Link>
-            <Link href="/standard-cleaning-bolingbrook-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Standard Cleaning in Bolingbrook</h3>
+            <Link href="/recurring-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Recurring Cleaning in Bolingbrook</h3>
               <p className="text-sm text-gray-600">Weekly, biweekly & monthly recurring cleaning for Bolingbrook homes.</p>
             </Link>
             <Link href="/move-out-cleaning-bolingbrook-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">

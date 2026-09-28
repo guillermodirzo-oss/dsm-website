@@ -87,8 +87,8 @@ export default function ShorewoodPage() {
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Shorewood</h3>
               <p className="text-sm text-gray-600">Top-to-bottom deep cleaning for Shorewood homes in zip code 60404.</p>
             </Link>
-            <Link href="/standard-cleaning-shorewood-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Standard Cleaning in Shorewood</h3>
+            <Link href="/recurring-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Recurring Cleaning in Shorewood</h3>
               <p className="text-sm text-gray-600">Weekly, biweekly & monthly house cleaning in Shorewood.</p>
             </Link>
             <Link href="/move-out-cleaning-shorewood-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">

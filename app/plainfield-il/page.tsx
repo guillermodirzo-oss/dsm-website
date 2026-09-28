@@ -377,8 +377,8 @@ export default function PlainfieldPage() {
               <div className="flex items-center gap-3 mb-5">
                 <span className="text-3xl">🏠</span>
                 <div>
-                  <h3 className="font-bold text-xl text-gray-900">Standard Cleaning</h3>
-                  <Link href="/standard-cleaning" className="text-brand-green text-sm font-semibold hover:underline">View full details →</Link>
+                  <h3 className="font-bold text-xl text-gray-900">Recurring Cleaning</h3>
+                  <Link href="/recurring-cleaning" className="text-brand-green text-sm font-semibold hover:underline">View full details →</Link>
                 </div>
               </div>
               <ul className="space-y-2 text-sm text-gray-700">
@@ -467,8 +467,8 @@ export default function PlainfieldPage() {
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Plainfield</h3>
               <p className="text-sm text-gray-600">Top-to-bottom deep cleaning for Plainfield homes — 60544 & 60585.</p>
             </Link>
-            <Link href="/standard-cleaning-plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Standard Cleaning in Plainfield</h3>
+            <Link href="/recurring-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Recurring Cleaning in Plainfield</h3>
               <p className="text-sm text-gray-600">Weekly, biweekly & monthly house cleaning in Plainfield.</p>
             </Link>
             <Link href="/move-out-cleaning-plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
