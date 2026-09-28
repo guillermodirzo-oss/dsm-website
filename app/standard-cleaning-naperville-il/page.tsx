@@ -42,7 +42,7 @@ const faqs = [
   {
     question: "How much does standard house cleaning cost in Naperville, IL?",
     answer:
-      `Standard cleaning in Naperville starts at ${formatPrice(STANDARD_CLEANING_TIERS[0].price)} for a 2-bedroom home. Larger homes in White Eagle or Ashbury may be priced higher. Recurring clients receive a discounted rate. We always provide a free estimate before booking.`,
+      `Standard cleaning in Naperville starts at ${formatPrice(STANDARD_CLEANING_TIERS[0].price)} for a 1-bedroom home. Larger homes in White Eagle or Ashbury may be priced higher. Recurring clients receive a discounted rate. We always provide a free estimate before booking.`,
   },
   {
     question: "Do I need to be home for my standard cleaning in Naperville?",
@@ -292,7 +292,7 @@ export default function StandardCleaningNapervillePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading mb-6">How Much Does Standard Cleaning Cost in Naperville, IL?</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Standard cleaning in Naperville typically starts at {formatPrice(STANDARD_CLEANING_TIERS[0].price)} for a 2-bedroom home.
+            Standard cleaning in Naperville typically starts at {formatPrice(STANDARD_CLEANING_TIERS[0].price)} for a 1-bedroom home.
             Larger homes in neighborhoods like Ashbury or White Eagle may be priced higher based on
             square footage and bathroom count.
           </p>

@@ -2988,7 +2988,7 @@ export const blogPosts: BlogPost[] = [
           name: "How much does a deep house cleaning cost?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "DSM Cleaning Solutions uses flat-rate pricing based on home size. Deep cleaning starts at $315 for a 1-bedroom home and ranges up to $840 for a 5-bedroom home. All rates are all-inclusive — no hidden fees. Visit our pricing page at dsmcleaningsolutions.com/pricing for the full breakdown.",
+            text: "DSM Cleaning Solutions uses flat-rate pricing based on home size. Deep cleaning starts at $300 for a 1-bedroom home and ranges up to $830 for a 5-bedroom home. All rates are all-inclusive — no hidden fees. Visit our pricing page at dsmcleaningsolutions.com/pricing for the full breakdown.",
           },
         },
         {

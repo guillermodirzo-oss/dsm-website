@@ -98,7 +98,7 @@ const breadcrumbSchema = {
 
 const pricingBySize = [
   { size: "2 Bed / 1 Bath", price: "$315", time: "3–5 hours" },
-  { size: "3 Bed / 2 Bath", price: "$455", time: "5–6 hours" },
+  { size: "3 Bed / 2 Bath", price: "$440", time: "5–6 hours" },
   { size: "4 Bed / 2.5 Bath", price: "$630", time: "6–8 hours" },
   { size: "5 Bed / 3 Bath", price: "$830+", time: "7–9 hours" },
 ];

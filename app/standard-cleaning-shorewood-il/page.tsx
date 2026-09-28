@@ -293,7 +293,7 @@ export default function StandardCleaningShorewoodPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading mb-6">How Much Does Standard Cleaning Cost in Shorewood, IL?</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Standard cleaning in Shorewood starts at {formatPrice(STANDARD_CLEANING_TIERS[0].price)} for a 2-bedroom home and scales with the
+            Standard cleaning in Shorewood starts at {formatPrice(STANDARD_CLEANING_TIERS[0].price)} for a 1-bedroom home and scales with the
             size of your home, the number of rooms, and how frequently you schedule service.
           </p>
 

@@ -8,6 +8,13 @@
  *
  * The tier figures below were verified against live BookingKoala quotes on
  * 2026-07-29. If BookingKoala changes, change it here and nowhere else.
+ *
+ * 2026-09-27: added the Standard 1 bed / 1 bath / 1,000-1,499 tier ($145),
+ * confirmed directly by the owner against BookingKoala. It was missing, so
+ * every "starting at" claim for standard cleaning floored at the 2-bed tier
+ * ($160) instead of the true minimum. Every other tier in this file was
+ * re-checked against BookingKoala's rate formula at the same time and already
+ * matched, deep and move-out included.
  */
 
 import { DEEP_OFFER, MOVEOUT_OFFER } from "./siteConstants";
@@ -29,6 +36,7 @@ export const DEEP_CLEANING_TIERS: PriceTier[] = [
 ];
 
 export const STANDARD_CLEANING_TIERS: PriceTier[] = [
+  { beds: "1 bed", baths: "1 bath", sqft: "1,000-1,499", price: 145 },
   { beds: "2 bed", baths: "1 bath", sqft: "1,000-1,499", price: 160 },
   { beds: "3 bed", baths: "2 bath", sqft: "1,500-1,999", price: 240 },
   { beds: "4 bed", baths: "2.5 bath", sqft: "2,500-2,999", price: 370 },

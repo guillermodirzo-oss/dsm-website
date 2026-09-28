@@ -27,7 +27,7 @@ const faqs = [
   {
     question: "What values are available?",
     answer:
-      "We offer gift cards in standard denominations of $100, $150, and $200 — as well as custom amounts. Popular gift card amounts correspond to specific service types: $160 covers a standard clean for a smaller home, $315 covers a deep clean, and $200 is a great partial gift toward a larger service. Call us at (815) 246-2113 to discuss the best value for your situation.",
+      "We offer gift cards in standard denominations of $100, $150, and $200 — as well as custom amounts. Popular gift card amounts correspond to specific service types: $145 covers a standard clean for a smaller home, $300 covers a deep clean, and $200 is a great partial gift toward a larger service. Call us at (815) 246-2113 to discuss the best value for your situation.",
   },
   {
     question: "How does the recipient redeem it?",
@@ -309,11 +309,11 @@ export default function GiftCardsPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <Link href="/standard-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Standard Cleaning</h3>
-              <p className="text-sm text-gray-600">Starting at $160 — ideal recurring gift.</p>
+              <p className="text-sm text-gray-600">Starting at $145 — ideal recurring gift.</p>
             </Link>
             <Link href="/deep-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning</h3>
-              <p className="text-sm text-gray-600">Starting at $315 — the ultimate home reset gift.</p>
+              <p className="text-sm text-gray-600">Starting at $300 — the ultimate home reset gift.</p>
             </Link>
             <Link href="/pricing" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Pricing</h3>

@@ -59,7 +59,7 @@ const faqs = [
     q: "How much does standard cleaning cost?",
     a: `Standard cleaning starts at ${formatPrice(
       startingPrice(STANDARD_CLEANING_TIERS)
-    )} for a 2-bedroom home. Your price depends on square footage and the number of bathrooms. Use our online booking form for an exact quote.`,
+    )} for a 1-bedroom home. Your price depends on square footage and the number of bathrooms. Use our online booking form for an exact quote.`,
   },
   {
     q: "How much does deep cleaning cost?",

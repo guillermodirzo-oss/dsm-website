@@ -42,7 +42,7 @@ const faqs = [
   {
     question: "How much does standard cleaning cost in Romeoville, IL?",
     answer:
-      `Standard cleaning in Romeoville starts at ${formatPrice(STANDARD_CLEANING_TIERS[0].price)} for a 2-bedroom home, depending on size. Recurring clients receive a discounted rate. Contact us for a free estimate tailored to your specific home.`,
+      `Standard cleaning in Romeoville starts at ${formatPrice(STANDARD_CLEANING_TIERS[0].price)} for a 1-bedroom home, depending on size. Recurring clients receive a discounted rate. Contact us for a free estimate tailored to your specific home.`,
   },
   {
     question: "Do I need to be home during my standard cleaning in Romeoville?",

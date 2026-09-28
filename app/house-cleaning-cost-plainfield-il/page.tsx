@@ -96,11 +96,14 @@ const breadcrumbSchema = {
   ],
 };
 
+// Verified against the tier tables in lib/pricing.ts: standard and move-out
+// use each bed count's only tier, and deep/move-out on the 4-bed row use
+// their 2,500-2,999 sq ft tier so it lines up with standard's only 4-bed tier.
 const pricingBySize = [
   { size: "2 Bed / 1 Bath", standard: "$160", deep: "$315", moveOut: "$410" },
-  { size: "3 Bed / 2 Bath", standard: "$225", deep: "$455", moveOut: "$490" },
-  { size: "4 Bed / 2.5 Bath", standard: "$310", deep: "$630", moveOut: "$630" },
-  { size: "5 Bed / 3 Bath", standard: "$400", deep: "$830", moveOut: "$810" },
+  { size: "3 Bed / 2 Bath", standard: "$240", deep: "$440", moveOut: "$490" },
+  { size: "4 Bed / 2.5 Bath", standard: "$370", deep: "$630", moveOut: "$630" },
+  { size: "5 Bed / 3 Bath", standard: "$530", deep: "$830", moveOut: "$810" },
 ];
 
 const factors = [
@@ -259,7 +262,7 @@ export default function HouseCleaningCostPlainfield() {
             <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
               <div className="flex items-center justify-between mb-3">
                 <h3 className="text-xl font-bold text-gray-900">Standard Cleaning</h3>
-                <span className="bg-brand-green-50 text-brand-green font-bold px-3 py-1 rounded-lg text-sm">Starting at $160</span>
+                <span className="bg-brand-green-50 text-brand-green font-bold px-3 py-1 rounded-lg text-sm">Starting at $145</span>
               </div>
               <p className="text-gray-600 leading-relaxed mb-3">
                 Our most popular service for Plainfield homeowners. Standard cleaning covers all living
@@ -388,7 +391,7 @@ export default function HouseCleaningCostPlainfield() {
             </Link>
             <Link href="/standard-cleaning-plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Standard Cleaning — Plainfield</h3>
-              <p className="text-sm text-gray-600">Recurring house cleaning starting at $160.</p>
+              <p className="text-sm text-gray-600">Recurring house cleaning starting at $145.</p>
             </Link>
             <Link href="/move-out-cleaning-plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning — Plainfield</h3>

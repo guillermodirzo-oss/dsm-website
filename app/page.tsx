@@ -83,7 +83,7 @@ const services = [
 ];
 
 const faqs = [
-  { question: "How much does house cleaning cost in Romeoville, IL?", answer: `Standard cleaning starts at ${STANDARD_FROM} for a 2-bedroom home. Deep cleans start at ${DEEP_FROM} and move-out cleans start at ${MOVEOUT_FROM}. Your price depends on bedrooms, bathrooms and square footage, and we confirm the exact total with you before anything is booked.` },
+  { question: "How much does house cleaning cost in Romeoville, IL?", answer: `Standard cleaning starts at ${STANDARD_FROM} for a 1-bedroom home. Deep cleans start at ${DEEP_FROM} and move-out cleans start at ${MOVEOUT_FROM}. Your price depends on bedrooms, bathrooms and square footage, and we confirm the exact total with you before anything is booked.` },
   { question: "Are you insured and bonded?", answer: "Yes. DSM Cleaning Solutions is fully insured and bonded. You can have complete peace of mind knowing your home and belongings are protected every time we clean." },
   { question: "Do you use eco-friendly cleaning products?", answer: "Absolutely. We use non-toxic, eco-friendly cleaning products that are safe for children, pets, and the environment. Our green cleaning approach delivers a deep clean without harsh chemicals." },
   { question: "Can I book cleaning online?", answer: "Yes. You can book online and see real available dates instantly, or call us at (815) 246-2113. We often have same-week availability." },

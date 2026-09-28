@@ -12,8 +12,13 @@ import {
   recurringPrice,
   formatDiscount,
   formatPrice,
+  startingPrice,
   tierLabel,
 } from "@/lib/pricing";
+
+// "From" price for the OG description, read from the rate card so it can't
+// drift from the actual minimum tier.
+const STANDARD_FROM = formatPrice(startingPrice(STANDARD_CLEANING_TIERS));
 
 export const metadata: Metadata = {
   title: "House Cleaning Service Romeoville IL",
@@ -22,7 +27,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/standard-cleaning" },
   openGraph: {
     title: "Standard Cleaning Service Plainfield IL | DSM Cleaning Solutions",
-    description: "Recurring house cleaning in Plainfield & Romeoville IL from $160. Vetted, insured cleaners. Weekly, bi-weekly, or monthly. 5-star rated. Free quote today.",
+    description: `Recurring house cleaning in Plainfield & Romeoville IL from ${STANDARD_FROM}. Vetted, insured cleaners. Weekly, bi-weekly, or monthly. 5-star rated. Free quote today.`,
     url: "https://www.dsmcleaningsolutions.com/standard-cleaning",
     siteName: "DSM Cleaning Solutions",
     images: [
@@ -492,7 +497,7 @@ export default function StandardCleaningPage() {
           <div className="bg-white rounded-3xl overflow-hidden shadow-2xl shadow-black/20 p-8">
             <div className="text-center mb-6">
               <div className="flex justify-center mb-1">
-                <span style={{ color: "#FFD8BC" }} className="text-2xl">★★★★★</span>
+                <span style={{ color: "#E8622A" }} className="text-2xl">★★★★★</span>
               </div>
               <p className="text-sm text-gray-500">{REVIEW_RATING} average from {REVIEW_COUNT} Google reviews</p>
             </div>
