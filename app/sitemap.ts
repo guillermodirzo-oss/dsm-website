@@ -52,16 +52,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/post-construction-cleaning`,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/airbnb-cleaning`,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
       url: `${baseUrl}/one-time-cleaning`,
       changeFrequency: "monthly",
       priority: 0.85,
@@ -417,37 +407,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/eco-friendly-cleaning-plainfield-il`,
-      changeFrequency: "monthly" as const,
-      priority: 0.85,
-    },
-    {
       url: `${baseUrl}/pet-friendly-cleaning`,
       changeFrequency: "monthly" as const,
       priority: 0.85,
     },
     {
       url: `${baseUrl}/cleaning-for-allergies`,
-      changeFrequency: "monthly" as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/apartment-cleaning-naperville-il`,
-      changeFrequency: "monthly" as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/airbnb-cleaning-naperville-il`,
-      changeFrequency: "monthly" as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/condo-cleaning-naperville-il`,
-      changeFrequency: "monthly" as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/post-construction-cleaning-naperville-il`,
       changeFrequency: "monthly" as const,
       priority: 0.85,
     },

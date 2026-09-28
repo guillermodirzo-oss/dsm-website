@@ -91,9 +91,9 @@ export default function HinsdalePage() {
               <h3 className="font-bold text-gray-900 mb-1">Recurring Maid Service Hinsdale</h3>
               <p className="text-sm text-gray-600">Weekly, biweekly, or monthly cleaning for Hinsdale homeowners — consistent, professional.</p>
             </Link>
-            <Link href="/post-construction-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Post-Renovation Cleaning Hinsdale</h3>
-              <p className="text-sm text-gray-600">Specialized cleaning after remodels and renovations in Hinsdale luxury homes.</p>
+            <Link href="/move-out-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Move-In / Move-Out Cleaning Hinsdale</h3>
+              <p className="text-sm text-gray-600">Deposit-back move-out cleaning, or a fresh move-in clean before you settle into your Hinsdale home.</p>
             </Link>
           </div>
         </div>

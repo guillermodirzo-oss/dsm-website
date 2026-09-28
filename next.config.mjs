@@ -186,19 +186,23 @@ const nextConfig = {
         destination: "/eco-friendly-cleaning",
         permanent: true,
       },
+      // DSM no longer offers post-construction or Airbnb/short-term-rental
+      // cleaning as of 2026-09-27. These used to point at dedicated pages;
+      // now they point straight at the closest active service so no one
+      // hits a chain.
       {
         source: "/post-construction",
-        destination: "/post-construction-cleaning",
+        destination: "/deep-cleaning",
         permanent: true,
       },
       {
         source: "/airbnb",
-        destination: "/airbnb-cleaning",
+        destination: "/recurring-cleaning",
         permanent: true,
       },
       {
         source: "/short-term-rental",
-        destination: "/airbnb-cleaning",
+        destination: "/recurring-cleaning",
         permanent: true,
       },
       {
@@ -334,6 +338,94 @@ const nextConfig = {
       {
         source: "/reauth-card",
         destination: "https://dsmcleaningsolutions.bookingkoala.com/login",
+        permanent: true,
+      },
+
+      // ─── FOCUS ON 3 CORE SERVICES (2026-09-27) ────────────────────────────
+      // DSM no longer offers post-construction or Airbnb/short-term-rental
+      // cleaning. Every page for either service is deleted; these send
+      // anyone who still has the old URL to the closest active service.
+      {
+        source: "/post-construction-cleaning",
+        destination: "/deep-cleaning",
+        permanent: true,
+      },
+      {
+        source: "/post-construction-cleaning-naperville-il",
+        destination: "/deep-cleaning",
+        permanent: true,
+      },
+      {
+        source: "/blog/post-construction-cleaning-romeoville-il",
+        destination: "/deep-cleaning",
+        permanent: true,
+      },
+      {
+        source: "/airbnb-cleaning",
+        destination: "/recurring-cleaning",
+        permanent: true,
+      },
+      {
+        source: "/airbnb-cleaning-naperville-il",
+        destination: "/recurring-cleaning",
+        permanent: true,
+      },
+
+      // Apartment and condo cleaning consolidate onto the one /apartment-cleaning
+      // hub instead of splitting Naperville-specific pages off on their own.
+      {
+        source: "/apartment-cleaning-naperville-il",
+        destination: "/apartment-cleaning",
+        permanent: true,
+      },
+      {
+        source: "/condo-cleaning-naperville-il",
+        destination: "/apartment-cleaning",
+        permanent: true,
+      },
+
+      // Eco-friendly cleaning consolidates onto the one /eco-friendly-cleaning
+      // page instead of a separate Plainfield page.
+      {
+        source: "/eco-friendly-cleaning-plainfield-il",
+        destination: "/eco-friendly-cleaning",
+        permanent: true,
+      },
+
+      // Duplicate blog posts that competed with an existing service page for
+      // the same keyword. The service page is the better page, so the post
+      // is gone and the URL forwards there.
+      {
+        source: "/blog/how-much-does-deep-cleaning-cost-naperville-il",
+        destination: "/deep-cleaning-cost-naperville-il",
+        permanent: true,
+      },
+      {
+        source: "/blog/move-out-cleaning-checklist-naperville-il",
+        destination: "/move-out-cleaning-naperville-il",
+        permanent: true,
+      },
+      {
+        source: "/blog/house-cleaning-services-bolingbrook-il",
+        destination: "/bolingbrook-il",
+        permanent: true,
+      },
+      {
+        source: "/blog/deep-cleaning-service-naperville-il",
+        destination: "/deep-cleaning-naperville-il",
+        permanent: true,
+      },
+
+      // Old blog URLs still showing up in Search Console. Both 404 today.
+      {
+        source:
+          "/blog/say-goodbye-to-cleaning-stress---why-our-one-time-and-recurring-cleaning-services-are-the-best-choi",
+        destination: "/recurring-cleaning",
+        permanent: true,
+      },
+      {
+        source: "/blog/premium-cleaning-services",
+        destination: "/",
         permanent: true,
       },
     ];

@@ -77,7 +77,7 @@ const faqSchema = {
       name: "What cleaning services are available in Plainfield, IL?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We offer standard house cleaning, deep cleaning, move-out and move-in cleaning, weekly/biweekly/monthly recurring maid service, apartment cleaning, eco-friendly green cleaning, post-construction cleaning, and Airbnb turnover cleaning — all available in Plainfield, IL.",
+        text: "We offer standard house cleaning, deep cleaning, move-out and move-in cleaning, weekly/biweekly/monthly recurring maid service, apartment cleaning, and eco-friendly green cleaning — all available in Plainfield, IL.",
       },
     },
   ],
@@ -107,7 +107,7 @@ const faqs = [
   {
     question: "What cleaning services are available in Plainfield, IL?",
     answer:
-      "We offer standard house cleaning, deep cleaning, move-out and move-in cleaning, weekly/biweekly/monthly recurring maid service, apartment cleaning, eco-friendly green cleaning, post-construction cleaning, and Airbnb turnover cleaning.",
+      "We offer standard house cleaning, deep cleaning, move-out and move-in cleaning, weekly/biweekly/monthly recurring maid service, apartment cleaning, and eco-friendly green cleaning.",
   },
   {
     question: "How much does house cleaning cost in Plainfield, IL?",

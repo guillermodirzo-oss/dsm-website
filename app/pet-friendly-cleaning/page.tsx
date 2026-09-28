@@ -306,22 +306,22 @@ export default function PetFriendlyCleaningPage() {
         </div>
       </section>
 
-      {/* RELATED LINKS */}
+      {/* RELATED LINKS. Covers all 3 core services, each in a pet-home context. */}
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Cleaning Services</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Link href="/eco-friendly-cleaning" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Eco-Friendly Cleaning</h3>
-              <p className="text-sm text-gray-600">Our full green cleaning service across the southwest suburbs.</p>
+            <Link href="/move-out-cleaning" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning</h3>
+              <p className="text-sm text-gray-600">Moving with pets? We clean up pet hair and odor landlords check for.</p>
             </Link>
             <Link href="/deep-cleaning" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning</h3>
               <p className="text-sm text-gray-600">Top-to-bottom pet-safe deep cleaning for heavy dander and hair buildup.</p>
             </Link>
-            <Link href="/standard-cleaning" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Standard Cleaning</h3>
-              <p className="text-sm text-gray-600">Regular recurring cleaning for pet homes using safe products.</p>
+            <Link href="/recurring-cleaning" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Recurring Cleaning</h3>
+              <p className="text-sm text-gray-600">Weekly, biweekly, or monthly cleaning for pet homes using safe products.</p>
             </Link>
             <Link href="/contact" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Get a Free Quote</h3>

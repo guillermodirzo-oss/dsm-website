@@ -246,6 +246,29 @@ export default function ApartmentCleaningPage() {
         </div>
       </section>
 
+      {/* WHICH SERVICE. Renters and owners land here for "apartment cleaning"
+          broadly, then need pointing to whichever of the 3 core services
+          actually fits their situation. */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-xl font-bold text-gray-900 mb-5">Which Service Fits Your Apartment?</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <Link href="/move-out-cleaning" className="bg-white rounded-2xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Moving Out of Your Apartment?</h3>
+              <p className="text-sm text-gray-500">Our move-out cleaning is built to help you get your full deposit back.</p>
+            </Link>
+            <Link href="/recurring-cleaning" className="bg-white rounded-2xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Want It Kept Clean Every Week or Two?</h3>
+              <p className="text-sm text-gray-500">Set up a weekly, biweekly, or monthly recurring plan for your unit.</p>
+            </Link>
+            <Link href="/deep-cleaning" className="bg-white rounded-2xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Need a One-Time Deep Reset?</h3>
+              <p className="text-sm text-gray-500">A thorough top-to-bottom clean, no ongoing commitment required.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CONTACT */}
       <section id="contact" className="py-20 bg-gradient-to-br from-orange-500 to-orange-600">
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

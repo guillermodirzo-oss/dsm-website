@@ -5,12 +5,12 @@ import ReviewCard from "@/components/ReviewCard";
 import { pickReviews, reviewAttribution } from "@/lib/realReviews";
 
 export const metadata: Metadata = {
-  title: "Eco-Friendly Cleaning Plainfield IL",
+  title: "Eco-Friendly Cleaning Romeoville IL",
   description: "Green, non-toxic house cleaning in Plainfield, IL. Safe for kids & pets. Professional eco products. No harsh chemicals. Fully insured. Free estimate.",
   keywords: ["eco-friendly cleaning Romeoville IL", "green cleaning service Romeoville", "non-toxic house cleaning Romeoville", "natural cleaning service Romeoville IL", "safe cleaning products Romeoville", "organic cleaning Romeoville IL"],
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/eco-friendly-cleaning" },
   openGraph: {
-    title: "Eco-Friendly Cleaning Plainfield IL | DSM Cleaning Solutions",
+    title: "Eco-Friendly Cleaning Romeoville IL | DSM Cleaning Solutions",
     description: "Green, non-toxic house cleaning in Plainfield, IL. Safe for kids & pets. Professional eco products. No harsh chemicals. Fully insured. Free estimate.",
     url: "https://www.dsmcleaningsolutions.com/eco-friendly-cleaning",
     siteName: "DSM Cleaning Solutions",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Eco-Friendly Cleaning Plainfield IL | DSM Cleaning Solutions",
+    title: "Eco-Friendly Cleaning Romeoville IL | DSM Cleaning Solutions",
     description: "Green, non-toxic house cleaning in Plainfield, IL. Safe for kids & pets. Professional eco products. No harsh chemicals.",
     images: ["/hero-image.png"],
   },
@@ -204,6 +204,29 @@ export default function EcoFriendlyCleaningPage() {
                 <div className="px-5 pb-5 pt-1"><p className="text-gray-500 leading-relaxed text-sm">{faq.answer}</p></div>
               </details>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* WHICH SERVICE. Eco-friendly products are used on every job regardless
+          of which service is booked, so this points to whichever of the 3
+          core services actually fits. */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-xl font-bold text-gray-900 mb-5">Which Service Fits Your Home?</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <Link href="/move-out-cleaning" className="bg-white rounded-2xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Moving Out?</h3>
+              <p className="text-sm text-gray-500">Our move-out cleaning uses the same eco-friendly products, built to get your deposit back.</p>
+            </Link>
+            <Link href="/recurring-cleaning" className="bg-white rounded-2xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Want It Kept Clean Every Week or Two?</h3>
+              <p className="text-sm text-gray-500">Set up a weekly, biweekly, or monthly recurring plan.</p>
+            </Link>
+            <Link href="/deep-cleaning" className="bg-white rounded-2xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Need a One-Time Deep Reset?</h3>
+              <p className="text-sm text-gray-500">A thorough top-to-bottom clean, no ongoing commitment required.</p>
+            </Link>
           </div>
         </div>
       </section>

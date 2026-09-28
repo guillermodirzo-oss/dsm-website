@@ -33,24 +33,31 @@ export default function Footer() {
             <p className="text-xs text-gray-600 mt-1">Free estimates available</p>
           </div>
 
-          {/* Services */}
+          {/* Services. Core 3 first (Recurring/Standard, Deep, Move-Out/Move-In),
+              matching the nav. The niche pages below aren't in the nav or the
+              homepage anymore, so this list is their only internal link —
+              removing one here would strand that page. */}
           <div>
             <h3 className="text-white font-bold text-sm uppercase tracking-widest mb-5">Services</h3>
             <ul className="space-y-2.5 text-sm">
               {[
-                { label: "Deep Cleaning", href: "/deep-cleaning" },
-                { label: "Move-Out / Move-In Cleaning", href: "/move-out-cleaning" },
                 { label: "Recurring Maid Service", href: "/recurring-cleaning" },
                 { label: "Standard House Cleaning", href: "/standard-cleaning" },
+                { label: "Deep Cleaning", href: "/deep-cleaning" },
+                { label: "Move-Out / Move-In Cleaning", href: "/move-out-cleaning" },
+              ].map((item) => (
+                <li key={item.label}><Link href={item.href} className="hover:text-white transition-colors">{item.label}</Link></li>
+              ))}
+            </ul>
+            <h3 className="text-white font-bold text-sm uppercase tracking-widest mb-5 mt-6">More Services</h3>
+            <ul className="space-y-2.5 text-sm">
+              {[
                 { label: "Eco-Friendly Green Cleaning", href: "/eco-friendly-cleaning" },
                 { label: "Apartment Cleaning", href: "/apartment-cleaning" },
-                { label: "Post-Construction Cleaning", href: "/post-construction-cleaning" },
-                { label: "Airbnb / Short-Term Rental", href: "/airbnb-cleaning" },
-                // Homepage no longer cards this one, so the footer is its only
-                // internal link. Removing it would strand the page.
                 { label: "One-Time Cleaning", href: "/one-time-cleaning" },
+                { label: "Pet-Friendly Cleaning", href: "/pet-friendly-cleaning" },
               ].map((item) => (
-                <li key={item.label}><Link href={item.href} {...(item.href.startsWith("https://") ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="hover:text-white transition-colors">{item.label}</Link></li>
+                <li key={item.label}><Link href={item.href} className="hover:text-white transition-colors">{item.label}</Link></li>
               ))}
             </ul>
           </div>

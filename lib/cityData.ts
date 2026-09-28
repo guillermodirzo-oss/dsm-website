@@ -294,7 +294,7 @@ export const cities: CityData[] = [
       {
         question: "What cleaning services are available in Joliet, IL?",
         answer:
-          "Full range: standard, deep, move-out/in, recurring, apartment, eco-friendly, post-construction, Airbnb.",
+          "Full range: standard, deep, move-out/in, recurring, apartment, eco-friendly.",
       },
       {
         question: "How much does house cleaning cost in Joliet?",
@@ -490,7 +490,7 @@ export const cities: CityData[] = [
       {
         question: "What cleaning services are available in Lockport?",
         answer:
-          "Standard, deep, move-out/in, recurring, eco-friendly, post-construction, and Airbnb turnover.",
+          "Standard, deep, move-out/in, recurring, and eco-friendly.",
       },
       {
         question: "Are you insured to clean in Lockport?",
@@ -593,7 +593,7 @@ export const cities: CityData[] = [
       {
         question: "What services are available in Lemont?",
         answer:
-          "Standard, deep, move-out/in, recurring, eco-friendly, post-construction, and Airbnb cleaning.",
+          "Standard, deep, move-out/in, recurring, and eco-friendly.",
       },
       {
         question: "Are your products safe for children and pets?",
@@ -701,7 +701,7 @@ export const cities: CityData[] = [
       {
         question: "What services are available in Homer Glen?",
         answer:
-          "Standard, deep, move-out/in, recurring, eco-friendly, post-construction, Airbnb.",
+          "Standard, deep, move-out/in, recurring, eco-friendly.",
       },
       {
         question: "How do I get a cleaning quote in Homer Glen?",
@@ -799,7 +799,7 @@ export const cities: CityData[] = [
       {
         question: "What services are available in New Lenox?",
         answer:
-          "Standard, deep, move-out/in, recurring, eco-friendly, apartment, post-construction, Airbnb.",
+          "Standard, deep, move-out/in, recurring, eco-friendly, apartment.",
       },
       {
         question: "Is there a contract for recurring service in New Lenox?",
@@ -902,7 +902,7 @@ export const cities: CityData[] = [
       {
         question: "What services are available in Shorewood?",
         answer:
-          "Standard, deep, move-out/in, recurring, eco-friendly, post-construction, Airbnb.",
+          "Standard, deep, move-out/in, recurring, eco-friendly.",
       },
       {
         question: "How often can you clean my Shorewood home?",
@@ -1230,7 +1230,7 @@ export const cities: CityData[] = [
       {
         question: "What cleaning services are available in Minooka?",
         answer:
-          "Standard, deep, move-out/in, recurring, eco-friendly, post-construction, Airbnb.",
+          "Standard, deep, move-out/in, recurring, eco-friendly.",
       },
       {
         question: "How do I book cleaning in Minooka?",
@@ -1415,12 +1415,6 @@ export const cities: CityData[] = [
         desc: "Non-toxic, biodegradable cleaning products — safe for your family and protective of your home's premium finishes.",
         link: "/eco-friendly-cleaning",
       },
-      {
-        icon: "🏗️",
-        title: "Post-Construction Cleaning Hinsdale",
-        desc: "Specialized cleaning after remodels and renovations in Hinsdale — dust, debris, and construction residue removed.",
-        link: "/post-construction-cleaning",
-      },
     ],
     faqs: [
       {
@@ -1442,11 +1436,6 @@ export const cities: CityData[] = [
         question: "Will you always send the same team to my Hinsdale home?",
         answer:
           "We do our best to send the same team every visit so they learn your home's specific preferences and layout. Consistency is especially important for our recurring Hinsdale clients.",
-      },
-      {
-        question: "Do you offer post-renovation cleaning in Hinsdale?",
-        answer:
-          "Yes — post-construction cleaning after kitchen remodels, bathroom renovations, and additions is a specialty service we offer for Hinsdale homeowners.",
       },
       {
         question: "What neighborhoods in Hinsdale does DSM serve?",
@@ -1517,12 +1506,6 @@ export const cities: CityData[] = [
         title: "Eco-Friendly Cleaning Oak Brook",
         desc: "Non-toxic, biodegradable cleaning products — safe for your family and your home's premium finishes.",
         link: "/eco-friendly-cleaning",
-      },
-      {
-        icon: "🏗️",
-        title: "Post-Construction Cleaning Oak Brook",
-        desc: "Specialized cleaning after renovations and remodels in Oak Brook luxury homes.",
-        link: "/post-construction-cleaning",
       },
     ],
     faqs: [
@@ -1620,12 +1603,6 @@ export const cities: CityData[] = [
         title: "Eco-Friendly Cleaning Burr Ridge",
         desc: "Non-toxic, biodegradable products — safe for your family and protective of your home's premium finishes.",
         link: "/eco-friendly-cleaning",
-      },
-      {
-        icon: "🏗️",
-        title: "Post-Construction Cleaning Burr Ridge",
-        desc: "Specialized post-renovation cleaning for Burr Ridge custom homes and remodels.",
-        link: "/post-construction-cleaning",
       },
     ],
     faqs: [

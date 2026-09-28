@@ -91,9 +91,9 @@ export default function OakBrookPage() {
               <h3 className="font-bold text-gray-900 mb-1">Recurring Maid Service Oak Brook</h3>
               <p className="text-sm text-gray-600">Weekly, biweekly, or monthly professional cleaning for Oak Brook homes.</p>
             </Link>
-            <Link href="/post-construction-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Post-Renovation Cleaning Oak Brook</h3>
-              <p className="text-sm text-gray-600">Specialized cleaning after remodels and renovations in Oak Brook luxury properties.</p>
+            <Link href="/move-out-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+              <h3 className="font-bold text-gray-900 mb-1">Move-In / Move-Out Cleaning Oak Brook</h3>
+              <p className="text-sm text-gray-600">Deposit-back move-out cleaning, or a fresh move-in clean for your new Oak Brook home.</p>
             </Link>
           </div>
         </div>

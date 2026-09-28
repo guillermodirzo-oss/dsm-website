@@ -61,10 +61,10 @@ export const metadata: Metadata = {
 const services = [
   {
     icon: "🏠",
-    title: "House Cleaning",
+    title: "Recurring Cleaning",
     description:
       "Your regular clean, whether that is every week or just the once. Weekly, biweekly and monthly plans cost less per visit.",
-    slug: "/standard-cleaning",
+    slug: "/recurring-cleaning",
   },
   {
     icon: "🧹",

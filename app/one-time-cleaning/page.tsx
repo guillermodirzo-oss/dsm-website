@@ -5,12 +5,12 @@ import ReviewCard from "@/components/ReviewCard";
 import { pickReviews, reviewAttribution } from "@/lib/realReviews";
 
 export const metadata: Metadata = {
-  title: "One-Time Cleaning Plainfield IL",
+  title: "One-Time Cleaning Romeoville IL",
   description: "No-commitment one-time cleaning in Plainfield, IL. Great for events, moving, or seasonal resets. Eco-friendly & insured. Free estimate — no contract.",
   keywords: ["one time cleaning Romeoville IL", "one time house cleaning Romeoville", "single visit cleaning Romeoville", "no contract cleaning Romeoville IL", "house cleaning no commitment Romeoville", "one time maid service Romeoville IL"],
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/one-time-cleaning" },
   openGraph: {
-    title: "One-Time Cleaning Plainfield IL | DSM Cleaning Solutions",
+    title: "One-Time Cleaning Romeoville IL | DSM Cleaning Solutions",
     description: "No-commitment one-time cleaning in Plainfield, IL. Great for events, moving, or seasonal resets. Eco-friendly & insured. Free estimate — no contract.",
     url: "https://www.dsmcleaningsolutions.com/one-time-cleaning",
     siteName: "DSM Cleaning Solutions",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "One-Time Cleaning Plainfield IL | DSM Cleaning Solutions",
+    title: "One-Time Cleaning Romeoville IL | DSM Cleaning Solutions",
     description: "No-commitment one-time cleaning in Plainfield, IL. Great for events, moving, or seasonal resets. Eco-friendly & insured.",
     images: ["/hero-image.png"],
   },
@@ -219,7 +219,7 @@ export default function OneTimeCleaningPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-xl font-bold text-gray-900 mb-5">Explore Other Services</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <Link href="/standard-cleaning" className="bg-white rounded-2xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all"><h3 className="font-bold text-gray-900 mb-1">Standard Cleaning</h3><p className="text-sm text-gray-500">Upgrade to a recurring plan and save up to 20%.</p></Link>
+            <Link href="/recurring-cleaning" className="bg-white rounded-2xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all"><h3 className="font-bold text-gray-900 mb-1">Recurring Cleaning</h3><p className="text-sm text-gray-500">Liked it once? Set up a weekly, biweekly, or monthly plan and save.</p></Link>
             <Link href="/deep-cleaning" className="bg-white rounded-2xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all"><h3 className="font-bold text-gray-900 mb-1">Deep Cleaning</h3><p className="text-sm text-gray-500">Need more than a standard clean? Add a deep clean package.</p></Link>
             <Link href="/move-out-cleaning" className="bg-white rounded-2xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all"><h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning</h3><p className="text-sm text-gray-500">Moving soon? Our move-out clean ensures you get your deposit back.</p></Link>
           </div>
