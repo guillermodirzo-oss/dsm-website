@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
+import Offer from "@/components/Offer";
 import { StickyMobileBar } from "@/components/HomepageScrollWidgets";
 import { reviewByName, reviewExcerpt, reviewAttribution } from "@/lib/realReviews";
 import {
   MOVE_OUT_TIERS,
   FREQUENCY_DISCOUNTS,
-  isOfferActive,
-  discountedPrice,
+  offerPrice,
   formatDiscount,
   formatPrice,
   startingPrice,
@@ -16,8 +16,9 @@ import {
 } from "@/lib/pricing";
 import { MOVEOUT_OFFER, REVIEW_COUNT, REVIEW_RATING } from "@/lib/siteConstants";
 
-// Re-render hourly so the MOVE75 offer drops off on its own once it ends,
-// same pattern as /deep-cleaning, /recurring-cleaning and /pricing.
+// Regenerate at most hourly so MOVE75 drops out of the HTML on its own after
+// it ends. <Offer> also hides it in the browser at the deadline. See
+// components/Offer.tsx.
 export const revalidate = 3600;
 
 // Every price on this page comes from MOVE_OUT_TIERS, never a typed number.
@@ -281,11 +282,6 @@ const ALINA_EXCERPT = reviewExcerpt(alina, [
 const moreMoveReviews = [reviewByName("Thomas Cheng")];
 
 export default function MoveOutCleaningPage() {
-  // Evaluated at render time; with revalidate above, the page drops the offer
-  // within an hour of it ending, no code change needed.
-  const offerLive = isOfferActive("moveout");
-  const threeBedSale = discountedPrice(THREE_BED.price, "moveout");
-
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
@@ -333,7 +329,7 @@ export default function MoveOutCleaningPage() {
             You don&apos;t even need to be there. Leave a lockbox and we&apos;ll text you photos when we&apos;re done.
           </p>
 
-          {offerLive && (
+          <Offer service="moveout">
             <div className="mb-5">
               <a
                 href="#quote-form"
@@ -343,10 +339,10 @@ export default function MoveOutCleaningPage() {
                 ${MOVEOUT_OFFER.discount} off your move-out or move-in clean.
               </a>
               <p className="mt-2 text-sm text-white/70">
-                Use code <span className="font-bold text-white">{MOVEOUT_OFFER.code}</span>.
+                Use code <span className="font-bold text-white">{MOVEOUT_OFFER.code}</span> through {MOVEOUT_OFFER.endDate}.
               </p>
             </div>
-          )}
+          </Offer>
 
           <div className="flex flex-wrap gap-3 justify-center">
             <Link
@@ -366,7 +362,10 @@ export default function MoveOutCleaningPage() {
 
           <p className="text-sm md:text-base mt-5 opacity-80">
             Most 3 bedroom homes are {formatPrice(THREE_BED.price)}
-            {threeBedSale !== null && <>, or {formatPrice(threeBedSale)} with {MOVEOUT_OFFER.code}</>}.
+            <Offer service="moveout">
+              , or {formatPrice(offerPrice(THREE_BED.price, "moveout"))} with {MOVEOUT_OFFER.code} through {MOVEOUT_OFFER.endDate}
+            </Offer>
+            .
           </p>
         </div>
       </section>
@@ -420,17 +419,17 @@ export default function MoveOutCleaningPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             {priceCards.map((tier) => {
-              const sale = discountedPrice(tier.price, "moveout");
               return (
                 <div key={`${tier.beds}-${tier.sqft}`} className="bg-white rounded-2xl border border-gray-100 p-6 text-center shadow-sm">
                   <h3 className="font-bold text-lg text-gray-900 mb-1">{tier.beds} / {tier.baths}</h3>
                   <p className="text-xs text-gray-500 mb-4">{tier.sqft.replace("-", " to ")} sq ft</p>
-                  <p className="text-3xl font-bold text-gray-900">{formatPrice(tier.price)}</p>
-                  {/* min-h keeps every card the same height with or without
-                      the offer line, so nothing jumps when it expires. */}
-                  <p className="text-sm font-semibold mt-1 mb-5 min-h-[1.25rem]" style={{ color: "#E8622A" }}>
-                    {sale !== null && <>{formatPrice(sale)} with {MOVEOUT_OFFER.code}</>}
-                  </p>
+                  <p className="text-3xl font-bold text-gray-900 mb-5">{formatPrice(tier.price)}</p>
+                  <Offer service="moveout">
+                    <p className="text-sm font-semibold -mt-4 mb-5" style={{ color: "#E8622A" }}>
+                      {formatPrice(offerPrice(tier.price, "moveout"))} with {MOVEOUT_OFFER.code}
+                      <span className="block text-xs font-medium text-gray-500">through {MOVEOUT_OFFER.endDate}</span>
+                    </p>
+                  </Offer>
                   <Link
                     href="/book"
                     className="block w-full text-white font-bold py-3 rounded-lg hover:opacity-90 transition"
@@ -631,10 +630,12 @@ export default function MoveOutCleaningPage() {
                 </summary>
                 <div className="px-5 pb-4 text-gray-600 text-sm leading-relaxed">
                   <p>{faq.a}</p>
-                  {i === 0 && offerLive && (
-                    <p className="mt-2 font-semibold" style={{ color: "#E8622A" }}>
-                      Right now, code {MOVEOUT_OFFER.code} takes ${MOVEOUT_OFFER.discount} off.
-                    </p>
+                  {i === 0 && (
+                    <Offer service="moveout">
+                      <p className="mt-2 font-semibold" style={{ color: "#E8622A" }}>
+                        Right now, code {MOVEOUT_OFFER.code} takes ${MOVEOUT_OFFER.discount} off through {MOVEOUT_OFFER.endDate}.
+                      </p>
+                    </Offer>
                   )}
                   {faq.q === "What areas do you serve?" && (
                     <p className="mt-2">

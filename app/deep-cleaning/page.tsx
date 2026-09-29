@@ -4,20 +4,19 @@ import { REAL_REVIEWS, pickReviews, reviewAttribution } from "@/lib/realReviews"
 import Image from "next/image";
 import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 import { StickyMobileBar } from "@/components/HomepageScrollWidgets";
+import Offer from "@/components/Offer";
 import {
   DEEP_CLEANING_TIERS,
-  OFFERS,
-  isOfferActive,
-  discountedPrice,
+  offerPrice,
   formatPrice,
   startingPrice,
   tierLabel,
 } from "@/lib/pricing";
 import { DEEP_OFFER, REVIEW_COUNT, REVIEW_RATING } from "@/lib/siteConstants";
 
-// Re-render hourly so the FALL75 offer expires on its own after
-// OFFERS.deep.endDate without anyone shipping a change. Same pattern as
-// app/pricing/page.tsx.
+// Regenerate at most hourly so FALL75 drops out of the HTML on its own after
+// it ends. <Offer> also hides it in the browser at the deadline. See
+// components/Offer.tsx.
 export const revalidate = 3600;
 
 // "From" price and review figures come from the rate card and siteConstants,
@@ -160,11 +159,6 @@ const checklist = [
 ];
 
 export default function DeepCleaningPage() {
-  // Evaluated at render time. With revalidate = 3600 above, the offer stops
-  // showing within an hour of OFFERS.deep.endDate passing, with no code change.
-  const offerLive = isOfferActive("deep");
-  const deepOffer = OFFERS.deep;
-
   return (
     <>
       <script
@@ -225,9 +219,9 @@ export default function DeepCleaningPage() {
               overlay, matching the homepage badge exactly rather than the
               cream variant needed against the old flat gradient. Terms mirror
               /book and the homepage, including the $40 oven cleaning value.
-              Gated on isOfferActive() so the block disappears with no code
-              change once OFFER.endDate passes. */}
-          {offerLive && (
+              Gated by <Offer> so the block disappears on its own once
+              FALL75 ends. */}
+          <Offer service="deep">
             <div className="mb-6">
               <a
                 href="#quote-form"
@@ -240,7 +234,7 @@ export default function DeepCleaningPage() {
                 Use code <span className="font-bold text-white">{DEEP_OFFER.code}</span> through {DEEP_OFFER.endDate}.
               </p>
             </div>
-          )}
+          </Offer>
 
           <div className="flex flex-wrap gap-3 justify-center">
             <a
@@ -483,11 +477,11 @@ export default function DeepCleaningPage() {
             <h2 className="text-2xl font-bold text-gray-800 mb-2">
               Deep Cleaning Pricing
             </h2>
-            {offerLive && deepOffer && (
+            <Offer service="deep">
               <p className="text-sm font-bold" style={{ color: "#E8622A" }}>
-                ${deepOffer.discount} off every deep clean with code {deepOffer.code}, through {DEEP_OFFER.endDate}.
+                ${DEEP_OFFER.discount} off every deep clean with code {DEEP_OFFER.code}, through {DEEP_OFFER.endDate}.
               </p>
-            )}
+            </Offer>
           </div>
 
           {/* Same tier ladder and struck-price treatment as /pricing, so a
@@ -499,27 +493,22 @@ export default function DeepCleaningPage() {
             <div className="space-y-3">
               {DEEP_CLEANING_TIERS.map((tier) => {
                 const label = tierLabel(tier);
-                const sale = discountedPrice(tier.price, "deep");
                 return (
                   <div key={label} className="flex items-center justify-between gap-3 border-b border-gray-100 pb-3 last:border-0 last:pb-0">
                     <span className="text-sm text-gray-600 leading-tight">{label}</span>
                     {/* min-h keeps the row the same height whether or not a
                         struck price is present, so CLS stays at 0. */}
                     <span className="text-lg font-bold text-gray-900 whitespace-nowrap flex-shrink-0 min-h-[1.75rem] flex items-center gap-2">
-                      {sale === null ? (
-                        <>Starting at {formatPrice(tier.price)}</>
-                      ) : (
-                        <>
-                          <s className="text-sm font-medium text-gray-400">
-                            <span className="sr-only">Regular price </span>
-                            {formatPrice(tier.price)}
-                          </s>
-                          <span style={{ color: "#E8622A" }}>
-                            <span className="sr-only">Sale price </span>
-                            {formatPrice(sale)}
-                          </span>
-                        </>
-                      )}
+                      <Offer service="deep" fallback={<>Starting at {formatPrice(tier.price)}</>}>
+                        <s className="text-sm font-medium text-gray-400">
+                          <span className="sr-only">Regular price </span>
+                          {formatPrice(tier.price)}
+                        </s>
+                        <span style={{ color: "#E8622A" }}>
+                          <span className="sr-only">Sale price </span>
+                          {formatPrice(offerPrice(tier.price, "deep"))}
+                        </span>
+                      </Offer>
                     </span>
                   </div>
                 );

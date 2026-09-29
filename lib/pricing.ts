@@ -18,6 +18,7 @@
  */
 
 import { DEEP_OFFER, MOVEOUT_OFFER } from "./siteConstants";
+import { offerNow } from "./offerTime";
 
 export interface PriceTier {
   beds: string; // "1 bed"
@@ -59,7 +60,9 @@ export type ServiceKey = "standard" | "deep" | "moveout";
 export interface Offer {
   code: string;
   discount: number;
-  endDate: string; // inclusive, YYYY-MM-DD
+  endDate: string; // last day, inclusive, YYYY-MM-DD, Central Time
+  endLabel: string; // "October 31"
+  expiresAt: string; // ISO instant: 11:59:59 PM Central on endDate
 }
 
 /**
@@ -71,28 +74,36 @@ export interface Offer {
  * lib/siteConstants.ts, so that file is the one place to change either offer.
  */
 export const OFFERS: Partial<Record<ServiceKey, Offer>> = {
-  deep: { code: DEEP_OFFER.code, discount: DEEP_OFFER.discount, endDate: DEEP_OFFER.endDateISO },
-  moveout: { code: MOVEOUT_OFFER.code, discount: MOVEOUT_OFFER.discount, endDate: MOVEOUT_OFFER.endDateISO },
+  deep: {
+    code: DEEP_OFFER.code,
+    discount: DEEP_OFFER.discount,
+    endDate: DEEP_OFFER.endDateISO,
+    endLabel: DEEP_OFFER.endDate,
+    expiresAt: DEEP_OFFER.expiresAt,
+  },
+  moveout: {
+    code: MOVEOUT_OFFER.code,
+    discount: MOVEOUT_OFFER.discount,
+    endDate: MOVEOUT_OFFER.endDateISO,
+    endLabel: MOVEOUT_OFFER.endDate,
+    expiresAt: MOVEOUT_OFFER.expiresAt,
+  },
 };
 
 /**
- * True while this service's offer is live. False if the service has no offer
- * at all, or its endDate has passed. Auto-reverts with no code change.
+ * True while this service's offer is live: until 11:59:59 PM Central on its
+ * last day. False if the service has no offer at all, or it has ended.
  *
- * NOTE ON STATIC PAGES: this is evaluated at render time, and these pages are
- * statically generated, so the flip to false will not appear on the live site
- * until the page is rebuilt or revalidated. app/pricing/page.tsx sets
- * `export const revalidate = 3600` so it re-renders hourly and expires on its
- * own without anyone shipping a change.
- *
- * endDate is inclusive, so the offer runs through the last moment of that day
- * in the server's local time.
+ * Call this at render time, never at module scope: a warm server keeps
+ * module-level values between regenerations, so a module-scope check would
+ * go stale. On its own this only updates when a page regenerates, so pages
+ * render offers through components/Offer.tsx, which also re-checks in the
+ * browser. See that file for how expiry works without a deploy.
  */
-export function isOfferActive(service: ServiceKey, now = new Date()): boolean {
+export function isOfferActive(service: ServiceKey, now = offerNow()): boolean {
   const offer = OFFERS[service];
   if (!offer) return false;
-  const end = new Date(`${offer.endDate}T23:59:59.999`);
-  return now.getTime() <= end.getTime();
+  return now.getTime() <= new Date(offer.expiresAt).getTime();
 }
 
 /**
@@ -103,12 +114,21 @@ export function isOfferActive(service: ServiceKey, now = new Date()): boolean {
 export function discountedPrice(
   price: number,
   service: ServiceKey,
-  now = new Date()
+  now = offerNow()
 ): number | null {
   const offer = OFFERS[service];
   if (!offer) return null;
   if (!isOfferActive(service, now)) return null;
   return price - offer.discount;
+}
+
+/**
+ * The offer price with no date check, for content already inside an <Offer>
+ * gate (the gate decides whether it shows). Never null, so it is safe to
+ * format even when the gate is about to render its fallback instead.
+ */
+export function offerPrice(price: number, service: ServiceKey): number {
+  return price - (OFFERS[service]?.discount ?? 0);
 }
 
 /**

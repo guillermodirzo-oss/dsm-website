@@ -4,19 +4,18 @@ import Image from "next/image";
 import { REAL_REVIEWS, reviewAttribution } from "@/lib/realReviews";
 import LeadForm from "@/components/LeadForm";
 import { StickyMobileBar } from "@/components/HomepageScrollWidgets";
+import Offer from "@/components/Offer";
 import {
   STANDARD_CLEANING_TIERS,
   FREQUENCY_DISCOUNTS,
   recurringDiscountedPrice,
   formatPrice,
-  OFFERS,
-  isOfferActive,
 } from "@/lib/pricing";
 import { DEEP_OFFER, REVIEW_COUNT, REVIEW_RATING } from "@/lib/siteConstants";
 
-// Re-render hourly so the deep-clean offer mention in section 7 expires on
-// its own after OFFERS.deep.endDate, same pattern as /deep-cleaning and
-// app/pricing/page.tsx.
+// Regenerate at most hourly so the FALL75 line in section 7 drops out of the
+// HTML on its own after it ends. <Offer> also hides it in the browser at the
+// deadline. See components/Offer.tsx.
 export const revalidate = 3600;
 
 // Every recurring price on this page comes from these two tiers plus
@@ -196,12 +195,6 @@ const breadcrumbSchema = {
 };
 
 export default function RecurringCleaningPage() {
-  // Evaluated at render time. With revalidate = 3600 above, the deep-clean
-  // offer mention in section 7 disappears within an hour of OFFERS.deep's
-  // endDate passing, with no code change. Same pattern as /deep-cleaning.
-  const offerLive = isOfferActive("deep");
-  const deepOffer = OFFERS.deep;
-
   // Anchor review: Thomas Cheng's review, found by name rather than a
   // hardcoded array index so this can't silently point at the wrong review
   // if REAL_REVIEWS is ever reordered.
@@ -482,11 +475,11 @@ export default function RecurringCleaningPage() {
           <p className="text-gray-600 leading-relaxed mb-4">
             You don&apos;t need a deep clean to start. But if it&apos;s been a while, a lot of our clients start with one, then we keep it that way.
           </p>
-          {offerLive && deepOffer && (
+          <Offer service="deep">
             <p className="text-sm font-bold mb-4" style={{ color: "#E8622A" }}>
-              ${deepOffer.discount} off your first deep clean, plus {DEEP_OFFER.bonus}, through {DEEP_OFFER.endDate}.
+              ${DEEP_OFFER.discount} off your first deep clean, plus {DEEP_OFFER.bonus}, through {DEEP_OFFER.endDate}.
             </p>
-          )}
+          </Offer>
           <Link
             href="/deep-cleaning"
             className="inline-block font-bold px-6 py-3 rounded-lg hover:opacity-90 transition text-white"

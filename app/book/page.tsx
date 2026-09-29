@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
 import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
-import { DEEP_CLEANING_TIERS, formatPrice, startingPrice } from "@/lib/pricing";
+import { DEEP_CLEANING_TIERS, formatPrice, startingPrice, isOfferActive } from "@/lib/pricing";
 import { DEEP_OFFER } from "@/lib/siteConstants";
+import Offer from "@/components/Offer";
 import Image from "next/image";
+
+// Regenerate at most hourly so FALL75 drops out of the HTML (and the
+// metadata below) on its own after it ends. <Offer> also hides it in the
+// browser at the deadline. See components/Offer.tsx.
+export const revalidate = 3600;
 
 // Matches the booking widget's default (1 bed / 1 bath / 1,000-1,499 sq ft),
 // the lowest total a customer can see there before the coupon.
@@ -11,31 +17,45 @@ const ENTRY_PRICE = startingPrice(DEEP_CLEANING_TIERS);
 const SERVICE_AREA_LINE =
   "Serving Romeoville, Plainfield, Naperville, Bolingbrook, Joliet, Westmont, Lockport, Lemont, Homer Glen, Shorewood & nearby suburbs";
 
-export const metadata: Metadata = {
-  title: `Book a Cleaning | $${DEEP_OFFER.discount} Off`,
-  description: `Book your house cleaning with DSM Cleaning Solutions. Get $${DEEP_OFFER.discount} off plus ${DEEP_OFFER.bonus} this ${DEEP_OFFER.season}. Family-owned, eco-friendly, and fully insured.`,
-  alternates: { canonical: "https://www.dsmcleaningsolutions.com/book" },
-  openGraph: {
-    title: `Book a Cleaning — $${DEEP_OFFER.discount} Off + Free Oven Cleaning | DSM Cleaning Solutions`,
-    description: `Limited ${DEEP_OFFER.season} offer: $${DEEP_OFFER.discount} off your deep cleaning plus free oven cleaning in Romeoville, Plainfield, Naperville, Bolingbrook and the southwest suburbs. 5-star rated. Book in 2 minutes.`,
-    url: "https://www.dsmcleaningsolutions.com/book",
-    siteName: "DSM Cleaning Solutions",
-    images: [
-      {
-        url: "/hero-image.png",
-        width: 1200,
-        height: 630,
-        alt: "DSM Cleaning Solutions — Book a House Cleaning Online",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: `Book a Cleaning — $${DEEP_OFFER.discount} Off + Free Oven Cleaning | DSM Cleaning Solutions`,
-    description: `Limited ${DEEP_OFFER.season} offer: $${DEEP_OFFER.discount} off your deep cleaning plus free oven cleaning in Romeoville, Plainfield, Naperville, Bolingbrook and the southwest suburbs. 5-star rated. Book in 2 minutes.`,
-    images: ["/hero-image.png"],
-  },
-};
+// generateMetadata, not a static object, so the offer in the title and
+// description drops out on the first regeneration after FALL75 ends. While
+// it's live the output is exactly what it was before.
+export function generateMetadata(): Metadata {
+  const live = isOfferActive("deep");
+  const socialTitle = live
+    ? `Book a Cleaning — $${DEEP_OFFER.discount} Off + Free Oven Cleaning | DSM Cleaning Solutions`
+    : "Book a Cleaning Online | DSM Cleaning Solutions";
+  const socialDescription = live
+    ? `Limited ${DEEP_OFFER.season} offer: $${DEEP_OFFER.discount} off your deep cleaning plus free oven cleaning in Romeoville, Plainfield, Naperville, Bolingbrook and the southwest suburbs. 5-star rated. Book in 2 minutes.`
+    : "Book deep, recurring or move-out cleaning online in Romeoville, Plainfield, Naperville, Bolingbrook and the southwest suburbs. 5-star rated. Book in 2 minutes.";
+  return {
+    title: live ? `Book a Cleaning | $${DEEP_OFFER.discount} Off` : "Book a Cleaning Online",
+    description: live
+      ? `Book your house cleaning with DSM Cleaning Solutions. Get $${DEEP_OFFER.discount} off plus ${DEEP_OFFER.bonus} this ${DEEP_OFFER.season}. Family-owned, eco-friendly, and fully insured.`
+      : "Book your house cleaning with DSM Cleaning Solutions online. See real dates and your exact price. Family-owned, eco-friendly, and fully insured.",
+    alternates: { canonical: "https://www.dsmcleaningsolutions.com/book" },
+    openGraph: {
+      title: socialTitle,
+      description: socialDescription,
+      url: "https://www.dsmcleaningsolutions.com/book",
+      siteName: "DSM Cleaning Solutions",
+      images: [
+        {
+          url: "/hero-image.png",
+          width: 1200,
+          height: 630,
+          alt: "DSM Cleaning Solutions — Book a House Cleaning Online",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: socialTitle,
+      description: socialDescription,
+      images: ["/hero-image.png"],
+    },
+  };
+}
 
 const PHONE = "(815) 246-2113";
 const PHONE_HREF = "tel:+18152462113";
@@ -53,9 +73,43 @@ const valueStack = [
   { item: "Eco-Friendly Products (Safe for Kids & Pets)", value: "Included" },
   { item: "Trained, Background-Checked Cleaners", value: "Included" },
   { item: "48-Hour Re-Clean Guarantee", value: "Included" },
+];
+
+// Offer rows render only while FALL75 is live (inside <Offer> below).
+const offerStack = [
   { item: "FREE Oven Deep Clean, Fall Bonus", value: `$${DEEP_OFFER.bonusValue} value` },
   { item: `Fall Discount Code: ${COUPON}`, value: `− $${DEEP_OFFER.discount} off` },
 ];
+
+function StackRow({ row, i, isBonus }: { row: { item: string; value: string }; i: number; isBonus: boolean }) {
+  return (
+    <div
+      className="flex items-center justify-between gap-4 px-5 py-4 text-sm"
+      style={{
+        backgroundColor: isBonus
+          ? "rgba(232,114,28,0.12)"
+          : i % 2 === 0
+          ? "rgba(255,255,255,0.04)"
+          : "rgba(255,255,255,0.08)",
+        borderTop: i > 0 ? "1px solid rgba(147,175,212,0.12)" : undefined,
+      }}
+    >
+      <span className="flex items-start gap-3 font-medium" style={{ color: isBonus ? "#fbb97c" : "#e2ecf8" }}>
+        <span className="flex-shrink-0 mt-0.5">{isBonus ? "🎁" : "✅"}</span>
+        {row.item}
+      </span>
+      <span
+        className="font-bold text-xs whitespace-nowrap flex-shrink-0 px-2.5 py-1 rounded-lg"
+        style={{
+          backgroundColor: isBonus ? "rgba(232,114,28,0.2)" : "rgba(255,255,255,0.08)",
+          color: isBonus ? "#fbb97c" : "#93afd4",
+        }}
+      >
+        {row.value}
+      </span>
+    </div>
+  );
+}
 
 const reviews = pickReviews(4, 0);
 
@@ -65,12 +119,14 @@ const faqs = [
     a: "Nope. Many of our clients leave a key or code and come home to a spotless house. Our cleaners are background-checked and fully insured. Your home is safe.",
   },
   {
-    q: "How do I apply the $75 discount?",
+    q: `How do I apply the $${DEEP_OFFER.discount} discount?`,
     a: `Use coupon code ${COUPON} at checkout in the booking form below. The discount will be applied to your first deep cleaning automatically.`,
+    offer: true,
   },
   {
     q: "Is the free oven cleaning really free?",
     a: `Yes, completely free through ${DEEP_OFFER.endDate}. Our oven deep clean is normally a $${DEEP_OFFER.bonusValue} add-on. Book before then and it's included at no charge.`,
+    offer: true,
   },
   {
     q: "What if I'm not happy with the clean?",
@@ -97,37 +153,47 @@ export default function BookPage() {
           Not sticky: the site header is already sticky top-0 z-50, and a
           second sticky bar at the same offset covered the logo and Book Now.
           The offer repeats down the page, so this one scrolls away. */}
-      <div className="relative text-white py-2.5 px-4 text-center text-sm font-semibold" style={{ backgroundColor: ORANGE }}>
-        🔥 ${DEEP_OFFER.discount} Off + Free Oven Cleaning (${DEEP_OFFER.bonusValue} value) through {DEEP_OFFER.endDate} · Use Code&nbsp;
-        <span className="bg-white font-black px-2 py-0.5 rounded tracking-widest" style={{ color: ORANGE }}>
-          {COUPON}
-        </span>
-        &nbsp;·&nbsp;
-        <a href={PHONE_HREF} className="underline underline-offset-2 hover:no-underline">
-          {PHONE}
-        </a>
-      </div>
+      <Offer service="deep">
+        <div className="relative text-white py-2.5 px-4 text-center text-sm font-semibold" style={{ backgroundColor: ORANGE }}>
+          🔥 ${DEEP_OFFER.discount} Off + Free Oven Cleaning (${DEEP_OFFER.bonusValue} value) through {DEEP_OFFER.endDate} · Use Code&nbsp;
+          <span className="bg-white font-black px-2 py-0.5 rounded tracking-widest" style={{ color: ORANGE }}>
+            {COUPON}
+          </span>
+          &nbsp;·&nbsp;
+          <a href={PHONE_HREF} className="underline underline-offset-2 hover:no-underline">
+            {PHONE}
+          </a>
+        </div>
+      </Offer>
 
       {/* ════════════ SECTION 1 — HERO ════════════ */}
       <section className="bg-white py-14 px-4">
         <div className="max-w-4xl mx-auto text-center">
 
-          {/* Urgency badge */}
-          <div
-            className="inline-flex items-center gap-2 rounded-full px-5 py-2 mb-6 border text-sm font-bold uppercase tracking-wider"
-            style={{ backgroundColor: "rgba(232,114,28,0.08)", borderColor: "rgba(232,114,28,0.4)", color: ORANGE }}
-          >
-            <span className="w-2 h-2 rounded-full animate-pulse flex-shrink-0" style={{ backgroundColor: ORANGE }} />
-            Limited Time · Spots Filling Fast
-          </div>
+          {/* Urgency badge. It's about the offer, so it goes with it. */}
+          <Offer service="deep">
+            <div
+              className="inline-flex items-center gap-2 rounded-full px-5 py-2 mb-6 border text-sm font-bold uppercase tracking-wider"
+              style={{ backgroundColor: "rgba(232,114,28,0.08)", borderColor: "rgba(232,114,28,0.4)", color: ORANGE }}
+            >
+              <span className="w-2 h-2 rounded-full animate-pulse flex-shrink-0" style={{ backgroundColor: ORANGE }} />
+              Limited Time · Spots Filling Fast
+            </div>
+          </Offer>
 
-          {/* Headline */}
+          {/* Headline. The second line falls back to plain copy once FALL75 ends. */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight tracking-tight mb-4">
             Get Your Home<br />
-            <span style={{ color: ORANGE }}>Deep Cleaned for $75 Off</span>
+            <span style={{ color: ORANGE }}>
+              <Offer service="deep" fallback="Deep Cleaned by a Local Team">
+                Deep Cleaned for ${DEEP_OFFER.discount} Off
+              </Offer>
+            </span>
           </h1>
           <p className="text-xl sm:text-2xl font-bold mb-3" style={{ color: NAVY }}>
-            Plus {DEEP_OFFER.bonus} this {DEEP_OFFER.season}. A ${DEEP_OFFER.bonusValue} value, on us.
+            <Offer service="deep" fallback="Inside the oven, the grout and the baseboards. Every room, done right.">
+              Plus {DEEP_OFFER.bonus} this {DEEP_OFFER.season}. A ${DEEP_OFFER.bonusValue} value, on us.
+            </Offer>
           </p>
           <p className="text-gray-500 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
             Family-owned · Fully insured · Eco-friendly products · {SERVICE_AREA_LINE}
@@ -147,7 +213,9 @@ export default function BookPage() {
             className="inline-block text-white font-extrabold text-xl px-10 py-5 rounded-full shadow-2xl hover:opacity-90 active:scale-95 transition-all duration-200 mb-4"
             style={{ backgroundColor: ORANGE, boxShadow: "0 15px 40px rgba(232,114,28,0.35)" }}
           >
-            Claim My $75 Off and Book Now →
+            <Offer service="deep" fallback="Book My Deep Clean Now →">
+              Claim My ${DEEP_OFFER.discount} Off and Book Now →
+            </Offer>
           </a>
           <p className="text-gray-400 text-sm">No credit card required to get started · Instant confirmation</p>
         </div>
@@ -202,71 +270,68 @@ export default function BookPage() {
       <section className="py-16 px-4" style={{ backgroundColor: NAVY }}>
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-10">
-            <p className="text-xs uppercase tracking-widest font-bold mb-2" style={{ color: "#93afd4" }}>Fall Offer</p>
+            <p className="text-xs uppercase tracking-widest font-bold mb-2" style={{ color: "#93afd4" }}>
+              <Offer service="deep" fallback="What's Included">Fall Offer</Offer>
+            </p>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-3 tracking-tight">
               Here&apos;s Everything You Get
             </h2>
             <p className="text-base leading-relaxed" style={{ color: "#c7d9ef" }}>
-              Everything included with your first clean this {DEEP_OFFER.season}.
+              <Offer service="deep" fallback="Everything included with every deep clean.">
+                Everything included with your first clean this {DEEP_OFFER.season}.
+              </Offer>
             </p>
           </div>
 
           <div className="rounded-2xl overflow-hidden border" style={{ borderColor: "rgba(147,175,212,0.2)" }}>
-            {valueStack.map((row, i) => {
-              const isBonus = row.item.includes("FREE Oven") || row.item.includes(COUPON);
-              return (
-                <div
-                  key={row.item}
-                  className="flex items-center justify-between gap-4 px-5 py-4 text-sm"
-                  style={{
-                    backgroundColor: isBonus
-                      ? "rgba(232,114,28,0.12)"
-                      : i % 2 === 0
-                      ? "rgba(255,255,255,0.04)"
-                      : "rgba(255,255,255,0.08)",
-                    borderTop: i > 0 ? "1px solid rgba(147,175,212,0.12)" : undefined,
-                  }}
-                >
-                  <span className="flex items-start gap-3 font-medium" style={{ color: isBonus ? "#fbb97c" : "#e2ecf8" }}>
-                    <span className="flex-shrink-0 mt-0.5">{isBonus ? "🎁" : "✅"}</span>
-                    {row.item}
-                  </span>
-                  <span
-                    className="font-bold text-xs whitespace-nowrap flex-shrink-0 px-2.5 py-1 rounded-lg"
-                    style={{
-                      backgroundColor: isBonus ? "rgba(232,114,28,0.2)" : "rgba(255,255,255,0.08)",
-                      color: isBonus ? "#fbb97c" : "#93afd4",
-                    }}
-                  >
-                    {row.value}
-                  </span>
-                </div>
-              );
-            })}
+            {valueStack.map((row, i) => (
+              <StackRow key={row.item} row={row} i={i} isBonus={false} />
+            ))}
+            <Offer service="deep">
+              {offerStack.map((row, j) => (
+                <StackRow key={row.item} row={row} i={valueStack.length + j} isBonus />
+              ))}
+            </Offer>
 
-            {/* Total */}
-            <div className="px-5 py-5 flex items-center justify-between border-t" style={{ borderColor: "rgba(232,114,28,0.3)", backgroundColor: "rgba(232,114,28,0.08)" }}>
-              <div>
-                <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "#93afd4" }}>Your Total Value</p>
-                <p className="font-extrabold text-white text-lg">${DEEP_OFFER.discount + DEEP_OFFER.bonusValue}+ in savings this {DEEP_OFFER.season}</p>
+            {/* Total. Without the offer there's no "savings" to add up, so the
+                box just states the starting price. */}
+            <Offer
+              service="deep"
+              fallback={
+                <div className="px-5 py-5 flex items-center justify-between border-t" style={{ borderColor: "rgba(232,114,28,0.3)", backgroundColor: "rgba(232,114,28,0.08)" }}>
+                  <p className="font-extrabold text-white text-lg">Deep Cleaning</p>
+                  <div className="text-right">
+                    <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "#93afd4" }}>Starting At</p>
+                    <p className="font-extrabold text-2xl" style={{ color: ORANGE }}>{formatPrice(ENTRY_PRICE)}</p>
+                  </div>
+                </div>
+              }
+            >
+              <div className="px-5 py-5 flex items-center justify-between border-t" style={{ borderColor: "rgba(232,114,28,0.3)", backgroundColor: "rgba(232,114,28,0.08)" }}>
+                <div>
+                  <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "#93afd4" }}>Your Total Value</p>
+                  <p className="font-extrabold text-white text-lg">${DEEP_OFFER.discount + DEEP_OFFER.bonusValue}+ in savings this {DEEP_OFFER.season}</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "#93afd4" }}>You Pay From</p>
+                  <p className="font-extrabold text-2xl" style={{ color: ORANGE }}>{formatPrice(ENTRY_PRICE - DEEP_OFFER.discount)}</p>
+                </div>
               </div>
-              <div className="text-right">
-                <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "#93afd4" }}>You Pay From</p>
-                <p className="font-extrabold text-2xl" style={{ color: ORANGE }}>{formatPrice(ENTRY_PRICE - DEEP_OFFER.discount)}</p>
-              </div>
-            </div>
+            </Offer>
           </div>
 
           {/* Coupon */}
-          <div className="mt-6 flex items-center justify-between rounded-xl px-5 py-4 border" style={{ backgroundColor: "rgba(232,114,28,0.1)", borderColor: "rgba(232,114,28,0.3)" }}>
-            <div>
-              <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "#93afd4" }}>Your Coupon Code</p>
-              <p className="font-black text-2xl tracking-widest" style={{ color: ORANGE }}>{COUPON}</p>
+          <Offer service="deep">
+            <div className="mt-6 flex items-center justify-between rounded-xl px-5 py-4 border" style={{ backgroundColor: "rgba(232,114,28,0.1)", borderColor: "rgba(232,114,28,0.3)" }}>
+              <div>
+                <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "#93afd4" }}>Your Coupon Code</p>
+                <p className="font-black text-2xl tracking-widest" style={{ color: ORANGE }}>{COUPON}</p>
+              </div>
+              <span className="text-xs font-bold px-3 py-1.5 rounded-lg border" style={{ backgroundColor: "rgba(232,114,28,0.15)", borderColor: "rgba(232,114,28,0.35)", color: "#fbb97c" }}>
+                Apply at checkout below
+              </span>
             </div>
-            <span className="text-xs font-bold px-3 py-1.5 rounded-lg border" style={{ backgroundColor: "rgba(232,114,28,0.15)", borderColor: "rgba(232,114,28,0.35)", color: "#fbb97c" }}>
-              Apply at checkout below
-            </span>
-          </div>
+          </Offer>
 
           <div className="text-center mt-8">
             <a
@@ -276,7 +341,9 @@ export default function BookPage() {
             >
               Lock In My Spot Now →
             </a>
-            <p className="text-xs mt-3" style={{ color: "#93afd4" }}>Offer expires {DEEP_OFFER.endDate}. Spots are limited.</p>
+            <Offer service="deep">
+              <p className="text-xs mt-3" style={{ color: "#93afd4" }}>Offer expires {DEEP_OFFER.endDate}. Spots are limited.</p>
+            </Offer>
           </div>
         </div>
       </section>
@@ -295,12 +362,21 @@ export default function BookPage() {
               {
                 step: "1",
                 title: "Book Below in 2 Minutes",
-                desc: `Fill out the quick form, pick your date, apply code ${COUPON}. That's it. No phone tag, no waiting.`,
+                desc: (
+                  <Offer service="deep" fallback="Fill out the quick form and pick your date. That's it. No phone tag, no waiting.">
+                    Fill out the quick form, pick your date, apply code {COUPON}. That&apos;s it. No phone tag, no waiting.
+                  </Offer>
+                ),
               },
               {
                 step: "2",
                 title: "We Show Up & Get to Work",
-                desc: "Our vetted, insured team shows up on time and cleans every room, every surface. Your oven is included free.",
+                desc: (
+                  <>
+                    Our vetted, insured team shows up on time and cleans every room, every surface.
+                    <Offer service="deep"> Your oven is included free.</Offer>
+                  </>
+                ),
               },
               {
                 step: "3",
@@ -414,12 +490,16 @@ export default function BookPage() {
             </h2>
           </div>
           <div className="space-y-4">
-            {faqs.map((faq) => (
-              <div key={faq.q} className="rounded-2xl border border-gray-100 bg-gray-50 p-6">
-                <p className="font-bold text-gray-900 mb-2">{faq.q}</p>
-                <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
-              </div>
-            ))}
+            {faqs.map((faq) => {
+              const card = (
+                <div key={faq.q} className="rounded-2xl border border-gray-100 bg-gray-50 p-6">
+                  <p className="font-bold text-gray-900 mb-2">{faq.q}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
+                </div>
+              );
+              // Questions about the offer itself only make sense while it runs.
+              return faq.offer ? <Offer key={faq.q} service="deep">{card}</Offer> : card;
+            })}
           </div>
         </div>
       </section>
@@ -429,21 +509,23 @@ export default function BookPage() {
         <div className="max-w-4xl mx-auto">
 
           {/* Pre-form urgency banner */}
-          <div
-            className="rounded-2xl p-5 mb-8 text-center border"
-            style={{ backgroundColor: "rgba(232,114,28,0.07)", borderColor: "rgba(232,114,28,0.3)" }}
-          >
-            <p className="font-extrabold text-lg text-gray-900 mb-1">
-              You&apos;re $75 away from a spotless home.
-            </p>
-            <p className="text-gray-600 text-sm">
-              Apply code{" "}
-              <span className="font-black tracking-widest px-2 py-0.5 rounded" style={{ backgroundColor: ORANGE, color: "#fff" }}>
-                {COUPON}
-              </span>{" "}
-              at checkout · Free oven cleaning added automatically · Offer expires {DEEP_OFFER.endDate}
-            </p>
-          </div>
+          <Offer service="deep">
+            <div
+              className="rounded-2xl p-5 mb-8 text-center border"
+              style={{ backgroundColor: "rgba(232,114,28,0.07)", borderColor: "rgba(232,114,28,0.3)" }}
+            >
+              <p className="font-extrabold text-lg text-gray-900 mb-1">
+                You&apos;re ${DEEP_OFFER.discount} away from a spotless home.
+              </p>
+              <p className="text-gray-600 text-sm">
+                Apply code{" "}
+                <span className="font-black tracking-widest px-2 py-0.5 rounded" style={{ backgroundColor: ORANGE, color: "#fff" }}>
+                  {COUPON}
+                </span>{" "}
+                at checkout · Free oven cleaning added automatically · Offer expires {DEEP_OFFER.endDate}
+              </p>
+            </div>
+          </Offer>
 
           {/* Form header */}
           <div className="text-center mb-6">
@@ -469,7 +551,9 @@ export default function BookPage() {
               total is the pre-coupon price. */}
           <div className="text-center mb-6 space-y-1 text-sm text-gray-500">
             <p>Enter your ZIP code first. The calendar won&apos;t show dates until you do.</p>
-            <p>The total in the form below shows before your discount. Apply {COUPON} at checkout and ${DEEP_OFFER.discount} comes off.</p>
+            <Offer service="deep">
+              <p>The total in the form below shows before your discount. Apply {COUPON} at checkout and ${DEEP_OFFER.discount} comes off.</p>
+            </Offer>
           </div>
 
           {/* BookingKoala embed — skeleton shown while iframe loads */}
@@ -543,7 +627,9 @@ export default function BookPage() {
           className="flex-1 text-white font-bold text-sm py-3 px-4 rounded-full text-center my-auto hover:opacity-90 active:scale-95 transition-all duration-200 shadow-lg"
           style={{ backgroundColor: ORANGE, minHeight: "44px", display: "flex", alignItems: "center", justifyContent: "center" }}
         >
-          Claim $75 Off →
+          <Offer service="deep" fallback="Book Now →">
+            Claim ${DEEP_OFFER.discount} Off →
+          </Offer>
         </a>
       </div>
 

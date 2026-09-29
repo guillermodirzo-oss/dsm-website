@@ -6,6 +6,7 @@ import ReviewCard from "@/components/ReviewCard";
 import { pickReviews, reviewAttribution } from "@/lib/realReviews";
 import { ScrollIndicator } from "@/components/HomepageScrollWidgets";
 import StickyBookBar from "@/components/StickyBookBar";
+import Offer from "@/components/Offer";
 import { DEEP_OFFER, REVIEW_COUNT, REVIEW_RATING } from "@/lib/siteConstants";
 import {
   STANDARD_CLEANING_TIERS,
@@ -14,6 +15,11 @@ import {
   startingPrice,
   formatPrice,
 } from "@/lib/pricing";
+
+// Regenerate at most hourly so the FALL75 badge drops out of the HTML on its
+// own after the offer ends. <Offer> also hides it in the browser at the
+// deadline. See components/Offer.tsx.
+export const revalidate = 3600;
 
 // "From" prices for the hero line and the pricing FAQ, read from the rate card
 // so they match every other page.
@@ -167,7 +173,9 @@ export default function HomePage() {
             ★★★★★ {REVIEW_RATING} · {REVIEW_COUNT} Google Reviews
           </Link>
 
-          {/* Offer. Terms mirror /book exactly so the two pages never disagree. */}
+          {/* Offer. Terms mirror /book exactly so the two pages never disagree.
+              Gated by <Offer>, so it disappears on its own when FALL75 ends. */}
+          <Offer service="deep">
           <div className="mb-6">
             {/* This was a div styled to look like a button, which is where
                 Clarity recorded dead clicks. It is a real anchor now, so it is
@@ -184,6 +192,7 @@ export default function HomePage() {
               Use code <span className="font-bold text-white">{DEEP_OFFER.code}</span> through {DEEP_OFFER.endDate}.
             </p>
           </div>
+          </Offer>
 
           {/* Two different jobs: book online now (/book), or leave details in
               the on-page form (#contact). The offer line above also goes to

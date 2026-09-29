@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import Offer from "@/components/Offer";
 import {
   DEEP_CLEANING_TIERS,
   STANDARD_CLEANING_TIERS,
   MOVE_OUT_TIERS,
-  OFFERS,
-  isOfferActive,
-  discountedPrice,
+  offerPrice,
   startingPrice,
   formatPrice,
   tierLabel,
@@ -20,8 +19,9 @@ import {
 } from "@/lib/pricing";
 import { DEEP_OFFER } from "@/lib/siteConstants";
 
-// Re-render hourly so the FALL75 offer expires on its own after
-// OFFERS.deep.endDate without anyone shipping a change.
+// Regenerate at most hourly so FALL75 drops out of the HTML on its own after
+// it ends. <Offer> also hides it in the browser at the deadline. See
+// components/Offer.tsx.
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
@@ -175,12 +175,8 @@ const RECURRING_EXAMPLE_FREQUENCY =
   STANDARD_FREQUENCIES.find((f) => f.popular) ?? STANDARD_FREQUENCIES[1];
 
 export default function PricingPage() {
-  // Evaluated at render time. With revalidate = 3600 above, the offer stops
-  // showing within an hour of OFFERS.deep.endDate passing, with no code change.
   // This page only ever surfaces the deep cleaning offer. The move-out offer
   // is deliberately kept off /pricing and shown only on /move-out-cleaning.
-  const offerLive = isOfferActive("deep");
-  const deepOffer = OFFERS.deep;
   const recurringExample = {
     tier: RECURRING_EXAMPLE_TIER,
     frequency: RECURRING_EXAMPLE_FREQUENCY,
@@ -286,13 +282,15 @@ export default function PricingPage() {
                   )}
                   {/* Offer context sits once per card, not on every price row.
                       Deep cleaning only: the move-out offer never appears on this page. */}
-                  {svc.service === "deep" && offerLive && deepOffer && (
-                    <p
-                      className="mt-3 text-xs font-bold"
-                      style={{ color: "#E8622A" }}
-                    >
-                      ${deepOffer.discount} off every deep clean with code {deepOffer.code}, through {DEEP_OFFER.endDate}.
-                    </p>
+                  {svc.service === "deep" && (
+                    <Offer service="deep">
+                      <p
+                        className="mt-3 text-xs font-bold"
+                        style={{ color: "#E8622A" }}
+                      >
+                        ${DEEP_OFFER.discount} off every deep clean with code {DEEP_OFFER.code}, through {DEEP_OFFER.endDate}.
+                      </p>
+                    </Offer>
                   )}
                 </div>
 
@@ -323,30 +321,29 @@ export default function PricingPage() {
                   <div className="space-y-3">
                     {svc.tiers.map((tier) => {
                       const label = tierLabel(tier);
-                      // Deep cleaning only. Move-out now has its own live
-                      // offer in OFFERS, but it must never render here, only
-                      // on /move-out-cleaning, so this is not a generic
-                      // discountedPrice(tier.price, svc.service) call.
-                      const sale = svc.service === "deep" ? discountedPrice(tier.price, svc.service) : null;
+                      const regular = <>Starting at {formatPrice(tier.price)}</>;
                       return (
                         <div key={label} className="flex items-center justify-between gap-3">
                           <span className="text-sm text-gray-600 leading-tight">{label}</span>
                           {/* min-h keeps the row the same height whether or not a
                               struck price is present, so CLS stays at 0. */}
                           <span className="text-lg font-bold text-gray-900 whitespace-nowrap flex-shrink-0 min-h-[1.75rem] flex items-center gap-2">
-                            {sale === null ? (
-                              <>Starting at {formatPrice(tier.price)}</>
-                            ) : (
-                              <>
+                            {/* Deep cleaning only. Move-out has its own offer,
+                                but it must never render here, only on
+                                /move-out-cleaning and its city pages. */}
+                            {svc.service === "deep" ? (
+                              <Offer service="deep" fallback={regular}>
                                 <s className="text-sm font-medium text-gray-400">
                                   <span className="sr-only">Regular price </span>
                                   {formatPrice(tier.price)}
                                 </s>
                                 <span style={{ color: "#E8622A" }}>
                                   <span className="sr-only">Sale price </span>
-                                  {formatPrice(sale)}
+                                  {formatPrice(offerPrice(tier.price, "deep"))}
                                 </span>
-                              </>
+                              </Offer>
+                            ) : (
+                              regular
                             )}
                           </span>
                         </div>
