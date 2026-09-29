@@ -499,6 +499,14 @@ const nextConfig = {
         destination: "/westmont-il",
         permanent: true,
       },
+
+      // ─── MOVE-OUT CHECKLIST MERGED INTO THE HUB (2026-09-28) ─────────────
+      // /move-out-cleaning now carries the full room-by-room checklist.
+      {
+        source: "/move-out-cleaning-checklist",
+        destination: "/move-out-cleaning",
+        permanent: true,
+      },
     ];
   },
 };

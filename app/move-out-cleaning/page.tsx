@@ -2,252 +2,300 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
-import ReviewCard from "@/components/ReviewCard";
-import { REVIEW_COUNT, REVIEW_RATING, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import { StickyMobileBar } from "@/components/HomepageScrollWidgets";
+import { reviewByName, reviewExcerpt, reviewAttribution } from "@/lib/realReviews";
 import {
   MOVE_OUT_TIERS,
-  OFFERS,
+  FREQUENCY_DISCOUNTS,
   isOfferActive,
   discountedPrice,
+  formatDiscount,
   formatPrice,
-  tierLabel,
+  startingPrice,
+  type PriceTier,
 } from "@/lib/pricing";
-import { MOVEOUT_OFFER } from "@/lib/siteConstants";
+import { MOVEOUT_OFFER, REVIEW_COUNT, REVIEW_RATING } from "@/lib/siteConstants";
 
-// Re-render hourly so the MOVE75 offer expires on its own after
-// OFFERS.moveout.endDate without anyone shipping a change. Same pattern as
-// app/deep-cleaning/page.tsx and app/pricing/page.tsx.
+// Re-render hourly so the MOVE75 offer drops off on its own once it ends,
+// same pattern as /deep-cleaning, /recurring-cleaning and /pricing.
 export const revalidate = 3600;
 
+// Every price on this page comes from MOVE_OUT_TIERS, never a typed number.
+const tierFor = (beds: string) => MOVE_OUT_TIERS.find((t) => t.beds === beds)!;
+const SMALLEST_TIER = MOVE_OUT_TIERS.reduce((a, b) => (b.price < a.price ? b : a));
+const TWO_BED = tierFor("2 bed");
+const THREE_BED = tierFor("3 bed");
+const FOUR_BED = tierFor("4 bed"); // first 4 bed row: 2,000-2,499 sq ft
+const MOVEOUT_FROM = formatPrice(startingPrice(MOVE_OUT_TIERS));
+
+/** "2 bed / 1 bath, 1,000 to 1,499 sq ft" */
+const sizeLabel = (t: PriceTier) => `${t.beds} / ${t.baths}, ${t.sqft.replace("-", " to ")} sq ft`;
+
+const PAGE_TITLE = `Move Out Cleaning Romeoville IL | From ${MOVEOUT_FROM} | DSM Cleaning`;
+// 151 characters as rendered with today's rating, count and price. No offer
+// in here: offers expire, search snippets don't.
+const PAGE_DESCRIPTION = `Move-in and move-out cleaning in Romeoville and the southwest suburbs, from ${MOVEOUT_FROM}. Inside the oven, fridge and every cabinet. Rated ${REVIEW_RATING} by ${REVIEW_COUNT} neighbors.`;
+
 export const metadata: Metadata = {
-  title: "Move-Out & Move-In Cleaning Romeoville",
-  description:
-    "Moving out? DSM Cleaning Solutions handles the deep clean so you get your security deposit back. Serving Romeoville, Plainfield & Bolingbrook.",
-  keywords: [
-    "move out cleaning Romeoville IL",
-    "move in cleaning Romeoville IL",
-    "move out cleaners Romeoville",
-    "move in move out cleaning Romeoville",
-    "apartment move out cleaning Romeoville",
-    "empty house cleaning Romeoville",
-    "rental cleaning Romeoville IL",
-    "real estate cleaning Romeoville",
-    "listing cleaning service Romeoville",
-    "turnover cleaning Romeoville",
-    "move out cleaning Plainfield IL",
-  ],
-  alternates: {
-    canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning",
-  },
+  // absolute: the root layout's title template would otherwise add the brand twice.
+  title: { absolute: PAGE_TITLE },
+  description: PAGE_DESCRIPTION,
+  alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning" },
   openGraph: {
-    title: "Move Out Cleaning Services Plainfield IL | DSM Cleaning Solutions",
-    description:
-      "Moving out in Plainfield, Romeoville or Naperville IL? We'll get your deposit back. Landlord-ready clean guaranteed. 5-stars. 48-hr guarantee. Book your move-out date now.",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
     url: "https://www.dsmcleaningsolutions.com/move-out-cleaning",
-    siteName: "DSM Cleaning Solutions",
-    images: [
-      {
-        url: "/hero-image.png",
-        width: 1200,
-        height: 630,
-        alt: "DSM Cleaning Solutions, Move-Out Cleaning in Plainfield IL",
-      },
-    ],
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Move Out Cleaning Services Plainfield IL | DSM Cleaning Solutions",
-    description:
-      "Move-out cleaning in Romeoville, Naperville, Plainfield & Bolingbrook. 5.0-star rated, 48-hr guarantee.",
-    images: ["/hero-image.png"],
-  },
+  twitter: { card: "summary_large_image", images: ["/hero-image.png"] },
 };
 
-const serviceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  serviceType: "Move Out Cleaning",
-  name: "Move-Out and Move-In Cleaning Service",
-  provider: {
-    "@type": "LocalBusiness",
-    name: "DSM Cleaning Solutions",
-    telephone: "+18152462113",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Romeoville",
-      addressRegion: "IL",
-      postalCode: "60446",
-    },
-  },
-  areaServed: ["Romeoville, IL", "Plainfield, IL", "Naperville, IL", "Bolingbrook, IL"],
-  description:
-    "Professional move-out cleaning for homes in Romeoville and surrounding areas. Designed to help tenants get their full security deposit back. 48-hour guarantee.",
-};
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What does a move-out cleaning include in Romeoville, IL?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Our move-out cleaning covers every room in the empty home: deep-cleaning all kitchen appliances (inside and out), scrubbing all bathrooms, cleaning inside all cabinets and drawers, washing windows, cleaning all baseboards and door frames, vacuuming and mopping all floors, and more.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Will a move-out cleaning help me get my security deposit back?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, our move-out cleaning is specifically designed to meet landlord and property manager standards. Many of our clients receive their full security deposit back after using our service.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How far in advance should I book a move-out cleaning?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We recommend booking at least 3–5 days before your move-out date to ensure availability. For last-minute needs, call us directly at (815) 246-2113 and we'll do our best to accommodate you.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you clean empty apartments in Romeoville?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes! We specialize in empty apartment and house cleaning for both tenants moving out and tenants moving in. We serve Romeoville, Plainfield, Naperville, Bolingbrook, and surrounding areas.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you offer move-in cleaning in Plainfield, IL?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Absolutely. We serve both Romeoville and Plainfield, IL with full move-in and move-out cleaning services. Starting fresh in a perfectly clean home is our specialty.",
-      },
-    },
-  ],
-};
-
-const faqs = [
+const audiences = [
   {
-    question: "What does a move-out cleaning include in Romeoville, IL?",
-    answer:
-      "Our move-out cleaning covers every room: deep-cleaning all kitchen appliances inside and out, scrubbing all bathrooms, cleaning inside all cabinets and drawers, washing windows, cleaning all baseboards and door frames, vacuuming and mopping all floors, and more.",
+    icon: "🏡",
+    title: "Selling",
+    desc: "Get it ready for the final walk-through or listing photos. Hand over the keys and move on.",
   },
   {
-    question: "Will a move-out cleaning help me get my security deposit back?",
-    answer:
-      "Yes, our move-out cleaning is specifically designed to meet landlord and property manager standards. Many of our clients receive their full security deposit back after using our service.",
+    icon: "🔑",
+    title: "Buying",
+    desc: "Get it cleaned before your boxes arrive. Move into a house that's actually yours.",
   },
   {
-    question: "How far in advance should I book a move-out cleaning?",
-    answer:
-      "We recommend booking at least 3–5 days before your move-out date to ensure availability. For last-minute needs, call us directly at (815) 246-2113 and we'll do our best to accommodate you.",
-  },
-  {
-    question: "Do you clean empty apartments in Romeoville?",
-    answer:
-      "Yes! We specialize in empty apartment and house cleaning for both tenants moving out and new tenants moving in. We serve Romeoville, Plainfield, Naperville, Bolingbrook, and surrounding areas.",
-  },
-  {
-    question: "Do you offer move-in cleaning in Plainfield, IL?",
-    answer:
-      "Absolutely. We serve both Romeoville and Plainfield, IL with full move-in and move-out cleaning services. Starting fresh in a perfectly clean home is our specialty.",
+    icon: "📦",
+    title: "Renting",
+    desc: "Move out with the place clean. It's the easiest way to protect your deposit.",
   },
 ];
 
-const moveOutChecklist = [
+const priceCards = [TWO_BED, THREE_BED, FOUR_BED];
+
+const checklist = [
+  {
+    room: "All Rooms",
+    items: [
+      "Dust ceiling fans and remove cobwebs",
+      "Dust window sills and ledges (inside)",
+      "Dust doors and door frames",
+      "Dust blinds",
+      "Dust baseboards",
+      "Wipe mirrors and light switches",
+      "Vacuum carpet and hard floors",
+      "Mop hard floors",
+    ],
+    photos: [
+      { src: "/work-photos/empty-bedroom-gray-carpet-2-1200.jpg", alt: "Empty bedroom with fresh vacuum lines across the carpet after a DSM Cleaning Solutions move-out clean" },
+      { src: "/work-photos/closet-move-out-cleaning.jpg", alt: "Empty walk-in closet with bare shelving and a polished hardwood floor after a DSM Cleaning Solutions move-out clean" },
+    ],
+  },
   {
     room: "Kitchen",
     items: [
-      "Clean inside and outside of oven",
-      "Wipe down stovetop, burners, and drip pans",
-      "Clean inside and outside of refrigerator",
-      "Clean inside microwave (inside/outside/underneath)",
-      "Scrub sink and polish faucet",
-      "Wipe all cabinet fronts and clean inside",
-      "Clean countertops and backsplash thoroughly",
-      "Clean dishwasher interior",
-      "Mop and scrub floors",
+      "Dust reachable vents",
+      "Wipe countertops and surfaces",
+      "Clean stove and inside the oven",
+      "Clean refrigerator inside and out",
+      "Clean hood and light switches",
+      "Wipe inside cabinets and cabinet faces",
+      "Clean baseboards",
+      "Clean microwave inside and out",
+      "Clean and dry sink and faucet",
+      "Vacuum and mop floors",
+    ],
+    photos: [
+      { src: "/work-photos/oven-interior-open-door-clean-1200.jpg", alt: "Oven door open showing a spotless interior and racks after a DSM Cleaning Solutions move-out clean" },
+      { src: "/work-photos/fridge-interior-shelves-spotless-1200.jpg", alt: "Empty refrigerator with wiped-clean glass shelves after a DSM Cleaning Solutions move-out clean" },
     ],
   },
   {
     room: "Bathrooms",
     items: [
-      "Scrub and disinfect toilet (inside/outside/base)",
-      "Deep scrub shower and tub, including grout",
-      "Clean and polish all faucets and fixtures",
-      "Scrub and disinfect sink",
-      "Clean mirrors and glass",
-      "Wipe inside all cabinets and medicine chests",
-      "Mop floor and clean grout lines",
-      "Wipe down all tile surfaces",
+      "Dust reachable vents",
+      "Clean and sanitize toilet and toilet area",
+      "Remove soap scum and mildew in shower and tub",
+      "Clean inside and outside all cabinets and drawers",
+      "Sanitize countertops",
+      "Sanitize sink and polish fixtures",
+      "Wipe mirrors and light switches",
+      "Wipe baseboards and doors",
+      "Vacuum and mop floors",
+    ],
+    photos: [
+      { src: "/work-photos/toilet-bowl-spotless-closeup-2.jpg", alt: "Close-up of a spotless toilet bowl after a DSM Cleaning Solutions move-out clean" },
     ],
   },
   {
-    room: "Bedrooms & Living Areas",
+    room: "Laundry Room",
     items: [
-      "Clean inside all closets (walls, shelves, floors)",
-      "Wipe all baseboards and door frames",
-      "Clean window sills, tracks, and glass",
-      "Wipe all light switches and outlet covers",
-      "Clean ceiling fans if present",
-      "Vacuum all carpets thoroughly",
-      "Sweep and mop hard floors",
-      "Remove any cobwebs",
+      "Remove cobwebs",
+      "Wipe outside of washer and dryer",
+      "Remove dryer lint",
+      "Dust baseboards and doors",
+      "Clean and dry sink",
+      "Vacuum and mop floor",
     ],
-  },
-  {
-    room: "Whole Home",
-    items: [
-      "Clean all doors and door knobs",
-      "Wipe all windowsills throughout",
-      "Dust and wipe all light fixtures",
-      "Clean vents and registers",
-      "Remove all trash and debris",
-      "Final walkthrough inspection",
+    photos: [
+      { src: "/work-photos/laundry-room-move-out-clean-romeoville-il.jpg", alt: "Laundry room with a white front-load washer and dryer and a clean tile floor after a DSM Cleaning Solutions move-out clean in Romeoville" },
     ],
   },
 ];
 
+// Move-out vs deep, built only from the two real checklists. Deep column
+// quotes app/deep-cleaning/page.tsx `checklist`; move-out column quotes the
+// `checklist` above. Nothing here is on only one side unless that side's
+// checklist actually lists it.
+const comparison = [
+  // deep: "Clean inside/outside oven" | move-out: "Clean stove and inside the oven"
+  { item: "Inside the oven", deep: "Yes", moveOut: "Yes" },
+  // deep: "Clean inside microwave" | move-out: "Clean microwave inside and out"
+  { item: "Inside the microwave", deep: "Yes", moveOut: "Yes" },
+  // deep: "Wipe refrigerator exterior" | move-out: "Clean refrigerator inside and out"
+  { item: "Refrigerator", deep: "Outside only", moveOut: "Inside and out" },
+  // deep: "Wipe all cabinet fronts" | move-out: "Wipe inside cabinets and cabinet faces"
+  { item: "Kitchen cabinets", deep: "Fronts only", moveOut: "Inside and out" },
+  // deep: "Wipe cabinets and shelves" | move-out: "Clean inside and outside all cabinets and drawers"
+  { item: "Bathroom cabinets and drawers", deep: "Wiped", moveOut: "Inside and out" },
+  // deep: "Wipe baseboards and door frames", "Wipe all doors and door frames" |
+  // move-out: "Dust baseboards", "Dust doors and door frames", "Wipe baseboards and doors"
+  { item: "Baseboards and doors", deep: "Yes", moveOut: "Yes" },
+  // deep: "Deep scrub shower/tub with grout cleaning" |
+  // move-out: "Remove soap scum and mildew in shower and tub"
+  { item: "Shower and tub", deep: "Grout scrubbed", moveOut: "Soap scum and mildew removed" },
+  // deep: no laundry room section | move-out: "Laundry room" section
+  { item: "Laundry room", deep: "Not on the checklist", moveOut: "Yes" },
+];
+
+// Text is identical between the visible FAQ and the FAQPage schema. Offer
+// lines are rendered outside `a`, never inside it, so the schema never
+// carries an offer that will expire.
+const faqs = [
+  {
+    q: "How much does move-out cleaning cost?",
+    a: `A ${sizeLabel(TWO_BED)} home is ${formatPrice(TWO_BED.price)}. A ${sizeLabel(THREE_BED)} home is ${formatPrice(THREE_BED.price)}, and a ${sizeLabel(FOUR_BED)} home is ${formatPrice(FOUR_BED.price)}. Smaller homes start at ${MOVEOUT_FROM}. Your exact price depends on bedrooms, bathrooms and square footage, and you'll see it before you book.`,
+  },
+  {
+    q: "What's included in a move-out clean?",
+    a: "Every room gets the full checklist above. That means inside the oven, inside the fridge, inside every cabinet and drawer, baseboards and doors, the bathrooms, the laundry room, and every floor vacuumed and mopped.",
+  },
+  {
+    q: "What's the difference between move-out and deep cleaning?",
+    a: "Move-out cleaning is built for an empty house. It covers inside the fridge and inside every cabinet and drawer, which a deep clean doesn't. Deep cleaning is built for a home you're living in, so it scrubs bathroom grout and vacuums under and behind furniture. Both clean inside the oven and microwave, and both do baseboards and doors.",
+  },
+  {
+    q: "Do I need to be home?",
+    a: "No. Leave a lockbox or a door code and we'll let ourselves in. When we're done, we text you photos of every room so you can see the work before you get back.",
+  },
+  {
+    q: "Do you clean for buyers moving in too?",
+    a: "Yes. A move-in clean uses the same checklist as a move-out clean. Book it after closing and before your boxes arrive, and you move into a house that's actually clean.",
+  },
+  {
+    q: "What areas do you serve?",
+    a: "We're based in Romeoville and clean homes across the southwest and west suburbs: Romeoville, Plainfield, Naperville, Bolingbrook, Joliet, Lockport, Shorewood, New Lenox, Lemont, Homer Glen, Westmont, Hinsdale, Oak Brook, Downers Grove, Burr Ridge, and Minooka. Not sure if we come to you? Give us a call at (815) 246-2113.",
+  },
+];
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Move-In and Move-Out Cleaning",
+  serviceType: "Move-in and move-out cleaning",
+  areaServed: [
+    { "@type": "City", name: "Romeoville", containedInPlace: { "@type": "State", name: "Illinois" } },
+    { "@type": "City", name: "Plainfield", containedInPlace: { "@type": "State", name: "Illinois" } },
+    { "@type": "City", name: "Bolingbrook", containedInPlace: { "@type": "State", name: "Illinois" } },
+    { "@type": "City", name: "Naperville", containedInPlace: { "@type": "State", name: "Illinois" } },
+  ],
+  provider: { "@id": "https://www.dsmcleaningsolutions.com/#business" },
+  description:
+    "Move-in and move-out cleaning for homes in Romeoville, Plainfield, Bolingbrook, Naperville, and surrounding communities. Inside the oven, the fridge and every cabinet and drawer.",
+  offers: {
+    "@type": "Offer",
+    priceCurrency: "USD",
+    price: String(SMALLEST_TIER.price),
+    priceSpecification: {
+      "@type": "PriceSpecification",
+      minPrice: String(SMALLEST_TIER.price),
+      maxPrice: String(FOUR_BED.price),
+      priceCurrency: "USD",
+    },
+  },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dsmcleaningsolutions.com" },
+    { "@type": "ListItem", position: 2, name: "Move-In / Move-Out Cleaning", item: "https://www.dsmcleaningsolutions.com/move-out-cleaning" },
+  ],
+};
+
+const cities = [
+  ["Romeoville", "romeoville"],
+  ["Plainfield", "plainfield"],
+  ["Bolingbrook", "bolingbrook"],
+  ["Naperville", "naperville"],
+  ["Joliet", "joliet"],
+  ["Lockport", "lockport"],
+  ["Lemont", "lemont"],
+  ["Westmont", "westmont"],
+  ["Shorewood", "shorewood"],
+  ["Homer Glen", "homer-glen"],
+  ["New Lenox", "new-lenox"],
+  ["Minooka", "minooka"],
+  ["Hinsdale", "hinsdale"],
+  ["Oak Brook", "oak-brook"],
+  ["Downers Grove", "downers-grove"],
+  ["Burr Ridge", "burr-ridge"],
+];
+
+// Review excerpts go through reviewExcerpt(), which fails the build if a span
+// isn't word-for-word in the stored review. Each review appears once on this
+// page (realReviews rule 4).
+const vinzenz = reviewByName("Vinzenz Unger");
+const VINZENZ_EXCERPT = reviewExcerpt(vinzenz, [
+  "I contracted DSM for a move out clean prior to listing the house. From start to finish this was a great experience.",
+  "Walking into the house afterwards, it looked and smelled great.",
+  "floorboards to drawers and appliances - this was well done.",
+]);
+const melissa = reviewByName("Melissa Wright");
+const MELISSA_EXCERPT = reviewExcerpt(melissa, [
+  "We aren't in the area any longer so we left a lock box with a key on the door and the DSM team just let themselves in and took care of everything we needed. After the cleaning was done, they sent me pictures of the rooms so I could see the work was done.",
+]);
+const alina = reviewByName("Alina");
+const ALINA_EXCERPT = reviewExcerpt(alina, [
+  "I first found DSM Cleaning Services when I needed a move-in cleaning for my house, and they did such an amazing job that I decided to stay with this company for regular cleanings.",
+]);
+// Melissa and Alina are already quoted above, so the reviews block shows the
+// one other move-related review on file rather than repeating them.
+const moreMoveReviews = [reviewByName("Thomas Cheng")];
+
 export default function MoveOutCleaningPage() {
-  // Evaluated at render time. With revalidate = 3600 above, the offer stops
-  // showing within an hour of OFFERS.moveout.endDate passing, with no code
-  // change.
+  // Evaluated at render time; with revalidate above, the page drops the offer
+  // within an hour of it ending, no code change needed.
   const offerLive = isOfferActive("moveout");
-  const moveOutOffer = OFFERS.moveout;
+  const threeBedSale = discountedPrice(THREE_BED.price, "moveout");
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dsmcleaningsolutions.com" },
-              { "@type": "ListItem", position: 2, name: "Move-Out / Move-In Cleaning", item: "https://www.dsmcleaningsolutions.com/move-out-cleaning" },
-            ],
-          }),
-        }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      {/* HERO. Full-bleed background photo behind the text, same pattern as
-          app/deep-cleaning/page.tsx: fill plus a dark overlay. This is the
-          only image on the page eager-loaded above the fold. */}
+      {/* 1. HERO. Same full-bleed photo and overlay as /deep-cleaning and
+          /recurring-cleaning. H1, rating, subhead, lockbox line, offer, CTAs:
+          checked to clear the fold at 390px. The price anchor sits under the
+          CTAs. */}
       <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
         <Image
           src="/work-photos/empty-living-room-hardwood-archway.jpg"
@@ -261,328 +309,180 @@ export default function MoveOutCleaningPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-black/65 via-black/45 to-black/35" />
         <div className="absolute inset-0 bg-gradient-to-t from-orange-900/20 via-transparent to-transparent" />
 
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <nav className="text-sm mb-6 opacity-80 flex items-center justify-center gap-2">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center text-white">
+          <nav className="text-sm mb-5 opacity-80 flex items-center justify-center gap-2">
             <Link href="/" className="hover:underline">Home</Link>
             <span>/</span>
-            <span>Move-Out / Move-In Cleaning</span>
+            <span>Move-In / Move-Out Cleaning</span>
           </nav>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
-            Get Your Full Deposit Back.
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 leading-tight">
+            Romeoville Move-Out Cleaning, Done Before Closing Day
           </h1>
-          <p className="text-lg md:text-xl font-semibold mb-5 opacity-95 max-w-2xl mx-auto">
-            Move-out and move-in cleaning built to pass a landlord walkthrough. Romeoville, Plainfield, Naperville, Bolingbrook and the southwest suburbs.
-          </p>
 
-          {/* Rating. Counts come from lib/realReviews.ts, never hardcoded. */}
-          <Link href="/reviews" className="inline-flex items-center justify-center gap-2 mb-5 hover:underline">
+          {/* Rating, directly under the H1. Counts from lib/realReviews.ts. */}
+          <Link href="/reviews" className="inline-flex items-center justify-center gap-2 mb-4 hover:underline">
             <span style={{ color: "#FFA869" }} className="text-xl">★★★★★</span>
             <span className="text-sm opacity-90">{REVIEW_RATING} · {REVIEW_COUNT} Google Reviews</span>
           </Link>
 
-          {/* Offer. Real anchor, not a styled div, so it is keyboard
-              focusable and works without JS. Gated on isOfferActive("moveout")
-              so it disappears with no code change once OFFERS.moveout.endDate
-              passes. */}
+          <p className="text-base md:text-xl font-semibold mb-3 opacity-95 max-w-2xl mx-auto">
+            Selling or buying? We clean inside the oven, the fridge and every cabinet, so the walk-through goes smooth and the next owner walks into a clean house.
+          </p>
+          <p className="text-sm md:text-base mb-5 opacity-85 max-w-xl mx-auto">
+            You don&apos;t even need to be there. Leave a lockbox and we&apos;ll text you photos when we&apos;re done.
+          </p>
+
           {offerLive && (
-            <div className="mb-6">
+            <div className="mb-5">
               <a
                 href="#quote-form"
                 className="inline-block rounded-full px-5 py-2.5 text-sm sm:text-base font-bold text-white shadow-lg hover:brightness-110 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-95 transition-all duration-200"
                 style={{ backgroundColor: "#E8622A" }}
               >
-                $75 off your move-out clean.
+                ${MOVEOUT_OFFER.discount} off your move-out or move-in clean.
               </a>
               <p className="mt-2 text-sm text-white/70">
-                Use code <span className="font-bold text-white">MOVE75</span> through {MOVEOUT_OFFER.endDate}.
+                Use code <span className="font-bold text-white">{MOVEOUT_OFFER.code}</span>.
               </p>
             </div>
           )}
 
           <div className="flex flex-wrap gap-3 justify-center">
-            <a
-              href="#quote-form"
+            <Link
+              href="/book"
               style={{ backgroundColor: "#E8721C" }}
               className="text-white font-bold px-6 py-3 rounded-lg hover:opacity-90 transition"
             >
-              Get a Free Quote
-            </a>
+              Book Online
+            </Link>
             <a
-              href="tel:+18152462113"
+              href="#quote-form"
               className="border-2 border-white text-white font-bold px-6 py-3 rounded-lg hover:bg-white hover:text-green-900 transition"
             >
-              Call (815) 246-2113
+              Get a Free Quote
             </a>
           </div>
-        </div>
-      </section>
 
-      {/* TRUST BAR */}
-      <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["💰 Deposit-Back Guarantee", "🏠 Apartments & Houses", "🌿 Eco-Friendly", "🛡️ Fully Insured", "📅 Flexible Scheduling"].map(
-              (item) => <span key={item} className="whitespace-nowrap">{item}</span>
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* WHO WE SERVE */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="section-heading">Who This Is For</h2>
-            <p className="section-subheading mx-auto">
-              Based right here in the southwest suburbs, not a national franchise. Memo answers his own phone. Call or text him directly.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                icon: "🏠",
-                title: "Renters & Tenants",
-                desc: "Moving out of a rental in Romeoville or Plainfield? We clean to the standard your landlord actually checks: appliances, cabinets, closets, grout. Built to help you get your deposit back.",
-              },
-              {
-                icon: "🔑",
-                title: "Landlords & Property Managers",
-                desc: "Turning a unit for new tenants? We get it market-ready fast, with a flat rate and scheduling that works around your turnover window.",
-              },
-              {
-                icon: "🏡",
-                title: "Home Buyers & Sellers",
-                desc: "Moving into a new home or getting one ready to list? We clean it before you unpack, or before the first showing.",
-              },
-            ].map((item) => (
-              <div key={item.title} className="bg-brand-green-50 rounded-xl p-6 border border-brand-green-100 text-center">
-                <span className="text-5xl block mb-4">{item.icon}</span>
-                <h3 className="font-bold text-xl text-gray-900 mb-3">{item.title}</h3>
-                <p className="text-gray-600 leading-relaxed text-sm">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CHECKLIST */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="section-heading">Move-Out Cleaning Checklist</h2>
-            <p className="section-subheading mx-auto">
-              Every corner of your empty home, cleaned to landlord inspection standards.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {moveOutChecklist.map((section) => (
-              <div key={section.room} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <h3 className="font-bold text-lg text-brand-green mb-4 border-b border-brand-green-100 pb-2">
-                  {section.room}
-                </h3>
-                <ul className="space-y-2">
-                  {section.items.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-gray-700">
-                      <svg className="w-4 h-4 text-brand-green mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          {/* Oven photo beside the kitchen checklist, proving the "inside
-              and outside of oven" line above is real. */}
-          <div className="mt-10 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div className="order-2 md:order-1 text-center md:text-left">
-              <h3 className="font-bold text-xl text-gray-900 mb-2">Every Kitchen Appliance, Inside and Out</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
-                The oven gets opened and scrubbed, not wiped down from the outside. Same for the microwave, the stovetop, and the dishwasher. It is the difference between a move-out clean that passes inspection and one that does not.
-              </p>
-            </div>
-            <div className="order-1 md:order-2">
-              <Image
-                src="/work-photos/oven-interior-open-door-clean-1200.jpg"
-                alt="Oven door open showing a spotless interior cavity and racks after a DSM Cleaning Solutions move-out clean"
-                width={900}
-                height={1200}
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="rounded-2xl shadow-md w-full h-auto object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FRIDGE PROOF. The clearest line between move-out and deep cleaning:
-          deep cleaning does not open the fridge, move-out does. Placed right
-          after the checklist, not buried at the bottom of the page. */}
-      <section className="py-14 px-4 bg-white">
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div>
-            <Image
-              src="/work-photos/fridge-interior-shelves-spotless-1200.jpg"
-              alt="Empty refrigerator with wiped-clean glass shelves after a DSM Cleaning Solutions move-out clean"
-              width={1200}
-              height={900}
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="rounded-2xl shadow-md w-full h-auto object-cover"
-            />
-          </div>
-          <div className="text-center md:text-left">
-            <p className="font-bold uppercase tracking-widest text-xs mb-2" style={{ color: "#E8622A" }}>
-              What Deep Cleaning Skips
-            </p>
-            <h2 className="text-2xl font-bold text-gray-800 mb-3">We Clean Inside the Fridge</h2>
-            <p className="text-gray-600 leading-relaxed">
-              A landlord opens the fridge before anything else. Move-out cleaning covers the inside of the refrigerator, every shelf and drawer, on top of everything a deep clean already covers. It is the difference that gets your deposit back.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* PRICING. Full MOVE_OUT_TIERS ladder, struck pricing when MOVE75 is
-          live, same treatment as /pricing and /deep-cleaning so a visitor
-          never sees two different numbers for the same job. */}
-      <section className="py-14 px-4 bg-gray-50">
-        <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-2">
-              Move-Out Cleaning Pricing
-            </h2>
-            {offerLive && moveOutOffer && (
-              <p className="text-sm font-bold" style={{ color: "#E8622A" }}>
-                ${moveOutOffer.discount} off your move-out clean with code {moveOutOffer.code}, through {MOVEOUT_OFFER.endDate}.
-              </p>
-            )}
-          </div>
-
-          <div className="bg-white rounded-2xl border border-gray-100 p-6 sm:p-8">
-            <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">
-              Example Prices
-            </p>
-            <div className="space-y-3">
-              {MOVE_OUT_TIERS.map((tier) => {
-                const label = tierLabel(tier);
-                const sale = discountedPrice(tier.price, "moveout");
-                return (
-                  <div key={label} className="flex items-center justify-between gap-3 border-b border-gray-100 pb-3 last:border-0 last:pb-0">
-                    <span className="text-sm text-gray-600 leading-tight">{label}</span>
-                    {/* min-h keeps the row the same height whether or not a
-                        struck price is present, so CLS stays at 0. */}
-                    <span className="text-lg font-bold text-gray-900 whitespace-nowrap flex-shrink-0 min-h-[1.75rem] flex items-center gap-2">
-                      {sale === null ? (
-                        <>Starting at {formatPrice(tier.price)}</>
-                      ) : (
-                        <>
-                          <s className="text-sm font-medium text-gray-400">
-                            <span className="sr-only">Regular price </span>
-                            {formatPrice(tier.price)}
-                          </s>
-                          <span style={{ color: "#E8622A" }}>
-                            <span className="sr-only">Sale price </span>
-                            {formatPrice(sale)}
-                          </span>
-                        </>
-                      )}
-                    </span>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          <p className="text-gray-600 leading-relaxed text-sm mt-6 text-center">
-            Your price depends on bedrooms, bathrooms and square footage. We confirm your exact price before booking anything. No surprises.
+          <p className="text-sm md:text-base mt-5 opacity-80">
+            Most 3 bedroom homes are {formatPrice(THREE_BED.price)}
+            {threeBedSale !== null && <>, or {formatPrice(threeBedSale)} with {MOVEOUT_OFFER.code}</>}.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center mt-6">
-            <Link href="/book" className="text-white font-bold px-8 py-3 rounded-lg hover:opacity-90 transition inline-block text-center" style={{ backgroundColor: "#E8622A" }}>See Your Exact Price</Link>
-            <a href="#quote-form" className="font-bold px-8 py-3 rounded-lg border-2 transition inline-block text-center hover:bg-orange-50" style={{ borderColor: "#E8622A", color: "#E8622A" }}>Get a Free Quote</a>
+        </div>
+      </section>
+
+      {/* 2. TRUST BAR. Same claims as /recurring-cleaning, all already made
+          elsewhere on the site. */}
+      <section className="bg-white border-b py-5 px-4">
+        <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-6 text-sm text-gray-700 font-medium">
+          <span>✅ Family Owned Since 2020</span>
+          <span>✅ 500+ Local Clients</span>
+          <span>✅ Fully Insured &amp; Bonded</span>
+          <span>✅ {REVIEW_RATING} Stars</span>
+          <span>✅ 48-Hour Satisfaction Guarantee</span>
+        </div>
+      </section>
+
+      {/* 3. ANCHOR REVIEW. Word-for-word excerpt, cuts marked. */}
+      <section className="py-10 px-4" style={{ backgroundColor: "#FFF4EE" }}>
+        <div className="max-w-2xl mx-auto text-center">
+          <p style={{ color: "#E8622A" }} className="text-5xl font-serif leading-none mb-3">&ldquo;</p>
+          <p className="text-gray-800 text-lg leading-relaxed italic mb-4">{VINZENZ_EXCERPT}</p>
+          <p className="font-semibold text-gray-700">{reviewAttribution(vinzenz)}</p>
+          <div className="flex justify-center mt-2">
+            <span style={{ color: "#FFA869" }}>★★★★★</span>
           </div>
         </div>
       </section>
 
-      {/* PHOTO GALLERY */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <p className="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">Our Work</p>
-            <h2 className="section-heading">Move-Out Cleaning Results</h2>
-            <p className="section-subheading mx-auto">
-              Real jobs across Plainfield, Romeoville, and the southwest suburbs: fresh vacuum lines, an empty closet, a spotless toilet. The details a landlord actually checks.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
-              <Image
-                src="/work-photos/empty-bedroom-gray-carpet-2-1200.jpg"
-                alt="Empty bedroom with fresh vacuum lines fanning out across the carpet after a DSM Cleaning Solutions move-out clean"
-                fill
-                sizes="(max-width: 768px) 100vw, 33vw"
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
-              <Image
-                src="/work-photos/closet-move-out-cleaning.jpg"
-                alt="Empty walk-in closet with bare shelving and a polished hardwood floor after a DSM Cleaning Solutions move-out clean"
-                fill
-                sizes="(max-width: 768px) 100vw, 33vw"
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
-              <Image
-                src="/work-photos/toilet-bowl-spotless-closeup-2.jpg"
-                alt="Close-up of a spotless toilet bowl after a DSM Cleaning Solutions move-out clean"
-                fill
-                sizes="(max-width: 768px) 100vw, 33vw"
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* REVIEWS */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="section-heading">Move-Out Cleaning Reviews</h2>
-          </div>
+      {/* 4. WHO WE CLEAN FOR */}
+      <section className="py-14 px-4 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-800 text-center mb-10">Who We Clean For</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {pickReviews(3, 4).map((review) => (
-              <ReviewCard
-                key={review.name}
-                name={reviewAttribution(review)}
-                text={review.text}
-              />
+            {audiences.map((a) => (
+              <div key={a.title} className="bg-gray-50 rounded-2xl border border-gray-100 p-6 text-center">
+                <span className="text-4xl block mb-3">{a.icon}</span>
+                <h3 className="font-bold text-lg text-gray-900 mb-2">{a.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{a.desc}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="section-heading">Move-Out Cleaning FAQs</h2>
+      {/* 5. PRICING. Three cards from MOVE_OUT_TIERS, each with the MOVE75
+          price underneath while the offer is live. */}
+      <section className="py-14 px-4 bg-gray-50">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-800 text-center mb-2">Move-Out Cleaning Prices</h2>
+          <p className="text-center text-gray-500 text-sm mb-10">Flat rate by home size. Same checklist for move-in and move-out.</p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            {priceCards.map((tier) => {
+              const sale = discountedPrice(tier.price, "moveout");
+              return (
+                <div key={`${tier.beds}-${tier.sqft}`} className="bg-white rounded-2xl border border-gray-100 p-6 text-center shadow-sm">
+                  <h3 className="font-bold text-lg text-gray-900 mb-1">{tier.beds} / {tier.baths}</h3>
+                  <p className="text-xs text-gray-500 mb-4">{tier.sqft.replace("-", " to ")} sq ft</p>
+                  <p className="text-3xl font-bold text-gray-900">{formatPrice(tier.price)}</p>
+                  {/* min-h keeps every card the same height with or without
+                      the offer line, so nothing jumps when it expires. */}
+                  <p className="text-sm font-semibold mt-1 mb-5 min-h-[1.25rem]" style={{ color: "#E8622A" }}>
+                    {sale !== null && <>{formatPrice(sale)} with {MOVEOUT_OFFER.code}</>}
+                  </p>
+                  <Link
+                    href="/book"
+                    className="block w-full text-white font-bold py-3 rounded-lg hover:opacity-90 transition"
+                    style={{ backgroundColor: "#E8721C" }}
+                  >
+                    Book This Size
+                  </Link>
+                </div>
+              );
+            })}
           </div>
+
+          <p className="text-gray-600 leading-relaxed text-sm text-center max-w-2xl mx-auto">
+            Smaller homes start at {MOVEOUT_FROM}. Your exact price depends on bedrooms, bathrooms and square footage, and you&apos;ll see it before you book.
+          </p>
+        </div>
+      </section>
+
+      {/* 6. WHAT WE CLEAN. One <details> per room, same tap-to-open pattern
+          as the FAQ. First room open so the section shows content without a
+          tap. */}
+      <section className="py-14 px-4 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-800 text-center mb-2">What We Clean</h2>
+          <p className="text-center text-gray-500 text-sm mb-8">
+            Every room in the house, built for an empty home. Tap a room to see the full list.
+          </p>
           <div className="space-y-4">
-            {faqs.map((faq, i) => (
-              <details key={i} className="bg-white border border-gray-200 rounded-xl group">
-                <summary className="flex items-center justify-between p-5 cursor-pointer font-semibold text-gray-900 hover:text-brand-green">
-                  <h3 className="text-left pr-4">{faq.question}</h3>
-                  <svg className="w-5 h-5 text-brand-green flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
+            {checklist.map((section, i) => (
+              <details key={section.room} open={i === 0} className="bg-gray-50 rounded-xl border border-gray-200 group">
+                <summary className="px-5 py-4 font-bold text-gray-800 cursor-pointer hover:bg-gray-100 list-none flex justify-between items-center rounded-xl">
+                  {section.room}
+                  <span className="text-gray-400 ml-4 transition-transform group-open:rotate-45">+</span>
                 </summary>
                 <div className="px-5 pb-5">
-                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 items-start">
+                    <ul className="space-y-1.5">
+                      {section.items.map((item) => (
+                        <li key={item} className="text-sm text-gray-600 flex items-start gap-2">
+                          <span className="text-green-600 mt-0.5">✓</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <div className={`grid ${section.photos.length > 1 ? "grid-cols-2" : "grid-cols-1"} gap-3`}>
+                      {section.photos.map((p) => (
+                        <div key={p.src} className="relative aspect-square rounded-xl overflow-hidden shadow-sm">
+                          <Image src={p.src} alt={p.alt} fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-cover" />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </details>
             ))}
@@ -590,105 +490,199 @@ export default function MoveOutCleaningPage() {
         </div>
       </section>
 
-      {/* RELATED SERVICES */}
-      <section className="py-12 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Other Services You May Need</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
-            <Link href="/deep-cleaning" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning</h3>
-              <p className="text-sm text-gray-600">Perfect if your new home needs a thorough first clean.</p>
-            </Link>
-            <Link href="/recurring-cleaning" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Recurring Maid Service</h3>
-              <p className="text-sm text-gray-600">Set up a regular cleaning schedule in your new home.</p>
-            </Link>
-            <Link href="/plainfield-il" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Plainfield, IL Cleaning</h3>
-              <p className="text-sm text-gray-600">Move-out cleaning available throughout Plainfield.</p>
-            </Link>
+      {/* 7. MOVE-OUT VS DEEP CLEAN. Built from the two real checklists; see
+          `comparison` above for the source line behind every cell. */}
+      <section className="py-14 px-4 bg-gray-50">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-800 text-center mb-2">Move-Out vs Deep Clean</h2>
+          <p className="text-center text-gray-600 text-sm mb-8 max-w-xl mx-auto">
+            Move-out is built for an empty house, so it adds inside the fridge and inside every cabinet and drawer.
+          </p>
+          <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-gray-800 text-white">
+                  <th className="text-left px-4 py-3 font-semibold"></th>
+                  <th className="text-center px-4 py-3 font-semibold">Deep Clean</th>
+                  <th className="text-center px-4 py-3 font-semibold" style={{ backgroundColor: "#E8622A" }}>Move-Out</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                {comparison.map((row) => (
+                  <tr key={row.item}>
+                    <td className="px-4 py-3 font-medium text-gray-900">{row.item}</td>
+                    <td className="px-4 py-3 text-center text-gray-600">{row.deep}</td>
+                    <td className="px-4 py-3 text-center font-semibold text-gray-900">{row.moveOut}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
-          <h2 className="text-xl font-bold text-gray-900 mb-4">We Offer Move-Out Cleaning Across the Area</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <Link href="/move-out-cleaning-plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning in Plainfield, IL</h3>
-              <p className="text-sm text-gray-600">Serving all of Plainfield, zip codes 60544 & 60585.</p>
+          <p className="text-center mt-5">
+            <Link href="/deep-cleaning" className="text-brand-green font-semibold text-sm hover:underline">
+              Still living there? See what&apos;s in a deep clean →
             </Link>
-            <Link href="/move-out-cleaning-naperville-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning in Naperville, IL</h3>
-              <p className="text-sm text-gray-600">Serving 60540, 60563, 60564 & 60565.</p>
+          </p>
+        </div>
+      </section>
+
+      {/* 8. MID-PAGE CTA */}
+      <section className="py-14 px-4" style={{ backgroundColor: "#E8622A" }}>
+        <div className="max-w-2xl mx-auto text-center text-white">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6">Closing soon? Get it off your list today.</h2>
+          <div className="flex flex-wrap gap-3 justify-center">
+            <Link href="/book" className="bg-white font-bold px-6 py-3 rounded-lg hover:opacity-90 transition" style={{ color: "#E8622A" }}>
+              Book Online
             </Link>
-            <Link href="/move-out-cleaning-romeoville-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning in Romeoville, IL</h3>
-              <p className="text-sm text-gray-600">Serving all of Romeoville (60446), our home base.</p>
-            </Link>
-            <Link href="/move-out-cleaning-bolingbrook-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning in Bolingbrook, IL</h3>
-              <p className="text-sm text-gray-600">Serving all of Bolingbrook, zip codes 60440 & 60490.</p>
-            </Link>
-            <Link href="/move-out-cleaning-joliet-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning in Joliet, IL</h3>
-              <p className="text-sm text-gray-600">Serving all Joliet zip codes: 60431, 60432, 60433, 60435 & 60436.</p>
-            </Link>
-            <Link href="/move-out-cleaning-lockport-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning in Lockport, IL</h3>
-              <p className="text-sm text-gray-600">Serving all of Lockport (60441).</p>
-            </Link>
-            <Link href="/move-out-cleaning-shorewood-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning in Shorewood, IL</h3>
-              <p className="text-sm text-gray-600">Serving all of Shorewood (60404).</p>
-            </Link>
-            <Link href="/move-out-cleaning-lemont-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning in Lemont, IL</h3>
-              <p className="text-sm text-gray-600">Serving all of Lemont (60439).</p>
-            </Link>
-            <Link href="/move-out-cleaning-homer-glen-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning in Homer Glen, IL</h3>
-              <p className="text-sm text-gray-600">Serving all of Homer Glen (60491).</p>
-            </Link>
-            <Link href="/move-out-cleaning-westmont-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning in Westmont, IL</h3>
-              <p className="text-sm text-gray-600">Serving all of Westmont (60559).</p>
-            </Link>
-            <Link href="/move-out-cleaning-minooka-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning in Minooka, IL</h3>
-              <p className="text-sm text-gray-600">Serving all of Minooka (60447).</p>
-            </Link>
+            <a href="#quote-form" className="border-2 border-white text-white font-bold px-6 py-3 rounded-lg hover:bg-white hover:text-orange-600 transition">
+              Get a Free Quote
+            </a>
           </div>
         </div>
       </section>
 
-      {/* CONTACT CTA + FORM. id="quote-form" so the hero and pricing CTAs,
-          plus the offer block, all scroll to this same section. */}
-      <section id="quote-form" className="py-16 bg-brand-green">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div className="text-white">
-              <h2 className="text-4xl font-bold mb-4">Book Your Move-Out Clean Today</h2>
-              <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                Get a free quote for move-out or move-in cleaning in Romeoville, Plainfield, and the southwest suburbs. Fast, thorough, and landlord-approved.
-              </p>
-              <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-brand-green-50 transition-colors mb-6">
-                📞 (815) 246-2113
-              </a>
-              <p className="text-white/80">Family-owned. Fully insured. Deposit-back cleaning. Eco-friendly.</p>
-            </div>
-            <div className="bg-white rounded-2xl overflow-hidden shadow-xl p-8">
-              <div className="text-center mb-6">
-                <div className="flex justify-center mb-1">
-                  <span style={{ color: "#E8622A" }} className="text-2xl">★★★★★</span>
-                </div>
-                <p className="text-sm text-gray-500">{REVIEW_RATING} average from {REVIEW_COUNT} Google reviews</p>
+      {/* 9. YOU DON'T NEED TO BE THERE */}
+      <section className="py-14 px-4 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-800 text-center mb-10">You Don&apos;t Need to Be There</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <ol className="space-y-5">
+              {[
+                "Leave a lockbox or code.",
+                "We clean every room on the checklist.",
+                "You get photos before we leave.",
+              ].map((step, i) => (
+                <li key={step} className="flex items-center gap-4">
+                  <span
+                    className="flex-shrink-0 w-10 h-10 rounded-full text-white font-bold flex items-center justify-center"
+                    style={{ backgroundColor: "#E8622A" }}
+                  >
+                    {i + 1}
+                  </span>
+                  <span className="text-gray-800 font-semibold">{step}</span>
+                </li>
+              ))}
+            </ol>
+            <figure className="rounded-2xl p-6" style={{ backgroundColor: "#FFF4EE" }}>
+              <blockquote className="text-gray-800 leading-relaxed italic">&ldquo;{MELISSA_EXCERPT}&rdquo;</blockquote>
+              <figcaption className="mt-3 font-semibold text-gray-700">
+                {reviewAttribution(melissa)} <span style={{ color: "#FFA869" }}>★★★★★</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      {/* 10. MOVING IN? KEEP IT THAT WAY */}
+      <section className="py-14 px-4 bg-gray-50">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">Moving In? Keep It That Way.</h2>
+          <p className="text-gray-600 leading-relaxed mb-6">
+            A lot of our clients found us for a move-in clean and stayed for regular cleanings.
+          </p>
+          <figure className="bg-white rounded-2xl p-6 shadow-sm mb-6 text-left">
+            <blockquote className="text-gray-800 leading-relaxed italic">&ldquo;{ALINA_EXCERPT}&rdquo;</blockquote>
+            <figcaption className="mt-3 font-semibold text-gray-700">
+              {reviewAttribution(alina)} <span style={{ color: "#FFA869" }}>★★★★★</span>
+            </figcaption>
+          </figure>
+          <Link
+            href="/recurring-cleaning"
+            className="inline-block font-bold px-6 py-3 rounded-lg border-2 transition hover:bg-orange-50"
+            style={{ borderColor: "#E8622A", color: "#E8622A" }}
+          >
+            Recurring cleaning: save up to {formatDiscount(FREQUENCY_DISCOUNTS.weekly)} on every visit
+          </Link>
+        </div>
+      </section>
+
+      {/* 11. REVIEWS BLOCK */}
+      <section className="py-14 px-4 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-800 text-center mb-8">More From Clients Who Moved</h2>
+          <div className="space-y-6 mb-8">
+            {moreMoveReviews.map((review) => (
+              <div key={review.name} className="bg-gray-50 rounded-xl p-6 shadow-sm">
+                <div className="flex mb-3"><span style={{ color: "#FFA869" }}>★★★★★</span></div>
+                <p className="text-gray-700 leading-relaxed mb-3 italic">&ldquo;{review.text}&rdquo;</p>
+                <p className="text-sm font-semibold text-gray-600">{reviewAttribution(review)}</p>
               </div>
-              <LeadForm defaultService="Move-In / Move-Out Cleaning" />
-            </div>
+            ))}
+          </div>
+          <div className="text-center">
+            <a href="https://g.co/kgs/KFkN2MX" target="_blank" rel="noopener noreferrer" className="text-green-700 font-semibold hover:underline text-sm">
+              Read all {REVIEW_COUNT} reviews on Google →
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Sticky mobile "Book Now" bar, fades in after 300px scroll. Points at
-          this page's own quote form instead of /book, matching the pattern
-          on /deep-cleaning. 69% of traffic is mobile. */}
+      {/* 12. FAQ. `faq.a` is byte-identical to the FAQPage schema. The offer
+          line and the service-areas link sit outside it. */}
+      <section className="py-14 px-4 bg-gray-50">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-800 text-center mb-8">Frequently Asked Questions</h2>
+          <div className="space-y-3">
+            {faqs.map((faq, i) => (
+              <details key={faq.q} className="bg-white border border-gray-200 rounded-lg">
+                <summary className="px-5 py-4 font-semibold text-gray-800 cursor-pointer hover:bg-gray-50 list-none flex justify-between items-center">
+                  {faq.q}
+                  <span className="text-gray-400 ml-4">+</span>
+                </summary>
+                <div className="px-5 pb-4 text-gray-600 text-sm leading-relaxed">
+                  <p>{faq.a}</p>
+                  {i === 0 && offerLive && (
+                    <p className="mt-2 font-semibold" style={{ color: "#E8622A" }}>
+                      Right now, code {MOVEOUT_OFFER.code} takes ${MOVEOUT_OFFER.discount} off.
+                    </p>
+                  )}
+                  {faq.q === "What areas do you serve?" && (
+                    <p className="mt-2">
+                      <Link href="/service-areas" className="text-brand-green font-semibold hover:underline">See all service areas →</Link>
+                    </p>
+                  )}
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 13. FINAL CTA + FORM, service preselected to the exact SERVICE_OPTIONS label. */}
+      <section id="quote-form" style={{ background: "linear-gradient(135deg, #E8721C 0%, #c45a10 100%)" }} className="py-16 px-4">
+        <div className="max-w-2xl mx-auto text-center text-white mb-8">
+          <h2 className="text-2xl font-bold mb-2">Get a Free Move-Out Cleaning Quote</h2>
+          <p className="opacity-90">
+            Selling, buying or renting, tell us about the house and we&apos;ll get back to you fast.
+          </p>
+        </div>
+        <div className="max-w-xl mx-auto bg-white rounded-2xl shadow-xl p-8">
+          <div className="text-center mb-6">
+            <div className="flex justify-center mb-1"><span style={{ color: "#E8622A" }} className="text-2xl">★★★★★</span></div>
+            <p className="text-sm text-gray-500">{REVIEW_RATING} average from {REVIEW_COUNT} Google reviews</p>
+          </div>
+          <LeadForm defaultService="Move-In / Move-Out Cleaning" />
+        </div>
+      </section>
+
+      {/* 14. NEARBY CITIES: the 16 move-out city pages. */}
+      <section className="py-12 px-4 bg-gray-50">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-lg font-bold text-gray-700 mb-6">Move-Out Cleaning by City</h2>
+          <div className="flex flex-wrap justify-center gap-3">
+            {cities.map(([name, slug]) => (
+              <Link
+                key={slug}
+                href={`/move-out-cleaning-${slug}-il`}
+                className="px-4 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-green-700 hover:text-green-700 transition"
+              >
+                {name} IL
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <StickyMobileBar bookHref="#quote-form" />
     </>
   );

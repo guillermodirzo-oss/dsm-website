@@ -207,14 +207,11 @@ export default function RecurringCleaningPage() {
   // if REAL_REVIEWS is ever reordered.
   const anchorReview = REAL_REVIEWS.find((r) => r.name === "Thomas Cheng")!;
 
-  // Three-review block. The brief named a "Donna Slas" review that does not
-  // exist anywhere in lib/realReviews.ts or its sourcing screenshots in
-  // public/Reviews/ — it is not a verified review, so it is not used here
-  // (see RULES in realReviews.ts on fabricated testimonials). Michelle
-  // Gillespie's review substitutes: also genuine, also about Guillermo and
-  // Rocio by name, the closest verified match to what was asked for.
+  // Three-review block. Donna Slas's review is sourced from
+  // public/Reviews/Screenshot (1471).png and shown in full, since it is
+  // already short.
   const threeReviews = [
-    REAL_REVIEWS.find((r) => r.name === "Michelle Gillespie")!,
+    REAL_REVIEWS.find((r) => r.name === "Donna Slas")!,
     REAL_REVIEWS.find((r) => r.name === "Courtney Horne")!,
     REAL_REVIEWS.find((r) => r.name === "Jae Mac")!,
   ];
@@ -500,8 +497,7 @@ export default function RecurringCleaningPage() {
         </div>
       </section>
 
-      {/* 8. THREE REVIEW BLOCK. See threeReviews comment above the return for
-          why Michelle Gillespie's review stands in as the third. */}
+      {/* 8. THREE REVIEW BLOCK. */}
       <section className="py-14 px-4 bg-gray-50">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl font-bold text-gray-800 text-center mb-10">

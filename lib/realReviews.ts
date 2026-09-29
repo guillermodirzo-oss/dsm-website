@@ -1,11 +1,12 @@
 /**
  * CANONICAL SOURCE OF TRUTH FOR CUSTOMER REVIEWS.
  *
- * Holds 13 reviews, all verbatim from the DSM Cleaning Solutions Google
+ * Holds 17 reviews, all verbatim from the DSM Cleaning Solutions Google
  * Business Profile.
  *
- * Sourcing: 11 were transcribed from screenshots of the live review feed, kept
- * in public/Reviews/ as evidence. The remaining two, Michelle Gillespie and
+ * Sourcing: 15 were transcribed from screenshots of the live review feed, kept
+ * in public/Reviews/ as evidence. Each entry added after 2026-09-27 names its
+ * screenshot in a comment. The remaining two, Michelle Gillespie and
  * Jan Forster, came from prior page content rather than those screenshots
  * (recovered verbatim from commit cd18bcf, app/deep-clean-offer/page.tsx) and
  * were confirmed genuine separately. A third from that same block, Rachel
@@ -28,6 +29,10 @@
  *     reviews than exist here. Show fewer instead.
  *  5. Three different people are named Julie. Full display names keep them
  *     distinct; do not collapse them to "Julie G."
+ *  6. A page may show an excerpt instead of the full text, but only through
+ *     reviewExcerpt() below: verbatim spans of the stored text, in their
+ *     original order, with every cut marked by an ellipsis. Never reword,
+ *     reorder or tidy anything inside a span. The stored text stays complete.
  */
 
 export interface RealReview {
@@ -126,6 +131,41 @@ export const REAL_REVIEWS: RealReview[] = [
     text: "I'm so glad DSM Cleaning Services was recommended to us by our realtor! They are fantastic, and their website makes arranging cleanings so easy. I highly recommend them, I will be using them many more times!",
     rating: 5,
   },
+  // New entries go at the end on purpose. pickReviews() wraps by array length,
+  // and no move-out or deep city page's offset reaches past index 12, so
+  // appending here cannot change which reviews those pages show. General
+  // city pages (CityPageTemplate, offset = slug length) do reach these.
+  {
+    // Source: public/Reviews/Screenshot (1471).png. Service: Standard cleaning.
+    name: "Donna Slas",
+    city: "",
+    text: "Guillermo and Rocio did an amazing job! Thorough due to an exceptional attention to detail. Website is designed for easy access to all services. Communication is fantastic - I couldn't be more pleased!!!",
+    rating: 5,
+  },
+  {
+    // Source: public/Reviews/Screenshot (1474).png. Service: Moving-related cleaning.
+    name: "Melissa Wright",
+    city: "",
+    text: "We used DSM to clean for us when we moved out of our 1900 sq. ft. house in Romeoville. The communication was great between me and the team, and the end results were amazing. We aren't in the area any longer so we left a lock box with a key on the door and the DSM team just let themselves in and took care of everything we needed. After the cleaning was done, they sent me pictures of the rooms so I could see the work was done. And since the pictures, we've been to the house in person and can verify that the house was spotless. I would highly recommend this team and will definitely use them in the future when needed.",
+    rating: 5,
+  },
+  {
+    // Source: public/Reviews/Screenshot (1476).png. Move-out clean, Dec 6 2023.
+    // "He send" and the missing space in "great.From" are the reviewer's own
+    // and are reproduced as written.
+    name: "Vinzenz Unger",
+    city: "",
+    text: "I contracted DSM for a move out clean prior to listing the house. From start to finish this was a great experience. In part, I think this is because Guillermo, the business owner, also was part of the team to do the cleaning - giving him direct involvement with the actual service. Guillermo was very attentive and responsive when I first placed my inquiry. He send timely reminders before the scheduled date to make sure it all still works, showed up on time and got to work right away after a walk through. The job took 6.5hrs to complete. Walking into the house afterwards, it looked and smelled great.From sparkling shower windows, to removal of water residue from a tile floor, floorboards to drawers and appliances - this was well done. No question, I'd hire DSM again, and I definitely would use them for regular maintenance cleaning if this was still needed. Thank you!",
+    rating: 5,
+  },
+  {
+    // Source: public/Reviews/Screenshot (1475).png. Services: Standard
+    // cleaning, Moving-related cleaning. Google shows the first name only.
+    name: "Alina",
+    city: "",
+    text: "Perfect cleaning service! I first found DSM Cleaning Services when I needed a move-in cleaning for my house, and they did such an amazing job that I decided to stay with this company for regular cleanings. The team is always reliable, does great work, and the prices are really fair. Highly recommend!",
+    rating: 5,
+  },
 ];
 
 /** Live Google review count, verified 2026-07-28. */
@@ -141,6 +181,38 @@ export const REVIEW_RATING = "5.0";
  */
 export function reviewAttribution(review: RealReview): string {
   return review.city ? `${review.name}, ${review.city} IL` : review.name;
+}
+
+/** A review looked up by its exact Google display name. Throws if missing. */
+export function reviewByName(name: string): RealReview {
+  const review = REAL_REVIEWS.find((r) => r.name === name);
+  if (!review) throw new Error(`No review from "${name}" in lib/realReviews.ts`);
+  return review;
+}
+
+/**
+ * Word-for-word excerpt of a review (rule 6). Each span must appear verbatim in
+ * the stored text, in order, or this throws and the build fails, so an excerpt
+ * can shorten a review but never reword it. Every cut is marked: spans are
+ * joined with an ellipsis, and one is added at the start or end when the
+ * excerpt doesn't begin or finish where the review does.
+ */
+export function reviewExcerpt(review: RealReview, spans: string[]): string {
+  let cursor = 0;
+  let first = -1;
+  let lastEnd = 0;
+  for (const span of spans) {
+    const at = review.text.indexOf(span, cursor);
+    if (at === -1) {
+      throw new Error(`reviewExcerpt: "${span}" is not verbatim, in order, in ${review.name}'s review`);
+    }
+    if (first === -1) first = at;
+    cursor = at + span.length;
+    lastEnd = cursor;
+  }
+  const lead = first > 0 ? "… " : "";
+  const tail = lastEnd < review.text.length ? " …" : "";
+  return lead + spans.join(" … ") + tail;
 }
 
 /**

@@ -71,7 +71,7 @@ const faqs = [
     q: "How much does move-out cleaning cost?",
     a: `Move-out cleaning starts at ${formatPrice(
       startingPrice(MOVE_OUT_TIERS)
-    )} for a 2-bedroom home. It is built to pass a landlord walkthrough, so it includes inside the fridge, cabinets and every appliance. Pricing varies with home size and the number of bathrooms.`,
+    )} for a 1-bedroom home. It is built to pass a landlord walkthrough, so it includes inside the fridge, cabinets and every appliance. Pricing varies with home size and the number of bathrooms.`,
   },
   {
     q: "Do you charge by the hour or flat rate?",

@@ -362,11 +362,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/move-out-cleaning-checklist`,
-      changeFrequency: "monthly" as const,
-      priority: 0.85,
-    },
-    {
       url: `${baseUrl}/gift-cards`,
       changeFrequency: "monthly" as const,
       priority: 0.85,

@@ -43,7 +43,10 @@ export const STANDARD_CLEANING_TIERS: PriceTier[] = [
   { beds: "5 bed", baths: "3 bath", sqft: "3,500-3,999", price: 530 },
 ];
 
+// 1 bed / 1 bath added 2026-09-28: $395 per the BookingKoala formula
+// (move-out base $230 + 1,000-1,499 sq ft tier $165), confirmed by the owner.
 export const MOVE_OUT_TIERS: PriceTier[] = [
+  { beds: "1 bed", baths: "1 bath", sqft: "1,000-1,499", price: 395 },
   { beds: "2 bed", baths: "1 bath", sqft: "1,000-1,499", price: 410 },
   { beds: "3 bed", baths: "2 bath", sqft: "1,500-1,999", price: 490 },
   { beds: "4 bed", baths: "2.5 bath", sqft: "2,000-2,499", price: 585 },

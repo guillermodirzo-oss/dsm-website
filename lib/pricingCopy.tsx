@@ -63,13 +63,15 @@ export const DEEP_CLEANING_PRICING_COPY = (
 /**
  * Move-out pricing copy, rendered on the move-out city pages.
  *
- * Every figure derives from MOVE_OUT_TIERS in lib/pricing.ts. Unlike the deep
- * cleaning copy above, this lists the entry tier itself as the first row
- * instead of starting from index 1, since move-out shoppers compare it
- * directly against the number they quote up front.
+ * Every figure derives from MOVE_OUT_TIERS in lib/pricing.ts. The listed rows
+ * are the 2, 3 and 4 bed tiers, picked by bed count rather than array index
+ * so adding a smaller tier (the 1 bed row, 2026-09-28) cannot shift which
+ * rows the city pages show. The intro still quotes the true starting price.
  */
-const MOVEOUT_LISTED_TIERS: PriceTier[] = [0, 1, 2].map((i) => MOVE_OUT_TIERS[i]);
-const MOVEOUT_ENTRY_TIER = MOVE_OUT_TIERS[0];
+const MOVEOUT_LISTED_TIERS: PriceTier[] = ["2 bed", "3 bed", "4 bed"].map(
+  (beds) => MOVE_OUT_TIERS.find((t) => t.beds === beds)!
+);
+const MOVEOUT_ENTRY_TIER = MOVE_OUT_TIERS.reduce((a, b) => (b.price < a.price ? b : a));
 
 const MOVEOUT_INTRO = `Move-out cleaning starts at ${formatPrice(
   startingPrice(MOVE_OUT_TIERS)

@@ -1,6 +1,10 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
+import { MOVE_OUT_TIERS, formatPrice, startingPrice } from "@/lib/pricing";
+
+// Unqualified "starting at" claims read the true minimum from the rate card.
+const MOVEOUT_FROM = formatPrice(startingPrice(MOVE_OUT_TIERS));
 
 export const metadata: Metadata = {
   title: "House Cleaning Prices Plainfield IL 2026 Guide",
@@ -295,7 +299,7 @@ export default function HouseCleaningCostPlainfield() {
             <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
               <div className="flex items-center justify-between mb-3">
                 <h3 className="text-xl font-bold text-gray-900">Move-Out Cleaning</h3>
-                <span className="bg-brand-green-50 text-brand-green font-bold px-3 py-1 rounded-lg text-sm">Starting at $410</span>
+                <span className="bg-brand-green-50 text-brand-green font-bold px-3 py-1 rounded-lg text-sm">Starting at {MOVEOUT_FROM}</span>
               </div>
               <p className="text-gray-600 leading-relaxed mb-3">
                 Move-out cleaning in Plainfield is our most comprehensive service — priced higher
@@ -395,7 +399,7 @@ export default function HouseCleaningCostPlainfield() {
             </Link>
             <Link href="/move-out-cleaning-plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning — Plainfield</h3>
-              <p className="text-sm text-gray-600">Deposit-back cleaning starting at $410.</p>
+              <p className="text-sm text-gray-600">Deposit-back cleaning starting at {MOVEOUT_FROM}.</p>
             </Link>
           </div>
         </div>
