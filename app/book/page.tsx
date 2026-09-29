@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
-import { DEEP_CLEANING_TIERS, formatPrice, startingPrice, isOfferActive } from "@/lib/pricing";
+import { DEEP_CLEANING_TIERS, formatPrice, startingPrice } from "@/lib/pricing";
 import { DEEP_OFFER } from "@/lib/siteConstants";
 import Offer from "@/components/Offer";
 import Image from "next/image";
 
-// Regenerate at most hourly so FALL75 drops out of the HTML (and the
-// metadata below) on its own after it ends. <Offer> also hides it in the
-// browser at the deadline. See components/Offer.tsx.
+// Regenerate at most hourly so FALL75 drops out of the HTML on its own after
+// it ends. <Offer> also hides it in the browser at the deadline. See
+// components/Offer.tsx.
 export const revalidate = 3600;
 
 // Matches the booking widget's default (1 bed / 1 bath / 1,000-1,499 sq ft),
@@ -17,45 +17,39 @@ const ENTRY_PRICE = startingPrice(DEEP_CLEANING_TIERS);
 const SERVICE_AREA_LINE =
   "Serving Romeoville, Plainfield, Naperville, Bolingbrook, Joliet, Westmont, Lockport, Lemont, Homer Glen, Shorewood & nearby suburbs";
 
-// generateMetadata, not a static object, so the offer in the title and
-// description drops out on the first regeneration after FALL75 ends. While
-// it's live the output is exactly what it was before.
-export function generateMetadata(): Metadata {
-  const live = isOfferActive("deep");
-  const socialTitle = live
-    ? `Book a Cleaning — $${DEEP_OFFER.discount} Off + Free Oven Cleaning | DSM Cleaning Solutions`
-    : "Book a Cleaning Online | DSM Cleaning Solutions";
-  const socialDescription = live
-    ? `Limited ${DEEP_OFFER.season} offer: $${DEEP_OFFER.discount} off your deep cleaning plus free oven cleaning in Romeoville, Plainfield, Naperville, Bolingbrook and the southwest suburbs. 5-star rated. Book in 2 minutes.`
-    : "Book deep, recurring or move-out cleaning online in Romeoville, Plainfield, Naperville, Bolingbrook and the southwest suburbs. 5-star rated. Book in 2 minutes.";
-  return {
-    title: live ? `Book a Cleaning | $${DEEP_OFFER.discount} Off` : "Book a Cleaning Online",
-    description: live
-      ? `Book your house cleaning with DSM Cleaning Solutions. Get $${DEEP_OFFER.discount} off plus ${DEEP_OFFER.bonus} this ${DEEP_OFFER.season}. Family-owned, eco-friendly, and fully insured.`
-      : "Book your house cleaning with DSM Cleaning Solutions online. See real dates and your exact price. Family-owned, eco-friendly, and fully insured.",
-    alternates: { canonical: "https://www.dsmcleaningsolutions.com/book" },
-    openGraph: {
-      title: socialTitle,
-      description: socialDescription,
-      url: "https://www.dsmcleaningsolutions.com/book",
-      siteName: "DSM Cleaning Solutions",
-      images: [
-        {
-          url: "/hero-image.png",
-          width: 1200,
-          height: 630,
-          alt: "DSM Cleaning Solutions — Book a House Cleaning Online",
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: socialTitle,
-      description: socialDescription,
-      images: ["/hero-image.png"],
-    },
-  };
-}
+// No offer wording here, in any state. Search results and social cards can
+// cache this for weeks, long after an offer ends, so offers live in the page
+// body only, where <Offer> can take them down on time.
+const SOCIAL_TITLE = "Book a Cleaning Online | DSM Cleaning Solutions";
+const SOCIAL_DESCRIPTION =
+  "Book deep, recurring or move-out cleaning online in Romeoville, Plainfield, Naperville, Bolingbrook and the southwest suburbs. 5-star rated. Book in 2 minutes.";
+
+export const metadata: Metadata = {
+  title: "Book a Cleaning Online",
+  description:
+    "Book your house cleaning with DSM Cleaning Solutions online. See real dates and your exact price. Family-owned, eco-friendly, and fully insured.",
+  alternates: { canonical: "https://www.dsmcleaningsolutions.com/book" },
+  openGraph: {
+    title: SOCIAL_TITLE,
+    description: SOCIAL_DESCRIPTION,
+    url: "https://www.dsmcleaningsolutions.com/book",
+    siteName: "DSM Cleaning Solutions",
+    images: [
+      {
+        url: "/hero-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Book a house cleaning online with DSM Cleaning Solutions",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SOCIAL_TITLE,
+    description: SOCIAL_DESCRIPTION,
+    images: ["/hero-image.png"],
+  },
+};
 
 const PHONE = "(815) 246-2113";
 const PHONE_HREF = "tel:+18152462113";
@@ -166,7 +160,7 @@ export default function BookPage() {
         </div>
       </Offer>
 
-      {/* ════════════ SECTION 1 — HERO ════════════ */}
+      {/* ════════════ SECTION 1: HERO ════════════ */}
       <section className="bg-white py-14 px-4">
         <div className="max-w-4xl mx-auto text-center">
 
@@ -181,14 +175,20 @@ export default function BookPage() {
             </div>
           </Offer>
 
-          {/* Headline. The second line falls back to plain copy once FALL75 ends. */}
+          {/* Headline. The whole thing swaps to plain copy once FALL75 ends. */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight tracking-tight mb-4">
-            Get Your Home<br />
-            <span style={{ color: ORANGE }}>
-              <Offer service="deep" fallback="Deep Cleaned by a Local Team">
-                Deep Cleaned for ${DEEP_OFFER.discount} Off
-              </Offer>
-            </span>
+            <Offer
+              service="deep"
+              fallback={
+                <>
+                  Book Your Deep Clean{" "}<br />
+                  <span style={{ color: ORANGE }}>With a Local Family Team</span>
+                </>
+              }
+            >
+              Get Your Home<br />
+              <span style={{ color: ORANGE }}>Deep Cleaned for ${DEEP_OFFER.discount} Off</span>
+            </Offer>
           </h1>
           <p className="text-xl sm:text-2xl font-bold mb-3" style={{ color: NAVY }}>
             <Offer service="deep" fallback="Inside the oven, the grout and the baseboards. Every room, done right.">
@@ -213,7 +213,7 @@ export default function BookPage() {
             className="inline-block text-white font-extrabold text-xl px-10 py-5 rounded-full shadow-2xl hover:opacity-90 active:scale-95 transition-all duration-200 mb-4"
             style={{ backgroundColor: ORANGE, boxShadow: "0 15px 40px rgba(232,114,28,0.35)" }}
           >
-            <Offer service="deep" fallback="Book My Deep Clean Now →">
+            <Offer service="deep" fallback="Book My Deep Clean →">
               Claim My ${DEEP_OFFER.discount} Off and Book Now →
             </Offer>
           </a>
@@ -221,7 +221,7 @@ export default function BookPage() {
         </div>
       </section>
 
-      {/* ════════════ PHOTO STRIP — below hero, before offer ════════════ */}
+      {/* ════════════ PHOTO STRIP: below hero, before offer ════════════ */}
       <section className="bg-white pb-10 px-4">
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4">
           <figure>
@@ -266,7 +266,7 @@ export default function BookPage() {
         </div>
       </section>
 
-      {/* ════════════ SECTION 2 — OFFER / VALUE STACK ════════════ */}
+      {/* ════════════ SECTION 2: OFFER / VALUE STACK ════════════ */}
       <section className="py-16 px-4" style={{ backgroundColor: NAVY }}>
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-10">
@@ -301,7 +301,7 @@ export default function BookPage() {
                 <div className="px-5 py-5 flex items-center justify-between border-t" style={{ borderColor: "rgba(232,114,28,0.3)", backgroundColor: "rgba(232,114,28,0.08)" }}>
                   <p className="font-extrabold text-white text-lg">Deep Cleaning</p>
                   <div className="text-right">
-                    <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "#93afd4" }}>Starting At</p>
+                    <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "#93afd4" }}>Starting at</p>
                     <p className="font-extrabold text-2xl" style={{ color: ORANGE }}>{formatPrice(ENTRY_PRICE)}</p>
                   </div>
                 </div>
@@ -348,7 +348,7 @@ export default function BookPage() {
         </div>
       </section>
 
-      {/* ════════════ SECTION 3 — HOW IT WORKS ════════════ */}
+      {/* ════════════ SECTION 3: HOW IT WORKS ════════════ */}
       <section className="bg-white py-16 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
@@ -399,7 +399,7 @@ export default function BookPage() {
         </div>
       </section>
 
-      {/* ════════════ SECTION 4 — GUARANTEE ════════════ */}
+      {/* ════════════ SECTION 4: GUARANTEE ════════════ */}
       <section className="py-16 px-4 bg-gray-900">
         <div className="max-w-3xl mx-auto text-center">
           <div
@@ -431,7 +431,7 @@ export default function BookPage() {
         </div>
       </section>
 
-      {/* ════════════ SECTION 5 — REVIEWS ════════════ */}
+      {/* ════════════ SECTION 5: REVIEWS ════════════ */}
       <section className="bg-gray-50 py-16 px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-10">
@@ -480,7 +480,7 @@ export default function BookPage() {
         </div>
       </section>
 
-      {/* ════════════ SECTION 6 — FAQ / OBJECTION CRUSHER ════════════ */}
+      {/* ════════════ SECTION 6: FAQ / OBJECTION CRUSHER ════════════ */}
       <section className="bg-white py-16 px-4">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-10">
@@ -504,7 +504,7 @@ export default function BookPage() {
         </div>
       </section>
 
-      {/* ════════════ SECTION 7 — BOOKING FORM ════════════ */}
+      {/* ════════════ SECTION 7: BOOKING FORM ════════════ */}
       <section id="booking-form" className="py-16 px-4 scroll-mt-20" style={{ backgroundColor: "#f9fafb" }}>
         <div className="max-w-4xl mx-auto">
 
@@ -556,9 +556,9 @@ export default function BookPage() {
             </Offer>
           </div>
 
-          {/* BookingKoala embed — skeleton shown while iframe loads */}
+          {/* BookingKoala embed, with a skeleton shown while the iframe loads */}
           <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100 bg-white relative">
-            {/* Loading skeleton — visible until iframe paints */}
+            {/* Loading skeleton, visible until the iframe paints */}
             <div
               id="bk-skeleton"
               className="absolute inset-0 bg-white z-10 pointer-events-none"
@@ -608,7 +608,7 @@ export default function BookPage() {
             >
               📞 {PHONE}
             </a>
-            <p className="text-gray-400 text-sm mt-2">Mon–Sun · 8am–6pm</p>
+            <p className="text-gray-400 text-sm mt-2">Mon to Sun · 8am to 6pm</p>
           </div>
         </div>
       </section>

@@ -201,7 +201,7 @@ export default function RecurringCleaningPage() {
   const anchorReview = REAL_REVIEWS.find((r) => r.name === "Thomas Cheng")!;
 
   // Three-review block. Donna Slas's review is sourced from
-  // public/Reviews/Screenshot (1471).png and shown in full, since it is
+  // evidence/reviews/Screenshot (1471).png and shown in full, since it is
   // already short.
   const threeReviews = [
     REAL_REVIEWS.find((r) => r.name === "Donna Slas")!,

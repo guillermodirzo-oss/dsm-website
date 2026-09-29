@@ -8,7 +8,7 @@ export default function Footer() {
   const pathname = usePathname();
   const currentYear = new Date().getFullYear();
 
-  if (["/spring-special", "/thank-you", "/quote-thank-you"].includes(pathname)) return null;
+  if (["/thank-you", "/quote-thank-you"].includes(pathname)) return null;
   return (
     <footer className="bg-gray-950 text-gray-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -19,7 +19,7 @@ export default function Footer() {
             <div className="mb-5">
               <Image
                 src="/Logo.png"
-                alt="DSM Cleaning Solutions logo — professional house cleaning service"
+                alt="DSM Cleaning Solutions logo, house cleaning in Romeoville IL"
                 width={180}
                 height={56}
                 className="h-14 w-auto object-contain brightness-0 invert"

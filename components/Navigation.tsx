@@ -18,7 +18,7 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  if (["/spring-special", "/thank-you", "/quote-thank-you"].includes(pathname)) return null;
+  if (["/thank-you", "/quote-thank-you"].includes(pathname)) return null;
 
   return (
     <nav className={`sticky top-0 z-50 transition-all duration-300 ${
@@ -31,7 +31,7 @@ export default function Navigation() {
           <Link href="/" className="flex items-center">
             <Image
               src="/Logo.png"
-              alt="DSM Cleaning Solutions — House Cleaning Romeoville & Plainfield IL"
+              alt="DSM Cleaning Solutions, house cleaning in Romeoville and Plainfield IL"
               width={180}
               height={48}
               className="h-12 w-auto object-contain"

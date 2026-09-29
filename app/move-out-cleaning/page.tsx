@@ -100,6 +100,7 @@ const checklist = [
       "Clean baseboards",
       "Clean microwave inside and out",
       "Clean and dry sink and faucet",
+      "Scrub tile grout",
       "Vacuum and mop floors",
     ],
     photos: [
@@ -113,6 +114,7 @@ const checklist = [
       "Dust reachable vents",
       "Clean and sanitize toilet and toilet area",
       "Remove soap scum and mildew in shower and tub",
+      "Scrub tile grout",
       "Clean inside and outside all cabinets and drawers",
       "Sanitize countertops",
       "Sanitize sink and polish fixtures",
@@ -158,9 +160,10 @@ const comparison = [
   // deep: "Wipe baseboards and door frames", "Wipe all doors and door frames" |
   // move-out: "Dust baseboards", "Dust doors and door frames", "Wipe baseboards and doors"
   { item: "Baseboards and doors", deep: "Yes", moveOut: "Yes" },
-  // deep: "Deep scrub shower/tub with grout cleaning" |
-  // move-out: "Remove soap scum and mildew in shower and tub"
-  { item: "Shower and tub", deep: "Grout scrubbed", moveOut: "Soap scum and mildew removed" },
+  // deep: "Deep scrub shower/tub with grout cleaning", "Mop floors and clean
+  // grout lines" (Bathrooms only) | move-out: "Scrub tile grout" (Kitchen and
+  // Bathrooms, confirmed by the owner 2026-09-28)
+  { item: "Tile grout", deep: "Bathrooms", moveOut: "Kitchen and bathrooms" },
   // deep: no laundry room section | move-out: "Laundry room" section
   { item: "Laundry room", deep: "Not on the checklist", moveOut: "Yes" },
 ];
@@ -179,7 +182,7 @@ const faqs = [
   },
   {
     q: "What's the difference between move-out and deep cleaning?",
-    a: "Move-out cleaning is built for an empty house. It covers inside the fridge and inside every cabinet and drawer, which a deep clean doesn't. Deep cleaning is built for a home you're living in, so it scrubs bathroom grout and vacuums under and behind furniture. Both clean inside the oven and microwave, and both do baseboards and doors.",
+    a: "Move-out cleaning is built for an empty house. It covers inside the fridge and inside every cabinet and drawer, which a deep clean doesn't. Deep cleaning is built for a home you're living in, so it vacuums under and behind furniture. Both clean inside the oven and microwave, both scrub tile grout, and both do baseboards and doors.",
   },
   {
     q: "Do I need to be home?",

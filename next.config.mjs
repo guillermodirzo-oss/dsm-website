@@ -299,6 +299,12 @@ const nextConfig = {
         destination: "/deep-cleaning",
         permanent: true,
       },
+      // Retired SPRING75 landing page (the offer ended in May).
+      {
+        source: "/spring-special",
+        destination: "/deep-cleaning",
+        permanent: true,
+      },
 
       // ─── DEEP CLEANING CITY REDIRECTS ─────────────────────────────────────
       {

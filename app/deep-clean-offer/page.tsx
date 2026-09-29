@@ -2,17 +2,30 @@ import type { Metadata } from "next";
 import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
+import Offer from "@/components/Offer";
+import { DEEP_OFFER } from "@/lib/siteConstants";
+import { DEEP_CLEANING_TIERS, formatPrice, startingPrice } from "@/lib/pricing";
 import StickyBar from "./StickyBar";
 import DeepCleanChecklist from "./DeepCleanChecklist";
 
+// Regenerate at most hourly so FALL75 drops out of the HTML on its own after
+// it ends. <Offer> also hides it in the browser at the deadline. See
+// components/Offer.tsx. Every offer line below has a fallback, so after the
+// offer ends this reads as a plain deep cleaning page with regular prices.
+export const revalidate = 3600;
+
+const OFF = `$${DEEP_OFFER.discount}`;
+const ENTRY_PRICE = formatPrice(startingPrice(DEEP_CLEANING_TIERS));
+
 // ─── Metadata ────────────────────────────────────────────────────────────────
+// No offer wording here: ad and social previews cache the title long after
+// an offer ends. Offers stay in the page body, inside <Offer>.
 export const metadata: Metadata = {
   title: {
-    absolute:
-      "Deep Cleaning Special — $75 Off + Free Oven Clean | DSM Cleaning Solutions",
+    absolute: "Deep Cleaning From a Local Family Team | DSM Cleaning Solutions",
   },
   description:
-    "Save $75 on your deep clean plus free oven cleaning with DSM Cleaning Solutions. Serving Romeoville, Plainfield, Bolingbrook, Crest Hill, Shorewood & Lockport.",
+    "Deep cleaning from a family-owned team in Romeoville. Inside the oven, the grout and the baseboards. Serving Plainfield, Bolingbrook, Crest Hill, Shorewood and Lockport too.",
   robots: { index: false, follow: false },
 };
 
@@ -137,12 +150,24 @@ export default function DeepCleanOfferPage() {
               </a>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
-                $75 Off Your First Deep Clean
+                <Offer service="deep" fallback="Deep Cleaning From a Local Family Team">
+                  {OFF} Off Your First Deep Clean
+                </Offer>
               </h1>
 
               <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-4">
-                Most do. Here&apos;s how to get yours done for $75 less + a
-                free oven clean.
+                <Offer
+                  service="deep"
+                  fallback={
+                    <>
+                      Inside the oven, the grout and the baseboards. Deep cleaning
+                      starts at {ENTRY_PRICE}, and we confirm your price before we book.
+                    </>
+                  }
+                >
+                  Book by {DEEP_OFFER.endDate} with code {DEEP_OFFER.code} and get{" "}
+                  {OFF} off plus {DEEP_OFFER.bonus}, a ${DEEP_OFFER.bonusValue} value.
+                </Offer>
               </p>
 
               {/* Trust bullets — 2-col compact grid on mobile, single col on md+ */}
@@ -166,16 +191,24 @@ export default function DeepCleanOfferPage() {
             >
               <div className="mb-4">
                 <h2 className="text-xl font-bold text-gray-900 mb-1">
-                  Claim Your{" "}
-                  <a
-                    href="#quote-form-top"
-                    className="text-orange-600 hover:underline"
-                  >
-                    $75 Discount
-                  </a>
+                  <Offer service="deep" fallback="Get Your Free Deep Cleaning Quote">
+                    Claim Your{" "}
+                    <a
+                      href="#quote-form-top"
+                      className="text-orange-600 hover:underline"
+                    >
+                      {OFF} Discount
+                    </a>
+                  </Offer>
                 </h2>
                 <p className="text-sm text-gray-500">
-                  $75 OFF + Free Oven Clean — Limited spots available
+                  <Offer
+                    service="deep"
+                    fallback={<>Deep cleaning starts at {ENTRY_PRICE}. Limited spots each week.</>}
+                  >
+                    {OFF} off + free oven cleaning with code {DEEP_OFFER.code} through{" "}
+                    {DEEP_OFFER.endDate}. Limited spots.
+                  </Offer>
                 </p>
               </div>
               {/* Trust badges */}
@@ -184,7 +217,7 @@ export default function DeepCleanOfferPage() {
                 <span className="bg-gray-100 text-xs text-gray-600 px-1 py-1 rounded-full flex justify-center items-center text-center">🛡️ Fully Insured</span>
                 <span className="bg-gray-100 text-xs text-gray-600 px-1 py-1 rounded-full flex justify-center items-center text-center">🏠 Family-Owned</span>
               </div>
-              <LeadForm defaultService="Deep Cleaning" step1Label="Get Your $75 Discount — 60 Seconds" />
+              <LeadForm defaultService="Deep Cleaning" step1Label="Free quote in 60 seconds" />
             </div>
           </div>
 
@@ -225,9 +258,11 @@ export default function DeepCleanOfferPage() {
 
           <div className="text-center">
             <p className="text-gray-600 mb-6">
-              Sound familiar? That&apos;s what a deep clean fixes. And right
-              now, you can get one for{" "}
-              <strong>$75 less + a free oven clean</strong>.
+              Sound familiar? That&apos;s what a deep clean fixes.
+              <Offer service="deep">
+                {" "}And through {DEEP_OFFER.endDate}, you can get one for{" "}
+                <strong>{OFF} less plus {DEEP_OFFER.bonus}</strong>.
+              </Offer>
             </p>
             <a
               href="#quote-form-bottom"
@@ -237,9 +272,11 @@ export default function DeepCleanOfferPage() {
                 boxShadow: "0 4px 15px rgba(232,114,28,0.35)",
               }}
             >
-              Fix This — Claim Your{" "}
-              <span className="mx-1 underline underline-offset-2">$75 Off</span>{" "}
-              →
+              <Offer service="deep" fallback="Get My Deep Clean Quote →">
+                Fix It for{" "}
+                <span className="mx-1 underline underline-offset-2">{OFF} Less</span>{" "}
+                →
+              </Offer>
             </a>
           </div>
         </div>
@@ -291,7 +328,18 @@ export default function DeepCleanOfferPage() {
                   DSM Deep Clean ⭐
                 </h3>
               </div>
-              <DeepCleanChecklist />
+              <DeepCleanChecklist
+                ovenItem={
+                  <Offer
+                    service="deep"
+                    fallback={<span className="font-medium text-gray-800">Inside oven</span>}
+                  >
+                    <span className="text-orange-600 font-semibold">
+                      Inside oven, FREE through {DEEP_OFFER.endDate}
+                    </span>
+                  </Offer>
+                }
+              />
             </div>
           </div>
 
@@ -300,8 +348,10 @@ export default function DeepCleanOfferPage() {
               href="#quote-form-bottom"
               className="text-orange-600 font-semibold hover:underline text-sm"
             >
-              Ready? Claim your{" "}
-              <span className="underline underline-offset-2">$75 off</span> →
+              <Offer service="deep" fallback="Ready? Get your free quote →">
+                Ready? Claim your{" "}
+                <span className="underline underline-offset-2">{OFF} off</span> →
+              </Offer>
             </a>
           </div>
         </div>
@@ -392,7 +442,9 @@ export default function DeepCleanOfferPage() {
                 boxShadow: "0 4px 15px rgba(232,114,28,0.35)",
               }}
             >
-              Claim Your $75 Off →
+              <Offer service="deep" fallback="Get My Free Quote →">
+                Claim Your {OFF} Off →
+              </Offer>
             </a>
           </div>
         </div>
@@ -437,17 +489,22 @@ export default function DeepCleanOfferPage() {
               className="bg-white rounded-3xl shadow-xl p-6 md:p-8 border border-gray-100"
             >
               <h3 className="text-xl font-bold text-gray-900 mb-1">
-                Lock In Your{" "}
-                <a
-                  href="#quote-form-bottom"
-                  className="text-orange-600 hover:underline"
-                >
-                  $75 Discount
-                </a>{" "}
+                <Offer service="deep" fallback="Request Your Deep Clean">
+                  Lock In Your{" "}
+                  <a
+                    href="#quote-form-bottom"
+                    className="text-orange-600 hover:underline"
+                  >
+                    {OFF} Discount
+                  </a>
+                </Offer>{" "}
                 Before Spots Fill Up
               </h3>
               <p className="text-sm text-gray-500 mb-3">
-                $75 OFF + Free Oven Cleaning · 48-Hour Guarantee · Family-Owned
+                <Offer service="deep" fallback={<>Starting at {ENTRY_PRICE}</>}>
+                  {OFF} Off + Free Oven Cleaning through {DEEP_OFFER.endDate}
+                </Offer>{" "}
+                · 48-Hour Guarantee · Family-Owned
               </p>
               {/* Trust badges */}
               <div className="grid grid-cols-3 gap-1 w-full mb-4">
@@ -455,7 +512,7 @@ export default function DeepCleanOfferPage() {
                 <span className="bg-gray-100 text-xs text-gray-600 px-1 py-1 rounded-full flex justify-center items-center text-center">🛡️ Fully Insured</span>
                 <span className="bg-gray-100 text-xs text-gray-600 px-1 py-1 rounded-full flex justify-center items-center text-center">🏠 Family-Owned</span>
               </div>
-              <LeadForm defaultService="Deep Cleaning" step1Label="Get Your $75 Discount — 60 Seconds" />
+              <LeadForm defaultService="Deep Cleaning" step1Label="Free quote in 60 seconds" />
             </div>
             {/* Phone CTA — below second form only */}
             <p className="text-sm text-gray-400 text-center mt-3">
@@ -547,8 +604,15 @@ export default function DeepCleanOfferPage() {
         </div>
       </footer>
 
-      {/* Sticky mobile CTA bar */}
-      <StickyBar />
+      {/* Sticky mobile CTA bar. The label is gated here on the server because
+          StickyBar is a client component. */}
+      <StickyBar
+        label={
+          <Offer service="deep" fallback="Deep Cleaning · Limited Spots Each Week">
+            💥 {OFF} OFF Deep Cleaning · Limited Spots
+          </Offer>
+        }
+      />
     </>
   );
 }

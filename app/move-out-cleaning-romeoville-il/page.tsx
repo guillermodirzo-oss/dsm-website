@@ -6,6 +6,7 @@ import LeadForm from "@/components/LeadForm";
 import Offer from "@/components/Offer";
 import { MOVEOUT_OFFER } from "@/lib/siteConstants";
 import { MOVE_OUT_PRICING_COPY } from "@/lib/pricingCopy";
+import { MOVE_OUT_TIERS, formatPrice, startingPrice } from "@/lib/pricing";
 
 // Regenerate at most hourly so MOVE75 drops out of the HTML on its own after
 // it ends. <Offer> also hides it in the browser at the deadline. See
@@ -38,7 +39,7 @@ const faqs = [
   {
     question: "How much does move-out cleaning cost in Romeoville, IL?",
     answer:
-      "Move-out cleaning in Romeoville starts at $410 for a smaller home and runs to about $585 for a 4 bedroom. Your exact price depends on bedrooms, bathrooms and square footage. We confirm the total with you before anything is booked.",
+      `Move-out cleaning in Romeoville starts at ${formatPrice(startingPrice(MOVE_OUT_TIERS))} for a 1 bedroom home and runs to about $585 for a 4 bedroom. Your exact price depends on bedrooms, bathrooms and square footage. We confirm the total with you before anything is booked.`,
   },
   {
     question: "Will your Romeoville move-out cleaning help me get my deposit back?",

@@ -5,7 +5,9 @@
  * Business Profile.
  *
  * Sourcing: 15 were transcribed from screenshots of the live review feed, kept
- * in public/Reviews/ as evidence. Each entry added after 2026-09-27 names its
+ * in evidence/reviews/ as evidence. That folder is outside public/ on purpose:
+ * the screenshots show the business's Google dashboard, so they are kept in
+ * the repo but never served. Each entry added after 2026-09-27 names its
  * screenshot in a comment. The remaining two, Michelle Gillespie and
  * Jan Forster, came from prior page content rather than those screenshots
  * (recovered verbatim from commit cd18bcf, app/deep-clean-offer/page.tsx) and
@@ -136,21 +138,21 @@ export const REAL_REVIEWS: RealReview[] = [
   // appending here cannot change which reviews those pages show. General
   // city pages (CityPageTemplate, offset = slug length) do reach these.
   {
-    // Source: public/Reviews/Screenshot (1471).png. Service: Standard cleaning.
+    // Source: evidence/reviews/Screenshot (1471).png. Service: Standard cleaning.
     name: "Donna Slas",
     city: "",
     text: "Guillermo and Rocio did an amazing job! Thorough due to an exceptional attention to detail. Website is designed for easy access to all services. Communication is fantastic - I couldn't be more pleased!!!",
     rating: 5,
   },
   {
-    // Source: public/Reviews/Screenshot (1474).png. Service: Moving-related cleaning.
+    // Source: evidence/reviews/Screenshot (1474).png. Service: Moving-related cleaning.
     name: "Melissa Wright",
     city: "",
     text: "We used DSM to clean for us when we moved out of our 1900 sq. ft. house in Romeoville. The communication was great between me and the team, and the end results were amazing. We aren't in the area any longer so we left a lock box with a key on the door and the DSM team just let themselves in and took care of everything we needed. After the cleaning was done, they sent me pictures of the rooms so I could see the work was done. And since the pictures, we've been to the house in person and can verify that the house was spotless. I would highly recommend this team and will definitely use them in the future when needed.",
     rating: 5,
   },
   {
-    // Source: public/Reviews/Screenshot (1476).png. Move-out clean, Dec 6 2023.
+    // Source: evidence/reviews/Screenshot (1476).png. Move-out clean, Dec 6 2023.
     // "He send" and the missing space in "great.From" are the reviewer's own
     // and are reproduced as written.
     name: "Vinzenz Unger",
@@ -159,7 +161,7 @@ export const REAL_REVIEWS: RealReview[] = [
     rating: 5,
   },
   {
-    // Source: public/Reviews/Screenshot (1475).png. Services: Standard
+    // Source: evidence/reviews/Screenshot (1475).png. Services: Standard
     // cleaning, Moving-related cleaning. Google shows the first name only.
     name: "Alina",
     city: "",

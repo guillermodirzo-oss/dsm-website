@@ -1,6 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
+
+// The oven line carries the offer, so the page renders it (wrapped in
+// <Offer>) and passes it in as `ovenItem`. This string is only its key.
+const OVEN = "Inside oven";
 
 const deepCleanSections = [
   {
@@ -18,7 +22,7 @@ const deepCleanSections = [
   {
     label: "KITCHEN",
     items: [
-      "Inside oven — FREE with this offer",
+      OVEN,
       "Oven & stove exterior cleaned",
       "Exterior refrigerator cleaned (exterior only)",
       "Interior & exterior microwave",
@@ -49,7 +53,7 @@ const deepCleanSections = [
 // Items always visible on mobile (regardless of expanded state)
 const ALWAYS_VISIBLE = new Set([
   "Everything in regular cleaning",
-  "Inside oven — FREE with this offer",
+  OVEN,
   "Dust & wipe door & door frames",
   "Dust baseboards throughout",
   "Ceiling fans deep-dusted & cobwebs removed",
@@ -63,7 +67,7 @@ const hiddenCount = deepCleanSections.reduce(
   0
 );
 
-export default function DeepCleanChecklist() {
+export default function DeepCleanChecklist({ ovenItem }: { ovenItem: ReactNode }) {
   const [expanded, setExpanded] = useState(false);
 
   return (
@@ -94,15 +98,11 @@ export default function DeepCleanChecklist() {
                     <span className="flex-shrink-0 font-bold text-green-600 text-sm mt-0.5">
                       ✓
                     </span>
-                    <span
-                      className={`font-medium ${
-                        item.includes("FREE")
-                          ? "text-orange-600 font-semibold"
-                          : "text-gray-800"
-                      }`}
-                    >
-                      {item}
-                    </span>
+                    {item === OVEN ? (
+                      ovenItem
+                    ) : (
+                      <span className="font-medium text-gray-800">{item}</span>
+                    )}
                   </li>
                 );
               })}

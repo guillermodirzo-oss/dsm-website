@@ -1,8 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, type ReactNode } from "react";
 
-export default function StickyBar() {
+// `label` comes from the page, already wrapped in <Offer>, so the offer text
+// expires with the rest of the page.
+export default function StickyBar({ label }: { label: ReactNode }) {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -20,7 +22,7 @@ export default function StickyBar() {
     >
       <a href="#quote-form-bottom" className="flex items-center justify-between h-full px-4 gap-3">
         <span className="text-white text-sm font-semibold truncate">
-          💥 $75 OFF Deep Cleaning — Limited Spots
+          {label}
         </span>
         <span
           className="flex-shrink-0 text-white text-sm font-bold px-4 py-2 rounded-full"
