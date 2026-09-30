@@ -5,6 +5,7 @@
 - **Owner:** Memo
 - **Type:** Residential house cleaning, family owned
 - **Base city:** Romeoville, IL 60446
+- **Address:** 402 Tallman Ave, Romeoville, IL 60446. The website address must always match the Google Business Profile exactly: always "402 Tallman Ave", never "Avenue" or any other format. It is the streetAddress in every DSM PostalAddress in JSON-LD and the location line in the footer.
 - **Phone:** (815) 246-2113
 - **Hours:** Monday to Sunday, 7am to 9pm. Online booking is available 24 hours at /book.
 - **Satisfaction guarantee:** 48 hours
@@ -67,7 +68,7 @@ Move-out customers are mostly home buyers and sellers, not renters. Write move-o
 |---|---|
 | `app/layout.tsx` | Global metadata, title template, and the one LocalBusiness JSON-LD |
 | `lib/pricing.ts` | Every price tier, recurring discounts, offer helpers |
-| `lib/siteConstants.ts` | Offer codes, discounts and end dates |
+| `lib/siteConstants.ts` | Offer codes, discounts and end dates; SERVICE_CITIES, the 16-city list the LocalBusiness schema is built from |
 | `lib/realReviews.ts` | Verbatim Google reviews, REVIEW_COUNT and REVIEW_RATING |
 | `components/Offer.tsx` | Wrapper that expires offer copy automatically |
 | `components/Navigation.tsx` | Site nav |
@@ -93,7 +94,7 @@ Never change form payloads, guards or the Step 1 partial capture. Never send tes
 
 ## SEO Rules: Never Break These
 1. Never add "| DSM Cleaning Solutions" at the page level. The root layout's title template adds it.
-2. Schema address is always Romeoville, IL 60446, coordinates 41.6299, -88.0890. Never Plainfield.
+2. Schema address is always 402 Tallman Ave, Romeoville, IL 60446, coordinates 41.6299, -88.0890. Never Plainfield.
 3. Review count is 46 and rating 5.0 everywhere. Read them from REVIEW_COUNT and REVIEW_RATING; never type them by hand.
 4. Schema hours are Monday through Sunday, opens "07:00", closes "21:00". Visible hours read "7am to 9pm".
 5. Satisfaction guarantee is always 48 hours. Never 24 or 72.

@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
+import { serviceAreaSchema } from "@/lib/siteConstants";
 
 export const metadata: Metadata = {
   title: "Contact Us | Free Cleaning Estimate",
@@ -72,6 +73,7 @@ const localBusinessSchema = {
   image: "https://www.dsmcleaningsolutions.com/Logo.png",
   address: {
     "@type": "PostalAddress",
+    streetAddress: "402 Tallman Ave",
     addressLocality: "Romeoville",
     addressRegion: "IL",
     postalCode: "60446",
@@ -85,20 +87,7 @@ const localBusinessSchema = {
       closes: "21:00",
     },
   ],
-  areaServed: [
-    { "@type": "City", name: "Romeoville", containedInPlace: { "@type": "State", name: "Illinois" } },
-    { "@type": "City", name: "Plainfield", containedInPlace: { "@type": "State", name: "Illinois" } },
-    { "@type": "City", name: "Naperville", containedInPlace: { "@type": "State", name: "Illinois" } },
-    { "@type": "City", name: "Bolingbrook", containedInPlace: { "@type": "State", name: "Illinois" } },
-    { "@type": "City", name: "Joliet", containedInPlace: { "@type": "State", name: "Illinois" } },
-    { "@type": "City", name: "Lockport", containedInPlace: { "@type": "State", name: "Illinois" } },
-    { "@type": "City", name: "Westmont", containedInPlace: { "@type": "State", name: "Illinois" } },
-    { "@type": "City", name: "Lemont", containedInPlace: { "@type": "State", name: "Illinois" } },
-    { "@type": "City", name: "Homer Glen", containedInPlace: { "@type": "State", name: "Illinois" } },
-    { "@type": "City", name: "New Lenox", containedInPlace: { "@type": "State", name: "Illinois" } },
-    { "@type": "City", name: "Shorewood", containedInPlace: { "@type": "State", name: "Illinois" } },
-    { "@type": "City", name: "Minooka", containedInPlace: { "@type": "State", name: "Illinois" } },
-  ],
+  areaServed: serviceAreaSchema(),
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+18152462113",

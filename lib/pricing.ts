@@ -206,6 +206,11 @@ export function startingPrice(tiers: PriceTier[]): number {
   return Math.min(...tiers.map((t) => t.price));
 }
 
+/** Highest price in a tier list, for the top of a schema price range. */
+export function topPrice(tiers: PriceTier[]): number {
+  return Math.max(...tiers.map((t) => t.price));
+}
+
 /** "10%" from 0.10, so the percentage is never written by hand in a page. */
 export function formatDiscount(discount: number): string {
   return `${Math.round(discount * 100)}%`;

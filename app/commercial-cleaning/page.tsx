@@ -26,7 +26,7 @@ const jsonLd = {
     telephone: "+18152462113",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Romeoville",
+      streetAddress: "402 Tallman Ave",
       addressLocality: "Romeoville",
       addressRegion: "IL",
       postalCode: "60446",
@@ -134,7 +134,7 @@ export default function CommercialCleaningPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">Commercial Cleaning Services We Offer</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s) => (
               <Link key={s.title} href={s.href} className="bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:border-brand-green hover:shadow-md transition-all">
                 <h3 className="font-bold text-gray-900 text-lg mb-2">{s.title}</h3>

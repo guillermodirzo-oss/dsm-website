@@ -21,6 +21,7 @@ export default function CityPageTemplate({ city }: { city: CityData }) {
     telephone: "+18152462113",
     address: {
       "@type": "PostalAddress",
+      streetAddress: "402 Tallman Ave",
       addressLocality: "Romeoville",
       addressRegion: "IL",
       postalCode: "60446",

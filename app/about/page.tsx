@@ -108,6 +108,7 @@ export default function AboutPage() {
             foundingDate: "2020",
             address: {
               "@type": "PostalAddress",
+              streetAddress: "402 Tallman Ave",
               addressLocality: "Romeoville",
               addressRegion: "IL",
               postalCode: "60446",

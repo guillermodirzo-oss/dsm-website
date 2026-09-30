@@ -26,7 +26,7 @@ const jsonLd = {
     telephone: "+18152462113",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Romeoville",
+      streetAddress: "402 Tallman Ave",
       addressLocality: "Romeoville",
       addressRegion: "IL",
       postalCode: "60446",
@@ -53,7 +53,7 @@ const jsonLd = {
         name: "What types of offices does DSM Cleaning Solutions clean?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We clean all types of commercial spaces including small offices, medical and professional offices, multi-suite buildings, retail spaces, and post-construction commercial sites across Romeoville, Plainfield, Naperville, and Bolingbrook.",
+          text: "We clean all types of commercial spaces including small offices, medical and professional offices, multi-suite buildings, and retail spaces across Romeoville, Plainfield, Naperville, and Bolingbrook.",
         },
       },
       {

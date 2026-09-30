@@ -26,7 +26,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-sm leading-relaxed mb-4">Family-owned, eco-friendly house cleaning serving the southwest Chicago suburbs.</p>
-            <p className="text-sm mb-1 text-gray-500">Romeoville, IL 60446</p>
+            <p className="text-sm mb-1 text-gray-500">402 Tallman Ave, Romeoville, IL 60446</p>
             <a href="tel:+18152462113" className="text-brand-green font-bold text-lg hover:text-orange-400 transition-colors block mt-3">
               (815) 246-2113
             </a>

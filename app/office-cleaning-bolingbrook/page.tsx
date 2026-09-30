@@ -26,7 +26,7 @@ const jsonLd = {
     telephone: "+18152462113",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Romeoville",
+      streetAddress: "402 Tallman Ave",
       addressLocality: "Romeoville",
       addressRegion: "IL",
       postalCode: "60446",

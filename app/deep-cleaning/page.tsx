@@ -10,6 +10,7 @@ import {
   offerPrice,
   formatPrice,
   startingPrice,
+  topPrice,
   tierLabel,
 } from "@/lib/pricing";
 import { DEEP_OFFER, REVIEW_COUNT, REVIEW_RATING } from "@/lib/siteConstants";
@@ -84,7 +85,7 @@ const serviceSchema = {
     priceSpecification: {
       "@type": "PriceSpecification",
       minPrice: String(startingPrice(DEEP_CLEANING_TIERS)),
-      maxPrice: "375",
+      maxPrice: String(topPrice(DEEP_CLEANING_TIERS)),
       priceCurrency: "USD",
     },
   },

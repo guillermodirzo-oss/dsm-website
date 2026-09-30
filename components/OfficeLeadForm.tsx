@@ -27,7 +27,6 @@ type Step3 = {
 const SERVICE_OPTIONS = [
   "Office Cleaning",
   "Commercial Cleaning",
-  "Post-Construction Cleaning",
   "Medical / Professional Office Cleaning",
 ];
 

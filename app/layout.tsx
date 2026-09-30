@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { REVIEW_COUNT, REVIEW_RATING } from "@/lib/realReviews";
+import { serviceAreaSchema } from "@/lib/siteConstants";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
@@ -95,6 +96,7 @@ export default function RootLayout({
               image: "https://www.dsmcleaningsolutions.com/Logo.png",
               address: {
                 "@type": "PostalAddress",
+                streetAddress: "402 Tallman Ave",
                 addressLocality: "Romeoville",
                 addressRegion: "IL",
                 postalCode: "60446",
@@ -113,24 +115,7 @@ export default function RootLayout({
                   closes: "21:00",
                 },
               ],
-              areaServed: [
-                { "@type": "City", name: "Romeoville", containedInPlace: { "@type": "State", name: "Illinois" } },
-                { "@type": "City", name: "Plainfield", containedInPlace: { "@type": "State", name: "Illinois" } },
-                { "@type": "City", name: "Naperville", containedInPlace: { "@type": "State", name: "Illinois" } },
-                { "@type": "City", name: "Bolingbrook", containedInPlace: { "@type": "State", name: "Illinois" } },
-                { "@type": "City", name: "Joliet", containedInPlace: { "@type": "State", name: "Illinois" } },
-                { "@type": "City", name: "Lockport", containedInPlace: { "@type": "State", name: "Illinois" } },
-                { "@type": "City", name: "Lemont", containedInPlace: { "@type": "State", name: "Illinois" } },
-                { "@type": "City", name: "Homer Glen", containedInPlace: { "@type": "State", name: "Illinois" } },
-                { "@type": "City", name: "New Lenox", containedInPlace: { "@type": "State", name: "Illinois" } },
-                { "@type": "City", name: "Shorewood", containedInPlace: { "@type": "State", name: "Illinois" } },
-                { "@type": "City", name: "Minooka", containedInPlace: { "@type": "State", name: "Illinois" } },
-                { "@type": "City", name: "Westmont", containedInPlace: { "@type": "State", name: "Illinois" } },
-                { "@type": "City", name: "Hinsdale", containedInPlace: { "@type": "State", name: "Illinois" } },
-                { "@type": "City", name: "Oak Brook", containedInPlace: { "@type": "State", name: "Illinois" } },
-                { "@type": "City", name: "Downers Grove", containedInPlace: { "@type": "State", name: "Illinois" } },
-                { "@type": "City", name: "Burr Ridge", containedInPlace: { "@type": "State", name: "Illinois" } },
-              ],
+              areaServed: serviceAreaSchema(),
               // AggregateRating lives here in the global layout so there is exactly
               // ONE LocalBusiness entity with ONE aggregateRating across the entire site.
               // Having it globally (not only on /reviews) is what Google recommends and

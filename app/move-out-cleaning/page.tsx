@@ -7,6 +7,7 @@ import { StickyMobileBar } from "@/components/HomepageScrollWidgets";
 import { reviewByName, reviewExcerpt, reviewAttribution } from "@/lib/realReviews";
 import {
   MOVE_OUT_TIERS,
+  topPrice,
   FREQUENCY_DISCOUNTS,
   offerPrice,
   formatDiscount,
@@ -219,7 +220,7 @@ const serviceSchema = {
     priceSpecification: {
       "@type": "PriceSpecification",
       minPrice: String(SMALLEST_TIER.price),
-      maxPrice: String(FOUR_BED.price),
+      maxPrice: String(topPrice(MOVE_OUT_TIERS)),
       priceCurrency: "USD",
     },
   },

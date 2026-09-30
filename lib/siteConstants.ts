@@ -44,3 +44,36 @@ export const MOVEOUT_OFFER = {
   /** 2026-10-31 11:59:59 PM America/Chicago, as a UTC instant. */
   expiresAt: endOfDayIn(MOVEOUT_OFFER_LAST_DAY).toISOString(),
 };
+
+/**
+ * The 16 cities DSM serves. app/layout.tsx and /contact both build their
+ * LocalBusiness areaServed from this list, so the two can never drift apart.
+ * Order matches the layout schema as it was before this list existed.
+ */
+export const SERVICE_CITIES = [
+  "Romeoville",
+  "Plainfield",
+  "Naperville",
+  "Bolingbrook",
+  "Joliet",
+  "Lockport",
+  "Lemont",
+  "Homer Glen",
+  "New Lenox",
+  "Shorewood",
+  "Minooka",
+  "Westmont",
+  "Hinsdale",
+  "Oak Brook",
+  "Downers Grove",
+  "Burr Ridge",
+] as const;
+
+/** SERVICE_CITIES as schema.org City entries, for a LocalBusiness areaServed. */
+export function serviceAreaSchema() {
+  return SERVICE_CITIES.map((name) => ({
+    "@type": "City",
+    name,
+    containedInPlace: { "@type": "State", name: "Illinois" },
+  }));
+}
