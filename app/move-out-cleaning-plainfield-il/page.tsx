@@ -254,7 +254,7 @@ export default function MoveOutCleaningPlainfieldPage() {
             <div className="hidden lg:block">
               <Image
                 src="/work-photos/apartment-move-out-cleaning-joliet-il.jpg"
-                alt="Move-out cleaning in Plainfield IL — DSM Cleaning Solutions"
+                alt="Move-out cleaning in Plainfield IL by DSM Cleaning Solutions"
                 width={1920}
                 height={2560}
                 priority
@@ -381,6 +381,7 @@ export default function MoveOutCleaningPlainfieldPage() {
               Prices above are before your ${MOVEOUT_OFFER.discount} discount. Apply code {MOVEOUT_OFFER.code} at checkout through {MOVEOUT_OFFER.endDate}.
             </p>
           </Offer>
+          <p className="text-gray-600 text-sm mb-4">Getting ready for move-out day? Here&apos;s <Link href="/blog/how-to-prepare-for-move-out-cleaning-plainfield" className="text-brand-green font-semibold hover:underline">how to prepare for a move-out cleaning</Link>.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/book" className="inline-flex items-center justify-center font-bold text-white rounded-full px-8 py-4 text-base transition-all hover:opacity-90 active:scale-95 shadow-md" style={{ backgroundColor: "#E8622A" }}>See Your Exact Price</Link>
             <a href="#quote-form" className="inline-flex items-center justify-center font-bold rounded-full px-8 py-4 text-base transition-all hover:bg-orange-50 active:scale-95 border-2" style={{ borderColor: "#E8622A", color: "#E8622A" }}>Get a Free Quote</a>

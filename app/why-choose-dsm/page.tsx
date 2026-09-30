@@ -27,27 +27,27 @@ const faqs = [
   {
     question: "Is DSM Cleaning Solutions insured?",
     answer:
-      "Yes — DSM Cleaning Solutions is fully insured and bonded. Every cleaning visit is covered by general liability insurance, protecting your home and property in the unlikely event of an accident or damage. You can book with confidence knowing you&apos;re working with a fully covered professional cleaning company, not an individual with no protection.",
+      "Yes, DSM Cleaning Solutions is fully insured and bonded. Every cleaning visit is covered by general liability insurance, protecting your home and property in the unlikely event of an accident or damage. You can book with confidence knowing you&apos;re working with a fully covered professional cleaning company, not an individual with no protection.",
   },
   {
     question: "Do you do background checks on cleaners?",
     answer:
-      "Yes — every member of the DSM Cleaning Solutions team undergoes a thorough background check before their first assignment. We understand that inviting someone into your home requires a significant level of trust, and we take that responsibility seriously. Our hiring process is designed to bring only professional, trustworthy individuals into your home.",
+      "Yes, every member of the DSM Cleaning Solutions team undergoes a thorough background check before their first assignment. We understand that inviting someone into your home requires a significant level of trust, and we take that responsibility seriously. Our hiring process is designed to bring only professional, trustworthy individuals into your home.",
   },
   {
     question: "What is your satisfaction guarantee?",
     answer:
-      "DSM Cleaning Solutions offers a 48-hour satisfaction guarantee on every clean. If you&apos;re not completely satisfied with any part of your cleaning, contact us within 48 hours and we will return to re-clean the area at no additional charge. No arguments, no runarounds — we make it right, period.",
+      "DSM Cleaning Solutions offers a 48-hour satisfaction guarantee on every clean. If you&apos;re not completely satisfied with any part of your cleaning, contact us within 48 hours and we will return to re-clean the area at no additional charge. No arguments, no runarounds. We make it right, period.",
   },
   {
     question: "Are you a franchise or locally owned?",
     answer:
-      "DSM Cleaning Solutions is 100% locally owned and operated — not a franchise. We are a family-owned business based in Romeoville, IL, serving the southwest Chicago suburbs. Every decision about how we operate, what products we use, and how we treat our customers is made by us — not by a corporate office somewhere else. When you call us, you&apos;re talking to the owners.",
+      "DSM Cleaning Solutions is 100% locally owned and operated, not a franchise. We are a family-owned business based in Romeoville, IL, serving the southwest Chicago suburbs. Every decision about how we operate, what products we use, and how we treat our customers is made by us, not by a corporate office somewhere else. When you call us, you&apos;re talking to the owners.",
   },
   {
     question: "How long have you been serving the Romeoville area?",
     answer:
-      "DSM Cleaning Solutions has been serving Romeoville and the surrounding southwest Chicago suburbs since our founding. We&apos;ve built our reputation one home at a time — earning 5-star reviews from families in Romeoville, Plainfield, Naperville, Bolingbrook, Joliet, and throughout our service area. Our continued growth comes entirely from word-of-mouth referrals and repeat customers, which we consider the highest compliment.",
+      "DSM Cleaning Solutions has been serving Romeoville and the surrounding southwest Chicago suburbs since our founding. We&apos;ve built our reputation one home at a time, earning 5-star reviews from families in Romeoville, Plainfield, Naperville, Bolingbrook, Joliet, and throughout our service area. Our continued growth comes entirely from word-of-mouth referrals and repeat customers, which we consider the highest compliment.",
   },
 ];
 
@@ -55,7 +55,7 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   serviceType: "House Cleaning",
-  name: "DSM Cleaning Solutions — Romeoville & Southwest Suburbs",
+  name: "DSM Cleaning Solutions in Romeoville & the Southwest Suburbs",
   provider: {
     "@type": "LocalBusiness",
     "@id": "https://www.dsmcleaningsolutions.com/#business",
@@ -98,7 +98,7 @@ const differentiators = [
   {
     icon: "👨‍👩‍👧",
     title: "Family Owned & Operated",
-    desc: "Not a franchise. Not a corporate chain. DSM is a family-owned business based in Romeoville — we live and work in the same communities we clean.",
+    desc: "Not a franchise. Not a corporate chain. DSM is a family-owned business based in Romeoville. We live and work in the same communities we clean.",
   },
   {
     icon: "🛡️",
@@ -113,17 +113,17 @@ const differentiators = [
   {
     icon: "🌿",
     title: "Eco-Friendly Products",
-    desc: "We use professional-grade, non-toxic, biodegradable products on every job — safe for your children, pets, and the environment at no extra cost.",
+    desc: "We use professional-grade, non-toxic, biodegradable products on every job, safe for your children, pets, and the environment at no extra cost.",
   },
   {
     icon: "✅",
     title: "48-Hour Guarantee",
-    desc: "Not satisfied? We return within 48 hours and re-clean for free — no questions, no runaround. That&apos;s our commitment to every Romeoville customer.",
+    desc: "Not satisfied? We return within 48 hours and re-clean for free, no questions, no runaround. That&apos;s our commitment to every Romeoville customer.",
   },
   {
     icon: "👤",
     title: "Consistent Team",
-    desc: "We aim to send the same cleaners to your home each visit so they learn your preferences and your home&apos;s details — no strangers at your door every time.",
+    desc: "We aim to send the same cleaners to your home each visit so they learn your preferences and your home&apos;s details, no strangers at your door every time.",
   },
 ];
 
@@ -197,23 +197,23 @@ export default function WhyChooseDSMPage() {
       {/* OUR STORY */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading mb-6">Our Story — A Family Business Built on Trust</h2>
+          <h2 className="section-heading mb-6">Our Story: A Family Business Built on Trust</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             DSM Cleaning Solutions was founded in Romeoville, IL with one simple belief: every
             family deserves a genuinely clean home, and they deserve to get it from a company
-            they can actually trust. We started as a small local operation and grew — not through
-            advertising or corporate expansion — but through the recommendations of families
+            they can actually trust. We started as a small local operation and grew, not through
+            advertising or corporate expansion, but through the recommendations of families
             who were happy enough to tell their neighbors about us.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
             We are not a franchise. We don&apos;t answer to a corporate office. Every decision
             about how we hire, what products we use, how we train our team, and how we handle
-            a customer concern is made by the people who own and run this business — people
+            a customer concern is made by the people who own and run this business, people
             who live right here in the southwest suburbs, just like you.
           </p>
           <p className="text-gray-600 leading-relaxed">
             That accountability is something a national chain can never offer. When you call DSM,
-            you&apos;re talking to us — and our reputation in this community matters more to us
+            you&apos;re talking to us, and our reputation in this community matters more to us
             than any individual booking.
           </p>
         </div>
@@ -244,7 +244,7 @@ export default function WhyChooseDSMPage() {
       <section className="py-16 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="section-heading">Trust &amp; Safety — Our Commitment to Every Home</h2>
+            <h2 className="section-heading">Trust &amp; Safety: Our Commitment to Every Home</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {trustItems.map((item) => (
@@ -258,7 +258,7 @@ export default function WhyChooseDSMPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
               <div>
                 <div className="text-4xl font-bold text-brand-green mb-1">48hr</div>
-                <div className="text-white/80 text-sm">Satisfaction Guarantee — we re-clean for free if anything isn&apos;t right</div>
+                <div className="text-white/80 text-sm">Satisfaction Guarantee: we re-clean for free if anything isn&apos;t right</div>
               </div>
               <div>
                 <div className="text-4xl font-bold text-brand-green mb-1">5★</div>
@@ -266,7 +266,7 @@ export default function WhyChooseDSMPage() {
               </div>
               <div>
                 <div className="text-4xl font-bold text-brand-green mb-1">100%</div>
-                <div className="text-white/80 text-sm">Non-toxic, eco-friendly products on every single job — no exceptions</div>
+                <div className="text-white/80 text-sm">Non-toxic, eco-friendly products on every single job, no exceptions</div>
               </div>
             </div>
           </div>
@@ -361,7 +361,7 @@ export default function WhyChooseDSMPage() {
             </Link>
             <Link href="/contact" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Get a Free Quote</h3>
-              <p className="text-sm text-gray-600">No obligation — just an honest price from a local family business.</p>
+              <p className="text-sm text-gray-600">No obligation. Just an honest price from a local family business.</p>
             </Link>
           </div>
         </div>

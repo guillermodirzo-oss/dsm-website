@@ -123,6 +123,8 @@ export default function Footer() {
             <span>·</span>
             <Link href="/terms-and-conditions" className="hover:text-gray-400 transition-colors">Terms &amp; Conditions</Link>
             <span>·</span>
+            <Link href="/gift-cards" className="hover:text-gray-400 transition-colors">Gift Cards</Link>
+            <span>·</span>
             <Link href="/sitemap.xml" className="hover:text-gray-400 transition-colors">Sitemap</Link>
             <span>·</span>
             <span>Licensed &amp; Insured</span>

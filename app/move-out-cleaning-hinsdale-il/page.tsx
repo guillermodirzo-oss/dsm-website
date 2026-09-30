@@ -257,7 +257,7 @@ export default function MoveOutCleaningHinsdalePage() {
             <div className="hidden lg:block">
               <Image
                 src="/work-photos/double-vanity-bathroom-clean-naperville-il.jpg"
-                alt="Move-out cleaning in Hinsdale IL — DSM Cleaning Solutions"
+                alt="Move-out cleaning in Hinsdale IL by DSM Cleaning Solutions"
                 width={1920}
                 height={2560}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

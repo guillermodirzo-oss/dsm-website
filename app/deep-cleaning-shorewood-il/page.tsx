@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What does a deep cleaning include in Shorewood?",
-    a: "We clean inside the oven, degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, and much more. It covers every room from top to bottom.",
+    a: "We clean inside the oven, degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, and much more. No room gets skipped.",
   },
   {
     q: "How long does a deep clean take in Shorewood?",
@@ -171,7 +171,7 @@ export default function DeepCleaningShorewoodPage() {
               </h1>
               <div className="flex items-center gap-2 mb-3">
                 <span style={{ color: "#FFA869" }} className="text-xl">★★★★★</span>
-                <span className="text-sm opacity-90">5.0 — {REVIEW_COUNT} reviews on Google</span>
+                <span className="text-sm opacity-90">5.0 from {REVIEW_COUNT} reviews on Google</span>
               </div>
               <p className="text-lg font-semibold mb-2">
                 A real deep clean for Shorewood homes. Every room, every detail.
@@ -224,7 +224,7 @@ export default function DeepCleaningShorewoodPage() {
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto prose prose-gray">
           <p className="text-gray-700 leading-relaxed mb-4">
-            Shorewood is a growing community in Will County, and we have been proud to serve families here for years. Whether you are in Shorewood Glen, River Crossing, Brentwood Lakes, or another part of town, we can come to you and get your home clean from top to bottom.
+            Shorewood is a growing community in Will County, and we have been proud to serve families here for years. Whether you are in Shorewood Glen, River Crossing, Brentwood Lakes, or another part of town, we can come to you and give every room a real deep clean.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
             Our deep cleaning service is built for homes that need more than a quick pass. We spend real time in each room. In the kitchen that means inside the oven, behind the stovetop grates, and inside the microwave. In the bathrooms we scrub grout, disinfect toilets, and polish fixtures. In living areas we dust ceiling fans, wipe baseboards, and clean window sills.
@@ -418,7 +418,7 @@ export default function DeepCleaningShorewoodPage() {
             <div className="flex justify-center mb-1">
               <span style={{ color: "#E8622A" }} className="text-2xl">★★★★★</span>
             </div>
-            <p className="text-sm text-gray-500">Trusted by Shorewood homeowners — {REVIEW_COUNT} five-star reviews</p>
+            <p className="text-sm text-gray-500">Trusted by Shorewood homeowners: {REVIEW_COUNT} five-star reviews</p>
           </div>
           <CityDeepCleanForm />
         </div>

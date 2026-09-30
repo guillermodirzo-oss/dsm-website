@@ -25,12 +25,12 @@ const faqs = [
   {
     question: "Are your cleaning products safe for dogs and cats?",
     answer:
-      "Yes — all products used by DSM Cleaning Solutions are non-toxic, biodegradable, and certified safe for dogs, cats, and other household pets. We do not use bleach, ammonia, chlorine, or synthetic chemical fragrances that can irritate or harm animals. Your pets can remain in the home during and after cleaning without any risk.",
+      "Yes, all products used by DSM Cleaning Solutions are non-toxic, biodegradable, and certified safe for dogs, cats, and other household pets. We do not use bleach, ammonia, chlorine, or synthetic chemical fragrances that can irritate or harm animals. Your pets can remain in the home during and after cleaning without any risk.",
   },
   {
     question: "Do you specialize in pet-friendly cleaning?",
     answer:
-      "Yes. Pet-friendly cleaning is one of our most requested service types throughout Romeoville, Plainfield, Bolingbrook, Naperville, and the surrounding southwest suburbs. We understand that pet owners have specific needs — pet hair removal, dander reduction, odor elimination, and safe products — and our team is trained to address all of them.",
+      "Yes. Pet-friendly cleaning is one of our most requested service types throughout Romeoville, Plainfield, Bolingbrook, Naperville, and the surrounding southwest suburbs. We understand that pet owners have specific needs (pet hair removal, dander reduction, odor elimination, and safe products) and our team is trained to address all of them.",
   },
   {
     question: "Can you remove pet hair and dander?",
@@ -40,12 +40,12 @@ const faqs = [
   {
     question: "What pet-safe products do you use?",
     answer:
-      "We use professional-grade, non-toxic, biodegradable cleaning products that are free from bleach, ammonia, formaldehyde, and synthetic fragrances. These products are effective at eliminating odors, bacteria, and grime without leaving chemical residue on floors or surfaces your pets contact. Your dog doesn&apos;t need to stay off the floors after we clean — our products are safe immediately after application.",
+      "We use professional-grade, non-toxic, biodegradable cleaning products that are free from bleach, ammonia, formaldehyde, and synthetic fragrances. These products are effective at eliminating odors, bacteria, and grime without leaving chemical residue on floors or surfaces your pets contact. Your dog doesn&apos;t need to stay off the floors after we clean. Our products are safe immediately after application.",
   },
   {
     question: "Do you serve pet owners in Romeoville and Plainfield?",
     answer:
-      "Yes — DSM Cleaning Solutions serves pet-owning households throughout Romeoville, Plainfield, Naperville, Bolingbrook, Joliet, Lockport, Homer Glen, Lemont, New Lenox, and all surrounding southwest Chicago suburbs. Whether you have one cat in a Romeoville apartment or three dogs in a Plainfield house, we have the products and techniques to leave your home clean and safe.",
+      "Yes, DSM Cleaning Solutions serves pet-owning households throughout Romeoville, Plainfield, Naperville, Bolingbrook, Joliet, Lockport, Homer Glen, Lemont, New Lenox, and all surrounding southwest Chicago suburbs. Whether you have one cat in a Romeoville apartment or three dogs in a Plainfield house, we have the products and techniques to leave your home clean and safe.",
   },
 ];
 
@@ -135,7 +135,7 @@ export default function PetFriendlyCleaningPage() {
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               Non-toxic, biodegradable cleaning products that are safe for dogs, cats, and all
-              household pets — with no compromise on cleaning power. DSM Cleaning Solutions serves
+              household pets, with no compromise on cleaning power. DSM Cleaning Solutions serves
               pet-owning households across the southwest Chicago suburbs. Fully insured and
               family-owned.
             </p>
@@ -164,18 +164,18 @@ export default function PetFriendlyCleaningPage() {
           <h2 className="section-heading mb-6">Why Pet Owners Need Pet-Safe House Cleaning</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Pet-safe house cleaning in Romeoville and Plainfield is about more than just keeping
-            your home clean — it&apos;s about keeping your animals safe. Most conventional cleaning
+            your home clean. It&apos;s about keeping your animals safe. Most conventional cleaning
             products used by standard cleaning companies contain chemicals that are genuinely
             dangerous for dogs and cats. Pets lick floors, chew on surfaces, and breathe at
             ground level where chemical residue concentrates. What seems like a safe product for
             humans can be harmful to a 15-pound dog or a cat walking across a freshly mopped floor.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            At DSM Cleaning Solutions, pet-friendly cleaning is not an add-on service — it&apos;s
+            At DSM Cleaning Solutions, pet-friendly cleaning is not an add-on service. It&apos;s
             our standard. Every product we use in every home across our southwest suburb service
             area is non-toxic, biodegradable, and certified safe for pets. Your dog doesn&apos;t
             need to be crated. Your cat doesn&apos;t need to leave the room. Your bird doesn&apos;t
-            need to be covered. We clean around your pets — safely.
+            need to be covered. We clean around your pets, safely.
           </p>
         </div>
       </section>
@@ -221,10 +221,10 @@ export default function PetFriendlyCleaningPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { icon: "🐕", title: "Pet Hair Removal", desc: "Thorough vacuuming of all carpets, rugs, and upholstery edges. Detail work along baseboards and under furniture where pet hair collects most." },
-              { icon: "💨", title: "Dander Reduction", desc: "Deep cleaning techniques that remove airborne allergens from surfaces — especially important for allergy sufferers in multi-pet households." },
+              { icon: "💨", title: "Dander Reduction", desc: "Deep cleaning techniques that remove airborne allergens from surfaces, especially important for allergy sufferers in multi-pet households." },
               { icon: "🧴", title: "Odor Elimination", desc: "Non-toxic enzyme-based cleaners that neutralize pet odors at the molecular level rather than masking them with synthetic fragrances." },
-              { icon: "🪣", title: "Safe Floor Cleaning", desc: "Residue-free mop solutions that are safe for pets immediately after drying — no need to keep animals off floors for hours." },
-              { icon: "🪟", title: "Nose-Print Removal", desc: "We clean window glass and sliding doors where dogs and cats leave smudges — a small detail that makes a big visual difference." },
+              { icon: "🪣", title: "Safe Floor Cleaning", desc: "Residue-free mop solutions that are safe for pets immediately after drying, no need to keep animals off floors for hours." },
+              { icon: "🪟", title: "Nose-Print Removal", desc: "We clean window glass and sliding doors where dogs and cats leave smudges, a small detail that makes a big visual difference." },
               { icon: "🛡️", title: "Non-Toxic Disinfection", desc: "Bathroom and kitchen disinfection using products that kill bacteria and viruses without chemical residue harmful to pets." },
             ].map((card) => (
               <div key={card.title} className="text-center p-6 rounded-xl bg-brand-green-50 border border-brand-green-100">
@@ -250,7 +250,7 @@ export default function PetFriendlyCleaningPage() {
           <p className="text-gray-600 mb-4 leading-relaxed">
             DSM Cleaning Solutions removes pet dander from surfaces, carpets, and hard-to-reach
             areas using techniques and tools that standard cleaning companies skip. We also avoid
-            introducing new airborne irritants through scented products or chemical sprays —
+            introducing new airborne irritants through scented products or chemical sprays,
             something conventional cleaners routinely do.
           </p>
           <p className="text-gray-600 leading-relaxed">
@@ -287,7 +287,7 @@ export default function PetFriendlyCleaningPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="section-heading">Pet-Friendly Cleaning — FAQs</h2>
+            <h2 className="section-heading">Pet-Friendly Cleaning: FAQs</h2>
           </div>
           <div className="space-y-4">
             {faqs.map((faq, i) => (
@@ -318,7 +318,7 @@ export default function PetFriendlyCleaningPage() {
             </Link>
             <Link href="/deep-cleaning" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning</h3>
-              <p className="text-sm text-gray-600">Top-to-bottom pet-safe deep cleaning for heavy dander and hair buildup.</p>
+              <p className="text-sm text-gray-600">Pet-safe deep cleaning that gets hair and dander out of baseboards, vents and corners.</p>
             </Link>
             <Link href="/recurring-cleaning" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Recurring Cleaning</h3>

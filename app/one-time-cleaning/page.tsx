@@ -6,15 +6,15 @@ import { pickReviews, reviewAttribution } from "@/lib/realReviews";
 
 export const metadata: Metadata = {
   title: "One-Time Cleaning Romeoville IL",
-  description: "No-commitment one-time cleaning in Plainfield, IL. Great for events, moving, or seasonal resets. Eco-friendly & insured. Free estimate — no contract.",
+  description: "No-commitment one-time cleaning in Plainfield, IL. Great for events, moving, or seasonal resets. Eco-friendly & insured. Free estimate, no contract.",
   keywords: ["one time cleaning Romeoville IL", "one time house cleaning Romeoville", "single visit cleaning Romeoville", "no contract cleaning Romeoville IL", "house cleaning no commitment Romeoville", "one time maid service Romeoville IL"],
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/one-time-cleaning" },
   openGraph: {
     title: "One-Time Cleaning Romeoville IL | DSM Cleaning Solutions",
-    description: "No-commitment one-time cleaning in Plainfield, IL. Great for events, moving, or seasonal resets. Eco-friendly & insured. Free estimate — no contract.",
+    description: "No-commitment one-time cleaning in Plainfield, IL. Great for events, moving, or seasonal resets. Eco-friendly & insured. Free estimate, no contract.",
     url: "https://www.dsmcleaningsolutions.com/one-time-cleaning",
     siteName: "DSM Cleaning Solutions",
-    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions — One-Time House Cleaning in Plainfield IL" }],
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions: One-Time House Cleaning in Plainfield IL" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -33,11 +33,11 @@ const faqs = [
 ];
 
 const reasons = [
-  { icon: "🎉", title: "Before a Party or Event", desc: "Get your home spotless before guests arrive — without lifting a finger." },
+  { icon: "🎉", title: "Before a Party or Event", desc: "Get your home spotless before guests arrive, without lifting a finger." },
   { icon: "🏠", title: "Before Listing or Showing", desc: "Make your home shine for real estate photos or open house showings." },
   { icon: "🧹", title: "Spring or Seasonal Clean", desc: "A thorough seasonal reset to start fresh any time of year." },
   { icon: "👋", title: "After Guests Visit", desc: "Restore your home after family or guests have been staying with you." },
-  { icon: "📦", title: "After Moving In", desc: "Clean your new home from top to bottom before settling in." },
+  { icon: "📦", title: "After Moving In", desc: "Get the cabinets, floors and bathrooms clean before the boxes come off the truck." },
   { icon: "💆", title: "Just Because", desc: "Sometimes you just need a clean home. No reason required." },
 ];
 
@@ -100,7 +100,7 @@ export default function OneTimeCleaningPage() {
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight mb-6">
               One-Time Cleaning in <span className="text-orange-400">Romeoville, IL</span>
             </h1>
-            <p className="text-xl text-white/80 mb-8 leading-relaxed">No contracts, no commitments — just a thorough professional clean when you need it. Perfect for special occasions, seasonal resets, or whenever life calls for a spotless home.</p>
+            <p className="text-xl text-white/80 mb-8 leading-relaxed">No contracts, no commitments. Just a thorough professional clean when you need it. Perfect for special occasions, seasonal resets, or whenever life calls for a spotless home.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg text-base font-bold">Get a Free Estimate</Link>
               <Link href="/book" className="btn-outline-white btn-lg text-base">Book Now Online</Link>
@@ -140,7 +140,7 @@ export default function OneTimeCleaningPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
             <div>
               <h2 className="section-heading">What&apos;s Included</h2>
-              <p className="text-gray-500 mb-6 leading-relaxed">Our one-time cleaning follows the same thorough checklist as our standard recurring service. Every room, every surface — done right.</p>
+              <p className="text-gray-500 mb-6 leading-relaxed">Our one-time cleaning follows the same thorough checklist as our standard recurring service. Every room, every surface, done right.</p>
               <div className="space-y-2">
                 {[
                   "Vacuum all floors, carpets & rugs", "Mop all hard surface floors", "Scrub & disinfect all bathrooms", "Clean & wipe down kitchen counters",
@@ -167,12 +167,12 @@ export default function OneTimeCleaningPage() {
                     <span className="text-orange-400 font-bold">{row.price}</span>
                   </div>
                 ))}
-                <p className="text-xs text-gray-500 mt-4">*First-time or one-time cleans may take longer than recurring visits. Prices are estimates — contact us for a free custom quote.</p>
+                <p className="text-xs text-gray-500 mt-4">*First-time or one-time cleans may take longer than recurring visits. Prices are estimates. Contact us for a free custom quote.</p>
                 <p className="text-xs text-gray-400 mt-2">Bathrooms and square footage also factor into your final price. We&rsquo;ll confirm your exact number before you book, free, no obligation.</p>
               </div>
               <div className="bg-orange-50 border border-orange-100 rounded-2xl p-5">
                 <h4 className="font-bold text-gray-900 mb-2">💡 Want to save money long-term?</h4>
-                <p className="text-sm text-gray-500 mb-3">Recurring clients save up to 20% per visit. Start with a one-time clean and switch to a recurring plan anytime — no pressure.</p>
+                <p className="text-sm text-gray-500 mb-3">Recurring clients save up to 20% per visit. Start with a one-time clean and switch to a recurring plan anytime, no pressure.</p>
                 <Link href="/recurring-cleaning" className="text-brand-green font-semibold text-sm hover:underline">Learn about recurring service →</Link>
               </div>
               <Link href="/contact" className="btn-primary w-full text-center block">Get My Free One-Time Estimate</Link>
@@ -232,7 +232,7 @@ export default function OneTimeCleaningPage() {
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-4xl font-bold text-white mb-3 tracking-tight">Get a Free One-Time Cleaning Estimate</h2>
-            <p className="text-white/80 text-lg mb-5">Tell us about your home — we&apos;ll get back to you with a fast, no-obligation quote.</p>
+            <p className="text-white/80 text-lg mb-5">Tell us about your home, and we&apos;ll get back to you with a fast, no-obligation quote.</p>
             <a href="tel:+18152462113" className="inline-flex items-center gap-2 bg-white text-brand-green font-bold text-xl px-6 py-3 rounded-2xl hover:bg-orange-50 transition-colors shadow-xl">📞 (815) 246-2113</a>
           </div>
           <div className="bg-white rounded-3xl overflow-hidden shadow-2xl shadow-black/20"><LeadForm /></div>

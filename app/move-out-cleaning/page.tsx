@@ -650,6 +650,12 @@ export default function MoveOutCleaningPage() {
               </details>
             ))}
           </div>
+          <p className="mt-6 text-sm text-gray-600 text-center">
+            Helpful guides:{" "}
+            <Link href="/blog/move-out-cleaning-vs-deep-cleaning" className="text-brand-green font-semibold hover:underline">move-out cleaning vs. deep cleaning</Link>,{" "}
+            <Link href="/blog/how-much-does-move-out-cleaning-cost-bolingbrook-il" className="text-brand-green font-semibold hover:underline">what move-out cleaning costs in Bolingbrook</Link>, and{" "}
+            <Link href="/cleaning-checklist" className="text-brand-green font-semibold hover:underline">our full cleaning checklist</Link>.
+          </p>
         </div>
       </section>
 

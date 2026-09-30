@@ -61,7 +61,7 @@ const jsonLd = {
         name: "Can you clean our office after hours or on weekends?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes — we offer flexible scheduling including before business hours (before 8am), after business hours (after 6pm), and weekend-only slots so your operations are never disrupted.",
+          text: "Yes, we offer flexible scheduling including before business hours (before 8am), after business hours (after 6pm), and weekend-only slots so your operations are never disrupted.",
         },
       },
       {
@@ -69,7 +69,7 @@ const jsonLd = {
         name: "How much does office cleaning cost in Romeoville?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Office cleaning rates depend on the size of your space, number of restrooms, floor type, and cleaning frequency. We offer free walkthroughs and custom quotes — call (815) 246-2113 to get started.",
+          text: "Office cleaning rates depend on the size of your space, number of restrooms, floor type, and cleaning frequency. We offer free walkthroughs and custom quotes. Call (815) 246-2113 to get started.",
         },
       },
       {
@@ -77,7 +77,7 @@ const jsonLd = {
         name: "Is DSM Cleaning Solutions insured for commercial cleaning?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes — DSM Cleaning Solutions is fully insured and bonded in Illinois. Every commercial cleaning job is covered, giving your business complete peace of mind.",
+          text: "Yes, DSM Cleaning Solutions is fully insured and bonded in Illinois. Every commercial cleaning job is covered, giving your business complete peace of mind.",
         },
       },
     ],
@@ -163,9 +163,9 @@ export default function OfficeCleaningPage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">Why Chicagoland Businesses Choose DSM</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { title: "After-Hours Availability", desc: "We clean before you open, after you close, or on weekends — zero disruption to your team or clients." },
+              { title: "After-Hours Availability", desc: "We clean before you open, after you close, or on weekends, zero disruption to your team or clients." },
               { title: "Consistent, Vetted Team", desc: "The same background-checked, insured crew every visit. You'll always know who's in your building." },
-              { title: "Custom Cleaning Plans", desc: "We build a scope of work around your space — office layout, traffic, and industry-specific requirements." },
+              { title: "Custom Cleaning Plans", desc: "We build a scope of work around your space: office layout, traffic, and industry-specific requirements." },
             ].map((c) => (
               <div key={c.title} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
                 <h3 className="font-bold text-gray-900 text-lg mb-2">{c.title}</h3>

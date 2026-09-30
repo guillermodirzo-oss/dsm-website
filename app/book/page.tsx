@@ -63,7 +63,7 @@ const valueStack = [
   { item: "Grout & Tile Detail in Every Bathroom", value: "Included" },
   { item: "Kitchen Deep Clean: Inside and Out", value: "Included" },
   { item: "Window Sills, Door Frames, Vents & Light Switches", value: "Included" },
-  { item: "Bathrooms Sanitized Top to Bottom", value: "Included" },
+  { item: "Toilets, Tubs, Sinks & Bathroom Floors Sanitized", value: "Included" },
   { item: "Eco-Friendly Products (Safe for Kids & Pets)", value: "Included" },
   { item: "Trained, Background-Checked Cleaners", value: "Included" },
   { item: "48-Hour Re-Clean Guarantee", value: "Included" },

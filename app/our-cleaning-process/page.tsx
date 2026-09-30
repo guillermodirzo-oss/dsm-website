@@ -25,27 +25,27 @@ const faqs = [
   {
     question: "Do I need to be home during cleaning?",
     answer:
-      "No — most DSM customers are not home during their cleaning. Many clients provide a door code, garage code, or lockbox key and our team lets themselves in, cleans, and locks up. If you prefer to be home, that&apos;s completely fine too. For your first cleaning, some customers prefer to be present to meet the team and walk through any specific preferences.",
+      "No. Most DSM customers are not home during their cleaning. Many clients provide a door code, garage code, or lockbox key and our team lets themselves in, cleans, and locks up. If you prefer to be home, that&apos;s completely fine too. For your first cleaning, some customers prefer to be present to meet the team and walk through any specific preferences.",
   },
   {
     question: "What do your cleaners bring?",
     answer:
-      "Our team brings all cleaning products, microfiber cloths, mops, buckets, and standard cleaning equipment. We use professional-grade, non-toxic, eco-friendly products — you don&apos;t need to supply anything. The only thing we ask you to supply is a working vacuum if you prefer we use yours, though we bring our own equipment for most jobs.",
+      "Our team brings all cleaning products, microfiber cloths, mops, buckets, and standard cleaning equipment. We use professional-grade, non-toxic, eco-friendly products. You don&apos;t need to supply anything. The only thing we ask you to supply is a working vacuum if you prefer we use yours, though we bring our own equipment for most jobs.",
   },
   {
     question: "How do I prepare for my first clean?",
     answer:
-      "For your first cleaning, we recommend: (1) picking up loose items from floors and surfaces so we can clean underneath them, (2) letting us know about any fragile items or areas to avoid, (3) confirming your entry method so we can get in without delay, and (4) ensuring pets are secured or comfortable with strangers if they react to new people. That&apos;s it — we handle everything else.",
+      "For your first cleaning, we recommend: (1) picking up loose items from floors and surfaces so we can clean underneath them, (2) letting us know about any fragile items or areas to avoid, (3) confirming your entry method so we can get in without delay, and (4) ensuring pets are secured or comfortable with strangers if they react to new people. That&apos;s it. We handle everything else.",
   },
   {
     question: "What if I am not happy with the results?",
     answer:
-      "Contact us within 48 hours of your cleaning and we will send our team back to re-clean any area you&apos;re not satisfied with — at no additional charge. This is our 48-hour satisfaction guarantee and it applies to every single cleaning we perform. We don&apos;t ask you to fill out forms or justify your feedback — just let us know what fell short and we fix it.",
+      "Contact us within 48 hours of your cleaning and we will send our team back to re-clean any area you&apos;re not satisfied with, at no additional charge. This is our 48-hour satisfaction guarantee and it applies to every single cleaning we perform. We don&apos;t ask you to fill out forms or justify your feedback. Just let us know what fell short and we fix it.",
   },
   {
     question: "How do I set up recurring service?",
     answer:
-      "After your first cleaning, simply let us know you&apos;d like to set up a recurring schedule. Most customers choose bi-weekly or monthly service. We&apos;ll lock in your preferred day and time slot and send reminders before each visit. Recurring customers receive a discounted rate compared to one-time bookings. You can pause, reschedule, or cancel with reasonable notice — no long-term contracts required.",
+      "After your first cleaning, simply let us know you&apos;d like to set up a recurring schedule. Most customers choose bi-weekly or monthly service. We&apos;ll lock in your preferred day and time slot and send reminders before each visit. Recurring customers receive a discounted rate compared to one-time bookings. You can pause, reschedule, or cancel with reasonable notice. No long-term contracts required.",
   },
 ];
 
@@ -53,7 +53,7 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   serviceType: "House Cleaning",
-  name: "Our House Cleaning Process — DSM Cleaning Solutions",
+  name: "Our House Cleaning Process at DSM Cleaning Solutions",
   provider: {
     "@type": "LocalBusiness",
     "@id": "https://www.dsmcleaningsolutions.com/#business",
@@ -100,11 +100,11 @@ const processSteps = [
     details: [
       {
         heading: "Two Easy Ways to Get Started",
-        body: "Fill out our contact form on the website or call us directly at (815) 246-2113. Both options take under 2 minutes. We don&apos;t require account creation, credit cards, or lengthy intake forms — just your name, contact info, home size, and service type.",
+        body: "Fill out our contact form on the website or call us directly at (815) 246-2113. Both options take under 2 minutes. We don&apos;t require account creation, credit cards, or lengthy intake forms. Just your name, contact info, home size, and service type.",
       },
       {
         heading: "Online vs. Calling",
-        body: "The contact form is best if you want to submit your request at any time and receive a same-day quote via email or text. Calling is best if you have questions, want an instant ballpark, or need to book quickly. Either way, a real person from our team handles your request — no bots, no automated systems.",
+        body: "The contact form is best if you want to submit your request at any time and receive a same-day quote via email or text. Calling is best if you have questions, want an instant ballpark, or need to book quickly. Either way, a real person from our team handles your request. No bots, no automated systems.",
       },
     ],
   },
@@ -115,7 +115,7 @@ const processSteps = [
     details: [
       {
         heading: "What Happens After You Contact Us",
-        body: "Once we receive your request, we prepare a flat-rate quote based on your home size (bedrooms and bathrooms), service type, and the current condition of your home. Most quotes are sent same-day, often within a few hours. The price is firm — not a range, not an estimate that changes on arrival.",
+        body: "Once we receive your request, we prepare a flat-rate quote based on your home size (bedrooms and bathrooms), service type, and the current condition of your home. Most quotes are sent same-day, often within a few hours. The price is firm, not a range, not an estimate that changes on arrival.",
       },
       {
         heading: "Confirming Your Booking",
@@ -130,11 +130,11 @@ const processSteps = [
     details: [
       {
         heading: "What Time to Expect Us",
-        body: "We arrive within our communicated window — typically morning (8am–12pm) or afternoon (12pm–4pm) slots. We&apos;ll send a reminder the day before your cleaning. If our timing shifts for any reason, we contact you in advance.",
+        body: "We arrive within our communicated window, typically morning (8am–12pm) or afternoon (12pm–4pm) slots. We&apos;ll send a reminder the day before your cleaning. If our timing shifts for any reason, we contact you in advance.",
       },
       {
         heading: "What Our Team Brings",
-        body: "Everything. Our team arrives with all cleaning products, microfiber cloths, mops, and equipment. You don&apos;t need to provide anything. Our products are professional-grade, non-toxic, and eco-friendly — safe for your family and pets.",
+        body: "Everything. Our team arrives with all cleaning products, microfiber cloths, mops, and equipment. You don&apos;t need to provide anything. Our products are professional-grade, non-toxic, and eco-friendly, safe for your family and pets.",
       },
       {
         heading: "How Long It Takes",
@@ -149,15 +149,15 @@ const processSteps = [
     details: [
       {
         heading: "Our Quality Check Process",
-        body: "Before leaving your home, our team does a final walkthrough to verify all areas were covered according to your service type checklist. This is our internal quality check — it happens on every job before we pack up.",
+        body: "Before leaving your home, our team does a final walkthrough to verify all areas were covered according to your service type checklist. This is our internal quality check, and it happens on every job before we pack up.",
       },
       {
         heading: "The 48-Hour Satisfaction Guarantee",
-        body: "After your cleaning, we encourage you to walk through your home. If anything doesn&apos;t meet your expectations, contact us within 48 hours and we will return to re-clean that area at no charge. No forms, no justification needed — just reach out and we make it right.",
+        body: "After your cleaning, we encourage you to walk through your home. If anything doesn&apos;t meet your expectations, contact us within 48 hours and we will return to re-clean that area at no charge. No forms, no justification needed. Just reach out and we make it right.",
       },
       {
         heading: "How to Give Feedback",
-        body: "We welcome feedback after every cleaning. A quick text, call, or email is all it takes. Your feedback directly shapes how we serve your home on future visits and helps us continuously improve. After your first cleaning, we may also ask you to leave a Google review — your honest opinion means everything to a local family business.",
+        body: "We welcome feedback after every cleaning. A quick text, call, or email is all it takes. Your feedback directly shapes how we serve your home on future visits and helps us continuously improve. After your first cleaning, we may also ask you to leave a Google review. Your honest opinion means everything to a local family business.",
       },
     ],
   },
@@ -168,15 +168,15 @@ const processSteps = [
     details: [
       {
         heading: "How to Set Up Ongoing Service",
-        body: "After your first cleaning, simply tell us you&apos;d like to continue on a regular schedule. We offer weekly, bi-weekly, and monthly recurring plans. Bi-weekly is our most popular frequency — often the best balance between maintaining a clean home and cost.",
+        body: "After your first cleaning, simply tell us you&apos;d like to continue on a regular schedule. We offer weekly, bi-weekly, and monthly recurring plans. Bi-weekly is our most popular frequency, often the best balance between maintaining a clean home and cost.",
       },
       {
         heading: "How Scheduling Works",
-        body: "Recurring customers get a locked-in time slot on their preferred day. We send reminders 24–48 hours before each visit. Your schedule is yours — we don&apos;t shuffle recurring customers around for new bookings.",
+        body: "Recurring customers get a locked-in time slot on their preferred day. We send reminders 24–48 hours before each visit. Your schedule is yours. We don&apos;t shuffle recurring customers around for new bookings.",
       },
       {
         heading: "Making Changes",
-        body: "Life happens. You can reschedule, pause, or skip a visit with reasonable advance notice (typically 48 hours). There are no long-term contracts and no cancellation penalties. We want recurring customers to stay because they&apos;re happy — not because they&apos;re locked in.",
+        body: "Life happens. You can reschedule, pause, or skip a visit with reasonable advance notice (typically 48 hours). There are no long-term contracts and no cancellation penalties. We want recurring customers to stay because they&apos;re happy, not because they&apos;re locked in.",
       },
     ],
   },
@@ -226,10 +226,10 @@ export default function OurCleaningProcessPage() {
               <span className="text-white">Our Cleaning Process</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-6">
-              Our House Cleaning Process — What to Expect with DSM
+              Our House Cleaning Process: What to Expect with DSM
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              From your first contact to a clean home and beyond — a transparent, step-by-step
+              From your first contact to a clean home and beyond: a transparent, step-by-step
               look at how house cleaning works when you book DSM Cleaning Solutions in Romeoville,
               Plainfield, Naperville, and the southwest Chicago suburbs.
             </p>
@@ -343,7 +343,7 @@ export default function OurCleaningProcessPage() {
       {/* PETS & ENTRY */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading mb-8">Additional Details — Pets &amp; Entry</h2>
+          <h2 className="section-heading mb-8">Additional Details: Pets &amp; Entry</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-brand-green-50 border border-brand-green-100 rounded-xl p-6">
               <h3 className="font-bold text-lg text-gray-900 mb-3">🐾 What to Do With Pets During Cleaning</h3>
@@ -351,10 +351,10 @@ export default function OurCleaningProcessPage() {
                 Our products are non-toxic and pet-safe, so your animals do not need to leave
                 the home during cleaning. However, if your pet is anxious around strangers or
                 tends to follow the cleaning team, it helps to have them in a separate room or
-                crate — mainly for their comfort and to make the cleaning process more efficient.
+                crate, mainly for their comfort and to make the cleaning process more efficient.
               </p>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Let us know in advance about pets so our team can be prepared — especially if
+                Let us know in advance about pets so our team can be prepared, especially if
                 you have dogs who may bark at the door or protective animals in certain rooms.
               </p>
             </div>
@@ -363,13 +363,13 @@ export default function OurCleaningProcessPage() {
               <p className="text-gray-600 text-sm leading-relaxed mb-3">
                 Most DSM customers provide a door code, garage code, or lockbox for entry.
                 Some clients leave a key with a neighbor or use a smart lock. We treat your
-                entry information with strict confidentiality — it is never shared, stored
+                entry information with strict confidentiality. It is never shared, stored
                 insecurely, or used for any purpose beyond scheduled cleanings.
               </p>
               <p className="text-gray-600 text-sm leading-relaxed">
                 If you prefer to be home to let us in, that&apos;s always welcome. For your
                 first cleaning especially, some customers like to meet the team and do a
-                quick walkthrough of preferences — we encourage it.
+                quick walkthrough of preferences. We encourage it.
               </p>
             </div>
           </div>
@@ -380,7 +380,7 @@ export default function OurCleaningProcessPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="section-heading">Cleaning Process — FAQs</h2>
+            <h2 className="section-heading">Cleaning Process: FAQs</h2>
           </div>
           <div className="space-y-4">
             {faqs.map((faq, i) => (
@@ -411,11 +411,11 @@ export default function OurCleaningProcessPage() {
             </Link>
             <Link href="/deep-cleaning" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning</h3>
-              <p className="text-sm text-gray-600">Top-to-bottom cleaning for a full seasonal or first-time reset.</p>
+              <p className="text-sm text-gray-600">The full detail clean we recommend for a first visit or once a season.</p>
             </Link>
             <Link href="/pricing" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Pricing</h3>
-              <p className="text-sm text-gray-600">Flat-rate pricing by home size and service type — no surprises.</p>
+              <p className="text-sm text-gray-600">Flat-rate pricing by home size and service type. No surprises.</p>
             </Link>
             <Link href="/contact" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Get Started</h3>
@@ -433,7 +433,7 @@ export default function OurCleaningProcessPage() {
               <h2 className="text-4xl font-bold mb-4">Ready to Get Started?</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 The process is simple, the pricing is transparent, and the results are backed
-                by our 48-hour guarantee. Book your cleaning today — serving Romeoville,
+                by our 48-hour guarantee. Book your cleaning today. We serve Romeoville,
                 Plainfield, Naperville, Bolingbrook, and the southwest Chicago suburbs.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">

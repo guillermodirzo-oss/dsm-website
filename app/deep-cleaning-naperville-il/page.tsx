@@ -28,7 +28,7 @@ const faqs = [
   {
     question: "Do you serve River Run and Ashbury neighborhoods in Naperville?",
     answer:
-      "Yes — we serve all Naperville neighborhoods including Naper Settlement area, River Run, Ashbury, and all areas within zip codes 60540, 60563, 60564, and 60565.",
+      "Yes, we serve all Naperville neighborhoods including Naper Settlement area, River Run, Ashbury, and all areas within zip codes 60540, 60563, 60564, and 60565.",
   },
   {
     question: "What if my quote comes in higher than the range listed?",
@@ -38,12 +38,12 @@ const faqs = [
   {
     question: "Do I need to be home during the deep cleaning in Naperville?",
     answer:
-      "You don't have to be home. Many Naperville clients provide a key or access code. Every member of our team is background-checked, insured, and bonded — your home is fully protected.",
+      "You don't have to be home. Many Naperville clients provide a key or access code. Every member of our team is background-checked, insured, and bonded, so your home is fully protected.",
   },
   {
     question: "Is DSM Cleaning Solutions insured in Naperville, IL?",
     answer:
-      "Yes — DSM Cleaning Solutions is fully insured and bonded in Illinois, including all of Naperville. We carry liability insurance on every job so you can book with complete peace of mind.",
+      "Yes, DSM Cleaning Solutions is fully insured and bonded in Illinois, including all of Naperville. We carry liability insurance on every job so you can book with complete peace of mind.",
   },
 ];
 
@@ -72,7 +72,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Professional deep cleaning in Naperville, IL — 60540, 60563, 60564 & 60565. DSM Cleaning Solutions scrubs every surface, grout line & appliance. Free estimate. (815) 246-2113.",
+    "Professional deep cleaning in Naperville, IL (60540, 60563, 60564 & 60565). DSM Cleaning Solutions scrubs every surface, grout line & appliance. Free estimate. (815) 246-2113.",
 };
 
 const faqSchema = {
@@ -364,6 +364,7 @@ export default function DeepCleaningNapervillePage() {
           <p className="text-gray-600 mb-4 leading-relaxed">
             Your price depends on three things: how big your home is, how many bedrooms it has, and how many bathrooms it has. The ranges above cover typical homes in that bedroom range. If your home runs bigger or has extra bathrooms, your quote might land higher. We&rsquo;ll always confirm your exact price with you before we book anything. No surprises after we show up.
           </p>
+          <p className="text-gray-600 text-sm mb-4">For a closer look at what drives the price, read our guide to <Link href="/deep-cleaning-cost-naperville-il" className="text-brand-green font-semibold hover:underline">deep cleaning cost in Naperville</Link>.</p>
           <p className="text-gray-600 text-sm mb-4">Want your exact price right now? See it in about 2 minutes below. Prefer we call you instead? Fill out the quick form.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/book" className="inline-flex items-center justify-center font-bold text-white rounded-full px-8 py-4 text-base transition-all hover:opacity-90 active:scale-95 shadow-md" style={{ backgroundColor: "#E8622A" }}>See Your Exact Price</Link>

@@ -29,17 +29,17 @@ const faqs = [
   {
     question: "How much does house cleaning cost in Plainfield, IL?",
     answer:
-      "House cleaning in Plainfield, IL typically starts at $160 for a standard clean in a 2-bedroom/1-bath home, $315 for a deep clean, and $410 for a move-out clean in the same size home. Prices scale with bedroom and bathroom count. DSM Cleaning Solutions provides free, no-obligation estimates — contact us or call (815) 246-2113 for your exact Plainfield quote.",
+      "House cleaning in Plainfield, IL typically starts at $160 for a standard clean in a 2-bedroom/1-bath home, $315 for a deep clean, and $410 for a move-out clean in the same size home. Prices scale with bedroom and bathroom count. DSM Cleaning Solutions provides free, no-obligation estimates. Contact us or call (815) 246-2113 for your exact Plainfield quote.",
   },
   {
     question: "Is deep cleaning more expensive than standard cleaning in Plainfield?",
     answer:
-      "Yes — deep cleaning costs roughly twice the price of a standard cleaning in Plainfield because it covers areas that aren't included in routine visits: inside appliances, cabinet interiors, baseboards, grout scrubbing, ceiling fans, and window sills. A standard clean for a 2-bed/1-bath starts at $160 while a deep clean for the same home starts at $315.",
+      "Yes, deep cleaning costs roughly twice the price of a standard cleaning in Plainfield because it covers areas that aren't included in routine visits: inside appliances, cabinet interiors, baseboards, grout scrubbing, ceiling fans, and window sills. A standard clean for a 2-bed/1-bath starts at $160 while a deep clean for the same home starts at $315.",
   },
   {
     question: "Do you charge by the hour or flat rate in Plainfield?",
     answer:
-      "DSM Cleaning Solutions uses flat-rate pricing in Plainfield, IL — not hourly rates. Your quote is based on your home size (bedrooms and bathrooms) and the type of clean you need. This means you always know the price upfront with no surprises when the job takes longer than expected.",
+      "DSM Cleaning Solutions uses flat-rate pricing in Plainfield, IL, not hourly rates. Your quote is based on your home size (bedrooms and bathrooms) and the type of clean you need. This means you always know the price upfront with no surprises when the job takes longer than expected.",
   },
   {
     question: "How do I get an exact quote for Plainfield cleaning?",
@@ -49,7 +49,7 @@ const faqs = [
   {
     question: "Are there any hidden fees?",
     answer:
-      "No — DSM Cleaning Solutions does not charge hidden fees in Plainfield or anywhere else we serve. The price you're quoted is the price you pay. There are no extra charges for eco-friendly products, travel within our service area, or routine supplies. Add-on services (like inside oven or inside refrigerator) are discussed and agreed upon before we arrive.",
+      "No. DSM Cleaning Solutions does not charge hidden fees in Plainfield or anywhere else we serve. The price you're quoted is the price you pay. There are no extra charges for eco-friendly products, travel within our service area, or routine supplies. Add-on services (like inside oven or inside refrigerator) are discussed and agreed upon before we arrive.",
   },
 ];
 
@@ -152,7 +152,7 @@ export default function HouseCleaningCostPlainfield() {
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               Transparent 2026 pricing for standard, deep, and move-out cleaning across Plainfield
-              zip codes 60544 and 60585. Flat-rate quotes — no hourly surprises. Family-owned and
+              zip codes 60544 and 60585. Flat-rate quotes, no hourly surprises. Family-owned and
               fully insured.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -181,7 +181,7 @@ export default function HouseCleaningCostPlainfield() {
           <p className="text-gray-600 mb-4 leading-relaxed">
             If you&apos;re searching for house cleaning cost in Plainfield, IL, you&apos;re likely comparing
             options and trying to figure out what&apos;s fair. Prices in Plainfield vary based on home
-            size, type of service, and the company you hire — but we believe in full transparency.
+            size, type of service, and the company you hire, but we believe in full transparency.
             DSM Cleaning Solutions uses flat-rate pricing built on a straightforward formula: your
             number of bedrooms and bathrooms, plus the type of clean you need.
           </p>
@@ -194,7 +194,7 @@ export default function HouseCleaningCostPlainfield() {
           </p>
           <p className="text-gray-600 leading-relaxed">
             Unlike companies that charge by the hour, our flat-rate model means you always know the
-            price before we arrive — no surprises, no hourly overruns, no hidden fees.
+            price before we arrive. No surprises, no hourly overruns, no hidden fees.
           </p>
         </div>
       </section>
@@ -205,7 +205,7 @@ export default function HouseCleaningCostPlainfield() {
           <div className="text-center mb-10">
             <h2 className="section-heading">Plainfield House Cleaning Prices by Home Size (2026)</h2>
             <p className="section-subheading mx-auto">
-              Starting prices — exact quotes provided after a quick conversation about your home.
+              Starting prices: exact quotes provided after a quick conversation about your home.
             </p>
           </div>
           <div className="overflow-x-auto rounded-xl shadow-sm border border-gray-200">
@@ -286,7 +286,7 @@ export default function HouseCleaningCostPlainfield() {
                 <span className="bg-brand-green-50 text-brand-green font-bold px-3 py-1 rounded-lg text-sm">Starting at $315</span>
               </div>
               <p className="text-gray-600 leading-relaxed mb-3">
-                Deep cleaning is a top-to-bottom scrub that goes beyond routine maintenance. In
+                Deep cleaning is the detailed scrub that routine upkeep skips. In
                 Plainfield homes, this includes inside kitchen appliances, scrubbing grout, cleaning
                 inside cabinet fronts, wiping baseboards, ceiling fans, vents, and window sills.
                 Recommended for first-time cleans, seasonal cleans, or homes that haven&apos;t been
@@ -303,7 +303,7 @@ export default function HouseCleaningCostPlainfield() {
                 <span className="bg-brand-green-50 text-brand-green font-bold px-3 py-1 rounded-lg text-sm">Starting at {MOVEOUT_FROM}</span>
               </div>
               <p className="text-gray-600 leading-relaxed mb-3">
-                Move-out cleaning in Plainfield is our most comprehensive service — priced higher
+                Move-out cleaning in Plainfield is our most comprehensive service, priced higher
                 because it covers everything a landlord or buyer expects: inside all appliances,
                 inside all cabinets and closets, all doors and door knobs, all window glass, and a
                 final walkthrough. Designed to help Plainfield renters recover their full security
@@ -328,7 +328,7 @@ export default function HouseCleaningCostPlainfield() {
             been professionally cleaned recently?
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            From there, we generate a firm quote using our pricing formula — the same one used
+            From there, we generate a firm quote using our pricing formula, the same one used
             for all our Plainfield clients in 60544 and 60585. We do not charge extra for
             eco-friendly products, and there are no travel fees for Plainfield. Add-on services
             like inside oven, inside refrigerator, laundry, or window cleaning are listed
@@ -347,7 +347,7 @@ export default function HouseCleaningCostPlainfield() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-bold text-gray-900 mb-3">Ready for Your Exact Plainfield Quote?</h2>
           <p className="text-gray-600 mb-6">
-            Tell us your home size and the service you need — we&apos;ll reply with a firm price, usually same-day.
+            Tell us your home size and the service you need, and we&apos;ll reply with a firm price, usually same-day.
             Serving Plainfield zip codes <strong>60544</strong> and <strong>60585</strong>.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -361,7 +361,7 @@ export default function HouseCleaningCostPlainfield() {
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="section-heading">Plainfield House Cleaning Cost — FAQs</h2>
+            <h2 className="section-heading">Plainfield House Cleaning Cost: FAQs</h2>
           </div>
           <div className="space-y-4">
             {faqs.map((faq, i) => (
@@ -391,15 +391,15 @@ export default function HouseCleaningCostPlainfield() {
               <p className="text-sm text-gray-600">See all service pricing across every city we serve.</p>
             </Link>
             <Link href="/deep-cleaning-plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning — Plainfield</h3>
-              <p className="text-sm text-gray-600">Top-to-bottom deep cleaning starting at $315.</p>
+              <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Plainfield</h3>
+              <p className="text-sm text-gray-600">Our detailed clean for kitchens, baths and baseboards, starting at $315.</p>
             </Link>
             <Link href="/plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">House Cleaning — Plainfield</h3>
+              <h3 className="font-bold text-gray-900 mb-1">House Cleaning in Plainfield</h3>
               <p className="text-sm text-gray-600">Recurring house cleaning starting at $145.</p>
             </Link>
             <Link href="/move-out-cleaning-plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning — Plainfield</h3>
+              <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning in Plainfield</h3>
               <p className="text-sm text-gray-600">Deposit-back cleaning starting at {MOVEOUT_FROM}.</p>
             </Link>
           </div>
@@ -414,7 +414,7 @@ export default function HouseCleaningCostPlainfield() {
               <h2 className="text-4xl font-bold mb-4">Get a Free Plainfield Cleaning Quote Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 No hourly rates, no hidden fees. Tell us about your Plainfield home and we&apos;ll send
-                you a firm flat-rate quote — usually same-day. Serving 60544 and 60585.
+                you a firm flat-rate quote, usually same-day. Serving 60544 and 60585.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
                 📞 (815) 246-2113

@@ -5,12 +5,12 @@ import LeadForm from "@/components/LeadForm";
 export const metadata: Metadata = {
   title: "Standard vs Deep Cleaning | Which Do You Need?",
   description:
-    "Standard cleaning vs deep cleaning — what is the difference and which does your home need? DSM Cleaning Solutions explains.",
+    "Standard cleaning vs deep cleaning: what is the difference and which does your home need? DSM Cleaning Solutions explains.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/standard-vs-deep-cleaning" },
   openGraph: {
     title: "Standard vs Deep Cleaning | Which Do You Need? | DSM Cleaning Solutions",
     description:
-      "Standard cleaning vs deep cleaning — what is the difference and which does your home need? DSM Cleaning Solutions explains.",
+      "Standard cleaning vs deep cleaning: what is the difference and which does your home need? DSM Cleaning Solutions explains.",
     url: "https://www.dsmcleaningsolutions.com/standard-vs-deep-cleaning",
     siteName: "DSM Cleaning Solutions",
     images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "Standard vs Deep Cleaning" }],
@@ -22,27 +22,27 @@ const faqs = [
   {
     question: "What is the difference between standard and deep cleaning?",
     answer:
-      "Standard cleaning covers the routine tasks needed to maintain a home that is already reasonably clean — surfaces, floors, bathrooms, and kitchen exteriors. Deep cleaning goes significantly further: inside appliances, grout scrubbing, baseboards, window sills, cabinet interiors, ceiling fans, vents, and behind/underneath furniture. Standard cleaning keeps a clean home clean. Deep cleaning restores a home that has fallen behind or needs a true reset.",
+      "Standard cleaning covers the routine tasks needed to maintain a home that is already reasonably clean: surfaces, floors, bathrooms, and kitchen exteriors. Deep cleaning goes significantly further: inside appliances, grout scrubbing, baseboards, window sills, cabinet interiors, ceiling fans, vents, and behind/underneath furniture. Standard cleaning keeps a clean home clean. Deep cleaning restores a home that has fallen behind or needs a true reset.",
   },
   {
     question: "Should my first clean be a deep clean?",
     answer:
-      "Yes — for most first-time customers, we recommend starting with a deep clean. Even if your home feels reasonably clean, a professional deep clean gives us a thorough baseline and ensures we address areas that have accumulated buildup over time. After the deep clean, maintaining that standard with bi-weekly or monthly standard cleaning is both easier and more affordable.",
+      "Yes, for most first-time customers, we recommend starting with a deep clean. Even if your home feels reasonably clean, a professional deep clean gives us a thorough baseline and ensures we address areas that have accumulated buildup over time. After the deep clean, maintaining that standard with bi-weekly or monthly standard cleaning is both easier and more affordable.",
   },
   {
     question: "How often should I get a deep clean?",
     answer:
-      "Most households benefit from a deep clean 2–4 times per year — typically with the changing of seasons. If you receive standard cleaning regularly (bi-weekly or monthly), a deep clean at the start of each season keeps your home in excellent condition year-round. Homes with pets, children, or high foot traffic may benefit from more frequent deep cleans.",
+      "Most households benefit from a deep clean 2–4 times per year, typically with the changing of seasons. If you receive standard cleaning regularly (bi-weekly or monthly), a deep clean at the start of each season keeps your home in excellent condition year-round. Homes with pets, children, or high foot traffic may benefit from more frequent deep cleans.",
   },
   {
     question: "Is deep cleaning worth the extra cost?",
     answer:
-      "Yes — deep cleaning is worth it when your home needs it. Trying to maintain a home with standard cleaning when it actually needs a deep clean leads to declining results over time, because buildup accumulates faster than routine visits can address. Deep cleaning removes that underlying buildup so standard cleaning can work effectively. Think of it as the foundation that makes your ongoing service worthwhile.",
+      "Yes, deep cleaning is worth it when your home needs it. Trying to maintain a home with standard cleaning when it actually needs a deep clean leads to declining results over time, because buildup accumulates faster than routine visits can address. Deep cleaning removes that underlying buildup so standard cleaning can work effectively. Think of it as the foundation that makes your ongoing service worthwhile.",
   },
   {
     question: "Can I switch from standard to deep cleaning?",
     answer:
-      "Absolutely. Many DSM customers switch between service types based on the season, life events (having guests, selling a home), or simply how their home feels. There are no contracts or long-term commitments. You can request a deep clean at any time — even if you are on a standard recurring plan — and return to standard cleaning afterward. Just let us know in advance so we can allocate the right amount of time.",
+      "Absolutely. Many DSM customers switch between service types based on the season, life events (having guests, selling a home), or simply how their home feels. There are no contracts or long-term commitments. You can request a deep clean at any time, even if you are on a standard recurring plan, and return to standard cleaning afterward. Just let us know in advance so we can allocate the right amount of time.",
   },
 ];
 
@@ -60,7 +60,7 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   serviceType: "House Cleaning",
-  name: "Standard & Deep Cleaning — DSM Cleaning Solutions",
+  name: "Standard & Deep Cleaning by DSM Cleaning Solutions",
   provider: {
     "@type": "LocalBusiness",
     "@id": "https://www.dsmcleaningsolutions.com/#business",
@@ -99,16 +99,16 @@ const comparisonRows = [
   { feature: "Dust furniture & surfaces", standard: "✓", deep: "✓" },
   { feature: "Empty trash", standard: "✓", deep: "✓" },
   { feature: "Cabinet fronts wiped", standard: "✓", deep: "✓" },
-  { feature: "Inside microwave", standard: "—", deep: "✓" },
-  { feature: "Inside oven", standard: "—", deep: "✓" },
-  { feature: "Refrigerator exterior detail", standard: "—", deep: "✓" },
+  { feature: "Inside microwave", standard: "✗", deep: "✓" },
+  { feature: "Inside oven", standard: "✗", deep: "✓" },
+  { feature: "Refrigerator exterior detail", standard: "✗", deep: "✓" },
   { feature: "Baseboard scrubbing", standard: "Light wipe", deep: "Full scrub" },
-  { feature: "Window sills and inside glass", standard: "—", deep: "✓" },
-  { feature: "Ceiling fans & light fixtures", standard: "—", deep: "✓" },
-  { feature: "Grout scrubbing", standard: "—", deep: "✓" },
-  { feature: "Cabinet interiors", standard: "—", deep: "✓" },
-  { feature: "Door frames detail", standard: "—", deep: "✓" },
-  { feature: "Vents & registers", standard: "—", deep: "✓" },
+  { feature: "Window sills and inside glass", standard: "✗", deep: "✓" },
+  { feature: "Ceiling fans & light fixtures", standard: "✗", deep: "✓" },
+  { feature: "Grout scrubbing", standard: "✗", deep: "✓" },
+  { feature: "Cabinet interiors", standard: "✗", deep: "✓" },
+  { feature: "Door frames detail", standard: "✗", deep: "✓" },
+  { feature: "Vents & registers", standard: "✗", deep: "✓" },
   { feature: "Starting price (2 bed/1 bath)", standard: "$160", deep: "$315" },
   { feature: "Typical duration (2 bed/1 bath)", standard: "2–3 hrs", deep: "4–6 hrs" },
   { feature: "Recommended frequency", standard: "Weekly – monthly", deep: "Seasonally (2–4×/yr)" },
@@ -153,7 +153,7 @@ export default function StandardVsDeepCleaningPage() {
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               Not sure whether to book a standard clean or a deep clean? This guide explains the
-              real differences — what&apos;s included, how long each takes, what each costs, and
+              real differences: what&apos;s included, how long each takes, what each costs, and
               exactly when to choose one over the other.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -183,8 +183,8 @@ export default function StandardVsDeepCleaningPage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-4">🧹 What Is Standard Cleaning?</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
                 Standard cleaning is the recurring maintenance service designed to keep an already-clean
-                home in great condition. It covers the essential tasks in every room — wiping surfaces,
-                cleaning bathrooms, vacuuming and mopping floors, and handling kitchen exteriors — on
+                home in great condition. It covers the essential tasks in every room: wiping surfaces,
+                cleaning bathrooms, vacuuming and mopping floors, and handling kitchen exteriors, on
                 a consistent schedule.
               </p>
               <p className="text-gray-600 leading-relaxed">
@@ -196,13 +196,13 @@ export default function StandardVsDeepCleaningPage() {
             <div className="bg-gray-900 text-white rounded-2xl p-8">
               <h2 className="text-2xl font-bold mb-4">🔍 What Is Deep Cleaning?</h2>
               <p className="text-white/80 leading-relaxed mb-4">
-                Deep cleaning is a comprehensive top-to-bottom service that goes significantly beyond
+                Deep cleaning is a detailed service that goes significantly beyond
                 routine maintenance. It covers everything in a standard clean plus the areas that
                 accumulate buildup over time: inside appliances, grout lines, baseboards, window sills,
                 cabinet interiors, ceiling fans, vents, and more.
               </p>
               <p className="text-white/80 leading-relaxed">
-                Deep cleaning is the right choice when your home needs a true reset — before starting
+                Deep cleaning is the right choice when your home needs a true reset: before starting
                 a recurring service, at the start of a new season, or after an extended period without
                 professional cleaning. It&apos;s the foundation that makes standard cleaning effective.
               </p>
@@ -215,7 +215,7 @@ export default function StandardVsDeepCleaningPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="section-heading">Standard vs Deep Cleaning — Side by Side</h2>
+            <h2 className="section-heading">Standard vs Deep Cleaning: Side by Side</h2>
             <p className="section-subheading mx-auto">
               Every task compared so you know exactly what you&apos;re getting with each service.
             </p>
@@ -233,7 +233,7 @@ export default function StandardVsDeepCleaningPage() {
                 {comparisonRows.map((row, i) => (
                   <tr key={row.feature} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                     <td className="px-6 py-3 text-gray-700 font-medium">{row.feature}</td>
-                    <td className={`px-5 py-3 text-center font-medium ${row.standard === "✓" ? "text-brand-green" : row.standard === "—" ? "text-gray-300" : "text-gray-600 text-xs"}`}>
+                    <td className={`px-5 py-3 text-center font-medium ${row.standard === "✓" ? "text-brand-green" : row.standard === "✗" ? "text-gray-300" : "text-gray-600 text-xs"}`}>
                       {row.standard}
                     </td>
                     <td className={`px-5 py-3 text-center font-bold ${row.deep === "✓" ? "text-brand-green" : "text-brand-green"}`}>
@@ -297,14 +297,14 @@ export default function StandardVsDeepCleaningPage() {
           <div>
             <h2 className="section-heading mb-4">Can You Switch Between Standard and Deep Cleaning?</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Yes — and many DSM customers do. There are no contracts and no minimums. You can
+              Yes, and many DSM customers do. There are no contracts and no minimums. You can
               book a deep clean for one visit and standard cleaning for the next. The most common
               pattern we see is a deep clean at the start of each season and standard bi-weekly
               cleaning in between.
             </p>
             <p className="text-gray-600 leading-relaxed">
               If you are on a recurring standard plan and notice your home needs more than maintenance
-              — before the holidays, after a sick season, or if it&apos;s been a while — simply request
+              (before the holidays, after a sick season, or if it&apos;s been a while), simply request
               a deep clean for your next visit. We&apos;ll update your booking and adjust the time
               accordingly.
             </p>
@@ -312,8 +312,8 @@ export default function StandardVsDeepCleaningPage() {
           <div className="bg-brand-green-50 border border-brand-green-100 rounded-2xl p-8">
             <h2 className="text-xl font-bold text-gray-900 mb-3">💡 Our Recommendation for First-Time Customers</h2>
             <p className="text-gray-600 leading-relaxed">
-              If this is your first professional cleaning — or your first cleaning in several months
-              — we strongly recommend starting with a <strong>deep clean</strong>. It establishes a
+              If this is your first professional cleaning, or your first cleaning in several months,
+              we strongly recommend starting with a <strong>deep clean</strong>. It establishes a
               clean baseline that makes every subsequent standard cleaning more effective. After your
               deep clean, bi-weekly standard cleaning is the most popular choice among our customers
               in Romeoville, Plainfield, and Naperville.
@@ -326,7 +326,7 @@ export default function StandardVsDeepCleaningPage() {
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="section-heading">Standard vs Deep Cleaning — FAQs</h2>
+            <h2 className="section-heading">Standard vs Deep Cleaning: FAQs</h2>
           </div>
           <div className="space-y-4">
             {faqs.map((faq, i) => (
@@ -376,7 +376,7 @@ export default function StandardVsDeepCleaningPage() {
             <div className="text-white">
               <h2 className="text-4xl font-bold mb-4">Not Sure Which to Book? We&apos;ll Help.</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                Call or message us — we&apos;ll ask a few quick questions about your home and tell
+                Call or message us. We&apos;ll ask a few quick questions about your home and tell
                 you exactly which service makes sense. Free quote, no obligation.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">

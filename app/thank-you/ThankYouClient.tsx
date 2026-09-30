@@ -96,7 +96,7 @@ export default function ThankYouClient() {
                 {[
                   { step: "1", text: "You'll get a confirmation email from us" },
                   { step: "2", text: "Our team will reach out to confirm your appointment time" },
-                  { step: "3", text: "Sit back and relax — we will handle the rest!" },
+                  { step: "3", text: "Sit back and relax. We will handle the rest!" },
                 ].map(({ step, text }) => (
                   <div key={step} className="flex items-start gap-4">
                     <div className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-green flex items-center justify-center text-white text-sm font-bold">

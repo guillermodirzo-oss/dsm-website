@@ -7,7 +7,7 @@ const city = cities.find((c) => c.slug === "lemont-il")!;
 export const metadata: Metadata = {
   title: "House Cleaning Lemont IL",
   description:
-    "Trusted house cleaning in Lemont, IL — deep cleaning, standard & recurring maid service. Eco-friendly, insured. Family-owned. Free estimate.",
+    "Trusted house cleaning in Lemont, IL: deep cleaning, standard & recurring maid service. Eco-friendly, insured. Family-owned. Free estimate.",
   keywords: [
     "house cleaning Lemont IL",
     "cleaning service Lemont",
@@ -19,15 +19,15 @@ export const metadata: Metadata = {
   openGraph: {
     title: "House Cleaning Lemont IL | DSM Cleaning Solutions",
     description:
-      "Trusted house cleaning in Lemont, IL — deep cleaning, standard & recurring maid service. Eco-friendly, insured. Family-owned. Free estimate.",
+      "Trusted house cleaning in Lemont, IL: deep cleaning, standard & recurring maid service. Eco-friendly, insured. Family-owned. Free estimate.",
     url: "https://www.dsmcleaningsolutions.com/lemont-il",
     siteName: "DSM Cleaning Solutions",
-    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions — House Cleaning in Lemont IL" }],
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions: House Cleaning in Lemont IL" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "House Cleaning Lemont IL | DSM Cleaning Solutions",
-    description: "Trusted house cleaning in Lemont, IL — deep cleaning, standard & recurring maid service. Eco-friendly, insured. Family-owned.",
+    description: "Trusted house cleaning in Lemont, IL: deep cleaning, standard & recurring maid service. Eco-friendly, insured. Family-owned.",
     images: ["/hero-image.png"],
   },
 };
@@ -44,7 +44,7 @@ export default function LemontPage() {
             <div>
               <h2 className="section-heading text-3xl md:text-4xl mb-4">Lemont Neighborhoods We Serve</h2>
               <p className="text-gray-500 mb-5 leading-relaxed">
-                Based in the southwest Chicago suburbs, DSM Cleaning Solutions knows every corner of Lemont. We clean homes throughout every neighborhood — from the newest developments to established subdivisions we&apos;ve served for years.
+                Based in the southwest Chicago suburbs, DSM Cleaning Solutions knows every corner of Lemont. We clean homes throughout every neighborhood, from the newest developments to established subdivisions we&apos;ve served for years.
               </p>
               <div className="grid grid-cols-2 gap-2 mb-5">
                 {["Historic Downtown Lemont", "Centennial Crossing", "Covington Knolls", "Burning Tree Estates", "Heritage Lake"].map((n) => (
@@ -84,7 +84,7 @@ export default function LemontPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <a href="/deep-cleaning-lemont-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Lemont</h3>
-              <p className="text-sm text-gray-600">Top-to-bottom deep cleaning for Lemont homes in zip code 60439.</p>
+              <p className="text-sm text-gray-600">Cabinet fronts, window sills and inside the microwave, for Lemont homes in zip code 60439.</p>
             </a>
             <a href="/recurring-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Recurring Cleaning in Lemont</h3>

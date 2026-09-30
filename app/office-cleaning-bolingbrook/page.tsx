@@ -54,7 +54,7 @@ const jsonLd = {
         name: "Do you provide office cleaning services in Bolingbrook, IL?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes — DSM Cleaning Solutions serves businesses throughout Bolingbrook, IL including offices near Boughton Road, Weber Road, and the I-55 business corridor. We're located nearby in Romeoville for fast, reliable service.",
+          text: "Yes, DSM Cleaning Solutions serves businesses throughout Bolingbrook, IL including offices near Boughton Road, Weber Road, and the I-55 business corridor. We're located nearby in Romeoville for fast, reliable service.",
         },
       },
       {
@@ -62,7 +62,7 @@ const jsonLd = {
         name: "Can you clean our Bolingbrook office on weekends?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes — we offer weekend-only cleaning slots for Bolingbrook businesses, as well as before-hours and after-hours cleaning on weekdays so your team and clients are never disrupted.",
+          text: "Yes, we offer weekend-only cleaning slots for Bolingbrook businesses, as well as before-hours and after-hours cleaning on weekdays so your team and clients are never disrupted.",
         },
       },
       {
@@ -162,7 +162,7 @@ export default function OfficeCleaningBolingbrookPage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">Why Bolingbrook Businesses Choose DSM</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { title: "Close to Bolingbrook", desc: "Our Romeoville base puts us just minutes from Bolingbrook — fast response, on-time arrivals, and no travel fees." },
+              { title: "Close to Bolingbrook", desc: "Our Romeoville base puts us just minutes from Bolingbrook: fast response, on-time arrivals, and no travel fees." },
               { title: "Reliable Every Visit", desc: "Consistent crew, consistent quality. You'll get the same great clean every time without having to follow up or supervise." },
               { title: "Fully Insured & Bonded", desc: "Every job at every Bolingbrook location is fully covered. Your business property is protected from day one." },
             ].map((c) => (
@@ -178,7 +178,7 @@ export default function OfficeCleaningBolingbrookPage() {
       {/* FAQ */}
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">FAQs — Bolingbrook Office Cleaning</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">FAQs: Bolingbrook Office Cleaning</h2>
           <div className="space-y-4">
             {jsonLd.faq.mainEntity.map((q) => (
               <div key={q.name} className="border border-gray-100 rounded-2xl p-5 bg-gray-50">

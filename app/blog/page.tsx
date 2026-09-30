@@ -5,12 +5,12 @@ import { blogPosts } from "@/lib/blogData";
 export const metadata: Metadata = {
   title: "Cleaning Tips & Local Guides",
   description:
-    "Cleaning tips, checklists, and local guides from DSM Cleaning Solutions — serving Plainfield, Romeoville, Naperville & the southwest Chicago suburbs.",
+    "Cleaning tips, checklists, and local guides from DSM Cleaning Solutions, serving Plainfield, Romeoville, Naperville & the southwest Chicago suburbs.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/blog" },
   openGraph: {
     title: "Cleaning Tips & Local Guides | DSM Cleaning Solutions",
     description:
-      "Cleaning tips, checklists, and local guides from DSM Cleaning Solutions — serving Plainfield, Romeoville, Naperville & the southwest Chicago suburbs.",
+      "Cleaning tips, checklists, and local guides from DSM Cleaning Solutions, serving Plainfield, Romeoville, Naperville & the southwest Chicago suburbs.",
     url: "https://www.dsmcleaningsolutions.com/blog",
     siteName: "DSM Cleaning Solutions",
     images: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
         url: "/hero-image.png",
         width: 1200,
         height: 630,
-        alt: "DSM Cleaning Solutions Blog — Cleaning Tips & Local Guides",
+        alt: "DSM Cleaning Solutions Blog: Cleaning Tips & Local Guides",
       },
     ],
   },
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Cleaning Tips & Local Guides | DSM Cleaning Solutions",
     description:
-      "Cleaning tips, checklists, and local guides from DSM Cleaning Solutions — serving Plainfield, Romeoville, Naperville & the southwest Chicago suburbs.",
+      "Cleaning tips, checklists, and local guides from DSM Cleaning Solutions, serving Plainfield, Romeoville, Naperville & the southwest Chicago suburbs.",
     images: ["/hero-image.png"],
   },
 };

@@ -66,12 +66,12 @@ export default function PixelTestClient() {
       if (fbp)               matchParams.push("fbp ✓");
       if (fbc)               matchParams.push("fbc ✓");
       if (externalId)        matchParams.push("external_id ✓");
-      if (hashedEmailStored) matchParams.push("em (hashed) ✓ — stored in localStorage");
-      if (rawEmailSession)   matchParams.push("em (raw) ✓ — in sessionStorage for CAPI");
+      if (hashedEmailStored) matchParams.push("em (hashed) ✓: stored in localStorage");
+      if (rawEmailSession)   matchParams.push("em (raw) ✓: in sessionStorage for CAPI");
       if (!fbp)              matchParams.push("fbp ✗ MISSING");
       if (!fbc)              matchParams.push("fbc ✗ (OK if no ad click)");
       if (!externalId)       matchParams.push("external_id ✗ MISSING");
-      if (!hashedEmailStored) matchParams.push("em ✗ — submit a form to capture email");
+      if (!hashedEmailStored) matchParams.push("em ✗: submit a form to capture email");
 
       setState(prev => ({
         ...prev,
@@ -147,14 +147,14 @@ export default function PixelTestClient() {
         <div className="bg-gray-900 rounded-2xl p-6 mb-4 border border-gray-800">
           <h2 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Pixel Status</h2>
           <div className="space-y-1">
-            {row("fbq loaded", state.pixelLoaded ? "YES" : "NO — pixel script not yet ready", state.pixelLoaded ? true : false)}
+            {row("fbq loaded", state.pixelLoaded ? "YES" : "NO: pixel script not yet ready", state.pixelLoaded ? true : false)}
             {row(
               "PageViews fired",
               state.pageViewsFired === 0
-                ? "0 — waiting… (reload if stuck)"
+                ? "0: waiting… (reload if stuck)"
                 : state.pageViewsFired === 1
-                ? "1 ✓ CORRECT — exactly one PageView per load"
-                : `${state.pageViewsFired} ✗ DUPLICATE — should be 1`,
+                ? "1 ✓ CORRECT: exactly one PageView per load"
+                : `${state.pageViewsFired} ✗ DUPLICATE: should be 1`,
               state.pageViewsFired === 1 ? true : state.pageViewsFired > 1 ? false : null,
             )}
           </div>
@@ -165,7 +165,7 @@ export default function PixelTestClient() {
           )}
           {pvGood && (
             <div className="mt-4 bg-green-950 border border-green-700 rounded-lg px-4 py-3 text-green-300 text-sm">
-              ✅ PageView firing correctly — exactly once per page load with eventID for CAPI deduplication.
+              ✅ PageView firing correctly: exactly once per page load with eventID for CAPI deduplication.
             </div>
           )}
         </div>
@@ -181,31 +181,31 @@ export default function PixelTestClient() {
             "em (hashed)",
             state.hashedEmailStored
               ? "✓ stored in localStorage (survives sessions)"
-              : "✗ not yet captured — submit a form first",
+              : "✗ not yet captured: submit a form first",
             state.hashedEmailStored ? true : false
           )}
           {row(
             "em (raw/CAPI)",
             state.rawEmailSession
-              ? "✓ in sessionStorage — CAPI PageViews enriched"
-              : "✗ not in session — only present after form submit",
+              ? "✓ in sessionStorage: CAPI PageViews enriched"
+              : "✗ not in session: only present after form submit",
             state.rawEmailSession ? true : null
           )}
           {!state.fbp && (
             <div className="mt-4 bg-yellow-950 border border-yellow-700 rounded-lg px-4 py-3 text-yellow-200 text-sm">
-              ⚠️ <strong>_fbp missing</strong> — this cookie is set by the Facebook pixel JS after it loads. If it&apos;s absent, the pixel may not have initialised yet. Reload the page. If still missing, check browser ad blockers.
+              ⚠️ <strong>_fbp missing</strong>: this cookie is set by the Facebook pixel JS after it loads. If it&apos;s absent, the pixel may not have initialised yet. Reload the page. If still missing, check browser ad blockers.
             </div>
           )}
           {!state.fbc && !state.fbclid && (
             <div className="mt-4 bg-gray-800 rounded-lg px-4 py-3 text-gray-400 text-sm">
-              ℹ️ <strong>_fbc not set</strong> — this is expected on organic visits. It only populates when a user arrives via a Facebook ad with <code>?fbclid=</code> in the URL.
+              ℹ️ <strong>_fbc not set</strong>: this is expected on organic visits. It only populates when a user arrives via a Facebook ad with <code>?fbclid=</code> in the URL.
               <br /><br />
               To test fbc capture: add <code>?fbclid=test123</code> to this URL and reload.
             </div>
           )}
           {state.fbclid && !state.fbc && (
             <div className="mt-4 bg-red-950 border border-red-700 rounded-lg px-4 py-3 text-red-300 text-sm">
-              ✗ <strong>fbclid present but _fbc not set</strong> — the inline cookie-capture code may not be running. Check the FacebookPixel component.
+              ✗ <strong>fbclid present but _fbc not set</strong>: the inline cookie-capture code may not be running. Check the FacebookPixel component.
             </div>
           )}
           {state.fbclid && state.fbc && (
@@ -226,16 +226,16 @@ export default function PixelTestClient() {
               </div>
             ))}
             <div className="text-sm px-3 py-2 rounded-lg bg-gray-800 text-gray-400">
-              em (hashed email) — only sent on Lead/Purchase events after form fill
+              em (hashed email): only sent on Lead/Purchase events after form fill
             </div>
             <div className="text-sm px-3 py-2 rounded-lg bg-gray-800 text-gray-400">
-              ph (hashed phone) — only sent when captured from form input
+              ph (hashed phone): only sent when captured from form input
             </div>
             <div className="text-sm px-3 py-2 rounded-lg bg-gray-800 text-gray-400">
-              client_ip_address — sent by server (from request headers) ✓
+              client_ip_address: sent by server (from request headers) ✓
             </div>
             <div className="text-sm px-3 py-2 rounded-lg bg-gray-800 text-gray-400">
-              client_user_agent — sent by server (from request headers) ✓
+              client_user_agent: sent by server (from request headers) ✓
             </div>
           </div>
         </div>
@@ -271,7 +271,7 @@ export default function PixelTestClient() {
               <div>• external_id: <span className="text-green-400">present on all events</span> (was absent)</div>
             </div>
             <div className="mt-4 text-xs text-gray-500 border-t border-gray-800 pt-4">
-              To test fbc capture: visit this page at <code className="text-gray-300">/pixel-test?fbclid=TestClick123</code> — the _fbc cookie should appear above.
+              To test fbc capture: visit this page at <code className="text-gray-300">/pixel-test?fbclid=TestClick123</code>. The _fbc cookie should appear above.
             </div>
           </div>
         </div>

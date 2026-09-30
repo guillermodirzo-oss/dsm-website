@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       "Terms and Conditions for DSM Cleaning Solutions. Our service policies covering booking, payments, cancellations, and satisfaction guarantee.",
     url: "https://www.dsmcleaningsolutions.com/terms-and-conditions",
     siteName: "DSM Cleaning Solutions",
-    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions — Terms and Conditions" }],
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions: Terms and Conditions" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -95,7 +95,7 @@ export default function TermsAndConditionsPage() {
             <div className="mb-10">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Cleaning Day Preparation</h2>
               <p className="text-gray-600 leading-relaxed">
-                Your price for cleaning is based on our cleaners focusing all of their time on cleaning. We ask that you take a few minutes to tidy up to allow the cleaners easy access to the areas and surfaces to be cleaned — floors, counter tops, tabletops, etc. If you would like our cleaners to do these tasks for you, please call the office in advance so your cleaning fee can be adjusted for the additional time.
+                Your price for cleaning is based on our cleaners focusing all of their time on cleaning. We ask that you take a few minutes to tidy up to allow the cleaners easy access to the areas and surfaces to be cleaned: floors, counter tops, tabletops, etc. If you would like our cleaners to do these tasks for you, please call the office in advance so your cleaning fee can be adjusted for the additional time.
               </p>
             </div>
 
@@ -190,7 +190,7 @@ export default function TermsAndConditionsPage() {
             <div className="mb-10">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Rate Increases</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Client cleaning rate adjustments may be made at any time during the year should there be changes to the frequency of the client&apos;s established service schedule, or changes to the home or living situation — including remodels, change of address, number of people living in the home, or a significant change in the condition of the home.
+                Client cleaning rate adjustments may be made at any time during the year should there be changes to the frequency of the client&apos;s established service schedule, or changes to the home or living situation, including remodels, change of address, number of people living in the home, or a significant change in the condition of the home.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 Customer rates shall be increased annually by an amount not to exceed <strong>10%</strong> of the client&apos;s current rate.
@@ -246,7 +246,7 @@ export default function TermsAndConditionsPage() {
             <div className="mb-10">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Items We Cannot Clean</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Mold removal is a specialty service — we cannot be liable for any mold-related risks in clients&apos; homes.
+                Mold removal is a specialty service. We cannot be liable for any mold-related risks in clients&apos; homes.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 We cannot clean areas containing any animal or human bodily fluids, blood, feces, vomit, cat litter boxes, bird cages, urine, or other excretions.
@@ -366,7 +366,7 @@ export default function TermsAndConditionsPage() {
                 Any claim relating to DSM Cleaning Solutions and its website shall be governed by the laws of the <strong>State of Illinois</strong> without regard to its conflict of law provisions.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
-                We have taken every effort to design our website to be useful, informative, helpful, and honest. If you would like to see improvements or changes, please contact us — we welcome your feedback.
+                We have taken every effort to design our website to be useful, informative, helpful, and honest. If you would like to see improvements or changes, please contact us. We welcome your feedback.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 DSM Cleaning Solutions reserves the right to change these Terms &amp; Conditions at any time without prior notice.
@@ -382,7 +382,7 @@ export default function TermsAndConditionsPage() {
       {/* BOTTOM CTA */}
       <section className="py-12 bg-gray-50 border-t border-gray-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-gray-600 mb-4">Questions about our policies? Give us a call — we&apos;re happy to help.</p>
+          <p className="text-gray-600 mb-4">Questions about our policies? Give us a call. We&apos;re happy to help.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a href="tel:+18152462113" className="btn-primary">(815) 246-2113</a>
             <Link href="/privacy-policy" className="inline-flex items-center justify-center border border-gray-300 text-gray-700 font-semibold px-6 py-3 rounded-2xl hover:border-orange-500 hover:text-orange-500 transition-colors">

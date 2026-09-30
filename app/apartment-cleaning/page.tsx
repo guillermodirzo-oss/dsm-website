@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     description: "Professional apartment cleaning in Plainfield, IL for renters, landlords & property managers. Eco-friendly, insured & reliable. Call for a free estimate.",
     url: "https://www.dsmcleaningsolutions.com/apartment-cleaning",
     siteName: "DSM Cleaning Solutions",
-    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions — Apartment Cleaning in Plainfield IL" }],
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions: Apartment Cleaning in Plainfield IL" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 };
 
 const faqs = [
-  { question: "Do you clean all apartment sizes in Romeoville?", answer: "Yes — from studios and 1-bedroom apartments to large 3+ bedroom units. We price based on size, so you only pay for what you need." },
+  { question: "Do you clean all apartment sizes in Romeoville?", answer: "Yes, from studios and 1-bedroom apartments to large 3+ bedroom units. We price based on size, so you only pay for what you need." },
   { question: "Can you do apartment cleaning for my rental property?", answer: "Absolutely. We work with many landlords and property managers in the Romeoville area to turn over units quickly and thoroughly between tenants." },
   { question: "Do I need to be home for the apartment cleaning?", answer: "No. Many tenants and landlords provide a key or access code. Our fully insured and background-checked team will take great care of the property." },
   { question: "How much does apartment cleaning cost in Romeoville, IL?", answer: "Pricing starts around $90–$140 for a 1-bedroom apartment, varying by size and service type. Contact us for a free personalized estimate." },
@@ -264,7 +264,7 @@ export default function ApartmentCleaningPage() {
             </Link>
             <Link href="/deep-cleaning" className="bg-white rounded-2xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Need a One-Time Deep Reset?</h3>
-              <p className="text-sm text-gray-500">A thorough top-to-bottom clean, no ongoing commitment required.</p>
+              <p className="text-sm text-gray-500">One visit for the kitchen, bathroom and every floor, with no ongoing commitment.</p>
             </Link>
           </div>
         </div>

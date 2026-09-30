@@ -8,12 +8,12 @@ import { pickReviews, reviewAttribution } from "@/lib/realReviews";
 export const metadata: Metadata = {
   title: "Meet the DSM Cleaning Team | Romeoville IL",
   description:
-    "Meet Memo and the DSM Cleaning Solutions team — a family-owned cleaning company proudly serving Plainfield, Romeoville, Naperville & Bolingbrook IL.",
+    "Meet Memo and the DSM Cleaning Solutions team, a family-owned cleaning company proudly serving Plainfield, Romeoville, Naperville & Bolingbrook IL.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/about" },
   openGraph: {
     title: "Meet the DSM Cleaning Team | Romeoville IL",
     description:
-      "Meet Memo and the DSM Cleaning Solutions team — a family-owned cleaning company proudly serving Plainfield, Romeoville, Naperville & Bolingbrook IL.",
+      "Meet Memo and the DSM Cleaning Solutions team, a family-owned cleaning company proudly serving Plainfield, Romeoville, Naperville & Bolingbrook IL.",
     url: "https://www.dsmcleaningsolutions.com/about",
     siteName: "DSM Cleaning Solutions",
     images: [
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         url: "/hero-image.png",
         width: 1200,
         height: 630,
-        alt: "DSM Cleaning Solutions Team — Family-Owned House Cleaning in Plainfield IL",
+        alt: "DSM Cleaning Solutions Team, Family-Owned House Cleaning in Plainfield IL",
       },
     ],
   },
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Meet the DSM Cleaning Team | Romeoville IL",
     description:
-      "Meet Memo and the DSM Cleaning Solutions team — a family-owned cleaning company proudly serving Plainfield, Romeoville, Naperville & Bolingbrook IL.",
+      "Meet Memo and the DSM Cleaning Solutions team, a family-owned cleaning company proudly serving Plainfield, Romeoville, Naperville & Bolingbrook IL.",
     images: ["/hero-image.png"],
   },
 };
@@ -47,17 +47,17 @@ const values = [
   {
     icon: "🌿",
     title: "Eco-Friendly Always",
-    desc: "We use non-toxic, biodegradable cleaning products on every job. Safe for your children, safe for your pets, safe for the environment — no exceptions.",
+    desc: "We use non-toxic, biodegradable cleaning products on every job. Safe for your children, safe for your pets, safe for the environment. No exceptions.",
   },
   {
     icon: "🛡️",
     title: "Fully Insured & Bonded",
-    desc: "Every job is covered. Your home, your belongings, and your peace of mind are protected on every single visit — because that&apos;s what professionals do.",
+    desc: "Every job is covered. Your home, your belongings, and your peace of mind are protected on every single visit, because that&apos;s what professionals do.",
   },
   {
     icon: "👨‍👩‍👧",
     title: "Family-Owned",
-    desc: "We&apos;re not a franchise. Every decision, every hire, every standard is set by us — the owners — because we&apos;re personally invested in your satisfaction.",
+    desc: "We&apos;re not a franchise. Every decision, every hire, every standard is set by us, the owners, because we&apos;re personally invested in your satisfaction.",
   },
   {
     icon: "✅",
@@ -67,7 +67,7 @@ const values = [
   {
     icon: "📋",
     title: "Consistent Standards",
-    desc: "We follow a detailed checklist on every visit — so every clean meets the same high standard, whether it&apos;s your first booking or your fiftieth.",
+    desc: "We follow a detailed checklist on every visit, so every clean meets the same high standard, whether it&apos;s your first booking or your fiftieth.",
   },
   {
     icon: "💬",
@@ -146,7 +146,7 @@ export default function AboutPage() {
             Family-Owned House Cleaning<br className="hidden sm:block" /> You Can Actually Trust
           </h1>
           <p className="text-xl text-white/75 mb-10 max-w-2xl leading-relaxed font-light">
-            DSM Cleaning Solutions was born right here in Romeoville, IL — and we&apos;ve been making the southwest suburbs shine ever since.
+            DSM Cleaning Solutions was born right here in Romeoville, IL, and we&apos;ve been making the southwest suburbs shine ever since.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
@@ -176,13 +176,13 @@ export default function AboutPage() {
                 We Started DSM Because Homeowners Deserve Better
               </h2>
               <p className="text-gray-500 leading-relaxed mb-5">
-                DSM Cleaning Solutions started with a simple belief: homeowners in Romeoville and the southwest suburbs deserved a cleaning company they could genuinely trust. Not a national franchise with a call center, not revolving-door staff — a real local company with real accountability.
+                DSM Cleaning Solutions started with a simple belief: homeowners in Romeoville and the southwest suburbs deserved a cleaning company they could genuinely trust. Not a national franchise with a call center, not revolving-door staff. A real local company with real accountability.
               </p>
               <p className="text-gray-500 leading-relaxed mb-5">
-                We&apos;re a family-owned business, and that means every client matters personally. When you book with us, you&apos;re not a ticket number — you&apos;re a neighbor. We know the communities we serve, and we take pride in representing them well.
+                We&apos;re a family-owned business, and that means every client matters personally. When you book with us, you&apos;re not a ticket number. You&apos;re a neighbor. We live and work in these towns, and we want our name to mean something here.
               </p>
               <p className="text-gray-500 leading-relaxed mb-8">
-                Over the years, we&apos;ve grown from a small local operation to a trusted name across Romeoville, Plainfield, Naperville, Bolingbrook, and over a dozen southwest suburban communities. That growth has come entirely from word of mouth — from homeowners who trusted us enough to tell their friends and family.
+                Over the years, we&apos;ve grown from a small local operation to a trusted name across Romeoville, Plainfield, Naperville, Bolingbrook, and over a dozen southwest suburban communities. That growth has come entirely from word of mouth, from homeowners who trusted us enough to tell their friends and family.
               </p>
               <Link href="/book" className="btn-primary">
                 Book a Cleaning
@@ -280,14 +280,14 @@ export default function AboutPage() {
           <div className="text-center mb-12">
             <h2 className="section-heading text-4xl md:text-5xl mb-3">The People Behind the Clean</h2>
             <p className="section-subheading mx-auto text-lg">
-              We&apos;re your southwest suburban neighbors — and we treat your home the way we&apos;d want ours treated.
+              We&apos;re your southwest suburban neighbors, and we treat your home the way we&apos;d want ours treated.
             </p>
           </div>
 
           <div className="bg-orange-50 border border-orange-100 rounded-3xl p-8 md:p-12">
             <h3 className="font-bold text-2xl text-gray-900 mb-4 tracking-tight">Local. Accountable. Personally Invested.</h3>
             <p className="text-gray-600 leading-relaxed mb-8 max-w-2xl">
-              Every member of our cleaning team is background-checked, trained to our standards, and personally vetted by ownership. We don&apos;t hire just anyone — because you&apos;re trusting us with your home.
+              Every member of our cleaning team is background-checked, trained to our standards, and personally vetted by ownership. We don&apos;t hire just anyone, because you&apos;re trusting us with your home. See <Link href="/our-cleaning-process" className="text-brand-green font-semibold hover:underline">how a DSM cleaning works from start to finish</Link>, and <Link href="/why-choose-dsm" className="text-brand-green font-semibold hover:underline">why local families choose DSM</Link>.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

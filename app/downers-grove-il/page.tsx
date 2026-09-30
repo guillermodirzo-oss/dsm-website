@@ -8,7 +8,7 @@ const city = cities.find((c) => c.slug === "downers-grove-il")!;
 export const metadata: Metadata = {
   title: "House Cleaning Downers Grove IL",
   description:
-    "Professional house cleaning in Downers Grove, IL — deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Free estimates.",
+    "Professional house cleaning in Downers Grove, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Free estimates.",
   keywords: [
     "house cleaning Downers Grove IL",
     "cleaning service Downers Grove",
@@ -21,15 +21,15 @@ export const metadata: Metadata = {
   openGraph: {
     title: "House Cleaning Downers Grove IL | DSM Cleaning Solutions",
     description:
-      "Professional house cleaning in Downers Grove, IL — deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Free estimates.",
+      "Professional house cleaning in Downers Grove, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Free estimates.",
     url: "https://www.dsmcleaningsolutions.com/downers-grove-il",
     siteName: "DSM Cleaning Solutions",
-    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions — House Cleaning in Downers Grove IL" }],
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions: House Cleaning in Downers Grove IL" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "House Cleaning Downers Grove IL | DSM Cleaning Solutions",
-    description: "Professional house cleaning in Downers Grove, IL — deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured.",
+    description: "Professional house cleaning in Downers Grove, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured.",
     images: ["/hero-image.png"],
   },
 };
@@ -85,7 +85,7 @@ export default function DownersGrovePage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <Link href="/deep-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Downers Grove</h3>
-              <p className="text-sm text-gray-600">Top-to-bottom deep cleaning for Downers Grove homes — every corner, appliance, and surface.</p>
+              <p className="text-sm text-gray-600">Deep cleaning for Downers Grove homes, including inside the oven and microwave.</p>
             </Link>
             <Link href="/recurring-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Recurring Maid Service Downers Grove</h3>

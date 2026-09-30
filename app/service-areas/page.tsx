@@ -389,7 +389,7 @@ export default function ServiceAreasPage() {
             <a href="tel:+18152462113" className="text-brand-green font-semibold hover:underline">
               (815) 246-2113
             </a>{" "}
-            to find out if we serve your area — we are always expanding our service territory.
+            to find out if we serve your area. We are always expanding our service territory.
           </p>
           <a
             href="tel:+18152462113"
@@ -408,7 +408,7 @@ export default function ServiceAreasPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-4">Ready to Book in Your City?</h2>
           <p className="text-white/90 text-lg mb-8 leading-relaxed">
-            Family-owned, eco-friendly, fully insured — and based right here in the southwest Chicago suburbs.
+            Family-owned, eco-friendly, fully insured, and based right here in the southwest Chicago suburbs.
             We&apos;ll get back to you fast with your free estimate. Same-week appointments are usually available.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

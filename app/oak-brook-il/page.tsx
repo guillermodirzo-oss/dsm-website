@@ -8,7 +8,7 @@ const city = cities.find((c) => c.slug === "oak-brook-il")!;
 export const metadata: Metadata = {
   title: "House Cleaning Oak Brook IL",
   description:
-    "Expert house cleaning in Oak Brook, IL — deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Free estimates.",
+    "Expert house cleaning in Oak Brook, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Free estimates.",
   keywords: [
     "house cleaning Oak Brook IL",
     "cleaning service Oak Brook",
@@ -21,15 +21,15 @@ export const metadata: Metadata = {
   openGraph: {
     title: "House Cleaning Oak Brook IL | DSM Cleaning Solutions",
     description:
-      "Expert house cleaning in Oak Brook, IL — deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Free estimates.",
+      "Expert house cleaning in Oak Brook, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Free estimates.",
     url: "https://www.dsmcleaningsolutions.com/oak-brook-il",
     siteName: "DSM Cleaning Solutions",
-    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions — House Cleaning in Oak Brook IL" }],
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions: House Cleaning in Oak Brook IL" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "House Cleaning Oak Brook IL | DSM Cleaning Solutions",
-    description: "Expert house cleaning in Oak Brook, IL — deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured.",
+    description: "Expert house cleaning in Oak Brook, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured.",
     images: ["/hero-image.png"],
   },
 };
@@ -85,7 +85,7 @@ export default function OakBrookPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <Link href="/deep-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Oak Brook</h3>
-              <p className="text-sm text-gray-600">Thorough top-to-bottom deep cleaning for Oak Brook homes — every surface and detail.</p>
+              <p className="text-sm text-gray-600">Detailed deep cleaning for Oak Brook homes, including light fixtures and door frames.</p>
             </Link>
             <Link href="/recurring-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Recurring Maid Service Oak Brook</h3>

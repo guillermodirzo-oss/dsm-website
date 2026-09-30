@@ -54,7 +54,7 @@ const jsonLd = {
         name: "Do you offer office cleaning in Plainfield, IL?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes — DSM Cleaning Solutions serves businesses throughout Plainfield, IL including offices near Route 59, 127th Street, and the Plainfield business districts. We're conveniently located nearby in Romeoville.",
+          text: "Yes, DSM Cleaning Solutions serves businesses throughout Plainfield, IL including offices near Route 59, 127th Street, and the Plainfield business districts. We're conveniently located nearby in Romeoville.",
         },
       },
       {
@@ -70,7 +70,7 @@ const jsonLd = {
         name: "Do you clean medical offices in Plainfield?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes — we provide medical and professional office cleaning in Plainfield with appropriate sanitization protocols for waiting rooms, exam areas, and administrative spaces.",
+          text: "Yes, we provide medical and professional office cleaning in Plainfield with appropriate sanitization protocols for waiting rooms, exam areas, and administrative spaces.",
         },
       },
       {
@@ -86,7 +86,7 @@ const jsonLd = {
 };
 
 const included = [
-  "Full floor care — vacuuming and mopping",
+  "Full floor care: vacuuming and mopping",
   "Desk and surface dusting",
   "High-touch sanitization (handles, switches, phones)",
   "Restroom deep cleaning and restocking",
@@ -164,7 +164,7 @@ export default function OfficeCleaningPlainfieldPage() {
             {[
               { title: "Nearby & Dependable", desc: "Based in neighboring Romeoville, we're always close by for fast service and quick response to Plainfield clients." },
               { title: "Vetted, Trusted Team", desc: "Every cleaner is background-checked, insured, and bonded. Your Plainfield office is in safe, professional hands." },
-              { title: "Custom Cleaning Plans", desc: "We scope every job to your specific office layout — no cookie-cutter checklists, just what your space actually needs." },
+              { title: "Custom Cleaning Plans", desc: "We scope every job to your specific office layout. No cookie-cutter checklists, just what your space actually needs." },
             ].map((c) => (
               <div key={c.title} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
                 <h3 className="font-bold text-gray-900 text-lg mb-2">{c.title}</h3>
@@ -178,7 +178,7 @@ export default function OfficeCleaningPlainfieldPage() {
       {/* FAQ */}
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">FAQs — Plainfield Office Cleaning</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">FAQs: Plainfield Office Cleaning</h2>
           <div className="space-y-4">
             {jsonLd.faq.mainEntity.map((q) => (
               <div key={q.name} className="border border-gray-100 rounded-2xl p-5 bg-gray-50">

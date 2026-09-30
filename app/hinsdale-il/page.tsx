@@ -8,7 +8,7 @@ const city = cities.find((c) => c.slug === "hinsdale-il")!;
 export const metadata: Metadata = {
   title: "House Cleaning Hinsdale IL",
   description:
-    "Premium house cleaning in Hinsdale, IL — deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Free estimates.",
+    "Premium house cleaning in Hinsdale, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Free estimates.",
   keywords: [
     "house cleaning Hinsdale IL",
     "cleaning service Hinsdale",
@@ -21,15 +21,15 @@ export const metadata: Metadata = {
   openGraph: {
     title: "House Cleaning Hinsdale IL | DSM Cleaning Solutions",
     description:
-      "Premium house cleaning in Hinsdale, IL — deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Free estimates.",
+      "Premium house cleaning in Hinsdale, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Free estimates.",
     url: "https://www.dsmcleaningsolutions.com/hinsdale-il",
     siteName: "DSM Cleaning Solutions",
-    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions — House Cleaning in Hinsdale IL" }],
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions: House Cleaning in Hinsdale IL" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "House Cleaning Hinsdale IL | DSM Cleaning Solutions",
-    description: "Premium house cleaning in Hinsdale, IL — deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured.",
+    description: "Premium house cleaning in Hinsdale, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured.",
     images: ["/hero-image.png"],
   },
 };
@@ -85,11 +85,11 @@ export default function HinsdalePage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <Link href="/deep-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Hinsdale</h3>
-              <p className="text-sm text-gray-600">Thorough top-to-bottom deep cleaning for Hinsdale homes — every detail addressed.</p>
+              <p className="text-sm text-gray-600">Careful deep cleaning for Hinsdale homes, from grout lines to window sills.</p>
             </Link>
             <Link href="/recurring-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Recurring Maid Service Hinsdale</h3>
-              <p className="text-sm text-gray-600">Weekly, biweekly, or monthly cleaning for Hinsdale homeowners — consistent, professional.</p>
+              <p className="text-sm text-gray-600">Weekly, biweekly, or monthly cleaning for Hinsdale homeowners. Consistent, professional.</p>
             </Link>
             <Link href="/move-out-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Move-In / Move-Out Cleaning Hinsdale</h3>

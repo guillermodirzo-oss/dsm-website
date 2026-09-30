@@ -28,7 +28,7 @@ const faqs = [
   {
     question: "Do you serve the Old Quarry and Forge Park areas in Lemont?",
     answer:
-      "Yes — we serve all Lemont neighborhoods including Old Quarry, Forge Park, the McCarthy Road area, and all areas within zip code 60439.",
+      "Yes, we serve all Lemont neighborhoods including Old Quarry, Forge Park, the McCarthy Road area, and all areas within zip code 60439.",
   },
   {
     question: "What if my quote comes in higher than the range listed?",
@@ -38,12 +38,12 @@ const faqs = [
   {
     question: "Do I need to be home during the deep cleaning in Lemont?",
     answer:
-      "You don't have to be home. Many Lemont clients provide a key or access code. Every member of our team is background-checked, insured, and bonded — your home is fully protected.",
+      "You don't have to be home. Many Lemont clients provide a key or access code. Every member of our team is background-checked, insured, and bonded, so your home is fully protected.",
   },
   {
     question: "Is DSM Cleaning Solutions insured in Lemont, IL?",
     answer:
-      "Yes — DSM Cleaning Solutions is fully insured and bonded in Illinois, including all of Lemont. We carry liability insurance on every job so you can book with complete peace of mind.",
+      "Yes, DSM Cleaning Solutions is fully insured and bonded in Illinois, including all of Lemont. We carry liability insurance on every job so you can book with complete peace of mind.",
   },
 ];
 
@@ -72,7 +72,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Professional deep cleaning in Lemont, IL — 60439. DSM Cleaning Solutions scrubs every surface, grout line & appliance. Free estimate. (815) 246-2113.",
+    "Professional deep cleaning in Lemont, IL (60439). DSM Cleaning Solutions scrubs every surface, grout line & appliance. Free estimate. (815) 246-2113.",
 };
 
 const faqSchema = {

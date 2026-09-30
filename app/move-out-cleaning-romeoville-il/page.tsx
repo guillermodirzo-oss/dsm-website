@@ -255,7 +255,7 @@ export default function MoveOutCleaningRomeovillePage() {
             <div className="hidden lg:block">
               <Image
                 src="/work-photos/laundry-room-move-out-clean-romeoville-il.jpg"
-                alt="Move-out cleaning in Romeoville IL — DSM Cleaning Solutions"
+                alt="Move-out cleaning in Romeoville IL by DSM Cleaning Solutions"
                 width={1920}
                 height={2560}
                 priority

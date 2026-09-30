@@ -54,7 +54,7 @@ const jsonLd = {
         name: "Do you offer commercial office cleaning in Naperville, IL?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes — DSM Cleaning Solutions provides professional office and commercial cleaning services throughout Naperville, IL (60540, 60563, 60564, 60565). We serve offices near Downtown Naperville, Route 59, and all major business corridors.",
+          text: "Yes, DSM Cleaning Solutions provides professional office and commercial cleaning services throughout Naperville, IL (60540, 60563, 60564, 60565). We serve offices near Downtown Naperville, Route 59, and all major business corridors.",
         },
       },
       {
@@ -70,7 +70,7 @@ const jsonLd = {
         name: "Can you clean our Naperville office before 8am?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes — we offer before-hours cleaning (before 8am), after-hours cleaning (after 6pm), and weekend-only slots for Naperville businesses. Your operations will never be disrupted.",
+          text: "Yes, we offer before-hours cleaning (before 8am), after-hours cleaning (after 6pm), and weekend-only slots for Naperville businesses. Your operations will never be disrupted.",
         },
       },
       {
@@ -108,12 +108,12 @@ export default function OfficeCleaningNapervillePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="text-white">
-              <p className="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">Naperville, IL — 60540 · 60563 · 60564 · 60565</p>
+              <p className="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">Naperville, IL: 60540 · 60563 · 60564 · 60565</p>
               <h1 className="text-4xl md:text-5xl font-bold mb-5 leading-tight">
                 Office Cleaning Services in Naperville, IL
               </h1>
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                Naperville is one of the fastest-growing business communities in the Chicago suburbs, and DSM Cleaning Solutions is here to keep it spotless. We provide premium commercial office cleaning for businesses across all four Naperville zip codes — with flexible scheduling and a team that takes pride in every detail.
+                Naperville is one of the fastest-growing business communities in the Chicago suburbs, and DSM Cleaning Solutions is here to keep it spotless. We provide premium commercial office cleaning for businesses across all four Naperville zip codes, with flexible scheduling and a team that takes pride in every detail.
               </p>
               <a
                 href="tel:+18152462113"
@@ -163,7 +163,7 @@ export default function OfficeCleaningNapervillePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               { title: "Premium Results", desc: "Naperville businesses demand high standards. Our team is trained to deliver a level of clean that reflects well on your brand." },
-              { title: "Flexible Scheduling", desc: "We work before you open, after you close, or on weekends — zero interference with your clients or daily operations." },
+              { title: "Flexible Scheduling", desc: "We work before you open, after you close, or on weekends, zero interference with your clients or daily operations." },
               { title: "Insured & Background-Checked", desc: "Every team member is fully vetted. Your Naperville office assets and confidential spaces are always protected." },
             ].map((c) => (
               <div key={c.title} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
@@ -178,7 +178,7 @@ export default function OfficeCleaningNapervillePage() {
       {/* FAQ */}
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">FAQs — Naperville Office Cleaning</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">FAQs: Naperville Office Cleaning</h2>
           <div className="space-y-4">
             {jsonLd.faq.mainEntity.map((q) => (
               <div key={q.name} className="border border-gray-100 rounded-2xl p-5 bg-gray-50">

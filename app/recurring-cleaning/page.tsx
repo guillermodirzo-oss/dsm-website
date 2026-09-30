@@ -550,6 +550,11 @@ export default function RecurringCleaningPage() {
               </details>
             ))}
           </div>
+          <p className="mt-6 text-sm text-gray-600 text-center">
+            Helpful guides:{" "}
+            <Link href="/standard-vs-deep-cleaning" className="text-brand-green font-semibold hover:underline">standard vs. deep cleaning</Link>, and{" "}
+            <Link href="/blog/first-time-hiring-cleaning-service-bolingbrook" className="text-brand-green font-semibold hover:underline">what to expect the first time you hire a cleaner</Link>.
+          </p>
         </div>
       </section>
 

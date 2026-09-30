@@ -61,7 +61,7 @@ const jsonLd = {
         name: "Do you offer recurring commercial cleaning contracts?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes — we offer weekly, bi-weekly, and monthly recurring commercial cleaning plans. We can also accommodate custom frequencies based on your business needs. Contact us for a custom quote.",
+          text: "Yes, we offer weekly, bi-weekly, and monthly recurring commercial cleaning plans. We can also accommodate custom frequencies based on your business needs. Contact us for a custom quote.",
         },
       },
       {
@@ -77,7 +77,7 @@ const jsonLd = {
         name: "Are your commercial cleaners background-checked?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes — every DSM Cleaning Solutions team member is background-checked, insured, and bonded. We take the security of your business seriously on every visit.",
+          text: "Yes, every DSM Cleaning Solutions team member is background-checked, insured, and bonded. We take the security of your business seriously on every visit.",
         },
       },
     ],
@@ -85,7 +85,7 @@ const jsonLd = {
 };
 
 const services = [
-  { title: "Office Cleaning", desc: "Regular janitorial service for offices of all sizes — desks, restrooms, kitchens, and common areas.", href: "/office-cleaning" },
+  { title: "Office Cleaning", desc: "Regular janitorial service for offices of all sizes: desks, restrooms, kitchens, and common areas.", href: "/office-cleaning" },
   { title: "Medical Office Cleaning", desc: "Sanitization protocols for medical and dental practices, waiting rooms, and exam areas.", href: "/office-cleaning" },
   { title: "One-Time Commercial Clean", desc: "Deep cleaning for move-ins, special events, or spaces that need a fresh start.", href: "/one-time-cleaning" },
 ];
@@ -151,9 +151,9 @@ export default function CommercialCleaningPage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">Why Choose DSM for Commercial Cleaning</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { title: "Local & Reliable", desc: "Based in Romeoville, IL — we serve businesses throughout Will County and DuPage County with consistent, on-time service." },
+              { title: "Local & Reliable", desc: "Based in Romeoville, IL. We serve businesses throughout Will County and DuPage County with consistent, on-time service." },
               { title: "Industry-Specific Protocols", desc: "Whether it's a medical practice or a law office, we adapt our cleaning process to your industry's standards." },
-              { title: "No Long-Term Lock-In", desc: "Month-to-month commercial agreements. We earn your business every visit — no pressure, no hidden fees." },
+              { title: "No Long-Term Lock-In", desc: "Month-to-month commercial agreements. We earn your business every visit. No pressure, no hidden fees." },
             ].map((c) => (
               <div key={c.title} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
                 <h3 className="font-bold text-gray-900 text-lg mb-2">{c.title}</h3>

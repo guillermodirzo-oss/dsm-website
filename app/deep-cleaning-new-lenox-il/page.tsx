@@ -171,7 +171,7 @@ export default function DeepCleaningNewLenoxPage() {
               </h1>
               <div className="flex items-center gap-2 mb-3">
                 <span style={{ color: "#FFA869" }} className="text-xl">★★★★★</span>
-                <span className="text-sm opacity-90">5.0 — {REVIEW_COUNT} reviews on Google</span>
+                <span className="text-sm opacity-90">5.0 from {REVIEW_COUNT} reviews on Google</span>
               </div>
               <p className="text-lg font-semibold mb-2">
                 A thorough deep clean for New Lenox homes. Every room done right.
@@ -224,7 +224,7 @@ export default function DeepCleaningNewLenoxPage() {
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto prose prose-gray">
           <p className="text-gray-700 leading-relaxed mb-4">
-            New Lenox is a family-friendly community in Will County and we have been glad to serve homeowners here for years. Whether you are in Spencer Pointe, near Hickory Creek, the Village Center area, or anywhere else in town, we can get your home looking clean from top to bottom.
+            New Lenox is a family-friendly community in Will County and we have been glad to serve homeowners here for years. Whether you are in Spencer Pointe, near Hickory Creek, the Village Center area, or anywhere else in town, we can get your kitchen, bathrooms and floors looking the way they should.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
             Our deep cleaning is built for homes that need more than a regular weekly clean. That means getting inside the oven, scrubbing grout lines in the shower, cleaning behind the stovetop grates, wiping every baseboard, and dusting ceiling fans. We do not skip the spots that others miss.
@@ -418,7 +418,7 @@ export default function DeepCleaningNewLenoxPage() {
             <div className="flex justify-center mb-1">
               <span style={{ color: "#E8622A" }} className="text-2xl">★★★★★</span>
             </div>
-            <p className="text-sm text-gray-500">Trusted by New Lenox homeowners — {REVIEW_COUNT} five-star reviews</p>
+            <p className="text-sm text-gray-500">Trusted by New Lenox homeowners: {REVIEW_COUNT} five-star reviews</p>
           </div>
           <CityDeepCleanForm />
         </div>

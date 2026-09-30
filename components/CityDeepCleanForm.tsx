@@ -96,7 +96,7 @@ export default function CityDeepCleanForm() {
           />
         </div>
         {step === 1 && (
-          <p className="text-xs text-gray-400">Step 2 just asks about your home — takes 30 seconds</p>
+          <p className="text-xs text-gray-400">Step 2 just asks about your home and takes 30 seconds</p>
         )}
       </div>
 

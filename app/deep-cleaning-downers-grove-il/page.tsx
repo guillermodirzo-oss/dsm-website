@@ -171,7 +171,7 @@ export default function DeepCleaningDownersGrovePage() {
               </h1>
               <div className="flex items-center gap-2 mb-3">
                 <span style={{ color: "#FFA869" }} className="text-xl">★★★★★</span>
-                <span className="text-sm opacity-90">5.0 — {REVIEW_COUNT} reviews on Google</span>
+                <span className="text-sm opacity-90">5.0 from {REVIEW_COUNT} reviews on Google</span>
               </div>
               <p className="text-lg font-semibold mb-2">
                 Reliable, thorough deep cleaning for Downers Grove families.
@@ -418,7 +418,7 @@ export default function DeepCleaningDownersGrovePage() {
             <div className="flex justify-center mb-1">
               <span style={{ color: "#E8622A" }} className="text-2xl">★★★★★</span>
             </div>
-            <p className="text-sm text-gray-500">Trusted by Downers Grove homeowners — {REVIEW_COUNT} five-star reviews</p>
+            <p className="text-sm text-gray-500">Trusted by Downers Grove homeowners: {REVIEW_COUNT} five-star reviews</p>
           </div>
           <CityDeepCleanForm />
         </div>

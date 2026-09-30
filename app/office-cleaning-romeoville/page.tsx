@@ -54,7 +54,7 @@ const jsonLd = {
         name: "Does DSM Cleaning Solutions offer office cleaning in Romeoville, IL?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes — DSM Cleaning Solutions is based in Romeoville, IL (60446) and provides professional office and commercial cleaning to businesses throughout Romeoville and the surrounding area.",
+          text: "Yes, DSM Cleaning Solutions is based in Romeoville, IL (60446) and provides professional office and commercial cleaning to businesses throughout Romeoville and the surrounding area.",
         },
       },
       {
@@ -70,7 +70,7 @@ const jsonLd = {
         name: "Can you clean our Romeoville office after business hours?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes — we offer before-hours, after-hours, and weekend cleaning so your Romeoville business operations are never interrupted. Just let us know your preferred schedule.",
+          text: "Yes, we offer before-hours, after-hours, and weekend cleaning so your Romeoville business operations are never interrupted. Just let us know your preferred schedule.",
         },
       },
       {
@@ -113,7 +113,7 @@ export default function OfficeCleaningRomeovillePage() {
                 Office Cleaning Services in Romeoville, IL
               </h1>
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                DSM Cleaning Solutions is headquartered right here in Romeoville. We provide professional office and commercial cleaning to local businesses throughout the 60446 area — with flexible scheduling, consistent crews, and a satisfaction guarantee on every job.
+                DSM Cleaning Solutions is headquartered right here in Romeoville. We provide professional office and commercial cleaning to local businesses throughout the 60446 area, with flexible scheduling, consistent crews, and a satisfaction guarantee on every job.
               </p>
               <a
                 href="tel:+18152462113"
@@ -162,9 +162,9 @@ export default function OfficeCleaningRomeovillePage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">Why Romeoville Businesses Choose DSM</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { title: "Local, Fast Response", desc: "We're based in Romeoville — no long drives, no delays. We respond quickly and show up on time, every time." },
+              { title: "Local, Fast Response", desc: "We're based in Romeoville, no long drives, no delays. We respond quickly and show up on time, every time." },
               { title: "Consistent Crews", desc: "The same insured, background-checked team visits your office each time so you always know who's in your space." },
-              { title: "Satisfaction Guaranteed", desc: "Not happy with any aspect of your clean? We'll return to make it right — no questions asked." },
+              { title: "Satisfaction Guaranteed", desc: "Not happy with any aspect of your clean? We'll return to make it right, no questions asked." },
             ].map((c) => (
               <div key={c.title} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
                 <h3 className="font-bold text-gray-900 text-lg mb-2">{c.title}</h3>
@@ -178,7 +178,7 @@ export default function OfficeCleaningRomeovillePage() {
       {/* FAQ */}
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">FAQs — Romeoville Office Cleaning</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">FAQs: Romeoville Office Cleaning</h2>
           <div className="space-y-4">
             {jsonLd.faq.mainEntity.map((q) => (
               <div key={q.name} className="border border-gray-100 rounded-2xl p-5 bg-gray-50">

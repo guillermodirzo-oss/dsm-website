@@ -224,7 +224,7 @@ export default function CityPageTemplate({ city }: { city: CityData }) {
               {`Cleaning Services We Offer in ${city.name}, IL`}
             </h2>
             <p className="section-subheading mx-auto">
-              From one-time deep cleans to weekly maid service — we have a
+              From one-time deep cleans to weekly maid service, we have a
               solution for every {city.name} home.
             </p>
           </div>
@@ -269,7 +269,7 @@ export default function CityPageTemplate({ city }: { city: CityData }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="section-heading">What&apos;s Included in Every Clean</h2>
-            <p className="section-subheading mx-auto">Our two most popular services — see exactly what we cover in {city.name} homes.</p>
+            <p className="section-subheading mx-auto">Our two most popular services. See exactly what we cover in {city.name} homes.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-gray-50 rounded-2xl p-7 border border-gray-200">

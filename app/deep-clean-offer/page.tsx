@@ -44,7 +44,7 @@ const problemCards = [
   {
     icon: "🍳",
     title: "Kitchen Grease Buildup",
-    desc: "Cabinet tops, oven exterior, hood vents, and countertop surfaces collect grease all year. Regular cleaning skips them every time — and it builds up fast.",
+    desc: "Cabinet tops, oven exterior, hood vents, and countertop surfaces collect grease all year. Regular cleaning skips them every time, and it builds up fast.",
   },
   {
     icon: "🤧",
@@ -54,7 +54,7 @@ const problemCards = [
   {
     icon: "🚿",
     title: "Bathroom Mineral Deposits",
-    desc: "Hard water stains behind faucets, around drains, and on shower glass need the right products and technique — not just a wipe-down.",
+    desc: "Hard water stains behind faucets, around drains, and on shower glass need the right products and technique, not just a wipe-down.",
   },
 ];
 
@@ -83,33 +83,33 @@ const regularItems: { text: string; included: boolean }[] = [
 const workPhotos = [
   {
     src: "/work-photos/shower-deep-clean-romeoville-il.jpg",
-    alt: "Deep cleaned glass shower — Romeoville IL",
-    caption: "Shower deep clean — Romeoville",
+    alt: "Deep cleaned glass shower in Romeoville IL",
+    caption: "Shower deep clean, Romeoville",
   },
   {
     src: "/work-photos/double-vanity-bathroom-clean-naperville-il.jpg",
-    alt: "Double vanity bathroom after deep cleaning — Naperville IL",
-    caption: "Master bath — Naperville",
+    alt: "Double vanity bathroom after deep cleaning in Naperville IL",
+    caption: "Master bath, Naperville",
   },
   {
     src: "/work-photos/double-sink-bathroom-deep-clean-plainfield-il.jpg",
-    alt: "Double sink bathroom after deep cleaning — Plainfield IL",
-    caption: "Full bathroom — Plainfield",
+    alt: "Double sink bathroom after deep cleaning in Plainfield IL",
+    caption: "Full bathroom, Plainfield",
   },
   {
     src: "/work-photos/living-room-hardwood-floors-plainfield-il.jpg",
-    alt: "Gleaming hardwood floors after professional cleaning — Plainfield IL",
-    caption: "Hardwood floors — Plainfield",
+    alt: "Gleaming hardwood floors after professional cleaning in Plainfield IL",
+    caption: "Hardwood floors, Plainfield",
   },
   {
     src: "/work-photos/master-bedroom-airbnb-cleaning-bolingbrook-il.jpg",
-    alt: "Clean master bedroom — Bolingbrook IL",
-    caption: "Master bedroom — Bolingbrook",
+    alt: "Clean master bedroom in Bolingbrook IL",
+    caption: "Master bedroom, Bolingbrook",
   },
   {
     src: "/work-photos/bathtub-shower-deep-clean-plainfield-il.jpg",
-    alt: "Full bathroom deep clean with tub and shower — Plainfield IL",
-    caption: "Bathroom deep clean — Plainfield",
+    alt: "Full bathroom deep clean with tub and shower in Plainfield IL",
+    caption: "Bathroom deep clean, Plainfield",
   },
 ];
 
@@ -146,7 +146,7 @@ export default function DeepCleanOfferPage() {
                 href="#quote-form-top"
                 className="inline-flex items-center gap-1.5 bg-amber-500/20 border border-amber-400/30 text-amber-300 text-xs font-semibold px-3 py-1.5 rounded-full mb-5 cursor-pointer hover:opacity-90 transition-opacity"
               >
-                ⚡ Limited Weekly Spots — Book Now
+                ⚡ Limited Weekly Spots. Book Now
               </a>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
@@ -234,8 +234,8 @@ export default function DeepCleanOfferPage() {
               Regular Cleaning Misses More Than You Think
             </h2>
             <p className="text-gray-500 max-w-2xl mx-auto">
-              If your home hasn&apos;t had a deep clean in 6+ months — or ever
-              — here&apos;s what&apos;s building up.
+              If your home hasn&apos;t had a deep clean in 6+ months, or ever,
+              here&apos;s what&apos;s building up.
             </p>
           </div>
 
@@ -406,8 +406,8 @@ export default function DeepCleanOfferPage() {
               Real Results from Real Homes in Your Area
             </h2>
             <p className="text-gray-500 max-w-xl mx-auto">
-              Every photo below is from an actual DSM Cleaning Solutions job —
-              no stock photos, no filters.
+              Every photo below is from an actual DSM Cleaning Solutions job.
+              No stock photos, no filters.
             </p>
           </div>
 
@@ -462,8 +462,8 @@ export default function DeepCleanOfferPage() {
             <p className="text-gray-500 leading-relaxed">
               We personally handle every job and only take on 6 deep cleans per
               week across Romeoville, Plainfield, Bolingbrook, Crest Hill,
-              Shorewood, and Lockport. We limit bookings to maintain quality —
-              request yours to check availability for your area.
+              Shorewood, and Lockport. We limit bookings to maintain quality.
+              Request yours to check availability for your area.
             </p>
             <p className="text-sm text-gray-400 mt-3">
               📅 Most homes are scheduled within 3–5 days of requesting.
@@ -541,7 +541,7 @@ export default function DeepCleanOfferPage() {
             {[
               {
                 q: "Do I need to be home during the cleaning?",
-                a: "No — many of our clients give us access and come home to a spotless house. We are fully insured and background-checked for your peace of mind.",
+                a: "No. Many of our clients give us access and come home to a spotless house. We are fully insured and background-checked for your peace of mind.",
               },
               {
                 q: "How long does a deep clean take?",
@@ -549,15 +549,15 @@ export default function DeepCleanOfferPage() {
               },
               {
                 q: "Are you insured?",
-                a: "Yes — DSM Cleaning Solutions is fully insured. You're covered from the moment we walk in the door.",
+                a: "Yes, DSM Cleaning Solutions is fully insured. You're covered from the moment we walk in the door.",
               },
               {
                 q: "What if I'm not 100% happy?",
-                a: "Call us within 48 hours and we'll come back and make it right — completely free. That's our guarantee, no questions asked.",
+                a: "Call us within 48 hours and we'll come back and make it right, completely free. That's our guarantee, no questions asked.",
               },
               {
                 q: "How fast can I get scheduled?",
-                a: "Most homes are scheduled within 3–5 days of your request. Spots fill weekly — the sooner you request, the better.",
+                a: "Most homes are scheduled within 3–5 days of your request. Spots fill weekly. The sooner you request, the better.",
               },
             ].map((item) => (
               <div key={item.q} className="py-4">
@@ -580,7 +580,7 @@ export default function DeepCleanOfferPage() {
           </h2>
           <p className="text-gray-500 leading-relaxed mb-5">
             If we miss anything during your deep clean, call us within 48 hours
-            and we&apos;ll come back and make it right — completely free. No
+            and we&apos;ll come back and make it right, completely free. No
             questions asked. That&apos;s the DSM guarantee.
           </p>
           <p className="text-sm text-gray-400">

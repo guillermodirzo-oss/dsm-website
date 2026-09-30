@@ -28,7 +28,7 @@ const faqs = [
   {
     question: "Do you serve the Westmont downtown area and Cass Avenue corridor?",
     answer:
-      "Yes — we serve all Westmont neighborhoods including the downtown area, Cass Avenue corridor, and all areas within zip code 60559.",
+      "Yes, we serve all Westmont neighborhoods including the downtown area, Cass Avenue corridor, and all areas within zip code 60559.",
   },
   {
     question: "What if my quote comes in higher than the range listed?",
@@ -38,12 +38,12 @@ const faqs = [
   {
     question: "Do I need to be home during the deep cleaning in Westmont?",
     answer:
-      "You don't have to be home. Many Westmont clients provide a key or access code. Every member of our team is background-checked, insured, and bonded — your home is fully protected.",
+      "You don't have to be home. Many Westmont clients provide a key or access code. Every member of our team is background-checked, insured, and bonded, so your home is fully protected.",
   },
   {
     question: "Is DSM Cleaning Solutions insured in Westmont, IL?",
     answer:
-      "Yes — DSM Cleaning Solutions is fully insured and bonded in Illinois, including all of Westmont. We carry liability insurance on every job so you can book with complete peace of mind.",
+      "Yes, DSM Cleaning Solutions is fully insured and bonded in Illinois, including all of Westmont. We carry liability insurance on every job so you can book with complete peace of mind.",
   },
 ];
 
@@ -72,7 +72,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Professional deep cleaning in Westmont, IL — 60559. DSM Cleaning Solutions scrubs every surface, grout line & appliance. Free estimate. (815) 246-2113.",
+    "Professional deep cleaning in Westmont, IL (60559). DSM Cleaning Solutions scrubs every surface, grout line & appliance. Free estimate. (815) 246-2113.",
 };
 
 const faqSchema = {

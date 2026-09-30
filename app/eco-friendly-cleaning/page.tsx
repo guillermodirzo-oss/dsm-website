@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         url: "/hero-image.png",
         width: 1200,
         height: 630,
-        alt: "DSM Cleaning Solutions — Eco-Friendly Green Cleaning in Plainfield IL",
+        alt: "DSM Cleaning Solutions: Eco-Friendly Green Cleaning in Plainfield IL",
       },
     ],
   },
@@ -32,11 +32,11 @@ export const metadata: Metadata = {
 };
 
 const faqs = [
-  { question: "What eco-friendly products do you use?", answer: "We use professional-grade, non-toxic, biodegradable cleaning products that are certified safe for children, pets, and the environment. No harsh chemicals, no strong fumes — just a clean, fresh home." },
-  { question: "Do eco-friendly products really clean as well as regular products?", answer: "Absolutely. Our green cleaning products are professional-grade and just as effective at killing bacteria, removing grime, and disinfecting surfaces as conventional chemicals — without the toxic side effects." },
+  { question: "What eco-friendly products do you use?", answer: "We use professional-grade, non-toxic, biodegradable cleaning products that are certified safe for children, pets, and the environment. No harsh chemicals, no strong fumes. Just a clean, fresh home." },
+  { question: "Do eco-friendly products really clean as well as regular products?", answer: "Absolutely. Our green cleaning products are professional-grade and just as effective at killing bacteria, removing grime, and disinfecting surfaces as conventional chemicals, without the toxic side effects." },
   { question: "Is eco-friendly cleaning safe for my pets?", answer: "Yes! Our non-toxic products are completely safe for dogs, cats, and all household pets. No need to remove pets from the home during cleaning." },
-  { question: "Is green cleaning available for all your services?", answer: "Yes — we use eco-friendly products across all our services including standard cleaning, deep cleaning, move-out cleaning, and recurring maid service. It's our standard practice." },
-  { question: "How much does eco-friendly cleaning cost in Romeoville?", answer: "Our green cleaning is included in all our regular pricing — there is no extra charge for using eco-friendly products. Contact us for a free estimate." },
+  { question: "Is green cleaning available for all your services?", answer: "Yes, we use eco-friendly products across all our services including standard cleaning, deep cleaning, move-out cleaning, and recurring maid service. It's our standard practice." },
+  { question: "How much does eco-friendly cleaning cost in Romeoville?", answer: "Our green cleaning is included in all our regular pricing. There is no extra charge for using eco-friendly products. Contact us for a free estimate." },
 ];
 
 export default function EcoFriendlyCleaningPage() {
@@ -98,7 +98,7 @@ export default function EcoFriendlyCleaningPage() {
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight mb-6">
               Eco-Friendly Green Cleaning in <span className="text-orange-400">Romeoville, IL</span>
             </h1>
-            <p className="text-xl text-white/80 mb-8 leading-relaxed">Non-toxic, biodegradable cleaning products that are safe for your children, pets, and the planet — without sacrificing a single bit of cleaning power.</p>
+            <p className="text-xl text-white/80 mb-8 leading-relaxed">Non-toxic, biodegradable cleaning products that are safe for your children, pets, and the planet, without sacrificing a single bit of cleaning power.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-white btn-lg text-base font-bold">Get a Free Estimate</Link>
               <Link href="/book" className="btn-outline-white btn-lg text-base">Book Now Online</Link>
@@ -124,7 +124,7 @@ export default function EcoFriendlyCleaningPage() {
               <p className="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">Clean & Safe</p>
               <h2 className="section-heading">Why Choose Eco-Friendly Cleaning?</h2>
               <p className="text-gray-500 mb-4 leading-relaxed">Most conventional cleaning products contain harsh chemicals that can irritate skin, trigger allergies, and leave toxic residue on the surfaces your family touches every day. At DSM Cleaning Solutions, we believe a truly clean home should also be a safe home.</p>
-              <p className="text-gray-500 mb-6 leading-relaxed">Our professional-grade green cleaning products are just as powerful as conventional cleaners — they kill bacteria, remove grease, and disinfect surfaces effectively — without the harsh fumes, skin irritants, or environmental damage.</p>
+              <p className="text-gray-500 mb-6 leading-relaxed">Our professional-grade green cleaning products are just as powerful as conventional cleaners. They kill bacteria, remove grease, and disinfect surfaces effectively, without the harsh fumes, skin irritants, or environmental damage.</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                 {[
                   { icon: "👶", title: "Safe for Children", desc: "No toxic residue on floors, toys, or surfaces your kids touch." },
@@ -226,7 +226,7 @@ export default function EcoFriendlyCleaningPage() {
             </Link>
             <Link href="/deep-cleaning" className="bg-white rounded-2xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Need a One-Time Deep Reset?</h3>
-              <p className="text-sm text-gray-500">A thorough top-to-bottom clean, no ongoing commitment required.</p>
+              <p className="text-sm text-gray-500">One detailed visit with the same green products, and no contract to sign.</p>
             </Link>
           </div>
         </div>

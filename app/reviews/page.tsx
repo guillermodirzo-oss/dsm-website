@@ -5,12 +5,12 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "5-Star Reviews",
   description:
-    "Read 5-star reviews for DSM Cleaning Solutions — trusted house cleaning in Plainfield, Romeoville, Naperville & Bolingbrook IL. Family owned & insured.",
+    "Read 5-star reviews for DSM Cleaning Solutions, trusted house cleaning in Plainfield, Romeoville, Naperville & Bolingbrook IL. Family owned & insured.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/reviews" },
   openGraph: {
     title: "5-Star Reviews | DSM Cleaning Solutions Romeoville IL",
     description:
-      "Read 5-star reviews for DSM Cleaning Solutions — trusted house cleaning in Plainfield, Romeoville, Naperville & Bolingbrook IL. Family owned & insured.",
+      "Read 5-star reviews for DSM Cleaning Solutions, trusted house cleaning in Plainfield, Romeoville, Naperville & Bolingbrook IL. Family owned & insured.",
     url: "https://www.dsmcleaningsolutions.com/reviews",
     siteName: "DSM Cleaning Solutions",
     images: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
         url: "/hero-image.png",
         width: 1200,
         height: 630,
-        alt: "DSM Cleaning Solutions — 5-Star Rated House Cleaning in Romeoville IL",
+        alt: "DSM Cleaning Solutions: 5-Star Rated House Cleaning in Romeoville IL",
       },
     ],
   },
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "5-Star Reviews | DSM Cleaning Solutions Romeoville IL",
     description:
-      "Read 5-star reviews for DSM Cleaning Solutions — trusted house cleaning in Plainfield, Romeoville, Naperville & Bolingbrook IL.",
+      "Read 5-star reviews for DSM Cleaning Solutions, trusted house cleaning in Plainfield, Romeoville, Naperville & Bolingbrook IL.",
     images: ["/hero-image.png"],
   },
 };
@@ -257,7 +257,7 @@ export default function ReviewsPage() {
             Leave a Google Review
           </a>
           <p className="text-sm text-gray-400">
-            Takes less than 2 minutes — and it means the world to our small family business.
+            Takes less than 2 minutes, and it means the world to our small family business.
           </p>
         </div>
       </section>

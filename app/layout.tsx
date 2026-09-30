@@ -47,7 +47,7 @@ export const metadata: Metadata = {
         url: "/hero-image.png",
         width: 1200,
         height: 630,
-        alt: "DSM Cleaning Solutions — Professional House Cleaning in Romeoville IL",
+        alt: "DSM Cleaning Solutions: Professional House Cleaning in Romeoville IL",
       },
     ],
   },

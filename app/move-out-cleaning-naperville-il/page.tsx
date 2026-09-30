@@ -258,7 +258,7 @@ export default function MoveOutCleaningNapervillePage() {
             <div className="hidden lg:block">
               <Image
                 src="/work-photos/apartment-bathroom-cleaning-naperville-il.jpg"
-                alt="Move-out cleaning in Naperville IL — DSM Cleaning Solutions"
+                alt="Move-out cleaning in Naperville IL by DSM Cleaning Solutions"
                 width={1920}
                 height={2560}
                 priority

@@ -258,7 +258,7 @@ export default function MoveOutCleaningHomerGlenPage() {
             <div className="hidden lg:block">
               <Image
                 src="/work-photos/apartment-bathroom-cleaning-naperville-il.jpg"
-                alt="Move-out cleaning in Homer Glen IL — DSM Cleaning Solutions"
+                alt="Move-out cleaning in Homer Glen IL by DSM Cleaning Solutions"
                 width={1920}
                 height={2560}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

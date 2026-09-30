@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       "Privacy Policy for DSM Cleaning Solutions. How we collect, use, and protect your information when you use our website or book our cleaning services.",
     url: "https://www.dsmcleaningsolutions.com/privacy-policy",
     siteName: "DSM Cleaning Solutions",
-    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions — Privacy Policy" }],
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions: Privacy Policy" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -48,7 +48,7 @@ export default function PrivacyPolicyPage() {
             <div className="mb-10">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Introduction</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                This website is committed to protecting &amp; respecting your privacy. Please read the following carefully to understand our views &amp; practices regarding your personal data and how we will treat it. This policy, together with our Terms and Conditions, sets out the core principles on which any personal data we collect from you — or that you provide to us — will be processed by us.
+                This website is committed to protecting &amp; respecting your privacy. Please read the following carefully to understand our views &amp; practices regarding your personal data and how we will treat it. This policy, together with our Terms and Conditions, sets out the core principles on which any personal data we collect from you, or that you provide to us, will be processed by us.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
                 We keep certain information when you visit our website and recognise the importance of keeping that information secure and letting you know what we will do with it.

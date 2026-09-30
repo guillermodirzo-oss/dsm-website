@@ -8,12 +8,12 @@ import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 export const metadata: Metadata = {
   title: "Deep Cleaning Plainfield IL",
   description:
-    "Deep cleaning in Plainfield, IL done right. DSM Cleaning — detailed, thorough, and backed by a 48-hr guarantee. Book now: (815) 246-2113.",
+    "Deep cleaning in Plainfield, IL done right. DSM Cleaning is detailed, thorough, and backed by a 48-hr guarantee. Book now: (815) 246-2113.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-plainfield-il" },
   openGraph: {
     title: "Deep Cleaning Service in Plainfield IL | DSM Cleaning Solutions",
     description:
-      "Deep cleaning in Plainfield, IL done right. DSM Cleaning — detailed, thorough, and backed by a 48-hr guarantee. Book now: (815) 246-2113.",
+      "Deep cleaning in Plainfield, IL done right. DSM Cleaning is detailed, thorough, and backed by a 48-hr guarantee. Book now: (815) 246-2113.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning-plainfield-il",
   },
   twitter: {
@@ -33,7 +33,7 @@ const faqs = [
   {
     question: "Do you serve the Settlers Ridge and Springbank neighborhoods in Plainfield?",
     answer:
-      "Yes — we serve all Plainfield neighborhoods including Settlers Ridge, Springbank, Lakewood Falls, Grande Park, and all areas within zip codes 60544 and 60585.",
+      "Yes, we serve all Plainfield neighborhoods including Settlers Ridge, Springbank, Lakewood Falls, Grande Park, and all areas within zip codes 60544 and 60585.",
   },
   {
     question: "What if my quote comes in higher than the range listed?",
@@ -43,12 +43,12 @@ const faqs = [
   {
     question: "Do I need to be home during the deep cleaning in Plainfield?",
     answer:
-      "You don't have to be home. Many Plainfield clients provide a key or access code. Every member of our team is background-checked, insured, and bonded — your home is fully protected.",
+      "You don't have to be home. Many Plainfield clients provide a key or access code. Every member of our team is background-checked, insured, and bonded, so your home is fully protected.",
   },
   {
     question: "Is DSM Cleaning Solutions insured in Plainfield, IL?",
     answer:
-      "Yes — DSM Cleaning Solutions is fully insured and bonded in Illinois, including all of Plainfield. We carry liability insurance on every job so you can book with complete peace of mind.",
+      "Yes, DSM Cleaning Solutions is fully insured and bonded in Illinois, including all of Plainfield. We carry liability insurance on every job so you can book with complete peace of mind.",
   },
 ];
 
@@ -79,7 +79,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Professional deep cleaning in Plainfield, IL — 60544 & 60585. DSM Cleaning Solutions scrubs every surface, grout line & appliance. Free estimate. (815) 246-2113.",
+    "Professional deep cleaning in Plainfield, IL (60544 & 60585). DSM Cleaning Solutions scrubs every surface, grout line & appliance. Free estimate. (815) 246-2113.",
 };
 
 const faqSchema = {

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     url: "https://www.dsmcleaningsolutions.com/blog/how-to-prepare-for-move-out-cleaning-plainfield",
     siteName: "DSM Cleaning Solutions",
     type: "article",
-    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions — How to Prepare for a Move-Out Cleaning" }],
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions: How to Prepare for a Move-Out Cleaning" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -160,7 +160,7 @@ export default function BlogPostPage() {
             , or anywhere in the Chicago suburbs is stressful enough without
             worrying about whether you&apos;ll get your security deposit back.
             Landlords in Illinois are allowed to withhold deposits for cleaning
-            costs — and many do. A professional{" "}
+            costs, and many do. A professional{" "}
             <Link href="/move-out-cleaning" className="text-brand-green font-semibold hover:underline">
               move-out cleaning
             </Link>{" "}
@@ -170,43 +170,43 @@ export default function BlogPostPage() {
           <p>
             But there are a few things you can do before we arrive that will
             make the process smoother and faster. Here&apos;s exactly what to
-            do — and what not to do — before your scheduled move-out cleaning.
+            do (and what not to do) before your scheduled move-out cleaning.
           </p>
 
-          <h2>Step 1 — Remove All of Your Belongings First</h2>
+          <h2>Step 1: Remove All of Your Belongings First</h2>
           <p>
             Before a move-out cleaning can begin, every item needs to be out of
             the home. We can&apos;t clean inside closets, cabinets, or
             underneath furniture if your belongings are still there. Schedule
-            your move-out cleaning for after the movers have finished —
+            your move-out cleaning for after the movers have finished,
             ideally the same day or the day after your move. An empty home lets
             us work systematically and ensures nothing gets missed.
           </p>
 
-          <h2>Step 2 — Leave Utilities On</h2>
+          <h2>Step 2: Leave Utilities On</h2>
           <p>
             We need running water, electricity, and working lights to do a
             thorough job. Make sure utilities aren&apos;t scheduled for
             disconnect until after the cleaning is complete. This is especially
-            important for appliances — we clean inside ovens and refrigerators,
+            important for appliances: we clean inside ovens and refrigerators,
             which require power. If the lights are out or the water is off,
             we&apos;ll have to reschedule, which can put your move-out timeline
             at risk.
           </p>
 
-          <h2>Step 3 — Point Out Any Problem Areas</h2>
+          <h2>Step 3: Point Out Any Problem Areas</h2>
           <p>
-            If you know there are specific areas of concern — a stained bathtub,
-            heavy grease buildup in the oven, marks on walls — let us know when
+            If you know there are specific areas of concern (a stained bathtub,
+            heavy grease buildup in the oven, marks on walls), let us know when
             you book. We&apos;ll make sure those areas get extra attention. Our
             48-hour satisfaction guarantee means if your landlord flags something
             after we clean, we come back and re-clean it free of charge.
           </p>
 
-          <h2>Step 4 — Don&apos;t Pre-Clean (Seriously)</h2>
+          <h2>Step 4: Don&apos;t Pre-Clean (Seriously)</h2>
           <p>
             Many people feel like they need to tidy before the cleaners arrive.
-            For a move-out clean, you don&apos;t — and it can actually slow
+            For a move-out clean, you don&apos;t, and it can actually slow
             things down. Leave the space as-is and let the professionals handle
             it. We&apos;re equipped for homes in any condition. Pre-cleaning
             often means you&apos;ve moved or rearranged things in ways that make
@@ -215,8 +215,11 @@ export default function BlogPostPage() {
 
           <h2>What&apos;s Included in a Move-Out Cleaning?</h2>
           <p>
-            Our standard move-out cleaning covers everything a landlord will
-            inspect. Here&apos;s what&apos;s included on every job:
+            Our standard{" "}
+            <Link href="/move-out-cleaning-plainfield-il" className="text-brand-green font-semibold hover:underline">
+              move-out cleaning in Plainfield
+            </Link>{" "}
+            covers everything a landlord will inspect. Here&apos;s what&apos;s included on every job:
           </p>
           <ul>
             <li>
@@ -231,7 +234,7 @@ export default function BlogPostPage() {
               switches, and outlet covers
             </li>
             <li>
-              Floors vacuumed and mopped throughout — every room, every corner
+              Floors vacuumed and mopped throughout, every room, every corner
             </li>
             <li>Inside all closets and cabinets wiped clean</li>
           </ul>
@@ -263,7 +266,7 @@ export default function BlogPostPage() {
           <h2>Serving Plainfield, Naperville, Romeoville &amp; Bolingbrook</h2>
           <p>
             DSM Cleaning Solutions is locally owned and based in Plainfield, IL.
-            We handle move-out cleanings across Will County and DuPage County —
+            We handle move-out cleanings across Will County and DuPage County,
             including{" "}
             <Link href="/naperville-il" className="text-brand-green font-semibold hover:underline">
               Naperville

@@ -7,7 +7,7 @@ const city = cities.find((c) => c.slug === "homer-glen-il")!;
 export const metadata: Metadata = {
   title: "House Cleaning Homer Glen IL",
   description:
-    "Professional house cleaning in Homer Glen, IL — deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & insured. Free estimates.",
+    "Professional house cleaning in Homer Glen, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & insured. Free estimates.",
   keywords: [
     "house cleaning Homer Glen IL",
     "cleaning service Homer Glen",
@@ -19,15 +19,15 @@ export const metadata: Metadata = {
   openGraph: {
     title: "House Cleaning Homer Glen IL | DSM Cleaning Solutions",
     description:
-      "Professional house cleaning in Homer Glen, IL — deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & insured. Free estimates.",
+      "Professional house cleaning in Homer Glen, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & insured. Free estimates.",
     url: "https://www.dsmcleaningsolutions.com/homer-glen-il",
     siteName: "DSM Cleaning Solutions",
-    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions — House Cleaning in Homer Glen IL" }],
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions: House Cleaning in Homer Glen IL" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "House Cleaning Homer Glen IL | DSM Cleaning Solutions",
-    description: "Professional house cleaning in Homer Glen, IL — deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & insured.",
+    description: "Professional house cleaning in Homer Glen, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & insured.",
     images: ["/hero-image.png"],
   },
 };
@@ -44,7 +44,7 @@ export default function HomerGlenPage() {
             <div>
               <h2 className="section-heading text-3xl md:text-4xl mb-4">Homer Glen Neighborhoods We Serve</h2>
               <p className="text-gray-500 mb-5 leading-relaxed">
-                Based in the southwest Chicago suburbs, DSM Cleaning Solutions knows every corner of Homer Glen. We clean homes throughout every neighborhood — from the newest developments to established subdivisions we&apos;ve served for years.
+                Based in the southwest Chicago suburbs, DSM Cleaning Solutions knows every corner of Homer Glen. We clean homes throughout every neighborhood, from the newest developments to established subdivisions we&apos;ve served for years.
               </p>
               <div className="grid grid-cols-2 gap-2 mb-5">
                 {["Homer Lakes", "Farmington Lakes", "The Highlands", "Tamarack Fairways", "Homer Glen Estates"].map((n) => (
@@ -84,7 +84,7 @@ export default function HomerGlenPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <a href="/deep-cleaning-homer-glen-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Homer Glen</h3>
-              <p className="text-sm text-gray-600">Top-to-bottom deep cleaning for Homer Glen homes in zip code 60491.</p>
+              <p className="text-sm text-gray-600">Grout, vents and door frames cleaned by hand in Homer Glen homes (zip code 60491).</p>
             </a>
             <a href="/recurring-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Recurring Cleaning in Homer Glen</h3>

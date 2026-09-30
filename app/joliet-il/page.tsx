@@ -23,7 +23,7 @@ export const metadata: Metadata = {
       "Professional house cleaning in Joliet, IL. Deep cleaning, move-out & recurring maid service. Family-owned, eco-friendly & insured. Free estimates today.",
     url: "https://www.dsmcleaningsolutions.com/joliet-il",
     siteName: "DSM Cleaning Solutions",
-    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions — House Cleaning in Joliet IL" }],
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions: House Cleaning in Joliet IL" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -45,7 +45,7 @@ export default function JolietPage() {
             <div>
               <h2 className="section-heading text-3xl md:text-4xl mb-4">Joliet Neighborhoods We Serve</h2>
               <p className="text-gray-500 mb-5 leading-relaxed">
-                Based in the southwest Chicago suburbs, DSM Cleaning Solutions knows every corner of Joliet. We clean homes throughout every neighborhood — from the newest developments to established subdivisions we&apos;ve served for years.
+                Based in the southwest Chicago suburbs, DSM Cleaning Solutions knows every corner of Joliet. We clean homes throughout every neighborhood, from the newest developments to established subdivisions we&apos;ve served for years.
               </p>
               <div className="grid grid-cols-2 gap-2 mb-5">
                 {["Ingalls Park", "Rock Run", "Cathedral Area", "Forest Park", "Woodgate", "White Oak Subdivision"].map((n) => (
@@ -85,7 +85,7 @@ export default function JolietPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <Link href="/deep-cleaning-joliet-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Joliet</h3>
-              <p className="text-sm text-gray-600">Top-to-bottom deep cleaning for homes across all Joliet zip codes.</p>
+              <p className="text-sm text-gray-600">We scrub grout, degrease the range hood and wipe every baseboard in homes across Joliet.</p>
             </Link>
             <Link href="/recurring-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Recurring Cleaning in Joliet</h3>

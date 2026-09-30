@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What does a deep cleaning include?",
-    a: "We clean inside the oven, degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. Every room gets full attention from top to bottom.",
+    a: "We clean inside the oven, degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. Every room gets the same attention, not just the kitchen and baths.",
   },
   {
     q: "How long does a deep clean take?",
@@ -353,7 +353,9 @@ export default function DeepCleaningPage() {
             What We Clean in Your Home
           </h2>
           <p className="text-center text-gray-500 text-sm mb-8">
-            Every deep clean includes all of the following
+            Every deep clean includes all of the following. Our{" "}
+            <Link href="/cleaning-checklist" className="text-brand-green font-semibold hover:underline">full cleaning checklist</Link>{" "}
+            compares it with standard and move-out cleaning.
           </p>
 
           <div className="space-y-6 mb-10">
@@ -576,6 +578,12 @@ export default function DeepCleaningPage() {
               </details>
             ))}
           </div>
+          <p className="mt-6 text-sm text-gray-600 text-center">
+            Helpful guides:{" "}
+            <Link href="/blog/how-to-prepare-your-home-for-a-deep-clean" className="text-brand-green font-semibold hover:underline">how to prepare your home for a deep clean</Link>,{" "}
+            <Link href="/blog/what-is-included-in-a-deep-house-cleaning" className="text-brand-green font-semibold hover:underline">what&apos;s included in a deep house cleaning</Link>, and{" "}
+            <Link href="/standard-vs-deep-cleaning" className="text-brand-green font-semibold hover:underline">standard vs. deep cleaning</Link>.
+          </p>
         </div>
       </section>
 

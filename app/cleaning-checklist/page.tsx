@@ -27,22 +27,22 @@ const faqs = [
   {
     question: "What extra items are in a deep clean?",
     answer:
-      "Deep cleaning adds everything that standard cleaning doesn&apos;t cover: inside the microwave, oven, and refrigerator exterior detail; full baseboard scrubbing; window sills and inside glass; ceiling fans and light fixtures; grout scrubbing in bathrooms; cabinet interior wipe-down; door frame detail; and vent cleaning. It&apos;s a top-to-bottom reset rather than routine maintenance.",
+      "Deep cleaning adds everything that standard cleaning doesn&apos;t cover: inside the microwave, oven, and refrigerator exterior detail; full baseboard scrubbing; window sills and inside glass; ceiling fans and light fixtures; grout scrubbing in bathrooms; cabinet interior wipe-down; door frame detail; and vent cleaning. It catches up on buildup instead of just keeping things tidy.",
   },
   {
     question: "Do you clean inside appliances?",
     answer:
-      "Inside appliance cleaning is included in deep cleaning and move-out cleaning. Standard cleaning covers appliance exteriors only. If you want inside-appliance cleaning added to a standard clean, it can be requested as an add-on (inside oven, inside refrigerator, inside microwave) — priced and agreed upon before the appointment.",
+      "Inside appliance cleaning is included in deep cleaning and move-out cleaning. Standard cleaning covers appliance exteriors only. If you want inside-appliance cleaning added to a standard clean, it can be requested as an add-on (inside oven, inside refrigerator, inside microwave), priced and agreed upon before the appointment.",
   },
   {
     question: "What is NOT included in cleaning?",
     answer:
-      "Items not included in any service without a specific add-on agreement: laundry and folding, dish washing, exterior windows, garage cleaning, exterior pressure washing, organizing or decluttering, biohazard or hoarding situations, and areas not accessible due to clutter. We are happy to discuss add-ons if you have specific needs — just mention them when you request your quote.",
+      "Items not included in any service without a specific add-on agreement: laundry and folding, dish washing, exterior windows, garage cleaning, exterior pressure washing, organizing or decluttering, biohazard or hoarding situations, and areas not accessible due to clutter. We are happy to discuss add-ons if you have specific needs. Just mention them when you request your quote.",
   },
   {
     question: "Can I add extra items to my clean?",
     answer:
-      "Yes — many customers add specific tasks to their booking. Common add-ons include inside oven, inside refrigerator, interior window cleaning, laundry, and garage sweeping. Add-ons are always discussed and priced before your appointment. We never add scope or charge without your prior agreement.",
+      "Yes, many customers add specific tasks to their booking. Common add-ons include inside oven, inside refrigerator, interior window cleaning, laundry, and garage sweeping. Add-ons are always discussed and priced before your appointment. We never add scope or charge without your prior agreement.",
   },
 ];
 
@@ -60,7 +60,7 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   serviceType: "House Cleaning",
-  name: "House Cleaning Services — DSM Cleaning Solutions",
+  name: "House Cleaning Services by DSM Cleaning Solutions",
   provider: {
     "@type": "LocalBusiness",
     "@id": "https://www.dsmcleaningsolutions.com/#business",
@@ -151,18 +151,18 @@ const deepExtras = [
   {
     room: "Kitchen Extras",
     items: [
-      "Inside microwave — walls, ceiling, turntable",
-      "Inside oven — racks, interior walls, door",
-      "Refrigerator exterior detail — top, sides, handles",
+      "Inside microwave: walls, ceiling, turntable",
+      "Inside oven: racks, interior walls, door",
+      "Refrigerator exterior detail: top, sides, handles",
       "Behind and under appliances (accessible areas)",
-      "Cabinet interiors — all shelves wiped",
+      "Cabinet interiors: all shelves wiped",
       "Grease buildup on stovetop and hood",
     ],
   },
   {
     room: "Bathroom Extras",
     items: [
-      "Full grout scrubbing — tiles, floor",
+      "Full grout scrubbing: tiles, floor",
       "Soap scum removal from shower doors and tracks",
       "Exhaust fan dusting",
       "Behind and around toilet base",
@@ -175,7 +175,7 @@ const deepExtras = [
     items: [
       "Full baseboard scrubbing (all rooms)",
       "Window sills and inside glass cleaned",
-      "Ceiling fans — blades and motor housing",
+      "Ceiling fans: blades and motor housing",
       "Light fixtures dusted",
       "Vents and registers cleaned",
       "Door frames detail-wiped",
@@ -188,15 +188,15 @@ const moveOutExtras = [
   {
     room: "Move-Out Additions",
     items: [
-      "Inside all cabinets and drawers — every room",
-      "Inside refrigerator — full interior clean",
-      "Inside oven — full interior scrub",
+      "Inside all cabinets and drawers, every room",
+      "Inside refrigerator: full interior clean",
+      "Inside oven: full interior scrub",
       "Inside dishwasher",
       "All appliances inside and out",
       "Window sills and inside glass",
       "All door knobs and door frames",
       "Walls wiped down where possible",
-      "All closet interiors — shelves, rods, floors",
+      "All closet interiors: shelves, rods, floors",
       "Remove all debris and trash",
       "Final walkthrough inspection",
     ],
@@ -257,7 +257,7 @@ export default function CleaningChecklistPage() {
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               A complete, room-by-room breakdown of every task included in our standard, deep,
-              and move-out cleaning services. No guessing — just a clear list of exactly what
+              and move-out cleaning services. No guessing. Just a clear list of exactly what
               DSM Cleaning Solutions does in your home.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -284,7 +284,7 @@ export default function CleaningChecklistPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gray-600 leading-relaxed mb-4">
             Transparency is a core part of how DSM Cleaning Solutions operates. Before you book,
-            you should know exactly what our team does — and doesn&apos;t do — in your home.
+            you should know exactly what our team does (and doesn&apos;t do) in your home.
             Below is our complete room-by-room house cleaning checklist for each service type.
             Use this to compare service options, prepare your home, or simply understand what
             you&apos;re paying for.
@@ -305,11 +305,11 @@ export default function CleaningChecklistPage() {
             <div className="mb-6">
               <h2 className="section-heading">Standard Cleaning Checklist</h2>
               <p className="text-gray-600 mt-2">
-                Our routine maintenance service — ideal for homes cleaned regularly.{" "}
+                Our routine maintenance service, ideal for homes cleaned regularly.{" "}
                 <Link href="/recurring-cleaning" className="text-brand-green font-semibold hover:underline">Learn more about recurring cleaning →</Link>
               </p>
             </div>
-            <ChecklistSection title="Standard Cleaning — Included Tasks" items={standardChecklist} variant="green" />
+            <ChecklistSection title="Standard Cleaning: Included Tasks" items={standardChecklist} variant="green" />
           </div>
 
           {/* DEEP */}
@@ -324,7 +324,7 @@ export default function CleaningChecklistPage() {
             <div className="bg-brand-green-50 border border-brand-green-100 rounded-xl p-4 mb-4 text-sm text-brand-green font-semibold">
               ✓ Everything in the Standard Cleaning checklist above, PLUS the following:
             </div>
-            <ChecklistSection title="Deep Cleaning — Additional Items" items={deepExtras} variant="dark" />
+            <ChecklistSection title="Deep Cleaning: Additional Items" items={deepExtras} variant="dark" />
           </div>
 
           {/* MOVE-OUT */}
@@ -332,14 +332,14 @@ export default function CleaningChecklistPage() {
             <div className="mb-6">
               <h2 className="section-heading">Move-Out Cleaning Checklist</h2>
               <p className="text-gray-600 mt-2">
-                Move-out cleaning includes everything in the deep cleaning checklist <strong>plus</strong> the items below — designed to satisfy landlord inspections and recover your security deposit.{" "}
+                Move-out cleaning includes everything in the deep cleaning checklist <strong>plus</strong> the items below, designed to satisfy landlord inspections and recover your security deposit.{" "}
                 <Link href="/move-out-cleaning" className="text-brand-green font-semibold hover:underline">Learn more about move-out cleaning →</Link>
               </p>
             </div>
             <div className="bg-orange-50 border border-orange-100 rounded-xl p-4 mb-4 text-sm text-orange-700 font-semibold">
               ✓ Everything in Standard + Deep Cleaning, PLUS the following move-out specific tasks:
             </div>
-            <ChecklistSection title="Move-Out Cleaning — Additional Items" items={moveOutExtras} variant="orange" />
+            <ChecklistSection title="Move-Out Cleaning: Additional Items" items={moveOutExtras} variant="orange" />
           </div>
 
         </div>
@@ -367,7 +367,7 @@ export default function CleaningChecklistPage() {
             ))}
           </div>
           <p className="text-gray-600 text-sm mt-4">
-            Some of these can be added as a custom add-on — just mention it when you request your quote.
+            Some of these can be added as a custom add-on. Just mention it when you request your quote.
           </p>
         </div>
       </section>
@@ -376,7 +376,7 @@ export default function CleaningChecklistPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="section-heading">Cleaning Checklist — FAQs</h2>
+            <h2 className="section-heading">Cleaning Checklist: FAQs</h2>
           </div>
           <div className="space-y-4">
             {faqs.map((faq, i) => (
@@ -409,7 +409,7 @@ export default function CleaningChecklistPage() {
             </Link>
             <Link href="/move-out-cleaning" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning</h3>
-              <p className="text-sm text-gray-600">Deposit-back cleaning — full checklist and pricing.</p>
+              <p className="text-sm text-gray-600">Deposit-back cleaning: full checklist and pricing.</p>
             </Link>
             <Link href="/pricing" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Pricing</h3>
@@ -426,7 +426,7 @@ export default function CleaningChecklistPage() {
             <div className="text-white">
               <h2 className="text-4xl font-bold mb-4">Ready to Book? Get a Free Quote.</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                Now that you know exactly what we clean — tell us about your home and we&apos;ll
+                Now that you know exactly what we clean, tell us about your home and we&apos;ll
                 send you a firm flat-rate price. Serving Romeoville, Plainfield, Naperville,
                 and the southwest suburbs.
               </p>

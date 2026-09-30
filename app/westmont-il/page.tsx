@@ -7,7 +7,7 @@ const city = cities.find((c) => c.slug === "westmont-il")!;
 export const metadata: Metadata = {
   title: "House Cleaning Westmont IL",
   description:
-    "Expert house cleaning in Westmont, IL — deep cleaning, standard & recurring maid service. Family-owned, eco-friendly, fully insured. Get a free estimate.",
+    "Expert house cleaning in Westmont, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly, fully insured. Get a free estimate.",
   keywords: [
     "house cleaning Westmont IL",
     "cleaning service Westmont",
@@ -19,15 +19,15 @@ export const metadata: Metadata = {
   openGraph: {
     title: "House Cleaning Westmont IL | DSM Cleaning Solutions",
     description:
-      "Expert house cleaning in Westmont, IL — deep cleaning, standard & recurring maid service. Family-owned, eco-friendly, fully insured. Get a free estimate.",
+      "Expert house cleaning in Westmont, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly, fully insured. Get a free estimate.",
     url: "https://www.dsmcleaningsolutions.com/westmont-il",
     siteName: "DSM Cleaning Solutions",
-    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions — House Cleaning in Westmont IL" }],
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions: House Cleaning in Westmont IL" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "House Cleaning Westmont IL | DSM Cleaning Solutions",
-    description: "Expert house cleaning in Westmont, IL — deep cleaning, standard & recurring maid service. Family-owned, eco-friendly, fully insured.",
+    description: "Expert house cleaning in Westmont, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly, fully insured.",
     images: ["/hero-image.png"],
   },
 };
@@ -44,7 +44,7 @@ export default function WestmontPage() {
             <div>
               <h2 className="section-heading text-3xl md:text-4xl mb-4">Westmont Neighborhoods We Serve</h2>
               <p className="text-gray-500 mb-5 leading-relaxed">
-                Based in the southwest Chicago suburbs, DSM Cleaning Solutions knows every corner of Westmont. We clean homes throughout every neighborhood — from the newest developments to established subdivisions we&apos;ve served for years.
+                Based in the southwest Chicago suburbs, DSM Cleaning Solutions knows every corner of Westmont. We clean homes throughout every neighborhood, from the newest developments to established subdivisions we&apos;ve served for years.
               </p>
               <div className="grid grid-cols-2 gap-2 mb-5">
                 {["Westmont Downtown", "Oakwood Estates", "Waterfall Glen area", "Cass Avenue Corridor", "Williams Street District"].map((n) => (
@@ -83,7 +83,7 @@ export default function WestmontPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <a href="/deep-cleaning-westmont-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Westmont</h3>
-              <p className="text-sm text-gray-600">Top-to-bottom deep cleaning for Westmont homes in zip code 60559.</p>
+              <p className="text-sm text-gray-600">Window sills, cabinet fronts and the inside of the oven, for Westmont homes in zip code 60559.</p>
             </a>
             <a href="/recurring-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Recurring Cleaning in Westmont</h3>

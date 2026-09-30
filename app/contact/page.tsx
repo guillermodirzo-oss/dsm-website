@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         url: "/hero-image.png",
         width: 1200,
         height: 630,
-        alt: "DSM Cleaning Solutions — Contact Us for a Free Estimate",
+        alt: "DSM Cleaning Solutions: Contact Us for a Free Estimate",
       },
     ],
   },
@@ -49,7 +49,7 @@ const faqSchema = {
       name: "Do you offer free estimates?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes — all estimates are completely free with no obligation to book. Just fill out the form, give us a call, or book online and we'll get you a quote tailored to your home.",
+        text: "Yes, all estimates are completely free with no obligation to book. Just fill out the form, give us a call, or book online and we'll get you a quote tailored to your home.",
       },
     },
     {
@@ -111,7 +111,7 @@ const faqs = [
   {
     question: "Do you offer free estimates?",
     answer:
-      "Yes — all estimates are completely free with no obligation to book. Just fill out the form, give us a call, or book online and we'll get you a quote tailored to your home.",
+      "Yes, all estimates are completely free with no obligation to book. Just fill out the form, give us a call, or book online and we'll get you a quote tailored to your home.",
   },
   {
     question: "What areas do you serve?",
@@ -146,7 +146,7 @@ export default function ContactPage() {
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               Get a free estimate or ask us anything. We serve Plainfield, Romeoville, Naperville,
-              Bolingbrook &amp; surrounding areas — and we&apos;re available 7 days a week.
+              Bolingbrook &amp; surrounding areas, and we&apos;re available 7 days a week.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="tel:+18152462113" className="btn-white btn-lg">📞 Call Now</a>
@@ -230,13 +230,14 @@ export default function ContactPage() {
                 <a href="tel:+18152462113" className="text-brand-green font-semibold hover:underline">
                   (815) 246-2113
                 </a>
-                . We&apos;re available Monday through Sunday, 7am to 9pm.
+                . We&apos;re available Monday through Sunday, 7am to 9pm. Curious how quotes work? Here&apos;s{" "}
+                <Link href="/free-estimate" className="text-brand-green font-semibold hover:underline">how our free estimates work</Link>.
               </p>
 
               {/* Trust badges */}
               <div className="space-y-3 mb-8">
                 {[
-                  { icon: "✅", text: "Free estimates — no obligation" },
+                  { icon: "✅", text: "Free estimates, no obligation" },
                   { icon: "🛡️", text: "Fully insured & bonded" },
                   { icon: "👨‍👩‍👧", text: "Family-owned local business" },
                   { icon: "🌿", text: "Eco-friendly products" },
@@ -321,7 +322,7 @@ export default function ContactPage() {
             Book Online Now
           </Link>
           <p className="text-white/80 text-sm">
-            Satisfaction guaranteed — if you are not happy within 48 hours we will come back
+            Satisfaction guaranteed: if you are not happy within 48 hours we will come back
             and re-clean at no charge.
           </p>
         </div>

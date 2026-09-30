@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         url: "/hero-image.png",
         width: 1200,
         height: 630,
-        alt: "DSM Cleaning Solutions — House Cleaning Prices in Romeoville & Plainfield IL",
+        alt: "DSM Cleaning Solutions: House Cleaning Prices in Romeoville & Plainfield IL",
       },
     ],
   },

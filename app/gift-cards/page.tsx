@@ -22,27 +22,27 @@ const faqs = [
   {
     question: "Do you offer house cleaning gift cards?",
     answer:
-      "Yes — DSM Cleaning Solutions offers house cleaning gift cards for any occasion. Gift cards can be purchased by calling us directly at (815) 246-2113 or by submitting a request through our contact form. We'll confirm the value, process your gift card, and provide instructions for the recipient.",
+      "Yes, DSM Cleaning Solutions offers house cleaning gift cards for any occasion. Gift cards can be purchased by calling us directly at (815) 246-2113 or by submitting a request through our contact form. We'll confirm the value, process your gift card, and provide instructions for the recipient.",
   },
   {
     question: "What values are available?",
     answer:
-      "We offer gift cards in standard denominations of $100, $150, and $200 — as well as custom amounts. Popular gift card amounts correspond to specific service types: $145 covers a standard clean for a smaller home, $300 covers a deep clean, and $200 is a great partial gift toward a larger service. Call us at (815) 246-2113 to discuss the best value for your situation.",
+      "We offer gift cards in standard denominations of $100, $150, and $200, as well as custom amounts. Popular gift card amounts correspond to specific service types: $145 covers a standard clean for a smaller home, $300 covers a deep clean, and $200 is a great partial gift toward a larger service. Call us at (815) 246-2113 to discuss the best value for your situation.",
   },
   {
     question: "How does the recipient redeem it?",
     answer:
-      "The recipient simply contacts DSM Cleaning Solutions to book their cleaning and mentions they have a gift card. We'll apply the gift card value to their service. Gift cards can be applied to any service — standard, deep, or move-out cleaning — anywhere in our southwest suburb service area.",
+      "The recipient simply contacts DSM Cleaning Solutions to book their cleaning and mentions they have a gift card. We'll apply the gift card value to their service. Gift cards can be applied to any service (standard, deep, or move-out cleaning) anywhere in our southwest suburb service area.",
   },
   {
     question: "Do gift cards expire?",
     answer:
-      "DSM Cleaning Solutions gift cards do not expire. The recipient can redeem their gift card at any time with no expiration date or usage deadline. We want gift recipients to use their cleaning at the right moment for them — whether that's immediately or months from now.",
+      "DSM Cleaning Solutions gift cards do not expire. The recipient can redeem their gift card at any time with no expiration date or usage deadline. We want gift recipients to use their cleaning at the right moment for them, whether that's immediately or months from now.",
   },
   {
     question: "Can I use a gift card for any service?",
     answer:
-      "Yes — gift cards can be applied to any DSM Cleaning Solutions service: standard cleaning, deep cleaning, move-out cleaning, or any specialty service we offer. If the gift card value is less than the total service cost, the recipient simply pays the difference. If the gift card value exceeds the service cost, the balance remains on the card for future use.",
+      "Yes, gift cards can be applied to any DSM Cleaning Solutions service: standard cleaning, deep cleaning, move-out cleaning, or any specialty service we offer. If the gift card value is less than the total service cost, the recipient simply pays the difference. If the gift card value exceeds the service cost, the balance remains on the card for future use.",
   },
 ];
 
@@ -60,7 +60,7 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   serviceType: "House Cleaning Gift Card",
-  name: "House Cleaning Gift Cards — DSM Cleaning Solutions",
+  name: "House Cleaning Gift Cards from DSM Cleaning Solutions",
   provider: {
     "@type": "LocalBusiness",
     "@id": "https://www.dsmcleaningsolutions.com/#business",
@@ -90,10 +90,10 @@ const breadcrumbSchema = {
 };
 
 const giftRecipients = [
-  { icon: "🏠", title: "New Homeowners", desc: "Help them start fresh in their new home with a professional deep clean — the perfect housewarming gift." },
+  { icon: "🏠", title: "New Homeowners", desc: "Help them start fresh in their new home with a professional deep clean, the perfect housewarming gift." },
   { icon: "👶", title: "New Parents", desc: "A clean home is one less thing to worry about. Give new moms and dads the gift of a spotless house." },
   { icon: "👴", title: "Elderly Family", desc: "Help elderly parents or relatives keep their home clean and safe without the physical strain of doing it themselves." },
-  { icon: "💼", title: "Busy Professionals", desc: "For the person who has everything — give them their time back with regular professional cleaning." },
+  { icon: "💼", title: "Busy Professionals", desc: "For the person who has everything: give them their time back with regular professional cleaning." },
   { icon: "🎓", title: "Recent Graduates", desc: "Moving into their first place? A cleaning gift card gives them a clean start." },
   { icon: "💒", title: "Newlyweds", desc: "A practical and thoughtful wedding gift that helps them focus on what matters most." },
 ];
@@ -116,8 +116,8 @@ const occasions = [
 const cardValues = [
   { amount: "$100", desc: "Great starter gift or contribution toward any service.", highlight: false },
   { amount: "$150", desc: "Covers a standard cleaning for a 2-bedroom home.", highlight: false },
-  { amount: "$200", desc: "Most popular gift value — covers most standard cleanings.", highlight: true },
-  { amount: "Custom", desc: "Any amount — perfect for specific services or larger homes.", highlight: false },
+  { amount: "$200", desc: "Most popular gift value, covers most standard cleanings.", highlight: true },
+  { amount: "Custom", desc: "Any amount, perfect for specific services or larger homes.", highlight: false },
 ];
 
 export default function GiftCardsPage() {
@@ -141,7 +141,7 @@ export default function GiftCardsPage() {
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               Give the gift of a spotless home. DSM Cleaning Solutions gift cards are available
-              in $100, $150, $200, and custom amounts — perfect for any occasion. Never expire.
+              in $100, $150, $200, and custom amounts, perfect for any occasion. Never expire.
               Redeemable for any cleaning service across the southwest Chicago suburbs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -170,7 +170,7 @@ export default function GiftCardsPage() {
           <p className="text-gray-600 mb-4 leading-relaxed">
             A house cleaning gift card is one of the most practical and genuinely appreciated
             gifts you can give. Unlike physical gifts that sit unused or get returned, a cleaning
-            gift card gives someone something they actually need — time back, a clean home, and
+            gift card gives someone something they actually need: time back, a clean home, and
             one less thing on their to-do list.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
@@ -181,7 +181,7 @@ export default function GiftCardsPage() {
           </p>
           <p className="text-gray-600 leading-relaxed">
             And because our gift cards never expire, the recipient can use it whenever the time
-            is right for them — whether that&apos;s this week or six months from now.
+            is right for them, whether that&apos;s this week or six months from now.
           </p>
         </div>
       </section>
@@ -310,11 +310,11 @@ export default function GiftCardsPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <Link href="/recurring-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Recurring Cleaning</h3>
-              <p className="text-sm text-gray-600">Starting at $145 — ideal recurring gift.</p>
+              <p className="text-sm text-gray-600">Starting at $145, an ideal recurring gift.</p>
             </Link>
             <Link href="/deep-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning</h3>
-              <p className="text-sm text-gray-600">Starting at $300 — the ultimate home reset gift.</p>
+              <p className="text-sm text-gray-600">Starting at $300, the ultimate home reset gift.</p>
             </Link>
             <Link href="/pricing" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Pricing</h3>
@@ -335,14 +335,14 @@ export default function GiftCardsPage() {
             <div className="text-white">
               <h2 className="text-4xl font-bold mb-4">Order a Cleaning Gift Card Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                Call us to purchase your gift card — same-day processing available. Gift cards
+                Call us to purchase your gift card. Same-day processing available. Gift cards
                 never expire and can be used for any service anywhere in our southwest suburb
                 service area.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-4">
                 📞 (815) 246-2113
               </a>
-              <p className="text-white/80 text-sm mb-6">Call to order — same-day processing available</p>
+              <p className="text-white/80 text-sm mb-6">Call to order, same-day processing available</p>
               <p className="text-white/80">🎁 Never expire · ✅ Any service · 🌿 Eco-friendly cleaning · 🛡️ Fully insured</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">

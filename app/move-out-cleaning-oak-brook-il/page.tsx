@@ -258,7 +258,7 @@ export default function MoveOutCleaningOakBrookPage() {
             <div className="hidden lg:block">
               <Image
                 src="/work-photos/double-vanity-bathroom-clean-naperville-il.jpg"
-                alt="Move-out cleaning in Oak Brook IL — DSM Cleaning Solutions"
+                alt="Move-out cleaning in Oak Brook IL by DSM Cleaning Solutions"
                 width={1920}
                 height={2560}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

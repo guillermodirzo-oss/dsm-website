@@ -25,7 +25,7 @@ const faqs = [
   {
     question: "How much does deep cleaning cost in Naperville, IL?",
     answer:
-      "Deep cleaning in Naperville, IL starts at $315 for a 2-bedroom/1-bath home and goes up to $830+ for a 5-bedroom/3-bath home. Exact pricing depends on your home size, current condition, and any add-ons. DSM Cleaning Solutions provides free, no-obligation estimates — call (815) 246-2113 or fill out our contact form for your Naperville deep clean quote.",
+      "Deep cleaning in Naperville, IL starts at $315 for a 2-bedroom/1-bath home and goes up to $830+ for a 5-bedroom/3-bath home. Exact pricing depends on your home size, current condition, and any add-ons. DSM Cleaning Solutions provides free, no-obligation estimates. Call (815) 246-2113 or fill out our contact form for your Naperville deep clean quote.",
   },
   {
     question: "What is included in deep cleaning in Naperville?",
@@ -40,7 +40,7 @@ const faqs = [
   {
     question: "Is deep cleaning worth the cost in Naperville?",
     answer:
-      "Yes — deep cleaning is worth it for most Naperville homeowners who want a true reset. A standard clean maintains a home that's already clean; a deep clean eliminates built-up grease, grime, soap scum, and dust from areas that accumulate over time. It's especially valuable before hosting guests, after a renovation, at the start of a new season, or as a first clean before starting a recurring service.",
+      "Yes, deep cleaning is worth it for most Naperville homeowners who want a true reset. A standard clean maintains a home that's already clean; a deep clean eliminates built-up grease, grime, soap scum, and dust from areas that accumulate over time. It's especially valuable before hosting guests, after a renovation, at the start of a new season, or as a first clean before starting a recurring service.",
   },
   {
     question: "How do I get a deep cleaning quote for my Naperville home?",
@@ -107,7 +107,7 @@ const pricingBySize = [
 const included = [
   { room: "Kitchen", items: ["Inside microwave", "Inside and outside oven", "Refrigerator exterior", "Grease-cut stovetop and drip pans", "Wipe all cabinet fronts and handles", "Scrub sink and faucet", "Clean small appliances", "Sweep and mop floor"] },
   { room: "Bathrooms", items: ["Scrub grout and tile", "Remove soap scum from shower/tub", "Clean inside and behind toilet", "Polish all fixtures", "Scrub sink and vanity", "Wipe all baseboards", "Clean mirrors and glass", "Scrub floor"] },
-  { room: "Bedrooms & Living", items: ["Dust ceiling fans and fixtures", "Wipe all baseboards and door frames", "Clean window sills and inside glass", "Dust all surfaces top-to-bottom", "Vacuum carpets with edge detail", "Sweep and mop hard floors", "Wipe light switches and outlets"] },
+  { room: "Bedrooms & Living", items: ["Dust ceiling fans and fixtures", "Wipe all baseboards and door frames", "Clean window sills and inside glass", "Dust every surface, working from high to low", "Vacuum carpets with edge detail", "Sweep and mop hard floors", "Wipe light switches and outlets"] },
   { room: "Whole Home", items: ["Wipe all doors and door frames", "Clean all vents and registers", "Spot-clean walls as needed", "Wipe all window sills", "Empty and re-line trash bins", "Final walkthrough inspection"] },
 ];
 
@@ -176,14 +176,14 @@ export default function DeepCleaningCostNapervillePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading mb-6">Deep Cleaning Prices in Naperville, IL (2026)</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            Deep cleaning cost in Naperville, IL is one of the most searched questions we get —
+            Deep cleaning cost in Naperville, IL is one of the most searched questions we get,
             and for good reason. Deep cleaning is a significant investment, and homeowners want
             to know what they&apos;re paying for before committing. At DSM Cleaning Solutions, we
             use flat-rate pricing so you always know the cost before we arrive.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
             We serve all of Naperville across zip codes <strong>60540</strong>,{" "}
-            <strong>60563</strong>, <strong>60564</strong>, and <strong>60565</strong> —
+            <strong>60563</strong>, <strong>60564</strong>, and <strong>60565</strong>,
             including neighborhoods like Hobson West, Ashbury, White Eagle, and Downtown
             Naperville. Deep cleaning is recommended as a first clean before starting recurring
             service, as a seasonal reset, after renovations, or when a home hasn&apos;t been
@@ -239,7 +239,7 @@ export default function DeepCleaningCostNapervillePage() {
           <div className="text-center mb-12">
             <h2 className="section-heading">What Is Included in a Naperville Deep Clean?</h2>
             <p className="section-subheading mx-auto">
-              Every room, every surface — a complete deep cleaning checklist.
+              Every room, every surface: a complete deep cleaning checklist.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -325,21 +325,21 @@ export default function DeepCleaningCostNapervillePage() {
           <h2 className="section-heading mb-6">How DSM Prices Deep Cleans in Naperville</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             When Naperville homeowners contact us for a deep cleaning quote, we use a flat-rate
-            formula based on your bedroom and bathroom count — the same pricing model used for
+            formula based on your bedroom and bathroom count, the same pricing model used for
             every customer in 60540, 60563, 60564, and 60565. There are no hourly surprises
             and no travel fees within Naperville.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
             We do ask about the current condition of your home because a home that hasn&apos;t
             been professionally cleaned in over a year may require extra time. If that&apos;s
-            the case, we&apos;ll note it in your quote upfront — never as an add-on after we
+            the case, we&apos;ll note it in your quote upfront, never as an add-on after we
             arrive. Add-on services like inside refrigerator, laundry, or interior window
             cleaning are listed separately and only added if you request them.
           </p>
           <p className="text-gray-600 leading-relaxed">
             Many Naperville customers start with a deep clean and then move to bi-weekly or
             monthly standard cleaning to maintain the results. Ask about our recurring
-            cleaning rates when you call — recurring customers consistently pay less per
+            cleaning rates when you call. Recurring customers consistently pay less per
             visit than one-time clients.
           </p>
         </div>
@@ -349,7 +349,7 @@ export default function DeepCleaningCostNapervillePage() {
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="section-heading">Naperville Deep Cleaning Cost — FAQs</h2>
+            <h2 className="section-heading">Naperville Deep Cleaning Cost: FAQs</h2>
           </div>
           <div className="space-y-4">
             {faqs.map((faq, i) => (
@@ -379,11 +379,11 @@ export default function DeepCleaningCostNapervillePage() {
               <p className="text-sm text-gray-600">See complete pricing for all services across every city we serve.</p>
             </Link>
             <Link href="/deep-cleaning-naperville-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning — Naperville</h3>
+              <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Naperville</h3>
               <p className="text-sm text-gray-600">Full details on our deep cleaning service across all Naperville zip codes.</p>
             </Link>
             <Link href="/deep-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning — All Areas</h3>
+              <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning: All Areas</h3>
               <p className="text-sm text-gray-600">Learn about our complete deep cleaning service throughout the southwest suburbs.</p>
             </Link>
           </div>
@@ -397,7 +397,7 @@ export default function DeepCleaningCostNapervillePage() {
             <div className="text-white">
               <h2 className="text-4xl font-bold mb-4">Get a Free Naperville Deep Clean Quote</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                Tell us your home size and zip code — we&apos;ll send you a firm flat-rate price
+                Tell us your home size and zip code, and we&apos;ll send you a firm flat-rate price
                 for your Naperville deep cleaning, usually same-day. No obligation to book.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">

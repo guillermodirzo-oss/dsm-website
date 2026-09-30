@@ -81,7 +81,7 @@ export default function NapervillePage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <Link href="/deep-cleaning-naperville-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Naperville</h3>
-              <p className="text-sm text-gray-600">Top-to-bottom deep cleaning for Naperville homes across all four zip codes.</p>
+              <p className="text-sm text-gray-600">Baseboards, ceiling fans and bathroom grout, in all four Naperville zip codes.</p>
             </Link>
             <Link href="/recurring-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Recurring Cleaning in Naperville</h3>

@@ -253,7 +253,7 @@ export default function MoveOutCleaningBolingbrookPage() {
             <div className="hidden lg:block">
               <Image
                 src="/work-photos/apartment-move-out-cleaning-joliet-il.jpg"
-                alt="Move-out cleaning in Bolingbrook IL — DSM Cleaning Solutions"
+                alt="Move-out cleaning in Bolingbrook IL by DSM Cleaning Solutions"
                 width={1920}
                 height={2560}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
