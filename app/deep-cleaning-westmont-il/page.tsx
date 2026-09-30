@@ -443,11 +443,11 @@ export default function DeepCleaningWestmontPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">We Also Offer Deep Cleaning in Nearby Cities</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <Link href="/deep-cleaning/downers-grove" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+            <Link href="/deep-cleaning-downers-grove-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Downers Grove</h3>
               <p className="text-sm text-gray-600">Serving 60515 &amp; 60516.</p>
             </Link>
-            <Link href="/deep-cleaning/hinsdale" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+            <Link href="/deep-cleaning-hinsdale-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Hinsdale</h3>
               <p className="text-sm text-gray-600">Serving all of Hinsdale, IL (60521).</p>
             </Link>

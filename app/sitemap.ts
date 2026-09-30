@@ -283,24 +283,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/deep-cleaning/hinsdale`,
+      url: `${baseUrl}/deep-cleaning-hinsdale-il`,
       changeFrequency: "monthly" as const,
-      priority: 0.8,
+      priority: 0.85,
     },
     {
-      url: `${baseUrl}/deep-cleaning/burr-ridge`,
+      url: `${baseUrl}/deep-cleaning-burr-ridge-il`,
       changeFrequency: "monthly" as const,
-      priority: 0.8,
+      priority: 0.85,
     },
     {
-      url: `${baseUrl}/deep-cleaning/oak-brook`,
+      url: `${baseUrl}/deep-cleaning-oak-brook-il`,
       changeFrequency: "monthly" as const,
-      priority: 0.8,
+      priority: 0.85,
     },
     {
-      url: `${baseUrl}/deep-cleaning/downers-grove`,
+      url: `${baseUrl}/deep-cleaning-downers-grove-il`,
       changeFrequency: "monthly" as const,
-      priority: 0.8,
+      priority: 0.85,
     },
     {
       url: `${baseUrl}/book`,

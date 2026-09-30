@@ -103,6 +103,8 @@ Never change form payloads, guards or the Step 1 partial capture. Never send tes
 8. Internal links must point to live internal pages: never to BookingKoala URLs, and never to a URL that redirects.
 9. Every new page must be added to `app/sitemap.ts`. Standalone blog routes that aren't in `lib/blogData.ts` need their own entry.
 10. Never alter existing design, layout, colors, or content unless explicitly instructed.
+11. Service city pages use the pattern /{service}-{city}-il. Never create nested /service/city routes.
+12. Blog posts answer questions (cost, checklists, how to prepare, comparisons). A blog post must never target the same search as a service page or city page, for example "move-out cleaning {city}" or "maid service {city}". Those searches belong to the landing pages.
 
 ## Copy Rules
 - No em dashes, no en dashes, no double hyphens.

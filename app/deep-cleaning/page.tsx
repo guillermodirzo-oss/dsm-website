@@ -619,10 +619,10 @@ export default function DeepCleaningPage() {
             <Link href="/deep-cleaning-homer-glen-il" className="px-4 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-green-700 hover:text-green-700 transition">Homer Glen IL</Link>
             <Link href="/deep-cleaning-new-lenox-il" className="px-4 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-green-700 hover:text-green-700 transition">New Lenox IL</Link>
             <Link href="/deep-cleaning-minooka-il" className="px-4 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-green-700 hover:text-green-700 transition">Minooka IL</Link>
-            <Link href="/deep-cleaning/hinsdale" className="px-4 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-green-700 hover:text-green-700 transition">Hinsdale IL</Link>
-            <Link href="/deep-cleaning/oak-brook" className="px-4 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-green-700 hover:text-green-700 transition">Oak Brook IL</Link>
-            <Link href="/deep-cleaning/downers-grove" className="px-4 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-green-700 hover:text-green-700 transition">Downers Grove IL</Link>
-            <Link href="/deep-cleaning/burr-ridge" className="px-4 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-green-700 hover:text-green-700 transition">Burr Ridge IL</Link>
+            <Link href="/deep-cleaning-hinsdale-il" className="px-4 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-green-700 hover:text-green-700 transition">Hinsdale IL</Link>
+            <Link href="/deep-cleaning-oak-brook-il" className="px-4 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-green-700 hover:text-green-700 transition">Oak Brook IL</Link>
+            <Link href="/deep-cleaning-downers-grove-il" className="px-4 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-green-700 hover:text-green-700 transition">Downers Grove IL</Link>
+            <Link href="/deep-cleaning-burr-ridge-il" className="px-4 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-green-700 hover:text-green-700 transition">Burr Ridge IL</Link>
           </div>
         </div>
       </section>

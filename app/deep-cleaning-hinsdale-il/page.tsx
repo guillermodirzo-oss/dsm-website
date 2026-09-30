@@ -7,55 +7,55 @@ import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 
 export const metadata: Metadata = {
-  title: "Deep Cleaning Downers Grove IL",
+  title: "Deep Cleaning Hinsdale IL",
   description:
-    "Professional deep cleaning in Downers Grove, IL. Reliable, thorough service for Downers Grove families. Fully insured, 48-hour guarantee. Free quote.",
-  alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning/downers-grove" },
+    "Professional deep cleaning in Hinsdale, IL. DSM Cleaning Solutions delivers white-glove deep cleans for Hinsdale's historic and luxury homes. 5-star rated, 48-hour guarantee. Book today.",
+  alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-hinsdale-il" },
   openGraph: {
-    title: "Deep Cleaning Downers Grove IL | DSM Cleaning Solutions",
+    title: "Deep Cleaning Hinsdale IL | DSM Cleaning Solutions",
     description:
-      "Professional deep cleaning in Downers Grove, IL. Reliable, thorough service for Downers Grove families. Fully insured, 48-hour guarantee. Free quote.",
-    url: "https://www.dsmcleaningsolutions.com/deep-cleaning/downers-grove",
+      "Professional deep cleaning in Hinsdale, IL. DSM Cleaning Solutions delivers white-glove deep cleans for Hinsdale's historic and luxury homes. 5-star rated, 48-hour guarantee. Book today.",
+    url: "https://www.dsmcleaningsolutions.com/deep-cleaning-hinsdale-il",
   },
   twitter: { card: "summary_large_image", images: ["/hero-image.png"] },
 };
 
 const faqs = [
   {
-    q: "What does a deep cleaning include in Downers Grove?",
-    a: "We clean inside the oven, degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. Every room gets thorough attention.",
+    q: "What does a deep cleaning include in Hinsdale?",
+    a: "We clean inside the oven, degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. We take extra care with premium surfaces and finishes.",
   },
   {
-    q: "How long does a deep clean take in Downers Grove?",
-    a: "Most Downers Grove homes take 3 to 5 hours depending on size. We take the time needed and do not rush through the job.",
+    q: "How long does a deep clean take in Hinsdale?",
+    a: "Most Hinsdale homes take 4 to 6 hours depending on size. Larger or more detailed homes may take longer. We do not rush and we take care with your home throughout.",
   },
   {
     q: "Do I need to be home during the cleaning?",
-    a: "You do not need to be home. Many Downers Grove clients provide a key or lockbox code. We take care of everything and lock up when we leave.",
+    a: "You do not need to be home. Many of our Hinsdale clients provide a key or lockbox code. We handle everything and lock up securely when we leave.",
   },
   {
     q: "What if my quote comes in higher than the range listed?",
     a: "The ranges listed cover typical homes in that bedroom count. If your home runs bigger, has more bathrooms, or needs extra attention, your quote might land higher. We always confirm your exact price before we book anything. No surprises.",
   },
   {
-    q: "Do you serve all parts of Downers Grove?",
-    a: "Yes. We serve downtown Downers Grove, the Fairmount area, and all surrounding neighborhoods throughout Downers Grove, IL 60515 and 60516.",
+    q: "Do you have experience cleaning historic and luxury homes?",
+    a: "Yes. We understand that Hinsdale homes often have premium finishes, hardwood floors, and custom fixtures that need careful handling. We use appropriate products and techniques for every surface.",
   },
 ];
 
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Deep Cleaning Services Downers Grove IL",
+  name: "Deep Cleaning Services Hinsdale IL",
   serviceType: "Deep Cleaning",
   areaServed: {
     "@type": "City",
-    name: "Downers Grove",
+    name: "Hinsdale",
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   provider: { "@id": "https://www.dsmcleaningsolutions.com/#business" },
   description:
-    "Professional deep cleaning for homes in Downers Grove, IL. Includes oven cleaning, grout scrubbing, baseboard wiping, and full room detail.",
+    "Professional deep cleaning for luxury and historic homes in Hinsdale, IL. Careful, detail-oriented service with eco-friendly products.",
   offers: {
     "@type": "Offer",
     priceCurrency: "USD",
@@ -84,8 +84,8 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dsmcleaningsolutions.com" },
-    { "@type": "ListItem", position: 2, name: "Deep Cleaning", item: "https://www.dsmcleaningsolutions.com/deep-cleaning/downers-grove" },
-    { "@type": "ListItem", position: 3, name: "Downers Grove IL" },
+    { "@type": "ListItem", position: 2, name: "Deep Cleaning", item: "https://www.dsmcleaningsolutions.com/deep-cleaning-hinsdale-il" },
+    { "@type": "ListItem", position: 3, name: "Hinsdale IL" },
   ],
 };
 
@@ -138,7 +138,7 @@ const checklist = [
   },
 ];
 
-export default function DeepCleaningDownersGrovePage() {
+export default function DeepCleaningHinsdalePage() {
   return (
     <>
       <script
@@ -162,22 +162,22 @@ export default function DeepCleaningDownersGrovePage() {
           <nav className="text-sm mb-4 opacity-80">
             <Link href="/" className="hover:underline">Home</Link>
             <span className="mx-2">/</span>
-            <span>Deep Cleaning Downers Grove IL</span>
+            <span>Deep Cleaning Hinsdale IL</span>
           </nav>
           <div className="flex flex-col md:flex-row gap-10 items-center">
             <div className="flex-1">
               <h1 className="text-3xl md:text-4xl font-bold mb-3 leading-tight">
-                Deep Cleaning Services in Downers Grove, IL
+                Deep Cleaning Services in Hinsdale, IL
               </h1>
               <div className="flex items-center gap-2 mb-3">
                 <span style={{ color: "#FFA869" }} className="text-xl">★★★★★</span>
                 <span className="text-sm opacity-90">5.0 — {REVIEW_COUNT} reviews on Google</span>
               </div>
               <p className="text-lg font-semibold mb-2">
-                Reliable, thorough deep cleaning for Downers Grove families.
+                Detail-oriented deep cleaning for Hinsdale&apos;s finest homes.
               </p>
               <p className="opacity-90 mb-6 leading-relaxed">
-                DSM Cleaning Solutions serves Downers Grove, IL with professional deep cleaning that covers every room. Eco-friendly products, fully insured, and a 48-hour satisfaction guarantee on every job.
+                DSM Cleaning Solutions provides careful, professional deep cleaning for homes in Hinsdale, IL. We understand that Hinsdale homes have premium finishes that need the right care. Eco-friendly products, fully insured, and a 48-hour satisfaction guarantee on every job.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
@@ -198,7 +198,7 @@ export default function DeepCleaningDownersGrovePage() {
             <div className="flex-shrink-0 w-full md:w-80">
               <Image
                 src="/work-photos/double-vanity-bathroom-clean-naperville-il.jpg"
-                alt="Deep cleaned bathroom in Downers Grove IL"
+                alt="Deep cleaned bathroom in Hinsdale IL"
                 width={1920}
                 height={2560}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -224,13 +224,13 @@ export default function DeepCleaningDownersGrovePage() {
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto prose prose-gray">
           <p className="text-gray-700 leading-relaxed mb-4">
-            Downers Grove is a busy community in DuPage County with active families and homes that get a lot of use. We serve homeowners in downtown Downers Grove, the Fairmount area, and throughout the 60515 and 60516 zip codes. Whether life has gotten in the way of keeping up with cleaning or you just want a real deep clean, we can help.
+            Hinsdale is one of the Chicago area&apos;s most established communities, with homes that range from historic estates to newer custom builds. We approach every Hinsdale home with the level of care those homes deserve. That means the right products for the right surfaces and attention to every detail.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Our deep cleaning is not a rush job. We spend real time in each room. In the kitchen we get inside the oven, degrease the stovetop, and scrub the sink. In bathrooms we scrub grout lines and clean everything from fixtures to floors. In bedrooms and living areas we dust ceiling fans, wipe baseboards, clean window sills, and vacuum under furniture.
+            Our deep cleaning covers downtown Hinsdale, West Hinsdale, and surrounding neighborhoods. We clean inside ovens, scrub grout lines, polish fixtures, wipe baseboards, dust ceiling fans, and clean window sills in every room. Nothing gets skipped.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            We use eco-friendly, non-toxic products on every job and back our work with a 48-hour satisfaction guarantee. If something is not right, contact us and we will come back to fix it at no charge.
+            We use eco-friendly, non-toxic products that are safe for your home and your family. We are fully insured and back every clean with a 48-hour satisfaction guarantee. If something is not right, we come back at no charge.
           </p>
         </div>
       </section>
@@ -240,9 +240,9 @@ export default function DeepCleaningDownersGrovePage() {
         <div className="max-w-2xl mx-auto text-center">
           <p style={{ color: "#E8622A" }} className="text-5xl font-serif leading-none mb-3">&ldquo;</p>
           <p className="text-gray-800 text-lg leading-relaxed italic mb-4">
-            {REAL_REVIEWS[1].text}
+            {REAL_REVIEWS[2].text}
           </p>
-          <p className="font-semibold text-gray-700">{REAL_REVIEWS[1].name}</p>
+          <p className="font-semibold text-gray-700">{REAL_REVIEWS[2].name}</p>
           <div className="flex justify-center mt-2">
             <span style={{ color: "#FFA869" }}>★★★★★</span>
           </div>
@@ -253,38 +253,38 @@ export default function DeepCleaningDownersGrovePage() {
       <section className="py-14 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl font-bold text-gray-800 text-center mb-10">
-            Why Downers Grove Homeowners Choose DSM
+            Why Hinsdale Homeowners Choose DSM
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
             <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="font-bold text-gray-800 mb-2">We Are Local</h3>
+              <h3 className="font-bold text-gray-800 mb-2">We Respect Your Home</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                DSM is a small, family-run business. We are not a franchise. You work with a team that cares about doing good work and building trust in the communities we serve.
+                Hinsdale homes have premium finishes, hardwood floors, and custom details. We use appropriate products for every surface and handle your home with care throughout the entire clean.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="font-bold text-gray-800 mb-2">We Cover What Others Skip</h3>
+              <h3 className="font-bold text-gray-800 mb-2">Detail-Oriented Service</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Inside the oven, grout lines, baseboards, ceiling fans, under furniture, window sills. Our deep clean gets into every corner that standard cleaning leaves behind.
+                We go room by room with no shortcuts. Inside the oven, grout lines, baseboards, ceiling fans, window sills. Every surface in every room gets attention.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">
               <h3 className="font-bold text-gray-800 mb-2">Eco-Friendly Products</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                We use plant-based, non-toxic products on every job. Safe for your family, kids, and pets. No harsh chemical smell when we are done.
+                We use plant-based, non-toxic cleaning products on every job. Safe for your family and gentle on premium finishes. No harsh chemical smell when we are done.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">
               <h3 className="font-bold text-gray-800 mb-2">48-Hour Guarantee</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                If anything is not right after we leave, contact us within 48 hours and we will come back to fix it. No charge. We want you satisfied with every job.
+                If anything is not right after we leave, contact us within 48 hours and we will come back to fix it. No charge, no questions. We stand behind every job.
               </p>
             </div>
           </div>
           <div className="text-center">
             <Image
               src="/work-photos/google-post-image-cleaning-service-1.jpg"
-              alt="DSM Cleaning Solutions team in Downers Grove IL"
+              alt="DSM Cleaning Solutions team in Hinsdale IL"
               width={940}
               height={788}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -299,7 +299,7 @@ export default function DeepCleaningDownersGrovePage() {
       <section className="py-14 px-4 bg-gray-50">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl font-bold text-gray-800 text-center mb-2">
-            What We Clean in Your Downers Grove Home
+            What We Clean in Your Hinsdale Home
           </h2>
           <p className="text-center text-gray-500 text-sm mb-10">
             Every deep clean includes all of the following
@@ -335,7 +335,7 @@ export default function DeepCleaningDownersGrovePage() {
       <section className="py-12 px-4 bg-white">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">
-            Deep Cleaning Prices in Downers Grove IL
+            Deep Cleaning Prices in Hinsdale IL
           </h2>
           <div className="text-gray-600 leading-relaxed mb-4">{DEEP_CLEANING_PRICING_COPY}</div>
           <p className="text-gray-600 leading-relaxed mb-4">
@@ -353,10 +353,10 @@ export default function DeepCleaningDownersGrovePage() {
       <section className="py-14 px-4 bg-gray-50">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl font-bold text-gray-800 text-center mb-10">
-            What Downers Grove Clients Are Saying
+            What Hinsdale Clients Are Saying
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            {pickReviews(3, 6).map((review) => (
+            {pickReviews(3, 9).map((review) => (
               <div key={review.name} className="bg-white rounded-xl p-6 shadow-sm">
                 <div className="flex mb-3">
                   <span style={{ color: "#FFA869" }}>★★★★★</span>
@@ -408,9 +408,9 @@ export default function DeepCleaningDownersGrovePage() {
         className="py-16 px-4"
       >
         <div className="max-w-2xl mx-auto text-center text-white mb-8">
-          <h2 className="text-2xl font-bold mb-2">Get a Free Deep Cleaning Quote in Downers Grove</h2>
+          <h2 className="text-2xl font-bold mb-2">Get a Free Deep Cleaning Quote in Hinsdale</h2>
           <p className="opacity-90">
-            Fill out the form below and we will get back to you fast. No commitment required.
+            Fill out the form below and we will get back to you fast with pricing. No commitment required.
           </p>
         </div>
         <div className="max-w-xl mx-auto bg-white rounded-2xl shadow-xl p-8">
@@ -418,7 +418,7 @@ export default function DeepCleaningDownersGrovePage() {
             <div className="flex justify-center mb-1">
               <span style={{ color: "#E8622A" }} className="text-2xl">★★★★★</span>
             </div>
-            <p className="text-sm text-gray-500">Trusted by Downers Grove homeowners — {REVIEW_COUNT} five-star reviews</p>
+            <p className="text-sm text-gray-500">Trusted by Hinsdale homeowners — {REVIEW_COUNT} five-star reviews</p>
           </div>
           <CityDeepCleanForm />
         </div>
@@ -436,16 +436,16 @@ export default function DeepCleaningDownersGrovePage() {
               Deep Cleaning Westmont IL
             </Link>
             <Link
-              href="/deep-cleaning/oak-brook"
+              href="/deep-cleaning-oak-brook-il"
               className="px-5 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-brand-green hover:text-brand-green transition"
             >
               Deep Cleaning Oak Brook IL
             </Link>
             <Link
-              href="/deep-cleaning-naperville-il"
+              href="/deep-cleaning-burr-ridge-il"
               className="px-5 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-brand-green hover:text-brand-green transition"
             >
-              Deep Cleaning Naperville IL
+              Deep Cleaning Burr Ridge IL
             </Link>
           </div>
         </div>

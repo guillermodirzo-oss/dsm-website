@@ -312,6 +312,106 @@ const nextConfig = {
         destination: "/deep-cleaning-naperville-il",
         permanent: true,
       },
+      // Last 4 nested deep cleaning pages, moved to /deep-cleaning-{city}-il.
+      {
+        source: "/deep-cleaning/hinsdale",
+        destination: "/deep-cleaning-hinsdale-il",
+        permanent: true,
+      },
+      {
+        source: "/deep-cleaning/oak-brook",
+        destination: "/deep-cleaning-oak-brook-il",
+        permanent: true,
+      },
+      {
+        source: "/deep-cleaning/downers-grove",
+        destination: "/deep-cleaning-downers-grove-il",
+        permanent: true,
+      },
+      {
+        source: "/deep-cleaning/burr-ridge",
+        destination: "/deep-cleaning-burr-ridge-il",
+        permanent: true,
+      },
+
+      // ─── BLOG POSTS CONSOLIDATED INTO LANDING PAGES ───────────────────────
+      // These posts targeted the same searches as a service or city page, so
+      // each one now points at the page that should rank for that search.
+      {
+        source: "/blog/move-out-cleaning-romeoville-il",
+        destination: "/move-out-cleaning-romeoville-il",
+        permanent: true,
+      },
+      {
+        source: "/blog/move-out-cleaning-joliet-il",
+        destination: "/move-out-cleaning-joliet-il",
+        permanent: true,
+      },
+      {
+        source: "/blog/move-out-cleaning-lockport-il",
+        destination: "/move-out-cleaning-lockport-il",
+        permanent: true,
+      },
+      {
+        source: "/blog/how-to-get-your-security-deposit-back-move-out-cleaning-naperville-bolingbrook",
+        destination: "/move-out-cleaning-naperville-il",
+        permanent: true,
+      },
+      {
+        source: "/blog/deep-cleaning-service-joliet-il",
+        destination: "/deep-cleaning-joliet-il",
+        permanent: true,
+      },
+      {
+        source: "/blog/deep-cleaning-service-bolingbrook-il",
+        destination: "/deep-cleaning-bolingbrook-il",
+        permanent: true,
+      },
+      {
+        source: "/blog/deep-cleaning-service-naperville-checklist",
+        destination: "/deep-cleaning-naperville-il",
+        permanent: true,
+      },
+      {
+        source: "/blog/what-to-expect-from-a-professional-deep-cleaning-service-plainfield-il",
+        destination: "/deep-cleaning-plainfield-il",
+        permanent: true,
+      },
+      {
+        source: "/blog/maid-service-romeoville-il",
+        destination: "/recurring-cleaning",
+        permanent: true,
+      },
+      {
+        source: "/blog/recurring-cleaning-service-romeoville-il",
+        destination: "/recurring-cleaning",
+        permanent: true,
+      },
+      {
+        source: "/blog/house-cleaning-service-naperville-il",
+        destination: "/naperville-il",
+        permanent: true,
+      },
+      {
+        source: "/blog/best-house-cleaning-service-joliet-il",
+        destination: "/joliet-il",
+        permanent: true,
+      },
+      {
+        source: "/blog/best-house-cleaning-service-lockport-il",
+        destination: "/lockport-il",
+        permanent: true,
+      },
+      {
+        source: "/blog/how-to-prepare-for-a-deep-cleaning-service",
+        destination: "/blog/how-to-prepare-your-home-for-a-deep-clean",
+        permanent: true,
+      },
+      {
+        source: "/blog/deep-clean-vs-regular-cleaning",
+        destination: "/standard-vs-deep-cleaning",
+        permanent: true,
+      },
 
       // ─── SEARCH CONSOLE 404 CLEANUP ───────────────────────────────────────
       // Wrong slugs and deleted pages that Google still crawls.

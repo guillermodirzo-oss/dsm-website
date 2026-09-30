@@ -7,55 +7,55 @@ import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 
 export const metadata: Metadata = {
-  title: "Deep Cleaning Oak Brook IL",
+  title: "Deep Cleaning Burr Ridge IL",
   description:
-    "Professional deep cleaning in Oak Brook, IL. Premium service for luxury homes. Eco-friendly, fully insured, 48-hour satisfaction guarantee. Free quote.",
-  alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning/oak-brook" },
+    "Professional deep cleaning in Burr Ridge, IL. White-glove service for executive homes. Eco-friendly, fully insured, 48-hour satisfaction guarantee. Free quote.",
+  alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-burr-ridge-il" },
   openGraph: {
-    title: "Deep Cleaning Oak Brook IL | DSM Cleaning Solutions",
+    title: "Deep Cleaning Burr Ridge IL | DSM Cleaning Solutions",
     description:
-      "Professional deep cleaning in Oak Brook, IL. Premium service for luxury homes. Eco-friendly, fully insured, 48-hour satisfaction guarantee. Free quote.",
-    url: "https://www.dsmcleaningsolutions.com/deep-cleaning/oak-brook",
+      "Professional deep cleaning in Burr Ridge, IL. White-glove service for executive homes. Eco-friendly, fully insured, 48-hour satisfaction guarantee. Free quote.",
+    url: "https://www.dsmcleaningsolutions.com/deep-cleaning-burr-ridge-il",
   },
   twitter: { card: "summary_large_image", images: ["/hero-image.png"] },
 };
 
 const faqs = [
   {
-    q: "What does a deep cleaning include in Oak Brook?",
-    a: "We clean inside the oven, degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. We take care with premium surfaces and fixtures throughout.",
+    q: "What does a deep cleaning include in Burr Ridge?",
+    a: "We clean inside the oven, degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. We handle premium finishes and surfaces with care throughout.",
   },
   {
-    q: "How long does a deep clean take in Oak Brook?",
-    a: "Most Oak Brook homes take 4 to 6 hours depending on size. We take the time needed to do the job right and do not rush through premium homes.",
+    q: "How long does a deep clean take in Burr Ridge?",
+    a: "Most Burr Ridge homes take 4 to 6 hours depending on size. We take the time needed to clean thoroughly and do not rush executive-level homes.",
   },
   {
-    q: "Do I need to be home during the cleaning?",
-    a: "You do not need to be home. Many Oak Brook clients provide a key or lockbox code. We handle everything carefully and lock up when we leave.",
+    q: "Do I need to be home for the cleaning?",
+    a: "You do not need to be home. Many Burr Ridge clients provide a key or lockbox code. We handle everything with care and lock up securely when we are done.",
   },
   {
     q: "What if my quote comes in higher than the range listed?",
     a: "The ranges listed cover typical homes in that bedroom count. If your home runs bigger, has more bathrooms, or needs extra attention, your quote might land higher. We always confirm your exact price before we book anything. No surprises.",
   },
   {
-    q: "Do you serve both Oak Brook Center area and Butler National area?",
-    a: "Yes. We cover all neighborhoods in Oak Brook including the Oak Brook Center area, Butler National area, and surrounding residential neighborhoods throughout Oak Brook, IL 60523.",
+    q: "Do you serve both Burr Ridge Village Center and County Line Road area?",
+    a: "Yes. We cover all of Burr Ridge including the Village Center area, County Line Road corridor, and all surrounding residential neighborhoods in Burr Ridge, IL 60527.",
   },
 ];
 
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Deep Cleaning Services Oak Brook IL",
+  name: "Deep Cleaning Services Burr Ridge IL",
   serviceType: "Deep Cleaning",
   areaServed: {
     "@type": "City",
-    name: "Oak Brook",
+    name: "Burr Ridge",
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   provider: { "@id": "https://www.dsmcleaningsolutions.com/#business" },
   description:
-    "Professional deep cleaning for luxury homes in Oak Brook, IL. Careful, detail-oriented service with eco-friendly products.",
+    "Professional deep cleaning for executive and luxury homes in Burr Ridge, IL. Detail-oriented service with eco-friendly products.",
   offers: {
     "@type": "Offer",
     priceCurrency: "USD",
@@ -84,8 +84,8 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dsmcleaningsolutions.com" },
-    { "@type": "ListItem", position: 2, name: "Deep Cleaning", item: "https://www.dsmcleaningsolutions.com/deep-cleaning/oak-brook" },
-    { "@type": "ListItem", position: 3, name: "Oak Brook IL" },
+    { "@type": "ListItem", position: 2, name: "Deep Cleaning", item: "https://www.dsmcleaningsolutions.com/deep-cleaning-burr-ridge-il" },
+    { "@type": "ListItem", position: 3, name: "Burr Ridge IL" },
   ],
 };
 
@@ -138,7 +138,7 @@ const checklist = [
   },
 ];
 
-export default function DeepCleaningOakBrookPage() {
+export default function DeepCleaningBurrRidgePage() {
   return (
     <>
       <script
@@ -162,22 +162,22 @@ export default function DeepCleaningOakBrookPage() {
           <nav className="text-sm mb-4 opacity-80">
             <Link href="/" className="hover:underline">Home</Link>
             <span className="mx-2">/</span>
-            <span>Deep Cleaning Oak Brook IL</span>
+            <span>Deep Cleaning Burr Ridge IL</span>
           </nav>
           <div className="flex flex-col md:flex-row gap-10 items-center">
             <div className="flex-1">
               <h1 className="text-3xl md:text-4xl font-bold mb-3 leading-tight">
-                Deep Cleaning Services in Oak Brook, IL
+                Deep Cleaning Services in Burr Ridge, IL
               </h1>
               <div className="flex items-center gap-2 mb-3">
                 <span style={{ color: "#FFA869" }} className="text-xl">★★★★★</span>
                 <span className="text-sm opacity-90">5.0 — {REVIEW_COUNT} reviews on Google</span>
               </div>
               <p className="text-lg font-semibold mb-2">
-                Premium deep cleaning for Oak Brook homes. Careful and thorough.
+                Professional deep cleaning for Burr Ridge executive homes.
               </p>
               <p className="opacity-90 mb-6 leading-relaxed">
-                DSM Cleaning Solutions brings professional, detail-oriented deep cleaning to Oak Brook, IL. We cover every room with care, using eco-friendly products suited for premium finishes. Fully insured with a 48-hour satisfaction guarantee on every job.
+                DSM Cleaning Solutions brings careful, detail-oriented deep cleaning to Burr Ridge, IL. We treat every home with respect and cover every room thoroughly. Family owned, eco-friendly products, and a 48-hour satisfaction guarantee on every job.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
@@ -198,7 +198,7 @@ export default function DeepCleaningOakBrookPage() {
             <div className="flex-shrink-0 w-full md:w-80">
               <Image
                 src="/work-photos/double-vanity-bathroom-clean-naperville-il.jpg"
-                alt="Deep cleaned bathroom in Oak Brook IL"
+                alt="Deep cleaned bathroom in Burr Ridge IL"
                 width={1920}
                 height={2560}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -224,13 +224,13 @@ export default function DeepCleaningOakBrookPage() {
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto prose prose-gray">
           <p className="text-gray-700 leading-relaxed mb-4">
-            Oak Brook is known for its executive homes, manicured properties, and high standards. When homeowners here hire a cleaning service, they expect precision and professionalism. That is what DSM delivers on every job.
+            Burr Ridge is an upscale community in DuPage and Cook counties with executive homes that deserve professional-level care. DSM serves homeowners throughout Burr Ridge with a deep clean that is thorough, careful, and done right.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            We serve the Oak Brook Center area, Butler National area, and all surrounding Oak Brook neighborhoods. Our deep cleaning goes room by room with no shortcuts. In the kitchen that means inside the oven and behind the stovetop grates. In the bathrooms it means grout scrubbing and polished fixtures. In bedrooms and living areas we cover baseboards, ceiling fans, window sills, and under furniture.
+            We cover the Village Center area, the County Line Road corridor, and all surrounding Burr Ridge neighborhoods. Our deep cleaning is room by room with no shortcuts. Kitchen means inside the oven and behind the stovetop. Bathrooms mean scrubbed grout and polished fixtures. Living areas mean clean baseboards, dusted ceiling fans, and vacuumed under every piece of furniture.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            We use eco-friendly, non-toxic products and are fully insured. Every job is backed by our 48-hour satisfaction guarantee. If anything is not right, we come back and fix it at no charge.
+            We use eco-friendly, non-toxic products and are fully insured. Every job comes with a 48-hour satisfaction guarantee. If anything is not right, we come back and fix it at no charge.
           </p>
         </div>
       </section>
@@ -240,9 +240,9 @@ export default function DeepCleaningOakBrookPage() {
         <div className="max-w-2xl mx-auto text-center">
           <p style={{ color: "#E8622A" }} className="text-5xl font-serif leading-none mb-3">&ldquo;</p>
           <p className="text-gray-800 text-lg leading-relaxed italic mb-4">
-            {REAL_REVIEWS[4].text}
+            {REAL_REVIEWS[0].text}
           </p>
-          <p className="font-semibold text-gray-700">{REAL_REVIEWS[4].name}</p>
+          <p className="font-semibold text-gray-700">{REAL_REVIEWS[0].name}</p>
           <div className="flex justify-center mt-2">
             <span style={{ color: "#FFA869" }}>★★★★★</span>
           </div>
@@ -253,38 +253,38 @@ export default function DeepCleaningOakBrookPage() {
       <section className="py-14 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl font-bold text-gray-800 text-center mb-10">
-            Why Oak Brook Homeowners Choose DSM
+            Why Burr Ridge Homeowners Choose DSM
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
             <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="font-bold text-gray-800 mb-2">We Respect Your Home</h3>
+              <h3 className="font-bold text-gray-800 mb-2">We Treat Your Home With Care</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Oak Brook homes have premium finishes that need the right approach. We use appropriate products for every surface and take care throughout the entire clean.
+                Burr Ridge homes often have custom finishes, hardwood floors, and high-end fixtures. We use the right products for every surface and handle your home carefully from start to finish.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="font-bold text-gray-800 mb-2">No Detail Gets Missed</h3>
+              <h3 className="font-bold text-gray-800 mb-2">Nothing Gets Skipped</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Inside the oven, grout lines, baseboards, ceiling fans, under furniture, window sills. We go where surface cleaning does not, and we document nothing we skip.
+                Inside the oven, grout lines, baseboards, ceiling fans, under furniture, window sills. Every room gets the full deep clean treatment with no corners cut.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">
               <h3 className="font-bold text-gray-800 mb-2">Eco-Friendly Products</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                We use plant-based, non-toxic products safe for your family and your home&apos;s finishes. No harsh chemical residue when we leave.
+                We use plant-based, non-toxic products on every job. Safe for your family and gentle on premium finishes. No harsh chemical residue when we leave.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">
               <h3 className="font-bold text-gray-800 mb-2">48-Hour Guarantee</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                If anything is not right, let us know within 48 hours and we will come back to fix it. No charge, no argument. We stand behind every job we do.
+                If anything is not right after we leave, contact us within 48 hours and we will come back to fix it at no charge. We stand behind every job.
               </p>
             </div>
           </div>
           <div className="text-center">
             <Image
               src="/work-photos/google-post-image-cleaning-service-1.jpg"
-              alt="DSM Cleaning Solutions team in Oak Brook IL"
+              alt="DSM Cleaning Solutions team in Burr Ridge IL"
               width={940}
               height={788}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -299,7 +299,7 @@ export default function DeepCleaningOakBrookPage() {
       <section className="py-14 px-4 bg-gray-50">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl font-bold text-gray-800 text-center mb-2">
-            What We Clean in Your Oak Brook Home
+            What We Clean in Your Burr Ridge Home
           </h2>
           <p className="text-center text-gray-500 text-sm mb-10">
             Every deep clean includes all of the following
@@ -335,7 +335,7 @@ export default function DeepCleaningOakBrookPage() {
       <section className="py-12 px-4 bg-white">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">
-            Deep Cleaning Prices in Oak Brook IL
+            Deep Cleaning Prices in Burr Ridge IL
           </h2>
           <div className="text-gray-600 leading-relaxed mb-4">{DEEP_CLEANING_PRICING_COPY}</div>
           <p className="text-gray-600 leading-relaxed mb-4">
@@ -353,10 +353,10 @@ export default function DeepCleaningOakBrookPage() {
       <section className="py-14 px-4 bg-gray-50">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl font-bold text-gray-800 text-center mb-10">
-            What Oak Brook Clients Are Saying
+            What Burr Ridge Clients Are Saying
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            {pickReviews(3, 1).map((review) => (
+            {pickReviews(3, 3).map((review) => (
               <div key={review.name} className="bg-white rounded-xl p-6 shadow-sm">
                 <div className="flex mb-3">
                   <span style={{ color: "#FFA869" }}>★★★★★</span>
@@ -408,7 +408,7 @@ export default function DeepCleaningOakBrookPage() {
         className="py-16 px-4"
       >
         <div className="max-w-2xl mx-auto text-center text-white mb-8">
-          <h2 className="text-2xl font-bold mb-2">Get a Free Deep Cleaning Quote in Oak Brook</h2>
+          <h2 className="text-2xl font-bold mb-2">Get a Free Deep Cleaning Quote in Burr Ridge</h2>
           <p className="opacity-90">
             Fill out the form below and we will get back to you fast. No commitment required.
           </p>
@@ -418,7 +418,7 @@ export default function DeepCleaningOakBrookPage() {
             <div className="flex justify-center mb-1">
               <span style={{ color: "#E8622A" }} className="text-2xl">★★★★★</span>
             </div>
-            <p className="text-sm text-gray-500">Trusted by Oak Brook homeowners — {REVIEW_COUNT} five-star reviews</p>
+            <p className="text-sm text-gray-500">Trusted by Burr Ridge homeowners — {REVIEW_COUNT} five-star reviews</p>
           </div>
           <CityDeepCleanForm />
         </div>
@@ -430,22 +430,22 @@ export default function DeepCleaningOakBrookPage() {
           <h2 className="text-lg font-bold text-gray-700 mb-6">We Also Serve Nearby Cities</h2>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
+              href="/deep-cleaning-hinsdale-il"
+              className="px-5 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-brand-green hover:text-brand-green transition"
+            >
+              Deep Cleaning Hinsdale IL
+            </Link>
+            <Link
               href="/deep-cleaning-westmont-il"
               className="px-5 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-brand-green hover:text-brand-green transition"
             >
               Deep Cleaning Westmont IL
             </Link>
             <Link
-              href="/deep-cleaning/hinsdale"
+              href="/deep-cleaning-lemont-il"
               className="px-5 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-brand-green hover:text-brand-green transition"
             >
-              Deep Cleaning Hinsdale IL
-            </Link>
-            <Link
-              href="/deep-cleaning/downers-grove"
-              className="px-5 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-brand-green hover:text-brand-green transition"
-            >
-              Deep Cleaning Downers Grove IL
+              Deep Cleaning Lemont IL
             </Link>
           </div>
         </div>
