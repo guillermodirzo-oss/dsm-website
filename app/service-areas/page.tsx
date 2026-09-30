@@ -67,7 +67,7 @@ const cities = [
       "Our home base. We serve every neighborhood in Romeoville including Windstone, Hidden Lakes and Grand Haven.",
     links: [
       { label: "Deep Cleaning", href: "/deep-cleaning-romeoville-il" },
-      { label: "Standard Cleaning", href: "/standard-cleaning-romeoville-il" },
+      { label: "Standard Cleaning", href: "/" },
       { label: "Move-Out Cleaning", href: "/move-out-cleaning-romeoville-il" },
     ],
     locationPage: "/",
@@ -79,7 +79,7 @@ const cities = [
       "Serving Settlers Ridge, Lakewood Falls, Grande Park, Springbank and all Plainfield neighborhoods.",
     links: [
       { label: "Deep Cleaning", href: "/deep-cleaning-plainfield-il" },
-      { label: "Standard Cleaning", href: "/standard-cleaning-plainfield-il" },
+      { label: "Standard Cleaning", href: "/plainfield-il" },
       { label: "Move-Out Cleaning", href: "/move-out-cleaning-plainfield-il" },
     ],
     locationPage: "/plainfield-il",
@@ -91,7 +91,7 @@ const cities = [
       "Serving Cress Creek, White Eagle, Ashbury, Hobson West and all Naperville neighborhoods.",
     links: [
       { label: "Deep Cleaning", href: "/deep-cleaning-naperville-il" },
-      { label: "Standard Cleaning", href: "/standard-cleaning-naperville-il" },
+      { label: "Standard Cleaning", href: "/naperville-il" },
       { label: "Move-Out Cleaning", href: "/move-out-cleaning-naperville-il" },
     ],
     locationPage: "/naperville-il",
@@ -103,7 +103,7 @@ const cities = [
       "Serving Americana Estates, Pheasant Chase, Stillwater and all Bolingbrook neighborhoods.",
     links: [
       { label: "Deep Cleaning", href: "/deep-cleaning-bolingbrook-il" },
-      { label: "Standard Cleaning", href: "/standard-cleaning-bolingbrook-il" },
+      { label: "Standard Cleaning", href: "/bolingbrook-il" },
       { label: "Move-Out Cleaning", href: "/move-out-cleaning-bolingbrook-il" },
     ],
     locationPage: "/bolingbrook-il",
@@ -115,7 +115,7 @@ const cities = [
       "Serving Ingalls Park, Rock Run, Cathedral Area, Forest Park and all Joliet neighborhoods.",
     links: [
       { label: "Deep Cleaning", href: "/deep-cleaning-joliet-il" },
-      { label: "Standard Cleaning", href: "/standard-cleaning-joliet-il" },
+      { label: "Standard Cleaning", href: "/joliet-il" },
       { label: "Move-Out Cleaning", href: "/move-out-cleaning-joliet-il" },
     ],
     locationPage: "/joliet-il",
@@ -127,7 +127,7 @@ const cities = [
       "Serving Lockport Estates, Heritage Woods, Downtown Lockport and all Lockport neighborhoods.",
     links: [
       { label: "Deep Cleaning", href: "/deep-cleaning-lockport-il" },
-      { label: "Standard Cleaning", href: "/standard-cleaning-lockport-il" },
+      { label: "Standard Cleaning", href: "/lockport-il" },
       { label: "Move-Out Cleaning", href: "/move-out-cleaning-lockport-il" },
     ],
     locationPage: "/lockport-il",
@@ -139,7 +139,7 @@ const cities = [
       "Serving Shorewood Glenn, Shorewood Crossing, Towne Center and all Shorewood neighborhoods.",
     links: [
       { label: "Deep Cleaning", href: "/deep-cleaning-shorewood-il" },
-      { label: "Standard Cleaning", href: "/standard-cleaning-shorewood-il" },
+      { label: "Standard Cleaning", href: "/shorewood-il" },
       { label: "Move-Out Cleaning", href: "/move-out-cleaning-shorewood-il" },
     ],
     locationPage: "/shorewood-il",
@@ -151,7 +151,7 @@ const cities = [
       "Serving Sanctuary, Spencer Pointe, Grand Crossing and all New Lenox neighborhoods.",
     links: [
       { label: "Deep Cleaning", href: "/deep-cleaning-new-lenox-il" },
-      { label: "Standard Cleaning", href: "/standard-cleaning-new-lenox-il" },
+      { label: "Standard Cleaning", href: "/new-lenox-il" },
       { label: "Move-Out Cleaning", href: "/move-out-cleaning-new-lenox-il" },
     ],
     locationPage: "/new-lenox-il",
@@ -163,7 +163,7 @@ const cities = [
       "Serving Historic Downtown Lemont, Centennial Crossing, Covington Knolls and all Lemont neighborhoods.",
     links: [
       { label: "Deep Cleaning", href: "/deep-cleaning-lemont-il" },
-      { label: "Standard Cleaning", href: "/standard-cleaning-lemont-il" },
+      { label: "Standard Cleaning", href: "/lemont-il" },
       { label: "Move-Out Cleaning", href: "/move-out-cleaning-lemont-il" },
     ],
     locationPage: "/lemont-il",
@@ -175,7 +175,7 @@ const cities = [
       "Serving Homer Lakes, Farmington Lakes, The Highlands and all Homer Glen neighborhoods.",
     links: [
       { label: "Deep Cleaning", href: "/deep-cleaning-homer-glen-il" },
-      { label: "Standard Cleaning", href: "/standard-cleaning-homer-glen-il" },
+      { label: "Standard Cleaning", href: "/homer-glen-il" },
       { label: "Move-Out Cleaning", href: "/move-out-cleaning-homer-glen-il" },
     ],
     locationPage: "/homer-glen-il",
@@ -187,7 +187,7 @@ const cities = [
       "Serving Westmont Downtown, Oakwood Estates, Waterfall Glen area and all Westmont neighborhoods.",
     links: [
       { label: "Deep Cleaning", href: "/deep-cleaning-westmont-il" },
-      { label: "Standard Cleaning", href: "/standard-cleaning-westmont-il" },
+      { label: "Standard Cleaning", href: "/westmont-il" },
       { label: "Move-Out Cleaning", href: "/move-out-cleaning-westmont-il" },
     ],
     locationPage: "/westmont-il",
@@ -199,7 +199,7 @@ const cities = [
       "Serving Minooka Acres, Heritage Fields, Fox Run and all Minooka neighborhoods.",
     links: [
       { label: "Deep Cleaning", href: "/deep-cleaning-minooka-il" },
-      { label: "Standard Cleaning", href: "/standard-cleaning-minooka-il" },
+      { label: "Standard Cleaning", href: "/minooka-il" },
       { label: "Move-Out Cleaning", href: "/move-out-cleaning-minooka-il" },
     ],
     locationPage: "/minooka-il",

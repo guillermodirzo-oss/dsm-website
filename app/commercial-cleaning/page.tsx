@@ -53,7 +53,7 @@ const jsonLd = {
         name: "What industries do you serve with commercial cleaning?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We serve a wide range of industries including professional offices, medical and dental practices, real estate offices, law firms, retail spaces, and post-construction commercial sites across Will County and DuPage County.",
+          text: "We serve a wide range of industries including professional offices, medical and dental practices, real estate offices, law firms, and retail spaces across Will County and DuPage County.",
         },
       },
       {
@@ -87,7 +87,6 @@ const jsonLd = {
 const services = [
   { title: "Office Cleaning", desc: "Regular janitorial service for offices of all sizes — desks, restrooms, kitchens, and common areas.", href: "/office-cleaning" },
   { title: "Medical Office Cleaning", desc: "Sanitization protocols for medical and dental practices, waiting rooms, and exam areas.", href: "/office-cleaning" },
-  { title: "Post-Construction Cleaning", desc: "Debris removal, dust elimination, and surface cleaning after commercial build-outs and renovations.", href: "/post-construction-cleaning" },
   { title: "One-Time Commercial Clean", desc: "Deep cleaning for move-ins, special events, or spaces that need a fresh start.", href: "/one-time-cleaning" },
 ];
 

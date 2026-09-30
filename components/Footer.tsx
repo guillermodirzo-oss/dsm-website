@@ -26,7 +26,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-sm leading-relaxed mb-4">Family-owned, eco-friendly house cleaning serving the southwest Chicago suburbs.</p>
-            <p className="text-sm mb-1 text-gray-500">Romeoville &amp; Plainfield, IL</p>
+            <p className="text-sm mb-1 text-gray-500">Romeoville, IL 60446</p>
             <a href="tel:+18152462113" className="text-brand-green font-bold text-lg hover:text-orange-400 transition-colors block mt-3">
               (815) 246-2113
             </a>
@@ -79,6 +79,10 @@ export default function Footer() {
                 { label: "New Lenox, IL", href: "/new-lenox-il" },
                 { label: "Shorewood, IL", href: "/shorewood-il" },
                 { label: "Minooka, IL", href: "/minooka-il" },
+                { label: "Hinsdale, IL", href: "/hinsdale-il" },
+                { label: "Oak Brook, IL", href: "/oak-brook-il" },
+                { label: "Downers Grove, IL", href: "/downers-grove-il" },
+                { label: "Burr Ridge, IL", href: "/burr-ridge-il" },
               ].map((item) => (
                 <li key={item.label}><Link href={item.href} className="hover:text-white transition-colors">{item.label}</Link></li>
               ))}

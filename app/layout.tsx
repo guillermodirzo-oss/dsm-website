@@ -109,8 +109,8 @@ export default function RootLayout({
                 {
                   "@type": "OpeningHoursSpecification",
                   dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-                  opens: "08:00",
-                  closes: "18:00",
+                  opens: "07:00",
+                  closes: "21:00",
                 },
               ],
               areaServed: [
@@ -126,6 +126,10 @@ export default function RootLayout({
                 { "@type": "City", name: "Shorewood", containedInPlace: { "@type": "State", name: "Illinois" } },
                 { "@type": "City", name: "Minooka", containedInPlace: { "@type": "State", name: "Illinois" } },
                 { "@type": "City", name: "Westmont", containedInPlace: { "@type": "State", name: "Illinois" } },
+                { "@type": "City", name: "Hinsdale", containedInPlace: { "@type": "State", name: "Illinois" } },
+                { "@type": "City", name: "Oak Brook", containedInPlace: { "@type": "State", name: "Illinois" } },
+                { "@type": "City", name: "Downers Grove", containedInPlace: { "@type": "State", name: "Illinois" } },
+                { "@type": "City", name: "Burr Ridge", containedInPlace: { "@type": "State", name: "Illinois" } },
               ],
               // AggregateRating lives here in the global layout so there is exactly
               // ONE LocalBusiness entity with ONE aggregateRating across the entire site.
@@ -141,6 +145,7 @@ export default function RootLayout({
               },
               sameAs: [
                 "https://www.yelp.com/biz/dsm-cleaning-solutions",
+                "https://g.co/kgs/KFkN2MX",
               ],
             }),
           }}

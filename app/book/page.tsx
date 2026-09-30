@@ -608,7 +608,7 @@ export default function BookPage() {
             >
               📞 {PHONE}
             </a>
-            <p className="text-gray-400 text-sm mt-2">Mon to Sun · 8am to 6pm</p>
+            <p className="text-gray-400 text-sm mt-2">Mon to Sun · 7am to 9pm</p>
           </div>
         </div>
       </section>

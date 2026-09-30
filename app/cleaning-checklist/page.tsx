@@ -192,7 +192,7 @@ const moveOutExtras = [
       "Inside oven — full interior scrub",
       "Inside dishwasher",
       "All appliances inside and out",
-      "Window tracks — full detail",
+      "Window sills and inside glass",
       "All door knobs and door frames",
       "Walls wiped down where possible",
       "All closet interiors — shelves, rods, floors",

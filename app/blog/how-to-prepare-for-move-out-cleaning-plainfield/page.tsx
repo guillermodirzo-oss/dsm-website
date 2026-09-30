@@ -308,7 +308,7 @@ export default function BlogPostPage() {
               { label: "Deep Cleaning", href: "/deep-cleaning", icon: "🧹" },
               {
                 label: "Standard Cleaning",
-                href: "/standard-cleaning",
+                href: "/recurring-cleaning",
                 icon: "🏠",
               },
             ].map((service) => (

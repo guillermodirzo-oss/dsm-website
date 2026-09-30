@@ -81,8 +81,8 @@ const localBusinessSchema = {
     {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      opens: "08:00",
-      closes: "18:00",
+      opens: "07:00",
+      closes: "21:00",
     },
   ],
   areaServed: [
@@ -107,8 +107,8 @@ const localBusinessSchema = {
     hoursAvailable: {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      opens: "08:00",
-      closes: "18:00",
+      opens: "07:00",
+      closes: "21:00",
     },
   },
 };
@@ -201,8 +201,8 @@ export default function ContactPage() {
                 </svg>
               </div>
               <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Business Hours</p>
-              <p className="text-lg font-bold text-gray-900">Monday – Sunday</p>
-              <p className="text-lg font-bold text-gray-900">8:00 AM – 6:00 PM</p>
+              <p className="text-lg font-bold text-gray-900">Monday to Sunday</p>
+              <p className="text-lg font-bold text-gray-900">7am to 9pm</p>
               <p className="text-sm text-gray-500 mt-2">Open every day of the week</p>
             </div>
 
@@ -240,8 +240,8 @@ export default function ContactPage() {
                 no-obligation quote. Same-week appointments are usually available. Prefer to talk now? Call us at{" "}
                 <a href="tel:+18152462113" className="text-brand-green font-semibold hover:underline">
                   (815) 246-2113
-                </a>{" "}
-                — we&apos;re available Monday through Sunday, 8am–6pm.
+                </a>
+                . We&apos;re available Monday through Sunday, 7am to 9pm.
               </p>
 
               {/* Trust badges */}
@@ -267,7 +267,7 @@ export default function ContactPage() {
                   {[
                     { label: "Deep Cleaning", href: "/deep-cleaning" },
                     { label: "Move-Out Cleaning", href: "/move-out-cleaning" },
-                    { label: "Standard Cleaning", href: "/standard-cleaning" },
+                    { label: "Standard Cleaning", href: "/recurring-cleaning" },
                     { label: "Recurring Service", href: "/recurring-cleaning" },
                     { label: "Eco-Friendly", href: "/eco-friendly-cleaning" },
                   ].map((s) => (

@@ -523,7 +523,7 @@ export default function DeepCleanOfferPage() {
               >
                 (815) 246-2113
               </a>{" "}
-              · Mon–Sun 8am–6pm
+              · Mon to Sun, 7am to 9pm
             </p>
           </div>
         </div>

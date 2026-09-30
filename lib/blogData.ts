@@ -570,7 +570,7 @@ export const blogPosts: BlogPost[] = [
   <li>Bathroom grout in the shower and around the tub</li>
   <li>The base and back of the toilet</li>
   <li>Baseboards in every room</li>
-  <li>Window sills and tracks</li>
+  <li>Window sills and inside glass</li>
   <li>Blinds and light switches</li>
   <li>Cabinet interiors in the kitchen and bathrooms</li>
   <li>Floors, including under the stove and refrigerator</li>
@@ -591,7 +591,7 @@ export const blogPosts: BlogPost[] = [
 <ul>
   <li><strong>Kitchen:</strong> oven interior and racks scrubbed, stovetop and grates degreased, refrigerator interior and exterior cleaned including all shelves and door seals, cabinet interiors and exteriors wiped, sink scrubbed, countertops sanitized, floor swept and mopped</li>
   <li><strong>Bathrooms:</strong> toilet scrubbed inside and out including the base and behind the bowl, tub and shower walls and floor scrubbed, grout cleaned, sink and faucet scrubbed, mirror cleaned streak-free, floor scrubbed</li>
-  <li><strong>Throughout the home:</strong> baseboards wiped, blinds dusted, ceiling fans cleaned, window sills and tracks wiped, light switches cleaned, all floors vacuumed and mopped</li>
+  <li><strong>Throughout the home:</strong> baseboards wiped, blinds dusted, ceiling fans cleaned, window sills and inside glass wiped, light switches cleaned, all floors vacuumed and mopped</li>
 </ul>
 <p>We also serve renters moving within the area in <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield</a> and <a href="/" class="text-brand-green font-semibold hover:underline">Romeoville</a>.</p>
 
@@ -1898,7 +1898,7 @@ export const blogPosts: BlogPost[] = [
 <ul>
   <li><strong>Kitchen:</strong> Clean inside the oven (walls, floor, racks, and door glass), degrease stovetop and hood vent filter, clean inside and outside the refrigerator (all shelves, drawers, and door bins), wipe interior and exterior of all cabinets and drawers, clean inside and outside the microwave, scrub the sink and faucet, wipe all countertops and backsplash</li>
   <li><strong>Bathrooms:</strong> Scrub toilet inside and out including the base and behind the tank, deep scrub tub and shower surfaces, clean grout lines, wipe all faucets and fixtures, clean sink and vanity, clean mirrors streak-free, wipe cabinet interiors and exteriors, mop floors</li>
-  <li><strong>Bedrooms:</strong> Wipe inside all closets including shelves and floor, clean window sills and tracks, dust ceiling fans and light fixtures, wipe baseboards, vacuum and mop floors</li>
+  <li><strong>Bedrooms:</strong> Wipe inside all closets including shelves and floor, clean window sills and inside glass, dust ceiling fans and light fixtures, wipe baseboards, vacuum and mop floors</li>
   <li><strong>Living areas:</strong> Wipe all baseboards, dust ceiling fans and light fixtures, wipe blinds, wipe light switches and outlet covers throughout, vacuum and mop all floors</li>
   <li><strong>Throughout the home:</strong> Remove all trash, dust all light fixtures, wipe all interior door surfaces and door handles, do a final room-by-room walkthrough</li>
 </ul>
@@ -2252,7 +2252,7 @@ export const blogPosts: BlogPost[] = [
   <li>All cabinet interiors wiped — not just fronts</li>
   <li>Grout scrubbed in bathrooms and kitchen</li>
   <li>Baseboards, door frames, and light switches wiped by hand</li>
-  <li>Window sills, tracks, and blinds dusted and wiped</li>
+  <li>Window sills, inside glass, and blinds dusted and wiped</li>
   <li>All closets vacuumed and wiped including shelving</li>
   <li>Walls spot-checked for scuffs (where applicable)</li>
 </ul>
@@ -2455,7 +2455,7 @@ export const blogPosts: BlogPost[] = [
 <ul>
   <li><strong>Kitchen:</strong> Inside and outside oven (remove racks); degrease stovetop and hood vent; clean inside/outside refrigerator including all drawers and shelves; clean inside microwave; scrub sink thoroughly; wipe all cabinet fronts and clean inside every cabinet; mop and scrub floor</li>
   <li><strong>Bathrooms:</strong> Scrub and disinfect toilet including base and behind tank; deep scrub shower and tub including grout lines; polish all faucets and fixtures; clean mirrors streak-free; wipe vanity and countertops; clean inside all cabinets; mop floor and clean grout</li>
-  <li><strong>Bedrooms &amp; Living Areas:</strong> Clean inside all closets including shelves and floor; wipe all baseboards and door frames; clean window sills and tracks; vacuum all carpets including edges; sweep and mop hard floors; wipe light switches and outlet covers; clean ceiling fans</li>
+  <li><strong>Bedrooms &amp; Living Areas:</strong> Clean inside all closets including shelves and floor; wipe all baseboards and door frames; clean window sills and inside glass; vacuum all carpets including edges; sweep and mop hard floors; wipe light switches and outlet covers; clean ceiling fans</li>
   <li><strong>Whole Home:</strong> Dust and wipe all light fixtures; clean all interior doors and handles; clean vents and registers; remove all trash and personal items; do a final walkthrough in every room</li>
 </ul>
 
@@ -2551,7 +2551,7 @@ export const blogPosts: BlogPost[] = [
 <ul>
   <li>Clean inside all closets — shelves, the rod, and the floor</li>
   <li>Wipe all baseboards along every wall in every room</li>
-  <li>Clean window sills and window tracks throughout the home</li>
+  <li>Clean window sills and inside glass throughout the home</li>
   <li>Vacuum all carpets thoroughly, including along edges and inside closets; treat any visible stains</li>
   <li>Sweep and mop all hard floors</li>
   <li>Wipe light switches, outlet covers, and door handles</li>

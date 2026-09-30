@@ -120,7 +120,7 @@ const serviceCards: ServiceCard[] = [
     color: "border-brand-green-100",
     headerBg: "bg-brand-green-50",
     badgeBg: null,
-    href: "/standard-cleaning",
+    href: "/recurring-cleaning",
     tagline: "Recurring or one-time routine cleaning",
     service: "standard",
     tiers: STANDARD_CLEANING_TIERS,

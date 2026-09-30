@@ -126,7 +126,7 @@ const services = [
     icon: "🏠",
     title: "Standard House Cleaning in Plainfield",
     desc: "Routine house cleaning on a one-time or recurring basis. We keep your Plainfield home consistently clean and comfortable.",
-    link: "/standard-cleaning",
+    link: "/recurring-cleaning",
   },
   {
     icon: "🧹",

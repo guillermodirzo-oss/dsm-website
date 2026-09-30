@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from "next";
+import { DEEP_CLEANING_TIERS, startingPrice } from "@/lib/pricing";
 import Link from "next/link";
 import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
@@ -58,10 +59,10 @@ const serviceSchema = {
   offers: {
     "@type": "Offer",
     priceCurrency: "USD",
-    price: "225",
+    price: String(startingPrice(DEEP_CLEANING_TIERS)),
     priceSpecification: {
       "@type": "PriceSpecification",
-      minPrice: "225",
+      minPrice: String(startingPrice(DEEP_CLEANING_TIERS)),
       maxPrice: "375",
       priceCurrency: "USD",
     },

@@ -226,12 +226,12 @@ const nextConfig = {
       },
       {
         source: "/faqs",
-        destination: "https://dsmcleaningsolutions.bookingkoala.com/login",
+        destination: "/#faq",
         permanent: true,
       },
       {
         source: "/faq",
-        destination: "https://dsmcleaningsolutions.bookingkoala.com/login",
+        destination: "/#faq",
         permanent: true,
       },
 

@@ -136,6 +136,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.7,
     })),
+    // Standalone blog route, not in blogData, so the map above misses it.
+    {
+      url: `${baseUrl}/blog/how-to-prepare-for-move-out-cleaning-plainfield`,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
     {
       url: `${baseUrl}/deep-cleaning-plainfield-il`,
       changeFrequency: "monthly" as const,

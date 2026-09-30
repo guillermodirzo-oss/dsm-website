@@ -89,6 +89,16 @@ const faqSchema = {
   })),
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dsmcleaningsolutions.com" },
+    { "@type": "ListItem", position: 2, name: "Move-Out Cleaning", item: "https://www.dsmcleaningsolutions.com/move-out-cleaning" },
+    { "@type": "ListItem", position: 3, name: "Move-Out Cleaning in Bolingbrook, IL", item: "https://www.dsmcleaningsolutions.com/move-out-cleaning-bolingbrook-il" },
+  ],
+};
+
 const checklist = [
   {
     room: "Kitchen",
@@ -192,6 +202,10 @@ export default function MoveOutCleaningBolingbrookPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* HERO */}

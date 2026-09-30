@@ -80,10 +80,10 @@ const serviceSchema = {
   offers: {
     "@type": "Offer",
     priceCurrency: "USD",
-    price: "200",
+    price: String(startingPrice(DEEP_CLEANING_TIERS)),
     priceSpecification: {
       "@type": "PriceSpecification",
-      minPrice: "200",
+      minPrice: String(startingPrice(DEEP_CLEANING_TIERS)),
       maxPrice: "375",
       priceCurrency: "USD",
     },

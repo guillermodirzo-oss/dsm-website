@@ -73,10 +73,10 @@ export default function CityPageTemplate({ city }: { city: CityData }) {
             <div className="flex items-center gap-2 text-sm text-white/70 mb-4">
               <Link href="/" className="hover:text-white">Home</Link>
               <span>/</span>
-              <span className="text-white">{city.name}, IL</span>
+              <span className="text-white">{`${city.name}, IL`}</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-6">
-              Professional House Cleaning in {city.name}, IL
+              {`Professional House Cleaning in ${city.name}, IL`}
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               {city.tagline}
@@ -126,7 +126,7 @@ export default function CityPageTemplate({ city }: { city: CityData }) {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="section-heading">
-                Your Local Cleaning Company in {city.name}, IL
+                {`Your Local Cleaning Company in ${city.name}, IL`}
               </h2>
               {city.localIntro.map((para, i) => (
                 <p key={i} className="text-gray-600 mb-4 leading-relaxed">
@@ -220,7 +220,7 @@ export default function CityPageTemplate({ city }: { city: CityData }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="section-heading">
-              Cleaning Services We Offer in {city.name}, IL
+              {`Cleaning Services We Offer in ${city.name}, IL`}
             </h2>
             <p className="section-subheading mx-auto">
               From one-time deep cleans to weekly maid service — we have a
@@ -409,7 +409,7 @@ export default function CityPageTemplate({ city }: { city: CityData }) {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="text-white">
               <h2 className="text-4xl font-bold mb-4">
-                Book House Cleaning in {city.name}, IL Today
+                {`Book House Cleaning in ${city.name}, IL Today`}
               </h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Ready for a spotlessly clean home in {city.name}? Whether you need a one-time deep clean, a recurring maid service, or a move-out cleaning, DSM Cleaning Solutions is just a call away. We&apos;ll get back to you fast, offer flexible scheduling with same-week appointments usually available, and back every clean with our 48-hour satisfaction guarantee. Proudly serving all of {city.name}, IL, zip codes {city.zips.join(" & ")}.

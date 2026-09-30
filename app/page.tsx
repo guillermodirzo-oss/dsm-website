@@ -104,6 +104,8 @@ const serviceAreas = [
   { city: "Lockport", slug: "/lockport-il" }, { city: "Lemont", slug: "/lemont-il" },
   { city: "Homer Glen", slug: "/homer-glen-il" }, { city: "New Lenox", slug: "/new-lenox-il" },
   { city: "Shorewood", slug: "/shorewood-il" }, { city: "Minooka", slug: "/minooka-il" },
+  { city: "Hinsdale", slug: "/hinsdale-il" }, { city: "Oak Brook", slug: "/oak-brook-il" },
+  { city: "Downers Grove", slug: "/downers-grove-il" }, { city: "Burr Ridge", slug: "/burr-ridge-il" },
 ];
 
 const faqSchema = {

@@ -94,7 +94,7 @@ const breadcrumbSchema = {
 const allergens = [
   { icon: "🦟", name: "Dust Mites", desc: "Microscopic organisms that thrive in bedding, carpets, and upholstery. A leading trigger for asthma and year-round allergies in Illinois homes." },
   { icon: "🐾", name: "Pet Dander", desc: "Tiny flecks of skin shed by cats, dogs, and other animals. Dander is airborne and accumulates on all surfaces, not just pet areas." },
-  { icon: "🍄", name: "Mold Spores", desc: "Mold grows in humid areas — bathrooms, basements, and window tracks. Spores become airborne and trigger respiratory reactions." },
+  { icon: "🍄", name: "Mold Spores", desc: "Mold grows in humid areas like bathrooms, basements and window sills. Spores become airborne and trigger respiratory reactions." },
   { icon: "🌿", name: "Pollen", desc: "Illinois has significant spring and fall pollen seasons. Pollen tracked indoors settles on floors, furniture, and bedding." },
 ];
 
@@ -102,7 +102,7 @@ const techniques = [
   { title: "Top-Down Dusting", desc: "We always dust from ceiling to floor — ceiling fans, light fixtures, shelves, and furniture before vacuuming. This prevents displaced allergens from resettling." },
   { title: "HEPA-Friendly Vacuuming", desc: "Thorough vacuuming of all carpets, rugs, and upholstery edges, including along baseboards and under furniture where allergens accumulate most." },
   { title: "Non-Toxic Disinfection", desc: "We disinfect bathrooms and kitchens using products that eliminate mold, bacteria, and viruses without VOCs or synthetic fragrances that can trigger reactions." },
-  { title: "Mold-Risk Area Focus", desc: "Bathrooms, window tracks, and basement areas receive specific attention for mold prevention — a key allergy trigger in midwest homes." },
+  { title: "Mold-Risk Area Focus", desc: "Bathrooms, window sills and inside glass, and basement areas receive specific attention for mold prevention, a key allergy trigger in midwest homes." },
   { title: "Fragrance-Free Options", desc: "Many cleaning products contain synthetic fragrances that trigger migraines and fragrance sensitivities. We can work entirely fragrance-free on request." },
   { title: "Dander Removal Technique", desc: "Special attention to pet dander areas in multi-pet homes, with allergen-reduction focused cleaning in bedrooms and living areas." },
 ];
@@ -189,7 +189,7 @@ export default function CleaningForAllergiesPage() {
           <p className="text-gray-600 mb-4 leading-relaxed">
             Inadequate or infrequent cleaning also allows allergens to accumulate to levels that
             trigger symptoms. Dust mites build up in carpets and bedding. Pet dander becomes
-            embedded in upholstery. Mold establishes in bathroom grout and window tracks. Pollen
+            embedded in upholstery. Mold establishes in bathroom grout and on window sills. Pollen
             tracked indoors settles on floors and furniture. Without regular professional cleaning
             that specifically targets these allergens, your indoor air quality degrades significantly
             — especially during Illinois spring and fall pollen seasons.

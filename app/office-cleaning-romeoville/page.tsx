@@ -201,7 +201,7 @@ export default function OfficeCleaningRomeovillePage() {
               { label: "Office Cleaning Bolingbrook", href: "/office-cleaning-bolingbrook" },
               { label: "All Office Cleaning Services", href: "/office-cleaning" },
               { label: "Commercial Cleaning", href: "/commercial-cleaning" },
-              { label: "House Cleaning Romeoville", href: "/romeoville-il" },
+              { label: "House Cleaning Romeoville", href: "/" },
             ].map((l) => (
               <Link key={l.href} href={l.href} className="bg-white rounded-xl p-4 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all text-sm font-medium text-gray-700">
                 {l.label}
