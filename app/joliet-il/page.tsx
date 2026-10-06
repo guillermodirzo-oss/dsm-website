@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { hubCityTitle } from "@/lib/seoTitles";
 import Link from "next/link";
 import CityPageTemplate from "@/components/CityPageTemplate";
 import { cities } from "@/lib/cityData";
@@ -6,7 +7,7 @@ import { cities } from "@/lib/cityData";
 const city = cities.find((c) => c.slug === "joliet-il")!;
 
 export const metadata: Metadata = {
-  title: "House Cleaning Joliet IL",
+  title: { absolute: hubCityTitle("Joliet") },
   description:
     "Professional house cleaning in Joliet, IL. Deep cleaning, move-out & recurring maid service. Family-owned, eco-friendly & insured. Free estimates today.",
   keywords: [
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/joliet-il" },
   openGraph: {
-    title: "House Cleaning Joliet IL | DSM Cleaning Solutions",
+    title: hubCityTitle("Joliet"),
     description:
       "Professional house cleaning in Joliet, IL. Deep cleaning, move-out & recurring maid service. Family-owned, eco-friendly & insured. Free estimates today.",
     url: "https://www.dsmcleaningsolutions.com/joliet-il",
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "House Cleaning Joliet IL | DSM Cleaning Solutions",
+    title: hubCityTitle("Joliet"),
     description: "Professional house cleaning in Joliet, IL. Deep cleaning, move-out & recurring maid service. Family-owned, eco-friendly & insured.",
     images: ["/hero-image.png"],
   },

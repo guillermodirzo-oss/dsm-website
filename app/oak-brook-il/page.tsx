@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { hubCityTitle } from "@/lib/seoTitles";
 import Link from "next/link";
 import CityPageTemplate from "@/components/CityPageTemplate";
 import { cities } from "@/lib/cityData";
@@ -6,7 +7,7 @@ import { cities } from "@/lib/cityData";
 const city = cities.find((c) => c.slug === "oak-brook-il")!;
 
 export const metadata: Metadata = {
-  title: "House Cleaning Oak Brook IL",
+  title: { absolute: hubCityTitle("Oak Brook") },
   description:
     "Expert house cleaning in Oak Brook, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Free estimates.",
   keywords: [
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/oak-brook-il" },
   openGraph: {
-    title: "House Cleaning Oak Brook IL | DSM Cleaning Solutions",
+    title: hubCityTitle("Oak Brook"),
     description:
       "Expert house cleaning in Oak Brook, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Free estimates.",
     url: "https://www.dsmcleaningsolutions.com/oak-brook-il",
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "House Cleaning Oak Brook IL | DSM Cleaning Solutions",
+    title: hubCityTitle("Oak Brook"),
     description: "Expert house cleaning in Oak Brook, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured.",
     images: ["/hero-image.png"],
   },

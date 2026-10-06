@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from "next";
+import { deepCityTitle } from "@/lib/seoTitles";
 import { DEEP_CLEANING_TIERS, startingPrice, topPrice } from "@/lib/pricing";
 import Link from "next/link";
 import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
@@ -7,17 +8,17 @@ import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 
 export const metadata: Metadata = {
-  title: "Deep Cleaning Homer Glen IL",
+  title: { absolute: deepCityTitle("Homer Glen") },
   description:
     "Professional deep cleaning in Homer Glen, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-homer-glen-il" },
   openGraph: {
-    title: "Deep Cleaning Services Homer Glen IL | DSM Cleaning Solutions",
+    title: deepCityTitle("Homer Glen"),
     description:
       "Professional deep cleaning in Homer Glen, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning-homer-glen-il",
   },
-  twitter: { card: "summary_large_image", images: ["/hero-image.png"] },
+  twitter: { card: "summary_large_image", title: deepCityTitle("Homer Glen"), images: ["/hero-image.png"] },
 };
 
 const faqs = [
@@ -84,8 +85,8 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dsmcleaningsolutions.com" },
-    { "@type": "ListItem", position: 2, name: "Deep Cleaning", item: "https://www.dsmcleaningsolutions.com/deep-cleaning-homer-glen-il" },
-    { "@type": "ListItem", position: 3, name: "Homer Glen IL" },
+    { "@type": "ListItem", position: 2, name: "Deep Cleaning", item: "https://www.dsmcleaningsolutions.com/deep-cleaning" },
+    { "@type": "ListItem", position: 3, name: "Deep Cleaning in Homer Glen, IL", item: "https://www.dsmcleaningsolutions.com/deep-cleaning-homer-glen-il" },
   ],
 };
 

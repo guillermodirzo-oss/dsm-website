@@ -1,11 +1,12 @@
 ﻿import type { Metadata } from "next";
+import { hubCityTitle } from "@/lib/seoTitles";
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
 import { pickReviews, reviewAttribution } from "@/lib/realReviews";
 
 export const metadata: Metadata = {
-  title: "House Cleaning Plainfield IL",
+  title: { absolute: hubCityTitle("Plainfield") },
   description:
     "#1 rated house cleaning service in Plainfield IL. Deep cleaning, move-out, recurring & more. Serving Grande Park, Wallin Oaks & all Plainfield neighborhoods.",
   keywords: [
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     canonical: "https://www.dsmcleaningsolutions.com/plainfield-il",
   },
   openGraph: {
-    title: "House Cleaning Plainfield IL",
+    title: hubCityTitle("Plainfield"),
     description:
       "#1 rated house cleaning service in Plainfield IL. Deep cleaning, move-out, recurring & more. Serving Grande Park, Wallin Oaks & all Plainfield neighborhoods.",
     url: "https://www.dsmcleaningsolutions.com/plainfield-il",
@@ -30,6 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    title: hubCityTitle("Plainfield"),
     images: ["/hero-image.png"],
   },
 };

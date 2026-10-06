@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from "next";
+import { moveOutCityTitle } from "@/lib/seoTitles";
 import Link from "next/link";
 import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
@@ -13,17 +14,17 @@ import { MOVE_OUT_PRICING_COPY } from "@/lib/pricingCopy";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Move-Out Cleaning Homer Glen IL",
+  title: { absolute: moveOutCityTitle("Homer Glen") },
   description:
     "Move-out cleaning in Homer Glen, IL. DSM Cleaning Solutions helps renters recover deposits and sellers prepare for buyer walkthroughs. Fully insured. Free estimate.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-homer-glen-il" },
   openGraph: {
-    title: "Move-Out Cleaning Homer Glen IL | DSM Cleaning Solutions",
+    title: moveOutCityTitle("Homer Glen"),
     description:
       "Move-out cleaning in Homer Glen, IL. Renters and home sellers trust DSM. Fully insured, 48-hr guarantee. Free estimate.",
     url: "https://www.dsmcleaningsolutions.com/move-out-cleaning-homer-glen-il",
   },
-  twitter: { card: "summary_large_image", images: ["/hero-image.png"] },
+  twitter: { card: "summary_large_image", title: moveOutCityTitle("Homer Glen"), images: ["/hero-image.png"] },
 };
 
 const faqs = [

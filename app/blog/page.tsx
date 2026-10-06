@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { blogPosts } from "@/lib/blogData";
+import { blogListing } from "@/lib/blogData";
 
 export const metadata: Metadata = {
   title: "Cleaning Tips & Local Guides",
@@ -64,7 +64,7 @@ export default function BlogIndexPage() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post) => (
+            {blogListing().map((post) => (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}

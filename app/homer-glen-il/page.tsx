@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { hubCityTitle } from "@/lib/seoTitles";
 import CityPageTemplate from "@/components/CityPageTemplate";
 import { cities } from "@/lib/cityData";
 
 const city = cities.find((c) => c.slug === "homer-glen-il")!;
 
 export const metadata: Metadata = {
-  title: "House Cleaning Homer Glen IL",
+  title: { absolute: hubCityTitle("Homer Glen") },
   description:
     "Professional house cleaning in Homer Glen, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & insured. Free estimates.",
   keywords: [
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/homer-glen-il" },
   openGraph: {
-    title: "House Cleaning Homer Glen IL | DSM Cleaning Solutions",
+    title: hubCityTitle("Homer Glen"),
     description:
       "Professional house cleaning in Homer Glen, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & insured. Free estimates.",
     url: "https://www.dsmcleaningsolutions.com/homer-glen-il",
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "House Cleaning Homer Glen IL | DSM Cleaning Solutions",
+    title: hubCityTitle("Homer Glen"),
     description: "Professional house cleaning in Homer Glen, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & insured.",
     images: ["/hero-image.png"],
   },

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { hubCityTitle } from "@/lib/seoTitles";
 import Link from "next/link";
 import CityPageTemplate from "@/components/CityPageTemplate";
 import { cities } from "@/lib/cityData";
@@ -6,7 +7,7 @@ import { cities } from "@/lib/cityData";
 const city = cities.find((c) => c.slug === "new-lenox-il")!;
 
 export const metadata: Metadata = {
-  title: "House Cleaning New Lenox IL",
+  title: { absolute: hubCityTitle("New Lenox") },
   description:
     "Local house cleaning in New Lenox, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Get a free estimate.",
   keywords: [
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/new-lenox-il" },
   openGraph: {
-    title: "House Cleaning New Lenox IL | DSM Cleaning Solutions",
+    title: hubCityTitle("New Lenox"),
     description:
       "Local house cleaning in New Lenox, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Get a free estimate.",
     url: "https://www.dsmcleaningsolutions.com/new-lenox-il",
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "House Cleaning New Lenox IL | DSM Cleaning Solutions",
+    title: hubCityTitle("New Lenox"),
     description: "Local house cleaning in New Lenox, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured.",
     images: ["/hero-image.png"],
   },

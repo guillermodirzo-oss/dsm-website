@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from "next";
+import { deepCityTitle } from "@/lib/seoTitles";
 import Link from "next/link";
 import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
@@ -6,18 +7,19 @@ import PlainfieldForm from "./PlainfieldForm";
 import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 
 export const metadata: Metadata = {
-  title: "Deep Cleaning Plainfield IL",
+  title: { absolute: deepCityTitle("Plainfield") },
   description:
     "Deep cleaning in Plainfield, IL done right. DSM Cleaning is detailed, thorough, and backed by a 48-hr guarantee. Book now: (815) 246-2113.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-plainfield-il" },
   openGraph: {
-    title: "Deep Cleaning Service in Plainfield IL | DSM Cleaning Solutions",
+    title: deepCityTitle("Plainfield"),
     description:
       "Deep cleaning in Plainfield, IL done right. DSM Cleaning is detailed, thorough, and backed by a 48-hr guarantee. Book now: (815) 246-2113.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning-plainfield-il",
   },
   twitter: {
     card: "summary_large_image",
+    title: deepCityTitle("Plainfield"),
     images: ["/hero-image.png"],
   },
 };
@@ -98,7 +100,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dsmcleaningsolutions.com" },
     { "@type": "ListItem", position: 2, name: "Deep Cleaning", item: "https://www.dsmcleaningsolutions.com/deep-cleaning" },
-    { "@type": "ListItem", position: 3, name: "Plainfield, IL", item: "https://www.dsmcleaningsolutions.com/deep-cleaning-plainfield-il" },
+    { "@type": "ListItem", position: 3, name: "Deep Cleaning in Plainfield, IL", item: "https://www.dsmcleaningsolutions.com/deep-cleaning-plainfield-il" },
   ],
 };
 

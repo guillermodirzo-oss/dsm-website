@@ -15,7 +15,8 @@ export async function generateMetadata({
   const post = blogPosts.find((p) => p.slug === params.slug);
   if (!post) return {};
   return {
-    title: post.metaTitle,
+    // absolute: metaTitle is the full title tag, with no brand suffix added.
+    title: { absolute: post.metaTitle },
     description: post.metaDescription,
     alternates: {
       canonical: `https://www.dsmcleaningsolutions.com/blog/${post.slug}`,

@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from "next";
+import { moveOutCityTitle } from "@/lib/seoTitles";
 import Link from "next/link";
 import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
@@ -13,17 +14,17 @@ import { MOVE_OUT_PRICING_COPY } from "@/lib/pricingCopy";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Move-Out Cleaning Minooka IL",
+  title: { absolute: moveOutCityTitle("Minooka") },
   description:
     "Move-out cleaning in Minooka, IL. DSM Cleaning Solutions helps you get your deposit back. Eco-friendly, fully insured, 48-hr guarantee. Free estimate.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-minooka-il" },
   openGraph: {
-    title: "Move-Out Cleaning Minooka IL | DSM Cleaning Solutions",
+    title: moveOutCityTitle("Minooka"),
     description:
       "Move-out cleaning in Minooka, IL. DSM Cleaning Solutions helps you get your deposit back. Eco-friendly, fully insured, 48-hr guarantee. Free estimate.",
     url: "https://www.dsmcleaningsolutions.com/move-out-cleaning-minooka-il",
   },
-  twitter: { card: "summary_large_image", images: ["/hero-image.png"] },
+  twitter: { card: "summary_large_image", title: moveOutCityTitle("Minooka"), images: ["/hero-image.png"] },
 };
 
 const faqs = [

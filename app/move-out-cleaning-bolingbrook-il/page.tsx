@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from "next";
+import { moveOutCityTitle } from "@/lib/seoTitles";
 import Link from "next/link";
 import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
@@ -13,15 +14,15 @@ import { MOVE_OUT_PRICING_COPY } from "@/lib/pricingCopy";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Move-Out Cleaning Bolingbrook IL",
+  title: { absolute: moveOutCityTitle("Bolingbrook") },
   description: `Move-out cleaning in Bolingbrook, IL built to get your deposit back. DSM Cleaning: 5-star rated, ${REVIEW_COUNT} Google reviews, 48-hr guarantee. Free quote.`,
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-bolingbrook-il" },
   openGraph: {
-    title: "Move-Out Cleaning Bolingbrook IL | DSM Cleaning Solutions",
+    title: moveOutCityTitle("Bolingbrook"),
     description: `Move-out cleaning in Bolingbrook, IL built to get your deposit back. DSM Cleaning: 5-star rated, ${REVIEW_COUNT} Google reviews, 48-hr guarantee. Free quote.`,
     url: "https://www.dsmcleaningsolutions.com/move-out-cleaning-bolingbrook-il",
   },
-  twitter: { card: "summary_large_image", images: ["/hero-image.png"] },
+  twitter: { card: "summary_large_image", title: moveOutCityTitle("Bolingbrook"), images: ["/hero-image.png"] },
 };
 
 const faqs = [

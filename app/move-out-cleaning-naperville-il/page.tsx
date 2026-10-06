@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from "next";
+import { moveOutCityTitle } from "@/lib/seoTitles";
 import Link from "next/link";
 import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
@@ -14,15 +15,15 @@ import { MOVE_OUT_TIERS, formatPrice, startingPrice } from "@/lib/pricing";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Move-Out Cleaning Naperville IL",
+  title: { absolute: moveOutCityTitle("Naperville") },
   description: `Move-out cleaning in Naperville, IL. DSM Cleaning Solutions helps renters recover deposits and sellers pass walkthroughs. Fully insured. ${REVIEW_COUNT} Google reviews. Free estimate.`,
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-naperville-il" },
   openGraph: {
-    title: "Move-Out Cleaning Naperville IL | DSM Cleaning Solutions",
+    title: moveOutCityTitle("Naperville"),
     description: `Move-out cleaning in Naperville, IL. Renters and home sellers trust DSM. Fully insured, 48-hr guarantee, ${REVIEW_COUNT} Google reviews.`,
     url: "https://www.dsmcleaningsolutions.com/move-out-cleaning-naperville-il",
   },
-  twitter: { card: "summary_large_image", images: ["/hero-image.png"] },
+  twitter: { card: "summary_large_image", title: moveOutCityTitle("Naperville"), images: ["/hero-image.png"] },
 };
 
 const faqs = [

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { hubCityTitle } from "@/lib/seoTitles";
 import Link from "next/link";
 import CityPageTemplate from "@/components/CityPageTemplate";
 import { cities } from "@/lib/cityData";
@@ -6,7 +7,7 @@ import { cities } from "@/lib/cityData";
 const city = cities.find((c) => c.slug === "bolingbrook-il")!;
 
 export const metadata: Metadata = {
-  title: "House Cleaning Bolingbrook IL",
+  title: { absolute: hubCityTitle("Bolingbrook") },
   description:
     "Local house cleaning in Bolingbrook, IL - deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & insured. Call for a free estimate.",
   keywords: [
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/bolingbrook-il" },
   openGraph: {
-    title: "House Cleaning Bolingbrook IL",
+    title: hubCityTitle("Bolingbrook"),
     description:
       "Local house cleaning in Bolingbrook, IL - deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & insured. Call for a free estimate.",
     url: "https://www.dsmcleaningsolutions.com/bolingbrook-il",
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    title: hubCityTitle("Bolingbrook"),
     images: ["/hero-image.png"],
   },
 };

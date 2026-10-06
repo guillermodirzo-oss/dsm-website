@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { hubCityTitle } from "@/lib/seoTitles";
 import Link from "next/link";
 import CityPageTemplate from "@/components/CityPageTemplate";
 import { cities } from "@/lib/cityData";
@@ -6,7 +7,7 @@ import { cities } from "@/lib/cityData";
 const city = cities.find((c) => c.slug === "naperville-il")!;
 
 export const metadata: Metadata = {
-  title: "House Cleaning Naperville IL",
+  title: { absolute: hubCityTitle("Naperville") },
   description:
     "Top-rated house cleaning in Naperville IL. Serving 60540, 60563, 60564 & 60565. Deep cleaning, move-out & recurring maid service. 5-star rated. Free quote.",
   keywords: [
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/naperville-il" },
   openGraph: {
-    title: "House Cleaning Naperville IL",
+    title: hubCityTitle("Naperville"),
     description:
       "Top-rated house cleaning in Naperville IL. Serving 60540, 60563, 60564 & 60565. Deep cleaning, move-out & recurring maid service. 5-star rated. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/naperville-il",
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    title: hubCityTitle("Naperville"),
     images: ["/hero-image.png"],
   },
 };

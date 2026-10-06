@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "How to Prepare for a Move-Out Cleaning in Plainfield IL",
+  // absolute: the full title tag, with no brand suffix added.
+  title: { absolute: "How to Prepare for a Move-Out Cleaning in Plainfield IL" },
   description:
-    "Planning a move-out cleaning in Plainfield or Naperville? Here's exactly how to prepare your home so you can get your full deposit back. Tips from DSM Cleaning Solutions.",
+    "Planning a move-out cleaning in Plainfield or Naperville? Here's how to prepare your home so you can get your full deposit back.",
   alternates: {
     canonical:
       "https://www.dsmcleaningsolutions.com/blog/how-to-prepare-for-move-out-cleaning-plainfield",
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "How to Prepare for a Move-Out Cleaning in Plainfield IL",
     description:
-      "Planning a move-out cleaning in Plainfield or Naperville? Here's exactly how to prepare your home so you can get your full deposit back. Tips from DSM Cleaning Solutions.",
+      "Planning a move-out cleaning in Plainfield or Naperville? Here's how to prepare your home so you can get your full deposit back.",
     url: "https://www.dsmcleaningsolutions.com/blog/how-to-prepare-for-move-out-cleaning-plainfield",
     siteName: "DSM Cleaning Solutions",
     type: "article",

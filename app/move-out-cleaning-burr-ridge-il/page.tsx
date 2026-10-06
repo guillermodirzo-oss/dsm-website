@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from "next";
+import { moveOutCityTitle } from "@/lib/seoTitles";
 import Link from "next/link";
 import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
@@ -13,17 +14,17 @@ import { MOVE_OUT_PRICING_COPY } from "@/lib/pricingCopy";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Move-Out Cleaning Burr Ridge IL",
+  title: { absolute: moveOutCityTitle("Burr Ridge") },
   description:
     "Move-out cleaning in Burr Ridge, IL for home sellers. DSM Cleaning Solutions delivers walkthrough-ready cleans in zip code 60527. Fully insured. Free estimate.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-burr-ridge-il" },
   openGraph: {
-    title: "Move-Out Cleaning Burr Ridge IL | DSM Cleaning Solutions",
+    title: moveOutCityTitle("Burr Ridge"),
     description:
       "Move-out cleaning in Burr Ridge, IL. Home sellers trust DSM for spotless, walkthrough-ready cleans. Fully insured, 48-hr guarantee.",
     url: "https://www.dsmcleaningsolutions.com/move-out-cleaning-burr-ridge-il",
   },
-  twitter: { card: "summary_large_image", images: ["/hero-image.png"] },
+  twitter: { card: "summary_large_image", title: moveOutCityTitle("Burr Ridge"), images: ["/hero-image.png"] },
 };
 
 const faqs = [

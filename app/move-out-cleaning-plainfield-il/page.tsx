@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from "next";
+import { moveOutCityTitle } from "@/lib/seoTitles";
 import Link from "next/link";
 import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
@@ -14,15 +15,15 @@ import { MOVE_OUT_TIERS, formatPrice, startingPrice } from "@/lib/pricing";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Move-Out Cleaning Plainfield IL",
+  title: { absolute: moveOutCityTitle("Plainfield") },
   description: `Move-out cleaning in Plainfield IL built to get your deposit back. DSM Cleaning: 5-star rated, ${REVIEW_COUNT} Google reviews, 48-hr guarantee. Free quote.`,
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-plainfield-il" },
   openGraph: {
-    title: "Move-Out Cleaning Plainfield IL | DSM Cleaning Solutions",
+    title: moveOutCityTitle("Plainfield"),
     description: `Move-out cleaning in Plainfield IL built to get your deposit back. DSM Cleaning: 5-star rated, ${REVIEW_COUNT} Google reviews, 48-hr guarantee. Free quote.`,
     url: "https://www.dsmcleaningsolutions.com/move-out-cleaning-plainfield-il",
   },
-  twitter: { card: "summary_large_image", images: ["/hero-image.png"] },
+  twitter: { card: "summary_large_image", title: moveOutCityTitle("Plainfield"), images: ["/hero-image.png"] },
 };
 
 const faqs = [

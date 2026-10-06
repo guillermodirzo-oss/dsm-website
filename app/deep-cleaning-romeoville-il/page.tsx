@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from "next";
+import { deepCityTitle } from "@/lib/seoTitles";
 import Link from "next/link";
 import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
@@ -6,17 +7,17 @@ import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 
 export const metadata: Metadata = {
-  title: "Deep Cleaning Romeoville IL",
+  title: { absolute: deepCityTitle("Romeoville") },
   description:
     "Expert deep cleaning in Romeoville, IL. We scrub baseboards, appliances, bathrooms & more. 5-star rated, 48-hr satisfaction guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-romeoville-il" },
   openGraph: {
-    title: "Deep Cleaning Service Romeoville IL | DSM Cleaning Solutions",
+    title: deepCityTitle("Romeoville"),
     description:
       "Expert deep cleaning in Romeoville, IL. We scrub baseboards, appliances, bathrooms & more. 5-star rated, 48-hr satisfaction guarantee. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning-romeoville-il",
   },
-  twitter: { card: "summary_large_image", images: ["/hero-image.png"] },
+  twitter: { card: "summary_large_image", title: deepCityTitle("Romeoville"), images: ["/hero-image.png"] },
 };
 
 const faqs = [
@@ -91,7 +92,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dsmcleaningsolutions.com" },
     { "@type": "ListItem", position: 2, name: "Deep Cleaning", item: "https://www.dsmcleaningsolutions.com/deep-cleaning" },
-    { "@type": "ListItem", position: 3, name: "Romeoville, IL", item: "https://www.dsmcleaningsolutions.com/deep-cleaning-romeoville-il" },
+    { "@type": "ListItem", position: 3, name: "Deep Cleaning in Romeoville, IL", item: "https://www.dsmcleaningsolutions.com/deep-cleaning-romeoville-il" },
   ],
 };
 

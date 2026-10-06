@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from "next";
+import { moveOutCityTitle } from "@/lib/seoTitles";
 import Link from "next/link";
 import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
@@ -13,17 +14,17 @@ import { MOVE_OUT_PRICING_COPY } from "@/lib/pricingCopy";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Move-Out Cleaning Westmont IL",
+  title: { absolute: moveOutCityTitle("Westmont") },
   description:
     "Move-out cleaning in Westmont, IL for home sellers and renters. DSM Cleaning Solutions delivers walkthrough-ready cleans. Fully insured. Free estimate.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-westmont-il" },
   openGraph: {
-    title: "Move-Out Cleaning Westmont IL | DSM Cleaning Solutions",
+    title: moveOutCityTitle("Westmont"),
     description:
       "Move-out cleaning in Westmont, IL. Home sellers and renters trust DSM for spotless, walkthrough-ready cleans. Fully insured, 48-hr guarantee.",
     url: "https://www.dsmcleaningsolutions.com/move-out-cleaning-westmont-il",
   },
-  twitter: { card: "summary_large_image", images: ["/hero-image.png"] },
+  twitter: { card: "summary_large_image", title: moveOutCityTitle("Westmont"), images: ["/hero-image.png"] },
 };
 
 const faqs = [

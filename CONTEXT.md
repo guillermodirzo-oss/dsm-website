@@ -93,8 +93,8 @@ There are TWO HubSpot lead forms on this site. Never mix them up, and never chan
 Never change form payloads, guards or the Step 1 partial capture. Never send test leads to HubSpot. Never modify the BookingKoala embed on /book.
 
 ## SEO Rules: Never Break These
-1. Never add "| DSM Cleaning Solutions" at the page level. The root layout's title template adds it.
-2. Schema address is always 402 Tallman Ave, Romeoville, IL 60446, coordinates 41.6299, -88.0890. Never Plainfield.
+1. Never add "| DSM Cleaning Solutions" at the page level. The root layout's title template adds it. Two exceptions use absolute titles with no brand, 60 characters or fewer: city pages build theirs in `lib/seoTitles.ts` ("{Service} {City} IL | From {price} | {rating} Stars"), and blog posts use their `metaTitle`.
+2. Schema address is always 402 Tallman Ave, Romeoville, IL 60446, coordinates 41.6336, -88.0904 (the Google Business Profile pin). Never Plainfield.
 3. Review count is 46 and rating 5.0 everywhere. Read them from REVIEW_COUNT and REVIEW_RATING; never type them by hand.
 4. Schema hours are Monday through Sunday, opens "07:00", closes "21:00". Visible hours read "7am to 9pm".
 5. Satisfaction guarantee is always 48 hours. Never 24 or 72.

@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from "next";
+import { deepCityTitle } from "@/lib/seoTitles";
 import { DEEP_CLEANING_TIERS, startingPrice, topPrice } from "@/lib/pricing";
 import Link from "next/link";
 import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
@@ -7,17 +8,17 @@ import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 
 export const metadata: Metadata = {
-  title: "Deep Cleaning Hinsdale IL",
+  title: { absolute: deepCityTitle("Hinsdale") },
   description:
     "Professional deep cleaning in Hinsdale, IL. DSM Cleaning Solutions delivers white-glove deep cleans for Hinsdale's historic and luxury homes. 5-star rated, 48-hour guarantee. Book today.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-hinsdale-il" },
   openGraph: {
-    title: "Deep Cleaning Hinsdale IL | DSM Cleaning Solutions",
+    title: deepCityTitle("Hinsdale"),
     description:
       "Professional deep cleaning in Hinsdale, IL. DSM Cleaning Solutions delivers white-glove deep cleans for Hinsdale's historic and luxury homes. 5-star rated, 48-hour guarantee. Book today.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning-hinsdale-il",
   },
-  twitter: { card: "summary_large_image", images: ["/hero-image.png"] },
+  twitter: { card: "summary_large_image", title: deepCityTitle("Hinsdale"), images: ["/hero-image.png"] },
 };
 
 const faqs = [
@@ -84,8 +85,8 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dsmcleaningsolutions.com" },
-    { "@type": "ListItem", position: 2, name: "Deep Cleaning", item: "https://www.dsmcleaningsolutions.com/deep-cleaning-hinsdale-il" },
-    { "@type": "ListItem", position: 3, name: "Hinsdale IL" },
+    { "@type": "ListItem", position: 2, name: "Deep Cleaning", item: "https://www.dsmcleaningsolutions.com/deep-cleaning" },
+    { "@type": "ListItem", position: 3, name: "Deep Cleaning in Hinsdale, IL", item: "https://www.dsmcleaningsolutions.com/deep-cleaning-hinsdale-il" },
   ],
 };
 

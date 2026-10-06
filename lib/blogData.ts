@@ -22,9 +22,9 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "what-landlords-check-move-out-will-county",
     title: "What Landlords Actually Check During Move-Out in Will County, IL",
-    metaTitle: "What Landlords Actually Check During Move-Out in Will County, IL",
+    metaTitle: "What Landlords Check at Move-Out in Will County IL",
     metaDescription:
-      "Moving out of a Will County rental? Here's exactly what landlords and property managers inspect during move-out walkthroughs, and how to make sure you pass.",
+      "Moving out of a Will County rental? Here's what landlords and property managers inspect during move-out walkthroughs, and how to make sure you pass.",
     date: "July 16, 2026",
     dateISO: "2026-07-16",
     author: "DSM Cleaning Solutions",
@@ -125,9 +125,9 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "move-out-cleaning-cost-plainfield-il",
     title: "How Much Does Move-Out Cleaning Cost in Plainfield, IL? (2026 Guide)",
-    metaTitle: "How Much Does Move-Out Cleaning Cost in Plainfield, IL? (2026 Guide)",
+    metaTitle: "Move-Out Cleaning Cost in Plainfield IL (2026 Guide)",
     metaDescription:
-      "Wondering what move-out cleaning costs in Plainfield, IL? Here's what affects the price, what's included, and why it's almost always worth it to protect your security deposit.",
+      "Wondering what move-out cleaning costs in Plainfield, IL? See what affects the price, what's included, and why it's worth it to protect your deposit.",
     date: "July 16, 2026",
     dateISO: "2026-07-16",
     author: "DSM Cleaning Solutions",
@@ -214,7 +214,7 @@ export const blogPosts: BlogPost[] = [
     title: "End of Lease Cleaning Checklist for Naperville Renters",
     metaTitle: "End of Lease Cleaning Checklist for Naperville Renters",
     metaDescription:
-      "Moving out of your Naperville rental? Use this end of lease cleaning checklist to make sure nothing gets missed, and learn how DSM can handle it all for you.",
+      "Moving out of your Naperville rental? Use this end of lease cleaning checklist so nothing gets missed, and see how DSM can handle it all for you.",
     date: "July 16, 2026",
     dateISO: "2026-07-16",
     author: "DSM Cleaning Solutions",
@@ -340,9 +340,9 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "move-out-cleaning-vs-deep-cleaning",
     title: "Move-Out Cleaning vs Deep Cleaning - Which One Do You Need?",
-    metaTitle: "Move-Out Cleaning vs Deep Cleaning - Which One Do You Need?",
+    metaTitle: "Move-Out Cleaning vs Deep Cleaning: Which Do You Need?",
     metaDescription:
-      "Not sure whether to book a move-out cleaning or a deep cleaning? Here's exactly how they differ, what each one covers, and how to pick the right one for your situation.",
+      "Not sure whether to book a move-out cleaning or a deep cleaning? Here's how they differ, what each one covers, and how to pick the right one.",
     date: "July 16, 2026",
     dateISO: "2026-07-16",
     author: "DSM Cleaning Solutions",
@@ -427,9 +427,9 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "how-to-get-security-deposit-back-joliet-il",
     title: "How to Get Your Full Security Deposit Back in Joliet, IL",
-    metaTitle: "How to Get Your Full Security Deposit Back in Joliet, IL",
+    metaTitle: "How to Get Your Security Deposit Back in Joliet IL",
     metaDescription:
-      "Moving out of your Joliet rental? Here's what landlords actually check, what gets deducted, and how a professional move-out cleaning helps you get every dollar of your deposit back.",
+      "Moving out of your Joliet rental? Here's what landlords check, what gets deducted, and how a professional move-out clean helps you get your deposit back.",
     date: "July 16, 2026",
     dateISO: "2026-07-16",
     author: "DSM Cleaning Solutions",
@@ -523,7 +523,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "first-time-hiring-cleaning-service-bolingbrook",
     title: "First Time Hiring a Cleaning Service in Bolingbrook? Here's What to Expect",
-    metaTitle: "First Time Hiring a Cleaning Service in Bolingbrook? Here's What to Expect",
+    metaTitle: "First Time Hiring a Cleaning Service in Bolingbrook IL",
     metaDescription:
       "Thinking about hiring a house cleaning service in Bolingbrook for the first time? Here's exactly what to expect, what to ask, and how DSM makes it easy.",
     date: "July 6, 2026",
@@ -602,7 +602,7 @@ export const blogPosts: BlogPost[] = [
     title: "7 Signs Your Plainfield Home Needs a Deep Clean",
     metaTitle: "7 Signs Your Plainfield Home Needs a Deep Clean",
     metaDescription:
-      "Not sure if your home needs a deep clean? Here are 7 signs it's time to book one, and how DSM Cleaning Solutions can help Plainfield homeowners reset their space.",
+      "Not sure if your home needs a deep clean? Here are 7 signs it's time to book one, and how DSM Cleaning Solutions helps Plainfield homeowners.",
     date: "July 6, 2026",
     dateISO: "2026-07-06",
     author: "DSM Cleaning Solutions",
@@ -692,9 +692,9 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "maid-service-bolingbrook-il",
     title: "Maid Service in Bolingbrook, IL — What's Included, Pricing & How to Book",
-    metaTitle: "Maid Service in Bolingbrook IL — What's Included, Pricing & How to Book",
+    metaTitle: "Maid Service in Bolingbrook IL: What's Included and Pricing",
     metaDescription:
-      "Looking for a dependable maid service in Bolingbrook, IL? DSM Cleaning Solutions offers weekly, bi-weekly, and monthly recurring cleaning with a 48-hour satisfaction guarantee. See what's included.",
+      "Looking for a dependable maid service in Bolingbrook, IL? DSM offers weekly, bi-weekly, and monthly cleaning with a 48-hour guarantee. See what's included.",
     date: "July 1, 2026",
     dateISO: "2026-07-01",
     author: "DSM Cleaning Solutions",
@@ -788,9 +788,9 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "maid-service-naperville-il",
     title: "Maid Service in Naperville, IL — What's Included, Pricing & How to Book",
-    metaTitle: "Maid Service in Naperville IL — What's Included, Pricing & How to Book",
+    metaTitle: "Maid Service in Naperville IL: What's Included and Pricing",
     metaDescription:
-      "Looking for a trusted maid service in Naperville, IL? DSM Cleaning Solutions offers weekly, bi-weekly, and monthly recurring cleaning with a 48-hour satisfaction guarantee. See what's included.",
+      "Looking for a trusted maid service in Naperville, IL? DSM offers weekly, bi-weekly, and monthly cleaning with a 48-hour guarantee. See what's included.",
     date: "June 29, 2026",
     dateISO: "2026-06-29",
     author: "DSM Cleaning Solutions",
@@ -882,9 +882,9 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "maid-service-plainfield-il",
     title: "Maid Service in Plainfield, IL — What's Included, Pricing & How to Book",
-    metaTitle: "Maid Service in Plainfield IL — What's Included, Pricing & How to Book",
+    metaTitle: "Maid Service in Plainfield IL: What's Included and Pricing",
     metaDescription:
-      "Looking for a maid service in Plainfield, IL? DSM Cleaning Solutions provides reliable recurring house cleaning in 60544 and 60585. See what's included, pricing, and how to book.",
+      "Looking for a maid service in Plainfield, IL? DSM Cleaning Solutions provides recurring house cleaning in 60544 and 60585. See what's included and pricing.",
     date: "June 27, 2026",
     dateISO: "2026-06-27",
     author: "DSM Cleaning Solutions",
@@ -984,7 +984,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "summer-cleaning-checklist-plainfield-homeowners",
     title: "Summer Cleaning Checklist for Plainfield, IL Homeowners",
-    metaTitle: "Summer Cleaning Checklist Plainfield IL Homeowners",
+    metaTitle: "Summer Cleaning Checklist for Plainfield IL Homeowners",
     metaDescription:
       "Get your Plainfield IL home summer-ready with this room by room cleaning checklist, plus when to call DSM Cleaning Solutions for professional help.",
     date: "May 22, 2026",
@@ -1066,7 +1066,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "why-hire-eco-friendly-cleaning-service-romeoville-il",
     title: "Why Hire an Eco-Friendly Cleaning Service in Romeoville, IL",
-    metaTitle: "Why Hire Eco Friendly Cleaning Service Romeoville IL",
+    metaTitle: "Why Hire an Eco-Friendly Cleaning Service in Romeoville IL",
     metaDescription:
       "Thinking about eco-friendly cleaning in Romeoville IL? Here is why it matters for your family and how DSM Cleaning Solutions keeps your home safe.",
     date: "May 19, 2026",
@@ -1108,7 +1108,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "how-much-does-move-out-cleaning-cost-bolingbrook-il",
     title: "How Much Does Move Out Cleaning Cost in Bolingbrook, IL? (2026 Guide)",
-    metaTitle: "Move Out Cleaning Cost Bolingbrook IL — 2026 Guide",
+    metaTitle: "Move Out Cleaning Cost in Bolingbrook IL (2026 Guide)",
     metaDescription:
       "How much does move out cleaning cost in Bolingbrook IL? Get 2026 pricing and a free quote from DSM Cleaning Solutions, your local trusted cleaner.",
     date: "May 13, 2026",
@@ -1219,7 +1219,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "how-often-should-you-deep-clean-your-home",
     title: "How Often Should You Deep Clean Your Home? A Plainfield IL Guide",
-    metaTitle: "How Often to Deep Clean Your Home",
+    metaTitle: "How Often Should You Deep Clean Your Home?",
     metaDescription:
       "Wondering how often to deep clean your home in Plainfield, IL? Expert tips from DSM Cleaning Solutions. Book a deep clean today: (815) 246-2113.",
     date: "April 10, 2025",
@@ -1381,7 +1381,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "spring-cleaning-tips-romeoville-plainfield",
     title: "Spring Cleaning Tips for Romeoville & Plainfield Homeowners",
-    metaTitle: "Spring Cleaning Tips Romeoville IL",
+    metaTitle: "Spring Cleaning Tips for Romeoville & Plainfield Homeowners",
     metaDescription:
       "Top spring cleaning tips for Romeoville & Plainfield, IL homeowners. Tackle the aftermath of Illinois winter. Book DSM Cleaning Solutions: (815) 246-2113.",
     date: "April 3, 2025",
@@ -1460,9 +1460,9 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "what-is-included-in-a-deep-house-cleaning",
     title: "What's Included in a Deep House Cleaning? (Complete Checklist)",
-    metaTitle: "What's Included in a Deep House Cleaning?",
+    metaTitle: "What's Included in a Deep House Cleaning? (Full Checklist)",
     metaDescription:
-      "Wondering what a professional deep cleaning covers? Here's our complete room-by-room checklist, plus what sets DSM Cleaning Solutions apart in Plainfield & the Chicago suburbs.",
+      "Wondering what a professional deep cleaning covers? Here's our complete room-by-room checklist, plus what sets DSM Cleaning Solutions apart.",
     date: "April 25, 2026",
     dateISO: "2026-04-25",
     author: "DSM Cleaning Solutions",
@@ -1623,3 +1623,33 @@ export const blogPosts: BlogPost[] = [
     },
   },
 ];
+
+/**
+ * Posts that live at their own route under app/blog/ instead of in blogPosts.
+ * Only the fields the /blog listing card needs. `title` is the post's H1.
+ */
+export type BlogCard = Pick<BlogPost, "slug" | "title" | "date" | "dateISO" | "excerpt">;
+
+export const standalonePosts: BlogCard[] = [
+  {
+    slug: "how-to-prepare-for-move-out-cleaning-plainfield",
+    title: "How to Prepare for a Move-Out Cleaning in Plainfield & Naperville, IL",
+    date: "April 25, 2026",
+    dateISO: "2026-04-25",
+    excerpt:
+      "Planning a move-out cleaning in Plainfield or Naperville? Here's how to prepare your home so you can get your full deposit back.",
+  },
+];
+
+/**
+ * Every post for the /blog index: blogPosts in their existing order, with each
+ * standalone post slotted in by publish date (ahead of the first older post).
+ */
+export function blogListing(): BlogCard[] {
+  const listing: BlogCard[] = [...blogPosts];
+  for (const post of standalonePosts) {
+    const at = listing.findIndex((p) => p.dateISO < post.dateISO);
+    listing.splice(at === -1 ? listing.length : at, 0, post);
+  }
+  return listing;
+}

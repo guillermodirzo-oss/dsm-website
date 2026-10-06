@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from "next";
+import { moveOutCityTitle } from "@/lib/seoTitles";
 import Link from "next/link";
 import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
@@ -13,17 +14,17 @@ import { MOVE_OUT_PRICING_COPY } from "@/lib/pricingCopy";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Move-Out Cleaning Downers Grove IL",
+  title: { absolute: moveOutCityTitle("Downers Grove") },
   description:
     "Move-out cleaning in Downers Grove, IL for home sellers and renters. DSM Cleaning Solutions delivers walkthrough-ready cleans in zip codes 60515 & 60516. Fully insured. Free estimate.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-downers-grove-il" },
   openGraph: {
-    title: "Move-Out Cleaning Downers Grove IL | DSM Cleaning Solutions",
+    title: moveOutCityTitle("Downers Grove"),
     description:
       "Move-out cleaning in Downers Grove, IL. Home sellers and renters trust DSM for spotless, walkthrough-ready cleans. Fully insured, 48-hr guarantee.",
     url: "https://www.dsmcleaningsolutions.com/move-out-cleaning-downers-grove-il",
   },
-  twitter: { card: "summary_large_image", images: ["/hero-image.png"] },
+  twitter: { card: "summary_large_image", title: moveOutCityTitle("Downers Grove"), images: ["/hero-image.png"] },
 };
 
 const faqs = [

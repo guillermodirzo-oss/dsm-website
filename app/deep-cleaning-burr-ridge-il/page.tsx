@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from "next";
+import { deepCityTitle } from "@/lib/seoTitles";
 import { DEEP_CLEANING_TIERS, startingPrice, topPrice } from "@/lib/pricing";
 import Link from "next/link";
 import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
@@ -7,17 +8,17 @@ import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 
 export const metadata: Metadata = {
-  title: "Deep Cleaning Burr Ridge IL",
+  title: { absolute: deepCityTitle("Burr Ridge") },
   description:
     "Professional deep cleaning in Burr Ridge, IL. White-glove service for executive homes. Eco-friendly, fully insured, 48-hour satisfaction guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-burr-ridge-il" },
   openGraph: {
-    title: "Deep Cleaning Burr Ridge IL | DSM Cleaning Solutions",
+    title: deepCityTitle("Burr Ridge"),
     description:
       "Professional deep cleaning in Burr Ridge, IL. White-glove service for executive homes. Eco-friendly, fully insured, 48-hour satisfaction guarantee. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning-burr-ridge-il",
   },
-  twitter: { card: "summary_large_image", images: ["/hero-image.png"] },
+  twitter: { card: "summary_large_image", title: deepCityTitle("Burr Ridge"), images: ["/hero-image.png"] },
 };
 
 const faqs = [
@@ -84,8 +85,8 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dsmcleaningsolutions.com" },
-    { "@type": "ListItem", position: 2, name: "Deep Cleaning", item: "https://www.dsmcleaningsolutions.com/deep-cleaning-burr-ridge-il" },
-    { "@type": "ListItem", position: 3, name: "Burr Ridge IL" },
+    { "@type": "ListItem", position: 2, name: "Deep Cleaning", item: "https://www.dsmcleaningsolutions.com/deep-cleaning" },
+    { "@type": "ListItem", position: 3, name: "Deep Cleaning in Burr Ridge, IL", item: "https://www.dsmcleaningsolutions.com/deep-cleaning-burr-ridge-il" },
   ],
 };
 

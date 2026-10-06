@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from "next";
+import { deepCityTitle } from "@/lib/seoTitles";
 import Link from "next/link";
 import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
@@ -6,17 +7,17 @@ import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 
 export const metadata: Metadata = {
-  title: "Deep Cleaning Lockport IL",
+  title: { absolute: deepCityTitle("Lockport") },
   description:
     "Professional deep cleaning in Lockport, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-lockport-il" },
   openGraph: {
-    title: "Deep Cleaning Services Lockport IL | DSM Cleaning Solutions",
+    title: deepCityTitle("Lockport"),
     description:
       "Professional deep cleaning in Lockport, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning-lockport-il",
   },
-  twitter: { card: "summary_large_image", images: ["/hero-image.png"] },
+  twitter: { card: "summary_large_image", title: deepCityTitle("Lockport"), images: ["/hero-image.png"] },
 };
 
 const faqs = [
@@ -91,7 +92,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dsmcleaningsolutions.com" },
     { "@type": "ListItem", position: 2, name: "Deep Cleaning", item: "https://www.dsmcleaningsolutions.com/deep-cleaning" },
-    { "@type": "ListItem", position: 3, name: "Lockport, IL", item: "https://www.dsmcleaningsolutions.com/deep-cleaning-lockport-il" },
+    { "@type": "ListItem", position: 3, name: "Deep Cleaning in Lockport, IL", item: "https://www.dsmcleaningsolutions.com/deep-cleaning-lockport-il" },
   ],
 };
 

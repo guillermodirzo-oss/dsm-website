@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { hubCityTitle } from "@/lib/seoTitles";
 import Link from "next/link";
 import CityPageTemplate from "@/components/CityPageTemplate";
 import { cities } from "@/lib/cityData";
@@ -6,7 +7,7 @@ import { cities } from "@/lib/cityData";
 const city = cities.find((c) => c.slug === "downers-grove-il")!;
 
 export const metadata: Metadata = {
-  title: "House Cleaning Downers Grove IL",
+  title: { absolute: hubCityTitle("Downers Grove") },
   description:
     "Professional house cleaning in Downers Grove, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Free estimates.",
   keywords: [
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/downers-grove-il" },
   openGraph: {
-    title: "House Cleaning Downers Grove IL | DSM Cleaning Solutions",
+    title: hubCityTitle("Downers Grove"),
     description:
       "Professional house cleaning in Downers Grove, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Free estimates.",
     url: "https://www.dsmcleaningsolutions.com/downers-grove-il",
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "House Cleaning Downers Grove IL | DSM Cleaning Solutions",
+    title: hubCityTitle("Downers Grove"),
     description: "Professional house cleaning in Downers Grove, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured.",
     images: ["/hero-image.png"],
   },

@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from "next";
+import { deepCityTitle } from "@/lib/seoTitles";
 import Link from "next/link";
 import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
@@ -6,17 +7,17 @@ import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 
 export const metadata: Metadata = {
-  title: "Deep Cleaning Joliet IL",
+  title: { absolute: deepCityTitle("Joliet") },
   description:
     "Professional deep cleaning in Joliet, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-joliet-il" },
   openGraph: {
-    title: "Deep Cleaning Services Joliet IL | DSM Cleaning Solutions",
+    title: deepCityTitle("Joliet"),
     description:
       "Professional deep cleaning in Joliet, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning-joliet-il",
   },
-  twitter: { card: "summary_large_image", images: ["/hero-image.png"] },
+  twitter: { card: "summary_large_image", title: deepCityTitle("Joliet"), images: ["/hero-image.png"] },
 };
 
 const faqs = [
@@ -91,7 +92,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dsmcleaningsolutions.com" },
     { "@type": "ListItem", position: 2, name: "Deep Cleaning", item: "https://www.dsmcleaningsolutions.com/deep-cleaning" },
-    { "@type": "ListItem", position: 3, name: "Joliet, IL", item: "https://www.dsmcleaningsolutions.com/deep-cleaning-joliet-il" },
+    { "@type": "ListItem", position: 3, name: "Deep Cleaning in Joliet, IL", item: "https://www.dsmcleaningsolutions.com/deep-cleaning-joliet-il" },
   ],
 };
 

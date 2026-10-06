@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { hubCityTitle } from "@/lib/seoTitles";
 import CityPageTemplate from "@/components/CityPageTemplate";
 import { cities } from "@/lib/cityData";
 
 const city = cities.find((c) => c.slug === "westmont-il")!;
 
 export const metadata: Metadata = {
-  title: "House Cleaning Westmont IL",
+  title: { absolute: hubCityTitle("Westmont") },
   description:
     "Expert house cleaning in Westmont, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly, fully insured. Get a free estimate.",
   keywords: [
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/westmont-il" },
   openGraph: {
-    title: "House Cleaning Westmont IL | DSM Cleaning Solutions",
+    title: hubCityTitle("Westmont"),
     description:
       "Expert house cleaning in Westmont, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly, fully insured. Get a free estimate.",
     url: "https://www.dsmcleaningsolutions.com/westmont-il",
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "House Cleaning Westmont IL | DSM Cleaning Solutions",
+    title: hubCityTitle("Westmont"),
     description: "Expert house cleaning in Westmont, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly, fully insured.",
     images: ["/hero-image.png"],
   },
