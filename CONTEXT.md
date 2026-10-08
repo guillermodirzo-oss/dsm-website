@@ -11,6 +11,7 @@
 - **Satisfaction guarantee:** 48 hours
 - **Rating:** 5.0 from 46 Google reviews
 - **Cancellations:** No fee to cancel, skip or reschedule (the old $70 late-cancellation fee was retired Oct 2026). We ask customers to let us know as early as they can so we can adjust the schedule.
+- **Deposit:** No deposit required to book (the old $70 deposit was retired Oct 2026). Payment is due on the day of cleaning, by check, cash or credit card. Renters' security deposits are a different thing: move-out pages and blog posts talk about getting a landlord's deposit back, and that copy stays.
 - **Recurring service:** the same cleaner comes every recurring visit. No contracts, and no fees to cancel, skip or reschedule a clean. The recurring rate is locked for 12 months from the first recurring clean, as long as the home and the schedule stay the same. New clients do not need a deep clean first, and the recurring discount applies from the very first recurring clean. Every two weeks is the most popular schedule. Recurring clients can have bed sheets changed at no extra charge on request.
 
 ## Service Area (16 cities)

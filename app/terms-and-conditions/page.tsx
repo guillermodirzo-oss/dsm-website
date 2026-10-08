@@ -59,7 +59,7 @@ export default function TermsAndConditionsPage() {
                 Booking service online does not guarantee you a spot for that date and time. You will be contacted by email or phone with a confirmation.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                In order to reserve your cleaning date and time, a deposit of <strong>$70</strong> will be applied. This fee is <strong>NON-REFUNDABLE</strong>, but is deductible from the total cleaning price.
+                No deposit is required to book.
               </p>
             </div>
 
@@ -160,7 +160,7 @@ export default function TermsAndConditionsPage() {
             <div className="mb-10">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Payments</h2>
               <p className="text-gray-600 leading-relaxed">
-                In order to reserve your cleaning date and time, a deposit of <strong>$70</strong> will be applied. We accept payment by check, cash, or credit card. The remaining balance is due on the day of cleaning.
+                No deposit is required to book. We accept payment by check, cash, or credit card. Payment is due on the day of cleaning.
               </p>
             </div>
 

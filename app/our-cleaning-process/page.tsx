@@ -119,7 +119,7 @@ const processSteps = [
       },
       {
         heading: "Confirming Your Booking",
-        body: "When you accept your quote, we schedule your cleaning and confirm the date, time window, and entry method. You'll receive a confirmation with all the details. For recurring bookings, we lock in your preferred schedule at this stage. No deposit required for most bookings.",
+        body: "When you accept your quote, we schedule your cleaning and confirm the date, time window, and entry method. You'll receive a confirmation with all the details. For recurring bookings, we lock in your preferred schedule at this stage. No deposit is required to book.",
       },
     ],
   },
