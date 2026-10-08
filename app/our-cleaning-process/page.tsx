@@ -25,27 +25,27 @@ const faqs = [
   {
     question: "Do I need to be home during cleaning?",
     answer:
-      "No. Most DSM customers are not home during their cleaning. Many clients provide a door code, garage code, or lockbox key and our team lets themselves in, cleans, and locks up. If you prefer to be home, that&apos;s completely fine too. For your first cleaning, some customers prefer to be present to meet the team and walk through any specific preferences.",
+      "No. Most DSM customers are not home during their cleaning. Many clients provide a door code, garage code, or lockbox key and our team lets themselves in, cleans, and locks up. If you prefer to be home, that's completely fine too. For your first cleaning, some customers prefer to be present to meet the team and walk through any specific preferences.",
   },
   {
     question: "What do your cleaners bring?",
     answer:
-      "Our team brings all cleaning products, microfiber cloths, mops, buckets, and standard cleaning equipment. We use professional-grade, non-toxic, eco-friendly products. You don&apos;t need to supply anything. The only thing we ask you to supply is a working vacuum if you prefer we use yours, though we bring our own equipment for most jobs.",
+      "Our team brings all cleaning products, microfiber cloths, mops, buckets, and standard cleaning equipment. We use professional-grade, non-toxic, eco-friendly products. You don't need to supply anything. The only thing we ask you to supply is a working vacuum if you prefer we use yours, though we bring our own equipment for most jobs.",
   },
   {
     question: "How do I prepare for my first clean?",
     answer:
-      "For your first cleaning, we recommend: (1) picking up loose items from floors and surfaces so we can clean underneath them, (2) letting us know about any fragile items or areas to avoid, (3) confirming your entry method so we can get in without delay, and (4) ensuring pets are secured or comfortable with strangers if they react to new people. That&apos;s it. We handle everything else.",
+      "For your first cleaning, we recommend: (1) picking up loose items from floors and surfaces so we can clean underneath them, (2) letting us know about any fragile items or areas to avoid, (3) confirming your entry method so we can get in without delay, and (4) ensuring pets are secured or comfortable with strangers if they react to new people. That's it. We handle everything else.",
   },
   {
     question: "What if I am not happy with the results?",
     answer:
-      "Contact us within 48 hours of your cleaning and we will send our team back to re-clean any area you&apos;re not satisfied with, at no additional charge. This is our 48-hour satisfaction guarantee and it applies to every single cleaning we perform. We don&apos;t ask you to fill out forms or justify your feedback. Just let us know what fell short and we fix it.",
+      "Contact us within 48 hours of your cleaning and we will send our team back to re-clean any area you're not satisfied with, at no additional charge. This is our 48-hour satisfaction guarantee and it applies to every single cleaning we perform. We don't ask you to fill out forms or justify your feedback. Just let us know what fell short and we fix it.",
   },
   {
     question: "How do I set up recurring service?",
     answer:
-      "After your first cleaning, simply let us know you&apos;d like to set up a recurring schedule. Most customers choose bi-weekly or monthly service. We&apos;ll lock in your preferred day and time slot and send reminders before each visit. Recurring customers receive a discounted rate compared to one-time bookings. You can pause, reschedule, or cancel with reasonable notice. No long-term contracts required.",
+      "After your first cleaning, simply let us know you'd like to set up a recurring schedule. Most customers choose bi-weekly or monthly service. We'll lock in your preferred day and time slot and send reminders before each visit. Recurring customers receive a discounted rate compared to one-time bookings. You can pause, reschedule, or cancel with reasonable notice. No long-term contracts required.",
   },
 ];
 
@@ -100,7 +100,7 @@ const processSteps = [
     details: [
       {
         heading: "Two Easy Ways to Get Started",
-        body: "Fill out our contact form on the website or call us directly at (815) 246-2113. Both options take under 2 minutes. We don&apos;t require account creation, credit cards, or lengthy intake forms. Just your name, contact info, home size, and service type.",
+        body: "Fill out our contact form on the website or call us directly at (815) 246-2113. Both options take under 2 minutes. We don't require account creation, credit cards, or lengthy intake forms. Just your name, contact info, home size, and service type.",
       },
       {
         heading: "Online vs. Calling",
@@ -119,7 +119,7 @@ const processSteps = [
       },
       {
         heading: "Confirming Your Booking",
-        body: "When you accept your quote, we schedule your cleaning and confirm the date, time window, and entry method. You&apos;ll receive a confirmation with all the details. For recurring bookings, we lock in your preferred schedule at this stage. No deposit required for most bookings.",
+        body: "When you accept your quote, we schedule your cleaning and confirm the date, time window, and entry method. You'll receive a confirmation with all the details. For recurring bookings, we lock in your preferred schedule at this stage. No deposit required for most bookings.",
       },
     ],
   },
@@ -130,15 +130,15 @@ const processSteps = [
     details: [
       {
         heading: "What Time to Expect Us",
-        body: "We arrive within our communicated window, typically morning (8am–12pm) or afternoon (12pm–4pm) slots. We&apos;ll send a reminder the day before your cleaning. If our timing shifts for any reason, we contact you in advance.",
+        body: "We arrive within our communicated window, typically morning (8am–12pm) or afternoon (12pm–4pm) slots. We'll send a reminder the day before your cleaning. If our timing shifts for any reason, we contact you in advance.",
       },
       {
         heading: "What Our Team Brings",
-        body: "Everything. Our team arrives with all cleaning products, microfiber cloths, mops, and equipment. You don&apos;t need to provide anything. Our products are professional-grade, non-toxic, and eco-friendly, safe for your family and pets.",
+        body: "Everything. Our team arrives with all cleaning products, microfiber cloths, mops, and equipment. You don't need to provide anything. Our products are professional-grade, non-toxic, and eco-friendly, safe for your family and pets.",
       },
       {
         heading: "How Long It Takes",
-        body: "Standard cleaning for a 2–3 bedroom home typically takes 2–3 hours with a two-person team. Deep cleaning takes 4–6 hours. Move-out cleaning can take 5–8 hours depending on size and condition. We&apos;ll give you a time estimate with your quote so you can plan accordingly.",
+        body: "Standard cleaning for a 2–3 bedroom home typically takes 2–3 hours with a two-person team. Deep cleaning takes 4–6 hours. Move-out cleaning can take 5–8 hours depending on size and condition. We'll give you a time estimate with your quote so you can plan accordingly.",
       },
     ],
   },
@@ -153,7 +153,7 @@ const processSteps = [
       },
       {
         heading: "The 48-Hour Satisfaction Guarantee",
-        body: "After your cleaning, we encourage you to walk through your home. If anything doesn&apos;t meet your expectations, contact us within 48 hours and we will return to re-clean that area at no charge. No forms, no justification needed. Just reach out and we make it right.",
+        body: "After your cleaning, we encourage you to walk through your home. If anything doesn't meet your expectations, contact us within 48 hours and we will return to re-clean that area at no charge. No forms, no justification needed. Just reach out and we make it right.",
       },
       {
         heading: "How to Give Feedback",
@@ -168,15 +168,15 @@ const processSteps = [
     details: [
       {
         heading: "How to Set Up Ongoing Service",
-        body: "After your first cleaning, simply tell us you&apos;d like to continue on a regular schedule. We offer weekly, bi-weekly, and monthly recurring plans. Bi-weekly is our most popular frequency, often the best balance between maintaining a clean home and cost.",
+        body: "After your first cleaning, simply tell us you'd like to continue on a regular schedule. We offer weekly, bi-weekly, and monthly recurring plans. Bi-weekly is our most popular frequency, often the best balance between maintaining a clean home and cost.",
       },
       {
         heading: "How Scheduling Works",
-        body: "Recurring customers get a locked-in time slot on their preferred day. We send reminders 24–48 hours before each visit. Your schedule is yours. We don&apos;t shuffle recurring customers around for new bookings.",
+        body: "Recurring customers get a locked-in time slot on their preferred day. We send reminders 24–48 hours before each visit. Your schedule is yours. We don't shuffle recurring customers around for new bookings.",
       },
       {
         heading: "Making Changes",
-        body: "Life happens. You can reschedule, pause, or skip a visit with reasonable advance notice (typically 48 hours). There are no long-term contracts and no cancellation penalties. We want recurring customers to stay because they&apos;re happy, not because they&apos;re locked in.",
+        body: "Life happens. You can reschedule, pause, or skip a visit with reasonable advance notice (typically 48 hours). There are no long-term contracts and no cancellation penalties. We want recurring customers to stay because they're happy, not because they're locked in.",
       },
     ],
   },

@@ -27,7 +27,7 @@ const faqs = [
   {
     question: "What extra items are in a deep clean?",
     answer:
-      "Deep cleaning adds everything that standard cleaning doesn&apos;t cover: inside the microwave, oven, and refrigerator exterior detail; full baseboard scrubbing; window sills and inside glass; ceiling fans and light fixtures; grout scrubbing in bathrooms; cabinet interior wipe-down; door frame detail; and vent cleaning. It catches up on buildup instead of just keeping things tidy.",
+      "Deep cleaning adds everything that standard cleaning doesn't cover: inside the microwave, oven, and refrigerator exterior detail; full baseboard scrubbing; window sills and inside glass; ceiling fans and light fixtures; grout scrubbing in bathrooms; cabinet interior wipe-down; door frame detail; and vent cleaning. It catches up on buildup instead of just keeping things tidy.",
   },
   {
     question: "Do you clean inside appliances?",

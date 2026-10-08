@@ -1,3 +1,5 @@
+import { DEEP_FROM, MOVE_OUT_FROM } from "./pricing";
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -1221,7 +1223,7 @@ export const blogPosts: BlogPost[] = [
     title: "How Often Should You Deep Clean Your Home? A Plainfield IL Guide",
     metaTitle: "How Often Should You Deep Clean Your Home?",
     metaDescription:
-      "Wondering how often to deep clean your home in Plainfield, IL? Expert tips from DSM Cleaning Solutions. Book a deep clean today: (815) 246-2113.",
+      "Wondering how often to deep clean your home in Plainfield, IL? Expert tips from DSM Cleaning Solutions. Book a deep clean online today.",
     date: "April 10, 2025",
     dateISO: "2025-04-10",
     author: "DSM Cleaning Solutions",
@@ -1268,7 +1270,7 @@ export const blogPosts: BlogPost[] = [
     title: "Move Out Cleaning Checklist for Bolingbrook Renters and Homeowners",
     metaTitle: "Move Out Cleaning Checklist for Bolingbrook Renters",
     metaDescription:
-      "Get your full security deposit back with our move-out cleaning checklist for Bolingbrook, IL renters. Call DSM Cleaning Solutions at (815) 246-2113.",
+      "Get your full security deposit back with our move-out cleaning checklist for Bolingbrook, IL renters. Book DSM Cleaning Solutions online.",
     date: "April 21, 2026",
     dateISO: "2026-04-21",
     author: "DSM Cleaning Solutions",
@@ -1283,7 +1285,7 @@ export const blogPosts: BlogPost[] = [
           name: "How much does move-out cleaning cost in Bolingbrook?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Professional move-out cleaning in Bolingbrook starts at $395 for a smaller home and runs to about $585 for a 4 bedroom. Call (815) 246-2113 for a free, no-obligation estimate.",
+            text: `Professional move-out cleaning in Bolingbrook starts at ${MOVE_OUT_FROM} for a smaller home and runs to about $585 for a 4 bedroom. Call (815) 246-2113 for a free, no-obligation estimate.`,
           },
         },
         {
@@ -1367,7 +1369,7 @@ export const blogPosts: BlogPost[] = [
 <h2>Frequently Asked Questions About Move-Out Cleaning in Bolingbrook</h2>
 
 <h3>How much does move-out cleaning cost in Bolingbrook?</h3>
-<p>Professional move-out cleaning in Bolingbrook starts at $395 for a smaller home and runs to about $585 for a 4 bedroom. Call us at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> for a free, no-obligation estimate tailored to your home's size and condition.</p>
+<p>Professional move-out cleaning in Bolingbrook starts at ${MOVE_OUT_FROM} for a smaller home and runs to about $585 for a 4 bedroom. Call us at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> for a free, no-obligation estimate tailored to your home's size and condition.</p>
 
 <h3>How far in advance should I book a move-out cleaning?</h3>
 <p>We recommend booking 3–5 days before your move-out date to ensure availability. For month-end moves (the busiest period), booking a full week ahead is ideal. We serve Bolingbrook 7 days a week, including weekends.</p>
@@ -1383,7 +1385,7 @@ export const blogPosts: BlogPost[] = [
     title: "Spring Cleaning Tips for Romeoville & Plainfield Homeowners",
     metaTitle: "Spring Cleaning Tips for Romeoville & Plainfield Homeowners",
     metaDescription:
-      "Top spring cleaning tips for Romeoville & Plainfield, IL homeowners. Tackle the aftermath of Illinois winter. Book DSM Cleaning Solutions: (815) 246-2113.",
+      "Top spring cleaning tips for Romeoville & Plainfield, IL homeowners. Tackle the aftermath of Illinois winter. Book DSM Cleaning Solutions online.",
     date: "April 3, 2025",
     dateISO: "2025-04-03",
     author: "DSM Cleaning Solutions",
@@ -1608,7 +1610,7 @@ export const blogPosts: BlogPost[] = [
           name: "How much does a deep house cleaning cost?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "DSM Cleaning Solutions uses flat-rate pricing based on home size. Deep cleaning starts at $300 for a 1-bedroom home and ranges up to $830 for a 5-bedroom home. All rates are all-inclusive, no hidden fees. Visit our pricing page at dsmcleaningsolutions.com/pricing for the full breakdown.",
+            text: `DSM Cleaning Solutions uses flat-rate pricing based on home size. Deep cleaning starts at ${DEEP_FROM} for a 1-bedroom home and ranges up to $830 for a 5-bedroom home. All rates are all-inclusive, no hidden fees. Visit our pricing page at dsmcleaningsolutions.com/pricing for the full breakdown.`,
           },
         },
         {

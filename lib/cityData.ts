@@ -1,6 +1,7 @@
 import {
   STANDARD_CLEANING_TIERS,
   DEEP_CLEANING_TIERS,
+  DEEP_FROM,
   startingPrice,
   formatPrice,
 } from "./pricing";
@@ -914,7 +915,7 @@ export const cities: CityData[] = [
     faqs: [
       {
         question: "How much does deep cleaning cost in Burr Ridge, IL?",
-        answer: "Deep cleaning in Burr Ridge starts around $225 after seasonal discounts. Because Burr Ridge homes tend to be larger (many ranging from 3,500 to 6,000+ square feet), most deep cleans fall in the $350–$550 range depending on your home's size and current condition. Contact us for a free, personalized estimate.",
+        answer: `Deep cleaning in Burr Ridge starts at ${DEEP_FROM}. Because Burr Ridge homes tend to be larger (many ranging from 3,500 to 6,000+ square feet), most deep cleans fall in the $350–$550 range depending on your home's size and current condition. Contact us for a free, personalized estimate.`,
       },
       {
         question: "Do you serve all of Burr Ridge, IL?",
@@ -968,7 +969,7 @@ export const cities: CityData[] = [
     faqs: [
       {
         question: "How much does deep cleaning cost in Hinsdale, IL?",
-        answer: "Deep cleaning in Hinsdale starts around $225 after seasonal discounts. Hinsdale's mix of large historic homes and newer construction typically places most deep cleans in the $300–$500 range, depending on size and condition. We provide a free, no-obligation estimate before every job.",
+        answer: `Deep cleaning in Hinsdale starts at ${DEEP_FROM}. Hinsdale's mix of large historic homes and newer construction typically places most deep cleans in the $300–$500 range, depending on size and condition. We provide a free, no-obligation estimate before every job.`,
       },
       {
         question: "Do you serve all of Hinsdale, IL?",
@@ -1022,7 +1023,7 @@ export const cities: CityData[] = [
     faqs: [
       {
         question: "How much does deep cleaning cost in Oak Brook, IL?",
-        answer: "Deep cleaning in Oak Brook starts around $225 after seasonal discounts. Most Oak Brook homes, which tend toward larger square footage and premium finishes, fall in the $350–$550+ range. We provide a detailed free estimate before every job with no surprises.",
+        answer: `Deep cleaning in Oak Brook starts at ${DEEP_FROM}. Most Oak Brook homes, which tend toward larger square footage and premium finishes, fall in the $350–$550+ range. We provide a detailed free estimate before every job with no surprises.`,
       },
       {
         question: "Do you serve all of Oak Brook, IL?",
@@ -1076,7 +1077,7 @@ export const cities: CityData[] = [
     faqs: [
       {
         question: "How much does deep cleaning cost in Downers Grove, IL?",
-        answer: "Deep cleaning in Downers Grove starts around $225 after seasonal discounts. Most homes in Downers Grove (a mix of 1940s-era homes and newer builds) fall in the $250–$425 range depending on size and condition. We provide free, no-obligation estimates before every job.",
+        answer: `Deep cleaning in Downers Grove starts at ${DEEP_FROM}. Most homes in Downers Grove (a mix of 1940s-era homes and newer builds) fall in the $250–$425 range depending on size and condition. We provide free, no-obligation estimates before every job.`,
       },
       {
         question: "Do you serve all of Downers Grove, IL?",

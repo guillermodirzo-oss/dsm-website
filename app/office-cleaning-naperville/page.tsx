@@ -113,7 +113,7 @@ export default function OfficeCleaningNapervillePage() {
                 Office Cleaning Services in Naperville, IL
               </h1>
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                Naperville is one of the fastest-growing business communities in the Chicago suburbs, and DSM Cleaning Solutions is here to keep it spotless. We provide premium commercial office cleaning for businesses across all four Naperville zip codes, with flexible scheduling and a team that takes pride in every detail.
+                Naperville is one of the fastest-growing business communities in the Chicago suburbs, and DSM Cleaning Solutions is here to keep it spotless. We clean offices for businesses across all four Naperville zip codes. We work around your hours, show up when we say we will, and check our own work before we leave.
               </p>
               <a
                 href="tel:+18152462113"

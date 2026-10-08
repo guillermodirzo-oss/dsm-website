@@ -52,27 +52,27 @@ const values = [
   {
     icon: "🛡️",
     title: "Fully Insured & Bonded",
-    desc: "Every job is covered. Your home, your belongings, and your peace of mind are protected on every single visit, because that&apos;s what professionals do.",
+    desc: "Every job is covered. Your home, your belongings, and your peace of mind are protected on every single visit, because that's what professionals do.",
   },
   {
     icon: "👨‍👩‍👧",
     title: "Family-Owned",
-    desc: "We&apos;re not a franchise. Every decision, every hire, every standard is set by us, the owners, because we&apos;re personally invested in your satisfaction.",
+    desc: "We're not a franchise. Every decision, every hire, every standard is set by us, the owners, because we're personally invested in your satisfaction.",
   },
   {
     icon: "✅",
     title: "Satisfaction Guaranteed",
-    desc: "If something wasn&apos;t done to your standard, tell us within 48 hours and we&apos;ll return to fix it at absolutely no charge. No arguments, no excuses.",
+    desc: "If something wasn't done to your standard, tell us within 48 hours and we'll return to fix it at absolutely no charge. No arguments, no excuses.",
   },
   {
     icon: "📋",
     title: "Consistent Standards",
-    desc: "We follow a detailed checklist on every visit, so every clean meets the same high standard, whether it&apos;s your first booking or your fiftieth.",
+    desc: "We follow a detailed checklist on every visit, so every clean meets the same high standard, whether it's your first booking or your fiftieth.",
   },
   {
     icon: "💬",
     title: "Real Communication",
-    desc: "We answer our phone, respond to messages, and treat you like a real person. If something changes, we&apos;ll let you know. That&apos;s just how neighbors should operate.",
+    desc: "We answer our phone, respond to messages, and treat you like a real person. If something changes, we'll let you know. That's just how neighbors should operate.",
   },
 ];
 

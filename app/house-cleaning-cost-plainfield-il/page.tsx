@@ -1,7 +1,7 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
-import { MOVE_OUT_TIERS, formatPrice, startingPrice } from "@/lib/pricing";
+import { DEEP_FROM, MOVE_OUT_TIERS, STANDARD_FROM, formatPrice, startingPrice } from "@/lib/pricing";
 
 // Unqualified "starting at" claims read the true minimum from the rate card.
 const MOVEOUT_FROM = formatPrice(startingPrice(MOVE_OUT_TIERS));
@@ -267,7 +267,7 @@ export default function HouseCleaningCostPlainfield() {
             <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
               <div className="flex items-center justify-between mb-3">
                 <h3 className="text-xl font-bold text-gray-900">Standard Cleaning</h3>
-                <span className="bg-brand-green-50 text-brand-green font-bold px-3 py-1 rounded-lg text-sm">Starting at $145</span>
+                <span className="bg-brand-green-50 text-brand-green font-bold px-3 py-1 rounded-lg text-sm">Starting at {STANDARD_FROM}</span>
               </div>
               <p className="text-gray-600 leading-relaxed mb-3">
                 Our most popular service for Plainfield homeowners. Standard cleaning covers all living
@@ -283,7 +283,7 @@ export default function HouseCleaningCostPlainfield() {
             <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
               <div className="flex items-center justify-between mb-3">
                 <h3 className="text-xl font-bold text-gray-900">Deep Cleaning</h3>
-                <span className="bg-brand-green-50 text-brand-green font-bold px-3 py-1 rounded-lg text-sm">Starting at $315</span>
+                <span className="bg-brand-green-50 text-brand-green font-bold px-3 py-1 rounded-lg text-sm">Starting at {DEEP_FROM}</span>
               </div>
               <p className="text-gray-600 leading-relaxed mb-3">
                 Deep cleaning is the detailed scrub that routine upkeep skips. In
@@ -392,11 +392,11 @@ export default function HouseCleaningCostPlainfield() {
             </Link>
             <Link href="/deep-cleaning-plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Plainfield</h3>
-              <p className="text-sm text-gray-600">Our detailed clean for kitchens, baths and baseboards, starting at $315.</p>
+              <p className="text-sm text-gray-600">Our detailed clean for kitchens, baths and baseboards, starting at {DEEP_FROM}.</p>
             </Link>
             <Link href="/plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">House Cleaning in Plainfield</h3>
-              <p className="text-sm text-gray-600">Recurring house cleaning starting at $145.</p>
+              <p className="text-sm text-gray-600">Recurring house cleaning starting at {STANDARD_FROM}.</p>
             </Link>
             <Link href="/move-out-cleaning-plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning in Plainfield</h3>

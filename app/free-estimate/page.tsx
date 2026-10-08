@@ -235,7 +235,7 @@ export default function FreeEstimatePage() {
               { icon: "⏱️", title: "Estimated Duration", desc: "How long your cleaning will take so you can plan your day accordingly." },
               { icon: "🌿", title: "Products Used", desc: "Confirmation that we use eco-friendly, non-toxic products, always included." },
               { icon: "✨", title: "Add-On Options", desc: "Any optional extras (oven, fridge, laundry) listed separately with pricing." },
-              { icon: "📅", title: "Availability", desc: "We&apos;ll share our nearest available dates so you can plan your booking." },
+              { icon: "📅", title: "Availability", desc: "We'll share our nearest available dates so you can plan your booking." },
             ].map((item) => (
               <div key={item.title} className="flex gap-4 bg-brand-green-50 border border-brand-green-100 rounded-xl p-5">
                 <span className="text-3xl flex-shrink-0">{item.icon}</span>

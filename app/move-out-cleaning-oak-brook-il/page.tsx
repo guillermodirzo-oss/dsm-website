@@ -403,7 +403,7 @@ export default function MoveOutCleaningOakBrookPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { title: "Walkthrough-Ready Results", desc: "Our checklist covers every area buyers inspect: ovens, fridges, grout lines, cabinet interiors, baseboards, mirrors.", icon: "💵" },
-              { title: "48-Hour Re-Clean Promise", desc: "If your buyer&rsquo;s agent flags anything after we leave, we come back and fix it free within 48 hours.", icon: "🔄" },
+              { title: "48-Hour Re-Clean Promise", desc: "If your buyer’s agent flags anything after we leave, we come back and fix it free within 48 hours.", icon: "🔄" },
               { title: "Fully Insured & Bonded", desc: "Licensed and liability-insured on every job. Your listing agent and buyers can proceed with confidence.", icon: "🛡️" },
               { title: "Family-Owned & Local", desc: "Serving Oak Brook and DuPage County from nearby Romeoville. Memo answers his own phone.", icon: "🏠" },
             ].map((card) => (

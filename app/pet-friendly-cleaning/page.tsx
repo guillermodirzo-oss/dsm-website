@@ -40,7 +40,7 @@ const faqs = [
   {
     question: "What pet-safe products do you use?",
     answer:
-      "We use professional-grade, non-toxic, biodegradable cleaning products that are free from bleach, ammonia, formaldehyde, and synthetic fragrances. These products are effective at eliminating odors, bacteria, and grime without leaving chemical residue on floors or surfaces your pets contact. Your dog doesn&apos;t need to stay off the floors after we clean. Our products are safe immediately after application.",
+      "We use professional-grade, non-toxic, biodegradable cleaning products that are free from bleach, ammonia, formaldehyde, and synthetic fragrances. These products are effective at eliminating odors, bacteria, and grime without leaving chemical residue on floors or surfaces your pets contact. Your dog doesn't need to stay off the floors after we clean. Our products are safe immediately after application.",
   },
   {
     question: "Do you serve pet owners in Romeoville and Plainfield?",

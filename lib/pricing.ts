@@ -228,6 +228,15 @@ export function formatPrice(price: number): string {
   })}`;
 }
 
+/**
+ * The starting price of each service, formatted for copy ("$145"). Any
+ * unqualified "from" or "starting at" claim on the site should read one of
+ * these, so it can never drift from the tiers above.
+ */
+export const STANDARD_FROM = formatPrice(startingPrice(STANDARD_CLEANING_TIERS));
+export const DEEP_FROM = formatPrice(startingPrice(DEEP_CLEANING_TIERS));
+export const MOVE_OUT_FROM = formatPrice(startingPrice(MOVE_OUT_TIERS));
+
 /** "2 bed · 1 bath · 1,000-1,499 sq ft" */
 export function tierLabel(tier: PriceTier): string {
   return `${tier.beds} · ${tier.baths} · ${tier.sqft} sq ft`;

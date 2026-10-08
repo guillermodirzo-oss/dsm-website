@@ -27,7 +27,7 @@ const faqs = [
   {
     question: "Is DSM Cleaning Solutions insured?",
     answer:
-      "Yes, DSM Cleaning Solutions is fully insured and bonded. Every cleaning visit is covered by general liability insurance, protecting your home and property in the unlikely event of an accident or damage. You can book with confidence knowing you&apos;re working with a fully covered professional cleaning company, not an individual with no protection.",
+      "Yes, DSM Cleaning Solutions is fully insured and bonded. Every cleaning visit is covered by general liability insurance, protecting your home and property in the unlikely event of an accident or damage. You can book with confidence knowing you're working with a fully covered professional cleaning company, not an individual with no protection.",
   },
   {
     question: "Do you do background checks on cleaners?",
@@ -37,17 +37,17 @@ const faqs = [
   {
     question: "What is your satisfaction guarantee?",
     answer:
-      "DSM Cleaning Solutions offers a 48-hour satisfaction guarantee on every clean. If you&apos;re not completely satisfied with any part of your cleaning, contact us within 48 hours and we will return to re-clean the area at no additional charge. No arguments, no runarounds. We make it right, period.",
+      "DSM Cleaning Solutions offers a 48-hour satisfaction guarantee on every clean. If you're not completely satisfied with any part of your cleaning, contact us within 48 hours and we will return to re-clean the area at no additional charge. No arguments, no runarounds. We make it right, period.",
   },
   {
     question: "Are you a franchise or locally owned?",
     answer:
-      "DSM Cleaning Solutions is 100% locally owned and operated, not a franchise. We are a family-owned business based in Romeoville, IL, serving the southwest Chicago suburbs. Every decision about how we operate, what products we use, and how we treat our customers is made by us, not by a corporate office somewhere else. When you call us, you&apos;re talking to the owners.",
+      "DSM Cleaning Solutions is 100% locally owned and operated, not a franchise. We are a family-owned business based in Romeoville, IL, serving the southwest Chicago suburbs. Every decision about how we operate, what products we use, and how we treat our customers is made by us, not by a corporate office somewhere else. When you call us, you're talking to the owners.",
   },
   {
     question: "How long have you been serving the Romeoville area?",
     answer:
-      "DSM Cleaning Solutions has been serving Romeoville and the surrounding southwest Chicago suburbs since our founding. We&apos;ve built our reputation one home at a time, earning 5-star reviews from families in Romeoville, Plainfield, Naperville, Bolingbrook, Joliet, and throughout our service area. Our continued growth comes entirely from word-of-mouth referrals and repeat customers, which we consider the highest compliment.",
+      "DSM Cleaning Solutions has been serving Romeoville and the surrounding southwest Chicago suburbs since our founding. We've built our reputation one home at a time, earning 5-star reviews from families in Romeoville, Plainfield, Naperville, Bolingbrook, Joliet, and throughout our service area. Our continued growth comes entirely from word-of-mouth referrals and repeat customers, which we consider the highest compliment.",
   },
 ];
 
@@ -108,7 +108,7 @@ const differentiators = [
   {
     icon: "🔍",
     title: "Background-Checked Team",
-    desc: "Every cleaner on our team passes a thorough background check before setting foot in a client&apos;s home. Your safety is non-negotiable.",
+    desc: "Every cleaner on our team passes a thorough background check before setting foot in a client's home. Your safety is non-negotiable.",
   },
   {
     icon: "🌿",
@@ -118,12 +118,12 @@ const differentiators = [
   {
     icon: "✅",
     title: "48-Hour Guarantee",
-    desc: "Not satisfied? We return within 48 hours and re-clean for free, no questions, no runaround. That&apos;s our commitment to every Romeoville customer.",
+    desc: "Not satisfied? We return within 48 hours and re-clean for free, no questions, no runaround. That's our commitment to every Romeoville customer.",
   },
   {
     icon: "👤",
     title: "Consistent Team",
-    desc: "We aim to send the same cleaners to your home each visit so they learn your preferences and your home&apos;s details, no strangers at your door every time.",
+    desc: "We aim to send the same cleaners to your home each visit so they learn your preferences and your home's details, no strangers at your door every time.",
   },
 ];
 

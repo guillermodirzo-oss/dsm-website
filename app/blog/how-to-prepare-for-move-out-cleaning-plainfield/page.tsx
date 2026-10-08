@@ -266,7 +266,8 @@ export default function BlogPostPage() {
 
           <h2>Serving Plainfield, Naperville, Romeoville &amp; Bolingbrook</h2>
           <p>
-            DSM Cleaning Solutions is locally owned and based in Plainfield, IL.
+            DSM Cleaning Solutions is locally owned and based in Romeoville,
+            and we serve Plainfield from right next door.
             We handle move-out cleanings across Will County and DuPage County,
             including{" "}
             <Link href="/naperville-il" className="text-brand-green font-semibold hover:underline">
