@@ -35,7 +35,7 @@ export default function TermsAndConditionsPage() {
             <span className="text-white">Terms and Conditions</span>
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold mb-4 tracking-tight">Terms and Conditions</h1>
-          <p className="text-white/70 text-lg">Last updated: January 1, 2025</p>
+          <p className="text-white/70 text-lg">Last updated: October 2026</p>
         </div>
       </section>
 
@@ -180,7 +180,7 @@ export default function TermsAndConditionsPage() {
             <div className="mb-10">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Recurring Service Discount</h2>
               <p className="text-gray-600 leading-relaxed">
-                Recurring discounts start <strong>after</strong> the first cleaning service. If you skip cleanings so that your cleaning frequency drops lower than what you were originally set up for, your price will be increased to the pricing level for the lower frequency.
+                Recurring discounts start with your <strong>very first</strong> recurring clean. If you skip cleanings so that your cleaning frequency drops lower than what you were originally set up for, your price will be increased to the pricing level for the lower frequency.
               </p>
             </div>
 
@@ -189,6 +189,9 @@ export default function TermsAndConditionsPage() {
             {/* Rate Increases */}
             <div className="mb-10">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Rate Increases</h2>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Recurring clients&apos; rates are locked for 12 months from their first recurring clean, as long as the home and schedule stay the same.
+              </p>
               <p className="text-gray-600 leading-relaxed mb-4">
                 Client cleaning rate adjustments may be made at any time during the year should there be changes to the frequency of the client&apos;s established service schedule, or changes to the home or living situation, including remodels, change of address, number of people living in the home, or a significant change in the condition of the home.
               </p>

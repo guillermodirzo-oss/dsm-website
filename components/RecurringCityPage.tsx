@@ -1,23 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
+import HeroRating from "@/components/HeroRating";
 import {
   MAX_RECURRING_DISCOUNT,
   RECURRING_CITIES,
   RECURRING_CITY_LIST,
   RECURRING_FAQS,
+  exampleHomeLabel,
+  examplePlans,
   listWithAnd,
   recurringCitySchemas,
   zipList,
   type RecurringCityKey,
 } from "@/lib/recurringCities";
-import {
-  BIWEEKLY_FROM,
-  FREQUENCY_DISCOUNTS,
-  MONTHLY_FROM,
-  WEEKLY_FROM,
-  formatDiscount,
-} from "@/lib/pricing";
+import { WEEKLY_FROM } from "@/lib/pricing";
 import {
   REVIEW_COUNT,
   REVIEW_RATING,
@@ -96,19 +93,14 @@ const steps = [
   },
 ];
 
-// Discounts and "from" prices come from lib/pricing.ts.
-const plans = [
-  { name: "Weekly", off: formatDiscount(FREQUENCY_DISCOUNTS.weekly), from: WEEKLY_FROM, popular: false },
-  { name: "Every two weeks", off: formatDiscount(FREQUENCY_DISCOUNTS.biweekly), from: BIWEEKLY_FROM, popular: true },
-  { name: "Monthly", off: formatDiscount(FREQUENCY_DISCOUNTS.monthly), from: MONTHLY_FROM, popular: false },
-];
-
 const BOOK_BUTTON =
   "inline-flex items-center justify-center gap-2 font-bold text-white rounded-full px-8 py-4 text-base transition-all hover:opacity-90 active:scale-95 shadow-md";
 
 export default function RecurringCityPage({ city: cityKey }: { city: RecurringCityKey }) {
   const city = RECURRING_CITIES[cityKey];
   const schemas = recurringCitySchemas(city);
+  // Per-visit prices for this city's example home, computed in lib/pricing.ts.
+  const plans = examplePlans(city);
 
   // Reviews are pulled from lib/realReviews.ts by name, word for word.
   const anchorReview = reviewByName("Thomas Cheng");
@@ -140,19 +132,15 @@ export default function RecurringCityPage({ city: cityKey }: { city: RecurringCi
           </nav>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div>
-              <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-3">
+              <h1 className="text-3xl sm:text-5xl font-bold leading-tight mb-3">
                 {`${city.name} Maid Service: Same Cleaner, Every Visit`}
               </h1>
-              <p className="text-sm font-semibold mb-4">
-                <Link href="/reviews" className="hover:underline" style={{ color: "#FFA869" }}>
-                  {`★★★★★ ${REVIEW_RATING} · ${REVIEW_COUNT} Google Reviews`}
-                </Link>
-              </p>
+              <HeroRating href="/reviews">{`${REVIEW_RATING} · ${REVIEW_COUNT} Google Reviews`}</HeroRating>
               <p className="text-white/85 text-lg leading-relaxed mb-4">
-                Your house stays clean all week, not just after a big cleaning day. Pick weekly, every two weeks, or monthly. No contracts, and your price is locked for 12 months.
+                Weekly, every two weeks, or monthly. No contracts. Price locked for 12 months.
               </p>
               <p className="text-lg font-bold text-white/95 mb-8">
-                {`Weekly visits from ${WEEKLY_FROM}. Save up to ${MAX_RECURRING_DISCOUNT} starting with your very first clean.`}
+                {`Weekly from ${WEEKLY_FROM}. Save up to ${MAX_RECURRING_DISCOUNT} starting with your first clean.`}
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link href="/book" className="inline-flex items-center justify-center gap-2 font-bold text-brand-green bg-white rounded-full px-7 py-3.5 text-base hover:bg-orange-50 transition-colors shadow-md">
@@ -183,8 +171,13 @@ export default function RecurringCityPage({ city: cityKey }: { city: RecurringCi
       <section className="bg-white border-b border-gray-100 py-8 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-5 gap-4">
-            {trustItems.map((item) => (
-              <div key={item.label} className="flex flex-col items-center text-center p-4 rounded-xl bg-gray-50 border border-gray-100">
+            {trustItems.map((item, i) => (
+              <div
+                key={item.label}
+                className={`flex flex-col items-center text-center p-4 rounded-xl bg-gray-50 border border-gray-100 ${
+                  trustItems.length % 2 === 1 && i === trustItems.length - 1 ? "col-span-2 lg:col-span-1" : ""
+                }`}
+              >
                 <div className="w-10 h-10 rounded-full bg-brand-green-50 flex items-center justify-center mb-2 text-brand-green">
                   <Icon path={item.icon} className="w-5 h-5" />
                 </div>
@@ -297,7 +290,8 @@ export default function RecurringCityPage({ city: cityKey }: { city: RecurringCi
       {/* PRICING */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-10">{`What Recurring Cleaning Costs in ${city.name}`}</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-3">{`What Recurring Cleaning Costs in ${city.name}`}</h2>
+          <p className="text-gray-600 text-lg leading-relaxed mb-10">{exampleHomeLabel(city)}</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             {plans.map((plan) => (
               <div
@@ -311,12 +305,13 @@ export default function RecurringCityPage({ city: cityKey }: { city: RecurringCi
                 )}
                 <h3 className="font-bold text-lg text-gray-900 mb-1">{plan.name}</h3>
                 <p className="text-sm font-semibold mb-3" style={{ color: "#E8622A" }}>{`${plan.off} off`}</p>
-                <p className="text-3xl font-bold text-gray-900">{`from ${plan.from}`}</p>
+                <p className="text-3xl font-bold text-gray-900">{plan.price}</p>
+                <p className="text-sm text-gray-500 mt-1">per visit</p>
               </div>
             ))}
           </div>
           <p className="text-gray-600 mb-3 leading-relaxed">
-            Your price is based on bedrooms, bathrooms and square footage. See the{" "}
+            {`Smaller homes start at ${WEEKLY_FROM} a week. Your exact price depends on bedrooms, bathrooms and square footage. See the`}{" "}
             <Link href="/pricing" className="text-brand-green font-semibold hover:underline">full price list</Link>.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
@@ -361,6 +356,8 @@ export default function RecurringCityPage({ city: cityKey }: { city: RecurringCi
               <p className="text-gray-600 leading-relaxed">
                 {`We clean homes on a regular schedule all over ${city.name}, including ${listWithAnd(city.neighborhoods)}. That covers ${city.zips.length === 1 ? "zip code" : "zip codes"} ${listWithAnd(city.zips)}.`}
               </p>
+              <h3 className="text-lg font-bold text-gray-900 mt-6 mb-2">{`A Recurring Client in ${city.name}`}</h3>
+              <p className="text-gray-600 leading-relaxed">{city.clientStory}</p>
             </div>
             {city.photo && (
               <Image

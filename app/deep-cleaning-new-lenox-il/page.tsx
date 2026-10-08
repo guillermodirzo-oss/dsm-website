@@ -2,6 +2,7 @@
 import { deepCityTitle } from "@/lib/seoTitles";
 import { DEEP_CLEANING_TIERS, startingPrice, topPrice } from "@/lib/pricing";
 import Link from "next/link";
+import HeroRating from "@/components/HeroRating";
 import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
 import CityDeepCleanForm from "@/components/CityDeepCleanForm";
@@ -170,10 +171,7 @@ export default function DeepCleaningNewLenoxPage() {
               <h1 className="text-3xl md:text-4xl font-bold mb-3 leading-tight">
                 Deep Cleaning Services in New Lenox, IL
               </h1>
-              <div className="flex items-center gap-2 mb-3">
-                <span style={{ color: "#FFA869" }} className="text-xl">★★★★★</span>
-                <span className="text-sm opacity-90">5.0 from {REVIEW_COUNT} reviews on Google</span>
-              </div>
+              <HeroRating className="mb-3">5.0 from {REVIEW_COUNT} reviews on Google</HeroRating>
               <p className="text-lg font-semibold mb-2">
                 A thorough deep clean for New Lenox homes. Every room done right.
               </p>

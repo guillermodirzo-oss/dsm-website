@@ -203,7 +203,7 @@ export default function LeadForm({
             </div>
           </div>
 
-          <p className="mt-3 text-xs text-gray-400 text-center">Step 2 just asks about your home - takes 30 seconds</p>
+          <p className="mt-3 text-xs text-gray-400 text-center">Step 2 asks about your home. It takes 30 seconds.</p>
 
           <button
             type="submit"

@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from "next";
 import { deepCityTitle } from "@/lib/seoTitles";
 import Link from "next/link";
+import HeroRating from "@/components/HeroRating";
 import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
 import PlainfieldForm from "./PlainfieldForm";
@@ -186,9 +187,7 @@ export default function DeepCleaningPlainfieldPage() {
               </h1>
 
               {/* Inline social proof */}
-              <p className="text-sm font-semibold mb-4" style={{ color: "#FFA869" }}>
-                ★★★★★ 5.0 · {REVIEW_COUNT} Google Reviews
-              </p>
+              <HeroRating>5.0 · {REVIEW_COUNT} Google Reviews</HeroRating>
 
               {/* Subheadline */}
               <p className="text-2xl sm:text-3xl font-bold text-white/95 mb-4 leading-snug">

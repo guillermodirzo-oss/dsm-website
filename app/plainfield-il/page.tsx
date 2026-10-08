@@ -55,37 +55,6 @@ const localBusinessSchema = {
   areaServed: "Plainfield, IL",
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Do you offer house cleaning in Plainfield, IL?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes! DSM Cleaning Solutions proudly serves Plainfield, IL with a full range of professional cleaning services including standard house cleaning, deep cleaning, move-out and move-in cleaning, and recurring maid service.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Are you a local cleaning company in Plainfield?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We are based in Romeoville, IL, right next to Plainfield. As a local, family-owned business, we're deeply familiar with the Plainfield community and surrounding southwest suburbs.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What cleaning services are available in Plainfield, IL?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We offer standard house cleaning, deep cleaning, move-out and move-in cleaning, weekly/biweekly/monthly recurring maid service, apartment cleaning, and eco-friendly green cleaning, all available in Plainfield, IL.",
-      },
-    },
-  ],
-};
-
 const faqs = [
   {
     question: "What neighborhoods in Plainfield, IL does DSM serve?",
@@ -123,6 +92,18 @@ const faqs = [
       "Yes, we serve all of Plainfield, IL including newer developments and subdivisions throughout the 60544 and 60585 zip code areas.",
   },
 ];
+
+// Built from the same array the visible FAQ renders, so the two always match
+// word for word.
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  })),
+};
 
 const services = [
   {

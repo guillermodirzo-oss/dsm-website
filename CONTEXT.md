@@ -11,7 +11,7 @@
 - **Satisfaction guarantee:** 48 hours
 - **Rating:** 5.0 from 46 Google reviews
 - **Cancellations:** No fee to cancel, skip or reschedule (the old $70 late-cancellation fee was retired Oct 2026). We ask customers to let us know as early as they can so we can adjust the schedule.
-- **Recurring service:** the same cleaner comes every recurring visit. No contracts, and no fees to cancel, skip or reschedule a clean. The recurring rate is locked for 12 months from the first recurring clean, as long as the home and the schedule stay the same. New clients do not need a deep clean first, and the recurring discount applies from the very first recurring clean. Every two weeks is the most popular schedule.
+- **Recurring service:** the same cleaner comes every recurring visit. No contracts, and no fees to cancel, skip or reschedule a clean. The recurring rate is locked for 12 months from the first recurring clean, as long as the home and the schedule stay the same. New clients do not need a deep clean first, and the recurring discount applies from the very first recurring clean. Every two weeks is the most popular schedule. Recurring clients can have bed sheets changed at no extra charge on request.
 
 ## Service Area (16 cities)
 Romeoville, Plainfield, Naperville, Bolingbrook, Joliet, Lockport, Shorewood, New Lenox, Lemont, Homer Glen, Westmont, Minooka, Hinsdale, Oak Brook, Downers Grove, Burr Ridge.
@@ -54,6 +54,8 @@ Recurring discounts: weekly 20%, biweekly 15%, monthly 10%.
 
 Recurring "from" prices are the smallest standard home with the discount applied, rounded up to the whole dollar so they are never lower than what BookingKoala charges: weekly from $116, every two weeks from $124, monthly from $131. Read them from WEEKLY_FROM, BIWEEKLY_FROM and MONTHLY_FROM in `lib/pricing.ts`.
 
+For a home size with no listed tier, `priceForHome()` in `lib/pricing.ts` works the price out with BookingKoala's rate formula: service base + bedroom add-on + bathroom add-on + square footage tier. The build fails if a listed tier and the formula ever disagree. The pricing cards on the recurring city pages use it through `recurringVisitPrice()`, which rounds up to the whole dollar.
+
 ## Current Offers
 | Code | Service | Deal | Runs through |
 |---|---|---|---|
@@ -95,6 +97,7 @@ Move-out customers are mostly home buyers and sellers, not renters. Write move-o
 | `components/RecurringCityPage.tsx` | The recurring city page itself |
 | `lib/standardChecklist.ts` | The standard checklist, shared by /recurring-cleaning and the recurring city pages |
 | `components/Offer.tsx` | Wrapper that expires offer copy automatically |
+| `components/HeroRating.tsx` | The star rating line for orange heroes. White on the darkest brand orange, which meets WCAG AA. Use it instead of coloring the text by hand |
 | `components/Navigation.tsx` | Site nav |
 | `components/Footer.tsx` | Footer with service and city links |
 | `components/CityPageTemplate.tsx` | Shared template for the city hub pages |
@@ -123,7 +126,7 @@ Never change form payloads, guards or the Step 1 partial capture. Never send tes
 4. Schema hours are Monday through Sunday, opens "07:00", closes "21:00". Visible hours read "7am to 9pm".
 5. Satisfaction guarantee is always 48 hours. Never 24 or 72.
 6. Prices in schema must match page copy. Both come from `lib/pricing.ts`.
-7. FAQ answers shown on a page must match its FAQPage schema word for word.
+7. FAQ answers shown on a page must match its FAQPage schema word for word. Build the schema from the same array the page renders. Blog posts get theirs from `faqSchemaFromContent()` in `lib/blogData.ts`, which reads the post's own "Frequently Asked Questions" section, so never write a blog FAQ schema by hand.
 8. Internal links must point to live internal pages: never to BookingKoala URLs, and never to a URL that redirects.
 9. Every new page must be added to `app/sitemap.ts`. Standalone blog routes that aren't in `lib/blogData.ts` need their own entry.
 10. Never alter existing design, layout, colors, or content unless explicitly instructed.

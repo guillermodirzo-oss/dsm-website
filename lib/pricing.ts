@@ -268,3 +268,123 @@ export function priceForBeds(tiers: PriceTier[], beds: number, which: "low" | "h
 export function tierLabel(tier: PriceTier): string {
   return `${tier.beds} · ${tier.baths} · ${tier.sqft} sq ft`;
 }
+
+/**
+ * BOOKINGKOALA'S RATE FORMULA
+ *
+ *   total = service base + bedroom add-on + bathroom add-on + square footage tier
+ *
+ * These are the rates the owner read out of BookingKoala on 2026-09-26. The
+ * tier lists at the top of this file are this formula worked out for the home
+ * sizes the rate cards show, and the check under priceForHome() fails the
+ * build if a listed tier and the formula ever disagree.
+ *
+ * Use priceForHome() for a home size that has no listed tier, such as the
+ * example homes on the recurring city pages. If BookingKoala changes a rate,
+ * change it here and in the tier lists together.
+ */
+const SERVICE_BASE: Record<ServiceKey, number> = { standard: 0, deep: 200, moveout: 230 };
+
+/** Keyed by bedroom count. A studio prices as 1 bedroom. */
+const BEDROOM_ADDON: Record<number, number> = { 0: 0, 1: 0, 2: 15, 3: 30, 4: 45, 5: 60, 6: 75 };
+
+/** Keyed by bathroom count. Half baths have their own rate. */
+const BATHROOM_ADDON: Record<number, number> = {
+  1: 0,
+  1.5: 0,
+  2: 25,
+  2.5: 35,
+  3: 50,
+  3.5: 60,
+  4: 75,
+  4.5: 85,
+  5: 100,
+};
+
+const SQFT_TIERS: ({ min: number; max: number; label: string } & Record<ServiceKey, number>)[] = [
+  { min: 1000, max: 1499, label: "1,000-1,499", standard: 145, deep: 100, moveout: 165 },
+  { min: 1500, max: 1999, label: "1,500-1,999", standard: 185, deep: 185, moveout: 205 },
+  { min: 2000, max: 2499, label: "2,000-2,499", standard: 255, deep: 255, moveout: 275 },
+  { min: 2500, max: 2999, label: "2,500-2,999", standard: 290, deep: 350, moveout: 320 },
+  { min: 3000, max: 3499, label: "3,000-3,499", standard: 340, deep: 400, moveout: 380 },
+  { min: 3500, max: 3999, label: "3,500-3,999", standard: 420, deep: 520, moveout: 470 },
+  { min: 4000, max: 4499, label: "4,000-4,499", standard: 520, deep: 620, moveout: 570 },
+  { min: 4500, max: 4999, label: "4,500-4,999", standard: 600, deep: 750, moveout: 670 },
+];
+
+export interface HomeSize {
+  beds: number;
+  baths: number; // 2.5 for two and a half
+  sqft: number; // any value inside the square footage tier
+}
+
+/** Each part of a price, so a page or a report can show the working. */
+export interface PriceBreakdown {
+  base: number;
+  bedrooms: number;
+  bathrooms: number;
+  sqft: number;
+  sqftTier: string; // "2,000-2,499"
+  total: number;
+}
+
+/**
+ * The BookingKoala price for a home, with its parts. Throws on a size the
+ * formula has no rate for, so a page can never quietly print a made-up number.
+ */
+export function priceBreakdown(service: ServiceKey, home: HomeSize): PriceBreakdown {
+  const bedrooms = BEDROOM_ADDON[home.beds];
+  const bathrooms = BATHROOM_ADDON[home.baths];
+  const tier = SQFT_TIERS.find((t) => home.sqft >= t.min && home.sqft <= t.max);
+  if (bedrooms === undefined) throw new Error(`No bedroom rate for ${home.beds} bedrooms in lib/pricing.ts`);
+  if (bathrooms === undefined) throw new Error(`No bathroom rate for ${home.baths} bathrooms in lib/pricing.ts`);
+  if (!tier) throw new Error(`No square footage tier for ${home.sqft} sq ft in lib/pricing.ts`);
+  const base = SERVICE_BASE[service];
+  return {
+    base,
+    bedrooms,
+    bathrooms,
+    sqft: tier[service],
+    sqftTier: tier.label,
+    total: base + bedrooms + bathrooms + tier[service],
+  };
+}
+
+/** The BookingKoala price for a home of any size the formula covers. */
+export function priceForHome(service: ServiceKey, home: HomeSize): number {
+  return priceBreakdown(service, home).total;
+}
+
+// Every listed tier must equal the formula. Runs once when this file loads,
+// so a mismatch stops the build instead of reaching a page.
+(
+  [
+    ["standard", STANDARD_CLEANING_TIERS],
+    ["deep", DEEP_CLEANING_TIERS],
+    ["moveout", MOVE_OUT_TIERS],
+  ] as [ServiceKey, PriceTier[]][]
+).forEach(([service, tiers]) => {
+  tiers.forEach((tier) => {
+    const home: HomeSize = {
+      beds: parseFloat(tier.beds),
+      baths: parseFloat(tier.baths),
+      sqft: parseInt(tier.sqft.replace(/,/g, ""), 10),
+    };
+    const computed = priceForHome(service, home);
+    if (computed !== tier.price) {
+      throw new Error(
+        `lib/pricing.ts: ${service} tier "${tierLabel(tier)}" is listed at ${tier.price} but the rate formula gives ${computed}`
+      );
+    }
+  });
+});
+
+/**
+ * Per-visit price for a home on a recurring plan, as a whole dollar. Rounded
+ * UP, the same rule as recurringFromPrice(), so a shown price is never lower
+ * than what BookingKoala charges: $310 every two weeks is $263.50, shown as $264.
+ */
+export function recurringVisitPrice(home: HomeSize, frequency: keyof typeof FREQUENCY_DISCOUNTS): number {
+  const standard = priceForHome("standard", home);
+  return Math.ceil(Math.round(standard * (1 - FREQUENCY_DISCOUNTS[frequency]) * 100) / 100);
+}

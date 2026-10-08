@@ -16,7 +16,55 @@ export interface BlogPost {
   author: string;
   excerpt: string;
   content: string; // HTML string
-  faqSchema?: object; // Optional FAQPage JSON-LD schema
+  /**
+   * How many questions the post's FAQ section holds, for the one post where a
+   * closing call to action follows the last question under the same heading
+   * level. Leave it out everywhere else. See faqSchemaFromContent().
+   */
+  faqCount?: number;
+}
+
+/** Tags out, entities decoded: an HTML fragment as the text a reader sees. */
+function htmlToText(html: string): string {
+  return html
+    .replace(/<[^>]+>/g, "")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;|&apos;/g, "'")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&amp;/g, "&")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+/**
+ * FAQPage JSON-LD for a post, read out of the post's own HTML: each <h3> under
+ * the "Frequently Asked Questions" <h2> is a question, and the one paragraph
+ * right after it is the answer. The schema is never written by hand, so it
+ * cannot drift from what the page shows. Returns null for a post with no FAQ
+ * section.
+ *
+ * Keep every answer to a single <p>. Posts end with a sign-off paragraph after
+ * the last answer, and a second paragraph would be read as that sign-off.
+ */
+export function faqSchemaFromContent(post: BlogPost): object | null {
+  const start = post.content.search(/<h2>Frequently Asked Questions[^<]*<\/h2>/);
+  if (start < 0) return null;
+  const afterHeading = post.content.slice(post.content.indexOf("</h2>", start) + 5);
+  const nextSection = afterHeading.indexOf("<h2");
+  const section = nextSection < 0 ? afterHeading : afterHeading.slice(0, nextSection);
+  const pairs = Array.from(section.matchAll(/<h3>([\s\S]*?)<\/h3>\s*<p>([\s\S]*?)<\/p>/g)).slice(0, post.faqCount);
+  if (pairs.length === 0) return null;
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: pairs.map(([, question, answer]) => ({
+      "@type": "Question",
+      name: htmlToText(question),
+      acceptedAnswer: { "@type": "Answer", text: htmlToText(answer) },
+    })),
+  };
 }
 
 // IMPORTANT: Blog post JSON-LD must NOT include aggregateRating or a LocalBusiness schema.
@@ -38,36 +86,6 @@ export const blogPosts: BlogPost[] = [
     author: "DSM Cleaning Solutions",
     excerpt:
       "Most renters think they know what a landlord inspects at move-out. They're usually wrong about at least a few things. This post covers the actual areas property managers in Will County walk through (oven interior, grout, baseboards, blinds, and more) so you know exactly what to focus on.",
-    faqSchema: {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "Can a landlord charge for cleaning if I leave the place mostly clean?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes. Under Illinois law, a landlord can deduct cleaning costs if the unit isn't left in a reasonably clean condition. 'Mostly clean' isn't a legal standard. If the oven interior is dirty, the refrigerator wasn't wiped out, or the bathrooms have visible buildup, those can all be cited as reasons to withhold part of the deposit. The standard is whether the unit is reasonably clean, not whether it looks clean at a glance.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "How long does a landlord have to return my deposit in Illinois?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Under the Illinois Security Deposit Return Act, landlords must return the deposit within 30 days of move-out. If they're making deductions, they must send an itemized written statement of the deductions along with any remaining balance within that same 30-day window. If they miss the deadline without sending itemized deductions, the tenant may have grounds to recover the full deposit.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Is it worth getting a professional move-out clean in Will County?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "For most renters, yes. A professional move-out clean typically costs less than the deposit deduction a landlord would charge for the same issues. Add in the time it takes to do a thorough job yourself at the end of a move, and hiring a professional usually makes sense. DSM's move-out cleaning covers every item on a landlord's checklist and comes with a 48-hour satisfaction guarantee.",
-          },
-        },
-      ],
-    },
     content: `<p>Most renters think they know what a landlord inspects at move-out. They're usually wrong about at least a few things. This post covers what property managers in <a href="/" class="text-brand-green font-semibold hover:underline">Romeoville</a>, <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield</a>, <a href="/bolingbrook-il" class="text-brand-green font-semibold hover:underline">Bolingbrook</a>, <a href="/joliet-il" class="text-brand-green font-semibold hover:underline">Joliet</a>, and Lockport actually check during a move-out walkthrough, so you know exactly what to focus on before you hand back the keys.</p>
 
 <h2>The Kitchen Gets the Most Scrutiny</h2>
@@ -141,36 +159,6 @@ export const blogPosts: BlogPost[] = [
     author: "DSM Cleaning Solutions",
     excerpt:
       "Move-out cleaning is one of those things people put off pricing until the last minute. This guide covers what drives the cost in Plainfield, what a realistic range looks like, and whether hiring a professional makes sense compared to risking your security deposit.",
-    faqSchema: {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "Is move-out cleaning more expensive than a deep cleaning?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Usually, yes. A move-out clean includes the refrigerator interior and is specifically scoped for rental inspection requirements. A regular deep cleaning is designed for homeowners doing a seasonal reset or a first-time professional clean. The refrigerator interior alone adds meaningful time to the job, and the overall scope of a move-out clean is focused on passing a landlord's checklist. When you call or book, we'll make sure you're getting the right service for your situation.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Do I need to be present for the move-out cleaning?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "No. Most clients aren't home during the clean. You just need to make sure there's a way for the team to get in, whether that's a key, a lockbox code, or a garage code. Let us know the access details when you book and someone can be reached by phone if a question comes up during the job.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "How do I get an accurate quote for my Plainfield home?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Call (815) 246-2113 or book online. We'll ask about the size of your home, the number of bathrooms, and when you need it done. We'll give you a quote before anything is confirmed. No estimates that change at the door.",
-          },
-        },
-      ],
-    },
     content: `<p>Move-out cleaning is one of those things people put off pricing until the last minute. Then they're scrambling to find someone a week before they hand in the keys. This guide covers what affects the cost of <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning</a> in <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield</a>, what a realistic price range looks like, and whether it's worth it compared to taking a chance on your security deposit.</p>
 
 <h2>What Affects the Cost of Move-Out Cleaning in Plainfield</h2>
@@ -228,36 +216,6 @@ export const blogPosts: BlogPost[] = [
     author: "DSM Cleaning Solutions",
     excerpt:
       "Losing part of your security deposit over cleaning is more common than most renters expect. This checklist covers every room landlords inspect during a Naperville move-out, plus the spots most tenants miss and how to decide whether to do it yourself or hire a professional.",
-    faqSchema: {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "How long does it take to do a move-out clean in Naperville?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "A two-bedroom apartment typically takes four to six hours when you're being thorough. A three or four bedroom home can take six to eight hours or more depending on the condition and how long it's been since any professional cleaning was done. Plan for a full day if you're doing it yourself. Trying to rush a move-out clean is how people miss things and end up losing deposit money over something small.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "What's the most common reason landlords withhold deposits in Naperville?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Cleaning. By a wide margin. Damage claims come up, but cleaning is the most common reason renters don't get their full deposit back. The oven interior, the refrigerator, and the bathrooms are the most frequently cited areas. Landlords in Naperville have seen enough move-outs to know exactly where to look, and they check those spots every time.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Can DSM clean just the kitchen and bathrooms if the rest is fine?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes. If the bedrooms and living areas are already in good shape, we can focus the clean on the kitchen and bathrooms specifically. Just let us know when you call or book online and we'll put together the right scope for your situation. The goal is to get you what you actually need, not to add rooms to the job that don't need attention.",
-          },
-        },
-      ],
-    },
     content: `<p>Moving out is already a lot to manage. The last thing you want is a letter two weeks after you hand back the keys saying the landlord kept part of your deposit for cleaning. This checklist covers everything <a href="/naperville-il" class="text-brand-green font-semibold hover:underline">Naperville</a> landlords and property managers actually check during a move-out inspection, so you can go through the unit room by room and not miss the spots that cost people money.</p>
 
 <h2>Kitchen Checklist</h2>
@@ -356,36 +314,6 @@ export const blogPosts: BlogPost[] = [
     author: "DSM Cleaning Solutions",
     excerpt:
       "Deep cleaning and move-out cleaning both go beyond a standard visit, but they're built for different situations. Here's the plain-language breakdown of what each covers, where they differ, and how to pick the right one without guessing.",
-    faqSchema: {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "Is move-out cleaning more expensive than deep cleaning?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Usually a little more, yes. The difference is mainly the refrigerator interior and the fact that move-out cleans are scoped around what landlords inspect at tenant turnover. The exact price depends on the size of the home and its current condition. Call (815) 246-2113 or book online for a quote based on your specific home. We'll ask a few questions and give you a number before anything is confirmed.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Can I book a move-out cleaning even if I own the home?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes. Some homeowners book move-out cleans when selling a property and want it thoroughly cleaned before staging or before new owners take possession. The scope is the same. If you want the refrigerator interior included and the full inspection-level detail, the move-out cleaning is the right service regardless of whether a landlord is involved.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "What if I'm moving into a new home? Which service do I need?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "A deep cleaning is the right call when you're moving into a home. You want the place cleaned before your belongings go in, but the move-out inspection checklist doesn't apply here. A deep cleaning covers every room in detail and gets the home genuinely ready to live in.",
-          },
-        },
-      ],
-    },
     content: `<p>These two services sound similar but they're not the same thing. A <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> and a <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning</a> both go further than a regular visit, but they're built for different situations. Book the wrong one and you might end up short on what you actually need. This post breaks down exactly what each covers, where they differ, and how to pick the right one.</p>
 
 <h2>What Is a Deep Cleaning?</h2>
@@ -443,36 +371,6 @@ export const blogPosts: BlogPost[] = [
     author: "DSM Cleaning Solutions",
     excerpt:
       "Losing part of your deposit is one of the most frustrating ways to end a lease. This post breaks down exactly what Joliet landlords are allowed to deduct for, what they inspect at move-out, and how a professional move-out cleaning helps you walk away with your full deposit.",
-    faqSchema: {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "How far in advance should I book a move-out cleaning in Joliet?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Book as soon as you know your move-out date. End-of-month dates are especially busy. That's when most leases turn over, and availability gets tight fast. Most renters who wait until the last week have trouble finding an open slot. Booking one to two weeks out gives you a confirmed appointment before keys go back, which is when the cleaning needs to happen.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Does the cleaning include inside the oven and refrigerator?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes. Both are included in our move-out cleaning service. The oven interior and racks get scrubbed. The refrigerator gets cleaned completely inside and out, including shelves, drawers, and door seals. This is part of what makes move-out cleaning a different scope from a standard deep cleaning visit. Those two appliances alone add significant time to the job, and they're the first things most landlords check.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "What if my landlord still tries to charge me after the cleaning?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Call us. If the cleaning was completed and your landlord is disputing something that falls within our scope, we'll come back within 48 hours to address it. If something was missed, we fix it. Illinois law requires landlords to send itemized deduction statements within 30 days of move-out. Having a documented record of when the cleaning was done and what was covered gives you a clear position if you need to dispute a charge.",
-          },
-        },
-      ],
-    },
     content: `<p>Losing part of your security deposit is one of the most frustrating parts of moving. You paid rent on time, you kept up with the place, and now the landlord is taking money back over cleaning. Landlords in <a href="/joliet-il" class="text-brand-green font-semibold hover:underline">Joliet</a> and across Will County have the legal right to do exactly that if the unit isn't left in acceptable condition. This post covers what they're actually allowed to deduct for, what they look at during the inspection, and what you can do before you hand back the keys.</p>
 
 <h2>What Illinois Landlords Are Legally Allowed to Deduct For</h2>
@@ -539,36 +437,6 @@ export const blogPosts: BlogPost[] = [
     author: "DSM Cleaning Solutions",
     excerpt:
       "A lot of Bolingbrook homeowners have thought about hiring a cleaning service but never pulled the trigger. This post walks through the whole process so you know exactly what to expect before the team ever shows up.",
-    faqSchema: {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "Is it weird to have strangers cleaning my house?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "It feels that way the first time for almost everyone. Once you've done it once, that feeling goes away quickly. Every DSM cleaner passes a background check before their first appointment, and we're fully insured on every job. You're not letting random strangers in. You're letting in a vetted, insured team that cleans homes for a living. Most clients feel comfortable enough to not be home by the second or third visit.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Do I need to provide any supplies or equipment?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "No. DSM brings everything needed for the job. Supplies, equipment, and products are all included. You don't need to have anything on hand. If you have a preference for specific products due to allergies or sensitivities, let us know when you book and we'll do our best to accommodate.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "What if I want to set up regular cleaning after the first visit?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Just let us know. Most new clients who start with a deep clean move to a recurring schedule after that first appointment. You pick the frequency that works for you (weekly, bi-weekly, or monthly) and we set it up. There are no contracts. If you want to pause, change the schedule, or cancel, you can do that without any hassle.",
-          },
-        },
-      ],
-    },
     content: `<p>A lot of <a href="/bolingbrook-il" class="text-brand-green font-semibold hover:underline">Bolingbrook</a> homeowners have thought about hiring a cleaning service but never actually done it. Maybe it feels like something other people do, or you're not sure what you're paying for. This post walks through the whole process so you know exactly what to expect before you pick up the phone or fill out a form.</p>
 
 <h2>What Type of Cleaning Do You Actually Need?</h2>
@@ -616,36 +484,6 @@ export const blogPosts: BlogPost[] = [
     author: "DSM Cleaning Solutions",
     excerpt:
       "Most homes look fine on the surface. But there are signs that tell you a regular clean isn't enough anymore. Here are 7 signs your Plainfield home is overdue for a real deep clean, and what DSM Cleaning Solutions does about each one.",
-    faqSchema: {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "How long does a deep clean take for a typical Plainfield home?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "A three-bedroom, two-bathroom home in Plainfield typically takes four to six hours for a deep clean, depending on when it was last thoroughly cleaned and the level of buildup. A home that hasn't had a deep clean in over a year will take longer than one that's been maintained on a regular schedule. DSM gives you a time estimate based on your home before the team arrives so there are no surprises on the day of the appointment.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Should I do anything to prepare before the cleaners arrive?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Not much. The most helpful thing you can do is pick up clutter from floors and surfaces so the team can spend their time actually cleaning rather than moving things around. You don't need to pre-clean anything before we arrive. That's what the deep clean is for. If there are specific areas you'd like prioritized or any rooms you'd prefer skipped, just let us know when you book and we'll make note of it for the team.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "How often should I book a deep clean?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Most Plainfield homeowners who maintain a regular cleaning schedule book a deep clean once or twice a year as a reset. If you're starting from scratch with no cleaning history, start with a deep clean and then move to regular bi-weekly or monthly visits to maintain it. Some clients with pets, young kids, or higher-traffic homes prefer a deep clean every three to four months. When you book with DSM, we'll give you an honest recommendation based on what we see.",
-          },
-        },
-      ],
-    },
     content: `<p>Most homes look fine on the surface. Counters are wiped, floors are vacuumed, the bathroom looks okay. But there's a difference between a home that's been maintained and one that's actually clean. If any of the signs below sound familiar, your <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield</a> home is probably overdue for a real <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a>, not just a regular tidy.</p>
 
 <h2>1. You Can't Remember the Last Time It Was Deep Cleaned</h2>
@@ -867,7 +705,7 @@ export const blogPosts: BlogPost[] = [
 <p>If you'd like a deeper understanding of what separates these service levels, see our guide on <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning services</a>. Move out cleaning shares much of the same scope.</p>
 
 <h2>Why Professional Cleaning Protects Your Security Deposit</h2>
-<p>Many Bolingbrook renters attempt DIY move-out cleaning to save money, and end up losing far more in deposit deductions than a professional clean would have cost. Property managers document everything during inspections: grease in the oven, soap scum on shower tiles, dusty blinds, and dirty baseboards are all line-item deductions. A professional clean typically costs ${MOVE_OUT_2_BED} to ${MOVE_OUT_3_BED} for a typical Bolingbrook home. A security deposit deduction for cleaning can easily reach $400–$800 or more when a landlord brings in their own cleaning crew at non-competitive rates. The math is clear.</p>
+<p>Many Bolingbrook renters clean the place themselves and still get a cleaning deduction, because the spots a property manager checks are the ones that are easy to miss. Property managers document everything during inspections: grease in the oven, soap scum on shower tiles, dusty blinds, and dirty baseboards are all line-item deductions. A professional move-out clean works through those same areas with a checklist, so you are not guessing at the walkthrough. You hand back the keys knowing the oven, the bathrooms, the blinds and the baseboards were done.</p>
 
 <h2>What Bolingbrook Landlords Look for During Move-Out Inspections</h2>
 <p>Property managers in Bolingbrook, particularly in higher-density complexes across 60440 and 60490, follow detailed inspection checklists. The areas most commonly cited for deductions include:</p>
@@ -981,6 +819,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "move-out-cleaning-checklist-bolingbrook-renters",
+    faqCount: 3,
     title: "Move Out Cleaning Checklist for Bolingbrook Renters and Homeowners",
     metaTitle: "Move Out Cleaning Checklist for Bolingbrook Renters",
     metaDescription:
@@ -990,36 +829,6 @@ export const blogPosts: BlogPost[] = [
     author: "DSM Cleaning Solutions",
     excerpt:
       "Moving out of your Bolingbrook apartment or home? Use this room-by-room checklist to pass your move-out inspection and recover every dollar of your security deposit.",
-    faqSchema: {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "How much does move-out cleaning cost in Bolingbrook?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: `Professional move-out cleaning in Bolingbrook starts at ${MOVE_OUT_FROM} for a smaller home and runs to about $585 for a 4 bedroom. Call (815) 246-2113 for a free, no-obligation estimate.`,
-          },
-        },
-        {
-          "@type": "Question",
-          name: "How far in advance should I book a move-out cleaning in Bolingbrook?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "We recommend booking 3–5 days before your move-out date. For month-end moves, booking a full week ahead is ideal. DSM Cleaning Solutions serves Bolingbrook 7 days a week, including weekends.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Do I need to be home during the move-out cleaning?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "No. Many customers leave a key or lock box code and return to a clean home. Our team is fully insured and background-checked, and we've served hundreds of Bolingbrook renters this way.",
-          },
-        },
-      ],
-    },
     content: `<p>If you're planning a <strong>move out cleaning in Bolingbrook, IL</strong>, you're already ahead of most renters, and that preparation is exactly what separates those who get their full deposit back from those who don't. Security deposits in Bolingbrook typically run $1,200 to $2,500 depending on the property, and landlords throughout Americana Estates, Stillwater, and the newer developments along Route 53 apply the same scrutiny during move-out inspections. This room-by-room checklist covers everything you need to pass your walkthrough and protect every dollar of your deposit.</p>
 
 <h2>What Bolingbrook Landlords Check During Move-Out Inspections</h2>
@@ -1291,52 +1100,6 @@ export const blogPosts: BlogPost[] = [
 
 <h3>Ready for a Professional Deep Clean in the Southwest Suburbs?</h3>
 <p>DSM Cleaning Solutions serves Plainfield, Romeoville, Naperville, Bolingbrook, and the surrounding southwest Chicago suburbs. Get a free estimate today, no obligation required. <a href="/contact" class="text-brand-green font-semibold hover:underline">Get My Free Quote</a> or call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a>.</p>`,
-    faqSchema: {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "What is included in a professional deep house cleaning?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "A professional deep house cleaning covers every room in the house, including cleaning inside appliances (oven, microwave, refrigerator), scrubbing tile grout and shower walls, removing soap scum and hard water deposits, wiping down baseboards and door frames, cleaning ceiling fans and light fixtures, and vacuuming and mopping all floors. It goes significantly further than a standard recurring clean.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "How long does a deep house cleaning take?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Most deep house cleanings take between 4 and 8 hours, depending on the size of the home, number of bathrooms, and the current condition. A typical 3-bedroom, 2-bathroom home takes approximately 5–6 hours. Homes that haven't been professionally cleaned in over a year may require additional time.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "How is a deep clean different from a standard cleaning?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Standard cleaning is routine maintenance: vacuuming, mopping, wiping counters, and cleaning bathrooms. A deep clean is a comprehensive reset that includes inside appliances, grout scrubbing, baseboard and door frame wiping, ceiling fans, and all the areas that get skipped during weekly cleanings. Deep cleans are recommended once or twice a year.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "How much does a deep house cleaning cost?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: `DSM Cleaning Solutions uses flat-rate pricing based on home size. Deep cleaning starts at ${DEEP_FROM} for a 1-bedroom home and ranges up to $830 for a 5-bedroom home. All rates are all-inclusive, no hidden fees. Visit our pricing page at dsmcleaningsolutions.com/pricing for the full breakdown.`,
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Do I need to be home during the deep cleaning?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "You don't need to be home during the cleaning. Many of our customers leave a key or provide entry instructions. All DSM Cleaning Solutions team members are background-checked and fully insured, so you can feel confident leaving your home in our care.",
-          },
-        },
-      ],
-    },
   },
 ];
 

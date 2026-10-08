@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { blogPosts } from "@/lib/blogData";
+import { blogPosts, faqSchemaFromContent } from "@/lib/blogData";
 import { notFound } from "next/navigation";
 
 export function generateStaticParams() {
@@ -75,6 +75,9 @@ export default function BlogPostPage({
     },
   };
 
+  // Read out of the post's own FAQ section, so it always matches the page.
+  const faqSchema = faqSchemaFromContent(post);
+
   const truncatedTitle =
     post.title.length > 50 ? post.title.slice(0, 50) + "…" : post.title;
 
@@ -85,11 +88,11 @@ export default function BlogPostPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      {/* JSON-LD: FAQPage (per-post, optional) */}
-      {post.faqSchema && (
+      {/* JSON-LD: FAQPage, only for posts that show an FAQ section */}
+      {faqSchema && (
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(post.faqSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       )}
 

@@ -5,6 +5,17 @@ import { DEEP_FROM, STANDARD_CLEANING_TIERS, STANDARD_FROM, formatPrice, priceFo
 
 const TWO_BED_STANDARD = formatPrice(priceForBeds(STANDARD_CLEANING_TIERS, 2));
 
+/**
+ * The home sizes a gift card pays for in full: every standard tier priced at
+ * or under the card's value. "a 1 or 2 bedroom home" for the $200 card.
+ */
+function homesCoveredBy(cardValue: number): string {
+  const beds = STANDARD_CLEANING_TIERS.filter((t) => t.price <= cardValue).map((t) => parseInt(t.beds, 10));
+  if (beds.length === 0) throw new Error(`A $${cardValue} gift card covers no standard tier in lib/pricing.ts`);
+  const list = beds.length === 1 ? `${beds[0]}` : `${beds.slice(0, -1).join(", ")} or ${beds[beds.length - 1]}`;
+  return `a ${list} bedroom home`;
+}
+
 export const metadata: Metadata = {
   title: "House Cleaning Gift Cards Romeoville & Plainfield IL",
   description:
@@ -116,10 +127,13 @@ const occasions = [
   { occasion: "Any Occasion", emoji: "🎁" },
 ];
 
+// The most popular card. Its description is worked out from this value.
+const POPULAR_CARD_VALUE = 200;
+
 const cardValues = [
   { amount: "$100", desc: "Great starter gift or contribution toward any service.", highlight: false },
   { amount: "$150", desc: `Goes toward a standard cleaning. A 2-bedroom home is ${TWO_BED_STANDARD}.`, highlight: false },
-  { amount: "$200", desc: "Most popular gift value, covers most standard cleanings.", highlight: true },
+  { amount: `$${POPULAR_CARD_VALUE}`, desc: `Most popular gift value. Covers a standard cleaning for ${homesCoveredBy(POPULAR_CARD_VALUE)}.`, highlight: true },
   { amount: "Custom", desc: "Any amount, perfect for specific services or larger homes.", highlight: false },
 ];
 

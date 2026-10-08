@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from "next";
 import { deepCityTitle } from "@/lib/seoTitles";
 import Link from "next/link";
+import HeroRating from "@/components/HeroRating";
 import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
 import CityDeepCleanForm from "@/components/CityDeepCleanForm";
@@ -167,9 +168,7 @@ export default function DeepCleaningWestmontPage() {
               <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-3">
                 Deep Cleaning Services in Westmont, IL
               </h1>
-              <p className="text-sm font-semibold mb-4" style={{ color: "#FFA869" }}>
-                ★★★★★ 5.0 · {REVIEW_COUNT} Google Reviews
-              </p>
+              <HeroRating>5.0 · {REVIEW_COUNT} Google Reviews</HeroRating>
               <p className="text-2xl sm:text-3xl font-bold text-white/95 mb-4 leading-snug">
                 We&apos;ll Get the Stuff You&apos;ve Been Putting Off.
               </p>

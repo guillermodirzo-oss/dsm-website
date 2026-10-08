@@ -17,13 +17,25 @@
  *     clean, as long as the home and the schedule stay the same
  *   - 48-hour satisfaction guarantee
  *   - every two weeks is the most popular schedule
+ *   - recurring clients can have bed sheets changed at no extra charge on request
+ *
+ * Each city's client story is the owner's own account of a real recurring
+ * client, used word for word. It is never edited and never carries a name.
  *
  * To add a city: add an entry to RECURRING_CITIES, create its route file,
  * and add the URL to app/sitemap.ts.
  */
 import type { Metadata } from "next";
 import { cities } from "./cityData";
-import { FREQUENCY_DISCOUNTS, WEEKLY_FROM, formatDiscount, recurringFromPrice } from "./pricing";
+import {
+  FREQUENCY_DISCOUNTS,
+  WEEKLY_FROM,
+  formatDiscount,
+  formatPrice,
+  recurringFromPrice,
+  recurringVisitPrice,
+  type HomeSize,
+} from "./pricing";
 import { REVIEW_COUNT, REVIEW_RATING } from "./realReviews";
 import { recurringCityTitle } from "./seoTitles";
 
@@ -46,6 +58,14 @@ export interface RecurringCity {
   photo?: { src: string; alt: string };
   /** Name of a reviewer who is a client in this city, shown under the anchor review. */
   localReviewer?: string;
+  /** The owner's account of a real recurring client in this city. Word for word, no names. */
+  clientStory: string;
+  /**
+   * The home the pricing cards are worked out for. `lead` opens the label
+   * line; the bedrooms, baths and square footage after it are printed from
+   * `home`, the same numbers the prices are computed from.
+   */
+  example: { lead: string; home: HomeSize };
 }
 
 /** Zip codes and neighborhoods exactly as lib/cityData.ts lists them for the city hub. */
@@ -67,6 +87,12 @@ export const RECURRING_CITIES: Record<RecurringCityKey, RecurringCity> = {
       src: "/work-photos/double-vanity-bathroom-clean-naperville-il.jpg",
       alt: "Double vanity bathroom cleaned by DSM in Naperville, IL",
     },
+    clientStory:
+      "One of our longest-standing Naperville clients has a large space with high ceilings, 4 rooms including a home office, 3.5 baths and two kitchens. We've cleaned it every month for over two years. Every visit means dusting up high and a lot of floor, so we take our time in every room.",
+    example: {
+      lead: "Here's what a typical 4-bedroom Naperville home costs",
+      home: { beds: 4, baths: 2.5, sqft: 2500 },
+    },
   },
   plainfield: {
     key: "plainfield",
@@ -83,6 +109,12 @@ export const RECURRING_CITIES: Record<RecurringCityKey, RecurringCity> = {
       src: "/work-photos/living-room-hardwood-floors-plainfield-il.jpg",
       alt: "Living room cleaned by DSM in Plainfield, IL",
     },
+    clientStory:
+      "In Plainfield, we've cleaned a 3-bedroom, 2.5-bath home of about 2,000 square feet every two weeks for over a year. Same cleaner every visit, on the same schedule.",
+    example: {
+      lead: "Here's what a home like our Plainfield client's costs",
+      home: { beds: 3, baths: 2.5, sqft: 2000 },
+    },
   },
   bolingbrook: {
     key: "bolingbrook",
@@ -95,6 +127,12 @@ export const RECURRING_CITIES: Record<RecurringCityKey, RecurringCity> = {
       src: "/work-photos/bedroom-cleaning-service-bolingbrook-il.jpg",
       alt: "Bedroom cleaned by DSM in Bolingbrook, IL",
     },
+    clientStory:
+      "In Bolingbrook, we've cleaned a 4-bedroom, 2.5-bath two-story home every two weeks for two years. She's a busy mom, so along with the regular clean, we change the bed sheets at no extra charge. That's one less thing on her list, and that's what recurring service is for.",
+    example: {
+      lead: "Here's what a home like our Bolingbrook client's costs",
+      home: { beds: 4, baths: 2.5, sqft: 2500 },
+    },
   },
   joliet: {
     key: "joliet",
@@ -106,6 +144,12 @@ export const RECURRING_CITIES: Record<RecurringCityKey, RecurringCity> = {
     // No photo: the only file labeled Joliet in public/work-photos shows a
     // downtown high-rise view, so it is not used here.
     localReviewer: "Jae Mac",
+    clientStory:
+      "One of our Joliet clients has a two-story home with 3 bedrooms and 2 baths, about 2,000 square feet. We've cleaned it every month for two years. Her shower is stone and glass, the kind that's hard to keep up with on your own, so it gets extra attention every visit. It's the part of the house she's happiest with when we leave.",
+    example: {
+      lead: "Here's what a home like our Joliet client's costs",
+      home: { beds: 3, baths: 2, sqft: 2000 },
+    },
   },
 };
 
@@ -135,6 +179,26 @@ const MONTHLY_OFF = formatDiscount(FREQUENCY_DISCOUNTS.monthly);
 
 /** "Save up to 20%": the largest recurring discount, for the hero line. */
 export const MAX_RECURRING_DISCOUNT = WEEKLY_OFF;
+
+/** "Here's what a home like our Joliet client's costs: 3 bedrooms, 2 baths, about 2,000 sq ft." */
+export function exampleHomeLabel(city: RecurringCity): string {
+  const { beds, baths, sqft } = city.example.home;
+  return `${city.example.lead}: ${beds} bedrooms, ${baths} baths, about ${sqft.toLocaleString("en-US")} sq ft.`;
+}
+
+/**
+ * The three pricing cards for a city: per-visit prices for its example home,
+ * computed in lib/pricing.ts and rounded up to the whole dollar.
+ */
+export function examplePlans(city: RecurringCity) {
+  const price = (frequency: keyof typeof FREQUENCY_DISCOUNTS) =>
+    formatPrice(recurringVisitPrice(city.example.home, frequency));
+  return [
+    { name: "Weekly", off: WEEKLY_OFF, price: price("weekly"), popular: false },
+    { name: "Every two weeks", off: BIWEEKLY_OFF, price: price("biweekly"), popular: true },
+    { name: "Monthly", off: MONTHLY_OFF, price: price("monthly"), popular: false },
+  ];
+}
 
 /**
  * The one source for the FAQ on every recurring city page. The visible FAQ
@@ -171,6 +235,10 @@ export const RECURRING_FAQS: { q: string; a: string }[] = [
   {
     q: "When does my discount start?",
     a: `On your very first recurring clean. Weekly saves ${WEEKLY_OFF}, every two weeks saves ${BIWEEKLY_OFF}, and monthly saves ${MONTHLY_OFF} off the standard price.`,
+  },
+  {
+    q: "Do you change bed sheets?",
+    a: "Yes, at no extra charge. Just ask and we'll take care of it on your visits.",
   },
 ];
 
@@ -216,6 +284,8 @@ export function recurringCitySchemas(city: RecurringCity) {
         "@type": "AggregateOffer",
         priceCurrency: "USD",
         lowPrice: String(recurringFromPrice("weekly")),
+        // The weekly price of the example home shown in this page's pricing cards.
+        highPrice: String(recurringVisitPrice(city.example.home, "weekly")),
       },
     },
     breadcrumb: {

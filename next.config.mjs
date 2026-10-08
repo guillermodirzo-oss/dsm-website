@@ -6,6 +6,18 @@ const nextConfig = {
 
   async redirects() {
     return [
+      // ─── NON-WWW LINKS THAT WOULD OTHERWISE TAKE TWO HOPS ─────────────────
+      // The BookingKoala booking form links to dsmcleaningsolutions.com/terms-conditions.
+      // Left to the two rules below, that goes non-www to www and then to
+      // /terms-and-conditions. Redirects match in order, so this rule has to
+      // stay above the catch-all to land in a single permanent redirect.
+      {
+        source: "/terms-conditions",
+        has: [{ type: "host", value: "dsmcleaningsolutions.com" }],
+        destination: "https://www.dsmcleaningsolutions.com/terms-and-conditions",
+        permanent: true,
+      },
+
       // ─── NON-WWW → WWW (301) ───────────────────────────────────────────────
       // Fixes the 403 on dsmcleaningsolutions.com by redirecting all paths
       // to the canonical www version.
