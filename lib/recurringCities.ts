@@ -32,6 +32,7 @@ import {
   WEEKLY_FROM,
   formatDiscount,
   formatPrice,
+  priceBreakdown,
   recurringFromPrice,
   recurringVisitPrice,
   type HomeSize,
@@ -62,8 +63,10 @@ export interface RecurringCity {
   clientStory: string;
   /**
    * The home the pricing cards are worked out for. `lead` opens the label
-   * line; the bedrooms, baths and square footage after it are printed from
-   * `home`, the same numbers the prices are computed from.
+   * line; the bedrooms, baths and square footage bracket after it are printed
+   * from `home`, the same numbers the prices are computed from. `sqft` only
+   * picks the bracket: 1500 means the 1,500-1,999 bracket in lib/pricing.ts.
+   * The owner set these brackets on 2026-10-07.
    */
   example: { lead: string; home: HomeSize };
 }
@@ -91,7 +94,7 @@ export const RECURRING_CITIES: Record<RecurringCityKey, RecurringCity> = {
       "One of our longest-standing Naperville clients has a large space with high ceilings, 4 rooms including a home office, 3.5 baths and two kitchens. We've cleaned it every month for over two years. Every visit means dusting up high and a lot of floor, so we take our time in every room.",
     example: {
       lead: "Here's what a typical 4-bedroom Naperville home costs",
-      home: { beds: 4, baths: 2.5, sqft: 2500 },
+      home: { beds: 4, baths: 2.5, sqft: 2000 },
     },
   },
   plainfield: {
@@ -110,10 +113,10 @@ export const RECURRING_CITIES: Record<RecurringCityKey, RecurringCity> = {
       alt: "Living room cleaned by DSM in Plainfield, IL",
     },
     clientStory:
-      "In Plainfield, we've cleaned a 3-bedroom, 2.5-bath home of about 2,000 square feet every two weeks for over a year. Same cleaner every visit, on the same schedule.",
+      "In Plainfield, we've cleaned a 3-bedroom, 2.5-bath home of between 1,500 and 2,000 square feet every two weeks for over a year. Same cleaner every visit, on the same schedule.",
     example: {
       lead: "Here's what a home like our Plainfield client's costs",
-      home: { beds: 3, baths: 2.5, sqft: 2000 },
+      home: { beds: 3, baths: 2.5, sqft: 1500 },
     },
   },
   bolingbrook: {
@@ -131,7 +134,7 @@ export const RECURRING_CITIES: Record<RecurringCityKey, RecurringCity> = {
       "In Bolingbrook, we've cleaned a 4-bedroom, 2.5-bath two-story home every two weeks for two years. She's a busy mom, so along with the regular clean, we change the bed sheets at no extra charge. That's one less thing on her list, and that's what recurring service is for.",
     example: {
       lead: "Here's what a home like our Bolingbrook client's costs",
-      home: { beds: 4, baths: 2.5, sqft: 2500 },
+      home: { beds: 4, baths: 2.5, sqft: 2000 },
     },
   },
   joliet: {
@@ -145,10 +148,10 @@ export const RECURRING_CITIES: Record<RecurringCityKey, RecurringCity> = {
     // downtown high-rise view, so it is not used here.
     localReviewer: "Jae Mac",
     clientStory:
-      "One of our Joliet clients has a two-story home with 3 bedrooms and 2 baths, about 2,000 square feet. We've cleaned it every month for two years. Her shower is stone and glass, the kind that's hard to keep up with on your own, so it gets extra attention every visit. It's the part of the house she's happiest with when we leave.",
+      "One of our Joliet clients has a two-story home with 3 bedrooms and 2 baths, between 1,500 and 2,000 square feet. We've cleaned it every month for two years. Her shower is stone and glass, the kind that's hard to keep up with on your own, so it gets extra attention every visit. It's the part of the house she's happiest with when we leave.",
     example: {
       lead: "Here's what a home like our Joliet client's costs",
-      home: { beds: 3, baths: 2, sqft: 2000 },
+      home: { beds: 3, baths: 2, sqft: 1500 },
     },
   },
 };
@@ -180,10 +183,15 @@ const MONTHLY_OFF = formatDiscount(FREQUENCY_DISCOUNTS.monthly);
 /** "Save up to 20%": the largest recurring discount, for the hero line. */
 export const MAX_RECURRING_DISCOUNT = WEEKLY_OFF;
 
-/** "Here's what a home like our Joliet client's costs: 3 bedrooms, 2 baths, about 2,000 sq ft." */
+/**
+ * "Here's what a home like our Joliet client's costs: 3 bedrooms, 2 baths, 1,500 to 1,999 sq ft."
+ * The square footage is the bracket lib/pricing.ts prices the home in, so the
+ * label and the prices under it can never describe two different homes.
+ */
 export function exampleHomeLabel(city: RecurringCity): string {
-  const { beds, baths, sqft } = city.example.home;
-  return `${city.example.lead}: ${beds} bedrooms, ${baths} baths, about ${sqft.toLocaleString("en-US")} sq ft.`;
+  const { beds, baths } = city.example.home;
+  const bracket = priceBreakdown("standard", city.example.home).sqftTier.replace("-", " to ");
+  return `${city.example.lead}: ${beds} bedrooms, ${baths} baths, ${bracket} sq ft.`;
 }
 
 /**

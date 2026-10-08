@@ -382,7 +382,7 @@ export function priceForHome(service: ServiceKey, home: HomeSize): number {
 /**
  * Per-visit price for a home on a recurring plan, as a whole dollar. Rounded
  * UP, the same rule as recurringFromPrice(), so a shown price is never lower
- * than what BookingKoala charges: $310 every two weeks is $263.50, shown as $264.
+ * than what BookingKoala charges: $335 every two weeks is $284.75, shown as $285.
  */
 export function recurringVisitPrice(home: HomeSize, frequency: keyof typeof FREQUENCY_DISCOUNTS): number {
   const standard = priceForHome("standard", home);
