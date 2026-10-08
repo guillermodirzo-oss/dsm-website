@@ -10,6 +10,7 @@
 - **Hours:** Monday to Sunday, 7am to 9pm. Online booking is available 24 hours at /book.
 - **Satisfaction guarantee:** 48 hours
 - **Rating:** 5.0 from 46 Google reviews
+- **Recurring service:** the same cleaner comes every recurring visit. No contracts, and no fees to cancel, skip or reschedule a clean. The recurring rate is locked for 12 months from the first recurring clean, as long as the home and the schedule stay the same. New clients do not need a deep clean first, and the recurring discount applies from the very first recurring clean. Every two weeks is the most popular schedule.
 
 ## Service Area (16 cities)
 Romeoville, Plainfield, Naperville, Bolingbrook, Joliet, Lockport, Shorewood, New Lenox, Lemont, Homer Glen, Westmont, Minooka, Hinsdale, Oak Brook, Downers Grove, Burr Ridge.
@@ -23,6 +24,22 @@ Romeoville's hub is the homepage (/). Every other city has a hub at /{city}-il.
 
 DSM does not offer post-construction or Airbnb cleaning. Those old URLs redirect, and no page should offer either service.
 
+## Page Inventory (city pages)
+| Type | URL pattern | Pages |
+|---|---|---|
+| City hub | /{city}-il | 15 (Romeoville is the homepage) |
+| Deep cleaning | /deep-cleaning-{city}-il | 16 |
+| Move-out cleaning | /move-out-cleaning-{city}-il | 16 |
+| Recurring (maid service) | /recurring-cleaning-{city}-il | 4, listed below |
+
+Recurring city pages:
+- /recurring-cleaning-naperville-il
+- /recurring-cleaning-plainfield-il
+- /recurring-cleaning-bolingbrook-il
+- /recurring-cleaning-joliet-il
+
+All four are one component (`components/RecurringCityPage.tsx`) fed by one data file (`lib/recurringCities.ts`). To add a city, add an entry there, create its route file, and add the URL to `app/sitemap.ts`.
+
 ## Prices
 `lib/pricing.ts` is the only source for prices. Pages and schema read from it; never type a price by hand.
 
@@ -33,6 +50,8 @@ DSM does not offer post-construction or Airbnb cleaning. Those old URLs redirect
 | Move-out | from $395 |
 
 Recurring discounts: weekly 20%, biweekly 15%, monthly 10%.
+
+Recurring "from" prices are the smallest standard home with the discount applied, rounded up to the whole dollar so they are never lower than what BookingKoala charges: weekly from $116, every two weeks from $124, monthly from $131. Read them from WEEKLY_FROM, BIWEEKLY_FROM and MONTHLY_FROM in `lib/pricing.ts`.
 
 ## Current Offers
 | Code | Service | Deal | Runs through |
@@ -70,6 +89,10 @@ Move-out customers are mostly home buyers and sellers, not renters. Write move-o
 | `lib/pricing.ts` | Every price tier, recurring discounts, offer helpers |
 | `lib/siteConstants.ts` | Offer codes, discounts and end dates; SERVICE_CITIES, the 16-city list the LocalBusiness schema is built from |
 | `lib/realReviews.ts` | Verbatim Google reviews, REVIEW_COUNT and REVIEW_RATING |
+| `lib/seoTitles.ts` | Title tag formats for every city page |
+| `lib/recurringCities.ts` | Data, FAQ, metadata and schema for the recurring city pages |
+| `components/RecurringCityPage.tsx` | The recurring city page itself |
+| `lib/standardChecklist.ts` | The standard checklist, shared by /recurring-cleaning and the recurring city pages |
 | `components/Offer.tsx` | Wrapper that expires offer copy automatically |
 | `components/Navigation.tsx` | Site nav |
 | `components/Footer.tsx` | Footer with service and city links |
@@ -93,7 +116,7 @@ There are TWO HubSpot lead forms on this site. Never mix them up, and never chan
 Never change form payloads, guards or the Step 1 partial capture. Never send test leads to HubSpot. Never modify the BookingKoala embed on /book.
 
 ## SEO Rules: Never Break These
-1. Never add "| DSM Cleaning Solutions" at the page level. The root layout's title template adds it. Two exceptions use absolute titles with no brand, 60 characters or fewer: city pages build theirs in `lib/seoTitles.ts` ("{Service} {City} IL | From {price} | {rating} Stars"), and blog posts use their `metaTitle`.
+1. Never add "| DSM Cleaning Solutions" at the page level. The root layout's title template adds it. Two exceptions use absolute titles with no brand, 60 characters or fewer: city pages build theirs in `lib/seoTitles.ts` ("{Service} {City} IL | From {price} | {rating} Stars", or "Maid Service {City} IL | Weekly From {price} | {rating} Stars" on the recurring pages), and blog posts use their `metaTitle`.
 2. Schema address is always 402 Tallman Ave, Romeoville, IL 60446, coordinates 41.6336, -88.0904 (the Google Business Profile pin). Never Plainfield.
 3. Review count is 46 and rating 5.0 everywhere. Read them from REVIEW_COUNT and REVIEW_RATING; never type them by hand.
 4. Schema hours are Monday through Sunday, opens "07:00", closes "21:00". Visible hours read "7am to 9pm".
@@ -111,7 +134,7 @@ Never change form payloads, guards or the Step 1 partial capture. Never send tes
 - Banned phrases: "top-to-bottom reset", "incredibly thorough", "delivering exceptional results", "we take pride in", "look no further".
 - Write like a local business owner: short, plain sentences.
 - Reviews are verbatim from Google, stored in `lib/realReviews.ts`. Never write or edit a review.
-- Review attributions use the format "Name, City IL". Google doesn't publish reviewer cities, so when the city isn't known, show the name alone. Never guess a city.
+- Review attributions use the format "Name, City IL". Google doesn't publish reviewer cities, so when the city isn't known, show the name alone. Never guess a city. The owner has confirmed three: Thomas Cheng (Shorewood), Donna Slas (Romeoville) and Jae Mac (Joliet). They are kept in OWNER_CONFIRMED_CITIES in `lib/realReviews.ts` and shown on the recurring city pages.
 
 ## Overall Goal
 Dominate local SEO for house cleaning keywords across all 16 service area cities in the Will County and DuPage County suburbs of Chicago.

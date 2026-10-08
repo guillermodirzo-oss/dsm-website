@@ -3,12 +3,15 @@ import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
 import { pickReviews, reviewAttribution } from "@/lib/realReviews";
 import type { CityData } from "@/lib/cityData";
+import { recurringPageForHub } from "@/lib/recurringCities";
 
 export default function CityPageTemplate({ city }: { city: CityData }) {
   // Real Google reviews only. Reviewer cities are unknown, so nothing here
   // claims a reviewer lives in this city. The offset varies which review each
   // city leads with; pickReviews clamps so a review never repeats on one page.
   const cityReviews = pickReviews(3, city.slug.length);
+  // Cities with their own maid service page get a link to it in the services section.
+  const recurringPage = recurringPageForHub(`/${city.slug}`);
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -227,6 +230,12 @@ export default function CityPageTemplate({ city }: { city: CityData }) {
               From one-time deep cleans to weekly maid service, we have a
               solution for every {city.name} home.
             </p>
+            {recurringPage && (
+              <p className="text-gray-600 text-sm mt-3">
+                Want it kept clean on a schedule? See our{" "}
+                <Link href={recurringPage.path} className="text-brand-green font-semibold hover:underline">{`maid service in ${city.name}`}</Link>.
+              </p>
+            )}
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {city.services.map((service) => (

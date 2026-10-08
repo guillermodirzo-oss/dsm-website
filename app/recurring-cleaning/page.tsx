@@ -12,6 +12,8 @@ import {
   formatPrice,
 } from "@/lib/pricing";
 import { DEEP_OFFER, REVIEW_COUNT, REVIEW_RATING } from "@/lib/siteConstants";
+import { STANDARD_CHECKLIST } from "@/lib/standardChecklist";
+import { PRICE_LOCK_FAQ, RECURRING_CITY_LIST } from "@/lib/recurringCities";
 
 // Regenerate at most hourly so the FALL75 line in section 7 drops out of the
 // HTML on its own after it ends. <Offer> also hides it in the browser at the
@@ -70,58 +72,8 @@ const scheduleCards = [
   },
 ];
 
-const checklist = [
-  {
-    room: "All Rooms",
-    items: [
-      "Dust ceiling fans and remove cobwebs",
-      "Dust window sills and ledges (inside)",
-      "Wipe mirrors and light switches",
-      "Dust blinds",
-      "Vacuum carpet and hard floors",
-      "Mop hard floors",
-    ],
-  },
-  {
-    room: "Kitchen",
-    items: [
-      "Dust reachable vents",
-      "Wipe countertops and surfaces",
-      "Clean stove and oven exterior",
-      "Clean refrigerator exterior",
-      "Clean hood and light switches",
-      "Wipe cabinet faces",
-      "Clean microwave inside and out",
-      "Clean and dry sink and faucet",
-      "Vacuum and mop floors",
-      "Take out trash and recycling",
-    ],
-  },
-  {
-    room: "Bathrooms",
-    items: [
-      "Dust reachable vents",
-      "Clean and sanitize toilet and toilet area",
-      "Remove soap scum and mildew in shower and tub",
-      "Wipe cabinet faces",
-      "Sanitize countertops",
-      "Sanitize sink and polish fixtures",
-      "Wipe mirrors and light switches",
-      "Vacuum and mop floors",
-    ],
-  },
-  {
-    room: "Laundry Room",
-    items: [
-      "Remove cobwebs",
-      "Wipe outside of washer and dryer",
-      "Remove dryer lint",
-      "Clean and dry sink",
-      "Vacuum and mop floor",
-      "Take out trash",
-    ],
-  },
-];
+// Shared with the recurring city pages. See lib/standardChecklist.ts.
+const checklist = STANDARD_CHECKLIST;
 
 // Text is identical between the visible FAQ and the FAQPage schema below, so
 // this is the one place either ever gets written.
@@ -142,6 +94,8 @@ const faqs = [
     q: "Can I skip or reschedule a visit?",
     a: "Yes. Give us at least 48 hours notice and there's no fee. Inside 48 hours, a $70 cancellation fee applies so we can cover the team's reserved time. If you skip enough visits that your actual frequency drops (say, from weekly to monthly), your price adjusts to match the new frequency.",
   },
+  // Shared with the recurring city pages, so the wording is identical everywhere.
+  PRICE_LOCK_FAQ,
   {
     q: "What areas do you serve?",
     a: "We're based in Romeoville and clean homes across the southwest and west suburbs: Romeoville, Plainfield, Naperville, Bolingbrook, Joliet, Lockport, Shorewood, New Lenox, Lemont, Homer Glen, Westmont, Hinsdale, Oak Brook, Downers Grove, Burr Ridge, and Minooka. Not sure if we come to you? Give us a call at (815) 246-2113.",
@@ -295,6 +249,7 @@ export default function RecurringCleaningPage() {
           <span>✅ Fully Insured &amp; Bonded</span>
           <span>✅ {REVIEW_RATING} Stars</span>
           <span>✅ 48-Hour Satisfaction Guarantee</span>
+          <span>✅ Price Locked 12 Months</span>
         </div>
       </section>
 
@@ -587,6 +542,12 @@ export default function RecurringCleaningPage() {
           points straight there. */}
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-lg font-bold text-gray-700 mb-6">Maid Service Near You</h2>
+          <div className="flex flex-wrap justify-center gap-3 mb-10">
+            {RECURRING_CITY_LIST.map((c) => (
+              <Link key={c.key} href={c.path} className="px-4 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-green-700 hover:text-green-700 transition">{`Maid Service in ${c.name}`}</Link>
+            ))}
+          </div>
           <h2 className="text-lg font-bold text-gray-700 mb-6">Recurring Cleaning by City</h2>
           <div className="flex flex-wrap justify-center gap-3">
             <Link href="/" className="px-4 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:border-green-700 hover:text-green-700 transition">Romeoville IL</Link>

@@ -142,6 +142,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.7,
     },
+    // Recurring (maid service) city pages. Data lives in lib/recurringCities.ts.
+    {
+      url: `${baseUrl}/recurring-cleaning-naperville-il`,
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/recurring-cleaning-plainfield-il`,
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/recurring-cleaning-bolingbrook-il`,
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/recurring-cleaning-joliet-il`,
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+    },
     {
       url: `${baseUrl}/deep-cleaning-plainfield-il`,
       changeFrequency: "monthly" as const,

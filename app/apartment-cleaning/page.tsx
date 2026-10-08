@@ -4,6 +4,11 @@ import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
 import { pickReviews, reviewAttribution } from "@/lib/realReviews";
+import { STANDARD_CLEANING_TIERS, STANDARD_FROM, formatPrice, priceForBeds } from "@/lib/pricing";
+
+// Apartment prices are the standard cleaning tiers. There is no studio tier,
+// so a studio is priced as a 1 bedroom.
+const standardFor = (beds: number) => formatPrice(priceForBeds(STANDARD_CLEANING_TIERS, beds));
 
 export const metadata: Metadata = {
   title: "Apartment Cleaning Romeoville IL",
@@ -29,7 +34,7 @@ const faqs = [
   { question: "Do you clean all apartment sizes in Romeoville?", answer: "Yes, from studios and 1-bedroom apartments to large 3+ bedroom units. We price based on size, so you only pay for what you need." },
   { question: "Can you do apartment cleaning for my rental property?", answer: "Absolutely. We work with many landlords and property managers in the Romeoville area to turn over units quickly and thoroughly between tenants." },
   { question: "Do I need to be home for the apartment cleaning?", answer: "No. Many tenants and landlords provide a key or access code. Our fully insured and background-checked team will take great care of the property." },
-  { question: "How much does apartment cleaning cost in Romeoville, IL?", answer: "Pricing starts around $90–$140 for a 1-bedroom apartment, varying by size and service type. Contact us for a free personalized estimate." },
+  { question: "How much does apartment cleaning cost in Romeoville, IL?", answer: `Pricing starts at ${STANDARD_FROM} for a studio or 1-bedroom apartment and goes up with size and service type. Contact us for a free personalized estimate.` },
   { question: "Can you do move-out cleaning for my apartment?", answer: "Yes! We offer dedicated move-out cleaning designed to meet landlord inspection standards and help renters get their full security deposit back. Check out our Move-Out Cleaning page for details." },
 ];
 
@@ -150,10 +155,9 @@ export default function ApartmentCleaningPage() {
               <div className="bg-gray-900 text-white rounded-3xl p-7">
                 <h3 className="font-bold text-lg mb-5">Apartment Sizes We Service</h3>
                 {[
-                  { type: "Studio / Efficiency", time: "1.5–2 hrs", price: "From $90" },
-                  { type: "1 Bedroom / 1 Bath", time: "2–2.5 hrs", price: "From $110" },
-                  { type: "2 Bedroom / 1-2 Bath", time: "2.5–3.5 hrs", price: "From $140" },
-                  { type: "3 Bedroom / 2 Bath", time: "3.5–4.5 hrs", price: "From $175" },
+                  { type: "Studio or 1 Bedroom", time: "2–2.5 hrs", price: `From ${standardFor(1)}` },
+                  { type: "2 Bedroom / 1-2 Bath", time: "2.5–3.5 hrs", price: `From ${standardFor(2)}` },
+                  { type: "3 Bedroom / 2 Bath", time: "3.5–4.5 hrs", price: `From ${standardFor(3)}` },
                 ].map(size => (
                   <div key={size.type} className="flex items-center justify-between py-3 border-b border-gray-800 text-sm">
                     <span className="text-gray-300 font-medium">{size.type}</span>

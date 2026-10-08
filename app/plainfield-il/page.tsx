@@ -343,6 +343,7 @@ export default function PlainfieldPage() {
             <p className="section-subheading mx-auto">
               From one-time deep cleans to weekly maid service, we have a solution for every Plainfield home.
               Wondering about price? Here&apos;s <Link href="/house-cleaning-cost-plainfield-il" className="text-brand-green font-semibold hover:underline">what house cleaning costs in Plainfield</Link>.
+              Want it kept clean on a schedule? See our <Link href="/recurring-cleaning-plainfield-il" className="text-brand-green font-semibold hover:underline">maid service in Plainfield</Link>.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -1,4 +1,10 @@
-import { DEEP_FROM, MOVE_OUT_FROM } from "./pricing";
+import { DEEP_FROM, MOVE_OUT_FROM, MOVE_OUT_TIERS, formatPrice, priceForBeds, topPrice } from "./pricing";
+
+// Move-out prices by home size for the cost guides, straight from the tiers.
+const MOVE_OUT_2_BED = formatPrice(priceForBeds(MOVE_OUT_TIERS, 2));
+const MOVE_OUT_3_BED = formatPrice(priceForBeds(MOVE_OUT_TIERS, 3));
+const MOVE_OUT_4_BED = formatPrice(priceForBeds(MOVE_OUT_TIERS, 4));
+const MOVE_OUT_TOP = formatPrice(topPrice(MOVE_OUT_TIERS));
 
 export interface BlogPost {
   slug: string;
@@ -187,7 +193,7 @@ export const blogPosts: BlogPost[] = [
 <p>This scope is more detailed than a regular cleaning visit because the purpose is different. A regular cleaning maintains a clean home. A move-out clean has to satisfy a landlord's checklist.</p>
 
 <h2>Is It Worth Hiring a Professional for Move-Out Cleaning in Plainfield?</h2>
-<p>Run the numbers. If your security deposit is $1,500 and a professional move-out cleaning costs $350, you're spending a fraction of what's at risk to protect all of it. For most renters, that math is easy.</p>
+<p>Run the numbers. If your security deposit is $1,500 and a professional move-out cleaning starts at ${MOVE_OUT_FROM}, you're spending a fraction of what's at risk to protect all of it. For most renters, that math is easy.</p>
 <p>There's also the time factor. Most people finishing a move are exhausted. You've been packing, coordinating, and managing logistics for days. A landlord-ready clean requires real attention to detail in the kitchen, the bathrooms, and every other part of the unit. Doing it yourself at the end of a move, when you're tired and under time pressure, is exactly when things get missed. A professional team handles it while you focus on getting settled into your new place.</p>
 
 <h2>What Happens If You Don't Get a Professional Clean</h2>
@@ -494,7 +500,7 @@ export const blogPosts: BlogPost[] = [
 <p>Cabinet interiors are another consistent miss. If you never cleaned inside your kitchen cabinets during the lease, there's likely two or three years of crumbs, spills, and residue in there. That shows up in a thorough inspection.</p>
 
 <h2>Why a Professional Move-Out Clean Is Worth It</h2>
-<p>Do the math. If your security deposit is $1,500 and a professional <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning</a> costs $350, you're spending a small fraction of what's at risk to protect all of it. That's a straightforward trade.</p>
+<p>Do the math. If your security deposit is $1,500 and a professional <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning</a> starts at ${MOVE_OUT_FROM}, you're spending a small fraction of what's at risk to protect all of it. That's a straightforward trade.</p>
 <p>The time factor matters too. A proper move-out clean in a two or three bedroom apartment takes four to six hours when done right. That's a full day of your time during a week when you're already coordinating movers, utility transfers, and address changes. Having a professional team handle it frees you up to manage everything else that needs to happen during a move.</p>
 
 <h2>What DSM's Move-Out Cleaning Covers in Joliet</h2>
@@ -692,298 +698,6 @@ export const blogPosts: BlogPost[] = [
 <p>If any of these signs sound familiar, it's time to do something about it. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a>. Every deep clean is backed by DSM's 48-hour satisfaction guarantee. If anything is missed, we come back and fix it at no charge.</p>`,
   },
   {
-    slug: "maid-service-bolingbrook-il",
-    title: "Maid Service in Bolingbrook, IL — What's Included, Pricing & How to Book",
-    metaTitle: "Maid Service in Bolingbrook IL: What's Included and Pricing",
-    metaDescription:
-      "Looking for a dependable maid service in Bolingbrook, IL? DSM offers weekly, bi-weekly, and monthly cleaning with a 48-hour guarantee. See what's included.",
-    date: "July 1, 2026",
-    dateISO: "2026-07-01",
-    author: "DSM Cleaning Solutions",
-    excerpt:
-      "Between work, school, and weekend activities, keeping a Bolingbrook home clean can feel like a losing battle. A recurring maid service from DSM Cleaning Solutions gives you your weekends back, with weekly, bi-weekly, or monthly visits and a 48-hour satisfaction guarantee on every clean.",
-    faqSchema: {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "Do I need to be home when the cleaners come?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "No, you don't have to be. Most of our Bolingbrook clients share a key or door code so we can clean while they're at work or out with the kids. Our team is background-checked and fully insured, so you can feel comfortable leaving your home with us. If you'd rather be home for the first visit to walk through expectations, that's completely fine.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "What if I need to skip or reschedule a cleaning?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Just let us know ahead of time. We ask for at least 24 hours' notice so we can adjust our schedule, but we understand that things come up. There's no penalty for skipping a visit. We'll pick back up on your next scheduled date, or we can find a different time that works better for you.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Do you bring your own supplies and equipment?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes, we bring everything including vacuums, mops, and cleaning products. You don't need to have anything ready. If you have a preferred product for a specific surface in your home, just let us know and we'll use it instead.",
-          },
-        },
-      ],
-    },
-    content: `<p>Bolingbrook households are busy. Between work schedules, school pickups, sports practice, and everything else going on during the week, the house gets messy again almost as fast as you clean it. If that sounds familiar, a recurring maid service in <a href="/bolingbrook-il" class="text-brand-green font-semibold hover:underline">Bolingbrook, IL</a> is worth a serious look. DSM Cleaning Solutions offers weekly, bi-weekly, and monthly cleaning visits so you can stop spending your weekends scrubbing bathrooms and actually enjoy the time off. Every visit is backed by our 48-hour satisfaction guarantee.</p>
-
-<h2>What Does a Recurring Maid Service Include?</h2>
-<p>A recurring maid service is not the same as a one-time <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep clean</a>. A deep clean is a more intensive appointment that gets into places regular cleaning doesn't touch, like oven interiors, cabinet insides, and grout lines. A recurring visit is maintenance cleaning, keeping the home at a consistent standard so it never gets to the point where it needs a full reset.</p>
-<p>On every regular visit, our team handles the kitchen surfaces, stovetop, and sink. Bathrooms get a full scrub: toilet inside and out, tub, shower, sink, mirrors, and floor. In bedrooms we dust all surfaces, vacuum or mop the floors, and make the beds if linens are left out. Living areas get dusted and vacuumed with surfaces wiped down. It's consistent work that keeps the house genuinely clean between visits, not just presentable on the surface.</p>
-
-<h2>Weekly, Bi-Weekly, or Monthly: Which Fits Your Bolingbrook Home?</h2>
-<p>The right frequency depends on what's going on in your household. Here's how most clients land on a schedule:</p>
-<ul>
-  <li><strong>Weekly:</strong> the best fit for families with young kids, homes with pets, or anyone who needs the house consistently guest-ready. More people and activity means more cleaning needed to stay on top of it.</li>
-  <li><strong>Bi-weekly:</strong> the most popular choice for our Bolingbrook clients. It keeps the home in good shape without the cost of weekly visits, and it works well for most households where things don't pile up too fast.</li>
-  <li><strong>Monthly:</strong> a good option for smaller households, or people who handle day-to-day tidying on their own and just want a professional clean once a month for the things that build up over time.</li>
-</ul>
-<p>DSM offers all three, and you're not locked into a single schedule forever. If your household changes or you just want to try a different frequency, we can adjust it.</p>
-
-<h2>What's Included Room by Room</h2>
-<p>Here's exactly what our team covers on a recurring cleaning visit:</p>
-<ul>
-  <li><strong>Kitchen:</strong> countertops cleaned and sanitized, stovetop wiped down, microwave exterior cleaned, sink scrubbed, cabinet exteriors wiped, floor swept and mopped</li>
-  <li><strong>Bathrooms:</strong> toilet scrubbed inside and out, tub and shower walls cleaned, sink and vanity wiped, mirror polished, floor mopped</li>
-  <li><strong>Bedrooms:</strong> all surfaces dusted, floors vacuumed or mopped, beds made, window sills cleaned</li>
-  <li><strong>Living areas:</strong> furniture and shelves dusted, floors vacuumed or mopped, light switches wiped down</li>
-  <li><strong>Throughout the home:</strong> trash emptied, doors and handles spot-cleaned</li>
-</ul>
-<p>We bring our own supplies and equipment to every visit, so there's nothing you need to set out for us ahead of time.</p>
-
-<h2>How Much Does Maid Service Cost in Bolingbrook, IL?</h2>
-<p>What you'll pay depends on the size of your home, the number of bedrooms and bathrooms, and how often you want cleaning. Frequency matters too: clients who schedule bi-weekly service pay less per visit than monthly clients, because the home stays in better shape between appointments and takes less time each visit.</p>
-<p>We don't post flat rates because a number that's right for one home will be wrong for another. The fastest way to get an accurate quote for your Bolingbrook home is to call us at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or book online. We'll ask a few quick questions and have a number ready right away. Most new clients start with a deep clean first to set a solid baseline, and recurring visits maintain it from there.</p>
-
-<h2>Why Bolingbrook Homeowners Choose DSM Cleaning Solutions</h2>
-<ul>
-  <li><strong>Locally owned and operated.</strong> DSM is a family-owned business based in the southwest suburbs, not a national chain. We serve Bolingbrook and the surrounding Will County area and our reputation here matters to us personally.</li>
-  <li><strong>Same trusted cleaners each visit.</strong> We send the same person or team to your home as often as we can, so you're not meeting someone new every couple of weeks.</li>
-  <li><strong>Background-checked and fully insured.</strong> Every cleaner passes a background check before their first job, and we carry full liability insurance on every visit.</li>
-  <li><strong>48-hour satisfaction guarantee.</strong> If something got missed after a visit, let us know within 48 hours and we'll come back and fix it at no charge.</li>
-</ul>
-
-<h2>How to Get Started With Recurring Cleaning in Bolingbrook</h2>
-<p>Getting started is easy. Call us at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or book online and tell us a bit about your home. Your first appointment is typically a deep clean to get everything up to the right standard, and then recurring visits keep it there. There are no long-term contracts, and you can pause or change your frequency whenever you need to. We also serve <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield</a>, <a href="/" class="text-brand-green font-semibold hover:underline">Romeoville</a>, and <a href="/naperville-il" class="text-brand-green font-semibold hover:underline">Naperville</a>.</p>
-
-<h2>Frequently Asked Questions About Maid Service in Bolingbrook</h2>
-
-<h3>Do I need to be home when the cleaners come?</h3>
-<p>No, you don't have to be. Most of our Bolingbrook clients share a key or door code so we can clean while they're at work or out with the kids. Our team is background-checked and fully insured, so you can feel comfortable leaving your home with us. If you'd rather be home for the first visit, that's completely fine too.</p>
-
-<h3>What if I need to skip or reschedule a cleaning?</h3>
-<p>Just let us know ahead of time. We ask for at least 24 hours' notice when possible so we can adjust our schedule, but we understand that things come up. There's no penalty for skipping a visit here and there, and we can always find a time that works better for you.</p>
-
-<h3>Do you bring your own supplies and equipment?</h3>
-<p>Yes, we bring everything we need, including vacuums, mops, and cleaning products. You don't need to have anything ready or set out for us. If you have a product you'd prefer we use on a specific surface, like a certain floor cleaner or countertop spray, just tell us and we'll use it.</p>
-
-<h3>Ready to Stop Spending Your Weekends Cleaning?</h3>
-<p>Coming home to a clean house without having spent the morning doing it yourself is a better feeling than most people expect. DSM Cleaning Solutions provides weekly, bi-weekly, and monthly maid service throughout Bolingbrook, and every visit is backed by our 48-hour satisfaction guarantee. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> and get your first cleaning on the calendar.</p>`,
-  },
-  {
-    slug: "maid-service-naperville-il",
-    title: "Maid Service in Naperville, IL — What's Included, Pricing & How to Book",
-    metaTitle: "Maid Service in Naperville IL: What's Included and Pricing",
-    metaDescription:
-      "Looking for a trusted maid service in Naperville, IL? DSM offers weekly, bi-weekly, and monthly cleaning with a 48-hour guarantee. See what's included.",
-    date: "June 29, 2026",
-    dateISO: "2026-06-29",
-    author: "DSM Cleaning Solutions",
-    excerpt:
-      "Between work, kids' activities, and everything else on the calendar, keeping a Naperville home clean every week is tough. A recurring maid service from DSM Cleaning Solutions gives you that time back, with weekly, bi-weekly, or monthly visits backed by a 48-hour satisfaction guarantee.",
-    faqSchema: {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "Do I need to be home when the cleaners come?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "No, you don't have to be. A lot of our Naperville clients hand over a key or share a door code so we can clean while they're at work or running the kids around. Our team is background-checked and fully insured, so you can feel comfortable not being there. If you'd rather be home, especially for the first visit, that's completely fine too.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "What if I need to skip or reschedule a cleaning?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Just let us know. Life gets busy and plans change, so we don't lock you into a rigid schedule. Give us a call or send a message a day or two ahead of your visit and we'll move it to a better time. There's no penalty for skipping a visit here and there.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Do you bring your own supplies and equipment?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes, we bring everything we need, including vacuums, mops, and cleaning products. You don't need to have anything ready for us. If you have a specific product you'd rather we use on a certain surface, like a countertop or hardwood floor, just tell us and we'll use it.",
-          },
-        },
-      ],
-    },
-    content: `<p>If you live in Naperville, you already know how fast a clean house can stop looking clean. Between work, school drop-offs, sports practice, and everything else on a typical week's schedule, there's not much time left for scrubbing bathrooms or mopping floors. That's where a recurring maid service in Naperville, IL actually pays off. DSM Cleaning Solutions handles the cleaning on a schedule that fits your household, weekly, bi-weekly, or monthly, so you get your home back without giving up your weekends to do it. Every visit comes with our 48-hour satisfaction guarantee.</p>
-
-<h2>What Does a Recurring Maid Service Include?</h2>
-<p>A recurring maid service is different from a one-time deep clean. A <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep clean</a> is a more intensive visit that tackles buildup in places a regular cleaning doesn't touch, like inside the oven, behind appliances, and grout lines. A recurring maintenance clean is what keeps your home at that standard once it's been established. It's lighter work each visit because the house never gets the chance to fall too far behind.</p>
-<p>On every regular visit, our team covers kitchen surfaces, the stovetop, and the sink. In the bathrooms, we handle the toilet, tub, sink, mirrors, and floors. Bedrooms get dusted, vacuumed, and beds get made if the linens are left out. Living areas get dusted and vacuumed, with surfaces wiped down. It's straightforward, consistent work that keeps the house looking the way it did right after a deep clean, visit after visit.</p>
-
-<h2>Weekly, Bi-Weekly, or Monthly: Which Works for Your Naperville Home?</h2>
-<p>There's no single right answer here. It depends on your household.</p>
-<p><strong>Weekly</strong> tends to work best for larger homes, families with young kids, or homes with pets. More people and more activity in a space means more cleaning needed to keep it consistently in good shape.</p>
-<p><strong>Bi-weekly</strong> is the most popular choice among our <a href="/naperville-il" class="text-brand-green font-semibold hover:underline">Naperville</a> clients. It keeps the house consistently clean without the cost of a weekly visit, and it works well for most households we serve.</p>
-<p><strong>Monthly</strong> is a good fit for smaller households, or for people who handle the day-to-day tidying themselves and just want a thorough cleaning once a month for the things that pile up otherwise.</p>
-<p>We offer all three options, and you're not locked into one forever. If your schedule or household changes, just let us know and we'll adjust the frequency.</p>
-
-<h2>What's Included Room by Room</h2>
-<p>Here's a closer look at what our team covers on a recurring visit:</p>
-<ul>
-  <li><strong>Kitchen:</strong> countertops wiped down, stovetop cleaned, microwave exterior wiped, sink scrubbed, cabinet exteriors wiped, floor swept and mopped</li>
-  <li><strong>Bathrooms:</strong> toilet cleaned inside and out, tub and shower scrubbed, sink and vanity wiped, mirror cleaned, floor mopped</li>
-  <li><strong>Bedrooms:</strong> all surfaces dusted, floors vacuumed or mopped, beds made, window sills wiped</li>
-  <li><strong>Living areas:</strong> furniture and shelves dusted, floors vacuumed or mopped, light switches wiped</li>
-  <li><strong>Throughout the home:</strong> trash emptied, doors and handles spot-cleaned</li>
-</ul>
-<p>We bring our own supplies and equipment to every visit, so there's nothing you need to set out ahead of time.</p>
-
-<h2>How Much Does Maid Service Cost in Naperville, IL?</h2>
-<p>Pricing comes down to a few things: the size of your home, how many bedrooms and bathrooms it has, and how often you want cleaning. As a general rule, recurring clients pay less per visit than someone booking a one-time clean, since the home stays in better shape between appointments and needs less time at each visit.</p>
-<p>We don't post flat rates online because a price that's accurate for one home in Naperville could be way off for another. The most reliable way to get an honest number is to call us or book online and answer a few quick questions about your home. For most new clients, we start with a deep clean first. That brings the house up to the right baseline, and then recurring visits maintain it going forward.</p>
-
-<h2>Why Naperville Homeowners Choose DSM Cleaning Solutions</h2>
-<ul>
-  <li><strong>Locally owned and operated.</strong> We're not a national chain. DSM is based right here and serves Naperville along with nearby Will County communities like <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield</a>, <a href="/" class="text-brand-green font-semibold hover:underline">Romeoville</a>, and <a href="/bolingbrook-il" class="text-brand-green font-semibold hover:underline">Bolingbrook</a>.</li>
-  <li><strong>Same trusted cleaners each visit.</strong> We try to send the same person or team to your home every time, so you're not letting a different stranger in every couple of weeks.</li>
-  <li><strong>Background-checked and fully insured.</strong> Every member of our team passes a background check before their first job, and we carry full insurance on every visit.</li>
-  <li><strong>48-hour satisfaction guarantee.</strong> If something got missed, call us within 48 hours and we'll come back and fix it. No charge, no hassle.</li>
-</ul>
-
-<h2>How to Get Started With Recurring Cleaning in Naperville</h2>
-<p>Getting set up is simple. Call us at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or book online and tell us a little about your home. Your first visit is usually a deep clean to get the house to the right starting point, and recurring visits take over from there to keep it that way. There are no long-term contracts, and you can pause or change your frequency whenever you need to.</p>
-
-<h2>Frequently Asked Questions About Maid Service in Naperville</h2>
-
-<h3>Do I need to be home when the cleaners come?</h3>
-<p>No, you don't have to be. A lot of our Naperville clients hand over a key or share a door code so we can clean while they're at work or running the kids around. Our team is background-checked and fully insured, so you can feel comfortable not being there. If you'd rather be home, especially for the first visit, that's completely fine too.</p>
-
-<h3>What if I need to skip or reschedule a cleaning?</h3>
-<p>Just let us know. Life gets busy and plans change, so we don't lock you into a rigid schedule. Give us a call or send a message a day or two ahead of your visit and we'll move it to a better time. There's no penalty for skipping a visit here and there.</p>
-
-<h3>Do you bring your own supplies and equipment?</h3>
-<p>Yes, we bring everything we need, including vacuums, mops, and cleaning products. You don't need to have anything ready for us. If you have a specific product you'd rather we use on a certain surface, like a countertop or hardwood floor, just tell us and we'll use it.</p>
-
-<h3>A Clean Home, Without the Work</h3>
-<p>Coming home to a house that's already clean after a long day is worth more than people expect until they actually have it. DSM Cleaning Solutions offers weekly, bi-weekly, and monthly maid service throughout Naperville, and every single visit is backed by our 48-hour satisfaction guarantee. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> to get started.</p>`,
-  },
-  {
-    slug: "maid-service-plainfield-il",
-    title: "Maid Service in Plainfield, IL — What's Included, Pricing & How to Book",
-    metaTitle: "Maid Service in Plainfield IL: What's Included and Pricing",
-    metaDescription:
-      "Looking for a maid service in Plainfield, IL? DSM Cleaning Solutions provides recurring house cleaning in 60544 and 60585. See what's included and pricing.",
-    date: "June 27, 2026",
-    dateISO: "2026-06-27",
-    author: "DSM Cleaning Solutions",
-    excerpt:
-      "If keeping up with the house feels like a part-time job, a recurring maid service in Plainfield, IL can take that off your plate. DSM Cleaning Solutions serves homeowners throughout Plainfield's 60544 and 60585 zip codes with consistent, professional house cleaning — every visit backed by our 48-hour satisfaction guarantee.",
-    faqSchema: {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "Is a maid service the same as a house cleaning service?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes — the terms are used interchangeably. A maid service and a house cleaning service refer to the same thing: a professional team that comes to your home on a recurring schedule to clean. Some companies use 'maid service' to describe recurring maintenance visits specifically, as opposed to one-time or deep cleaning appointments. At DSM, our maid service covers all recurring cleaning plans — weekly, bi-weekly, or monthly.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Do I need to be home when the cleaners come?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "No, you don't need to be home. Many of our Plainfield clients provide a key or door code so our team can clean while they're at work or running errands. Every cleaner on our team is background-checked and fully insured, so you can leave your home in our hands with confidence.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "What happens if I need to reschedule?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Life happens, and we get it. Just give us a call or send a message at least 24 hours before your scheduled visit and we'll find a time that works. We ask for advance notice when possible so we can adjust our team's schedule, but we'll always work to accommodate you.",
-          },
-        },
-      ],
-    },
-    content: `<p>For most Plainfield homeowners, cleaning the house never quite makes it to the top of the priority list. There's work, family, activities in Settlers Ridge and Grande Park, and not nearly enough hours left over to scrub bathrooms and mop floors. That's exactly what a <a href="/recurring-cleaning" class="text-brand-green font-semibold hover:underline">recurring maid service</a> is for. DSM Cleaning Solutions provides professional house cleaning throughout <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield, IL</a> — zip codes 60544 and 60585 — on a schedule that fits your life. Weekly, bi-weekly, or monthly, we show up consistently and leave your home genuinely clean. Every visit comes with our 48-hour satisfaction guarantee.</p>
-
-<h2>What Is a Maid Service and What Does It Include?</h2>
-<p>A maid service is recurring professional cleaning, not a one-time event. The goal is maintenance: keeping your home consistently clean between visits so the work never piles up to the point where it takes a full day to address. Think of it as a baseline your home holds between appointments rather than a reset you schedule when things get out of hand.</p>
-<p>This is different from a <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a>, which is a more intensive, one-time service that covers grout, oven interiors, cabinet insides, and other areas that don't need attention every visit. Most clients who start with a deep clean move into a recurring maid service afterward to maintain that standard without the time and cost of another full deep clean.</p>
-
-<h2>What's Included in DSM's Maid Service in Plainfield</h2>
-<p>Here's what our team covers on every recurring cleaning visit:</p>
-<ul>
-  <li><strong>Kitchen:</strong> countertops cleaned and sanitized, stovetop wiped down, exterior of appliances wiped, sink scrubbed, microwave cleaned inside and out, cabinet exteriors wiped, floor swept and mopped</li>
-  <li><strong>Bathrooms:</strong> toilet scrubbed inside and out, tub and shower walls and floor scrubbed, sink and faucet cleaned, mirror wiped streak-free, floor scrubbed</li>
-  <li><strong>Bedrooms:</strong> surfaces dusted, ceiling fans dusted, beds made (if linens are left out), floors vacuumed and mopped</li>
-  <li><strong>Living areas:</strong> surfaces dusted, ceiling fans dusted, floors vacuumed and mopped, light switches and outlet covers wiped</li>
-  <li><strong>Throughout the home:</strong> trash removed and bins wiped out, window sills and inside glass cleaned, baseboards wiped</li>
-</ul>
-<p>We bring our own supplies and equipment. You don't need to have anything on hand. If you have a preferred product for a specific surface, just let us know and we'll use it.</p>
-
-<h2>How Much Does a Maid Service Cost in Plainfield, IL?</h2>
-<p>Pricing depends on the size of your home, the number of bedrooms and bathrooms, and how often you schedule service. A 2-bedroom condo is priced differently than a 4-bedroom house in Grande Park. Frequency also affects the rate per visit: clients who schedule bi-weekly service pay less per appointment than those who come monthly, because the home requires less time to bring back to standard between visits.</p>
-<p>We don't list flat-rate prices because a number that's accurate for one home will be wrong for another, and we'd rather give you an honest quote upfront than a figure that changes at the door. The fastest way to find out what your Plainfield home would cost is to call us at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a>. We'll ask a few questions and have a number for you right away.</p>
-
-<h2>How Often Should You Schedule Maid Service in Plainfield?</h2>
-<p>The right frequency depends on your household. Here's a general guide:</p>
-<ul>
-  <li><strong>Weekly:</strong> best for larger families, homes with pets, or anyone who wants their home consistently guest-ready. With weekly visits, the work stays light each time and the home never dips below a clean baseline.</li>
-  <li><strong>Bi-weekly (every two weeks):</strong> the most popular option among our Plainfield clients. It balances cost with consistency and works well for most households. The home gets enough use between visits to need attention, but not so much that appointments feel like starting over each time.</li>
-  <li><strong>Monthly:</strong> a good fit for smaller households, part-time residents, or clients who handle day-to-day tidying themselves and want a professional clean once a month for the areas that need it most.</li>
-</ul>
-<p>If you've never had professional cleaning before or it's been a while, we recommend starting with a deep clean first. That brings the home up to a proper baseline, and recurring visits maintain it from there.</p>
-
-<h2>Why Recurring Cleaning Is Worth It for Plainfield Homeowners</h2>
-<p>The most common thing we hear from new clients is that they wish they'd started sooner. Here's what changes when you have a recurring maid service:</p>
-<p>First, you stop losing weekends to cleaning. That's two to four hours back every week or two that most people spend on work they don't enjoy and could easily hand off. Second, the home stays in better shape overall. A house that's cleaned consistently requires less effort per visit than one that only gets attention when it's become noticeably dirty. Third, stress around having people over goes away. Your home is clean before guests arrive, not just after you've spent a frantic hour cleaning.</p>
-<p>For families in Plainfield's 60544 and 60585 zip codes, this often comes down to a simple calculation: what is two hours of your Saturday worth to you? For most households, it's worth more than what a bi-weekly cleaning visit costs.</p>
-
-<h2>Why Plainfield Homeowners Choose DSM Cleaning Solutions</h2>
-<ul>
-  <li><strong>Locally owned and operated.</strong> DSM is a family-owned business, not a national franchise. We serve Plainfield and the surrounding Will County communities because this is where we live and work. Our reputation here matters to us personally.</li>
-  <li><strong>Background-checked and fully insured.</strong> Every cleaner on our team passes a thorough background check before their first appointment. We carry full liability insurance on every job.</li>
-  <li><strong>Consistent team.</strong> We do our best to send the same cleaner or cleaning team on each visit. You shouldn't have to re-explain how your home works every time someone new shows up.</li>
-  <li><strong>48-hour satisfaction guarantee.</strong> If anything is missed or not up to standard after your visit, contact us within 48 hours and we'll come back to make it right at no charge.</li>
-  <li><strong>5-star rated.</strong> Our reviews on Google reflect what Plainfield homeowners experience: reliable service, honest communication, and a team that does what it says it's going to do.</li>
-</ul>
-
-<h2>Serving Plainfield and Nearby Communities</h2>
-<p>DSM Cleaning Solutions provides maid service throughout Plainfield, including neighborhoods like Settlers Ridge, Grande Park, and the surrounding areas in zip codes 60544 and 60585. We also serve <a href="/" class="text-brand-green font-semibold hover:underline">Romeoville</a>, <a href="/bolingbrook-il" class="text-brand-green font-semibold hover:underline">Bolingbrook</a>, <a href="/naperville-il" class="text-brand-green font-semibold hover:underline">Naperville</a>, Joliet, Lockport, and other communities throughout the southwest suburbs. If you're in the area and looking for a reliable local cleaning team, we're very likely already cleaning homes in your neighborhood.</p>
-
-<h2>Frequently Asked Questions About Maid Service in Plainfield</h2>
-
-<h3>Is a maid service the same as a house cleaning service?</h3>
-<p>Yes, the terms are used interchangeably. A maid service and a house cleaning service refer to the same thing: a professional team that comes to your home on a recurring schedule to clean. Some companies use "maid service" specifically for recurring maintenance visits as opposed to one-time or deep cleaning appointments. At DSM, our maid service covers all recurring cleaning plans: weekly, bi-weekly, or monthly.</p>
-
-<h3>Do I need to be home when the cleaners come?</h3>
-<p>No, you don't need to be home. Many of our Plainfield clients provide a key or door code so our team can clean while they're at work or running errands. Every cleaner on our team is background-checked and fully insured, so you can leave your home in our hands with confidence. If you prefer to be home for the first visit to walk through expectations, that's completely fine too.</p>
-
-<h3>What happens if I need to reschedule?</h3>
-<p>Life happens. Just give us a call or send a message at least 24 hours before your scheduled visit and we'll find a time that works. We ask for advance notice when possible so we can adjust our team's schedule, but we'll always work to accommodate you. We understand that schedules change, especially for busy families.</p>
-
-<h3>Ready to Get Your Saturdays Back?</h3>
-<p>DSM Cleaning Solutions provides reliable, professional maid service throughout Plainfield, IL. No contracts. No surprises. Every visit backed by our 48-hour satisfaction guarantee. Call us at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a> and get your first cleaning scheduled today.</p>`,
-  },
-  {
     slug: "summer-cleaning-checklist-plainfield-homeowners",
     title: "Summer Cleaning Checklist for Plainfield, IL Homeowners",
     metaTitle: "Summer Cleaning Checklist for Plainfield IL Homeowners",
@@ -1132,9 +846,9 @@ export const blogPosts: BlogPost[] = [
 <h2>Average Move Out Cleaning Prices in Bolingbrook, IL (2026)</h2>
 <p>Here are realistic price ranges for professional move out cleaning in Bolingbrook based on home size:</p>
 <ul>
-  <li><strong>Studio or 1-bedroom apartment:</strong> $150–$200, typically 2–3 hours of work. Covers full bathroom scrub, kitchen deep clean including appliances, all floors, baseboards, and surfaces.</li>
-  <li><strong>2–3 bedroom home or apartment:</strong> $200–$300, the most common range in Bolingbrook. Covers all rooms, multiple bathrooms, full kitchen including oven interior, baseboards, window sills, light switches, and all floors.</li>
-  <li><strong>4+ bedroom home:</strong> $300–$450. Larger homes with more bathrooms, additional square footage, and more surfaces requiring detailed attention. Homes in Americana Estates and Stillwater often fall in this tier.</li>
+  <li><strong>Studio or 1-bedroom apartment:</strong> from ${MOVE_OUT_FROM}, typically 2–3 hours of work. Covers full bathroom scrub, kitchen deep clean including appliances, all floors, baseboards, and surfaces.</li>
+  <li><strong>2–3 bedroom home or apartment:</strong> ${MOVE_OUT_2_BED} to ${MOVE_OUT_3_BED}, the most common range in Bolingbrook. Covers all rooms, multiple bathrooms, full kitchen including oven interior, baseboards, window sills, light switches, and all floors.</li>
+  <li><strong>4+ bedroom home:</strong> ${MOVE_OUT_4_BED} to ${MOVE_OUT_TOP}. Larger homes with more bathrooms, additional square footage, and more surfaces requiring detailed attention. Homes in Americana Estates and Stillwater often fall in this tier.</li>
 </ul>
 <p>These are flat-rate estimates, not hourly. At DSM Cleaning Solutions, you receive your quote before we start and pay exactly that amount, regardless of how long the job takes. View our full <a href="/move-out-cleaning-bolingbrook-il" class="text-brand-green font-semibold hover:underline">Bolingbrook move out cleaning service page</a> for details.</p>
 
@@ -1153,7 +867,7 @@ export const blogPosts: BlogPost[] = [
 <p>If you'd like a deeper understanding of what separates these service levels, see our guide on <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning services</a>. Move out cleaning shares much of the same scope.</p>
 
 <h2>Why Professional Cleaning Protects Your Security Deposit</h2>
-<p>Many Bolingbrook renters attempt DIY move-out cleaning to save money, and end up losing far more in deposit deductions than a professional clean would have cost. Property managers document everything during inspections: grease in the oven, soap scum on shower tiles, dusty blinds, and dirty baseboards are all line-item deductions. A professional clean typically costs $200–$350 for a typical Bolingbrook home. A security deposit deduction for cleaning can easily reach $400–$800 or more when a landlord brings in their own cleaning crew at non-competitive rates. The math is clear.</p>
+<p>Many Bolingbrook renters attempt DIY move-out cleaning to save money, and end up losing far more in deposit deductions than a professional clean would have cost. Property managers document everything during inspections: grease in the oven, soap scum on shower tiles, dusty blinds, and dirty baseboards are all line-item deductions. A professional clean typically costs ${MOVE_OUT_2_BED} to ${MOVE_OUT_3_BED} for a typical Bolingbrook home. A security deposit deduction for cleaning can easily reach $400–$800 or more when a landlord brings in their own cleaning crew at non-competitive rates. The math is clear.</p>
 
 <h2>What Bolingbrook Landlords Look for During Move-Out Inspections</h2>
 <p>Property managers in Bolingbrook, particularly in higher-density complexes across 60440 and 60490, follow detailed inspection checklists. The areas most commonly cited for deductions include:</p>

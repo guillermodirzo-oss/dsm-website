@@ -27,6 +27,8 @@
  *     because double hyphens are banned by the site style guide.
  *  3. Google does not publish reviewer cities, so `city` is "" for everyone.
  *     Never guess a city. Rendering shows the name alone when city is empty.
+ *     The only cities shown anywhere are the ones the owner confirmed for his
+ *     own clients, kept in OWNER_CONFIRMED_CITIES below.
  *  4. Never show the same review twice on one page, and never show more
  *     reviews than exist here. Show fewer instead.
  *  5. Three different people are named Julie. Full display names keep them
@@ -183,6 +185,25 @@ export const REVIEW_RATING = "5.0";
  */
 export function reviewAttribution(review: RealReview): string {
   return review.city ? `${review.name}, ${review.city} IL` : review.name;
+}
+
+/**
+ * Cities the owner confirmed for his own clients on 2026-10-07. They are kept
+ * here instead of in `city` above on purpose: setting `city` would change the
+ * attribution on every existing page that already shows these reviews. Pages
+ * that should show the city call reviewAttributionWithCity(); everything else
+ * keeps calling reviewAttribution() and renders exactly as before.
+ */
+export const OWNER_CONFIRMED_CITIES: Record<string, string> = {
+  "Thomas Cheng": "Shorewood",
+  "Donna Slas": "Romeoville",
+  "Jae Mac": "Joliet",
+};
+
+/** "Name, City IL" using an owner-confirmed city when there is one, else the name alone. */
+export function reviewAttributionWithCity(review: RealReview): string {
+  const city = review.city || OWNER_CONFIRMED_CITIES[review.name];
+  return city ? `${review.name}, ${city} IL` : review.name;
 }
 
 /** A review looked up by its exact Google display name. Throws if missing. */

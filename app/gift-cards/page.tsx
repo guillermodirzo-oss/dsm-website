@@ -1,7 +1,9 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
-import { DEEP_FROM, STANDARD_FROM } from "@/lib/pricing";
+import { DEEP_FROM, STANDARD_CLEANING_TIERS, STANDARD_FROM, formatPrice, priceForBeds } from "@/lib/pricing";
+
+const TWO_BED_STANDARD = formatPrice(priceForBeds(STANDARD_CLEANING_TIERS, 2));
 
 export const metadata: Metadata = {
   title: "House Cleaning Gift Cards Romeoville & Plainfield IL",
@@ -116,7 +118,7 @@ const occasions = [
 
 const cardValues = [
   { amount: "$100", desc: "Great starter gift or contribution toward any service.", highlight: false },
-  { amount: "$150", desc: "Covers a standard cleaning for a 2-bedroom home.", highlight: false },
+  { amount: "$150", desc: `Goes toward a standard cleaning. A 2-bedroom home is ${TWO_BED_STANDARD}.`, highlight: false },
   { amount: "$200", desc: "Most popular gift value, covers most standard cleanings.", highlight: true },
   { amount: "Custom", desc: "Any amount, perfect for specific services or larger homes.", highlight: false },
 ];

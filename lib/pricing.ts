@@ -237,6 +237,33 @@ export const STANDARD_FROM = formatPrice(startingPrice(STANDARD_CLEANING_TIERS))
 export const DEEP_FROM = formatPrice(startingPrice(DEEP_CLEANING_TIERS));
 export const MOVE_OUT_FROM = formatPrice(startingPrice(MOVE_OUT_TIERS));
 
+/**
+ * Lowest per-visit price on a recurring plan, as a whole dollar. Rounded UP,
+ * so a "from" price is never lower than what BookingKoala charges: every two
+ * weeks on the smallest home is $123.25, which shows as "from $124".
+ */
+export function recurringFromPrice(frequency: keyof typeof FREQUENCY_DISCOUNTS): number {
+  const smallest = STANDARD_CLEANING_TIERS.reduce((a, b) => (b.price < a.price ? b : a));
+  return Math.ceil(recurringDiscountedPrice(smallest, frequency));
+}
+
+/** "$116", "$124", "$131": recurring "from" prices, formatted for copy. */
+export const WEEKLY_FROM = formatPrice(recurringFromPrice("weekly"));
+export const BIWEEKLY_FROM = formatPrice(recurringFromPrice("biweekly"));
+export const MONTHLY_FROM = formatPrice(recurringFromPrice("monthly"));
+
+/**
+ * Price for a bedroom count in a tier list, for size-specific copy. Where a
+ * bedroom count has more than one tier (two 4 bed square-footage bands),
+ * "low" is the smaller home and "high" the larger. Throws on a bedroom count
+ * with no tier, so a page can never quietly print a made-up number.
+ */
+export function priceForBeds(tiers: PriceTier[], beds: number, which: "low" | "high" = "low"): number {
+  const prices = tiers.filter((t) => t.beds === `${beds} bed`).map((t) => t.price);
+  if (prices.length === 0) throw new Error(`No ${beds} bed tier in lib/pricing.ts`);
+  return which === "low" ? Math.min(...prices) : Math.max(...prices);
+}
+
 /** "2 bed · 1 bath · 1,000-1,499 sq ft" */
 export function tierLabel(tier: PriceTier): string {
   return `${tier.beds} · ${tier.baths} · ${tier.sqft} sq ft`;

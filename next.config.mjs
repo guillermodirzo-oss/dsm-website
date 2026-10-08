@@ -337,6 +337,22 @@ const nextConfig = {
       // ─── BLOG POSTS CONSOLIDATED INTO LANDING PAGES ───────────────────────
       // These posts targeted the same searches as a service or city page, so
       // each one now points at the page that should rank for that search.
+      // The three maid service posts point at the recurring city pages.
+      {
+        source: "/blog/maid-service-naperville-il",
+        destination: "/recurring-cleaning-naperville-il",
+        permanent: true,
+      },
+      {
+        source: "/blog/maid-service-plainfield-il",
+        destination: "/recurring-cleaning-plainfield-il",
+        permanent: true,
+      },
+      {
+        source: "/blog/maid-service-bolingbrook-il",
+        destination: "/recurring-cleaning-bolingbrook-il",
+        permanent: true,
+      },
       {
         source: "/blog/move-out-cleaning-romeoville-il",
         destination: "/move-out-cleaning-romeoville-il",

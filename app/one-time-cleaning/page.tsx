@@ -3,6 +3,10 @@ import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
 import { pickReviews, reviewAttribution } from "@/lib/realReviews";
+import { STANDARD_CLEANING_TIERS, STANDARD_FROM, formatPrice, priceForBeds } from "@/lib/pricing";
+
+// One-time prices are the standard cleaning tiers, with no recurring discount.
+const standardFor = (beds: number) => formatPrice(priceForBeds(STANDARD_CLEANING_TIERS, beds));
 
 export const metadata: Metadata = {
   title: "One-Time Cleaning Romeoville IL",
@@ -27,7 +31,7 @@ export const metadata: Metadata = {
 const faqs = [
   { question: "Is there a contract or commitment required?", answer: "Absolutely not. Our one-time cleaning service requires zero commitment or contract. Book when you need it, and there are no obligations for future visits." },
   { question: "What does a one-time cleaning include?", answer: "A one-time cleaning covers all main areas of your home: kitchen, bathrooms, bedrooms, and living areas. It follows our standard cleaning checklist. You can also add deep cleaning tasks or specific rooms for an additional fee." },
-  { question: "How much does a one-time cleaning cost in Romeoville?", answer: "One-time cleaning starts around $150–$250 depending on home size. Since it's a first-time clean with no prior service history, it may take a bit longer than a recurring visit. Contact us for a free estimate." },
+  { question: "How much does a one-time cleaning cost in Romeoville?", answer: `One-time cleaning starts at ${STANDARD_FROM} for a 1-bedroom home and goes up with home size. Since it's a first-time clean with no prior service history, it may take a bit longer than a recurring visit. Contact us for a free estimate.` },
   { question: "How far in advance do I need to book?", answer: "We recommend booking at least 48–72 hours in advance for the best availability. For urgent requests, contact us and we'll do our best to fit you in." },
   { question: "Can a one-time clean turn into recurring service?", answer: "Of course! Many of our recurring clients started with a one-time clean to try us out. If you love the results (and we think you will), we can set up a weekly, biweekly, or monthly schedule at a discounted recurring rate." },
 ];
@@ -157,9 +161,9 @@ export default function OneTimeCleaningPage() {
               <div className="bg-gray-900 text-white rounded-3xl p-7">
                 <h3 className="font-bold text-lg mb-5">One-Time Pricing Guide</h3>
                 {[
-                  { size: "1–2 Bedroom Home / Apt", price: "From $150" },
-                  { size: "3 Bedroom Home", price: "From $180" },
-                  { size: "4 Bedroom Home", price: "From $220" },
+                  { size: "1–2 Bedroom Home / Apt", price: `From ${STANDARD_FROM}` },
+                  { size: "3 Bedroom Home", price: `From ${standardFor(3)}` },
+                  { size: "4 Bedroom Home", price: `From ${standardFor(4)}` },
                   { size: "5+ Bedroom / Large Home", price: "Custom Quote" },
                 ].map(row => (
                   <div key={row.size} className="flex items-center justify-between py-3 border-b border-gray-800 text-sm">
