@@ -76,6 +76,7 @@ Move-out customers are mostly home buyers and sellers, not renters. Write move-o
 - **Live site:** https://www.dsmcleaningsolutions.com
 - **Repo:** guillermodirzo-oss/dsm-website
 - **Auto-deploys:** Vercel on every push to main
+- **Bare domain:** dsmcleaningsolutions.com (no www) is sent to www by Vercel's domain setting, before any redirect in `next.config.mjs` runs. A host-based rule in `next.config.mjs` never fires in production (checked October 2026), so a non-www link to an old URL always takes two hops: one to www, one to the new URL. The fix is to change the link where it lives. The BookingKoala booking form still links to dsmcleaningsolutions.com/terms-conditions; it should point to https://www.dsmcleaningsolutions.com/terms-and-conditions.
 
 ## Stack
 - Next.js 14 App Router
