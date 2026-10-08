@@ -85,7 +85,7 @@ export default function TermsAndConditionsPage() {
                 We reserve the right to refuse and/or terminate service because of safety concerns, inappropriate or uncomfortable situations, weapons on premises, aggressive pets, or for any other reason.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Our employees have the choice to leave if the home is in an extremely unsanitary condition or they feel unsafe or threatened. If you book a cleaning that is unreasonable, the cleaners may refuse service on the spot and you will be charged the cancellation fee.
+                Our employees have the choice to leave if the home is in an extremely unsanitary condition or they feel unsafe or threatened. If you book a cleaning that is unreasonable, the cleaners may refuse service on the spot. You will not be charged a fee for the cancelled visit.
               </p>
             </div>
 
@@ -137,7 +137,7 @@ export default function TermsAndConditionsPage() {
                 We will gladly work around pets. We ask that indoor activity is limited during the cleaning for efficiency and safety reasons. If your pet becomes vicious or poses a safety risk, DSM Cleaning Solutions will not be held liable for any damages or theft to the client&apos;s home.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Our employees are instructed not to enter a house if they believe an animal is a threat. Pets may behave differently when a family member is not present. If the removal of our cleaning technician is due to aggressive pets, our cancellation policy will apply.
+                Our employees are instructed not to enter a house if they believe an animal is a threat. Pets may behave differently when a family member is not present. If the removal of our cleaning technician is due to aggressive pets, the visit will be cancelled at no charge and we will contact you to reschedule.
               </p>
             </div>
 
@@ -147,7 +147,7 @@ export default function TermsAndConditionsPage() {
             <div className="mb-10">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Service Fees</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Please remember that we provide instant prices based on years of experience, but we may adjust the price based on the actual condition of the home. If we do need to adjust the price upon arrival, we will notify you before starting. If we are unable to reach you, the crew will have to leave and you will be charged the cancellation fee.
+                Please remember that we provide instant prices based on years of experience, but we may adjust the price based on the actual condition of the home. If we do need to adjust the price upon arrival, we will notify you before starting. If we are unable to reach you, the crew will have to leave. You will not be charged a fee, and we will contact you to reschedule.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 We reserve the right to reevaluate rates at any time based on the time it takes to perform our service to meet the client&apos;s standards. DSM Cleaning Solutions will contact the client to discuss price or service revisions if the cleaning time differs drastically from the original bid.
@@ -206,7 +206,7 @@ export default function TermsAndConditionsPage() {
                 The client shall make the service location accessible to DSM Cleaning Solutions personnel on the scheduled service day. If the team is locked out of the client&apos;s home, every effort will be made to establish contact with the client to arrange for entry.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                If contact is not made within 30 minutes of the cleaning team&apos;s arrival, the scheduled cleaning will be skipped and you will be charged a <strong>$70 late cancellation fee</strong>. To avoid this fee, please provide us with a key or access code to gain entry to your home.
+                If contact is not made within 30 minutes of the cleaning team&apos;s arrival, the scheduled cleaning will be skipped. There is <strong>no fee</strong> for a skipped cleaning, and we will contact you to reschedule. To avoid a missed visit, please provide us with a key or access code to gain entry to your home.
               </p>
             </div>
 
@@ -216,7 +216,7 @@ export default function TermsAndConditionsPage() {
             <div className="mb-10">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Rescheduling &amp; Cancellations</h2>
               <p className="text-gray-600 leading-relaxed">
-                Service reliability is extremely important. We reserve a time especially for you, and we request that you give us a minimum of <strong>48 hours&apos; notice</strong> if you need to cancel or reschedule for any reason in order to avoid incurring a <strong>$70 cancellation fee</strong>.
+                Service reliability is extremely important. We reserve a time especially for you, and there is <strong>no fee</strong> to cancel, skip or reschedule a cleaning. If you need to make a change, we ask that you let us know as early as you can so we can adjust the schedule.
               </p>
             </div>
 
@@ -226,7 +226,7 @@ export default function TermsAndConditionsPage() {
             <div className="mb-10">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Alarm Systems</h2>
               <p className="text-gray-600 leading-relaxed">
-                If your home is equipped with a security system, please ensure that it is in the off position or call our office with the code and proper directions for use. If the code should change, please let us know so we do not incur a lockout charge.
+                If your home is equipped with a security system, please ensure that it is in the off position or call our office with the code and proper directions for use. If the code should change, please let us know so our team is not locked out.
               </p>
             </div>
 

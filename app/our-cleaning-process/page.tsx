@@ -176,7 +176,7 @@ const processSteps = [
       },
       {
         heading: "Making Changes",
-        body: "Life happens. You can reschedule, pause, or skip a visit with reasonable advance notice (typically 48 hours). There are no long-term contracts and no cancellation penalties. We want recurring customers to stay because they're happy, not because they're locked in.",
+        body: "Life happens. You can reschedule, pause, or skip a visit, and there is no fee. Just let us know as early as you can so we can adjust the schedule. There are no long-term contracts and no cancellation penalties. We want recurring customers to stay because they're happy, not because they're locked in.",
       },
     ],
   },

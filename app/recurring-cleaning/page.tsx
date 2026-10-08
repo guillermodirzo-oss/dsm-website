@@ -92,7 +92,7 @@ const faqs = [
   },
   {
     q: "Can I skip or reschedule a visit?",
-    a: "Yes. Give us at least 48 hours notice and there's no fee. Inside 48 hours, a $70 cancellation fee applies so we can cover the team's reserved time. If you skip enough visits that your actual frequency drops (say, from weekly to monthly), your price adjusts to match the new frequency.",
+    a: "Yes, anytime. There's no fee to skip, cancel or reschedule. Just let us know as early as you can so we can adjust the schedule. If you skip enough visits that your actual frequency drops (say, from weekly to monthly), your price adjusts to match the new frequency.",
   },
   // Shared with the recurring city pages, so the wording is identical everywhere.
   PRICE_LOCK_FAQ,
