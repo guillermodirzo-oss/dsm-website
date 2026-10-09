@@ -7,13 +7,14 @@ import { StickyMobileBar } from "@/components/HomepageScrollWidgets";
 import Offer from "@/components/Offer";
 import {
   DEEP_CLEANING_TIERS,
-  offerPrice,
   formatPrice,
   startingPrice,
   topPrice,
   tierLabel,
 } from "@/lib/pricing";
-import { DEEP_OFFER, REVIEW_COUNT, REVIEW_RATING } from "@/lib/siteConstants";
+import { offerPrice } from "@/lib/offers";
+import { REVIEW_COUNT, REVIEW_RATING } from "@/lib/siteConstants";
+import { DEEP_OFFER } from "@/lib/offers";
 
 // Regenerate at most hourly so FALL75 drops out of the HTML on its own after
 // it ends. <Offer> also hides it in the browser at the deadline. See

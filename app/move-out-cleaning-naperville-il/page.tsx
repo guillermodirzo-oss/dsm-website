@@ -6,7 +6,7 @@ import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/li
 import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
 import Offer from "@/components/Offer";
-import { MOVEOUT_OFFER } from "@/lib/siteConstants";
+import { MOVEOUT_OFFER } from "@/lib/offers";
 import { MOVE_OUT_PRICING_COPY } from "@/lib/pricingCopy";
 import { MOVE_OUT_TIERS, formatPrice, startingPrice } from "@/lib/pricing";
 
@@ -51,7 +51,7 @@ const faqs = [
   {
     question: "Are you insured and bonded for cleaning in Naperville, IL?",
     answer:
-      "Yes, DSM Cleaning Solutions is fully licensed, insured, and bonded. All of our cleaners pass background checks before entering any home. You can book with total confidence whether you're a renter, landlord, or home seller.",
+      "Yes, DSM Cleaning Solutions is insured and bonded. All of our cleaners pass background checks before entering any home. You can book with total confidence whether you're a renter, landlord, or home seller.",
   },
 ];
 
@@ -158,7 +158,7 @@ const checklist = [
 const trustBadges = [
   {
     title: "Fully Insured & Bonded",
-    desc: "Licensed and liability-insured on every job.",
+    desc: "Insured and bonded on every job.",
     icon: (
       <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -403,7 +403,7 @@ export default function MoveOutCleaningNapervillePage() {
             {[
               { title: "Deposit-Back Focused", desc: "Our checklist covers every area Naperville landlords inspect: ovens, fridges, grout, cabinet interiors, baseboards.", icon: "💵" },
               { title: "48-Hour Re-Clean Promise", desc: "If your landlord or buyer agent finds anything after we leave, we come back and fix it free within 48 hours.", icon: "🔄" },
-              { title: "Fully Insured & Bonded", desc: "Licensed and liability-insured on every job in Naperville. You and your landlord can book with total confidence.", icon: "🛡️" },
+              { title: "Fully Insured & Bonded", desc: "Insured and bonded on every job in Naperville. You and your landlord can book with total confidence.", icon: "🛡️" },
               { title: "Family-Owned & Local", desc: "Based in nearby Romeoville, serving Naperville and the southwest suburbs every week. Memo answers his own phone.", icon: "🏠" },
             ].map((card) => (
               <div key={card.title} className="text-center p-6 rounded-xl border border-gray-100 shadow-sm">

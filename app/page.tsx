@@ -3,22 +3,32 @@ import Link from "next/link";
 import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
-import { pickReviews, reviewAttribution } from "@/lib/realReviews";
+import {
+  pickReviews,
+  reviewAttribution,
+  reviewAttributionWithCity,
+  reviewByName,
+  reviewExcerpt,
+} from "@/lib/realReviews";
 import { ScrollIndicator } from "@/components/HomepageScrollWidgets";
 import StickyBookBar from "@/components/StickyBookBar";
-import Offer from "@/components/Offer";
-import { DEEP_OFFER, REVIEW_COUNT, REVIEW_RATING } from "@/lib/siteConstants";
+import HeroRating from "@/components/HeroRating";
+import OfferBanner from "@/components/OfferBanner";
+import { REVIEW_COUNT, REVIEW_RATING, SERVICE_CITIES } from "@/lib/siteConstants";
 import {
   STANDARD_CLEANING_TIERS,
   DEEP_CLEANING_TIERS,
   MOVE_OUT_TIERS,
+  FREQUENCY_DISCOUNTS,
+  WEEKLY_FROM,
   startingPrice,
+  formatDiscount,
   formatPrice,
 } from "@/lib/pricing";
 
-// Regenerate at most hourly so the FALL75 badge drops out of the HTML on its
-// own after the offer ends. <Offer> also hides it in the browser at the
-// deadline. See components/Offer.tsx.
+// Regenerate at most hourly so an offer in the hero banner drops out of the
+// HTML on its own after it ends. <Offer> also hides it in the browser at the
+// deadline. See lib/offers.ts.
 export const revalidate = 3600;
 
 // "From" prices for the hero line and the pricing FAQ, read from the rate card
@@ -64,27 +74,52 @@ export const metadata: Metadata = {
 // service at different frequencies, and eco-friendly products are used on
 // every job, so neither earned its own card. The six pages dropped from here
 // keep their internal links in the footer.
+//
+// Each card closes with a line from a real review. reviewExcerpt() throws at
+// build time if the words are not in the stored review exactly as written, and
+// marks where the review continues with an ellipsis.
+function cardReview(name: string, excerpt: string) {
+  const review = reviewByName(name);
+  return { excerpt: reviewExcerpt(review, [excerpt]), attribution: reviewAttributionWithCity(review) };
+}
+
+const MAX_RECURRING_DISCOUNT = formatDiscount(Math.max(...Object.values(FREQUENCY_DISCOUNTS)));
+
 const services = [
-  {
-    icon: "🏠",
-    title: "Recurring Cleaning",
-    description:
-      "Your regular clean, whether that is every week or just the once. Weekly, biweekly and monthly plans cost less per visit.",
-    slug: "/recurring-cleaning",
-  },
   {
     icon: "🧹",
     title: "Deep Cleaning",
     description:
-      "For everything a standard clean skips. Inside the oven, grout lines, baseboards and inside the cabinets.",
+      "The clean that catches up on everything, with extra attention on baseboards, doors and window sills. The best place to start.",
+    price: `From ${DEEP_FROM}`,
     slug: "/deep-cleaning",
+    review: cardReview(
+      "Courtney Horne",
+      "We had them over to do a deep cleaning. We had been neglecting some of the cleaning since having a baby and they spent hours here cleaning the house top to bottom. It looks and feels great in here."
+    ),
   },
   {
     icon: "📦",
-    title: "Move-In / Move-Out Cleaning",
+    title: "Move-In & Move-Out Cleaning",
     description:
-      "Built to pass a landlord walkthrough so you get your deposit back, or to start clean in a place someone else just left.",
+      "Selling, buying or moving? We get the house ready for the final walkthrough, closing day or move-in day. Inside the fridge and oven included.",
+    price: `From ${MOVEOUT_FROM}`,
     slug: "/move-out-cleaning",
+    review: cardReview(
+      "Alina",
+      "I first found DSM Cleaning Services when I needed a move-in cleaning for my house, and they did such an amazing job that I decided to stay with this company for regular cleanings."
+    ),
+  },
+  {
+    icon: "🏠",
+    title: "Recurring Maid Service",
+    description: `The same cleaner every visit, no contracts, and your price locked for 12 months. Save up to ${MAX_RECURRING_DISCOUNT}.`,
+    price: `Weekly from ${WEEKLY_FROM}`,
+    slug: "/recurring-cleaning",
+    review: cardReview(
+      "Donna Slas",
+      "Guillermo and Rocio did an amazing job! Thorough due to an exceptional attention to detail."
+    ),
   },
 ];
 
@@ -148,82 +183,56 @@ export default function HomePage() {
         {/* Orange tint */}
         <div className="absolute inset-0 bg-gradient-to-t from-orange-900/20 via-transparent to-transparent" />
 
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          {/* Spacing is deliberately tight on mobile so the primary CTA, the
-              rating and the offer all clear the fold at 390px. 69% of traffic
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-6 pb-20 sm:py-0">
+          {/* Spacing is deliberately tight on mobile so the rating, the offers
+              and the Book button all clear the fold at 390px. 69% of traffic
               is mobile. Widen the rhythm at sm and above, not below. */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-[1.08] tracking-tight mb-4">
+          {/* The one H1 on the page: what we do and where, in small type. The
+              big line under it is the headline visitors read, kept as a plain
+              paragraph so the page has a single H1. */}
+          <h1 className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-orange-200 mb-2 sm:mb-3">
+            House Cleaning in Romeoville and the Southwest Suburbs
+          </h1>
+          <p className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-[1.08] tracking-tight mb-4">
             Come Home to a House That&apos;s{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-orange-400">
               Actually Clean.
             </span>
-          </h1>
-
-          <p className="text-base sm:text-lg md:text-xl text-white/85 mb-3 max-w-2xl mx-auto leading-relaxed">
-            House cleaning in Romeoville, Plainfield, Naperville and the southwest
-            suburbs. Family-owned, fully insured, and every clean is backed by our
-            48-hour guarantee.
           </p>
 
-          {/* Rating, matching the treatment on the deep cleaning city pages.
-              Counts come from lib/realReviews.ts, never hardcoded. */}
-          <Link
-            href="/reviews"
-            className="inline-block text-sm font-semibold mb-4 hover:underline"
-            style={{ color: "#FFA869" }}
-          >
-            ★★★★★ {REVIEW_RATING} · {REVIEW_COUNT} Google Reviews
-          </Link>
+          <p className="text-base sm:text-lg md:text-xl text-white/85 mb-3 max-w-2xl mx-auto leading-relaxed">
+            {`Deep cleaning, move-in and move-out cleaning, and recurring maid service across ${SERVICE_CITIES.length} towns from Naperville to Joliet. Locally owned in Romeoville since 2020.`}
+          </p>
 
-          {/* Offer. Terms mirror /book exactly so the two pages never disagree.
-              Gated by <Offer>, so it disappears on its own when FALL75 ends. */}
-          <Offer service="deep">
-          <div className="mb-6">
-            {/* This was a div styled to look like a button, which is where
-                Clarity recorded dead clicks. It is a real anchor now, so it is
-                keyboard focusable and actually goes to the lead form. Smooth
-                scrolling comes from scroll-behavior in globals.css. */}
-            <a
-              href="#contact"
-              className="inline-block rounded-full px-4 py-2 text-sm sm:text-base font-bold text-white shadow-lg hover:brightness-110 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-95 transition-all duration-200"
-              style={{ backgroundColor: "#E8622A" }}
-            >
-              ${DEEP_OFFER.discount} off your first deep clean, plus {DEEP_OFFER.bonus}, a ${DEEP_OFFER.bonusValue} value.
-            </a>
-            <p className="text-white/70 text-xs sm:text-sm mt-2">
-              Use code <span className="font-bold text-white">{DEEP_OFFER.code}</span> through {DEEP_OFFER.endDate}.
-            </p>
-          </div>
-          </Offer>
+          {/* Rating: the shared component from the city pages. Counts come from
+              lib/realReviews.ts, never hardcoded. */}
+          <HeroRating href="/reviews" className="mb-3 sm:mb-4">{`${REVIEW_RATING} · ${REVIEW_COUNT} Google Reviews`}</HeroRating>
 
-          {/* Two different jobs: book online now (/book), or leave details in
-              the on-page form (#contact). The offer line above also goes to
-              #contact. */}
+          {/* Every offer running right now, from lib/offers.ts. Each line comes
+              down on its own when its offer ends; with none left this takes no
+              space. */}
+          <OfferBanner className="mb-4 sm:mb-6" />
+
+          {/* Two jobs: book online now, or call. */}
           <div className="flex flex-col md:flex-row gap-3 justify-center">
             <Link
               href="/book"
               className="w-full md:w-auto inline-block font-extrabold text-base text-white text-center py-4 px-9 rounded-full active:scale-95 transition-all duration-200 shadow-2xl"
               style={{ backgroundColor: "#E8721C", boxShadow: "0 8px 30px rgba(232,114,28,0.5)" }}
             >
-              Book Online in 2 Minutes →
+              Book Your Clean
             </Link>
-            <a href="#contact" className="btn-outline-white text-base md:py-4 md:px-9 w-full md:w-auto">
-              Get a Free Quote
-            </a>
             <a href="tel:+18152462113" className="btn-outline-white text-base md:py-4 md:px-9 w-full md:w-auto">
               📞 (815) 246-2113
             </a>
           </div>
 
-          {/* Trust indicators */}
-          <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 mt-7 text-white/60 text-sm">
-            {["✓ Family Owned", "✓ Fully Insured", "✓ Eco-Friendly", "✓ Satisfaction Guaranteed"].map((t) => (
-              <span key={t} className="font-medium">{t}</span>
-            ))}
-          </div>
+          <p className="mt-4 text-white/90 text-sm font-medium">
+            No deposit. No contracts. Free to reschedule. <span className="whitespace-nowrap">48-hour guarantee.</span>
+          </p>
 
           {/* Price anchor. Numbers come from lib/pricing.ts. */}
-          <p className="mt-4 text-white/70 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
+          <p className="mt-3 text-white/70 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
             House cleaning from {STANDARD_FROM}. Deep cleans from {DEEP_FROM}. Move-out from {MOVEOUT_FROM}. We confirm your exact price before anything is booked.
           </p>
         </div>
@@ -238,7 +247,7 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
               { icon: "👨‍👩‍👧", label: "Family Owned", desc: "Local & personal service" },
-              { icon: "🛡️", label: "Fully Insured", desc: "Licensed and bonded" },
+              { icon: "🛡️", label: "Fully Insured", desc: "Insured and bonded" },
               { icon: "🌿", label: "Eco-Friendly", desc: "Safe for kids & pets" },
               { icon: "✅", label: "Satisfaction Guaranteed", desc: "We re-clean if needed" },
             ].map((item) => (
@@ -275,12 +284,22 @@ export default function HomePage() {
                   {service.title}
                 </h3>
                 <p className="text-gray-500 text-sm leading-relaxed flex-1">{service.description}</p>
-                <div className="mt-5 flex items-center gap-1 text-brand-green font-semibold text-sm">
+                <p className="mt-5 font-bold text-lg text-gray-900">{service.price}</p>
+                <div className="mt-2 flex items-center gap-1 text-brand-green font-semibold text-sm">
                   Learn more
                   <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </div>
+                <figure className="mt-6 pt-5 border-t border-gray-100">
+                  <blockquote className="text-gray-600 text-sm leading-relaxed italic md:min-h-[10.5rem]">
+                    &ldquo;{service.review.excerpt}&rdquo;
+                  </blockquote>
+                  <figcaption className="mt-3">
+                    <span className="block font-semibold text-gray-900 text-sm">{service.review.attribution}</span>
+                    <span className="block text-amber-400 text-sm">★★★★★</span>
+                  </figcaption>
+                </figure>
               </Link>
             ))}
           </div>

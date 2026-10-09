@@ -89,7 +89,7 @@ export default function RootLayout({
               "@type": ["LocalBusiness", "CleaningService"],
               "@id": "https://www.dsmcleaningsolutions.com/#business",
               name: "DSM Cleaning Solutions",
-              description: "Professional house cleaning in Romeoville, Plainfield, Naperville, Bolingbrook, and the southwest Chicago suburbs. Family owned, fully insured, eco-friendly.",
+              description: "Professional house cleaning in Romeoville, Plainfield, Naperville, Bolingbrook, and the southwest Chicago suburbs. Family owned, insured and bonded, eco-friendly.",
               url: "https://www.dsmcleaningsolutions.com",
               telephone: "+18152462113",
               priceRange: "$$",

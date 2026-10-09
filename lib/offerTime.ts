@@ -38,6 +38,16 @@ export function endOfDayIn(ymd: string, timeZone = OFFER_TIME_ZONE): Date {
   return new Date(wallClockAsUtc - offset * 60_000);
 }
 
+/**
+ * The first moment of `ymd` (YYYY-MM-DD) in `timeZone`: 00:00:00.000 local.
+ * The offset is read at noon that day, which is always past a 2 AM DST change.
+ */
+export function startOfDayIn(ymd: string, timeZone = OFFER_TIME_ZONE): Date {
+  const [y, m, d] = ymd.split("-").map(Number);
+  const offset = zoneOffsetMinutes(new Date(Date.UTC(y, m - 1, d, 12)), timeZone);
+  return new Date(Date.UTC(y, m - 1, d, 0, 0, 0, 0) - offset * 60_000);
+}
+
 /** "2026-10-31" becomes "October 31". Formatted in UTC so the day can't shift. */
 export function monthDayLabel(ymd: string): string {
   const [y, m, d] = ymd.split("-").map(Number);

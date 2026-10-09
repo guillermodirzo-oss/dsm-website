@@ -113,7 +113,7 @@ export const RECURRING_CITIES: Record<RecurringCityKey, RecurringCity> = {
       alt: "Living room cleaned by DSM in Plainfield, IL",
     },
     clientStory:
-      "In Plainfield, we've cleaned a 3-bedroom, 2.5-bath home of between 1,500 and 2,000 square feet every two weeks for over a year. Same cleaner every visit, on the same schedule.",
+      "In Plainfield, we've cleaned a 3-bedroom, 2.5-bath home between 1,500 and 2,000 square feet every two weeks for over a year. Same cleaner every visit, on the same schedule.",
     example: {
       lead: "Here's what a home like our Plainfield client's costs",
       home: { beds: 3, baths: 2.5, sqft: 1500 },

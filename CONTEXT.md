@@ -10,6 +10,8 @@
 - **Hours:** Monday to Sunday, 7am to 9pm. Online booking is available 24 hours at /book.
 - **Satisfaction guarantee:** 48 hours
 - **Rating:** 5.0 from 46 Google reviews
+- **Insurance:** Insured and bonded. Not licensed. Never claim a license.
+- **Since:** Locally owned in Romeoville since 2020.
 - **Cancellations:** No fee to cancel, skip or reschedule (the old $70 late-cancellation fee was retired Oct 2026). We ask customers to let us know as early as they can so we can adjust the schedule.
 - **Deposit:** No deposit required to book (the old $70 deposit was retired Oct 2026). Payment is due on the day of cleaning, by check, cash or credit card. Renters' security deposits are a different thing: move-out pages and blog posts talk about getting a landlord's deposit back, and that copy stays.
 - **Recurring service:** the same cleaner comes every recurring visit. No contracts, and no fees to cancel, skip or reschedule a clean. The recurring rate is locked for 12 months from the first recurring clean, as long as the home and the schedule stay the same. New clients do not need a deep clean first, and the recurring discount applies from the very first recurring clean. Every two weeks is the most popular schedule. Recurring clients can have bed sheets changed at no extra charge on request.
@@ -63,7 +65,11 @@ For a home size with no listed tier, `priceForHome()` in `lib/pricing.ts` works 
 | FALL75 | Deep cleaning | $75 off plus free oven cleaning | November 30, 2026 |
 | MOVE75 | Move-out cleaning | $75 off | October 31, 2026 |
 
-Offers live in `lib/siteConstants.ts`. To renew or end one, change its last day there. Every offer line on a page is wrapped in `<Offer>` (components/Offer.tsx), so it comes down on its own at 11:59:59 PM Central on the last day, with no deploy. Offers never go in page titles, meta descriptions, Open Graph or JSON-LD, because those get cached long after an offer ends.
+All promotions live in `lib/offers.ts`. Never type a promo code or promo price into a page directly.
+
+To renew or end an offer, change its last day in `lib/offers.ts`. To add one, add an entry to OFFER_LIST there (one offer per service). Each offer carries its code, service, description, start and end dates, and its discounted "from" price worked out from `lib/pricing.ts`. Every offer line on a page is wrapped in `<Offer>` (components/Offer.tsx) with a fallback that reads naturally once the offer is over, so it comes down on its own at 11:59:59 PM Central on the last day, with no deploy. The homepage hero lists every running offer through `components/OfferBanner.tsx`. Any page that shows an offer must export `revalidate = 3600`. Offers never go in page titles, meta descriptions, Open Graph or JSON-LD, because those get cached long after an offer ends.
+
+To see the site as it will look after an offer ends, build locally with a fake clock: `NEXT_PUBLIC_OFFER_NOW=2026-12-01T12:00:00-06:00 npm run build`. Never set that variable in Vercel.
 
 ## Checklist Facts
 - Windows means sills and inside glass only. We never clean window tracks. (Shower door tracks are fine.)
@@ -91,14 +97,16 @@ Move-out customers are mostly home buyers and sellers, not renters. Write move-o
 | File | Purpose |
 |---|---|
 | `app/layout.tsx` | Global metadata, title template, and the one LocalBusiness JSON-LD |
-| `lib/pricing.ts` | Every price tier, recurring discounts, offer helpers |
-| `lib/siteConstants.ts` | Offer codes, discounts and end dates; SERVICE_CITIES, the 16-city list the LocalBusiness schema is built from |
+| `lib/pricing.ts` | Every price tier, the BookingKoala rate formula and recurring discounts |
+| `lib/offers.ts` | Every promotion: code, service, description, dates, discounted price, and the helpers that decide whether it is running |
+| `lib/siteConstants.ts` | SERVICE_CITIES, the 16-city list the LocalBusiness schema is built from; re-exports the review count and rating |
 | `lib/realReviews.ts` | Verbatim Google reviews, REVIEW_COUNT and REVIEW_RATING |
 | `lib/seoTitles.ts` | Title tag formats for every city page |
 | `lib/recurringCities.ts` | Data, FAQ, metadata and schema for the recurring city pages |
 | `components/RecurringCityPage.tsx` | The recurring city page itself |
 | `lib/standardChecklist.ts` | The standard checklist, shared by /recurring-cleaning and the recurring city pages |
 | `components/Offer.tsx` | Wrapper that expires offer copy automatically |
+| `components/OfferBanner.tsx` | One line per running offer, for the homepage hero. Disappears when no offer is running |
 | `components/HeroRating.tsx` | The star rating line for orange heroes. White on the darkest brand orange, which meets WCAG AA. Use it instead of coloring the text by hand |
 | `components/Navigation.tsx` | Site nav |
 | `components/Footer.tsx` | Footer with service and city links |

@@ -1,10 +1,19 @@
-import { DEEP_FROM, MOVE_OUT_FROM, MOVE_OUT_TIERS, formatPrice, priceForBeds, topPrice } from "./pricing";
+import {
+  DEEP_CLEANING_TIERS,
+  DEEP_FROM,
+  MOVE_OUT_FROM,
+  MOVE_OUT_TIERS,
+  formatPrice,
+  priceForBeds,
+  topPrice,
+} from "./pricing";
 
 // Move-out prices by home size for the cost guides, straight from the tiers.
 const MOVE_OUT_2_BED = formatPrice(priceForBeds(MOVE_OUT_TIERS, 2));
 const MOVE_OUT_3_BED = formatPrice(priceForBeds(MOVE_OUT_TIERS, 3));
 const MOVE_OUT_4_BED = formatPrice(priceForBeds(MOVE_OUT_TIERS, 4));
 const MOVE_OUT_TOP = formatPrice(topPrice(MOVE_OUT_TIERS));
+const DEEP_TOP = formatPrice(topPrice(DEEP_CLEANING_TIERS));
 
 export interface BlogPost {
   slug: string;
@@ -1007,7 +1016,7 @@ export const blogPosts: BlogPost[] = [
   <li>Clean inside the oven, including racks, walls, and the oven door glass</li>
   <li>Clean inside the microwave: walls, ceiling, turntable, and door seal</li>
   <li>Degrease the stovetop, burner grates, drip pans, and control knobs</li>
-  <li>Clean the refrigerator interior: all shelves, drawers, door bins, and rubber gaskets</li>
+  <li>Detail the refrigerator exterior: top, sides, and handles</li>
   <li>Wipe down the exterior of all appliances including the dishwasher, refrigerator, and microwave</li>
   <li>Clean cabinet exteriors: fronts, handles, and tops of upper cabinets</li>
   <li>Wipe down cabinet interiors if requested</li>
@@ -1093,6 +1102,22 @@ export const blogPosts: BlogPost[] = [
 <h2>How Long Does a Deep House Cleaning Take?</h2>
 <p>Most deep cleans take between 4 and 8 hours depending on the size of the home, the number of bathrooms, and how long it's been since the last professional clean. A 3-bedroom, 2-bathroom home in typical condition typically takes 5–6 hours for our team. Homes that haven't been professionally deep cleaned in over a year may take longer due to built-up grease, soap scum, and mineral deposits.</p>
 <p>Our pricing is flat-rate, so you'll always know what you're paying before we arrive. Visit our <a href="/pricing" class="text-brand-green font-semibold hover:underline">pricing page</a> to see exact rates by home size.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>What is included in a professional deep house cleaning?</h3>
+<p>A professional deep house cleaning covers every room in the house, including cleaning inside the oven and microwave, scrubbing tile grout and shower walls, removing soap scum and hard water deposits, wiping down baseboards and door frames, cleaning ceiling fans and light fixtures, and vacuuming and mopping all floors. The refrigerator is cleaned on the outside only. It goes significantly further than a standard recurring clean.</p>
+
+<h3>How long does a deep house cleaning take?</h3>
+<p>Most deep house cleanings take between 4 and 8 hours, depending on the size of the home, number of bathrooms, and the current condition. A typical 3-bedroom, 2-bathroom home takes approximately 5 to 6 hours. Homes that haven't been professionally cleaned in over a year may require additional time.</p>
+
+<h3>How is a deep clean different from a standard cleaning?</h3>
+<p>Standard cleaning is routine maintenance: vacuuming, mopping, wiping counters, and cleaning bathrooms. A deep clean is a comprehensive reset that includes inside the oven and microwave, grout scrubbing, baseboard and door frame wiping, ceiling fans, and all the areas that get skipped during weekly cleanings. Deep cleans are recommended once or twice a year.</p>
+
+<h3>How much does a deep house cleaning cost?</h3>
+<p>DSM Cleaning Solutions uses flat-rate pricing based on home size. Deep cleaning starts at ${DEEP_FROM} for a 1-bedroom home and ranges up to ${DEEP_TOP} for a 5-bedroom home. All rates are all-inclusive, no hidden fees. Visit our <a href="/pricing" class="text-brand-green font-semibold hover:underline">pricing page</a> for the full breakdown.</p>
+
+<h3>Do I need to be home during the deep cleaning?</h3>
+<p>You don't need to be home during the cleaning. Many of our customers leave a key or provide entry instructions. All DSM Cleaning Solutions team members are background-checked and fully insured, so you can feel confident leaving your home in our care.</p>
 
 <h2>Why Choose DSM Cleaning Solutions for Your Deep Clean?</h2>
 <p>We're a family-owned cleaning company based in Romeoville (60446), serving homeowners throughout Plainfield, Naperville, Bolingbrook, Joliet, Lockport, and the entire southwest Chicago suburbs. Every team member is background-checked and fully trained. We bring all our own supplies, all of which are non-toxic, biodegradable, and safe for children and pets. Learn more about our commitment to safer cleaning on our <a href="/eco-friendly-cleaning" class="text-brand-green font-semibold hover:underline">eco-friendly cleaning page</a>. For Plainfield homeowners, see our dedicated <a href="/deep-cleaning-plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield deep cleaning service</a> page for location-specific details.</p>

@@ -208,7 +208,7 @@ export default function DeepCleaningLockportPage() {
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
               </div>
               <p className="font-bold text-sm text-gray-900 mb-0.5">Fully Insured &amp; Bonded</p>
-              <p className="text-xs text-gray-500 leading-snug">Licensed and liability-insured on every job.</p>
+              <p className="text-xs text-gray-500 leading-snug">Insured and bonded on every job.</p>
             </div>
             <div className="flex flex-col items-center text-center p-4 rounded-xl bg-gray-50 border border-gray-100">
               <div className="w-10 h-10 rounded-full bg-brand-green-50 flex items-center justify-center mb-2 text-brand-green">
@@ -421,7 +421,7 @@ export default function DeepCleaningLockportPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="text-white">
               <h2 className="text-4xl font-bold mb-3">Book Your Deep Cleaning in Lockport Today</h2>
-              <p className="font-semibold mb-6" style={{ color: "#FFD8BC" }}>★★★★★ Trusted by {REVIEW_COUNT} Lockport-area homeowners</p>
+              <HeroRating className="mb-6">Trusted by {REVIEW_COUNT} Lockport-area homeowners</HeroRating>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Get your free deep cleaning quote for Lockport, IL. We usually respond the same day
                 and every job is backed by our 48-hour satisfaction guarantee.

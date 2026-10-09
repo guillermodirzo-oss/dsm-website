@@ -6,7 +6,6 @@ import {
   DEEP_CLEANING_TIERS,
   STANDARD_CLEANING_TIERS,
   MOVE_OUT_TIERS,
-  offerPrice,
   startingPrice,
   formatPrice,
   tierLabel,
@@ -17,7 +16,8 @@ import {
   type PriceTier,
   type ServiceKey,
 } from "@/lib/pricing";
-import { DEEP_OFFER } from "@/lib/siteConstants";
+import { offerPrice } from "@/lib/offers";
+import { DEEP_OFFER } from "@/lib/offers";
 
 // Regenerate at most hourly so FALL75 drops out of the HTML on its own after
 // it ends. <Offer> also hides it in the browser at the deadline. See

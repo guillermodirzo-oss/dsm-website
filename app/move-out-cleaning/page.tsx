@@ -9,13 +9,14 @@ import {
   MOVE_OUT_TIERS,
   topPrice,
   FREQUENCY_DISCOUNTS,
-  offerPrice,
   formatDiscount,
   formatPrice,
   startingPrice,
   type PriceTier,
 } from "@/lib/pricing";
-import { MOVEOUT_OFFER, REVIEW_COUNT, REVIEW_RATING } from "@/lib/siteConstants";
+import { offerPrice } from "@/lib/offers";
+import { REVIEW_COUNT, REVIEW_RATING } from "@/lib/siteConstants";
+import { MOVEOUT_OFFER } from "@/lib/offers";
 
 // Regenerate at most hourly so MOVE75 drops out of the HTML on its own after
 // it ends. <Offer> also hides it in the browser at the deadline. See

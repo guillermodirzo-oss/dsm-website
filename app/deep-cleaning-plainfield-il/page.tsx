@@ -246,7 +246,7 @@ export default function DeepCleaningPlainfieldPage() {
                 </svg>
               </div>
               <p className="font-bold text-sm text-gray-900 mb-0.5">Fully Insured &amp; Bonded</p>
-              <p className="text-xs text-gray-500 leading-snug">Licensed and liability-insured on every job.</p>
+              <p className="text-xs text-gray-500 leading-snug">Insured and bonded on every job.</p>
             </div>
 
             {/* Badge 2 */}
@@ -518,9 +518,7 @@ export default function DeepCleaningPlainfieldPage() {
             {/* Left column */}
             <div className="text-white">
               <h2 className="text-4xl font-bold mb-3">Book Your Deep Cleaning in Plainfield Today</h2>
-              <p className="font-semibold text-white/90 mb-6" style={{ color: "#FFD8BC" }}>
-                ★★★★★ Trusted by {REVIEW_COUNT} Plainfield-area homeowners
-              </p>
+              <HeroRating className="mb-6">Trusted by {REVIEW_COUNT} Plainfield-area homeowners</HeroRating>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 Get your free deep cleaning quote for Plainfield, IL. We usually respond the same day
                 and every job is backed by our 48-hour satisfaction guarantee.

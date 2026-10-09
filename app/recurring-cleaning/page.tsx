@@ -11,7 +11,8 @@ import {
   recurringDiscountedPrice,
   formatPrice,
 } from "@/lib/pricing";
-import { DEEP_OFFER, REVIEW_COUNT, REVIEW_RATING } from "@/lib/siteConstants";
+import { REVIEW_COUNT, REVIEW_RATING } from "@/lib/siteConstants";
+import { DEEP_OFFER } from "@/lib/offers";
 import { STANDARD_CHECKLIST } from "@/lib/standardChecklist";
 import { PRICE_LOCK_FAQ, RECURRING_CITY_LIST } from "@/lib/recurringCities";
 

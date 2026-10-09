@@ -3,7 +3,7 @@ import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/li
 import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
 import Offer from "@/components/Offer";
-import { DEEP_OFFER } from "@/lib/siteConstants";
+import { DEEP_OFFER } from "@/lib/offers";
 import { DEEP_CLEANING_TIERS, formatPrice, startingPrice } from "@/lib/pricing";
 import StickyBar from "./StickyBar";
 import DeepCleanChecklist from "./DeepCleanChecklist";

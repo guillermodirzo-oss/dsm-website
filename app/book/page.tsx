@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import { DEEP_CLEANING_TIERS, formatPrice, startingPrice } from "@/lib/pricing";
-import { DEEP_OFFER } from "@/lib/siteConstants";
+import { DEEP_OFFER } from "@/lib/offers";
 import Offer from "@/components/Offer";
 import Image from "next/image";
 

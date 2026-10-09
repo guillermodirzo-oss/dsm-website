@@ -130,7 +130,7 @@ const differentiators = [
 const trustItems = [
   { label: "Fully Insured & Bonded", icon: "🛡️" },
   { label: "Background-Checked Team", icon: "✔️" },
-  { label: "Licensed Professional Service", icon: "📋" },
+  { label: "Professional Service", icon: "📋" },
   { label: "5-Star Google Rating", icon: "⭐" },
   { label: "{REVIEW_COUNT} Verified Reviews", icon: "💬" },
   { label: "Serving Southwest Suburbs Since Founding", icon: "📍" },

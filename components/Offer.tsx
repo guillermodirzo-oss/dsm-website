@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import OfferGate from "./OfferGate";
-import { OFFERS, isOfferActive, type ServiceKey } from "@/lib/pricing";
+import { type ServiceKey } from "@/lib/pricing";
+import { OFFERS, isOfferActive } from "@/lib/offers";
 
 /**
  * Wrap every piece of offer copy in this: badges, "$415 with MOVE75" lines,

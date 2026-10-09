@@ -127,7 +127,7 @@ export default function Footer() {
             <span>·</span>
             <Link href="/sitemap.xml" className="hover:text-gray-400 transition-colors">Sitemap</Link>
             <span>·</span>
-            <span>Licensed &amp; Insured</span>
+            <span>Insured &amp; Bonded</span>
           </div>
         </div>
       </div>
