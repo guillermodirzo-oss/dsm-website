@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What does a deep cleaning include in Minooka?",
-    a: "We clean inside the oven, degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. Every room gets full attention.",
+    a: "We degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. Cleaning inside the oven is an add-on. Every room gets full attention.",
   },
   {
     q: "How long does a deep clean take in Minooka?",
@@ -57,7 +57,7 @@ const serviceSchema = {
   },
   provider: { "@id": "https://www.dsmcleaningsolutions.com/#business" },
   description:
-    "Professional deep cleaning for homes in Minooka, IL. Includes oven cleaning, grout scrubbing, baseboard wiping, and full room detail.",
+    "Professional deep cleaning for homes in Minooka, IL. Includes grout scrubbing, baseboard wiping, and full room detail.",
   offers: {
     "@type": "Offer",
     priceCurrency: "USD",
@@ -95,7 +95,7 @@ const checklist = [
   {
     room: "Kitchen",
     items: [
-      "Clean inside/outside oven",
+      "Clean oven exterior",
       "Degrease stovetop burners and hood vent",
       "Clean inside microwave",
       "Wipe all cabinet fronts",
@@ -226,7 +226,7 @@ export default function DeepCleaningMinookaPage() {
             Finding a quality cleaning service willing to come to Minooka can be a challenge. DSM does. We serve homeowners throughout Minooka and make booking simple. Whether you are near downtown or along Ridge Road, we can get your home clean.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Our deep cleaning goes room by room with no shortcuts. Kitchen cleaning means inside the oven and degreasing the hood vent, not just wiping the counters. Bathroom cleaning means scrubbing grout lines and disinfecting every surface. Living areas get dusted ceiling fans, clean baseboards, and vacuumed under furniture.
+            Our deep cleaning goes room by room with no shortcuts. Kitchen cleaning means inside the microwave and degreasing the hood vent, not just wiping the counters. Bathroom cleaning means scrubbing grout lines and disinfecting every surface. Living areas get dusted ceiling fans, clean baseboards, and vacuumed under furniture.
           </p>
           <p className="text-gray-700 leading-relaxed">
             We use eco-friendly, non-toxic products on every job and back every clean with a 48-hour satisfaction guarantee. If anything is not right, we come back and fix it at no charge.
@@ -264,7 +264,7 @@ export default function DeepCleaningMinookaPage() {
             <div className="bg-gray-50 rounded-xl p-6">
               <h3 className="font-bold text-gray-800 mb-2">No Shortcuts</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                We clean inside the oven, behind the stovetop, grout lines, baseboards, ceiling fans, and window sills. Every room gets the full treatment, not just a surface wipe.
+                We clean behind the stovetop, grout lines, baseboards, ceiling fans, and window sills. Every room gets the full treatment, not just a surface wipe.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">

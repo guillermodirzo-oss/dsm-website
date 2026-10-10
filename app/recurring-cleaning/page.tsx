@@ -89,7 +89,7 @@ const faqs = [
   },
   {
     q: "What's the difference between recurring and deep cleaning?",
-    a: "Recurring cleaning follows the checklist above every visit. It's built to keep a clean home clean. Deep cleaning goes further: it gets inside the oven, scrubs bathroom grout, wipes baseboards and door frames, and vacuums under and behind furniture. If your home hasn't had that kind of attention in a while, deep cleaning is the better starting point.",
+    a: "Recurring cleaning follows the checklist above every visit. It's built to keep a clean home clean. Deep cleaning goes further: it scrubs bathroom grout, wipes baseboards and door frames, and vacuums under and behind furniture. If your home hasn't had that kind of attention in a while, deep cleaning is the better starting point.",
   },
   {
     q: "Can I skip or reschedule a visit?",
@@ -385,7 +385,7 @@ export default function RecurringCleaningPage() {
 
           <div className="text-center bg-white rounded-xl border border-gray-200 p-6">
             <p className="text-gray-700 mb-4">
-              Want the inside of the oven and fridge, baseboards and the deep stuff done too? That&apos;s our deep clean.
+              Want the baseboards, the grout and the deep stuff done too? That&apos;s our deep clean.
             </p>
             <Link
               href="/deep-cleaning"

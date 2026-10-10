@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What is included in a deep cleaning in Homer Glen?",
-    a: "We clean inside the oven, degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. Every room gets full attention.",
+    a: "We degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. Cleaning inside the oven is an add-on. Every room gets full attention.",
   },
   {
     q: "How long does a deep clean take in Homer Glen?",
@@ -57,7 +57,7 @@ const serviceSchema = {
   },
   provider: { "@id": "https://www.dsmcleaningsolutions.com/#business" },
   description:
-    "Professional deep cleaning for homes in Homer Glen, IL. Includes oven cleaning, grout scrubbing, baseboard wiping, and full room detail.",
+    "Professional deep cleaning for homes in Homer Glen, IL. Includes grout scrubbing, baseboard wiping, and full room detail.",
   offers: {
     "@type": "Offer",
     priceCurrency: "USD",
@@ -95,7 +95,7 @@ const checklist = [
   {
     room: "Kitchen",
     items: [
-      "Clean inside/outside oven",
+      "Clean oven exterior",
       "Degrease stovetop burners and hood vent",
       "Clean inside microwave",
       "Wipe all cabinet fronts",
@@ -176,7 +176,7 @@ export default function DeepCleaningHomerGlenPage() {
                 Deep cleaning for Homer Glen homes. We take the time to do it right.
               </p>
               <p className="opacity-90 mb-6 leading-relaxed">
-                DSM Cleaning Solutions serves Homer Glen, IL with thorough, professional deep cleaning. From the oven to the baseboards, we cover every room. Family owned, eco-friendly products, and a 48-hour satisfaction guarantee on every job.
+                DSM Cleaning Solutions serves Homer Glen, IL with thorough, professional deep cleaning. From the grout to the baseboards, we cover every room. Family owned, eco-friendly products, and a 48-hour satisfaction guarantee on every job.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
@@ -226,7 +226,7 @@ export default function DeepCleaningHomerGlenPage() {
             Homer Glen is a quiet residential community in Will County with a lot of larger homes. We know that a big house means more ground to cover, and we do not rush. Every room gets the same level of attention whether you have two bedrooms or five.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Our deep cleaning covers the spots that standard cleaning skips. In the kitchen we clean inside the oven, degrease the hood vent, and scrub the sink. In the bathrooms we get into the grout, polish the fixtures, and clean behind the toilet. In bedrooms and living areas we dust ceiling fans, clean window sills, and wipe down every baseboard.
+            Our deep cleaning covers the spots that standard cleaning skips. In the kitchen we clean inside the microwave, degrease the hood vent, and scrub the sink. In the bathrooms we get into the grout, polish the fixtures, and clean behind the toilet. In bedrooms and living areas we dust ceiling fans, clean window sills, and wipe down every baseboard.
           </p>
           <p className="text-gray-700 leading-relaxed">
             We use eco-friendly, non-toxic products on every job and stand behind our work with a 48-hour guarantee. If something is not right, let us know and we will come back to fix it at no charge.

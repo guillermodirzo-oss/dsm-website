@@ -149,8 +149,8 @@ const checklist = [
 // `checklist` above. Nothing here is on only one side unless that side's
 // checklist actually lists it.
 const comparison = [
-  // deep: "Clean inside/outside oven" | move-out: "Clean stove and inside the oven"
-  { item: "Inside the oven", deep: "Yes", moveOut: "Yes" },
+  // deep: "Clean oven exterior" (inside is an add-on) | move-out: "Clean stove and inside the oven"
+  { item: "Inside the oven", deep: "Add-on", moveOut: "Yes" },
   // deep: "Clean inside microwave" | move-out: "Clean microwave inside and out"
   { item: "Inside the microwave", deep: "Yes", moveOut: "Yes" },
   // deep: "Wipe refrigerator exterior" | move-out: "Clean refrigerator inside and out"
@@ -184,7 +184,7 @@ const faqs = [
   },
   {
     q: "What's the difference between move-out and deep cleaning?",
-    a: "Move-out cleaning is built for an empty house. It covers inside the fridge and inside every cabinet and drawer, which a deep clean doesn't. Deep cleaning is built for a home you're living in, so it vacuums under and behind furniture. Both clean inside the oven and microwave, both scrub tile grout, and both do baseboards and doors.",
+    a: "Move-out cleaning is built for an empty house. It covers inside the oven, inside the fridge and inside every cabinet and drawer, which a deep clean doesn't. Deep cleaning is built for a home you're living in, so it vacuums under and behind furniture. Both clean inside the microwave, both scrub tile grout, and both do baseboards and doors. Inside oven cleaning can be added to a deep clean.",
   },
   {
     q: "Do I need to be home?",
@@ -500,7 +500,7 @@ export default function MoveOutCleaningPage() {
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl font-bold text-gray-800 text-center mb-2">Move-Out vs Deep Clean</h2>
           <p className="text-center text-gray-600 text-sm mb-8 max-w-xl mx-auto">
-            Move-out is built for an empty house, so it adds inside the fridge and inside every cabinet and drawer.
+            Move-out is built for an empty house, so it adds inside the oven, inside the fridge and inside every cabinet and drawer.
           </p>
           <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
             <table className="w-full text-sm">

@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What does a deep cleaning include in Shorewood?",
-    a: "We clean inside the oven, degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, and much more. No room gets skipped.",
+    a: "We degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, and much more. Cleaning inside the oven is an add-on. No room gets skipped.",
   },
   {
     q: "How long does a deep clean take in Shorewood?",
@@ -57,7 +57,7 @@ const serviceSchema = {
   },
   provider: { "@id": "https://www.dsmcleaningsolutions.com/#business" },
   description:
-    "Professional deep cleaning for homes in Shorewood, IL. Includes oven cleaning, grout scrubbing, baseboard wiping, and full room detail.",
+    "Professional deep cleaning for homes in Shorewood, IL. Includes grout scrubbing, baseboard wiping, and full room detail.",
   offers: {
     "@type": "Offer",
     priceCurrency: "USD",
@@ -95,7 +95,7 @@ const checklist = [
   {
     room: "Kitchen",
     items: [
-      "Clean inside/outside oven",
+      "Clean oven exterior",
       "Degrease stovetop burners and hood vent",
       "Clean inside microwave",
       "Wipe all cabinet fronts",
@@ -176,7 +176,7 @@ export default function DeepCleaningShorewoodPage() {
                 A real deep clean for Shorewood homes. Every room, every detail.
               </p>
               <p className="opacity-90 mb-6 leading-relaxed">
-                DSM Cleaning Solutions serves Shorewood, IL with thorough, professional deep cleaning. We cover everything from oven scrubbing to grout lines to baseboards. Family owned, eco-friendly products, and a 48-hour satisfaction guarantee on every job.
+                DSM Cleaning Solutions serves Shorewood, IL with thorough, professional deep cleaning. We cover everything from grout lines to baseboards to ceiling fans. Family owned, eco-friendly products, and a 48-hour satisfaction guarantee on every job.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
@@ -226,7 +226,7 @@ export default function DeepCleaningShorewoodPage() {
             Shorewood is a growing community in Will County, and we have been proud to serve families here for years. Whether you are in Shorewood Glen, River Crossing, Brentwood Lakes, or another part of town, we can come to you and give every room a real deep clean.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Our deep cleaning service is built for homes that need more than a quick pass. We spend real time in each room. In the kitchen that means inside the oven, behind the stovetop grates, and inside the microwave. In the bathrooms we scrub grout, disinfect toilets, and polish fixtures. In living areas we dust ceiling fans, wipe baseboards, and clean window sills.
+            Our deep cleaning service is built for homes that need more than a quick pass. We spend real time in each room. In the kitchen that means behind the stovetop grates and inside the microwave. In the bathrooms we scrub grout, disinfect toilets, and polish fixtures. In living areas we dust ceiling fans, wipe baseboards, and clean window sills.
           </p>
           <p className="text-gray-700 leading-relaxed">
             We use eco-friendly, non-toxic products on every job. Your family and pets are safe. And if anything is not right after we leave, let us know within 48 hours and we will come back to fix it at no charge.
@@ -264,7 +264,7 @@ export default function DeepCleaningShorewoodPage() {
             <div className="bg-gray-50 rounded-xl p-6">
               <h3 className="font-bold text-gray-800 mb-2">We Do Not Cut Corners</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Our deep clean is not a surface wipe-down. We get into the spots that usually get skipped: inside the oven, behind the toilet, grout lines, ceiling fans, and window sills. Every room gets real attention.
+                Our deep clean is not a surface wipe-down. We get into the spots that usually get skipped: behind the toilet, grout lines, ceiling fans, and window sills. Every room gets real attention.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">

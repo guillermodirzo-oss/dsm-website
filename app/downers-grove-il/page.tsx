@@ -86,7 +86,7 @@ export default function DownersGrovePage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <Link href="/deep-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Downers Grove</h3>
-              <p className="text-sm text-gray-600">Deep cleaning for Downers Grove homes, including inside the oven and microwave.</p>
+              <p className="text-sm text-gray-600">Deep cleaning for Downers Grove homes, including grout, baseboards and inside the microwave.</p>
             </Link>
             <Link href="/recurring-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Recurring Maid Service Downers Grove</h3>

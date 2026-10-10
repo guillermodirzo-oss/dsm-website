@@ -101,7 +101,7 @@ const checklist = [
   {
     room: "Kitchen",
     items: [
-      "Clean inside/outside oven",
+      "Clean oven exterior",
       "Degrease stovetop burners and hood vent",
       "Clean inside microwave",
       "Wipe all cabinet fronts",
@@ -173,7 +173,7 @@ export default function DeepCleaningNapervillePage() {
                 We&apos;ll Get the Stuff You&apos;ve Been Putting Off.
               </p>
               <p className="text-white/85 text-lg leading-relaxed mb-8">
-                DSM Cleaning Solutions scrubs every room in your Naperville home. Ceiling fans, grout lines, baseboards, the oven. Local, family-owned, and every job comes with a 48-hour satisfaction guarantee.
+                DSM Cleaning Solutions scrubs every room in your Naperville home. Ceiling fans, grout lines, baseboards, window sills. Local, family-owned, and every job comes with a 48-hour satisfaction guarantee.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <a href="#quote-form" className="inline-flex items-center justify-center gap-2 font-bold text-brand-green bg-white rounded-full px-7 py-3.5 text-base hover:bg-orange-50 transition-colors shadow-md">

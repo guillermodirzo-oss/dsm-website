@@ -51,7 +51,7 @@ export const cities: CityData[] = [
       {
         icon: "🧹",
         title: "Deep Cleaning in Naperville",
-        desc: "Inside the oven, bathroom grout, baseboards and ceiling fans, all done in your Naperville home.",
+        desc: "Bathroom grout, baseboards and ceiling fans, all done in your Naperville home.",
         link: "/deep-cleaning",
       },
       {
@@ -143,7 +143,7 @@ export const cities: CityData[] = [
       {
         icon: "🧹",
         title: "Deep Cleaning in Bolingbrook",
-        desc: "We scrub the grout, wipe every baseboard and clean inside the oven in your Bolingbrook home.",
+        desc: "We scrub the grout, wipe every baseboard and clean inside the microwave in your Bolingbrook home.",
         link: "/deep-cleaning",
       },
       {
@@ -715,7 +715,7 @@ export const cities: CityData[] = [
       {
         icon: "🧹",
         title: "Deep Cleaning in New Lenox",
-        desc: "Soap scum, grease and dust come off every surface in your New Lenox home, including inside the oven.",
+        desc: "Soap scum, grease and dust come off every surface in your New Lenox home, including the baseboards and grout.",
         link: "/deep-cleaning",
       },
       {
@@ -1125,7 +1125,7 @@ export const cities: CityData[] = [
       {
         icon: "🧹",
         title: "Deep Cleaning in Minooka",
-        desc: "Inside the oven and microwave, shower grout and every baseboard in your Minooka home.",
+        desc: "Inside the microwave, shower grout and every baseboard in your Minooka home.",
         link: "/deep-cleaning",
       },
       {
@@ -1222,7 +1222,7 @@ export const cities: CityData[] = [
       {
         icon: "🧹",
         title: "Deep Cleaning in Downers Grove",
-        desc: "Inside the oven and microwave, along the baseboards and into the corners of your Downers Grove home.",
+        desc: "Inside the microwave, along the baseboards and into the corners of your Downers Grove home.",
         link: "/deep-cleaning",
       },
       {
@@ -1319,7 +1319,7 @@ export const cities: CityData[] = [
       {
         icon: "🧹",
         title: "Deep Cleaning in Hinsdale",
-        desc: "Grout, vents, fixtures and the inside of the oven, all cleaned in your Hinsdale home.",
+        desc: "Grout, vents, fixtures and baseboards, all cleaned in your Hinsdale home.",
         link: "/deep-cleaning",
       },
       {
@@ -1405,7 +1405,7 @@ export const cities: CityData[] = [
       {
         icon: "🧹",
         title: "Deep Cleaning in Oak Brook",
-        desc: "We clean inside the oven and microwave, scrub the grout and wipe every baseboard in Oak Brook homes.",
+        desc: "We clean inside the microwave, scrub the grout and wipe every baseboard in Oak Brook homes.",
         link: "/deep-cleaning",
       },
       {

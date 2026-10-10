@@ -78,6 +78,9 @@ To see the site as it will look after an offer ends, build locally with a fake c
 - Windows means sills and inside glass only. We never clean window tracks. (Shower door tracks are fine.)
 - Deep cleaning includes the refrigerator exterior only.
 - Move-out cleaning includes the refrigerator inside and out.
+- Deep cleaning does NOT include cleaning inside the oven. Inside oven cleaning is an add-on. Never write that a deep clean "gets inside the oven" or list the oven interior on a deep cleaning checklist. The oven exterior is fine.
+- During FALL75 (`lib/offers.ts`), inside oven cleaning is added free with a deep clean. That claim must only appear while FALL75 is active: put it inside `<Offer service="deep">`, and give it a fallback that does not mention the oven (or no fallback at all).
+- Move-in and move-out cleaning ALWAYS includes inside the oven (and inside the refrigerator). It is never an add-on there.
 
 ## Customers
 Move-out customers are mostly home buyers and sellers, not renters. Write move-out copy for people selling a house or moving into one.

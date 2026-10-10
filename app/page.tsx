@@ -357,7 +357,7 @@ export default function HomePage() {
             {[
               // Six tiles, two per service. Captions without a city are the new drops,
               // whose location is unknown; do not invent one.
-              { src: "/work-photos/oven-interior-deep-cleaning.jpg", alt: "Oven interior cleaned down to bare enamel during a DSM Cleaning Solutions deep clean", caption: "Oven Deep Clean" },
+              { src: "/work-photos/oven-interior-deep-cleaning.jpg", alt: "Oven interior cleaned down to bare enamel by DSM Cleaning Solutions", caption: "Oven Cleaning" },
               { src: "/work-photos/marble-bathroom-deep-cleaning.jpg", alt: "Marble tiled bathroom with a scrubbed tub surround and floor tile catching the light after a DSM Cleaning Solutions deep clean", caption: "Bathroom Deep Clean" },
               { src: "/work-photos/empty-room-move-out-cleaning.jpg", alt: "Empty bedroom with fresh vacuum lines in the carpet after a DSM Cleaning Solutions move-out cleaning", caption: "Move-Out Clean" },
               { src: "/work-photos/closet-move-out-cleaning.jpg", alt: "Empty walk-in closet with white built-in drawers and shelving and a polished hardwood floor after a DSM Cleaning Solutions move-out cleaning", caption: "Move-Out Clean" },
@@ -569,7 +569,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <Link href="/deep-cleaning-romeoville-il" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Romeoville</h3>
-              <p className="text-sm text-gray-600">Inside the oven, grout lines and every baseboard, for Romeoville homes (60446).</p>
+              <p className="text-sm text-gray-600">Grout lines, baseboards and the spots a regular clean skips, for Romeoville homes (60446).</p>
             </Link>
             <Link href="/recurring-cleaning" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Recurring Cleaning in Romeoville</h3>

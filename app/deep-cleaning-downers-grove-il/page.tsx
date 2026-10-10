@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What does a deep cleaning include in Downers Grove?",
-    a: "We clean inside the oven, degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. Every room gets thorough attention.",
+    a: "We degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. Cleaning inside the oven is an add-on. Every room gets thorough attention.",
   },
   {
     q: "How long does a deep clean take in Downers Grove?",
@@ -57,7 +57,7 @@ const serviceSchema = {
   },
   provider: { "@id": "https://www.dsmcleaningsolutions.com/#business" },
   description:
-    "Professional deep cleaning for homes in Downers Grove, IL. Includes oven cleaning, grout scrubbing, baseboard wiping, and full room detail.",
+    "Professional deep cleaning for homes in Downers Grove, IL. Includes grout scrubbing, baseboard wiping, and full room detail.",
   offers: {
     "@type": "Offer",
     priceCurrency: "USD",
@@ -95,7 +95,7 @@ const checklist = [
   {
     room: "Kitchen",
     items: [
-      "Clean inside/outside oven",
+      "Clean oven exterior",
       "Degrease stovetop burners and hood vent",
       "Clean inside microwave",
       "Wipe all cabinet fronts",
@@ -226,7 +226,7 @@ export default function DeepCleaningDownersGrovePage() {
             Downers Grove is a busy community in DuPage County with active families and homes that get a lot of use. We serve homeowners in downtown Downers Grove, the Fairmount area, and throughout the 60515 and 60516 zip codes. Whether life has gotten in the way of keeping up with cleaning or you just want a real deep clean, we can help.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Our deep cleaning is not a rush job. We spend real time in each room. In the kitchen we get inside the oven, degrease the stovetop, and scrub the sink. In bathrooms we scrub grout lines and clean everything from fixtures to floors. In bedrooms and living areas we dust ceiling fans, wipe baseboards, clean window sills, and vacuum under furniture.
+            Our deep cleaning is not a rush job. We spend real time in each room. In the kitchen we get inside the microwave, degrease the stovetop, and scrub the sink. In bathrooms we scrub grout lines and clean everything from fixtures to floors. In bedrooms and living areas we dust ceiling fans, wipe baseboards, clean window sills, and vacuum under furniture.
           </p>
           <p className="text-gray-700 leading-relaxed">
             We use eco-friendly, non-toxic products on every job and back our work with a 48-hour satisfaction guarantee. If something is not right, contact us and we will come back to fix it at no charge.
@@ -264,7 +264,7 @@ export default function DeepCleaningDownersGrovePage() {
             <div className="bg-gray-50 rounded-xl p-6">
               <h3 className="font-bold text-gray-800 mb-2">We Cover What Others Skip</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Inside the oven, grout lines, baseboards, ceiling fans, under furniture, window sills. Our deep clean gets into every corner that standard cleaning leaves behind.
+                Grout lines, baseboards, ceiling fans, under furniture, window sills. Our deep clean gets into every corner that standard cleaning leaves behind.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">

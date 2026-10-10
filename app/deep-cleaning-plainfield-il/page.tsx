@@ -111,7 +111,7 @@ const checklist = [
   {
     room: "Kitchen",
     items: [
-      "Clean inside/outside oven",
+      "Clean oven exterior",
       "Degrease stovetop burners and hood vent",
       "Clean inside microwave",
       "Wipe all cabinet fronts",
@@ -196,7 +196,7 @@ export default function DeepCleaningPlainfieldPage() {
 
               {/* Body copy */}
               <p className="text-white/85 text-lg leading-relaxed mb-8">
-                DSM Cleaning Solutions scrubs every room in your Plainfield home. Ceiling fans, grout lines, baseboards, the oven. Local, family-owned, and every job comes with a 48-hour satisfaction guarantee.
+                DSM Cleaning Solutions scrubs every room in your Plainfield home. Ceiling fans, grout lines, baseboards, window sills. Local, family-owned, and every job comes with a 48-hour satisfaction guarantee.
               </p>
 
               {/* CTAs */}

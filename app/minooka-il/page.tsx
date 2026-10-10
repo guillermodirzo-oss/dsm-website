@@ -84,7 +84,7 @@ export default function MinookaPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <a href="/deep-cleaning-minooka-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Minooka</h3>
-              <p className="text-sm text-gray-600">Inside the oven and microwave plus every baseboard, for Minooka homes in zip code 60447.</p>
+              <p className="text-sm text-gray-600">Inside the microwave plus every baseboard, for Minooka homes in zip code 60447.</p>
             </a>
             <a href="/recurring-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Recurring Cleaning in Minooka</h3>

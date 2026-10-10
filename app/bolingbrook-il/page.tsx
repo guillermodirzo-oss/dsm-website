@@ -84,7 +84,7 @@ export default function BolingbrookPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <Link href="/deep-cleaning-bolingbrook-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Bolingbrook</h3>
-              <p className="text-sm text-gray-600">Baseboards, grout and the inside of the oven, for homes in 60440 & 60490.</p>
+              <p className="text-sm text-gray-600">Baseboards, grout and the spots a regular clean skips, for homes in 60440 & 60490.</p>
             </Link>
             <Link href="/recurring-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Recurring Cleaning in Bolingbrook</h3>

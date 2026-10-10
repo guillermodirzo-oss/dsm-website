@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     absolute: "Deep Cleaning From a Local Family Team | DSM Cleaning Solutions",
   },
   description:
-    "Deep cleaning from a family-owned team in Romeoville. Inside the oven, the grout and the baseboards. Serving Plainfield, Bolingbrook, Crest Hill, Shorewood and Lockport too.",
+    "Deep cleaning from a family-owned team in Romeoville. The grout, the baseboards and the spots a regular clean skips. Serving Plainfield, Bolingbrook, Crest Hill, Shorewood and Lockport too.",
   robots: { index: false, follow: false },
 };
 
@@ -67,7 +67,6 @@ const regularItems: { text: string; included: boolean }[] = [
   { text: "Mop hard surface floors", included: true },
   { text: "Clean bathroom surfaces", included: true },
   { text: "Wipe counters", included: true },
-  { text: "Inside oven", included: false },
   { text: "Baseboards hand-scrubbed", included: false },
   { text: "Door & door frames wiped", included: false },
   { text: "Interior microwave", included: false },
@@ -160,7 +159,7 @@ export default function DeepCleanOfferPage() {
                   service="deep"
                   fallback={
                     <>
-                      Inside the oven, the grout and the baseboards. Deep cleaning
+                      The grout, the baseboards and the spots a regular clean skips. Deep cleaning
                       starts at {ENTRY_PRICE}, and we confirm your price before we book.
                     </>
                   }
@@ -206,7 +205,7 @@ export default function DeepCleanOfferPage() {
                     service="deep"
                     fallback={<>Deep cleaning starts at {ENTRY_PRICE}. Limited spots each week.</>}
                   >
-                    {OFF} off + free oven cleaning with code {DEEP_OFFER.code} through{" "}
+                    {OFF} off + {DEEP_OFFER.bonus} with code {DEEP_OFFER.code} through{" "}
                     {DEEP_OFFER.endDate}. Limited spots.
                   </Offer>
                 </p>
@@ -328,15 +327,20 @@ export default function DeepCleanOfferPage() {
                   DSM Deep Clean ⭐
                 </h3>
               </div>
+              {/* Inside the oven is an add-on, free only while the offer runs.
+                  The whole row is inside <Offer> with no fallback, so it is
+                  gone once the offer ends. */}
               <DeepCleanChecklist
-                ovenItem={
-                  <Offer
-                    service="deep"
-                    fallback={<span className="font-medium text-gray-800">Inside oven</span>}
-                  >
-                    <span className="text-orange-600 font-semibold">
-                      Inside oven, FREE through {DEEP_OFFER.endDate}
-                    </span>
+                bonusRow={
+                  <Offer service="deep">
+                    <li className="flex items-start gap-3 text-sm">
+                      <span className="flex-shrink-0 font-bold text-green-600 text-sm mt-0.5">
+                        ✓
+                      </span>
+                      <span className="text-orange-600 font-semibold">
+                        Inside oven cleaning, FREE through {DEEP_OFFER.endDate}
+                      </span>
+                    </li>
                   </Offer>
                 }
               />

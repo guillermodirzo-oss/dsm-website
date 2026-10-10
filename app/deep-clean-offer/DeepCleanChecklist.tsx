@@ -2,9 +2,12 @@
 
 import { useState, type ReactNode } from "react";
 
-// The oven line carries the offer, so the page renders it (wrapped in
-// <Offer>) and passes it in as `ovenItem`. This string is only its key.
-const OVEN = "Inside oven";
+// Inside the oven is NOT part of a deep clean. It is an add-on, and it is free
+// only while the deep cleaning offer in lib/offers.ts is running. So the list
+// below has no oven-interior line. The page passes the free-oven row in as
+// `bonusRow`, a whole <li> wrapped in <Offer>, which renders nothing once the
+// offer ends. It goes at the top of the section named here.
+const BONUS_SECTION = "KITCHEN";
 
 const deepCleanSections = [
   {
@@ -22,7 +25,6 @@ const deepCleanSections = [
   {
     label: "KITCHEN",
     items: [
-      OVEN,
       "Oven & stove exterior cleaned",
       "Exterior refrigerator cleaned (exterior only)",
       "Interior & exterior microwave",
@@ -53,7 +55,6 @@ const deepCleanSections = [
 // Items always visible on mobile (regardless of expanded state)
 const ALWAYS_VISIBLE = new Set([
   "Everything in regular cleaning",
-  OVEN,
   "Dust & wipe door & door frames",
   "Dust baseboards throughout",
   "Ceiling fans deep-dusted & cobwebs removed",
@@ -67,7 +68,7 @@ const hiddenCount = deepCleanSections.reduce(
   0
 );
 
-export default function DeepCleanChecklist({ ovenItem }: { ovenItem: ReactNode }) {
+export default function DeepCleanChecklist({ bonusRow }: { bonusRow: ReactNode }) {
   const [expanded, setExpanded] = useState(false);
 
   return (
@@ -85,6 +86,7 @@ export default function DeepCleanChecklist({ ovenItem }: { ovenItem: ReactNode }
               {section.label}
             </p>
             <ul className="px-6 space-y-3 pb-2">
+              {section.label === BONUS_SECTION && bonusRow}
               {section.items.map((item) => {
                 const alwaysVisible = ALWAYS_VISIBLE.has(item);
                 // On mobile: hide extra items when collapsed; on desktop: always show
@@ -98,11 +100,7 @@ export default function DeepCleanChecklist({ ovenItem }: { ovenItem: ReactNode }
                     <span className="flex-shrink-0 font-bold text-green-600 text-sm mt-0.5">
                       ✓
                     </span>
-                    {item === OVEN ? (
-                      ovenItem
-                    ) : (
-                      <span className="font-medium text-gray-800">{item}</span>
-                    )}
+                    <span className="font-medium text-gray-800">{item}</span>
                   </li>
                 );
               })}

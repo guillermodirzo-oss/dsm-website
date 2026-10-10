@@ -3,7 +3,8 @@
  * recurring visit. /recurring-cleaning and the recurring city pages
  * (/recurring-cleaning-{city}-il) both render this list, so they can never
  * disagree. Do not add items here that the team does not do every visit.
- * Inside the oven and inside the refrigerator are deep cleaning only.
+ * Inside the oven and inside the refrigerator are never part of a standard
+ * clean. Both are add-ons, and both are always included with move-out cleaning.
  */
 export interface ChecklistRoom {
   room: string;

@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What does a deep cleaning include in Hinsdale?",
-    a: "We clean inside the oven, degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. We take extra care with premium surfaces and finishes.",
+    a: "We degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. Cleaning inside the oven is an add-on. We take extra care with premium surfaces and finishes.",
   },
   {
     q: "How long does a deep clean take in Hinsdale?",
@@ -95,7 +95,7 @@ const checklist = [
   {
     room: "Kitchen",
     items: [
-      "Clean inside/outside oven",
+      "Clean oven exterior",
       "Degrease stovetop burners and hood vent",
       "Clean inside microwave",
       "Wipe all cabinet fronts",
@@ -226,7 +226,7 @@ export default function DeepCleaningHinsdalePage() {
             Hinsdale is one of the Chicago area&apos;s most established communities, with homes that range from historic estates to newer custom builds. We approach every Hinsdale home with the level of care those homes deserve. That means the right products for the right surfaces and attention to every detail.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Our deep cleaning covers downtown Hinsdale, West Hinsdale, and surrounding neighborhoods. We clean inside ovens, scrub grout lines, polish fixtures, wipe baseboards, dust ceiling fans, and clean window sills in every room. Nothing gets skipped.
+            Our deep cleaning covers downtown Hinsdale, West Hinsdale, and surrounding neighborhoods. We scrub grout lines, polish fixtures, wipe baseboards, dust ceiling fans, and clean window sills in every room. Nothing gets skipped.
           </p>
           <p className="text-gray-700 leading-relaxed">
             We use eco-friendly, non-toxic products that are safe for your home and your family. We are fully insured and back every clean with a 48-hour satisfaction guarantee. If something is not right, we come back at no charge.
@@ -264,7 +264,7 @@ export default function DeepCleaningHinsdalePage() {
             <div className="bg-gray-50 rounded-xl p-6">
               <h3 className="font-bold text-gray-800 mb-2">Detail-Oriented Service</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                We go room by room with no shortcuts. Inside the oven, grout lines, baseboards, ceiling fans, window sills. Every surface in every room gets attention.
+                We go room by room with no shortcuts. Grout lines, baseboards, ceiling fans, window sills. Every surface in every room gets attention.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">

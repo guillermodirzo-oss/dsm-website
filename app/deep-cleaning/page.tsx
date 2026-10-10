@@ -45,7 +45,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What does a deep cleaning include?",
-    a: "We clean inside the oven, degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. Every room gets the same attention, not just the kitchen and baths.",
+    a: "We degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. Cleaning inside the oven is an add-on. Every room gets the same attention, not just the kitchen and baths.",
   },
   {
     q: "How long does a deep clean take?",
@@ -78,7 +78,7 @@ const serviceSchema = {
   ],
   provider: { "@id": "https://www.dsmcleaningsolutions.com/#business" },
   description:
-    "Professional deep cleaning for homes in Romeoville, Plainfield, Bolingbrook, Naperville, and surrounding communities. Includes oven cleaning, grout scrubbing, baseboard wiping, and full room detail.",
+    "Professional deep cleaning for homes in Romeoville, Plainfield, Bolingbrook, Naperville, and surrounding communities. Includes grout scrubbing, baseboard wiping, and full room detail.",
   offers: {
     "@type": "Offer",
     priceCurrency: "USD",
@@ -115,7 +115,7 @@ const checklist = [
   {
     room: "Kitchen",
     items: [
-      "Clean inside/outside oven",
+      "Clean oven exterior",
       "Degrease stovetop burners and hood vent",
       "Clean inside microwave",
       "Wipe all cabinet fronts",
@@ -205,7 +205,7 @@ export default function DeepCleaningPage() {
           {/* Order is H1, subheading, rating, offer, CTAs: the same sequence
               as the homepage hero, verified to clear the fold at 390px. */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
-            Deep Cleaning in Romeoville That Gets Inside the Oven.
+            Deep Cleaning in Romeoville That Gets the Spots a Regular Clean Skips.
           </h1>
           <p className="text-lg md:text-xl font-semibold mb-5 opacity-95 max-w-2xl mx-auto">
             Grout lines, baseboards, ceiling fans. Deep cleaning in Romeoville, Plainfield, Naperville, Bolingbrook and the southwest suburbs.
@@ -273,7 +273,7 @@ export default function DeepCleaningPage() {
             DSM Cleaning Solutions has been serving homeowners in Romeoville, Plainfield, Bolingbrook, and Naperville since 2020. These are our home communities. When you hire us for a deep clean, you get a team that knows the area, cares about the work, and shows up on time.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Our deep cleaning is built for homes that need more than a weekly maintenance clean. That means getting inside the oven, scrubbing bathroom grout, cleaning behind the stovetop grates, wiping every baseboard, and dusting ceiling fans in every room.
+            Our deep cleaning is built for homes that need more than a weekly maintenance clean. That means scrubbing bathroom grout, cleaning behind the stovetop grates, wiping every baseboard, and dusting ceiling fans in every room.
           </p>
           <p className="text-gray-700 leading-relaxed">
             We use eco-friendly, non-toxic products on every job. Safe for your whole family including pets. And if anything is not right after we leave, contact us within 48 hours and we will come back to fix it at no charge.
@@ -313,7 +313,7 @@ export default function DeepCleaningPage() {
             <div className="bg-gray-50 rounded-xl p-6">
               <h3 className="font-bold text-gray-800 mb-2">We Get Every Detail</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Our deep clean is not a surface wipe-down. We get into the spots that usually get skipped: inside the oven, behind the toilet, grout lines, ceiling fan blades, baseboards, and window sills. Every room gets real attention.
+                Our deep clean is not a surface wipe-down. We get into the spots that usually get skipped: behind the toilet, grout lines, ceiling fan blades, baseboards, and window sills. Every room gets real attention.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">
@@ -360,9 +360,9 @@ export default function DeepCleaningPage() {
           </p>
 
           <div className="space-y-6 mb-10">
-            {/* Kitchen: checklist promises inside-the-oven, degreased
-                stovetop, and inside-microwave. Cooktop and microwave photos
-                back that up directly. */}
+            {/* Kitchen: checklist promises a degreased stovetop and
+                inside-microwave. Cooktop and microwave photos back that up
+                directly. Inside the oven is an add-on, so no oven photo. */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
               <div className="bg-white rounded-xl p-5 shadow-sm">
                 <h3 className="font-bold text-gray-800 mb-3 border-b pb-2">{checklist[0].room}</h3>

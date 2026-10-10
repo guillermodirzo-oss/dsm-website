@@ -27,12 +27,12 @@ const faqs = [
   {
     question: "What extra items are in a deep clean?",
     answer:
-      "Deep cleaning adds everything that standard cleaning doesn't cover: inside the microwave, oven, and refrigerator exterior detail; full baseboard scrubbing; window sills and inside glass; ceiling fans and light fixtures; grout scrubbing in bathrooms; cabinet interior wipe-down; door frame detail; and vent cleaning. It catches up on buildup instead of just keeping things tidy.",
+      "Deep cleaning adds everything that standard cleaning doesn't cover: inside the microwave and refrigerator exterior detail; full baseboard scrubbing; window sills and inside glass; ceiling fans and light fixtures; grout scrubbing in bathrooms; cabinet interior wipe-down; door frame detail; and vent cleaning. Cleaning inside the oven is an add-on. It catches up on buildup instead of just keeping things tidy.",
   },
   {
     question: "Do you clean inside appliances?",
     answer:
-      "Inside appliance cleaning is included in deep cleaning and move-out cleaning. Standard cleaning covers appliance exteriors only. If you want inside-appliance cleaning added to a standard clean, it can be requested as an add-on (inside oven, inside refrigerator, inside microwave), priced and agreed upon before the appointment.",
+      "Move-out cleaning includes the inside of the oven, the refrigerator and the microwave. Deep cleaning includes the inside of the microwave, and the inside of the oven and the refrigerator are add-ons. Standard cleaning covers appliance exteriors only. Any inside-appliance cleaning that isn't part of your service can be requested as an add-on, priced and agreed upon before the appointment.",
   },
   {
     question: "What is NOT included in cleaning?",
@@ -152,7 +152,6 @@ const deepExtras = [
     room: "Kitchen Extras",
     items: [
       "Inside microwave: walls, ceiling, turntable",
-      "Inside oven: racks, interior walls, door",
       "Refrigerator exterior detail: top, sides, handles",
       "Behind and under appliances (accessible areas)",
       "Cabinet interiors: all shelves wiped",
@@ -351,6 +350,7 @@ export default function CleaningChecklistPage() {
           <h2 className="section-heading mb-6">What Is NOT Included (Without Add-On)</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
+              "Inside oven cleaning (add-on, always included with move-out cleaning)",
               "Exterior window cleaning",
               "Laundry or dish washing",
               "Garage cleaning",

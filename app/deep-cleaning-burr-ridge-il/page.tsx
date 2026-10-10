@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What does a deep cleaning include in Burr Ridge?",
-    a: "We clean inside the oven, degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. We handle premium finishes and surfaces with care throughout.",
+    a: "We degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. Cleaning inside the oven is an add-on. We handle premium finishes and surfaces with care throughout.",
   },
   {
     q: "How long does a deep clean take in Burr Ridge?",
@@ -95,7 +95,7 @@ const checklist = [
   {
     room: "Kitchen",
     items: [
-      "Clean inside/outside oven",
+      "Clean oven exterior",
       "Degrease stovetop burners and hood vent",
       "Clean inside microwave",
       "Wipe all cabinet fronts",
@@ -226,7 +226,7 @@ export default function DeepCleaningBurrRidgePage() {
             Burr Ridge is an upscale community in DuPage and Cook counties with executive homes that deserve professional-level care. DSM serves homeowners throughout Burr Ridge with a deep clean that is thorough, careful, and done right.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            We cover the Village Center area, the County Line Road corridor, and all surrounding Burr Ridge neighborhoods. Our deep cleaning is room by room with no shortcuts. Kitchen means inside the oven and behind the stovetop. Bathrooms mean scrubbed grout and polished fixtures. Living areas mean clean baseboards, dusted ceiling fans, and vacuumed under every piece of furniture.
+            We cover the Village Center area, the County Line Road corridor, and all surrounding Burr Ridge neighborhoods. Our deep cleaning is room by room with no shortcuts. Kitchen means inside the microwave and behind the stovetop. Bathrooms mean scrubbed grout and polished fixtures. Living areas mean clean baseboards, dusted ceiling fans, and vacuumed under every piece of furniture.
           </p>
           <p className="text-gray-700 leading-relaxed">
             We use eco-friendly, non-toxic products and are fully insured. Every job comes with a 48-hour satisfaction guarantee. If anything is not right, we come back and fix it at no charge.
@@ -264,7 +264,7 @@ export default function DeepCleaningBurrRidgePage() {
             <div className="bg-gray-50 rounded-xl p-6">
               <h3 className="font-bold text-gray-800 mb-2">Nothing Gets Skipped</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Inside the oven, grout lines, baseboards, ceiling fans, under furniture, window sills. Every room gets the full deep clean treatment with no corners cut.
+                Grout lines, baseboards, ceiling fans, under furniture, window sills. Every room gets the full deep clean treatment with no corners cut.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">

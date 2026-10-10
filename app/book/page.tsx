@@ -191,7 +191,7 @@ export default function BookPage() {
             </Offer>
           </h1>
           <p className="text-xl sm:text-2xl font-bold mb-3" style={{ color: NAVY }}>
-            <Offer service="deep" fallback="Inside the oven, the grout and the baseboards. Every room, done right.">
+            <Offer service="deep" fallback="The grout, the baseboards and the spots a regular clean skips. Every room, done right.">
               Plus {DEEP_OFFER.bonus} this {DEEP_OFFER.season}. A ${DEEP_OFFER.bonusValue} value, on us.
             </Offer>
           </p>
@@ -228,14 +228,14 @@ export default function BookPage() {
             <div className="relative h-52 rounded-lg overflow-hidden">
               <Image
                 src="/work-photos/oven-interior-deep-cleaning.jpg"
-                alt="Oven interior cleaned to bare enamel during a DSM deep clean"
+                alt="Oven interior cleaned to bare enamel by DSM Cleaning Solutions"
                 fill
                 className="object-cover"
                 sizes="(max-width: 640px) 100vw, 33vw"
                 loading="lazy"
               />
             </div>
-            <figcaption className="mt-2 text-center text-xs text-gray-500">Oven interior</figcaption>
+            <figcaption className="mt-2 text-center text-xs text-gray-500">Oven interior (add-on)</figcaption>
           </figure>
           <figure>
             <div className="relative h-52 rounded-lg overflow-hidden">

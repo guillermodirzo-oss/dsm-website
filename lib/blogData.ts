@@ -326,11 +326,11 @@ export const blogPosts: BlogPost[] = [
     content: `<p>These two services sound similar but they're not the same thing. A <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> and a <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning</a> both go further than a regular visit, but they're built for different situations. Book the wrong one and you might end up short on what you actually need. This post breaks down exactly what each covers, where they differ, and how to pick the right one.</p>
 
 <h2>What Is a Deep Cleaning?</h2>
-<p>A deep cleaning is a thorough one-time clean for a home you're living in. It goes well beyond what a regular maintenance visit covers. The oven interior gets scrubbed. Cabinet interiors get wiped down. Baseboards, ceiling fans, window sills, and grout lines in the bathroom all get addressed, not just the easy-to-reach surfaces.</p>
+<p>A deep cleaning is a thorough one-time clean for a home you're living in. It goes well beyond what a regular maintenance visit covers. Cabinet interiors get wiped down. Baseboards, ceiling fans, window sills, and grout lines in the bathroom all get addressed, not just the easy-to-reach surfaces. Cleaning inside the oven is an add-on.</p>
 <p>People book deep cleans for a lot of different reasons. Moving into a new place and wanting it professionally cleaned before unpacking. The home hasn't had a real professional clean in six months or more. A seasonal reset before winter or spring. Hosting guests for a holiday or an event. Whatever the reason, a deep cleaning brings the home to a level that regular maintenance cleaning doesn't reach.</p>
 
 <h2>What Is a Move-Out Cleaning?</h2>
-<p>A move-out cleaning covers everything in a deep cleaning: oven interior, cabinet interiors, baseboards, grout, ceiling fans, and window sills. The key addition is the refrigerator interior. That's not included in a standard deep cleaning, but landlords almost always check it during move-out inspections.</p>
+<p>A move-out cleaning covers everything in a deep cleaning: cabinet interiors, baseboards, grout, ceiling fans, and window sills. The key additions are the oven interior and the refrigerator interior. Those aren't included in a standard deep cleaning, but landlords almost always check them during move-out inspections.</p>
 <p>Landlords know renters typically pull their food out and leave the fridge without cleaning the shelves, drawers, and door seals. It's one of the first things they open at move-out. A proper move-out cleaning includes it as a standard part of the scope, not an add-on.</p>
 <p>Move-out cleaning is scoped around tenant turnover. The goal isn't a reset for someone staying in the home. It's a clean that satisfies the conditions for getting a security deposit returned.</p>
 
@@ -450,7 +450,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>What Type of Cleaning Do You Actually Need?</h2>
 <p>There are three main types of cleaning service, and figuring out which one fits your situation makes the rest of the process straightforward.</p>
-<p>A <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> is the right starting point for most first-time clients. If your home hasn't been professionally cleaned before, a deep clean gets everything to a solid baseline. It covers areas that routine cleaning skips: oven interior, cabinet interiors and exteriors, baseboards, grout lines, ceiling fans, and every surface in every room. It takes longer and costs more than a regular visit, but it sets the home up properly.</p>
+<p>A <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> is the right starting point for most first-time clients. If your home hasn't been professionally cleaned before, a deep clean gets everything to a solid baseline. It covers areas that routine cleaning skips: cabinet interiors and exteriors, baseboards, grout lines, ceiling fans, and every surface in every room. It takes longer and costs more than a regular visit, but it sets the home up properly.</p>
 <p><a href="/recurring-cleaning" class="text-brand-green font-semibold hover:underline">Recurring cleaning</a> is what most clients move to after that first deep clean. You pick a schedule (weekly, bi-weekly, or monthly) and the team keeps the home at the level the deep clean established. These visits are faster and less expensive per appointment because the home stays in better shape between them.</p>
 <p><a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">Move-out cleaning</a> is a separate service for people moving out of a home or apartment. It includes everything in a deep clean plus the refrigerator interior and other areas landlords check before returning a deposit. If that's your situation, that's the right service to book.</p>
 
@@ -502,7 +502,7 @@ export const blogPosts: BlogPost[] = [
 <p>Grout is porous. Over time it collects mold, mildew, and soap scum, and regular cleaning doesn't get into it. If the grout around your tub, shower, or bathroom floor looks noticeably darker than it used to, that's not a stain you can wipe off. It's buildup that needs a proper scrub. A deep clean addresses grout lines specifically, in every bathroom, as part of the standard scope of work.</p>
 
 <h2>3. Your Oven Has Visible Buildup on the Interior</h2>
-<p>The inside of the oven is one of the most commonly neglected areas in any kitchen, and it's not touched during a regular cleaning visit. Burnt food and grease accumulate on the interior walls and the bottom of the oven over months of use. If yours has visible residue or smokes when you turn it on, that's a job for a deep clean. DSM's deep cleaning includes scrubbing the oven interior with racks removed, so it's actually clean and not just wiped around.</p>
+<p>The inside of the oven is one of the most commonly neglected areas in any kitchen, and it's not touched during a regular cleaning visit. Burnt food and grease accumulate on the interior walls and the bottom of the oven over months of use. If yours has visible residue or smokes when you turn it on, it's time for a proper scrub. Inside oven cleaning is an add-on to DSM's deep cleaning. Ask for it when you book and we scrub the interior with the racks removed, so it's actually clean and not just wiped around.</p>
 
 <h2>4. Cabinet Fronts Feel Sticky or Look Greasy</h2>
 <p>Kitchen cabinet exteriors are right next to where you cook, so they collect cooking grease, steam, and fingerprints constantly. Over time the residue builds up into a film that doesn't come off with a quick wipe. If running your hand across a cabinet front feels tacky, or the finish looks dull and coated, it's past time for a proper clean. A deep cleaning visit scrubs cabinet exteriors and interiors to get them back to how they're supposed to feel.</p>
@@ -511,7 +511,7 @@ export const blogPosts: BlogPost[] = [
 <p>Ceiling fans and baseboards are skipped during most routine cleaning visits. They're easy to miss, easy to forget, and the dust that collects on them doesn't bother anyone until it does. If your ceiling fan throws dust when you switch it on, or you can see a visible layer along your baseboards, those are signs that the home needs more than maintenance. A deep clean gets into both specifically, by hand, so they're actually clean and not just quickly wiped.</p>
 
 <h2>6. The Home Smells a Little Off Even After Cleaning</h2>
-<p>Lingering odors after a clean are a sign that the source hasn't been addressed. Regular cleaning freshens surfaces, but odors that stick around usually come from buildup in places that don't get cleaned on a routine schedule. The interior of the oven. Buildup around drains. Residue in trash areas. Grout that's holding mildew. A deep clean finds and addresses those sources instead of cleaning around them. If the smell comes back quickly after a regular visit, the underlying issue hasn't been touched.</p>
+<p>Lingering odors after a clean are a sign that the source hasn't been addressed. Regular cleaning freshens surfaces, but odors that stick around usually come from buildup in places that don't get cleaned on a routine schedule. Buildup around drains. Residue in trash areas. Grout that's holding mildew. A deep clean finds and addresses those sources instead of cleaning around them. If the smell comes back quickly after a regular visit, the underlying issue hasn't been touched.</p>
 
 <h2>7. You're Having Guests Over or Just Moved Into a New Place</h2>
 <p>Two situations that always call for a deep clean: before a major gathering, and after moving into a home someone else lived in. Before guests arrive, a deep clean makes your space actually ready rather than just presentable. Guests notice things you stop registering every day. And when you move into a new home, regardless of how clean it looks, you don't know what the previous occupants cleaned or skipped. A deep clean before you're fully settled in is the right way to start.</p>
@@ -519,7 +519,6 @@ export const blogPosts: BlogPost[] = [
 <h2>What DSM's Deep Cleaning Covers in Plainfield</h2>
 <p>DSM's <a href="/deep-cleaning-plainfield-il" class="text-brand-green font-semibold hover:underline">deep cleaning service in Plainfield</a> covers every area that routine visits skip. Here's what's included on a standard deep clean:</p>
 <ul>
-  <li>Oven interior scrubbed with racks removed</li>
   <li>Cabinet interiors and exteriors wiped down</li>
   <li>Baseboards scrubbed by hand</li>
   <li>Grout lines cleaned in every bathroom</li>
@@ -529,7 +528,7 @@ export const blogPosts: BlogPost[] = [
   <li>Kitchen deep clean including stovetop, hood vent, and sink</li>
   <li>Light switches, outlet covers, and door frames wiped</li>
 </ul>
-<p>For the full scope and to see whether it's the right fit for your home, visit the <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> page. DSM also serves <a href="/naperville-il" class="text-brand-green font-semibold hover:underline">Naperville</a>, <a href="/" class="text-brand-green font-semibold hover:underline">Romeoville</a>, and the surrounding southwest suburbs.</p>
+<p>Inside oven cleaning is an add-on. For the full scope and to see whether it's the right fit for your home, visit the <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> page. DSM also serves <a href="/naperville-il" class="text-brand-green font-semibold hover:underline">Naperville</a>, <a href="/" class="text-brand-green font-semibold hover:underline">Romeoville</a>, and the surrounding southwest suburbs.</p>
 
 <h2>Frequently Asked Questions</h2>
 
@@ -686,7 +685,7 @@ export const blogPosts: BlogPost[] = [
 <ul>
   <li><strong>Home size</strong>: square footage and number of bedrooms and bathrooms is the primary driver of price. A studio takes two to three hours; a four-bedroom home can take eight or more.</li>
   <li><strong>Condition of the home</strong>: a well-maintained home that received regular cleanings throughout the tenancy will cost less than a home where cleaning was deferred for months. Heavy grease buildup in kitchens, soap scum in showers, and stained grout all add time.</li>
-  <li><strong>Optional add-ons</strong>: inside the oven, inside the refrigerator, interior windows, and garage cleaning are commonly added to move-out packages. These are priced separately.</li>
+  <li><strong>Optional add-ons</strong>: interior windows and garage cleaning are commonly added to move-out packages. These are priced separately. Inside the oven and inside the refrigerator are always included.</li>
   <li><strong>Move-out timeline</strong>: last-minute or same-day move-out cleans may carry a premium. Booking 5–7 days ahead secures the best pricing and availability.</li>
 </ul>
 
@@ -810,14 +809,14 @@ export const blogPosts: BlogPost[] = [
 <p>Not sure if it's time? Here are the clearest warning signs that your home is overdue:</p>
 <ul>
   <li>Visible buildup in grout lines or tile corners, particularly in bathrooms and kitchen floors</li>
-  <li>Kitchen appliances (oven, stovetop, microwave) have sticky or greasy residue that your regular wipe-down doesn't fully remove</li>
+  <li>Kitchen appliances (stovetop, microwave, range hood) have sticky or greasy residue that your regular wipe-down doesn't fully remove</li>
   <li>Baseboards and ceiling fan blades have a visible layer of dust you can see from across the room</li>
   <li>The house has a stale or musty smell, especially in rooms that aren't used frequently or after opening windows on a warm day</li>
   <li>It has been six months or more since your last professional clean, regardless of how often you tidy up in between</li>
 </ul>
 
 <h2>What's Included in a Professional Deep Clean?</h2>
-<p>When DSM Cleaning Solutions performs a deep clean, we cover the areas that standard cleaning skips entirely. That means scrubbing grout in bathrooms and kitchens, cleaning inside the oven and microwave (including removing oven racks for a thorough scrub), wiping down the fronts of all cabinets, pulling out appliances to clean behind them, dusting and wiping all baseboards, cleaning ceiling fans and light fixtures, washing window sills and inside glass, and sanitizing all high-touch surfaces throughout the home. We bring everything needed and use non-toxic, eco-friendly products that are safe for children and pets. Learn more about what to expect from <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">our deep cleaning service</a>.</p>
+<p>When DSM Cleaning Solutions performs a deep clean, we cover the areas that standard cleaning skips entirely. That means scrubbing grout in bathrooms and kitchens, cleaning inside the microwave, wiping down the fronts of all cabinets, pulling out appliances to clean behind them, dusting and wiping all baseboards, cleaning ceiling fans and light fixtures, washing window sills and inside glass, and sanitizing all high-touch surfaces throughout the home. Cleaning inside the oven is an add-on. We bring everything needed and use non-toxic, eco-friendly products that are safe for children and pets. Learn more about what to expect from <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">our deep cleaning service</a>.</p>
 
 <h2>Why Plainfield & Romeoville Homeowners Trust DSM Cleaning Solutions</h2>
 <p>DSM Cleaning Solutions is a family-owned cleaning company based in Romeoville, Illinois. We serve all Plainfield zip codes (60544 and 60585), as well as Romeoville (60446) and the surrounding southwest suburbs. Our team knows these communities personally, and we've cleaned homes in neighborhoods throughout the area including Settlers Ridge, Grande Park, and Lakewood Falls. We understand the specific challenges that come with Illinois winters, and our deep cleaning process is built around them.</p>
@@ -1013,7 +1012,6 @@ export const blogPosts: BlogPost[] = [
 <h2>Kitchen Deep Cleaning Checklist</h2>
 <p>The kitchen is typically the most labor-intensive room in a deep clean. Grease, food splatter, and buildup accumulate behind appliances and inside cabinets in ways that routine cleaning never addresses.</p>
 <ul>
-  <li>Clean inside the oven, including racks, walls, and the oven door glass</li>
   <li>Clean inside the microwave: walls, ceiling, turntable, and door seal</li>
   <li>Degrease the stovetop, burner grates, drip pans, and control knobs</li>
   <li>Detail the refrigerator exterior: top, sides, and handles</li>
@@ -1090,6 +1088,7 @@ export const blogPosts: BlogPost[] = [
 <h2>What's NOT Included in a Standard Deep Clean</h2>
 <p>Transparency matters. Here's what a typical deep clean does not cover, so there are no surprises on the day of service:</p>
 <ul>
+  <li>Inside oven cleaning (add-on)</li>
   <li>Exterior windows (inside-only window cleaning is included; outside requires a separate add-on)</li>
   <li>Carpet steam cleaning or stain removal (we vacuum thoroughly; steam cleaning is a separate service)</li>
   <li>Garage cleaning</li>
@@ -1105,13 +1104,13 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Frequently Asked Questions</h2>
 <h3>What is included in a professional deep house cleaning?</h3>
-<p>A professional deep house cleaning covers every room in the house, including cleaning inside the oven and microwave, scrubbing tile grout and shower walls, removing soap scum and hard water deposits, wiping down baseboards and door frames, cleaning ceiling fans and light fixtures, and vacuuming and mopping all floors. The refrigerator is cleaned on the outside only. It goes significantly further than a standard recurring clean.</p>
+<p>A professional deep house cleaning covers every room in the house, including cleaning inside the microwave, scrubbing tile grout and shower walls, removing soap scum and hard water deposits, wiping down baseboards and door frames, cleaning ceiling fans and light fixtures, and vacuuming and mopping all floors. The refrigerator is cleaned on the outside only. Cleaning inside the oven is an add-on. It goes significantly further than a standard recurring clean.</p>
 
 <h3>How long does a deep house cleaning take?</h3>
 <p>Most deep house cleanings take between 4 and 8 hours, depending on the size of the home, number of bathrooms, and the current condition. A typical 3-bedroom, 2-bathroom home takes approximately 5 to 6 hours. Homes that haven't been professionally cleaned in over a year may require additional time.</p>
 
 <h3>How is a deep clean different from a standard cleaning?</h3>
-<p>Standard cleaning is routine maintenance: vacuuming, mopping, wiping counters, and cleaning bathrooms. A deep clean is a comprehensive reset that includes inside the oven and microwave, grout scrubbing, baseboard and door frame wiping, ceiling fans, and all the areas that get skipped during weekly cleanings. Deep cleans are recommended once or twice a year.</p>
+<p>Standard cleaning is routine maintenance: vacuuming, mopping, wiping counters, and cleaning bathrooms. A deep clean is a comprehensive reset that includes inside the microwave, grout scrubbing, baseboard and door frame wiping, ceiling fans, and all the areas that get skipped during weekly cleanings. Deep cleans are recommended once or twice a year.</p>
 
 <h3>How much does a deep house cleaning cost?</h3>
 <p>DSM Cleaning Solutions uses flat-rate pricing based on home size. Deep cleaning starts at ${DEEP_FROM} for a 1-bedroom home and ranges up to ${DEEP_TOP} for a 5-bedroom home. All rates are all-inclusive, no hidden fees. Visit our <a href="/pricing" class="text-brand-green font-semibold hover:underline">pricing page</a> for the full breakdown.</p>

@@ -65,7 +65,7 @@ const faqs = [
     q: "How much does deep cleaning cost?",
     a: `Deep cleaning starts at ${formatPrice(
       startingPrice(DEEP_CLEANING_TIERS)
-    )}. It covers what a standard clean skips, like inside the oven, grout lines, baseboards, doors and window sills. Pricing varies with home size, and you get an exact quote online.`,
+    )}. It covers what a standard clean skips, like grout lines, baseboards, doors and window sills. Cleaning inside the oven is an add-on. Pricing varies with home size, and you get an exact quote online.`,
   },
   {
     q: "How much does move-out cleaning cost?",
@@ -134,7 +134,7 @@ const serviceCards: ServiceCard[] = [
     // Internal pricing mechanics are not shown to customers. This says what
     // they actually get for the higher price instead.
     scope:
-      "Covers what standard skips: inside the oven, grout lines, baseboards, doors and window sills.",
+      "Covers what standard skips: grout lines, baseboards, doors and window sills. Inside oven cleaning is an add-on.",
     badge: "Most Popular",
     color: "border-orange-200",
     headerBg: "bg-orange-50",
@@ -145,7 +145,7 @@ const serviceCards: ServiceCard[] = [
     tiers: DEEP_CLEANING_TIERS,
     photo: "/work-photos/oven-interior-deep-cleaning.jpg",
     photoAlt:
-      "Oven interior cleaned down to bare enamel during a DSM Cleaning Solutions deep clean",
+      "Oven interior cleaned down to bare enamel by DSM Cleaning Solutions",
   },
   {
     icon: "📦",

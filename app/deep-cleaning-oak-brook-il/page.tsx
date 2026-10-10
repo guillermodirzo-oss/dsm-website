@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What does a deep cleaning include in Oak Brook?",
-    a: "We clean inside the oven, degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. We take care with premium surfaces and fixtures throughout.",
+    a: "We degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. Cleaning inside the oven is an add-on. We take care with premium surfaces and fixtures throughout.",
   },
   {
     q: "How long does a deep clean take in Oak Brook?",
@@ -95,7 +95,7 @@ const checklist = [
   {
     room: "Kitchen",
     items: [
-      "Clean inside/outside oven",
+      "Clean oven exterior",
       "Degrease stovetop burners and hood vent",
       "Clean inside microwave",
       "Wipe all cabinet fronts",
@@ -226,7 +226,7 @@ export default function DeepCleaningOakBrookPage() {
             Oak Brook is known for its executive homes, manicured properties, and high standards. When homeowners here hire a cleaning service, they expect precision and professionalism. That is what DSM delivers on every job.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            We serve the Oak Brook Center area, Butler National area, and all surrounding Oak Brook neighborhoods. Our deep cleaning goes room by room with no shortcuts. In the kitchen that means inside the oven and behind the stovetop grates. In the bathrooms it means grout scrubbing and polished fixtures. In bedrooms and living areas we cover baseboards, ceiling fans, window sills, and under furniture.
+            We serve the Oak Brook Center area, Butler National area, and all surrounding Oak Brook neighborhoods. Our deep cleaning goes room by room with no shortcuts. In the kitchen that means inside the microwave and behind the stovetop grates. In the bathrooms it means grout scrubbing and polished fixtures. In bedrooms and living areas we cover baseboards, ceiling fans, window sills, and under furniture.
           </p>
           <p className="text-gray-700 leading-relaxed">
             We use eco-friendly, non-toxic products and are fully insured. Every job is backed by our 48-hour satisfaction guarantee. If anything is not right, we come back and fix it at no charge.
@@ -264,7 +264,7 @@ export default function DeepCleaningOakBrookPage() {
             <div className="bg-gray-50 rounded-xl p-6">
               <h3 className="font-bold text-gray-800 mb-2">No Detail Gets Missed</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Inside the oven, grout lines, baseboards, ceiling fans, under furniture, window sills. We go where surface cleaning does not, and we document nothing we skip.
+                Grout lines, baseboards, ceiling fans, under furniture, window sills. We go where surface cleaning does not, and we document nothing we skip.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">
