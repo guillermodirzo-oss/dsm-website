@@ -123,7 +123,7 @@ const differentiators = [
   {
     icon: "👤",
     title: "Consistent Team",
-    desc: "We aim to send the same cleaners to your home each visit so they learn your preferences and your home's details, no strangers at your door every time.",
+    desc: "We aim to send the same team to your home each visit so they learn your preferences and your home's details, no strangers at your door every time.",
   },
 ];
 
@@ -132,7 +132,7 @@ const trustItems = [
   { label: "Background-Checked Team", icon: "✔️" },
   { label: "Professional Service", icon: "📋" },
   { label: "5-Star Google Rating", icon: "⭐" },
-  { label: "{REVIEW_COUNT} Verified Reviews", icon: "💬" },
+  { label: `${REVIEW_COUNT} Verified Reviews`, icon: "💬" },
   { label: "Serving Southwest Suburbs Since Founding", icon: "📍" },
 ];
 

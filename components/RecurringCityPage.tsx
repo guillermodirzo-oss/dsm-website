@@ -48,7 +48,7 @@ function Icon({ path, className }: { path: string; className: string }) {
 }
 
 const trustItems = [
-  { label: "Same cleaner every visit", icon: ICONS.person },
+  { label: "Same team every visit", icon: ICONS.person },
   { label: "No contracts", icon: ICONS.check },
   { label: "Skip or reschedule free", icon: ICONS.calendar },
   { label: "Price locked 12 months", icon: ICONS.lock },
@@ -57,8 +57,8 @@ const trustItems = [
 
 const benefits = [
   {
-    title: "The same cleaner, every time",
-    desc: "You won't get a new face every visit. Your cleaner learns your home, how you like things done, and what matters most to you.",
+    title: "The same team, every time",
+    desc: "You won't get new faces every visit. Your team learns your home, how you like things done, and what matters most to you.",
     icon: ICONS.person,
   },
   {
@@ -88,7 +88,7 @@ const steps = [
     desc: "You save from the very first visit. No deep clean required to get started.",
   },
   {
-    title: "Same cleaner, on your schedule",
+    title: "Same team, on your schedule",
     desc: "We show up on your day. Skip or reschedule anytime at no charge.",
   },
 ];
@@ -133,7 +133,7 @@ export default function RecurringCityPage({ city: cityKey }: { city: RecurringCi
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div>
               <h1 className="text-3xl sm:text-5xl font-bold leading-tight mb-3">
-                {`${city.name} Maid Service: Same Cleaner, Every Visit`}
+                {`${city.name} Maid Service: Same Team, Every Visit`}
               </h1>
               <HeroRating href="/reviews">{`${REVIEW_RATING} · ${REVIEW_COUNT} Google Reviews`}</HeroRating>
               <p className="text-white/85 text-lg leading-relaxed mb-4">

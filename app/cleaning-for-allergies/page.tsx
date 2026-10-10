@@ -5,12 +5,12 @@ import LeadForm from "@/components/LeadForm";
 export const metadata: Metadata = {
   title: "Allergy Friendly Cleaning Service Romeoville & Plainfield IL",
   description:
-    "Allergy-friendly house cleaning in Romeoville and Plainfield IL. Non-toxic products, certified cleaners. DSM Cleaning Solutions.",
+    "Allergy-friendly house cleaning in Romeoville and Plainfield IL. Non-toxic products, trained cleaners. DSM Cleaning Solutions.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/cleaning-for-allergies" },
   openGraph: {
     title: "Allergy Friendly Cleaning Service Romeoville & Plainfield IL | DSM Cleaning Solutions",
     description:
-      "Allergy-friendly house cleaning in Romeoville and Plainfield IL. Non-toxic products, certified cleaners. DSM Cleaning Solutions.",
+      "Allergy-friendly house cleaning in Romeoville and Plainfield IL. Non-toxic products, trained cleaners. DSM Cleaning Solutions.",
     url: "https://www.dsmcleaningsolutions.com/cleaning-for-allergies",
     siteName: "DSM Cleaning Solutions",
     images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "Allergy Friendly Cleaning Romeoville Plainfield IL" }],

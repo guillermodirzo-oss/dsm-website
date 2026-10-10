@@ -647,7 +647,7 @@ export const blogPosts: BlogPost[] = [
   <li><strong>Plant-derived:</strong> Active cleaning agents come from natural sources rather than petroleum-based chemistry</li>
   <li><strong>Fragrance-safe:</strong> Scented with essential oils or left unscented, not masked with synthetic fragrances that are classified as irritants by the EPA</li>
 </ul>
-<p>Green certifications from organizations like EPA Safer Choice and EWG (Environmental Working Group) give you a verified benchmark: products with these labels have passed independent testing. At DSM Cleaning Solutions, all of our products meet this standard. Learn more on our <a href="/eco-friendly-cleaning" class="text-brand-green font-semibold hover:underline">eco-friendly cleaning page</a>.</p>
+<p>Green certifications from organizations like EPA Safer Choice and EWG (Environmental Working Group) give you a verified benchmark when you shop for your own products: a label from one of them means the product passed independent testing. At DSM Cleaning Solutions, we use eco-friendly, non-toxic products that are safe for kids and pets. Learn more on our <a href="/eco-friendly-cleaning" class="text-brand-green font-semibold hover:underline">eco-friendly cleaning page</a>.</p>
 
 <h2>Why It Matters for Kids and Pets in Romeoville Homes</h2>
 <p>Children and pets are the most vulnerable members of your household when it comes to chemical exposure from cleaning products, and the reason is simple: they spend the most time in direct contact with the surfaces cleaners treat. Toddlers crawl on floors, touch baseboards, put hands in their mouths. Dogs and cats walk on freshly mopped tile and lick their paws. In homes where conventional products are used regularly, this kind of surface-level residue exposure is constant.</p>
@@ -901,7 +901,7 @@ export const blogPosts: BlogPost[] = [
 <h2>Frequently Asked Questions About Move-Out Cleaning in Bolingbrook</h2>
 
 <h3>How much does move-out cleaning cost in Bolingbrook?</h3>
-<p>Professional move-out cleaning in Bolingbrook starts at ${MOVE_OUT_FROM} for a smaller home and runs to about $585 for a 4 bedroom. Call us at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> for a free, no-obligation estimate tailored to your home's size and condition.</p>
+<p>Professional move-out cleaning in Bolingbrook starts at ${MOVE_OUT_FROM} for a smaller home and runs to about ${MOVE_OUT_4_BED} for a 4 bedroom. Call us at <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> for a free, no-obligation estimate tailored to your home's size and condition.</p>
 
 <h3>How far in advance should I book a move-out cleaning?</h3>
 <p>We recommend booking 3–5 days before your move-out date to ensure availability. For month-end moves (the busiest period), booking a full week ahead is ideal. We serve Bolingbrook 7 days a week, including weekends.</p>

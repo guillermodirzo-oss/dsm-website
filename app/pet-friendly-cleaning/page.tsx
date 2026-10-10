@@ -25,7 +25,7 @@ const faqs = [
   {
     question: "Are your cleaning products safe for dogs and cats?",
     answer:
-      "Yes, all products used by DSM Cleaning Solutions are non-toxic, biodegradable, and certified safe for dogs, cats, and other household pets. We do not use bleach, ammonia, chlorine, or synthetic chemical fragrances that can irritate or harm animals. Your pets can remain in the home during and after cleaning without any risk.",
+      "Yes, all products used by DSM Cleaning Solutions are non-toxic, biodegradable, and safe for dogs, cats, and other household pets. We do not use bleach, ammonia, chlorine, or synthetic chemical fragrances that can irritate or harm animals. Your pets can remain in the home during and after cleaning without any risk.",
   },
   {
     question: "Do you specialize in pet-friendly cleaning?",
@@ -173,7 +173,7 @@ export default function PetFriendlyCleaningPage() {
           <p className="text-gray-600 mb-4 leading-relaxed">
             At DSM Cleaning Solutions, pet-friendly cleaning is not an add-on service. It&apos;s
             our standard. Every product we use in every home across our southwest suburb service
-            area is non-toxic, biodegradable, and certified safe for pets. Your dog doesn&apos;t
+            area is non-toxic, biodegradable, and safe for kids and pets. Your dog doesn&apos;t
             need to be crated. Your cat doesn&apos;t need to leave the room. Your bird doesn&apos;t
             need to be covered. We clean around your pets, safely.
           </p>

@@ -10,11 +10,14 @@
 - **Hours:** Monday to Sunday, 7am to 9pm. Online booking is available 24 hours at /book.
 - **Satisfaction guarantee:** 48 hours
 - **Rating:** 5.0 from 46 Google reviews
-- **Insurance:** Insured and bonded. Not licensed. Never claim a license.
+- **Insurance:** Insured and bonded. Not licensed. Never claim a license. No insurance claim since 2020.
+- **Team:** Recurring clients get the SAME TEAM every visit (a team, not one cleaner). Never write "same cleaner" or "your cleaner". Cleaners are background-checked and drug tested. Cleaners are trained. There is NO certification: never call them "certified".
+- **Products:** Eco-friendly, non-toxic products. They are NOT certified by anyone: never say "certified safe". Say "safe for kids and pets".
+- **Same-day service:** available.
 - **Since:** Locally owned in Romeoville since 2020.
 - **Cancellations:** No fee to cancel, skip or reschedule (the old $70 late-cancellation fee was retired Oct 2026). We ask customers to let us know as early as they can so we can adjust the schedule.
 - **Deposit:** No deposit required to book (the old $70 deposit was retired Oct 2026). Payment is due on the day of cleaning, by check, cash or credit card. Renters' security deposits are a different thing: move-out pages and blog posts talk about getting a landlord's deposit back, and that copy stays.
-- **Recurring service:** the same cleaner comes every recurring visit. No contracts, and no fees to cancel, skip or reschedule a clean. The recurring rate is locked for 12 months from the first recurring clean, as long as the home and the schedule stay the same. New clients do not need a deep clean first, and the recurring discount applies from the very first recurring clean. Every two weeks is the most popular schedule. Recurring clients can have bed sheets changed at no extra charge on request.
+- **Recurring service:** the same team comes every recurring visit. No contracts, and no fees to cancel, skip or reschedule a clean. The recurring rate is locked for 12 months from the first recurring clean, as long as the home and the schedule stay the same. New clients do not need a deep clean first, and the recurring discount applies from the very first recurring clean. Every two weeks is the most popular schedule. Recurring clients can have bed sheets changed at no extra charge on request.
 
 ## Service Area (16 cities)
 Romeoville, Plainfield, Naperville, Bolingbrook, Joliet, Lockport, Shorewood, New Lenox, Lemont, Homer Glen, Westmont, Minooka, Hinsdale, Oak Brook, Downers Grove, Burr Ridge.
@@ -134,7 +137,7 @@ Never change form payloads, guards or the Step 1 partial capture. Never send tes
 2. Schema address is always 402 Tallman Ave, Romeoville, IL 60446, coordinates 41.6336, -88.0904 (the Google Business Profile pin). Never Plainfield.
 3. Review count is 46 and rating 5.0 everywhere. Read them from REVIEW_COUNT and REVIEW_RATING; never type them by hand.
 4. Schema hours are Monday through Sunday, opens "07:00", closes "21:00". Visible hours read "7am to 9pm".
-5. Satisfaction guarantee is always 48 hours. Never 24 or 72.
+5. Satisfaction guarantee is always 48 hours. Never 24 or 72, and never "100% satisfaction guarantee": write "48-hour satisfaction guarantee".
 6. Prices in schema must match page copy. Both come from `lib/pricing.ts`.
 7. FAQ answers shown on a page must match its FAQPage schema word for word. Build the schema from the same array the page renders. Blog posts get theirs from `faqSchemaFromContent()` in `lib/blogData.ts`, which reads the post's own "Frequently Asked Questions" section, so never write a blog FAQ schema by hand.
 8. Internal links must point to live internal pages: never to BookingKoala URLs, and never to a URL that redirects.

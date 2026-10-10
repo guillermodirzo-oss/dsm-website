@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 };
 
 const faqs = [
-  { question: "What eco-friendly products do you use?", answer: "We use professional-grade, non-toxic, biodegradable cleaning products that are certified safe for children, pets, and the environment. No harsh chemicals, no strong fumes. Just a clean, fresh home." },
+  { question: "What eco-friendly products do you use?", answer: "We use professional-grade, non-toxic, biodegradable cleaning products that are safe for kids and pets. No harsh chemicals, no strong fumes. Just a clean, fresh home." },
   { question: "Do eco-friendly products really clean as well as regular products?", answer: "Absolutely. Our green cleaning products are professional-grade and just as effective at killing bacteria, removing grime, and disinfecting surfaces as conventional chemicals, without the toxic side effects." },
   { question: "Is eco-friendly cleaning safe for my pets?", answer: "Yes! Our non-toxic products are completely safe for dogs, cats, and all household pets. No need to remove pets from the home during cleaning." },
   { question: "Is green cleaning available for all your services?", answer: "Yes, we use eco-friendly products across all our services including standard cleaning, deep cleaning, move-out cleaning, and recurring maid service. It's our standard practice." },

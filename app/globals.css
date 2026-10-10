@@ -9,6 +9,21 @@
   body {
     @apply text-gray-800 bg-white antialiased;
   }
+
+  /* /book only (the one page with #booking-form). When a visitor presses Next
+     with a required field empty, the BookingKoala form moves focus to that
+     field inside its iframe and the browser scrolls our page to show it. On
+     its own that lands flush with the top of the window, under the sticky
+     header (65px tall). Scroll padding tells the browser to stop 80px short.
+     The section's own 80px scroll margin is switched off so links to
+     #booking-form still land where they always did, not 160px down. This is
+     page CSS only; the BookingKoala embed is not touched. */
+  html:has(#booking-form) {
+    scroll-padding-top: 5rem;
+  }
+  #booking-form {
+    scroll-margin-top: 0;
+  }
 }
 
 @layer components {

@@ -11,7 +11,7 @@
  *   - recurring is the standard checklist on a weekly, every-two-weeks or
  *     monthly schedule, and the discount applies from the first recurring clean
  *   - new clients do not need a deep clean first
- *   - the same cleaner comes every visit
+ *   - the same team comes every visit (a team, not one cleaner)
  *   - no contracts, and no fee to cancel, skip or reschedule
  *   - the recurring rate is locked for 12 months from the first recurring
  *     clean, as long as the home and the schedule stay the same
@@ -113,7 +113,7 @@ export const RECURRING_CITIES: Record<RecurringCityKey, RecurringCity> = {
       alt: "Living room cleaned by DSM in Plainfield, IL",
     },
     clientStory:
-      "In Plainfield, we've cleaned a 3-bedroom, 2.5-bath home between 1,500 and 2,000 square feet every two weeks for over a year. Same cleaner every visit, on the same schedule.",
+      "In Plainfield, we've cleaned a 3-bedroom, 2.5-bath home between 1,500 and 2,000 square feet every two weeks for over a year. Same team every visit, on the same schedule.",
     example: {
       lead: "Here's what a home like our Plainfield client's costs",
       home: { beds: 3, baths: 2.5, sqft: 1500 },
@@ -228,8 +228,8 @@ export const RECURRING_FAQS: { q: string; a: string }[] = [
     a: "Yes, anytime. Just let us know as early as you can. We never charge a fee to skip, cancel or reschedule.",
   },
   {
-    q: "Will I get the same cleaner every time?",
-    a: "Yes. The same cleaner comes every visit, so they get to know your home and how you like it done.",
+    q: "Will I get the same team every time?",
+    a: "Yes. The same team comes every visit, so they get to know your home and how you like it done.",
   },
   {
     q: "Do I need a deep clean before starting recurring service?",
@@ -252,7 +252,7 @@ export const RECURRING_FAQS: { q: string; a: string }[] = [
 
 /** Meta description, 155 characters or fewer for every city in RECURRING_CITIES. */
 export function recurringCityDescription(city: RecurringCity): string {
-  return `Maid service in ${city.name} with the same cleaner every visit. No contracts, 12-month price lock, weekly from ${WEEKLY_FROM}. ${REVIEW_RATING} stars from ${REVIEW_COUNT} Google reviews.`;
+  return `Maid service in ${city.name} with the same team every visit. No contracts, 12-month price lock, weekly from ${WEEKLY_FROM}. ${REVIEW_RATING} stars from ${REVIEW_COUNT} Google reviews.`;
 }
 
 export function recurringCityMetadata(key: RecurringCityKey): Metadata {
@@ -287,7 +287,7 @@ export function recurringCitySchemas(city: RecurringCity) {
         name: city.name,
         containedInPlace: { "@type": "State", name: "Illinois" },
       },
-      description: `Weekly, every two weeks or monthly maid service in ${city.name}, IL with the same cleaner every visit. No contracts, and the recurring rate is locked for 12 months.`,
+      description: `Weekly, every two weeks or monthly maid service in ${city.name}, IL with the same team every visit. No contracts, and the recurring rate is locked for 12 months.`,
       offers: {
         "@type": "AggregateOffer",
         priceCurrency: "USD",

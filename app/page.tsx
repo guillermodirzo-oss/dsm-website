@@ -113,7 +113,7 @@ const services = [
   {
     icon: "🏠",
     title: "Recurring Maid Service",
-    description: `The same cleaner every visit, no contracts, and your price locked for 12 months. Save up to ${MAX_RECURRING_DISCOUNT}.`,
+    description: `The same team every visit, no contracts, and your price locked for 12 months. Save up to ${MAX_RECURRING_DISCOUNT}.`,
     price: `Weekly from ${WEEKLY_FROM}`,
     slug: "/recurring-cleaning",
     review: cardReview(
@@ -247,9 +247,9 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
               { icon: "👨‍👩‍👧", label: "Family Owned", desc: "Local & personal service" },
-              { icon: "🛡️", label: "Fully Insured", desc: "Insured and bonded" },
+              { icon: "🛡️", label: "Insured & Bonded", desc: "Background-checked, drug-tested team" },
               { icon: "🌿", label: "Eco-Friendly", desc: "Safe for kids & pets" },
-              { icon: "✅", label: "Satisfaction Guaranteed", desc: "We re-clean if needed" },
+              { icon: "✅", label: "Satisfaction Guaranteed", desc: "Tell us within 48 hours, we fix it free" },
             ].map((item) => (
               <div key={item.label} className="flex flex-col items-center gap-2 p-4">
                 <span className="text-3xl">{item.icon}</span>
@@ -353,7 +353,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5">
             {[
               // Six tiles, two per service. Captions without a city are the new drops,
               // whose location is unknown; do not invent one.
@@ -368,23 +368,23 @@ export default function HomePage() {
             // affordance is removed rather than faked.
             ].map((photo) => (
               <div key={photo.src}>
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md">
+                <div className="relative aspect-[4/3] rounded-xl md:rounded-2xl overflow-hidden shadow-md">
                   <Image
                     src={photo.src}
                     alt={photo.alt}
                     fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    sizes="(max-width: 1024px) 50vw, 33vw"
                     className="object-cover"
                   />
                 </div>
-                <p className="text-xs text-gray-400 font-medium text-center mt-2.5 tracking-wide">{photo.caption}</p>
+                <p className="text-[11px] md:text-xs text-gray-400 font-medium text-center mt-1.5 md:mt-2.5 md:tracking-wide">{photo.caption}</p>
               </div>
             ))}
           </div>
 
           <div className="text-center mt-12">
-            <Link href="/contact" className="btn-primary btn-lg">
-              See What a Clean Home Feels Like
+            <Link href="/book" className="btn-primary btn-lg">
+              Book Your Clean
             </Link>
           </div>
         </div>
@@ -441,7 +441,8 @@ export default function HomePage() {
                 {[
                   { label: "Serving the Southwest Suburbs", value: "Since 2020" },
                   { label: "Happy Clients", value: "500+" },
-                  { label: "Cities Served", value: "10+" },
+                  // The real count, from the same list the service-area schema is built from.
+                  { label: "Cities Served", value: String(SERVICE_CITIES.length) },
                   // Replaces an unverifiable "100% Satisfaction Rate" with a
                   // number anyone can check on the Google profile.
                   { label: "Five-Star Reviews", value: String(REVIEW_COUNT) },
@@ -471,7 +472,7 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
               </div>
               {/* Floating trust card */}
-              <Link href="/reviews" className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-5 shadow-xl border border-gray-100 max-w-[200px] hover:shadow-2xl hover:-translate-y-0.5 transition-all">
+              <Link href="/reviews" className="absolute -bottom-6 left-2 sm:-left-6 bg-white rounded-2xl p-5 shadow-xl border border-gray-100 max-w-[200px] hover:shadow-2xl hover:-translate-y-0.5 transition-all">
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-yellow-400">★★★★★</span>
                 </div>
@@ -630,7 +631,7 @@ export default function HomePage() {
 
       {/* ─── CONTACT / CTA ─── */}
       <section id="contact" className="py-20 scroll-mt-20 bg-gradient-to-br from-orange-500 via-orange-500 to-orange-600 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10"
+        <div className="hidden sm:block absolute inset-0 opacity-10"
           style={{
             backgroundImage: "radial-gradient(circle at 20% 25%, rgba(255,255,255,0.55), rgba(255,255,255,0) 45%), radial-gradient(circle at 80% 75%, rgba(255,255,255,0.35), rgba(255,255,255,0) 50%), linear-gradient(135deg, rgba(255,255,255,0.18), rgba(0,0,0,0.12))",
             backgroundSize: "cover",
@@ -658,7 +659,7 @@ export default function HomePage() {
 
           {/* Trust badges */}
           <div className="flex flex-wrap justify-center gap-3 mb-10">
-            {["✓ Free Estimates", "✓ 100% Satisfaction Guarantee", "✓ Fully Insured & Bonded", "✓ Eco-Friendly", "✓ Family-Owned"].map((item) => (
+            {["✓ Free Estimates", "✓ 48-Hour Satisfaction Guarantee", "✓ Fully Insured & Bonded", "✓ Eco-Friendly", "✓ Family-Owned"].map((item) => (
               <span key={item} className="bg-white/15 backdrop-blur-sm border border-white/20 text-white text-sm font-medium px-4 py-1.5 rounded-full">
                 {item}
               </span>
