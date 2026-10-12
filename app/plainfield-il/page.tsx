@@ -4,6 +4,8 @@ import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
 import { pickReviews, reviewAttribution } from "@/lib/realReviews";
+import ClientStory from "@/components/ClientStory";
+import { CLIENT_STORIES } from "@/lib/localProof";
 
 export const metadata: Metadata = {
   title: { absolute: hubCityTitle("Plainfield") },
@@ -397,6 +399,9 @@ export default function PlainfieldPage() {
           </div>
         </div>
       </section>
+
+      {/* LOCAL PROOF. Copy and price come from lib/localProof.ts. */}
+      <ClientStory story={CLIENT_STORIES["plainfield-il"]} />
 
       {/* REVIEWS */}
       <section className="py-16 bg-white">

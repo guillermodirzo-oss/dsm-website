@@ -47,6 +47,16 @@ Recurring city pages:
 
 All four are one component (`components/RecurringCityPage.tsx`) fed by one data file (`lib/recurringCities.ts`). To add a city, add an entry there, create its route file, and add the URL to `app/sitemap.ts`.
 
+## Local Proof
+City pages carry one real, anonymized client story with an example price computed from `lib/pricing.ts`. The stories and their prices live in `lib/localProof.ts` and render through `components/ClientStory.tsx`.
+
+- Never invent a client story. Every story is the owner's own account of a real client, used word for word.
+- Never use client names.
+- Never type the example price. It is worked out from the home in the story (bedrooms, baths, square footage bracket, and the recurring discount if the client is on a plan) and rounded up to the whole dollar.
+- Never label a photo with a town unless the owner confirms it came from that town.
+
+Stories so far: Joliet, Plainfield, Bolingbrook, Lockport and Lemont hubs ("One of Our {City} Clients"), and the Lemont move-out page ("A Recent Lemont Move-In"). The Joliet, Plainfield and Bolingbrook clients are the same ones on the recurring city pages, so both read the same home from `lib/recurringCities.ts`.
+
 ## Prices
 `lib/pricing.ts` is the only source for prices. Pages and schema read from it; never type a price by hand.
 
@@ -112,6 +122,8 @@ Move-out customers are mostly home buyers and sellers, not renters. Write move-o
 | `lib/seoTitles.ts` | Title tag formats for every city page |
 | `lib/recurringCities.ts` | Data, FAQ, metadata and schema for the recurring city pages |
 | `components/RecurringCityPage.tsx` | The recurring city page itself |
+| `lib/localProof.ts` | The client story and computed example price for each city page that has one |
+| `components/ClientStory.tsx` | The "One of Our {City} Clients" section |
 | `lib/standardChecklist.ts` | The standard checklist, shared by /recurring-cleaning and the recurring city pages |
 | `components/Offer.tsx` | Wrapper that expires offer copy automatically |
 | `components/OfferBanner.tsx` | One line per running offer, for the homepage hero. Disappears when no offer is running |

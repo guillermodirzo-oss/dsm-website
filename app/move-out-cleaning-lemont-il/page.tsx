@@ -8,6 +8,8 @@ import LeadForm from "@/components/LeadForm";
 import Offer from "@/components/Offer";
 import { MOVEOUT_OFFER } from "@/lib/offers";
 import { MOVE_OUT_PRICING_COPY } from "@/lib/pricingCopy";
+import ClientStory from "@/components/ClientStory";
+import { CLIENT_STORIES } from "@/lib/localProof";
 
 // Regenerate at most hourly so MOVE75 drops out of the HTML on its own after
 // it ends. <Offer> also hides it in the browser at the deadline. See
@@ -417,6 +419,10 @@ export default function MoveOutCleaningLemontPage() {
           </div>
         </div>
       </section>
+
+      {/* LOCAL PROOF. The Lemont move-in from lib/localProof.ts. No link line:
+          the link would point back to this page. */}
+      <ClientStory story={CLIENT_STORIES["lemont-il"]} title="A Recent Lemont Move-In" background="white" showLinks={false} />
 
       {/* 3-REVIEW BLOCK */}
       <section className="py-14 bg-gray-50">

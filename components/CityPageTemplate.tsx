@@ -4,6 +4,8 @@ import ReviewCard from "@/components/ReviewCard";
 import { pickReviews, reviewAttribution } from "@/lib/realReviews";
 import type { CityData } from "@/lib/cityData";
 import { recurringPageForHub } from "@/lib/recurringCities";
+import ClientStory from "@/components/ClientStory";
+import { clientStoryForHub } from "@/lib/localProof";
 
 export default function CityPageTemplate({ city }: { city: CityData }) {
   // Real Google reviews only. Reviewer cities are unknown, so nothing here
@@ -12,6 +14,8 @@ export default function CityPageTemplate({ city }: { city: CityData }) {
   const cityReviews = pickReviews(3, city.slug.length);
   // Cities with their own maid service page get a link to it in the services section.
   const recurringPage = recurringPageForHub(`/${city.slug}`);
+  // A real client story with an example price, for the cities that have one.
+  const clientStory = clientStoryForHub(city.slug);
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -319,6 +323,9 @@ export default function CityPageTemplate({ city }: { city: CityData }) {
           </div>
         </div>
       </section>
+
+      {/* LOCAL PROOF. Only on cities with a story in lib/localProof.ts. */}
+      {clientStory && <ClientStory story={clientStory} />}
 
       {/* REVIEWS — the whole section is omitted when no real review is available,
           so a bare heading never renders over an empty grid. */}
