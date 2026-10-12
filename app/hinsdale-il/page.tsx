@@ -84,7 +84,7 @@ export default function HinsdalePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-xl font-bold text-gray-900 mb-5">Popular Cleaning Services in Hinsdale, IL</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <Link href="/deep-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+            <Link href="/deep-cleaning-hinsdale-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Hinsdale</h3>
               <p className="text-sm text-gray-600">Careful deep cleaning for Hinsdale homes, from grout lines to window sills.</p>
             </Link>
@@ -92,7 +92,7 @@ export default function HinsdalePage() {
               <h3 className="font-bold text-gray-900 mb-1">Recurring Maid Service Hinsdale</h3>
               <p className="text-sm text-gray-600">Weekly, biweekly, or monthly cleaning for Hinsdale homeowners. Consistent, professional.</p>
             </Link>
-            <Link href="/move-out-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+            <Link href="/move-out-cleaning-hinsdale-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Move-In / Move-Out Cleaning Hinsdale</h3>
               <p className="text-sm text-gray-600">Deposit-back move-out cleaning, or a fresh move-in clean before you settle into your Hinsdale home.</p>
             </Link>

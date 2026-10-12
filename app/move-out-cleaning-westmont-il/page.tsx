@@ -8,6 +8,8 @@ import LeadForm from "@/components/LeadForm";
 import Offer from "@/components/Offer";
 import { MOVEOUT_OFFER } from "@/lib/offers";
 import { MOVE_OUT_PRICING_COPY } from "@/lib/pricingCopy";
+import { GOOGLE_REVIEWS_URL } from "@/lib/siteConstants";
+import { WORK_PHOTOS } from "@/lib/workPhotos";
 
 // Regenerate at most hourly so MOVE75 drops out of the HTML on its own after
 // it ends. <Offer> also hides it in the browser at the deadline. See
@@ -261,7 +263,7 @@ export default function MoveOutCleaningWestmontPage() {
             <div className="hidden lg:block">
               <Image
                 src="/work-photos/double-vanity-bathroom-clean-naperville-il.jpg"
-                alt="Move-out cleaning in Westmont IL by DSM Cleaning Solutions"
+                alt={WORK_PHOTOS.doubleVanityBathroom.alt}
                 width={1920}
                 height={2560}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -432,7 +434,7 @@ export default function MoveOutCleaningWestmontPage() {
           </div>
           <div className="text-center">
             <a
-              href="https://www.google.com/search?q=DSM+Cleaning+Solutions+Romeoville+IL+Reviews"
+              href={GOOGLE_REVIEWS_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm font-semibold underline"
@@ -490,6 +492,10 @@ export default function MoveOutCleaningWestmontPage() {
               <p className="text-sm text-gray-600">See everything included in every move-out clean.</p>
             </Link>
           </div>
+          <p className="text-sm text-gray-600 mt-6">
+            For regular and deep cleaning in town, see our{" "}
+            <Link href="/westmont-il" className="text-brand-green font-semibold hover:underline">house cleaning in Westmont</Link> page.
+          </p>
         </div>
       </section>
 

@@ -6,6 +6,8 @@ import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/li
 import Image from "next/image";
 import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
+import { GOOGLE_REVIEWS_URL } from "@/lib/siteConstants";
+import { WORK_PHOTOS } from "@/lib/workPhotos";
 
 export const metadata: Metadata = {
   title: { absolute: deepCityTitle("Romeoville") },
@@ -187,7 +189,7 @@ export default function DeepCleaningRomeovillePage() {
             <div className="mt-6 lg:mt-0">
               <Image
                 src="/work-photos/double-vanity-bathroom-clean-naperville-il.jpg"
-                alt="Professionally cleaned bathroom by DSM Cleaning Solutions in Romeoville IL"
+                alt={WORK_PHOTOS.doubleVanityBathroom.alt}
                 width={1920}
                 height={2560}
                 priority
@@ -316,7 +318,7 @@ export default function DeepCleaningRomeovillePage() {
           </div>
           <Image
             src="/work-photos/google-post-image-cleaning-service-1.jpg"
-            alt="Professionally cleaned kitchen in Romeoville, IL by DSM Cleaning Solutions"
+            alt={WORK_PHOTOS.woodCabinetKitchen.alt}
             width={940}
             height={788}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -387,7 +389,7 @@ export default function DeepCleaningRomeovillePage() {
             ))}
           </div>
           <div className="text-center mt-8">
-            <a href="https://g.page/r/dsmcleaningsolutions/review" target="_blank" rel="noopener noreferrer" className="text-brand-green font-semibold hover:underline text-sm">
+            <a href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener noreferrer" className="text-brand-green font-semibold hover:underline text-sm">
               Read all {REVIEW_COUNT} reviews on Google →
             </a>
           </div>
@@ -457,6 +459,10 @@ export default function DeepCleaningRomeovillePage() {
               <p className="text-sm text-gray-600">Serving 60431, 60432 &amp; 60435.</p>
             </Link>
           </div>
+          <p className="text-sm text-gray-600 mt-6">
+            For regular cleaning and everything else we do in town, see our{" "}
+            <Link href="/" className="text-brand-green font-semibold hover:underline">house cleaning in Romeoville</Link> page.
+          </p>
         </div>
       </section>
     </>

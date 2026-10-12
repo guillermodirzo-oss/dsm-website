@@ -4,6 +4,7 @@ import { DEEP_CLEANING_TIERS, formatPrice, startingPrice } from "@/lib/pricing";
 import { DEEP_OFFER } from "@/lib/offers";
 import Offer from "@/components/Offer";
 import Image from "next/image";
+import { GOOGLE_REVIEWS_URL } from "@/lib/siteConstants";
 
 // Regenerate at most hourly so FALL75 drops out of the HTML on its own after
 // it ends. <Offer> also hides it in the browser at the deadline. See
@@ -470,7 +471,7 @@ export default function BookPage() {
 
           <div className="text-center">
             <a
-              href="https://www.google.com/search?q=DSM+Cleaning+Solutions+Romeoville+IL"
+              href={GOOGLE_REVIEWS_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm font-semibold hover:underline"

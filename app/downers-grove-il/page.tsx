@@ -84,7 +84,7 @@ export default function DownersGrovePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-xl font-bold text-gray-900 mb-5">Popular Cleaning Services in Downers Grove, IL</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <Link href="/deep-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+            <Link href="/deep-cleaning-downers-grove-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Downers Grove</h3>
               <p className="text-sm text-gray-600">Deep cleaning for Downers Grove homes, including grout, baseboards and inside the microwave.</p>
             </Link>
@@ -92,7 +92,7 @@ export default function DownersGrovePage() {
               <h3 className="font-bold text-gray-900 mb-1">Recurring Maid Service Downers Grove</h3>
               <p className="text-sm text-gray-600">Weekly, biweekly, or monthly recurring cleaning for Downers Grove homeowners.</p>
             </Link>
-            <Link href="/move-out-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+            <Link href="/move-out-cleaning-downers-grove-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning Downers Grove</h3>
               <p className="text-sm text-gray-600">Deposit-back move-out cleaning for Downers Grove homes and apartments.</p>
             </Link>

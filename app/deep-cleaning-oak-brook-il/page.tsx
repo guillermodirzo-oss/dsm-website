@@ -7,6 +7,8 @@ import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/li
 import Image from "next/image";
 import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
+import { GOOGLE_REVIEWS_URL } from "@/lib/siteConstants";
+import { WORK_PHOTOS } from "@/lib/workPhotos";
 
 export const metadata: Metadata = {
   title: { absolute: deepCityTitle("Oak Brook") },
@@ -197,7 +199,7 @@ export default function DeepCleaningOakBrookPage() {
             <div className="flex-shrink-0 w-full md:w-80">
               <Image
                 src="/work-photos/double-vanity-bathroom-clean-naperville-il.jpg"
-                alt="Deep cleaned bathroom in Oak Brook IL"
+                alt={WORK_PHOTOS.doubleVanityBathroom.alt}
                 width={1920}
                 height={2560}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -283,7 +285,7 @@ export default function DeepCleaningOakBrookPage() {
           <div className="text-center">
             <Image
               src="/work-photos/google-post-image-cleaning-service-1.jpg"
-              alt="DSM Cleaning Solutions team in Oak Brook IL"
+              alt={WORK_PHOTOS.woodCabinetKitchen.alt}
               width={940}
               height={788}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -369,7 +371,7 @@ export default function DeepCleaningOakBrookPage() {
           </div>
           <div className="text-center">
             <a
-              href="https://g.co/kgs/KFkN2MX"
+              href={GOOGLE_REVIEWS_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="text-brand-green font-semibold hover:underline text-sm"
@@ -447,6 +449,10 @@ export default function DeepCleaningOakBrookPage() {
               Deep Cleaning Downers Grove IL
             </Link>
           </div>
+          <p className="text-sm text-gray-600 mt-6">
+            For regular cleaning and everything else we do in town, see our{" "}
+            <Link href="/oak-brook-il" className="text-brand-green font-semibold hover:underline">house cleaning in Oak Brook</Link> page.
+          </p>
         </div>
       </section>
     </>

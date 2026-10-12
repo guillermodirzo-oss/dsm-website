@@ -22,6 +22,7 @@ import {
   reviewByName,
 } from "@/lib/realReviews";
 import { STANDARD_CHECKLIST } from "@/lib/standardChecklist";
+import { GOOGLE_REVIEWS_URL } from "@/lib/siteConstants";
 
 /**
  * The recurring ("maid service") city page, /recurring-cleaning-{city}-il.
@@ -340,7 +341,7 @@ export default function RecurringCityPage({ city: cityKey }: { city: RecurringCi
             ))}
           </div>
           <div className="text-center mt-8">
-            <a href="https://g.co/kgs/KFkN2MX" target="_blank" rel="noopener noreferrer" className="text-brand-green font-semibold hover:underline text-sm">
+            <a href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener noreferrer" className="text-brand-green font-semibold hover:underline text-sm">
               Read all {REVIEW_COUNT} reviews on Google →
             </a>
           </div>

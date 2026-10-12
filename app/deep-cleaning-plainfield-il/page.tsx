@@ -6,6 +6,8 @@ import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/li
 import Image from "next/image";
 import PlainfieldForm from "./PlainfieldForm";
 import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
+import { GOOGLE_REVIEWS_URL } from "@/lib/siteConstants";
+import { WORK_PHOTOS } from "@/lib/workPhotos";
 
 export const metadata: Metadata = {
   title: { absolute: deepCityTitle("Plainfield") },
@@ -220,7 +222,7 @@ export default function DeepCleaningPlainfieldPage() {
             <div className="mt-6 lg:mt-0">
               <Image
                 src="/work-photos/double-vanity-bathroom-clean-naperville-il.jpg"
-                alt="Professionally cleaned double vanity bathroom by DSM Cleaning Solutions"
+                alt={WORK_PHOTOS.doubleVanityBathroom.alt}
                 width={1920}
                 height={2560}
                 priority
@@ -387,7 +389,7 @@ export default function DeepCleaningPlainfieldPage() {
           {/* Second photo */}
           <Image
             src="/work-photos/google-post-image-cleaning-service-1.jpg"
-            alt="Professionally cleaned kitchen in Plainfield, IL by DSM Cleaning Solutions"
+            alt={WORK_PHOTOS.woodCabinetKitchen.alt}
             width={940}
             height={788}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -474,7 +476,7 @@ export default function DeepCleaningPlainfieldPage() {
 
           <div className="text-center mt-8">
             <a
-              href="https://g.page/r/dsmcleaningsolutions/review"
+              href={GOOGLE_REVIEWS_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="text-brand-green font-semibold hover:underline text-sm"
@@ -568,6 +570,10 @@ export default function DeepCleaningPlainfieldPage() {
               <p className="text-sm text-gray-600">Learn more about what&apos;s included in every deep clean.</p>
             </Link>
           </div>
+          <p className="text-sm text-gray-600 mt-6">
+            For regular cleaning and everything else we do in town, see our{" "}
+            <Link href="/plainfield-il" className="text-brand-green font-semibold hover:underline">house cleaning in Plainfield</Link> page.
+          </p>
         </div>
       </section>
     </>

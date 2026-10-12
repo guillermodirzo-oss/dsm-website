@@ -118,19 +118,19 @@ const services = [
     icon: "🧹",
     title: "Deep Cleaning in Plainfield",
     desc: "We clean the baseboards, grout, vents and ceiling fans, so nothing gets skipped.",
-    link: "/deep-cleaning",
+    link: "/deep-cleaning-plainfield-il",
   },
   {
     icon: "📦",
     title: "Move-Out / Move-In Cleaning Plainfield",
     desc: "Comprehensive move-out cleaning to get your full deposit back, or move-in cleaning to start fresh in your new Plainfield home.",
-    link: "/move-out-cleaning",
+    link: "/move-out-cleaning-plainfield-il",
   },
   {
     icon: "📅",
     title: "Recurring Maid Service Plainfield",
     desc: "Weekly, biweekly, or monthly maid service plans tailored to your Plainfield home and schedule.",
-    link: "/recurring-cleaning",
+    link: "/recurring-cleaning-plainfield-il",
   },
   {
     icon: "🌿",
@@ -458,7 +458,7 @@ export default function PlainfieldPage() {
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Plainfield</h3>
               <p className="text-sm text-gray-600">Deep cleaning for Plainfield homes in 60544 & 60585, grout and baseboards included.</p>
             </Link>
-            <Link href="/recurring-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+            <Link href="/recurring-cleaning-plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Recurring Cleaning in Plainfield</h3>
               <p className="text-sm text-gray-600">Weekly, biweekly & monthly house cleaning in Plainfield.</p>
             </Link>

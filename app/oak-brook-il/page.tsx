@@ -84,7 +84,7 @@ export default function OakBrookPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-xl font-bold text-gray-900 mb-5">Popular Cleaning Services in Oak Brook, IL</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <Link href="/deep-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+            <Link href="/deep-cleaning-oak-brook-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Oak Brook</h3>
               <p className="text-sm text-gray-600">Detailed deep cleaning for Oak Brook homes, including light fixtures and door frames.</p>
             </Link>
@@ -92,7 +92,7 @@ export default function OakBrookPage() {
               <h3 className="font-bold text-gray-900 mb-1">Recurring Maid Service Oak Brook</h3>
               <p className="text-sm text-gray-600">Weekly, biweekly, or monthly professional cleaning for Oak Brook homes.</p>
             </Link>
-            <Link href="/move-out-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
+            <Link href="/move-out-cleaning-oak-brook-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Move-In / Move-Out Cleaning Oak Brook</h3>
               <p className="text-sm text-gray-600">Deposit-back move-out cleaning, or a fresh move-in clean for your new Oak Brook home.</p>
             </Link>
