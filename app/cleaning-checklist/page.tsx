@@ -27,7 +27,7 @@ const faqs = [
   {
     question: "What extra items are in a deep clean?",
     answer:
-      "Deep cleaning adds everything that standard cleaning doesn't cover: inside the microwave and refrigerator exterior detail; full baseboard scrubbing; window sills and inside glass; ceiling fans and light fixtures; grout scrubbing in bathrooms; cabinet front detail; door frame detail; and vent cleaning. Cabinets are cleaned on the outside only. Cleaning inside the oven is an add-on. It catches up on buildup instead of just keeping things tidy.",
+      "Deep cleaning adds everything that standard cleaning doesn't cover: inside the microwave and refrigerator exterior detail; full baseboard scrubbing; window sills and inside glass; ceiling fans and light fixtures; grout scrubbing in bathrooms; door frame detail; and vent cleaning. Cabinets are cleaned on the outside only. Cleaning inside the oven or inside the kitchen cabinets is an add-on. It catches up on buildup instead of just keeping things tidy.",
   },
   {
     question: "Do you clean inside appliances?",
@@ -42,7 +42,7 @@ const faqs = [
   {
     question: "Can I add extra items to my clean?",
     answer:
-      "Yes, many customers add specific tasks to their booking. Common add-ons include inside oven, inside refrigerator, interior window cleaning, laundry, and garage sweeping. Add-ons are always discussed and priced before your appointment. We never add scope or charge without your prior agreement.",
+      "Yes, many customers add specific tasks to their booking. Common add-ons include inside oven, inside refrigerator, inside kitchen cabinets, interior window cleaning, laundry, and garage sweeping. Add-ons are always discussed and priced before your appointment. We never add scope or charge without your prior agreement.",
   },
 ];
 
@@ -154,7 +154,6 @@ const deepExtras = [
       "Inside microwave: walls, ceiling, turntable",
       "Refrigerator exterior detail: top, sides, handles",
       "Behind and under appliances (accessible areas)",
-      "Cabinet exterior detail: fronts, edges, handles",
       "Grease buildup on stovetop and hood",
     ],
   },
@@ -351,6 +350,7 @@ export default function CleaningChecklistPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
               "Inside oven cleaning (add-on, always included with move-out cleaning)",
+              "Inside kitchen cabinets (add-on, always included with move-out cleaning)",
               "Exterior window cleaning",
               "Laundry or dish washing",
               "Garage cleaning",

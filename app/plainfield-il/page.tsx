@@ -370,7 +370,7 @@ export default function PlainfieldPage() {
                 </div>
               </div>
               <ul className="space-y-2 text-sm text-gray-700">
-                {["Vacuum all carpets, rugs & floors","Mop all hard-surface floors","Dust furniture, shelves & surfaces","Clean & disinfect bathrooms","Wipe kitchen counters & appliance exteriors","Clean mirrors throughout","Empty all trash bins","Wipe light switches & door handles","Make beds (optional)"].map(item => (
+                {["Vacuum all carpets, rugs & floors","Mop all hard-surface floors","Dust furniture, shelves & surfaces","Clean & disinfect bathrooms","Wipe kitchen counters & appliance exteriors","Wipe cabinet fronts","Clean mirrors throughout","Empty all trash bins","Wipe light switches & door handles","Make beds (optional)"].map(item => (
                   <li key={item} className="flex items-start gap-2">
                     <svg className="w-4 h-4 text-brand-green mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     {item}
@@ -388,7 +388,7 @@ export default function PlainfieldPage() {
               </div>
               <p className="text-xs text-brand-green font-bold uppercase tracking-widest mb-3">Everything in Standard, PLUS:</p>
               <ul className="space-y-2 text-sm text-gray-700">
-                {["Scrub grout lines in showers & tile","Clean inside the microwave","Degrease stovetop, hood vent & burners","Wipe all cabinet fronts & handles","Clean behind & under appliances","Detailed baseboard & door frame cleaning","Vacuum & wipe window sills and inside glass","Clean ceiling fans & light fixtures","Spot-clean walls & switch plates"].map(item => (
+                {["Scrub grout lines in showers & tile","Clean inside the microwave","Degrease stovetop, hood vent & burners","Clean behind & under appliances","Detailed baseboard & door frame cleaning","Vacuum & wipe window sills and inside glass","Clean ceiling fans & light fixtures","Spot-clean walls & switch plates"].map(item => (
                   <li key={item} className="flex items-start gap-2">
                     <svg className="w-4 h-4 text-brand-green mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     {item}

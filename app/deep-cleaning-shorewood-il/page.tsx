@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What does a deep cleaning include in Shorewood?",
-    a: "We degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, and much more. Cleaning inside the oven is an add-on. No room gets skipped.",
+    a: "We degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, and much more. Cleaning inside the oven or inside the kitchen cabinets is an add-on. No room gets skipped.",
   },
   {
     q: "How long does a deep clean take in Shorewood?",

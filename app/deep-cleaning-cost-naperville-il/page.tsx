@@ -40,7 +40,7 @@ const faqs = [
   {
     question: "What is included in deep cleaning in Naperville?",
     answer:
-      "Our Naperville deep cleaning covers everything in a standard clean plus: inside the microwave, the refrigerator exterior, scrubbing grout and tile, wiping cabinet fronts, wiping all baseboards and door frames, cleaning ceiling fans and light fixtures, washing window sills and inside glass, scrubbing bathroom fixtures and shower doors, and detail-cleaning areas that are skipped in routine visits. Cleaning inside the oven is an add-on.",
+      "Our Naperville deep cleaning covers everything in a standard clean plus: inside the microwave, the refrigerator exterior, scrubbing grout and tile, wiping all baseboards and door frames, cleaning ceiling fans and light fixtures, washing window sills and inside glass, scrubbing bathroom fixtures and shower doors, and detail-cleaning areas that are skipped in routine visits. Cleaning inside the oven or inside the kitchen cabinets is an add-on.",
   },
   {
     question: "How long does a deep clean take in Naperville?",
@@ -124,7 +124,7 @@ const included = [
 const factors = [
   { icon: "🏠", title: "Home Size", desc: "Bedrooms and bathrooms are the primary driver of deep cleaning cost in Naperville." },
   { icon: "📋", title: "Current Condition", desc: "Homes not professionally cleaned recently take more time and may incur a condition adjustment." },
-  { icon: "🔧", title: "Add-On Services", desc: "Inside refrigerator, inside oven, laundry, and interior window cleaning are optional extras." },
+  { icon: "🔧", title: "Add-On Services", desc: "Inside refrigerator, inside oven, inside kitchen cabinets, laundry, and interior window cleaning are optional extras." },
   { icon: "🔄", title: "First-Time vs. Recurring", desc: "First-time deep cleans typically cost more; recurring deep clean customers receive better rates." },
 ];
 
@@ -290,7 +290,7 @@ export default function DeepCleaningCostNapervillePage() {
               <tbody className="divide-y divide-gray-100">
                 {[
                   { feature: "Starting price (2 bed / 1 bath)", standard: STANDARD_2_BED, deep: DEEP_2_BED },
-                  { feature: "Inside appliances", standard: "✗", deep: "✓" },
+                  { feature: "Inside the microwave", standard: "✗", deep: "✓" },
                   { feature: "Grout scrubbing", standard: "✗", deep: "✓" },
                   { feature: "Baseboard detail cleaning", standard: "Light wipe", deep: "Full scrub" },
                   { feature: "Ceiling fans & fixtures", standard: "✗", deep: "✓" },

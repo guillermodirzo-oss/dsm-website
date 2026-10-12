@@ -15,6 +15,7 @@
 - **Products:** Eco-friendly, non-toxic products. They are NOT certified by anyone: never say "certified safe". Say "safe for kids and pets".
 - **Same-day service:** available.
 - **Since:** Locally owned in Romeoville since 2020.
+- **Growth focus:** DSM is not investing in new pages or content for Minooka or areas south of Joliet. Existing pages for those cities stay live and Minooka stays in the service area, but new work targets Romeoville and cities north and east: Bolingbrook, Lemont, Homer Glen, Lockport, Plainfield, Naperville, Westmont, Downers Grove, Hinsdale, Oak Brook, Burr Ridge, and Joliet.
 - **Cancellations:** No fee to cancel, skip or reschedule (the old $70 late-cancellation fee was retired Oct 2026). We ask customers to let us know as early as they can so we can adjust the schedule.
 - **Deposit:** No deposit required to book (the old $70 deposit was retired Oct 2026). Payment is due on the day of cleaning, by check, cash or credit card. Renters' security deposits are a different thing: move-out pages and blog posts talk about getting a landlord's deposit back, and that copy stays.
 - **Recurring service:** the same team comes every recurring visit. No contracts, and no fees to cancel, skip or reschedule a clean. The recurring rate is locked for 12 months from the first recurring clean, as long as the home and the schedule stay the same. New clients do not need a deep clean first, and the recurring discount applies from the very first recurring clean. Every two weeks is the most popular schedule. Recurring clients can have bed sheets changed at no extra charge on request.
@@ -55,7 +56,7 @@ City pages carry one real, anonymized client story with an example price compute
 - Never type the example price. It is worked out from the home in the story (bedrooms, baths, square footage bracket, and the recurring discount if the client is on a plan) and rounded up to the whole dollar.
 - Never label a photo with a town unless the owner confirms it came from that town.
 
-Stories so far: Joliet, Plainfield, Bolingbrook, Lockport and Lemont hubs ("One of Our {City} Clients"), and the Lemont move-out page ("A Recent Lemont Move-In"). The Joliet, Plainfield and Bolingbrook clients are the same ones on the recurring city pages, so both read the same home from `lib/recurringCities.ts`.
+Stories so far: Joliet (monthly), Plainfield (every two weeks), Bolingbrook (every two weeks), Lockport (monthly) and Lemont (move-in) hubs ("One of Our {City} Clients"), and the Lemont move-out page ("A Recent Lemont Move-In"). The Joliet, Plainfield and Bolingbrook clients are the same ones on the recurring city pages, so both read the same home from `lib/recurringCities.ts`.
 
 ## Prices
 `lib/pricing.ts` is the only source for prices. Pages and schema read from it; never type a price by hand.
@@ -88,8 +89,10 @@ To see the site as it will look after an offer ends, build locally with a fake c
 - Windows means sills and inside glass only. We never clean window tracks. (Shower door tracks are fine.)
 - Deep cleaning includes the refrigerator exterior only.
 - Move-out cleaning includes the refrigerator inside and out.
-- Deep cleaning cleans cabinet EXTERIORS only (fronts). It does NOT clean inside cabinets, and there is no add-on for cabinet interiors on a deep clean. Never write "cabinet interiors", "inside cabinets" or "inside and out" for a deep clean.
-- Move-in and move-out cleaning cleans cabinets inside AND outside.
+- Every service (standard, recurring, deep, move-in/move-out) wipes cabinet FRONTS. Never list cabinet fronts among the things a standard or recurring clean skips.
+- Only move-in/move-out cleans the INSIDE of cabinets as part of the service. Never write "cabinet interiors", "inside cabinets" or "inside and out" as included in a deep or standard clean.
+- "Inside kitchen cabinets" is a real add-on customers can choose in the BookingKoala form for standard and deep cleans. It is kitchen cabinets only: bathroom vanities and drawers are not an add-on, so never mention them as one. Where a page lists add-ons, write "Inside kitchen cabinets (add-on)".
+- For a deep clean, "inside appliances" means inside the microwave only. Write "inside the microwave". Inside the oven and inside the refrigerator are add-ons.
 - Deep cleaning does NOT include cleaning inside the oven. Inside oven cleaning is an add-on. Never write that a deep clean "gets inside the oven" or list the oven interior on a deep cleaning checklist. The oven exterior is fine.
 - During FALL75 (`lib/offers.ts`), inside oven cleaning is added free with a deep clean. That claim must only appear while FALL75 is active: put it inside `<Offer service="deep">`, and give it a fallback that does not mention the oven (or no fallback at all).
 - Move-in and move-out cleaning ALWAYS includes inside the oven (and inside the refrigerator). It is never an add-on there.

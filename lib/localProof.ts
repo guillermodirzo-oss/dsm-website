@@ -28,9 +28,9 @@ export interface ClientStory {
   links: { label: string; href: string }[];
 }
 
-/** A one-time price for a home, as a whole dollar, rounded up. */
-function oneTimePrice(service: "standard" | "moveout", home: HomeSize): string {
-  return formatPrice(Math.ceil(priceForHome(service, home)));
+/** A one-time move-in or move-out price for a home, as a whole dollar, rounded up. */
+function moveInPrice(home: HomeSize): string {
+  return formatPrice(Math.ceil(priceForHome("moveout", home)));
 }
 
 /** A per-visit price on a recurring plan. recurringVisitPrice() already rounds up. */
@@ -68,9 +68,10 @@ export const CLIENT_STORIES: Record<string, ClientStory> = {
   "lockport-il": {
     city: "Lockport",
     story:
-      "One of our Lockport clients has a 2-bedroom, 2.5-bath home between 1,000 and 1,500 square feet, and she's been with us for four months. She leaves out a spray she likes for her wood furniture, so we take the time to use hers on every piece. It's her home, so it gets done her way.",
-    priceLine: `A standard clean for a home this size is ${oneTimePrice("standard", LOCKPORT_HOME)}.`,
+      "One of our Lockport clients has a 2-bedroom, 2.5-bath home between 1,000 and 1,500 square feet, and we've cleaned it every month for four months. She leaves out a spray she likes for her wood furniture, so we take the time to use hers on every piece. It's her home, so it gets done her way.",
+    priceLine: `A home like hers costs ${planPrice(LOCKPORT_HOME, "monthly")} a visit on a monthly plan.`,
     links: [
+      { label: "See recurring cleaning plans", href: "/recurring-cleaning" },
       { label: "See deep cleaning in Lockport", href: "/deep-cleaning-lockport-il" },
       { label: "See move-out cleaning in Lockport", href: "/move-out-cleaning-lockport-il" },
     ],
@@ -79,7 +80,7 @@ export const CLIENT_STORIES: Record<string, ClientStory> = {
     city: "Lemont",
     story:
       "In Lemont, we got a 4-bedroom, 2.5-bath home of about 2,400 square feet ready for move-in day. Inside the fridge, the oven and every cabinet, plus the bathrooms and floors, so she could move in to a clean house.",
-    priceLine: `A move-in clean for a home this size is ${oneTimePrice("moveout", LEMONT_HOME)}.`,
+    priceLine: `A move-in clean for a home this size is ${moveInPrice(LEMONT_HOME)}.`,
     links: [{ label: "See move-in and move-out cleaning in Lemont", href: "/move-out-cleaning-lemont-il" }],
   },
 };

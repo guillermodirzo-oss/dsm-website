@@ -115,7 +115,7 @@ const factors = [
   { icon: "🧹", label: "Service Type", desc: "Standard, deep, and move-out cleaning have different scopes and prices." },
   { icon: "🔄", label: "Frequency", desc: "Recurring customers receive a lower per-visit rate than one-time bookings." },
   { icon: "📋", label: "Current Condition", desc: "Homes not recently cleaned may require additional time, always disclosed upfront." },
-  { icon: "✨", label: "Add-On Services", desc: "Inside oven, inside refrigerator, laundry: optional and always agreed upon first." },
+  { icon: "✨", label: "Add-On Services", desc: "Inside oven, inside refrigerator, inside kitchen cabinets, laundry: optional and always agreed upon first." },
 ];
 
 const serviceAreas = [

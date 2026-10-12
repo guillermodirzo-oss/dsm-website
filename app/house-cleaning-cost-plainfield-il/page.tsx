@@ -1,7 +1,17 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
-import { DEEP_FROM, MOVE_OUT_TIERS, STANDARD_FROM, formatPrice, startingPrice } from "@/lib/pricing";
+import {
+  DEEP_CLEANING_TIERS,
+  DEEP_FROM,
+  MOVE_OUT_TIERS,
+  STANDARD_CLEANING_TIERS,
+  STANDARD_FROM,
+  formatPrice,
+  priceForBeds,
+  startingPrice,
+  type PriceTier,
+} from "@/lib/pricing";
 
 // Unqualified "starting at" claims read the true minimum from the rate card.
 const MOVEOUT_FROM = formatPrice(startingPrice(MOVE_OUT_TIERS));
@@ -25,16 +35,24 @@ export const metadata: Metadata = {
   },
 };
 
+// Every size-specific price on this page is that home size's tier in
+// lib/pricing.ts. The 4 bed row uses the larger 4 bed tier (2,500-2,999 sq ft)
+// for deep and move-out, so it lines up with standard's only 4 bed tier.
+const tierPrice = (tiers: PriceTier[], beds: number) => formatPrice(priceForBeds(tiers, beds, beds === 4 ? "high" : "low"));
+const STANDARD_2_BED = tierPrice(STANDARD_CLEANING_TIERS, 2);
+const DEEP_2_BED = tierPrice(DEEP_CLEANING_TIERS, 2);
+const MOVEOUT_2_BED = tierPrice(MOVE_OUT_TIERS, 2);
+
 const faqs = [
   {
     question: "How much does house cleaning cost in Plainfield, IL?",
     answer:
-      "House cleaning in Plainfield, IL typically starts at $160 for a standard clean in a 2-bedroom/1-bath home, $315 for a deep clean, and $410 for a move-out clean in the same size home. Prices scale with bedroom and bathroom count. DSM Cleaning Solutions provides free, no-obligation estimates. Contact us or call (815) 246-2113 for your exact Plainfield quote.",
+      `House cleaning in Plainfield, IL typically starts at ${STANDARD_2_BED} for a standard clean in a 2-bedroom/1-bath home, ${DEEP_2_BED} for a deep clean, and ${MOVEOUT_2_BED} for a move-out clean in the same size home. Prices scale with bedroom and bathroom count. DSM Cleaning Solutions provides free, no-obligation estimates. Contact us or call (815) 246-2113 for your exact Plainfield quote.`,
   },
   {
     question: "Is deep cleaning more expensive than standard cleaning in Plainfield?",
     answer:
-      "Yes, deep cleaning costs roughly twice the price of a standard cleaning in Plainfield because it covers areas that aren't included in routine visits: inside appliances, cabinet fronts, baseboards, grout scrubbing, ceiling fans, and window sills. A standard clean for a 2-bed/1-bath starts at $160 while a deep clean for the same home starts at $315.",
+      `Yes, deep cleaning costs roughly twice the price of a standard cleaning in Plainfield because it covers areas that aren't included in routine visits: inside the microwave, baseboards, grout scrubbing, ceiling fans, and window sills. A standard clean for a 2-bed/1-bath starts at ${STANDARD_2_BED} while a deep clean for the same home starts at ${DEEP_2_BED}.`,
   },
   {
     question: "Do you charge by the hour or flat rate in Plainfield?",
@@ -101,22 +119,28 @@ const breadcrumbSchema = {
   ],
 };
 
-// Verified against the tier tables in lib/pricing.ts: standard and move-out
-// use each bed count's only tier, and deep/move-out on the 4-bed row use
-// their 2,500-2,999 sq ft tier so it lines up with standard's only 4-bed tier.
+// Read from the tier tables in lib/pricing.ts through tierPrice() above:
+// standard and move-out use each bed count's only tier, and deep/move-out on
+// the 4-bed row use their 2,500-2,999 sq ft tier so it lines up with
+// standard's only 4-bed tier.
 const pricingBySize = [
-  { size: "2 Bed / 1 Bath", standard: "$160", deep: "$315", moveOut: "$410" },
-  { size: "3 Bed / 2 Bath", standard: "$240", deep: "$440", moveOut: "$490" },
-  { size: "4 Bed / 2.5 Bath", standard: "$370", deep: "$630", moveOut: "$630" },
-  { size: "5 Bed / 3 Bath", standard: "$530", deep: "$830", moveOut: "$810" },
-];
+  { size: "2 Bed / 1 Bath", beds: 2 },
+  { size: "3 Bed / 2 Bath", beds: 3 },
+  { size: "4 Bed / 2.5 Bath", beds: 4 },
+  { size: "5 Bed / 3 Bath", beds: 5 },
+].map(({ size, beds }) => ({
+  size,
+  standard: tierPrice(STANDARD_CLEANING_TIERS, beds),
+  deep: tierPrice(DEEP_CLEANING_TIERS, beds),
+  moveOut: tierPrice(MOVE_OUT_TIERS, beds),
+}));
 
 const factors = [
   { icon: "🏠", title: "Home Size", desc: "Number of bedrooms and bathrooms is the biggest driver. More rooms = more time = higher cost." },
   { icon: "🧹", title: "Type of Clean", desc: "Standard, deep, and move-out cleaning are priced differently based on scope and time." },
   { icon: "📋", title: "Current Condition", desc: "A home that hasn't been cleaned professionally in months requires more time and effort." },
   { icon: "🔄", title: "Frequency", desc: "Recurring customers (weekly, bi-weekly, monthly) typically receive a lower rate than one-time cleans." },
-  { icon: "✨", title: "Add-On Services", desc: "Inside oven, inside refrigerator, laundry, and window cleaning are available as add-ons." },
+  { icon: "✨", title: "Add-On Services", desc: "Inside oven, inside refrigerator, inside kitchen cabinets, laundry, and window cleaning are available as add-ons." },
   { icon: "📍", title: "Location in Plainfield", desc: "DSM serves all of Plainfield including 60544 and 60585 with no travel surcharges." },
 ];
 
@@ -287,8 +311,8 @@ export default function HouseCleaningCostPlainfield() {
               </div>
               <p className="text-gray-600 leading-relaxed mb-3">
                 Deep cleaning is the detailed scrub that routine upkeep skips. In
-                Plainfield homes, this includes inside kitchen appliances, scrubbing grout, cleaning
-                cabinet fronts, wiping baseboards, ceiling fans, vents, and window sills.
+                Plainfield homes, this includes inside the microwave, scrubbing grout,
+                wiping baseboards, ceiling fans, vents, and window sills.
                 Recommended for first-time cleans, seasonal cleans, or homes that haven&apos;t been
                 professionally cleaned in 3+ months.
               </p>
