@@ -659,7 +659,7 @@ export default function HomePage() {
 
           {/* Trust badges */}
           <div className="flex flex-wrap justify-center gap-3 mb-10">
-            {["✓ Free Estimates", "✓ 48-Hour Satisfaction Guarantee", "✓ Fully Insured & Bonded", "✓ Eco-Friendly", "✓ Family-Owned"].map((item) => (
+            {["✓ Free Estimates", "✓ 48-Hour Satisfaction Guarantee", "✓ Insured & Bonded", "✓ Eco-Friendly", "✓ Family-Owned"].map((item) => (
               <span key={item} className="bg-white/15 backdrop-blur-sm border border-white/20 text-white text-sm font-medium px-4 py-1.5 rounded-full">
                 {item}
               </span>

@@ -143,9 +143,11 @@ const serviceCards: ServiceCard[] = [
     tagline: "Detail clean for baselines and move-ins",
     service: "deep",
     tiers: DEEP_CLEANING_TIERS,
-    photo: "/work-photos/oven-interior-deep-cleaning.jpg",
+    // Not the oven: inside the oven is an add-on, so it can't stand for a
+    // deep clean. Degreasing the cooktop is on every deep checklist.
+    photo: "/work-photos/gas-cooktop-grates-closeup-1200.jpg",
     photoAlt:
-      "Oven interior cleaned down to bare enamel by DSM Cleaning Solutions",
+      "Five-burner gas cooktop with degreased grates on a white marble countertop after a DSM Cleaning Solutions deep clean",
   },
   {
     icon: "📦",
@@ -235,7 +237,7 @@ export default function PricingPage() {
               "🚫 No Hidden Fees",
               "🧴 All Supplies Included",
               "✅ Instant Online Quote",
-              "🛡️ Fully Insured & Bonded",
+              "🛡️ Insured & Bonded",
             ].map((item) => (
               <span key={item} className="whitespace-nowrap">{item}</span>
             ))}

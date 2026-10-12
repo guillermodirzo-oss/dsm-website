@@ -132,8 +132,12 @@ export default function BlogPostPage({
           ← Back to Blog
         </Link>
 
-        {/* Blog content */}
-        <style>{`
+        {/* Blog content. The CSS goes in as raw HTML: as a text child React
+            escapes the quotes in content: "✓", a <style> tag never unescapes
+            them, and the mismatch made every post fail hydration. */}
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
           .blog-content h2 { font-size: 1.5rem; font-weight: 700; color: #111827; margin-top: 2rem; margin-bottom: 0.75rem; }
           .blog-content h3 { font-size: 1.25rem; font-weight: 600; color: #1f2937; margin-top: 1.5rem; margin-bottom: 0.5rem; }
           .blog-content p { color: #4b5563; line-height: 1.75; margin-bottom: 1rem; }
@@ -142,7 +146,9 @@ export default function BlogPostPage({
           .blog-content ul li::before { content: "✓"; color: #f97316; font-weight: 700; flex-shrink: 0; margin-top: 0.1rem; }
           .blog-content a { color: #f97316; font-weight: 600; }
           .blog-content a:hover { text-decoration: underline; }
-        `}</style>
+        `,
+          }}
+        />
 
         <div
           className="blog-content"

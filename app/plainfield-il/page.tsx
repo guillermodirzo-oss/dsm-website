@@ -209,7 +209,7 @@ export default function PlainfieldPage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["📍 Serving All of Plainfield, IL", "👨‍👩‍👧 Family Owned", "🌿 Eco-Friendly", "🛡️ Fully Insured & Bonded", "✅ Satisfaction Guaranteed"].map(
+            {["📍 Serving All of Plainfield, IL", "👨‍👩‍👧 Family Owned", "🌿 Eco-Friendly", "🛡️ Insured & Bonded", "✅ Satisfaction Guaranteed"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -240,7 +240,7 @@ export default function PlainfieldPage() {
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
                 {[
                   { icon: "👨‍👩‍👧", label: "Family Owned & Operated" },
-                  { icon: "🛡️", label: "Fully Insured & Bonded" },
+                  { icon: "🛡️", label: "Insured & Bonded" },
                   { icon: "🌿", label: "Eco-Friendly Products" },
                   { icon: "✅", label: "48-Hour Satisfaction Guarantee" },
                   { icon: "📅", label: "Available 7 Days a Week" },
@@ -513,7 +513,7 @@ export default function PlainfieldPage() {
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-brand-green-50 transition-colors mb-6">
                 📞 (815) 246-2113
               </a>
-              <p className="text-white/80">Local · Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
+              <p className="text-white/80">Local · Family-owned · Eco-friendly · Insured &amp; bonded · Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <LeadForm />

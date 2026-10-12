@@ -123,7 +123,7 @@ export default function OfficeCleaningPage() {
                 </a>
               </div>
               <div className="grid grid-cols-2 gap-3">
-                {["✓ Fully Insured & Bonded", "✓ Flexible Scheduling", "✓ Free Walkthroughs", "✓ Family-Owned"].map((b) => (
+                {["✓ Insured & Bonded", "✓ Flexible Scheduling", "✓ Free Walkthroughs", "✓ Family-Owned"].map((b) => (
                   <div key={b} className="bg-white/10 rounded-xl px-4 py-2 text-sm text-white font-medium">{b}</div>
                 ))}
               </div>

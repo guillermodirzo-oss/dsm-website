@@ -122,7 +122,7 @@ export default function OfficeCleaningPlainfieldPage() {
                 📞 (815) 246-2113
               </a>
               <div className="grid grid-cols-2 gap-3">
-                {["✓ Serving Plainfield", "✓ Fully Insured", "✓ After-Hours Available", "✓ Free Quote"].map((b) => (
+                {["✓ Serving Plainfield", "✓ Insured & Bonded", "✓ After-Hours Available", "✓ Free Quote"].map((b) => (
                   <div key={b} className="bg-white/10 rounded-xl px-4 py-2 text-sm text-white font-medium">{b}</div>
                 ))}
               </div>

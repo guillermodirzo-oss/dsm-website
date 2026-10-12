@@ -261,7 +261,7 @@ export default function DeepCleaningPage() {
         <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-6 text-sm text-gray-700 font-medium">
           <span>✅ Family Owned &amp; Operated</span>
           <span>✅ Eco-Friendly Products</span>
-          <span>✅ Fully Insured</span>
+          <span>✅ Insured &amp; Bonded</span>
           <span>✅ 48-Hour Satisfaction Guarantee</span>
         </div>
       </section>

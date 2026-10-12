@@ -1,6 +1,16 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
+import { DEEP_CLEANING_TIERS, STANDARD_CLEANING_TIERS, formatPrice, priceForBeds } from "@/lib/pricing";
+
+// Every price on this page comes from the rate card in lib/pricing.ts.
+// Each is the listed tier for that home size; 4 bed uses the larger of the
+// two 4 bed tiers, the figure this page has always shown.
+const DEEP_2_BED = formatPrice(priceForBeds(DEEP_CLEANING_TIERS, 2));
+const DEEP_3_BED = formatPrice(priceForBeds(DEEP_CLEANING_TIERS, 3));
+const DEEP_4_BED = formatPrice(priceForBeds(DEEP_CLEANING_TIERS, 4, "high"));
+const DEEP_5_BED = formatPrice(priceForBeds(DEEP_CLEANING_TIERS, 5));
+const STANDARD_2_BED = formatPrice(priceForBeds(STANDARD_CLEANING_TIERS, 2));
 
 export const metadata: Metadata = {
   title: "Deep Cleaning Cost Naperville IL 2026 Guide",
@@ -25,7 +35,7 @@ const faqs = [
   {
     question: "How much does deep cleaning cost in Naperville, IL?",
     answer:
-      "Deep cleaning in Naperville, IL starts at $315 for a 2-bedroom/1-bath home and goes up to $830+ for a 5-bedroom/3-bath home. Exact pricing depends on your home size, current condition, and any add-ons. DSM Cleaning Solutions provides free, no-obligation estimates. Call (815) 246-2113 or fill out our contact form for your Naperville deep clean quote.",
+      `Deep cleaning in Naperville, IL starts at ${DEEP_2_BED} for a 2-bedroom/1-bath home and goes up to ${DEEP_5_BED}+ for a 5-bedroom/3-bath home. Exact pricing depends on your home size, current condition, and any add-ons. DSM Cleaning Solutions provides free, no-obligation estimates. Call (815) 246-2113 or fill out our contact form for your Naperville deep clean quote.`,
   },
   {
     question: "What is included in deep cleaning in Naperville?",
@@ -98,10 +108,10 @@ const breadcrumbSchema = {
 };
 
 const pricingBySize = [
-  { size: "2 Bed / 1 Bath", price: "$315", time: "3–5 hours" },
-  { size: "3 Bed / 2 Bath", price: "$440", time: "5–6 hours" },
-  { size: "4 Bed / 2.5 Bath", price: "$630", time: "6–8 hours" },
-  { size: "5 Bed / 3 Bath", price: "$830+", time: "7–9 hours" },
+  { size: "2 Bed / 1 Bath", price: DEEP_2_BED, time: "3–5 hours" },
+  { size: "3 Bed / 2 Bath", price: DEEP_3_BED, time: "5–6 hours" },
+  { size: "4 Bed / 2.5 Bath", price: DEEP_4_BED, time: "6–8 hours" },
+  { size: "5 Bed / 3 Bath", price: `${DEEP_5_BED}+`, time: "7–9 hours" },
 ];
 
 const included = [
@@ -279,7 +289,7 @@ export default function DeepCleaningCostNapervillePage() {
               </thead>
               <tbody className="divide-y divide-gray-100">
                 {[
-                  { feature: "Starting price (2 bed / 1 bath)", standard: "$160", deep: "$315" },
+                  { feature: "Starting price (2 bed / 1 bath)", standard: STANDARD_2_BED, deep: DEEP_2_BED },
                   { feature: "Inside appliances", standard: "✗", deep: "✓" },
                   { feature: "Grout scrubbing", standard: "✗", deep: "✓" },
                   { feature: "Baseboard detail cleaning", standard: "Light wipe", deep: "Full scrub" },
@@ -403,7 +413,7 @@ export default function DeepCleaningCostNapervillePage() {
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
                 📞 (815) 246-2113
               </a>
-              <p className="text-white/80">Serving 60540 · 60563 · 60564 · 60565 · Family-owned · Fully insured</p>
+              <p className="text-white/80">Serving 60540 · 60563 · 60564 · 60565 · Family-owned · Insured &amp; bonded</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <LeadForm />

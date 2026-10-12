@@ -4,6 +4,7 @@ import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
 import { pickReviews, reviewAttribution } from "@/lib/realReviews";
+import { REVIEW_COUNT, REVIEW_RATING, SERVICE_CITIES } from "@/lib/siteConstants";
 
 export const metadata: Metadata = {
   title: "Meet the DSM Cleaning Team | Romeoville IL",
@@ -37,9 +38,12 @@ export const metadata: Metadata = {
 const stats = [
   { value: "Since 2020", label: "Serving the Southwest Suburbs" },
   { value: "500+", label: "Happy Clients" },
-  { value: "12+", label: "Cities Served" },
-  { value: "100%", label: "Satisfaction Rate" },
-  { value: "5.0 ★", label: "Average Rating" },
+  // The real count, from the same list the service-area schema is built from.
+  { value: String(SERVICE_CITIES.length), label: "Cities Served" },
+  // Replaces an unverifiable "100% Satisfaction Rate" with the Google rating.
+  { value: REVIEW_RATING, label: "Google Rating" },
+  // Was "5.0 ★ Average Rating", which would now repeat the tile before it.
+  { value: String(REVIEW_COUNT), label: "Google Reviews" },
   { value: "0", label: "Contracts Required" },
 ];
 
@@ -51,7 +55,7 @@ const values = [
   },
   {
     icon: "🛡️",
-    title: "Fully Insured & Bonded",
+    title: "Insured & Bonded",
     desc: "Every job is covered. Your home, your belongings, and your peace of mind are protected on every single visit, because that's what professionals do.",
   },
   {

@@ -158,7 +158,7 @@ const checklist = [
 
 const trustBadges = [
   {
-    title: "Fully Insured & Bonded",
+    title: "Insured & Bonded",
     desc: "Insured and bonded on every job.",
     icon: (
       <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -405,7 +405,7 @@ export default function MoveOutCleaningHinsdalePage() {
             {[
               { title: "Walkthrough-Ready Results", desc: "Our checklist covers every area buyers inspect: ovens, fridges, grout lines, cabinet interiors, baseboards, mirrors.", icon: "💵" },
               { title: "48-Hour Re-Clean Promise", desc: "If your buyer’s agent flags anything after we leave, we come back and fix it free within 48 hours.", icon: "🔄" },
-              { title: "Fully Insured & Bonded", desc: "Insured and bonded on every job. Your listing agent and buyers can proceed with confidence.", icon: "🛡️" },
+              { title: "Insured & Bonded", desc: "Insured and bonded on every job. Your listing agent and buyers can proceed with confidence.", icon: "🛡️" },
               { title: "Family-Owned & Local", desc: "Serving Hinsdale and DuPage County from nearby Romeoville. Memo answers his own phone.", icon: "🏠" },
             ].map((card) => (
               <div key={card.title} className="text-center p-6 rounded-xl border border-gray-100 shadow-sm">
@@ -507,7 +507,7 @@ export default function MoveOutCleaningHinsdalePage() {
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
                 (815) 246-2113
               </a>
-              <p className="text-white/80">Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
+              <p className="text-white/80">Family-owned · Eco-friendly · Insured &amp; bonded · Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl p-8 shadow-xl">
               <LeadForm defaultService="Move-In / Move-Out Cleaning" />

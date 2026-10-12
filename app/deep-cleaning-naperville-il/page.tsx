@@ -208,7 +208,7 @@ export default function DeepCleaningNapervillePage() {
               <div className="w-10 h-10 rounded-full bg-brand-green-50 flex items-center justify-center mb-2 text-brand-green">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
               </div>
-              <p className="font-bold text-sm text-gray-900 mb-0.5">Fully Insured &amp; Bonded</p>
+              <p className="font-bold text-sm text-gray-900 mb-0.5">Insured &amp; Bonded</p>
               <p className="text-xs text-gray-500 leading-snug">Insured and bonded on every job.</p>
             </div>
             <div className="flex flex-col items-center text-center p-4 rounded-xl bg-gray-50 border border-gray-100">
@@ -431,7 +431,7 @@ export default function DeepCleaningNapervillePage() {
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
                 (815) 246-2113
               </a>
-              <p className="text-white/80 text-sm">Family-owned · Eco-friendly · Fully insured · Satisfaction guaranteed</p>
+              <p className="text-white/80 text-sm">Family-owned · Eco-friendly · Insured &amp; bonded · Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl p-6 md:p-8">
               <CityDeepCleanForm />

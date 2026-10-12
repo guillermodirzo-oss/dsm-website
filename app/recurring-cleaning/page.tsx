@@ -14,7 +14,7 @@ import {
 import { REVIEW_COUNT, REVIEW_RATING } from "@/lib/siteConstants";
 import { DEEP_OFFER } from "@/lib/offers";
 import { STANDARD_CHECKLIST } from "@/lib/standardChecklist";
-import { PRICE_LOCK_FAQ, RECURRING_CITY_LIST } from "@/lib/recurringCities";
+import { PRICE_LOCK_FAQ, RECURRING_CITY_LIST, SAME_TEAM_FAQ } from "@/lib/recurringCities";
 
 // Regenerate at most hourly so the FALL75 line in section 7 drops out of the
 // HTML on its own after it ends. <Offer> also hides it in the browser at the
@@ -96,6 +96,7 @@ const faqs = [
     a: "Yes, anytime. There's no fee to skip, cancel or reschedule. Just let us know as early as you can so we can adjust the schedule. If you skip enough visits that your actual frequency drops (say, from weekly to monthly), your price adjusts to match the new frequency.",
   },
   // Shared with the recurring city pages, so the wording is identical everywhere.
+  SAME_TEAM_FAQ,
   PRICE_LOCK_FAQ,
   {
     q: "What areas do you serve?",
@@ -242,14 +243,16 @@ export default function RecurringCleaningPage() {
       {/* 2. TRUST BAR. Every claim here is made elsewhere on the site already:
           since 2020 and 500+ clients on /about and the homepage, insured and
           the satisfaction guarantee on every service page, 5.0 from
-          REVIEW_RATING. */}
+          REVIEW_RATING, same team and the price lock on the recurring city
+          pages. */}
       <section className="bg-white border-b py-5 px-4">
         <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-6 text-sm text-gray-700 font-medium">
           <span>✅ Family Owned Since 2020</span>
           <span>✅ 500+ Local Clients</span>
-          <span>✅ Fully Insured &amp; Bonded</span>
+          <span>✅ Insured &amp; Bonded</span>
           <span>✅ {REVIEW_RATING} Stars</span>
           <span>✅ 48-Hour Satisfaction Guarantee</span>
+          <span>✅ Same Team Every Visit</span>
           <span>✅ Price Locked 12 Months</span>
         </div>
       </section>

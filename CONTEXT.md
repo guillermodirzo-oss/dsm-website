@@ -10,7 +10,7 @@
 - **Hours:** Monday to Sunday, 7am to 9pm. Online booking is available 24 hours at /book.
 - **Satisfaction guarantee:** 48 hours
 - **Rating:** 5.0 from 46 Google reviews
-- **Insurance:** Insured and bonded. Not licensed. Never claim a license. No insurance claim since 2020.
+- **Insurance:** Insured and bonded. Not licensed. Never claim a license. No insurance claim since 2020. The label on badges, pills, trust bars and card titles is "Insured & Bonded", never "Fully Insured".
 - **Team:** Recurring clients get the SAME TEAM every visit (a team, not one cleaner). Never write "same cleaner" or "your cleaner". Cleaners are background-checked and drug tested. Cleaners are trained. There is NO certification: never call them "certified".
 - **Products:** Eco-friendly, non-toxic products. They are NOT certified by anyone: never say "certified safe". Say "safe for kids and pets".
 - **Same-day service:** available.
@@ -122,6 +122,9 @@ Move-out customers are mostly home buyers and sellers, not renters. Write move-o
 | `next.config.mjs` | All redirects and www canonicalization |
 | `app/sitemap.ts` | XML sitemap |
 | `app/robots.ts` | Crawl rules (the only robots source; there is no public/robots.txt) |
+
+## Code Rules
+- CSS inside a `<style>` tag must go in through `dangerouslySetInnerHTML`, never as a text child. React escapes `>` and quotes in text, a `<style>` tag does not unescape them, and the mismatch makes the whole page fail hydration and re-render in the browser. This broke /deep-clean-offer and every blog post until October 2026.
 
 ## Form Usage Rules: Critical
 There are TWO HubSpot lead forms on this site. Never mix them up, and never change either GUID.

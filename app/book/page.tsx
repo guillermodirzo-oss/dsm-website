@@ -196,7 +196,7 @@ export default function BookPage() {
             </Offer>
           </p>
           <p className="text-gray-500 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-            Family-owned · Fully insured · Eco-friendly products · {SERVICE_AREA_LINE}
+            Family-owned · Insured &amp; bonded · Eco-friendly products · {SERVICE_AREA_LINE}
           </p>
 
           {/* Trust bar */}
@@ -595,7 +595,7 @@ export default function BookPage() {
             <span>🔒 Your info is secure. No spam.</span>
             <span>✅ 48-Hour Guarantee</span>
             <span>🌿 Eco-Friendly Products</span>
-            <span>🛡️ Fully Insured &amp; Bonded</span>
+            <span>🛡️ Insured &amp; Bonded</span>
             <span>👨‍👩‍👧 Family Owned</span>
           </div>
 

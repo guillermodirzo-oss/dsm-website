@@ -122,7 +122,7 @@ export default function OfficeCleaningRomeovillePage() {
                 📞 (815) 246-2113
               </a>
               <div className="grid grid-cols-2 gap-3">
-                {["✓ Based in Romeoville", "✓ Fully Insured", "✓ Flexible Hours", "✓ Free Walkthrough"].map((b) => (
+                {["✓ Based in Romeoville", "✓ Insured & Bonded", "✓ Flexible Hours", "✓ Free Walkthrough"].map((b) => (
                   <div key={b} className="bg-white/10 rounded-xl px-4 py-2 text-sm text-white font-medium">{b}</div>
                 ))}
               </div>

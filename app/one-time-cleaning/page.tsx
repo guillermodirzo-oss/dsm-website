@@ -117,7 +117,7 @@ export default function OneTimeCleaningPage() {
       <section className="bg-white border-b border-gray-100 py-5 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-500">
-            {["✅ No Contract Required", "🌿 Eco-Friendly Products", "🛡️ Fully Insured", "⭐ 5-Star Rated", "💯 Satisfaction Guaranteed"].map(item => <span key={item} className="whitespace-nowrap">{item}</span>)}
+            {["✅ No Contract Required", "🌿 Eco-Friendly Products", "🛡️ Insured & Bonded", "⭐ 5-Star Rated", "💯 Satisfaction Guaranteed"].map(item => <span key={item} className="whitespace-nowrap">{item}</span>)}
           </div>
         </div>
       </section>

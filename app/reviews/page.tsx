@@ -268,7 +268,7 @@ export default function ReviewsPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
             {[
               { icon: "🏠", title: "Family Owned & Operated", desc: "A local business you can trust." },
-              { icon: "🛡️", title: "Fully Insured & Bonded", desc: "Every job fully covered." },
+              { icon: "🛡️", title: "Insured & Bonded", desc: "Every job fully covered." },
               { icon: "🌿", title: "Eco-Friendly Products", desc: "Safe for kids, pets & the environment." },
             ].map((badge) => (
               <div key={badge.title} className="flex flex-col items-center gap-2">

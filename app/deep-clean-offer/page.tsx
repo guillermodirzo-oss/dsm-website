@@ -213,7 +213,7 @@ export default function DeepCleanOfferPage() {
               {/* Trust badges */}
               <div className="grid grid-cols-3 gap-1 w-full mb-4">
                 <span className="bg-gray-100 text-xs text-gray-600 px-1 py-1 rounded-full flex justify-center items-center text-center">⭐ Google 5.0</span>
-                <span className="bg-gray-100 text-xs text-gray-600 px-1 py-1 rounded-full flex justify-center items-center text-center">🛡️ Fully Insured</span>
+                <span className="bg-gray-100 text-xs text-gray-600 px-1 py-1 rounded-full flex justify-center items-center text-center">🛡️ Insured &amp; Bonded</span>
                 <span className="bg-gray-100 text-xs text-gray-600 px-1 py-1 rounded-full flex justify-center items-center text-center">🏠 Family-Owned</span>
               </div>
               <LeadForm defaultService="Deep Cleaning" step1Label="Free quote in 60 seconds" />
@@ -513,7 +513,7 @@ export default function DeepCleanOfferPage() {
               {/* Trust badges */}
               <div className="grid grid-cols-3 gap-1 w-full mb-4">
                 <span className="bg-gray-100 text-xs text-gray-600 px-1 py-1 rounded-full flex justify-center items-center text-center">⭐ Google 5.0</span>
-                <span className="bg-gray-100 text-xs text-gray-600 px-1 py-1 rounded-full flex justify-center items-center text-center">🛡️ Fully Insured</span>
+                <span className="bg-gray-100 text-xs text-gray-600 px-1 py-1 rounded-full flex justify-center items-center text-center">🛡️ Insured &amp; Bonded</span>
                 <span className="bg-gray-100 text-xs text-gray-600 px-1 py-1 rounded-full flex justify-center items-center text-center">🏠 Family-Owned</span>
               </div>
               <LeadForm defaultService="Deep Cleaning" step1Label="Free quote in 60 seconds" />

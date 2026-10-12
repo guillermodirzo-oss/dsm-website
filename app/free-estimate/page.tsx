@@ -169,7 +169,7 @@ export default function FreeEstimatePage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["✅ 100% Free, No Obligation", "🚫 No Hidden Fees", "⚡ Same-Day Response", "🛡️ Fully Insured", "👨‍👩‍👧 Family Owned"].map(
+            {["✅ 100% Free, No Obligation", "🚫 No Hidden Fees", "⚡ Same-Day Response", "🛡️ Insured & Bonded", "👨‍👩‍👧 Family Owned"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -381,7 +381,7 @@ export default function FreeEstimatePage() {
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
                 📞 (815) 246-2113
               </a>
-              <p className="text-white/80">Same-day response · Flat-rate pricing · No hidden fees · Fully insured</p>
+              <p className="text-white/80">Same-day response · Flat-rate pricing · No hidden fees · Insured &amp; bonded</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <LeadForm />

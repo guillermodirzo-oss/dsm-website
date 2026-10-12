@@ -122,7 +122,7 @@ export default function OfficeCleaningBolingbrookPage() {
                 📞 (815) 246-2113
               </a>
               <div className="grid grid-cols-2 gap-3">
-                {["✓ Serving Bolingbrook", "✓ Fully Insured", "✓ Flexible Scheduling", "✓ Free Quote"].map((b) => (
+                {["✓ Serving Bolingbrook", "✓ Insured & Bonded", "✓ Flexible Scheduling", "✓ Free Quote"].map((b) => (
                   <div key={b} className="bg-white/10 rounded-xl px-4 py-2 text-sm text-white font-medium">{b}</div>
                 ))}
               </div>
@@ -164,7 +164,7 @@ export default function OfficeCleaningBolingbrookPage() {
             {[
               { title: "Close to Bolingbrook", desc: "Our Romeoville base puts us just minutes from Bolingbrook: fast response, on-time arrivals, and no travel fees." },
               { title: "Reliable Every Visit", desc: "Consistent crew, consistent quality. You'll get the same great clean every time without having to follow up or supervise." },
-              { title: "Fully Insured & Bonded", desc: "Every job at every Bolingbrook location is fully covered. Your business property is protected from day one." },
+              { title: "Insured & Bonded", desc: "Every job at every Bolingbrook location is fully covered. Your business property is protected from day one." },
             ].map((c) => (
               <div key={c.title} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
                 <h3 className="font-bold text-gray-900 text-lg mb-2">{c.title}</h3>

@@ -116,7 +116,7 @@ export default function CommercialCleaningPage() {
                 📞 (815) 246-2113
               </a>
               <div className="grid grid-cols-2 gap-3">
-                {["✓ Will County", "✓ DuPage County", "✓ Fully Insured", "✓ Free Walkthroughs"].map((b) => (
+                {["✓ Will County", "✓ DuPage County", "✓ Insured & Bonded", "✓ Free Walkthroughs"].map((b) => (
                   <div key={b} className="bg-white/10 rounded-xl px-4 py-2 text-sm text-white font-medium">{b}</div>
                 ))}
               </div>

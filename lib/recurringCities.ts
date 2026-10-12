@@ -211,8 +211,13 @@ export function examplePlans(city: RecurringCity) {
 /**
  * The one source for the FAQ on every recurring city page. The visible FAQ
  * and the FAQPage schema both read this array, so they match word for word.
- * The price lock answer is also used on /recurring-cleaning.
+ * The price lock and same team answers are also used on /recurring-cleaning.
  */
+export const SAME_TEAM_FAQ = {
+  q: "Will I get the same team every time?",
+  a: "Yes. The same team comes every visit, so they get to know your home and how you like it done.",
+};
+
 export const PRICE_LOCK_FAQ = {
   q: "How does the 12-month price lock work?",
   a: "Your recurring rate stays the same for 12 months from your first recurring clean, as long as your home and your schedule stay the same.",
@@ -227,10 +232,7 @@ export const RECURRING_FAQS: { q: string; a: string }[] = [
     q: "Can I skip or reschedule a visit?",
     a: "Yes, anytime. Just let us know as early as you can. We never charge a fee to skip, cancel or reschedule.",
   },
-  {
-    q: "Will I get the same team every time?",
-    a: "Yes. The same team comes every visit, so they get to know your home and how you like it done.",
-  },
+  SAME_TEAM_FAQ,
   {
     q: "Do I need a deep clean before starting recurring service?",
     a: "No. You can start with a regular recurring visit. Some clients add a one-time deep clean later, but it's optional.",

@@ -419,7 +419,7 @@ export default function HouseCleaningCostPlainfield() {
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
                 📞 (815) 246-2113
               </a>
-              <p className="text-white/80">Family-owned · Flat-rate pricing · Fully insured · No hidden fees</p>
+              <p className="text-white/80">Family-owned · Flat-rate pricing · Insured &amp; bonded · No hidden fees</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <LeadForm />

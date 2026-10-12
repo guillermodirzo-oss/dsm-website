@@ -238,7 +238,7 @@ export default function ContactPage() {
               <div className="space-y-3 mb-8">
                 {[
                   { icon: "✅", text: "Free estimates, no obligation" },
-                  { icon: "🛡️", text: "Fully insured & bonded" },
+                  { icon: "🛡️", text: "Insured & bonded" },
                   { icon: "👨‍👩‍👧", text: "Family-owned local business" },
                   { icon: "🌿", text: "Eco-friendly products" },
                   { icon: "✔️", text: "48-hour satisfaction guarantee" },

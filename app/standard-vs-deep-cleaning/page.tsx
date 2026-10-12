@@ -1,6 +1,11 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
+import { DEEP_CLEANING_TIERS, STANDARD_CLEANING_TIERS, formatPrice, priceForBeds } from "@/lib/pricing";
+
+// The 2 bed / 1 bath tier of each service, from the rate card in lib/pricing.ts.
+const STANDARD_2_BED = formatPrice(priceForBeds(STANDARD_CLEANING_TIERS, 2));
+const DEEP_2_BED = formatPrice(priceForBeds(DEEP_CLEANING_TIERS, 2));
 
 export const metadata: Metadata = {
   title: "Standard vs Deep Cleaning | Which Do You Need?",
@@ -109,7 +114,7 @@ const comparisonRows = [
   { feature: "Cabinet interiors", standard: "✗", deep: "✓" },
   { feature: "Door frames detail", standard: "✗", deep: "✓" },
   { feature: "Vents & registers", standard: "✗", deep: "✓" },
-  { feature: "Starting price (2 bed/1 bath)", standard: "$160", deep: "$315" },
+  { feature: "Starting price (2 bed/1 bath)", standard: STANDARD_2_BED, deep: DEEP_2_BED },
   { feature: "Typical duration (2 bed/1 bath)", standard: "2–3 hrs", deep: "4–6 hrs" },
   { feature: "Recommended frequency", standard: "Weekly – monthly", deep: "Seasonally (2–4×/yr)" },
 ];
@@ -168,7 +173,7 @@ export default function StandardVsDeepCleaningPage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["✅ Flat-Rate Pricing", "🌿 Eco-Friendly Products", "🛡️ Fully Insured", "✔️ 48-Hr Guarantee", "👨‍👩‍👧 Family Owned"].map(
+            {["✅ Flat-Rate Pricing", "🌿 Eco-Friendly Products", "🛡️ Insured & Bonded", "✔️ 48-Hr Guarantee", "👨‍👩‍👧 Family Owned"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -382,7 +387,7 @@ export default function StandardVsDeepCleaningPage() {
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
                 📞 (815) 246-2113
               </a>
-              <p className="text-white/80">Flat-rate pricing · Fully insured · 48-hr guarantee · Family owned</p>
+              <p className="text-white/80">Flat-rate pricing · Insured &amp; bonded · 48-hr guarantee · Family owned</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <LeadForm />

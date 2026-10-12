@@ -102,7 +102,7 @@ const differentiators = [
   },
   {
     icon: "🛡️",
-    title: "Fully Insured & Bonded",
+    title: "Insured & Bonded",
     desc: "Every cleaning is covered by full general liability insurance. Your home and belongings are protected on every single visit.",
   },
   {
@@ -123,12 +123,12 @@ const differentiators = [
   {
     icon: "👤",
     title: "Consistent Team",
-    desc: "We aim to send the same team to your home each visit so they learn your preferences and your home's details, no strangers at your door every time.",
+    desc: "We send the same team to your home every visit, so they learn your preferences and your home's details. No strangers at your door.",
   },
 ];
 
 const trustItems = [
-  { label: "Fully Insured & Bonded", icon: "🛡️" },
+  { label: "Insured & Bonded", icon: "🛡️" },
   { label: "Background-Checked Team", icon: "✔️" },
   { label: "Professional Service", icon: "📋" },
   { label: "5-Star Google Rating", icon: "⭐" },
@@ -187,7 +187,7 @@ export default function WhyChooseDSMPage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["⭐ 5-Star Google Rating", "🛡️ Fully Insured & Bonded", "✔️ Background-Checked", "🌿 Eco-Friendly", "👨‍👩‍👧 Family Owned"].map(
+            {["⭐ 5-Star Google Rating", "🛡️ Insured & Bonded", "✔️ Background-Checked", "🌿 Eco-Friendly", "👨‍👩‍👧 Family Owned"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -381,7 +381,7 @@ export default function WhyChooseDSMPage() {
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
                 📞 (815) 246-2113
               </a>
-              <p className="text-white/80">👨‍👩‍👧 Family owned · 🛡️ Fully insured · 🌿 Eco-friendly · ✅ 48-hr guarantee</p>
+              <p className="text-white/80">👨‍👩‍👧 Family owned · 🛡️ Insured &amp; bonded · 🌿 Eco-friendly · ✅ 48-hr guarantee</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <LeadForm />
