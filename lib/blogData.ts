@@ -326,11 +326,11 @@ export const blogPosts: BlogPost[] = [
     content: `<p>These two services sound similar but they're not the same thing. A <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> and a <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning</a> both go further than a regular visit, but they're built for different situations. Book the wrong one and you might end up short on what you actually need. This post breaks down exactly what each covers, where they differ, and how to pick the right one.</p>
 
 <h2>What Is a Deep Cleaning?</h2>
-<p>A deep cleaning is a thorough one-time clean for a home you're living in. It goes well beyond what a regular maintenance visit covers. Cabinet interiors get wiped down. Baseboards, ceiling fans, window sills, and grout lines in the bathroom all get addressed, not just the easy-to-reach surfaces. Cleaning inside the oven is an add-on.</p>
+<p>A deep cleaning is a thorough one-time clean for a home you're living in. It goes well beyond what a regular maintenance visit covers. Cabinet fronts get wiped down. Baseboards, ceiling fans, window sills, and grout lines in the bathroom all get addressed, not just the easy-to-reach surfaces. Cleaning inside the oven is an add-on.</p>
 <p>People book deep cleans for a lot of different reasons. Moving into a new place and wanting it professionally cleaned before unpacking. The home hasn't had a real professional clean in six months or more. A seasonal reset before winter or spring. Hosting guests for a holiday or an event. Whatever the reason, a deep cleaning brings the home to a level that regular maintenance cleaning doesn't reach.</p>
 
 <h2>What Is a Move-Out Cleaning?</h2>
-<p>A move-out cleaning covers everything in a deep cleaning: cabinet interiors, baseboards, grout, ceiling fans, and window sills. The key additions are the oven interior and the refrigerator interior. Those aren't included in a standard deep cleaning, but landlords almost always check them during move-out inspections.</p>
+<p>A move-out cleaning covers everything in a deep cleaning: cabinet fronts, baseboards, grout, ceiling fans, and window sills. The key additions are the oven interior, the refrigerator interior and the inside of every cabinet and drawer. Those aren't included in a standard deep cleaning, but landlords almost always check them during move-out inspections.</p>
 <p>Landlords know renters typically pull their food out and leave the fridge without cleaning the shelves, drawers, and door seals. It's one of the first things they open at move-out. A proper move-out cleaning includes it as a standard part of the scope, not an add-on.</p>
 <p>Move-out cleaning is scoped around tenant turnover. The goal isn't a reset for someone staying in the home. It's a clean that satisfies the conditions for getting a security deposit returned.</p>
 
@@ -450,7 +450,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>What Type of Cleaning Do You Actually Need?</h2>
 <p>There are three main types of cleaning service, and figuring out which one fits your situation makes the rest of the process straightforward.</p>
-<p>A <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> is the right starting point for most first-time clients. If your home hasn't been professionally cleaned before, a deep clean gets everything to a solid baseline. It covers areas that routine cleaning skips: cabinet interiors and exteriors, baseboards, grout lines, ceiling fans, and every surface in every room. It takes longer and costs more than a regular visit, but it sets the home up properly.</p>
+<p>A <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> is the right starting point for most first-time clients. If your home hasn't been professionally cleaned before, a deep clean gets everything to a solid baseline. It covers areas that routine cleaning skips: cabinet exteriors, baseboards, grout lines, ceiling fans, and every surface in every room. It takes longer and costs more than a regular visit, but it sets the home up properly.</p>
 <p><a href="/recurring-cleaning" class="text-brand-green font-semibold hover:underline">Recurring cleaning</a> is what most clients move to after that first deep clean. You pick a schedule (weekly, bi-weekly, or monthly) and the team keeps the home at the level the deep clean established. These visits are faster and less expensive per appointment because the home stays in better shape between them.</p>
 <p><a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">Move-out cleaning</a> is a separate service for people moving out of a home or apartment. It includes everything in a deep clean plus the refrigerator interior and other areas landlords check before returning a deposit. If that's your situation, that's the right service to book.</p>
 
@@ -505,7 +505,7 @@ export const blogPosts: BlogPost[] = [
 <p>The inside of the oven is one of the most commonly neglected areas in any kitchen, and it's not touched during a regular cleaning visit. Burnt food and grease accumulate on the interior walls and the bottom of the oven over months of use. If yours has visible residue or smokes when you turn it on, it's time for a proper scrub. Inside oven cleaning is an add-on to DSM's deep cleaning. Ask for it when you book and we scrub the interior with the racks removed, so it's actually clean and not just wiped around.</p>
 
 <h2>4. Cabinet Fronts Feel Sticky or Look Greasy</h2>
-<p>Kitchen cabinet exteriors are right next to where you cook, so they collect cooking grease, steam, and fingerprints constantly. Over time the residue builds up into a film that doesn't come off with a quick wipe. If running your hand across a cabinet front feels tacky, or the finish looks dull and coated, it's past time for a proper clean. A deep cleaning visit scrubs cabinet exteriors and interiors to get them back to how they're supposed to feel.</p>
+<p>Kitchen cabinet exteriors are right next to where you cook, so they collect cooking grease, steam, and fingerprints constantly. Over time the residue builds up into a film that doesn't come off with a quick wipe. If running your hand across a cabinet front feels tacky, or the finish looks dull and coated, it's past time for a proper clean. A deep cleaning visit scrubs cabinet exteriors to get them back to how they're supposed to feel.</p>
 
 <h2>5. There's Dust on Your Ceiling Fans and Baseboards</h2>
 <p>Ceiling fans and baseboards are skipped during most routine cleaning visits. They're easy to miss, easy to forget, and the dust that collects on them doesn't bother anyone until it does. If your ceiling fan throws dust when you switch it on, or you can see a visible layer along your baseboards, those are signs that the home needs more than maintenance. A deep clean gets into both specifically, by hand, so they're actually clean and not just quickly wiped.</p>
@@ -519,7 +519,7 @@ export const blogPosts: BlogPost[] = [
 <h2>What DSM's Deep Cleaning Covers in Plainfield</h2>
 <p>DSM's <a href="/deep-cleaning-plainfield-il" class="text-brand-green font-semibold hover:underline">deep cleaning service in Plainfield</a> covers every area that routine visits skip. Here's what's included on a standard deep clean:</p>
 <ul>
-  <li>Cabinet interiors and exteriors wiped down</li>
+  <li>Cabinet exteriors wiped down</li>
   <li>Baseboards scrubbed by hand</li>
   <li>Grout lines cleaned in every bathroom</li>
   <li>Ceiling fans dusted and wiped</li>
@@ -793,7 +793,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Standard Cleaning vs. Deep Cleaning: What's the Difference?</h2>
 <p>Before diving into frequency, it helps to understand what sets a deep clean apart from your regular routine. <a href="/recurring-cleaning" class="text-brand-green font-semibold hover:underline">Recurring cleaning</a> is maintenance: it covers the basics you do weekly or biweekly: vacuuming, mopping, wiping down counters, cleaning bathrooms, and taking out the trash. It keeps your home looking presentable on a day-to-day basis.</p>
-<p><a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">Our deep cleaning service</a> goes several layers further. It tackles everything standard cleaning skips: scrubbing grout lines, cleaning inside and behind appliances, wiping down baseboards and door frames, dusting ceiling fans and light fixtures, washing window sills and inside glass, and cleaning cabinet fronts inside and out. If standard cleaning is the upkeep, deep cleaning is the reset, and every home needs it periodically to stay truly clean and healthy.</p>
+<p><a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">Our deep cleaning service</a> goes several layers further. It tackles everything standard cleaning skips: scrubbing grout lines, cleaning inside and behind appliances, wiping down baseboards and door frames, dusting ceiling fans and light fixtures, washing window sills and inside glass, and wiping down cabinet fronts. If standard cleaning is the upkeep, deep cleaning is the reset, and every home needs it periodically to stay truly clean and healthy.</p>
 
 <h2>How Often Should You Deep Clean? A Seasonal Guide for Illinois Homes</h2>
 <p>Most professional cleaners and home care experts recommend deep cleaning your home two to four times per year. For Illinois homeowners specifically, aligning those deep cleans with the seasons makes the most sense given our climate.</p>
@@ -1010,14 +1010,13 @@ export const blogPosts: BlogPost[] = [
 <p>Most cleaning professionals recommend a deep clean at least once or twice a year, with <a href="/recurring-cleaning" class="text-brand-green font-semibold hover:underline">recurring standard cleaning</a> in between to maintain results. It's especially important after a long Illinois winter, when months of closed windows, forced-air heat, and road salt tracked inside have left residue on nearly every surface.</p>
 
 <h2>Kitchen Deep Cleaning Checklist</h2>
-<p>The kitchen is typically the most labor-intensive room in a deep clean. Grease, food splatter, and buildup accumulate behind appliances and inside cabinets in ways that routine cleaning never addresses.</p>
+<p>The kitchen is typically the most labor-intensive room in a deep clean. Grease, food splatter, and buildup accumulate behind appliances and on cabinet fronts in ways that routine cleaning never addresses.</p>
 <ul>
   <li>Clean inside the microwave: walls, ceiling, turntable, and door seal</li>
   <li>Degrease the stovetop, burner grates, drip pans, and control knobs</li>
   <li>Detail the refrigerator exterior: top, sides, and handles</li>
   <li>Wipe down the exterior of all appliances including the dishwasher, refrigerator, and microwave</li>
   <li>Clean cabinet exteriors: fronts, handles, and tops of upper cabinets</li>
-  <li>Wipe down cabinet interiors if requested</li>
   <li>Degrease the range hood and clean the filter</li>
   <li>Scrub the sink basin, faucet, and drain area; remove mineral deposits</li>
   <li>Clean and disinfect countertops thoroughly, including under small appliances</li>
@@ -1036,7 +1035,7 @@ export const blogPosts: BlogPost[] = [
   <li>Deep clean the bathtub: jets, overflow drain, and all surfaces</li>
   <li>Descale and scrub the toilet inside and out, including the base and behind the tank</li>
   <li>Clean and disinfect the sink, faucet, and surrounding countertop</li>
-  <li>Wipe down cabinet exteriors and the inside of vanity drawers if requested</li>
+  <li>Wipe down cabinet exteriors</li>
   <li>Clean the bathroom mirror and any mirrored cabinet doors</li>
   <li>Wipe down all baseboards, door frames, and trim</li>
   <li>Clean light fixtures and exhaust fan covers</li>

@@ -157,8 +157,8 @@ const comparison = [
   { item: "Refrigerator", deep: "Outside only", moveOut: "Inside and out" },
   // deep: "Wipe all cabinet fronts" | move-out: "Wipe inside cabinets and cabinet faces"
   { item: "Kitchen cabinets", deep: "Fronts only", moveOut: "Inside and out" },
-  // deep: "Wipe cabinets and shelves" | move-out: "Clean inside and outside all cabinets and drawers"
-  { item: "Bathroom cabinets and drawers", deep: "Wiped", moveOut: "Inside and out" },
+  // deep: "Wipe cabinet fronts and open shelves" | move-out: "Clean inside and outside all cabinets and drawers"
+  { item: "Bathroom cabinets and drawers", deep: "Fronts only", moveOut: "Inside and out" },
   // deep: "Wipe baseboards and door frames", "Wipe all doors and door frames" |
   // move-out: "Dust baseboards", "Dust doors and door frames", "Wipe baseboards and doors"
   { item: "Baseboards and doors", deep: "Yes", moveOut: "Yes" },

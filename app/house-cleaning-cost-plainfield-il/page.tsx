@@ -34,7 +34,7 @@ const faqs = [
   {
     question: "Is deep cleaning more expensive than standard cleaning in Plainfield?",
     answer:
-      "Yes, deep cleaning costs roughly twice the price of a standard cleaning in Plainfield because it covers areas that aren't included in routine visits: inside appliances, cabinet interiors, baseboards, grout scrubbing, ceiling fans, and window sills. A standard clean for a 2-bed/1-bath starts at $160 while a deep clean for the same home starts at $315.",
+      "Yes, deep cleaning costs roughly twice the price of a standard cleaning in Plainfield because it covers areas that aren't included in routine visits: inside appliances, cabinet fronts, baseboards, grout scrubbing, ceiling fans, and window sills. A standard clean for a 2-bed/1-bath starts at $160 while a deep clean for the same home starts at $315.",
   },
   {
     question: "Do you charge by the hour or flat rate in Plainfield?",
@@ -288,7 +288,7 @@ export default function HouseCleaningCostPlainfield() {
               <p className="text-gray-600 leading-relaxed mb-3">
                 Deep cleaning is the detailed scrub that routine upkeep skips. In
                 Plainfield homes, this includes inside kitchen appliances, scrubbing grout, cleaning
-                inside cabinet fronts, wiping baseboards, ceiling fans, vents, and window sills.
+                cabinet fronts, wiping baseboards, ceiling fans, vents, and window sills.
                 Recommended for first-time cleans, seasonal cleans, or homes that haven&apos;t been
                 professionally cleaned in 3+ months.
               </p>

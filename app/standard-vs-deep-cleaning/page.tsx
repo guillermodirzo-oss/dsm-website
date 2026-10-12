@@ -27,7 +27,7 @@ const faqs = [
   {
     question: "What is the difference between standard and deep cleaning?",
     answer:
-      "Standard cleaning covers the routine tasks needed to maintain a home that is already reasonably clean: surfaces, floors, bathrooms, and kitchen exteriors. Deep cleaning goes significantly further: inside appliances, grout scrubbing, baseboards, window sills, cabinet interiors, ceiling fans, vents, and behind/underneath furniture. Standard cleaning keeps a clean home clean. Deep cleaning restores a home that has fallen behind or needs a true reset.",
+      "Standard cleaning covers the routine tasks needed to maintain a home that is already reasonably clean: surfaces, floors, bathrooms, and kitchen exteriors. Deep cleaning goes significantly further: inside appliances, grout scrubbing, baseboards, window sills, cabinet fronts, ceiling fans, vents, and behind/underneath furniture. Standard cleaning keeps a clean home clean. Deep cleaning restores a home that has fallen behind or needs a true reset.",
   },
   {
     question: "Should my first clean be a deep clean?",
@@ -111,7 +111,8 @@ const comparisonRows = [
   { feature: "Window sills and inside glass", standard: "✗", deep: "✓" },
   { feature: "Ceiling fans & light fixtures", standard: "✗", deep: "✓" },
   { feature: "Grout scrubbing", standard: "✗", deep: "✓" },
-  { feature: "Cabinet interiors", standard: "✗", deep: "✓" },
+  // Neither service cleans inside cabinets. Only move-in and move-out cleaning does.
+  { feature: "Cabinet interiors (move-out cleaning only)", standard: "✗", deep: "✗" },
   { feature: "Door frames detail", standard: "✗", deep: "✓" },
   { feature: "Vents & registers", standard: "✗", deep: "✓" },
   { feature: "Starting price (2 bed/1 bath)", standard: STANDARD_2_BED, deep: DEEP_2_BED },
@@ -204,7 +205,7 @@ export default function StandardVsDeepCleaningPage() {
                 Deep cleaning is a detailed service that goes significantly beyond
                 routine maintenance. It covers everything in a standard clean plus the areas that
                 accumulate buildup over time: inside appliances, grout lines, baseboards, window sills,
-                cabinet interiors, ceiling fans, vents, and more.
+                cabinet fronts, ceiling fans, vents, and more.
               </p>
               <p className="text-white/80 leading-relaxed">
                 Deep cleaning is the right choice when your home needs a true reset: before starting
@@ -241,7 +242,7 @@ export default function StandardVsDeepCleaningPage() {
                     <td className={`px-5 py-3 text-center font-medium ${row.standard === "✓" ? "text-brand-green" : row.standard === "✗" ? "text-gray-300" : "text-gray-600 text-xs"}`}>
                       {row.standard}
                     </td>
-                    <td className={`px-5 py-3 text-center font-bold ${row.deep === "✓" ? "text-brand-green" : "text-brand-green"}`}>
+                    <td className={`px-5 py-3 text-center font-bold ${row.deep === "✗" ? "text-gray-300" : "text-brand-green"}`}>
                       {row.deep}
                     </td>
                   </tr>

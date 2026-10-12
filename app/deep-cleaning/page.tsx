@@ -133,7 +133,7 @@ const checklist = [
       "Clean/polish faucets and fixtures",
       "Wash sink and vanity",
       "Clean mirrors",
-      "Wipe cabinets and shelves",
+      "Wipe cabinet fronts and open shelves",
       "Mop floors and clean grout lines",
     ],
   },

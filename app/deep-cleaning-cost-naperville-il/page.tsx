@@ -40,7 +40,7 @@ const faqs = [
   {
     question: "What is included in deep cleaning in Naperville?",
     answer:
-      "Our Naperville deep cleaning covers everything in a standard clean plus: inside the microwave, the refrigerator exterior, scrubbing grout and tile, cleaning inside cabinet fronts, wiping all baseboards and door frames, cleaning ceiling fans and light fixtures, washing window sills and inside glass, scrubbing bathroom fixtures and shower doors, and detail-cleaning areas that are skipped in routine visits. Cleaning inside the oven is an add-on.",
+      "Our Naperville deep cleaning covers everything in a standard clean plus: inside the microwave, the refrigerator exterior, scrubbing grout and tile, wiping cabinet fronts, wiping all baseboards and door frames, cleaning ceiling fans and light fixtures, washing window sills and inside glass, scrubbing bathroom fixtures and shower doors, and detail-cleaning areas that are skipped in routine visits. Cleaning inside the oven is an add-on.",
   },
   {
     question: "How long does a deep clean take in Naperville?",
@@ -294,7 +294,7 @@ export default function DeepCleaningCostNapervillePage() {
                   { feature: "Grout scrubbing", standard: "✗", deep: "✓" },
                   { feature: "Baseboard detail cleaning", standard: "Light wipe", deep: "Full scrub" },
                   { feature: "Ceiling fans & fixtures", standard: "✗", deep: "✓" },
-                  { feature: "Inside cabinet fronts", standard: "✗", deep: "✓" },
+                  { feature: "Cabinets", standard: "Fronts only", deep: "Fronts only" },
                   { feature: "Window sills and inside glass", standard: "✗", deep: "✓" },
                   { feature: "Estimated time (2 bed / 1 bath)", standard: "2–3 hours", deep: "4–6 hours" },
                   { feature: "Best for", standard: "Regular maintenance", deep: "First clean, seasonal reset" },

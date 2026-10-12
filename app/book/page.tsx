@@ -61,7 +61,9 @@ const valueStack = [
   { item: "Full Deep Cleaning of Your Entire Home", value: `${formatPrice(ENTRY_PRICE)}+` },
   { item: "Every Baseboard Scrubbed by Hand", value: "Included" },
   { item: "Grout & Tile Detail in Every Bathroom", value: "Included" },
-  { item: "Kitchen Deep Clean: Inside and Out", value: "Included" },
+  // Only what the deep cleaning checklist lists for the kitchen. The old line,
+  // "Inside and Out", read as if it covered inside the oven and the cabinets.
+  { item: "Kitchen Counters, Cabinet Fronts & Inside Microwave", value: "Included" },
   { item: "Window Sills, Door Frames, Vents & Light Switches", value: "Included" },
   { item: "Toilets, Tubs, Sinks & Bathroom Floors Sanitized", value: "Included" },
   { item: "Eco-Friendly Products (Safe for Kids & Pets)", value: "Included" },
