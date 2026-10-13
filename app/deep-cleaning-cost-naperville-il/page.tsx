@@ -3,6 +3,7 @@ import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 import { DEEP_CLEANING_TIERS, STANDARD_CLEANING_TIERS, formatPrice, priceForBeds } from "@/lib/pricing";
 import { OG_IMAGE_ALT } from "@/lib/workPhotos";
+import { DEEP_CHECKLIST } from "@/lib/deepChecklist";
 
 // Every price on this page comes from the rate card in lib/pricing.ts.
 // Each is the listed tier for that home size; 4 bed uses the larger of the
@@ -51,7 +52,7 @@ const faqs = [
   {
     question: "Is deep cleaning worth the cost in Naperville?",
     answer:
-      "Yes, deep cleaning is worth it for most Naperville homeowners who want a true reset. A standard clean maintains a home that's already clean; a deep clean eliminates built-up grease, grime, soap scum, and dust from areas that accumulate over time. It's especially valuable before hosting guests, after a renovation, at the start of a new season, or as a first clean before starting a recurring service.",
+      "Yes, deep cleaning is worth it for most Naperville homeowners who want a true reset. A standard clean maintains a home that's already clean; a deep clean adds the grout, the baseboards, the door frames and a degreased stovetop and hood vent. It's especially valuable before hosting guests, after a renovation, at the start of a new season, or as a first clean before starting a recurring service.",
   },
   {
     question: "How do I get a deep cleaning quote for my Naperville home?",
@@ -115,12 +116,9 @@ const pricingBySize = [
   { size: "5 Bed / 3 Bath", price: `${DEEP_5_BED}+`, time: "7–9 hours" },
 ];
 
-const included = [
-  { room: "Kitchen", items: ["Inside microwave", "Oven exterior", "Refrigerator exterior", "Grease-cut stovetop and drip pans", "Wipe all cabinet fronts and handles", "Scrub sink and faucet", "Clean small appliances", "Sweep and mop floor"] },
-  { room: "Bathrooms", items: ["Scrub grout and tile", "Remove soap scum from shower/tub", "Clean inside and behind toilet", "Polish all fixtures", "Scrub sink and vanity", "Wipe all baseboards", "Clean mirrors and glass", "Scrub floor"] },
-  { room: "Bedrooms & Living", items: ["Dust ceiling fans and fixtures", "Wipe all baseboards and door frames", "Clean window sills and inside glass", "Dust every surface, working from high to low", "Vacuum carpets with edge detail", "Sweep and mop hard floors", "Wipe light switches and outlets"] },
-  { room: "Whole Home", items: ["Wipe all doors and door frames", "Clean all vents and registers", "Spot-clean walls as needed", "Wipe all window sills", "Empty and re-line trash bins", "Final walkthrough inspection"] },
-];
+// The same checklist every deep cleaning page shows. See lib/deepChecklist.ts.
+// Never type a checklist into this page.
+const included = DEEP_CHECKLIST;
 
 const factors = [
   { icon: "🏠", title: "Home Size", desc: "Bedrooms and bathrooms are the primary driver of deep cleaning cost in Naperville." },
@@ -201,8 +199,8 @@ export default function DeepCleaningCostNapervillePage() {
             professionally cleaned in several months.
           </p>
           <p className="text-gray-600 leading-relaxed">
-            Unlike standard cleaning which maintains a home, deep cleaning addresses built-up
-            grease, soap scum, dust in hidden areas, and surfaces that routine visits don&apos;t
+            Unlike standard cleaning which maintains a home, deep cleaning adds the grout,
+            baseboards, door frames and the floor under the furniture that routine visits don&apos;t
             reach. The result is a truly clean baseline your home can build from.
           </p>
         </div>

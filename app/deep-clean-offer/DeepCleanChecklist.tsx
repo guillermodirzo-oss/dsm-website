@@ -9,6 +9,9 @@ import { useState, type ReactNode } from "react";
 // offer ends. It goes at the top of the section named here.
 const BONUS_SECTION = "KITCHEN";
 
+// Every line is on the owner-confirmed lists: a standard checklist item
+// (lib/standardChecklist.ts) or one of the seven deep cleaning additions
+// (lib/deepChecklist.ts). Keep it that way when editing.
 const deepCleanSections = [
   {
     label: "ALL ROOMS",
@@ -16,6 +19,9 @@ const deepCleanSections = [
       "Everything in regular cleaning",
       "Dust & wipe door & door frames",
       "Dust baseboards throughout",
+      "Vacuum under & behind furniture",
+      "Inside window glass cleaned",
+      "Light fixtures cleaned",
       "Ceiling fans deep-dusted & cobwebs removed",
       "Dust blinds",
       "Wipe & clean mirrors & light switches",
@@ -25,6 +31,7 @@ const deepCleanSections = [
   {
     label: "KITCHEN",
     items: [
+      "Stovetop, hood vent & burners degreased",
       "Oven & stove exterior cleaned",
       "Exterior refrigerator cleaned (exterior only)",
       "Interior & exterior microwave",
@@ -42,6 +49,7 @@ const deepCleanSections = [
       "Dust reachable vents",
       "Toilet & toilet area sanitized",
       "Soap scum & mildew removed from shower/tub",
+      "Grout scrubbed",
       "Cabinet faces cleaned",
       "Countertops sanitized",
       "Sink & fixtures polished",

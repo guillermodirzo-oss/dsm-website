@@ -5,6 +5,7 @@ import ReviewCard from "@/components/ReviewCard";
 import { pickReviews, reviewAttribution } from "@/lib/realReviews";
 import { STANDARD_CLEANING_TIERS, STANDARD_FROM, formatPrice, priceForBeds } from "@/lib/pricing";
 import { OG_IMAGE_ALT } from "@/lib/workPhotos";
+import { STANDARD_HIGHLIGHTS } from "@/lib/standardChecklist";
 
 // One-time prices are the standard cleaning tiers, with no recurring discount.
 const standardFor = (beds: number) => formatPrice(priceForBeds(STANDARD_CLEANING_TIERS, beds));
@@ -147,11 +148,8 @@ export default function OneTimeCleaningPage() {
               <h2 className="section-heading">What&apos;s Included</h2>
               <p className="text-gray-500 mb-6 leading-relaxed">Our one-time cleaning follows the same thorough checklist as our standard recurring service. Every room, every surface, done right.</p>
               <div className="space-y-2">
-                {[
-                  "Vacuum all floors, carpets & rugs", "Mop all hard surface floors", "Scrub & disinfect all bathrooms", "Clean & wipe down kitchen counters",
-                  "Clean sink & fixtures", "Wipe exterior of all appliances", "Dust furniture, shelves & blinds", "Empty all trash bins",
-                  "Clean mirrors & glass surfaces", "Wipe light switches & door handles", "Dust window sills & ledges", "Optional add-ons available",
-                ].map(item => (
+                {/* The short standard checklist from lib/standardChecklist.ts. Never type a list here. */}
+                {[...STANDARD_HIGHLIGHTS, "Optional add-ons available"].map(item => (
                   <div key={item} className="flex items-center gap-3 text-sm text-gray-700 py-1.5 border-b border-gray-100">
                     <svg className="w-4 h-4 text-brand-green flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>{item}
                   </div>

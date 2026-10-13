@@ -1,6 +1,8 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
+import { STANDARD_CHECKLIST } from "@/lib/standardChecklist";
+import { DEEP_ADDITIONS_BY_ROOM } from "@/lib/deepChecklist";
 
 export const metadata: Metadata = {
   title: "House Cleaning Checklist | What We Clean",
@@ -27,7 +29,7 @@ const faqs = [
   {
     question: "What extra items are in a deep clean?",
     answer:
-      "Deep cleaning adds what standard cleaning doesn't cover: full baseboard scrubbing; inside window glass; light fixtures; grout scrubbing in bathrooms; doors and door frames; and vacuuming under and behind furniture. Cabinets are cleaned on the outside only. Cleaning inside the oven or inside the kitchen cabinets is an add-on. It catches up on buildup instead of just keeping things tidy.",
+      "Deep cleaning adds what standard cleaning doesn't cover: full baseboard scrubbing; inside window glass; light fixtures; grout scrubbing in bathrooms; doors and door frames; vacuuming under and behind furniture; and degreasing the stovetop, hood vent and burners. Cabinets are cleaned on the outside only. Cleaning inside the oven or inside the kitchen cabinets is an add-on. It catches up on buildup instead of just keeping things tidy.",
   },
   {
     question: "Do you clean inside appliances?",
@@ -89,98 +91,16 @@ const breadcrumbSchema = {
   ],
 };
 
-const standardChecklist = [
-  {
-    room: "Kitchen",
-    items: [
-      "Wipe all countertops and surfaces",
-      "Clean stovetop and drip pans (exterior)",
-      "Clean microwave inside and out",
-      "Wipe all appliance exteriors",
-      "Scrub sink and faucet",
-      "Wipe cabinet fronts and handles",
-      "Sweep and mop floor",
-    ],
-  },
-  {
-    room: "Bathrooms",
-    items: [
-      "Scrub and disinfect toilet (inside and out)",
-      "Clean shower and tub",
-      "Wash sink and vanity",
-      "Clean and polish mirrors",
-      "Wipe all fixtures",
-      "Scrub and mop floor",
-    ],
-  },
-  {
-    room: "Bedrooms",
-    items: [
-      "Dust all surfaces and shelves",
-      "Make beds (change linens if provided)",
-      "Vacuum carpets and rugs",
-      "Sweep and mop hard floors",
-      "Wipe window sills",
-      "Empty and re-line trash",
-    ],
-  },
-  {
-    room: "Living Areas",
-    items: [
-      "Dust all furniture and surfaces",
-      "Wipe down light switches and outlets",
-      "Vacuum all upholstered surfaces and cushions",
-      "Sweep and mop hard floors",
-      "Wipe mirrors",
-      "Empty trash",
-    ],
-  },
-  {
-    room: "General (All Rooms)",
-    items: [
-      "Wipe all door handles",
-      "Clean window sills (light)",
-      "Remove cobwebs from corners",
-      "Spot-clean walls as needed",
-      "Straighten and tidy visible surfaces",
-    ],
-  },
-];
+// The standard checklist and the deep cleaning additions are the shared,
+// owner-confirmed lists. Never type either list into this page. See
+// lib/standardChecklist.ts and lib/deepChecklist.ts.
+const standardChecklist = STANDARD_CHECKLIST;
+const deepExtras = DEEP_ADDITIONS_BY_ROOM;
 
-// What a deep clean adds on top of a standard clean. Nothing on the standard
-// checklist (lib/standardChecklist.ts) belongs here: the inside of the
-// microwave, the refrigerator exterior, soap scum in the shower, the toilet
-// area, kitchen and bathroom vents, ceiling fans and window sills are all done
-// on every standard visit.
-const deepExtras = [
-  {
-    room: "Kitchen Extras",
-    items: [
-      "Behind and under appliances (accessible areas)",
-      "Grease buildup on stovetop and hood",
-    ],
-  },
-  {
-    room: "Bathroom Extras",
-    items: [
-      "Full grout scrubbing: tiles, floor",
-      "Caulking detail",
-      "Wipe all baseboards thoroughly",
-    ],
-  },
-  {
-    room: "Whole-Home Extras",
-    items: [
-      "Full baseboard scrubbing (all rooms)",
-      "Inside window glass cleaned",
-      "Light fixtures dusted",
-      "Vents and registers in bedrooms and living areas",
-      "Door frames detail-wiped",
-      "Behind furniture (accessible areas)",
-    ],
-  },
-];
-
+// What move-out cleaning adds on top of a deep clean. Window sills, inside
+// window glass, door handles, door frames and trash are not here: they are
+// already on the standard and deep lists above. Walls are not here either: no
+// service cleans walls.
 const moveOutExtras = [
   {
     room: "Move-Out Additions",
@@ -190,11 +110,7 @@ const moveOutExtras = [
       "Inside oven: full interior scrub",
       "Inside dishwasher",
       "All appliances inside and out",
-      "Window sills and inside glass",
-      "All door knobs and door frames",
-      "Walls wiped down where possible",
       "All closet interiors: shelves, rods, floors",
-      "Remove all debris and trash",
       "Final walkthrough inspection",
     ],
   },

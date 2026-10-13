@@ -36,7 +36,7 @@ const faqs = [
   {
     question: "Can you remove pet hair and dander?",
     answer:
-      "Absolutely. Pet hair and dander removal is part of our standard and deep cleaning services. We thoroughly vacuum all carpets, rugs, upholstery edges, and hard-to-reach corners where pet hair collects. For homes with heavy shedders or multiple pets, we recommend our deep cleaning service which includes detail-vacuuming along baseboards, under furniture, and in tight spaces where dander accumulates.",
+      "Absolutely. Pet hair and dander removal is part of our standard and deep cleaning services. We thoroughly vacuum all carpets, rugs, and upholstery where pet hair collects. For homes with heavy shedders or multiple pets, we recommend our deep cleaning service, which adds wiping the baseboards and vacuuming under and behind furniture, where dander accumulates.",
   },
   {
     question: "What pet-safe products do you use?",
@@ -221,11 +221,11 @@ export default function PetFriendlyCleaningPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: "🐕", title: "Pet Hair Removal", desc: "Thorough vacuuming of all carpets, rugs, and upholstery edges. Detail work along baseboards and under furniture where pet hair collects most." },
+              { icon: "🐕", title: "Pet Hair Removal", desc: "Thorough vacuuming of all carpets, rugs, and upholstery. Baseboards and the floor under and behind furniture, where pet hair collects most, are part of a deep clean." },
               { icon: "💨", title: "Dander Reduction", desc: "Deep cleaning techniques that remove airborne allergens from surfaces, especially important for allergy sufferers in multi-pet households." },
               { icon: "🧴", title: "Odor Elimination", desc: "Non-toxic enzyme-based cleaners that neutralize pet odors at the molecular level rather than masking them with synthetic fragrances." },
               { icon: "🪣", title: "Safe Floor Cleaning", desc: "Residue-free mop solutions that are safe for pets immediately after drying, no need to keep animals off floors for hours." },
-              { icon: "🪟", title: "Nose-Print Removal", desc: "We clean window glass and sliding doors where dogs and cats leave smudges, a small detail that makes a big visual difference." },
+              { icon: "🪟", title: "Nose-Print Removal", desc: "Dogs and cats leave smudges on windows and sliding doors. Cleaning the inside window glass is part of a deep clean, a small detail that makes a big visual difference." },
               { icon: "🛡️", title: "Non-Toxic Disinfection", desc: "Bathroom and kitchen disinfection using products that kill bacteria and viruses without chemical residue harmful to pets." },
             ].map((card) => (
               <div key={card.title} className="text-center p-6 rounded-xl bg-brand-green-50 border border-brand-green-100">

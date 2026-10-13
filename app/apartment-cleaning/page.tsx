@@ -6,6 +6,7 @@ import ReviewCard from "@/components/ReviewCard";
 import { pickReviews, reviewAttribution } from "@/lib/realReviews";
 import { STANDARD_CLEANING_TIERS, STANDARD_FROM, formatPrice, priceForBeds } from "@/lib/pricing";
 import { OG_IMAGE_ALT, WORK_PHOTOS } from "@/lib/workPhotos";
+import { STANDARD_HIGHLIGHTS } from "@/lib/standardChecklist";
 
 // Apartment prices are the standard cleaning tiers. There is no studio tier,
 // so a studio is priced as a 1 bedroom.
@@ -141,11 +142,8 @@ export default function ApartmentCleaningPage() {
             <div>
               <h2 className="section-heading">What&apos;s Included in Apartment Cleaning</h2>
               <div className="space-y-3">
-                {[
-                  "Vacuum all floors, carpets & rugs", "Mop all hard surface floors", "Clean & disinfect all bathrooms", "Wipe down kitchen counters & surfaces",
-                  "Clean kitchen sink & fixtures", "Wipe exterior of all appliances", "Dust furniture, shelves & blinds", "Empty all trash bins & replace liners",
-                  "Clean mirrors & glass surfaces", "Wipe light switches & door handles", "Clean window sills", "Customizable add-ons available",
-                ].map(item => (
+                {/* The short standard checklist from lib/standardChecklist.ts. Never type a list here. */}
+                {[...STANDARD_HIGHLIGHTS, "Customizable add-ons available"].map(item => (
                   <div key={item} className="flex items-center gap-3 text-sm text-gray-700 py-1.5 border-b border-gray-100">
                     <svg className="w-4 h-4 text-brand-green flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>{item}
                   </div>

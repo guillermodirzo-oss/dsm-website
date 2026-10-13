@@ -87,9 +87,23 @@ To renew or end an offer, change its last day in `lib/offers.ts`. To add one, ad
 To see the site as it will look after an offer ends, build locally with a fake clock: `NEXT_PUBLIC_OFFER_NOW=2026-12-01T12:00:00-06:00 npm run build`. Never set that variable in Vercel.
 
 ## Checklist Facts
-- `lib/standardChecklist.ts` is the source of truth for what a standard or recurring clean includes. Every sentence, list and comparison table that says what a standard, regular, recurring, routine or weekly clean does or skips has to agree with it.
-- A standard clean includes all of these, so never describe one as skipped by a standard clean or as a deep cleaning extra: inside the microwave, the refrigerator exterior, the stove and oven exterior, the hood, countertops, cabinet fronts, sinks and fixtures, the toilet and toilet area, soap scum and mildew in the shower and tub, mirrors and light switches, ceiling fans, window sills, blinds, and the reachable vents in the kitchen and bathrooms.
-- Deep cleaning only (on the deep checklist, not on the standard one): baseboards, doors and door frames, grout, vacuuming under and behind furniture, inside window glass, and light fixtures. These are the only things copy may name as skipped by a standard clean. Never write that a standard or recurring clean covers them.
+The owner confirmed exactly what each service includes (October 2026). The lists live in two files and nowhere else: `lib/standardChecklist.ts` and `lib/deepChecklist.ts`. Pages render those files. Never type a checklist into a page, and never claim anything that is not on these lists.
+
+**Standard and recurring clean includes:** inside the microwave; dusting ceiling fans; dusting window sills; wiping the hood and the oven and refrigerator exteriors; countertops; cabinet fronts; toilets and the area around them; soap scum and mildew in the shower and tub; sinks and fixtures; light switches; kitchen and bathroom vents; dusting furniture; making beds; wiping door handles; vacuuming upholstery. The owner also confirmed that these basics stay on the standard checklist: vacuuming and mopping floors, mirrors, blinds, cobwebs, trash and recycling, the stove exterior, and the laundry room (outside of the washer and dryer, dryer lint, sink, floor).
+
+**Deep clean adds, on top of everything standard:** baseboards; doors and door frames; grout scrubbing; vacuuming under and behind furniture; inside window glass; light fixtures; degreasing the stovetop, hood vent and burners. Exactly these seven.
+
+**Move-in/move-out adds:** inside the oven, inside the refrigerator, inside all cabinets and drawers.
+
+**Add-ons (standard and deep):** inside the oven, inside the refrigerator, inside kitchen cabinets.
+
+**Not offered by any service. Never claim these:** spot-cleaning walls; pulling appliances out or cleaning behind or under appliances; caulking detail; removing calcium or hard water deposits (no "mineral deposits", "limescale" or "descaling" either).
+
+Rules that follow from the lists:
+- Never describe a standard item as skipped by a standard clean or as a deep cleaning extra. The seven deep additions are the only things copy may name as skipped by a standard or recurring clean. Never write that a standard or recurring clean covers one of them.
+- A deep clean is never required before regular visits. The wording is: "Many new clients start with a deep clean to get the house caught up, but it's not required. You can start with regular visits."
+- Pages that describe cleaning without naming a service (/pet-friendly-cleaning, /cleaning-for-allergies) say that baseboards, the floor under and behind furniture, inside window glass and light fixtures are part of a deep clean.
+- A blog checklist of things a homeowner or renter should do is advice, not a service list. Never follow one with "our service covers every item on this list".
 - Windows means sills and inside glass only. We never clean window tracks. (Shower door tracks are fine.)
 - Deep cleaning includes the refrigerator exterior only.
 - Move-out cleaning includes the refrigerator inside and out.
@@ -132,7 +146,8 @@ Move-out customers are mostly home buyers and sellers, not renters. Write move-o
 | `lib/localProof.ts` | The client story and computed example price for each city page that has one |
 | `components/ClientStory.tsx` | The "One of Our {City} Clients" section |
 | `lib/workPhotos.ts` | Alt text for work photos and for the social share photo. No town, no service |
-| `lib/standardChecklist.ts` | The standard checklist, shared by /recurring-cleaning and the recurring city pages |
+| `lib/standardChecklist.ts` | The owner-confirmed standard checklist (full and short versions). Every page that lists what a standard or recurring clean includes renders it |
+| `lib/deepChecklist.ts` | The owner-confirmed deep checklist: the seven additions and the room-by-room list every deep cleaning page renders |
 | `components/Offer.tsx` | Wrapper that expires offer copy automatically |
 | `components/OfferBanner.tsx` | One line per running offer, for the homepage hero. Disappears when no offer is running |
 | `components/HeroRating.tsx` | The star rating line for orange heroes. White on the darkest brand orange, which meets WCAG AA. Use it instead of coloring the text by hand |

@@ -44,7 +44,10 @@ const trustBullets = [
 // These cards say what a regular clean skips, so they may only name things
 // that are on the deep checklist and NOT on the standard checklist
 // (lib/standardChecklist.ts): baseboards, doors and door frames, grout, the
-// floor under and behind furniture, inside window glass, light fixtures.
+// floor under and behind furniture, inside window glass, light fixtures, and
+// degreasing the stovetop, hood vent and burners (lib/deepChecklist.ts). They
+// never name anything DSM does not offer: no hard water or mineral deposit
+// removal, nothing behind or under appliances, no walls, no caulking.
 const problemCards = [
   {
     icon: "🍳",
@@ -58,8 +61,8 @@ const problemCards = [
   },
   {
     icon: "🚿",
-    title: "Bathroom Mineral Deposits",
-    desc: "Hard water stains behind faucets, around drains, and on shower glass need the right products and technique, not just a wipe-down.",
+    title: "Bathroom Grout Buildup",
+    desc: "Grout lines in the shower, around the tub and across the floor hold on to soap scum and mildew. They need scrubbing by hand, not just a wipe-down.",
   },
 ];
 

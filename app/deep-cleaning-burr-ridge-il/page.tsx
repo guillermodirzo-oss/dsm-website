@@ -9,6 +9,7 @@ import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
+import { DEEP_CHECKLIST } from "@/lib/deepChecklist";
 
 export const metadata: Metadata = {
   title: { absolute: deepCityTitle("Burr Ridge") },
@@ -93,54 +94,9 @@ const breadcrumbSchema = {
   ],
 };
 
-const checklist = [
-  {
-    room: "Kitchen",
-    items: [
-      "Clean oven exterior",
-      "Degrease stovetop burners and hood vent",
-      "Clean inside microwave",
-      "Wipe all cabinet fronts",
-      "Scrub sink and faucet",
-      "Clean countertops and backsplash",
-      "Wipe refrigerator exterior",
-      "Mop and scrub floors",
-    ],
-  },
-  {
-    room: "Bathrooms",
-    items: [
-      "Scrub/disinfect toilet",
-      "Deep scrub shower/tub with grout cleaning",
-      "Clean/polish faucets and fixtures",
-      "Wash sink and vanity",
-      "Clean mirrors",
-      "Wipe cabinet fronts and open shelves",
-      "Mop floors and clean grout lines",
-    ],
-  },
-  {
-    room: "Bedrooms & Living Areas",
-    items: [
-      "Dust all surfaces and shelves",
-      "Wipe baseboards and door frames",
-      "Clean window sills and inside glass",
-      "Vacuum under/behind furniture",
-      "Clean ceiling fans and light fixtures",
-      "Dust blinds and windowsills",
-    ],
-  },
-  {
-    room: "Whole Home",
-    items: [
-      "Vacuum all carpets and rugs",
-      "Mop all hard floors",
-      "Wipe all doors and door frames",
-      "Clean all visible baseboards",
-      "Dust vents and registers",
-    ],
-  },
-];
+// The deep cleaning checklist is shared by every deep cleaning page. See
+// lib/deepChecklist.ts. Never type a checklist into this page.
+const checklist = DEEP_CHECKLIST;
 
 export default function DeepCleaningBurrRidgePage() {
   return (
@@ -228,7 +184,7 @@ export default function DeepCleaningBurrRidgePage() {
             Burr Ridge is an upscale community in DuPage and Cook counties with executive homes that deserve professional-level care. DSM serves homeowners throughout Burr Ridge with a deep clean that is thorough, careful, and done right.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            We cover the Village Center area, the County Line Road corridor, and all surrounding Burr Ridge neighborhoods. Our deep cleaning is room by room with no shortcuts. Kitchen means inside the microwave and behind the stovetop. Bathrooms mean scrubbed grout and polished fixtures. Living areas mean clean baseboards, dusted ceiling fans, and vacuumed under every piece of furniture.
+            We cover the Village Center area, the County Line Road corridor, and all surrounding Burr Ridge neighborhoods. Our deep cleaning is room by room with no shortcuts. Kitchen means inside the microwave and a degreased stovetop. Bathrooms mean scrubbed grout and polished fixtures. Living areas mean clean baseboards, dusted ceiling fans, and vacuumed under every piece of furniture.
           </p>
           <p className="text-gray-700 leading-relaxed">
             We use eco-friendly, non-toxic products and are fully insured. Every job comes with a 48-hour satisfaction guarantee. If anything is not right, we come back and fix it at no charge.

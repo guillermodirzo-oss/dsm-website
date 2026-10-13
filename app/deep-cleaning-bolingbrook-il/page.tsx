@@ -11,6 +11,7 @@ import { cities } from "@/lib/cityData";
 import { listWithAnd } from "@/lib/recurringCities";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
+import { DEEP_CHECKLIST } from "@/lib/deepChecklist";
 
 export const metadata: Metadata = {
   title: { absolute: deepCityTitle("Bolingbrook") },
@@ -106,54 +107,9 @@ const breadcrumbSchema = {
   ],
 };
 
-const checklist = [
-  {
-    room: "Kitchen",
-    items: [
-      "Clean oven exterior",
-      "Degrease stovetop burners and hood vent",
-      "Clean inside microwave",
-      "Wipe all cabinet fronts",
-      "Scrub sink and faucet",
-      "Clean countertops and backsplash",
-      "Wipe refrigerator exterior",
-      "Mop and scrub floors",
-    ],
-  },
-  {
-    room: "Bathrooms",
-    items: [
-      "Scrub/disinfect toilet",
-      "Deep scrub shower/tub with grout cleaning",
-      "Clean/polish faucets and fixtures",
-      "Wash sink and vanity",
-      "Clean mirrors",
-      "Wipe cabinet fronts and open shelves",
-      "Mop floors and clean grout lines",
-    ],
-  },
-  {
-    room: "Bedrooms & Living Areas",
-    items: [
-      "Dust all surfaces and shelves",
-      "Wipe baseboards and door frames",
-      "Clean window sills and inside glass",
-      "Vacuum under/behind furniture",
-      "Clean ceiling fans and light fixtures",
-      "Dust blinds and windowsills",
-    ],
-  },
-  {
-    room: "Whole Home",
-    items: [
-      "Vacuum all carpets and rugs",
-      "Mop all hard floors",
-      "Wipe all doors and door frames",
-      "Clean all visible baseboards",
-      "Dust vents and registers",
-    ],
-  },
-];
+// The deep cleaning checklist is shared by every deep cleaning page. See
+// lib/deepChecklist.ts. Never type a checklist into this page.
+const checklist = DEEP_CHECKLIST;
 
 export default function DeepCleaningBolingbrookPage() {
   return (
@@ -250,7 +206,7 @@ export default function DeepCleaningBolingbrookPage() {
           </p>
           <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Deep Cleaning for Bolingbrook Homes</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            A deep clean is where we catch up on everything a regular clean doesn&apos;t reach: baseboards, door frames and the grime that builds up around faucets and tubs. If you want to keep it that way after, we also{" "}
+            A deep clean is where we catch up on everything a regular clean doesn&apos;t reach: baseboards, door frames and the grout lines in your showers and tubs. If you want to keep it that way after, we also{" "}
             <Link href="/recurring-cleaning-bolingbrook-il" className="text-brand-green font-semibold hover:underline">clean homes in Bolingbrook every week, every two weeks or every month</Link>.
           </p>
           <p className="text-gray-700 leading-relaxed">

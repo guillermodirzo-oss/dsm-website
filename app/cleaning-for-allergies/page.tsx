@@ -101,10 +101,10 @@ const allergens = [
 ];
 
 const techniques = [
-  { title: "Top-Down Dusting", desc: "We always dust from ceiling to floor: ceiling fans, light fixtures, shelves, and furniture before vacuuming. This prevents displaced allergens from resettling." },
-  { title: "HEPA-Friendly Vacuuming", desc: "Thorough vacuuming of all carpets, rugs, and upholstery edges, including along baseboards and under furniture where allergens accumulate most." },
+  { title: "Top-Down Dusting", desc: "We always dust from ceiling to floor: ceiling fans first, then furniture, before vacuuming. This prevents displaced allergens from resettling. Light fixtures are part of a deep clean." },
+  { title: "HEPA-Friendly Vacuuming", desc: "Thorough vacuuming of all carpets, rugs, and upholstery. Baseboards and the floor under and behind furniture, where allergens accumulate most, are part of a deep clean." },
   { title: "Non-Toxic Disinfection", desc: "We disinfect bathrooms and kitchens using products that eliminate mold, bacteria, and viruses without VOCs or synthetic fragrances that can trigger reactions." },
-  { title: "Mold-Risk Area Focus", desc: "Bathrooms, window sills and inside glass, and basement areas receive specific attention for mold prevention, a key allergy trigger in midwest homes." },
+  { title: "Mold-Risk Area Focus", desc: "Bathrooms, window sills and basement areas receive specific attention for mold prevention, a key allergy trigger in midwest homes. Inside window glass is part of a deep clean." },
   { title: "Fragrance-Free Options", desc: "Many cleaning products contain synthetic fragrances that trigger migraines and fragrance sensitivities. We can work entirely fragrance-free on request." },
   { title: "Dander Removal Technique", desc: "Special attention to pet dander areas in multi-pet homes, with allergen-reduction focused cleaning in bedrooms and living areas." },
 ];

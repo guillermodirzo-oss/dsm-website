@@ -27,12 +27,12 @@ const faqs = [
   {
     question: "What is the difference between standard and deep cleaning?",
     answer:
-      "Standard cleaning covers the routine tasks needed to maintain a home that is already reasonably clean: surfaces, floors, bathrooms, and kitchen exteriors. Deep cleaning goes significantly further: grout scrubbing, baseboards, doors and door frames, light fixtures, inside window glass, and behind/underneath furniture. Standard cleaning keeps a clean home clean. Deep cleaning restores a home that has fallen behind or needs a true reset.",
+      "Standard cleaning covers the routine tasks needed to maintain a home that is already reasonably clean: surfaces, floors, bathrooms, and kitchen exteriors. Deep cleaning goes significantly further: grout scrubbing, baseboards, doors and door frames, light fixtures, inside window glass, degreasing the stovetop, hood vent and burners, and vacuuming under and behind furniture. Standard cleaning keeps a clean home clean. Deep cleaning restores a home that has fallen behind or needs a true reset.",
   },
   {
     question: "Should my first clean be a deep clean?",
     answer:
-      "Yes, for most first-time customers, we recommend starting with a deep clean. Even if your home feels reasonably clean, a professional deep clean gives us a thorough baseline and ensures we address areas that have accumulated buildup over time. After the deep clean, maintaining that standard with bi-weekly or monthly standard cleaning is both easier and more affordable.",
+      "Many new clients start with a deep clean to get the house caught up, but it's not required. You can start with regular visits. A deep clean adds the baseboards, door frames and grout that a standard clean doesn't cover, so it fits best when those haven't been done in a while.",
   },
   {
     question: "How often should I get a deep clean?",
@@ -99,31 +99,33 @@ const comparisonRows = [
   { feature: "Stovetop (exterior)", standard: "✓", deep: "✓" },
   { feature: "Sink & faucet scrub", standard: "✓", deep: "✓" },
   { feature: "Toilet, tub & shower", standard: "✓", deep: "✓" },
-  { feature: "Mirrors & glass", standard: "✓", deep: "✓" },
+  { feature: "Mirrors", standard: "✓", deep: "✓" },
   { feature: "Vacuum carpets & mop floors", standard: "✓", deep: "✓" },
   { feature: "Dust furniture & surfaces", standard: "✓", deep: "✓" },
   { feature: "Empty trash", standard: "✓", deep: "✓" },
   { feature: "Cabinet fronts wiped", standard: "✓", deep: "✓" },
-  // The Standard column follows lib/standardChecklist.ts. The next four rows
-  // are on that checklist, so both columns get a check. Never mark them as
-  // deep cleaning only.
+  // The Standard column follows lib/standardChecklist.ts. The rows down to
+  // the vents are on that checklist, so both columns get a check. Never mark
+  // them as deep cleaning only.
   { feature: "Inside microwave", standard: "✓", deep: "✓" },
   { feature: "Refrigerator exterior", standard: "✓", deep: "✓" },
   { feature: "Window sills dusted", standard: "✓", deep: "✓" },
   { feature: "Ceiling fans dusted", standard: "✓", deep: "✓" },
-  { feature: "Inside oven", standard: "Add-on", deep: "Add-on" },
-  // Not on the standard checklist: baseboards, inside window glass, light
-  // fixtures, grout, door frames.
-  { feature: "Baseboard scrubbing", standard: "✗", deep: "Full scrub" },
+  { feature: "Make beds & vacuum upholstery", standard: "✓", deep: "✓" },
+  { feature: "Light switches & door handles", standard: "✓", deep: "✓" },
+  { feature: "Kitchen & bathroom vents", standard: "✓", deep: "✓" },
+  // The seven things a deep clean adds (lib/deepChecklist.ts). Exactly these.
+  { feature: "Baseboards", standard: "✗", deep: "✓" },
+  { feature: "Doors & door frames", standard: "✗", deep: "✓" },
+  { feature: "Grout scrubbing", standard: "✗", deep: "✓" },
+  { feature: "Vacuum under & behind furniture", standard: "✗", deep: "✓" },
   { feature: "Inside window glass", standard: "✗", deep: "✓" },
   { feature: "Light fixtures", standard: "✗", deep: "✓" },
-  { feature: "Grout scrubbing", standard: "✗", deep: "✓" },
-  // Inside kitchen cabinets is an add-on for both. Only move-in and move-out
-  // cleaning includes cabinet interiors.
+  { feature: "Degrease stovetop, hood vent & burners", standard: "✗", deep: "✓" },
+  // Add-ons for both. Only move-in and move-out cleaning includes them.
+  { feature: "Inside oven", standard: "Add-on", deep: "Add-on" },
+  { feature: "Inside refrigerator", standard: "Add-on", deep: "Add-on" },
   { feature: "Inside kitchen cabinets", standard: "Add-on", deep: "Add-on" },
-  { feature: "Door frames detail", standard: "✗", deep: "✓" },
-  // A standard clean dusts the reachable vents in the kitchen and bathrooms.
-  { feature: "Vents & registers", standard: "Kitchen & bath vents", deep: "✓" },
   { feature: "Starting price (2 bed/1 bath)", standard: STANDARD_2_BED, deep: DEEP_2_BED },
   { feature: "Typical duration (2 bed/1 bath)", standard: "2–3 hrs", deep: "4–6 hrs" },
   { feature: "Recommended frequency", standard: "Weekly – monthly", deep: "Seasonally (2–4×/yr)" },
@@ -137,10 +139,11 @@ const standardWhen = [
   "You want the lowest-cost recurring option",
 ];
 
+// A deep clean is never required before regular visits start. Don't add a
+// line here that tells new clients they have to book one first.
 const deepWhen = [
-  "It's your first time booking professional cleaning",
   "Your home hasn't been cleaned in 3+ months",
-  "You're starting a new recurring service (use deep clean first)",
+  "You want the house caught up before regular visits start (optional)",
   "It's the start of a new season",
   "You've had a renovation, move-in, or significant event",
   "You're preparing to sell or list your home",
@@ -213,13 +216,15 @@ export default function StandardVsDeepCleaningPage() {
               <p className="text-white/80 leading-relaxed mb-4">
                 Deep cleaning is a detailed service that goes significantly beyond
                 routine maintenance. It covers everything in a standard clean plus the areas that
-                accumulate buildup over time: grout lines, baseboards, door frames, light fixtures,
-                inside window glass, and more.
+                accumulate buildup over time: grout lines, baseboards, doors and door frames, light
+                fixtures, inside window glass, the floor under and behind furniture, and a degreased
+                stovetop, hood vent and burners.
               </p>
               <p className="text-white/80 leading-relaxed">
-                Deep cleaning is the right choice when your home needs a true reset: before starting
-                a recurring service, at the start of a new season, or after an extended period without
-                professional cleaning. It&apos;s the foundation that makes standard cleaning effective.
+                Deep cleaning is the right choice when your home needs a true reset: at the start of
+                a new season, before guests, or after an extended period without professional
+                cleaning. Many new clients start with a deep clean to get the house caught up, but
+                it&apos;s not required. You can start with regular visits.
               </p>
             </div>
           </div>
@@ -325,13 +330,11 @@ export default function StandardVsDeepCleaningPage() {
             </p>
           </div>
           <div className="bg-brand-green-50 border border-brand-green-100 rounded-2xl p-8">
-            <h2 className="text-xl font-bold text-gray-900 mb-3">💡 Our Recommendation for First-Time Customers</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-3">💡 Where First-Time Customers Start</h2>
             <p className="text-gray-600 leading-relaxed">
-              If this is your first professional cleaning, or your first cleaning in several months,
-              we strongly recommend starting with a <strong>deep clean</strong>. It establishes a
-              clean baseline that makes every subsequent standard cleaning more effective. After your
-              deep clean, bi-weekly standard cleaning is the most popular choice among our customers
-              in Romeoville, Plainfield, and Naperville.
+              Many new clients start with a <strong>deep clean</strong> to get the house caught up,
+              but it&apos;s not required. You can start with regular visits. Every two weeks is the
+              most popular schedule.
             </p>
           </div>
         </div>

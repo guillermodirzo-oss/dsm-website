@@ -6,6 +6,8 @@ import ReviewCard from "@/components/ReviewCard";
 import { pickReviews, reviewAttribution } from "@/lib/realReviews";
 import ClientStory from "@/components/ClientStory";
 import { CLIENT_STORIES } from "@/lib/localProof";
+import { STANDARD_HIGHLIGHTS } from "@/lib/standardChecklist";
+import { DEEP_ADDITIONS } from "@/lib/deepChecklist";
 
 export const metadata: Metadata = {
   title: { absolute: hubCityTitle("Plainfield") },
@@ -370,7 +372,8 @@ export default function PlainfieldPage() {
                 </div>
               </div>
               <ul className="space-y-2 text-sm text-gray-700">
-                {["Vacuum all carpets, rugs & floors","Mop all hard-surface floors","Dust furniture, shelves & surfaces","Clean & disinfect bathrooms","Wipe kitchen counters & appliance exteriors","Wipe cabinet fronts","Clean mirrors throughout","Empty all trash bins","Wipe light switches & door handles","Make beds (optional)"].map(item => (
+                {/* The short standard checklist from lib/standardChecklist.ts. Never type a list here. */}
+                {STANDARD_HIGHLIGHTS.map(item => (
                   <li key={item} className="flex items-start gap-2">
                     <svg className="w-4 h-4 text-brand-green mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     {item}
@@ -388,8 +391,8 @@ export default function PlainfieldPage() {
               </div>
               <p className="text-xs text-brand-green font-bold uppercase tracking-widest mb-3">Everything in Standard, PLUS:</p>
               <ul className="space-y-2 text-sm text-gray-700">
-                {/* Only things a standard clean does not do. Inside the microwave, window sills, ceiling fans and light switches are on the standard checklist (lib/standardChecklist.ts), so they never go in this list. */}
-                {["Scrub grout lines in showers & tile","Degrease stovetop, hood vent & burners","Clean behind & under appliances","Detailed baseboard & door frame cleaning","Clean inside window glass","Clean light fixtures","Vacuum under & behind furniture","Spot-clean walls"].map(item => (
+                {/* Exactly what a deep clean adds, from lib/deepChecklist.ts. Never type a list here. */}
+                {DEEP_ADDITIONS.map(item => (
                   <li key={item} className="flex items-start gap-2">
                     <svg className="w-4 h-4 text-brand-green mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     {item}

@@ -9,6 +9,7 @@ import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
+import { DEEP_CHECKLIST } from "@/lib/deepChecklist";
 
 export const metadata: Metadata = {
   title: { absolute: deepCityTitle("Minooka") },
@@ -93,54 +94,9 @@ const breadcrumbSchema = {
   ],
 };
 
-const checklist = [
-  {
-    room: "Kitchen",
-    items: [
-      "Clean oven exterior",
-      "Degrease stovetop burners and hood vent",
-      "Clean inside microwave",
-      "Wipe all cabinet fronts",
-      "Scrub sink and faucet",
-      "Clean countertops and backsplash",
-      "Wipe refrigerator exterior",
-      "Mop and scrub floors",
-    ],
-  },
-  {
-    room: "Bathrooms",
-    items: [
-      "Scrub/disinfect toilet",
-      "Deep scrub shower/tub with grout cleaning",
-      "Clean/polish faucets and fixtures",
-      "Wash sink and vanity",
-      "Clean mirrors",
-      "Wipe cabinet fronts and open shelves",
-      "Mop floors and clean grout lines",
-    ],
-  },
-  {
-    room: "Bedrooms & Living Areas",
-    items: [
-      "Dust all surfaces and shelves",
-      "Wipe baseboards and door frames",
-      "Clean window sills and inside glass",
-      "Vacuum under/behind furniture",
-      "Clean ceiling fans and light fixtures",
-      "Dust blinds and windowsills",
-    ],
-  },
-  {
-    room: "Whole Home",
-    items: [
-      "Vacuum all carpets and rugs",
-      "Mop all hard floors",
-      "Wipe all doors and door frames",
-      "Clean all visible baseboards",
-      "Dust vents and registers",
-    ],
-  },
-];
+// The deep cleaning checklist is shared by every deep cleaning page. See
+// lib/deepChecklist.ts. Never type a checklist into this page.
+const checklist = DEEP_CHECKLIST;
 
 export default function DeepCleaningMinookaPage() {
   return (
@@ -267,7 +223,7 @@ export default function DeepCleaningMinookaPage() {
             <div className="bg-gray-50 rounded-xl p-6">
               <h3 className="font-bold text-gray-800 mb-2">No Shortcuts</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                We clean behind the stovetop, grout lines, baseboards, ceiling fans, and window sills. Every room gets the full treatment, not just a surface wipe.
+                We degrease the stovetop and get to the grout lines, baseboards, ceiling fans, and window sills. Every room gets the full treatment, not just a surface wipe.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">

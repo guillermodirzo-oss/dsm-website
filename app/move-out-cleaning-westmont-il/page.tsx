@@ -320,7 +320,7 @@ export default function MoveOutCleaningWestmontPage() {
           <p className="text-gray-600 mb-4 leading-relaxed">
             When you&rsquo;re selling a home in Westmont, the final walkthrough is the last chance to
             make an impression that keeps the deal together. Buyers and their agents are looking
-            at everything: inside the oven, behind appliances, in the grout lines, under the
+            at everything: inside the oven, inside the refrigerator, in the grout lines, under the
             sink. Our Westmont move-out cleaning service is built to pass that inspection every time.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">

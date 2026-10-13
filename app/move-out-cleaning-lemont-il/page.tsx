@@ -322,7 +322,7 @@ export default function MoveOutCleaningLemontPage() {
           <p className="text-gray-600 mb-4 leading-relaxed">
             When you&rsquo;re selling a home in Lemont, the final walkthrough is the last chance to
             make an impression that keeps the deal together. Buyers and their agents look at
-            everything: inside the oven, in the grout lines, behind appliances, under the
+            everything: inside the oven, in the grout lines, inside the refrigerator, under the
             sink. Our Lemont move-out cleaning service is built to pass that inspection every time.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">

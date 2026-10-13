@@ -15,6 +15,7 @@ import {
 import { offerPrice } from "@/lib/offers";
 import { REVIEW_COUNT, REVIEW_RATING, GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 import { DEEP_OFFER } from "@/lib/offers";
+import { DEEP_CHECKLIST } from "@/lib/deepChecklist";
 
 // Regenerate at most hourly so FALL75 drops out of the HTML on its own after
 // it ends. <Offer> also hides it in the browser at the deadline. See
@@ -111,54 +112,9 @@ const breadcrumbSchema = {
   ],
 };
 
-const checklist = [
-  {
-    room: "Kitchen",
-    items: [
-      "Clean oven exterior",
-      "Degrease stovetop burners and hood vent",
-      "Clean inside microwave",
-      "Wipe all cabinet fronts",
-      "Scrub sink and faucet",
-      "Clean countertops and backsplash",
-      "Wipe refrigerator exterior",
-      "Mop and scrub floors",
-    ],
-  },
-  {
-    room: "Bathrooms",
-    items: [
-      "Scrub/disinfect toilet",
-      "Deep scrub shower/tub with grout cleaning",
-      "Clean/polish faucets and fixtures",
-      "Wash sink and vanity",
-      "Clean mirrors",
-      "Wipe cabinet fronts and open shelves",
-      "Mop floors and clean grout lines",
-    ],
-  },
-  {
-    room: "Bedrooms & Living Areas",
-    items: [
-      "Dust all surfaces and shelves",
-      "Wipe baseboards and door frames",
-      "Clean window sills and inside glass",
-      "Vacuum under/behind furniture",
-      "Clean ceiling fans and light fixtures",
-      "Dust blinds and windowsills",
-    ],
-  },
-  {
-    room: "Whole Home",
-    items: [
-      "Vacuum all carpets and rugs",
-      "Mop all hard floors",
-      "Wipe all doors and door frames",
-      "Clean all visible baseboards",
-      "Dust vents and registers",
-    ],
-  },
-];
+// The deep cleaning checklist is shared by every deep cleaning page. See
+// lib/deepChecklist.ts. Never type a checklist into this page.
+const checklist = DEEP_CHECKLIST;
 
 export default function DeepCleaningPage() {
   return (
@@ -313,7 +269,7 @@ export default function DeepCleaningPage() {
             <div className="bg-gray-50 rounded-xl p-6">
               <h3 className="font-bold text-gray-800 mb-2">We Get Every Detail</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Our deep clean is not a surface wipe-down. We get into the spots that usually get skipped: behind the toilet, grout lines, ceiling fan blades, baseboards, and window sills. Every room gets real attention.
+                Our deep clean is not a surface wipe-down. We get into the spots that usually get skipped: grout lines, baseboards, door frames, light fixtures, and the floor under the furniture. Every room gets real attention.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">

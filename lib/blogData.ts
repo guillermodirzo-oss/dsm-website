@@ -141,7 +141,7 @@ export const blogPosts: BlogPost[] = [
 <p>What they can charge for: cleaning if the unit isn't returned in a reasonably clean condition, damage beyond normal use like large holes in walls or broken fixtures, and stains or burns that weren't there before the tenancy. If you think a deduction is unfair, the itemized statement the landlord is required to send within 30 days is your starting point for pushing back.</p>
 
 <h2>How a Professional Move-Out Clean Addresses All of This</h2>
-<p>DSM's <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning</a> service is specifically built around what landlords check. Every item in this post is covered: oven interior and racks, refrigerator interior and exterior, all cabinet interiors and drawers, bathroom grout, toilet base, baseboards, ceiling fans, blinds, window sills, and every floor surface in the home. This is a different scope than a standard <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> visit, which is designed for homeowners staying in the home rather than for passing a landlord inspection. Our <a href="/cleaning-checklist" class="text-brand-green font-semibold hover:underline">cleaning checklist</a> lays out every item for each service.</p>
+<p>DSM's <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning</a> service is specifically built around what landlords check. It covers the cleaning a landlord looks for: oven interior and racks, refrigerator interior and exterior, all cabinet interiors and drawers, bathroom grout, toilet base, baseboards, ceiling fans, blinds, window sills, and every floor surface in the home. This is a different scope than a standard <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> visit, which is designed for homeowners staying in the home rather than for passing a landlord inspection. Our <a href="/cleaning-checklist" class="text-brand-green font-semibold hover:underline">cleaning checklist</a> lays out every item for each service.</p>
 <p>Every move-out clean comes with our 48-hour satisfaction guarantee. If your landlord finds something during the walkthrough that wasn't done right, call us within 48 hours and we'll send a team back at no charge. That guarantee exists because the landlord inspection is the real test of the work, and we want to make sure you pass it.</p>
 
 <h2>Frequently Asked Questions</h2>
@@ -240,7 +240,7 @@ export const blogPosts: BlogPost[] = [
   <li>Countertops cleaned and sanitized</li>
   <li>Sink scrubbed and faucet cleaned</li>
   <li>Microwave cleaned inside and out</li>
-  <li>Floor swept and mopped, including under the stove and refrigerator</li>
+  <li>Floor swept and mopped</li>
 </ul>
 <p>Once you've finished, open the oven and every cabinet for a second look. The oven interior and the cabinet shelves are the spots people think they cleaned but didn't get all the way through the first time.</p>
 
@@ -279,7 +279,6 @@ export const blogPosts: BlogPost[] = [
   <li>Floors vacuumed and mopped</li>
   <li>Light switches and outlet covers wiped</li>
   <li>Door frames wiped</li>
-  <li>Walls spot-cleaned where there are marks or scuffs</li>
 </ul>
 <p>Blinds are worth setting aside real time for. Dusty or dirty blinds are easy for a landlord to notice and straightforward to clean if you actually do it rather than rushing past them.</p>
 
@@ -397,7 +396,7 @@ export const blogPosts: BlogPost[] = [
   <li>Window sills and inside glass</li>
   <li>Blinds and light switches</li>
   <li>Cabinet interiors in the kitchen and bathrooms</li>
-  <li>Floors, including under the stove and refrigerator</li>
+  <li>Floors in every room</li>
 </ul>
 <p>The inspection isn't random. They know where to look, and they'll find it if it's there.</p>
 
@@ -496,7 +495,7 @@ export const blogPosts: BlogPost[] = [
     content: `<p>Most homes look fine on the surface. Counters are wiped, floors are vacuumed, the bathroom looks okay. But there's a difference between a home that's been maintained and one that's actually clean. If any of the signs below sound familiar, your <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield</a> home is probably overdue for a real <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a>, not just a regular tidy.</p>
 
 <h2>1. You Can't Remember the Last Time It Was Deep Cleaned</h2>
-<p>If you have to think hard about when your home last had a proper deep clean, it's probably been too long. For most homes, three to four months is about the point where buildup starts working its way into places you don't notice day to day. Grease collecting on cabinet fronts. Soap scum hardening in grout lines. Dust settling behind appliances. None of it is visible until you look for it, but it's there. A deep clean gets the home back to a real baseline instead of just maintaining the surface.</p>
+<p>If you have to think hard about when your home last had a proper deep clean, it's probably been too long. For most homes, three to four months is about the point where buildup starts working its way into places you don't notice day to day. Grease collecting on cabinet fronts. Soap scum hardening in grout lines. Dust settling along the baseboards. None of it is visible until you look for it, but it's there. A deep clean gets the home back to a real baseline instead of just maintaining the surface.</p>
 
 <h2>2. The Grout in Your Bathroom Looks Dark or Discolored</h2>
 <p>Grout is porous. Over time it collects mold, mildew, and soap scum, and regular cleaning doesn't get into it. If the grout around your tub, shower, or bathroom floor looks noticeably darker than it used to, that's not a stain you can wipe off. It's buildup that needs a proper scrub. A deep clean addresses grout lines specifically, in every bathroom, as part of the standard scope of work.</p>
@@ -507,8 +506,8 @@ export const blogPosts: BlogPost[] = [
 <h2>4. Cabinet Fronts Feel Sticky or Look Greasy</h2>
 <p>Kitchen cabinet exteriors are right next to where you cook, so they collect cooking grease, steam, and fingerprints constantly. Over time the residue builds up into a film that doesn't come off with a quick wipe. If running your hand across a cabinet front feels tacky, or the finish looks dull and coated, it's past time for a proper clean. A deep cleaning visit scrubs cabinet exteriors to get them back to how they're supposed to feel.</p>
 
-<h2>5. There's Dust on Your Ceiling Fans and Baseboards</h2>
-<p>Baseboards are skipped during most routine cleaning visits, and ceiling fans are one of the first things people skip when they clean on their own. They're easy to miss, easy to forget, and the dust that collects on them doesn't bother anyone until it does. If your ceiling fan throws dust when you switch it on, or you can see a visible layer along your baseboards, those are signs that the home needs more than maintenance. A deep clean gets into both specifically, by hand, so they're actually clean and not just quickly wiped.</p>
+<h2>5. There's Dust and Grime Along Your Baseboards and Door Frames</h2>
+<p>Baseboards and door frames are skipped during most routine cleaning visits. They're easy to miss, easy to forget, and the dust and scuffs that collect on them don't bother anyone until they do. If you can see a gray line along the top of your baseboards, or a door frame feels gritty when you run a finger across it, those are signs that the home needs more than maintenance. A deep clean gets into both specifically, by hand, so they're actually clean and not just passed over.</p>
 
 <h2>6. The Home Smells a Little Off Even After Cleaning</h2>
 <p>Lingering odors after a clean are a sign that the source hasn't been addressed. Regular cleaning freshens surfaces, but odors that stick around usually come from buildup in places that don't get cleaned on a routine schedule. Buildup around drains. Residue in trash areas. Grout that's holding mildew. A deep clean finds and addresses those sources instead of cleaning around them. If the smell comes back quickly after a regular visit, the underlying issue hasn't been touched.</p>
@@ -702,13 +701,12 @@ export const blogPosts: BlogPost[] = [
 <p>A <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move out clean</a> is not the same as the routine cleaning you might have done during your tenancy. Standard cleaning maintains a home: it covers visible surfaces, floors, and bathrooms at a maintenance level. Move out cleaning restores a home to a condition suitable for the next tenant or buyer. That means:</p>
 <ul>
   <li>Inside the oven, broiler drawer, and all racks scrubbed completely</li>
-  <li>Inside and behind the refrigerator, including coils if accessible</li>
+  <li>Inside the refrigerator, including shelves, drawers and door seals</li>
   <li>All cabinet interiors wiped, not just fronts</li>
   <li>Grout scrubbed in bathrooms and kitchen</li>
   <li>Baseboards, door frames, and light switches wiped by hand</li>
   <li>Window sills, inside glass, and blinds dusted and wiped</li>
   <li>All closets vacuumed and wiped including shelving</li>
-  <li>Walls spot-checked for scuffs (where applicable)</li>
 </ul>
 <p>If you'd like a deeper understanding of what separates these service levels, see our guide on <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning services</a>. Move out cleaning shares much of the same scope.</p>
 
@@ -793,7 +791,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Standard Cleaning vs. Deep Cleaning: What's the Difference?</h2>
 <p>Before diving into frequency, it helps to understand what sets a deep clean apart from your regular routine. <a href="/recurring-cleaning" class="text-brand-green font-semibold hover:underline">Recurring cleaning</a> is maintenance: it covers the basics you do weekly or biweekly: vacuuming, mopping, wiping down counters, cleaning bathrooms, and taking out the trash. It keeps your home looking presentable on a day-to-day basis.</p>
-<p><a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">Our deep cleaning service</a> goes several layers further. It tackles everything standard cleaning skips: scrubbing grout lines, cleaning behind appliances, wiping down baseboards and door frames, dusting light fixtures, and cleaning the inside window glass. If standard cleaning is the upkeep, deep cleaning is the reset, and every home needs it periodically to stay truly clean and healthy.</p>
+<p><a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">Our deep cleaning service</a> goes several layers further. It tackles everything standard cleaning skips: scrubbing grout lines, degreasing the stovetop, hood vent and burners, wiping down baseboards and door frames, vacuuming under and behind furniture, dusting light fixtures, and cleaning the inside window glass. If standard cleaning is the upkeep, deep cleaning is the reset, and every home needs it periodically to stay truly clean and healthy.</p>
 
 <h2>How Often Should You Deep Clean? A Seasonal Guide for Illinois Homes</h2>
 <p>Most professional cleaners and home care experts recommend deep cleaning your home two to four times per year. For Illinois homeowners specifically, aligning those deep cleans with the seasons makes the most sense given our climate.</p>
@@ -816,7 +814,7 @@ export const blogPosts: BlogPost[] = [
 </ul>
 
 <h2>What's Included in a Professional Deep Clean?</h2>
-<p>When DSM Cleaning Solutions performs a deep clean, we cover the areas that standard cleaning skips entirely. That means scrubbing grout in bathrooms and kitchens, pulling out appliances to clean behind them, dusting and wiping all baseboards, wiping doors and door frames, cleaning light fixtures, and cleaning the inside window glass. Cleaning inside the oven or inside the kitchen cabinets is an add-on. We bring everything needed and use non-toxic, eco-friendly products that are safe for children and pets. Learn more about what to expect from <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">our deep cleaning service</a>.</p>
+<p>When DSM Cleaning Solutions performs a deep clean, we cover the areas that standard cleaning skips entirely. That means scrubbing grout in bathrooms and kitchens, degreasing the stovetop, hood vent and burners, dusting and wiping all baseboards, wiping doors and door frames, vacuuming under and behind furniture, cleaning light fixtures, and cleaning the inside window glass. Cleaning inside the oven or inside the kitchen cabinets is an add-on. We bring everything needed and use non-toxic, eco-friendly products that are safe for children and pets. Learn more about what to expect from <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">our deep cleaning service</a>.</p>
 
 <h2>Why Plainfield & Romeoville Homeowners Trust DSM Cleaning Solutions</h2>
 <p>DSM Cleaning Solutions is a family-owned cleaning company based in Romeoville, Illinois. We serve all Plainfield zip codes (60544 and 60585), as well as Romeoville (60446) and the surrounding southwest suburbs. Our team knows these communities personally, and we've cleaned homes in neighborhoods throughout the area including Settlers Ridge, Grande Park, and Lakewood Falls. We understand the specific challenges that come with Illinois winters, and our deep cleaning process is built around them.</p>
@@ -860,9 +858,9 @@ export const blogPosts: BlogPost[] = [
 <h3>Bathrooms</h3>
 <ul>
   <li>Scrub the toilet inside and out, including the base and behind the tank</li>
-  <li>Deep scrub the shower or tub: pay close attention to grout lines and tile; remove all soap scum, mildew, or hard water buildup</li>
+  <li>Deep scrub the shower or tub: pay close attention to grout lines and tile; remove all soap scum and mildew</li>
   <li>Clean shower doors and tracks; these are checked on every inspection</li>
-  <li>Polish faucets, handles, and shower fixtures to remove water spots</li>
+  <li>Polish faucets, handles, and shower fixtures</li>
   <li>Clean the mirror completely streak-free</li>
   <li>Wipe the vanity, sink basin, and countertop</li>
   <li>Clean inside all bathroom cabinets and shelves</li>
@@ -885,7 +883,7 @@ export const blogPosts: BlogPost[] = [
 <ul>
   <li>Inside the washer and dryer: clean the drum and door seal; remove all lint trap debris</li>
   <li>Air vents and return registers: remove covers and wipe down both sides</li>
-  <li>The laundry room floor and the area behind the washer and dryer</li>
+  <li>The laundry room floor and the outside of the washer and dryer</li>
   <li>Garage floor: sweep thoroughly and address any oil or fluid stains</li>
   <li>Patio or back deck: sweep and wipe down railings</li>
   <li>All personal items and trash removed from every closet, cabinet, and storage area</li>
@@ -981,7 +979,7 @@ export const blogPosts: BlogPost[] = [
 <h2>When to Call a Professional vs. DIY Your Spring Clean</h2>
 <p>Not everything on this list requires professional help. Some tasks are well within reach for most homeowners. But knowing when to bring in a pro saves you time, effort, and frustration.</p>
 <p><strong>DIY is perfectly fine for:</strong> day-to-day tidying, light dusting, routine vacuuming and mopping, wiping down counters, and decluttering. These are the standard maintenance tasks that fit easily into a normal week. If you'd rather hand that off entirely, our <a href="/recurring-cleaning" class="text-brand-green font-semibold hover:underline">recurring maid service</a> keeps your home consistently clean between deep cleans on a weekly, biweekly, or monthly schedule.</p>
-<p><strong>Call a professional for:</strong> a full spring deep clean, scrubbing grout and tile, cleaning inside the microwave, wiping down all baseboards and ceiling fans, removing allergens and pet dander thoroughly, or simply if you want the entire home done properly in a single day without clearing your whole weekend. Our <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning service</a> covers every item on this checklist, and then some.</p>
+<p><strong>Call a professional for:</strong> a full spring deep clean, scrubbing grout and tile, cleaning inside the microwave, wiping down all baseboards and ceiling fans, removing allergens and pet dander thoroughly, or simply if you want the entire home done properly in a single day without clearing your whole weekend. Our <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning service</a> takes the scrubbing off this list: grout, baseboards, door frames, light fixtures and inside window glass.</p>
 
 <h2>DSM Cleaning Solutions: Your Spring Cleaning Partner in Romeoville &amp; Plainfield</h2>
 <p>We're a family-owned cleaning company based in Romeoville (60446), and we've built our reputation one clean home at a time across Will County. In Romeoville, we regularly clean homes in Lakewood Falls, Windstone, Hidden Lakes, and Grand Haven. In Plainfield (60544 and 60585), our customers include homeowners in Settlers Ridge, Grande Park, Lakewood Falls, and Springbank. We're also familiar with the homes near Isle a la Cache and Township Park areas throughout the region.</p>
@@ -1006,11 +1004,11 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Deep Cleaning vs. Standard Cleaning: The Key Difference</h2>
 <p>Before diving into the checklist, it's worth drawing a clear line. <a href="/recurring-cleaning" class="text-brand-green font-semibold hover:underline">Recurring cleaning</a> is maintenance: it keeps a clean home clean. Vacuuming, mopping, wiping counters, cleaning toilets and sinks, and dusting visible surfaces are all part of the routine. It's fast, efficient, and designed to be repeated weekly or biweekly.</p>
-<p>A <strong>deep clean</strong> is different. It's a reset: the kind of thorough cleaning that a home needs periodically to address the buildup that routine maintenance can't touch. Deep cleaning takes significantly more time, covers more surfaces, and involves detail work: scrubbing grout, wiping down baseboards and door frames, removing calcium deposits, and reaching the spots that standard cleaning skips entirely.</p>
+<p>A <strong>deep clean</strong> is different. It's a reset: the kind of thorough cleaning that a home needs periodically to address the buildup that routine maintenance can't touch. Deep cleaning takes significantly more time, covers more surfaces, and involves detail work: scrubbing grout, wiping down baseboards and door frames, cleaning light fixtures, and reaching the spots that standard cleaning skips entirely.</p>
 <p>Most cleaning professionals recommend a deep clean at least once or twice a year, with <a href="/recurring-cleaning" class="text-brand-green font-semibold hover:underline">recurring standard cleaning</a> in between to maintain results. It's especially important after a long Illinois winter, when months of closed windows, forced-air heat, and road salt tracked inside have left residue on nearly every surface.</p>
 
 <h2>Kitchen Deep Cleaning Checklist</h2>
-<p>The kitchen is typically the most labor-intensive room in a deep clean. Grease, food splatter, and buildup accumulate behind appliances in ways that routine cleaning never addresses.</p>
+<p>The kitchen is typically the most labor-intensive room in a deep clean. Grease and food splatter bake onto the stovetop, burners and hood vent, and it takes degreasing, not a quick wipe, to get them off.</p>
 <ul>
   <li>Clean inside the microwave: walls, ceiling, turntable, and door seal</li>
   <li>Degrease the stovetop, burner grates, drip pans, and control knobs</li>
@@ -1018,8 +1016,8 @@ export const blogPosts: BlogPost[] = [
   <li>Wipe down the exterior of all appliances including the dishwasher, refrigerator, and microwave</li>
   <li>Clean cabinet exteriors: fronts, handles, and tops of upper cabinets</li>
   <li>Degrease the range hood and clean the filter</li>
-  <li>Scrub the sink basin, faucet, and drain area; remove mineral deposits</li>
-  <li>Clean and disinfect countertops thoroughly, including under small appliances</li>
+  <li>Scrub the sink basin, faucet, and drain area</li>
+  <li>Clean and disinfect countertops thoroughly</li>
   <li>Wipe down backsplash tile and grout</li>
   <li>Clean window sills and inside glass in the kitchen</li>
   <li>Dust and wipe light fixtures and ceiling fan blades (if present)</li>
@@ -1027,13 +1025,13 @@ export const blogPosts: BlogPost[] = [
 </ul>
 
 <h2>Bathroom Deep Cleaning Checklist</h2>
-<p>Bathrooms build up soap scum, hard water deposits, and mildew in the grout that standard cleaning routines can't fully eliminate. A deep clean restores them to a level of cleanliness that's hard to achieve without professional products and technique.</p>
+<p>Bathrooms build up soap scum and mildew in the grout that standard cleaning routines can't fully eliminate. A deep clean restores them to a level of cleanliness that's hard to achieve without professional products and technique.</p>
 <ul>
   <li>Scrub tile walls and grout lines in the shower and tub area</li>
-  <li>Remove soap scum and hard water deposits from shower doors and tracks</li>
+  <li>Remove soap scum from shower doors and tracks</li>
   <li>Clean and disinfect the shower floor and corners</li>
   <li>Deep clean the bathtub: jets, overflow drain, and all surfaces</li>
-  <li>Descale and scrub the toilet inside and out, including the base and behind the tank</li>
+  <li>Scrub the toilet inside and out, including the base and behind the tank</li>
   <li>Clean and disinfect the sink, faucet, and surrounding countertop</li>
   <li>Wipe down cabinet exteriors</li>
   <li>Clean the bathroom mirror and any mirrored cabinet doors</li>
@@ -1053,7 +1051,7 @@ export const blogPosts: BlogPost[] = [
   <li>Vacuum under the bed and along all baseboards</li>
   <li>Wipe down baseboards and window sills</li>
   <li>Clean light switches and door handles</li>
-  <li>Vacuum and spot-clean upholstered furniture as needed</li>
+  <li>Vacuum upholstered furniture</li>
   <li>Vacuum floors thoroughly, including closet floors</li>
   <li>Mop hard floors (if applicable)</li>
 </ul>
@@ -1099,12 +1097,12 @@ export const blogPosts: BlogPost[] = [
 <p>If you need any of these items addressed, just ask. We can often accommodate add-ons with advance notice. For homes preparing for a sale or lease, our <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning service</a> is designed specifically for that scenario and covers an even more detailed scope.</p>
 
 <h2>How Long Does a Deep House Cleaning Take?</h2>
-<p>Most deep cleans take between 4 and 8 hours depending on the size of the home, the number of bathrooms, and how long it's been since the last professional clean. A 3-bedroom, 2-bathroom home in typical condition typically takes 5–6 hours for our team. Homes that haven't been professionally deep cleaned in over a year may take longer due to built-up grease, soap scum, and mineral deposits.</p>
+<p>Most deep cleans take between 4 and 8 hours depending on the size of the home, the number of bathrooms, and how long it's been since the last professional clean. A 3-bedroom, 2-bathroom home in typical condition typically takes 5–6 hours for our team. Homes that haven't been professionally deep cleaned in over a year may take longer due to built-up grease and soap scum.</p>
 <p>Our pricing is flat-rate, so you'll always know what you're paying before we arrive. Visit our <a href="/pricing" class="text-brand-green font-semibold hover:underline">pricing page</a> to see exact rates by home size.</p>
 
 <h2>Frequently Asked Questions</h2>
 <h3>What is included in a professional deep house cleaning?</h3>
-<p>A professional deep house cleaning covers every room in the house, including cleaning inside the microwave, scrubbing tile grout and shower walls, removing soap scum and hard water deposits, wiping down baseboards and door frames, cleaning ceiling fans and light fixtures, and vacuuming and mopping all floors. The refrigerator is cleaned on the outside only. Cleaning inside the oven or inside the kitchen cabinets is an add-on. It goes significantly further than a standard recurring clean.</p>
+<p>A professional deep house cleaning covers every room in the house, including cleaning inside the microwave, scrubbing tile grout and shower walls, removing soap scum and mildew, wiping down baseboards and door frames, cleaning ceiling fans and light fixtures, and vacuuming and mopping all floors. The refrigerator is cleaned on the outside only. Cleaning inside the oven or inside the kitchen cabinets is an add-on. It goes significantly further than a standard recurring clean.</p>
 
 <h3>How long does a deep house cleaning take?</h3>
 <p>Most deep house cleanings take between 4 and 8 hours, depending on the size of the home, number of bathrooms, and the current condition. A typical 3-bedroom, 2-bathroom home takes approximately 5 to 6 hours. Homes that haven't been professionally cleaned in over a year may require additional time.</p>

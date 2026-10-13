@@ -203,8 +203,8 @@ export default function BlogPostPage() {
 
           <h2>Step 3: Point Out Any Problem Areas</h2>
           <p>
-            If you know there are specific areas of concern (a stained bathtub,
-            heavy grease buildup in the oven, marks on walls), let us know when
+            If you know there are specific areas of concern (a stained bathtub
+            or heavy grease buildup in the oven), let us know when
             you book. We&apos;ll make sure those areas get extra attention. Our
             48-hour satisfaction guarantee means if your landlord flags something
             after we clean, we come back and re-clean it free of charge.

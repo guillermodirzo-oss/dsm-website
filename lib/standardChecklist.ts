@@ -1,10 +1,24 @@
 /**
  * The standard cleaning checklist: what happens on every standard and
- * recurring visit. /recurring-cleaning and the recurring city pages
- * (/recurring-cleaning-{city}-il) both render this list, so they can never
- * disagree. Do not add items here that the team does not do every visit.
- * Inside the oven and inside the refrigerator are never part of a standard
- * clean. Both are add-ons, and both are always included with move-out cleaning.
+ * recurring visit. The owner confirmed it in October 2026. This file is the
+ * single source of truth for what a standard or recurring clean includes.
+ *
+ * /recurring-cleaning, the recurring city pages
+ * (/recurring-cleaning-{city}-il) and /cleaning-checklist render
+ * STANDARD_CHECKLIST. The city hubs, /one-time-cleaning and
+ * /apartment-cleaning render the short version, STANDARD_HIGHLIGHTS. No page
+ * types its own list, so they can never disagree.
+ *
+ * Do not add items here that the team does not do every visit, and never
+ * add anything from the "not offered" list in CONTEXT.md (spot-cleaning
+ * walls, cleaning behind or under appliances, caulking, removing calcium or
+ * hard water deposits).
+ *
+ * Inside the oven, inside the refrigerator and inside the kitchen cabinets
+ * are never part of a standard clean. All three are add-ons, and all three
+ * are always included with move-out cleaning.
+ *
+ * What a deep clean adds on top of this list is in lib/deepChecklist.ts.
  */
 export interface ChecklistRoom {
   room: string;
@@ -17,8 +31,12 @@ export const STANDARD_CHECKLIST: ChecklistRoom[] = [
     items: [
       "Dust ceiling fans and remove cobwebs",
       "Dust window sills and ledges (inside)",
-      "Wipe mirrors and light switches",
+      "Dust furniture",
       "Dust blinds",
+      "Make beds",
+      "Vacuum upholstery",
+      "Wipe mirrors and light switches",
+      "Wipe door handles",
       "Vacuum carpet and hard floors",
       "Mop hard floors",
     ],
@@ -62,4 +80,22 @@ export const STANDARD_CHECKLIST: ChecklistRoom[] = [
       "Take out trash",
     ],
   },
+];
+
+/**
+ * The short version of the list above, for the compact "what's included"
+ * cards on the city hubs, /one-time-cleaning and /apartment-cleaning. Every
+ * line is something on STANDARD_CHECKLIST. Nothing here is deep cleaning only.
+ */
+export const STANDARD_HIGHLIGHTS: string[] = [
+  "Vacuum carpet and hard floors",
+  "Mop hard floors",
+  "Clean and sanitize bathrooms (toilet, sink, shower and tub)",
+  "Wipe kitchen countertops and appliance exteriors",
+  "Clean microwave inside and out",
+  "Wipe cabinet fronts",
+  "Dust furniture, ceiling fans, blinds and window sills",
+  "Wipe mirrors, light switches and door handles",
+  "Make beds and vacuum upholstery",
+  "Take out trash and recycling",
 ];
