@@ -40,7 +40,7 @@ const faqs = [
   {
     question: "What is included in deep cleaning in Naperville?",
     answer:
-      "Our Naperville deep cleaning covers everything in a standard clean plus: inside the microwave, the refrigerator exterior, scrubbing grout and tile, wiping all baseboards and door frames, cleaning ceiling fans and light fixtures, washing window sills and inside glass, scrubbing bathroom fixtures and shower doors, and detail-cleaning areas that are skipped in routine visits. Cleaning inside the oven or inside the kitchen cabinets is an add-on.",
+      "Our Naperville deep cleaning covers everything in a standard clean plus: scrubbing grout and tile, wiping all baseboards, doors and door frames, cleaning light fixtures, cleaning inside window glass, vacuuming under and behind furniture, and detail-cleaning areas that are skipped in routine visits. Cleaning inside the oven or inside the kitchen cabinets is an add-on.",
   },
   {
     question: "How long does a deep clean take in Naperville?",
@@ -290,12 +290,15 @@ export default function DeepCleaningCostNapervillePage() {
               <tbody className="divide-y divide-gray-100">
                 {[
                   { feature: "Starting price (2 bed / 1 bath)", standard: STANDARD_2_BED, deep: DEEP_2_BED },
-                  { feature: "Inside the microwave", standard: "✗", deep: "✓" },
+                  // The Standard column follows lib/standardChecklist.ts.
+                  // Inside the microwave is on it. Baseboards, light fixtures
+                  // and inside window glass are not.
+                  { feature: "Inside the microwave", standard: "✓", deep: "✓" },
                   { feature: "Grout scrubbing", standard: "✗", deep: "✓" },
-                  { feature: "Baseboard detail cleaning", standard: "Light wipe", deep: "Full scrub" },
-                  { feature: "Ceiling fans & fixtures", standard: "✗", deep: "✓" },
+                  { feature: "Baseboard detail cleaning", standard: "✗", deep: "Full scrub" },
+                  { feature: "Light fixtures", standard: "✗", deep: "✓" },
                   { feature: "Cabinets", standard: "Fronts only", deep: "Fronts only" },
-                  { feature: "Window sills and inside glass", standard: "✗", deep: "✓" },
+                  { feature: "Inside window glass", standard: "✗", deep: "✓" },
                   { feature: "Estimated time (2 bed / 1 bath)", standard: "2–3 hours", deep: "4–6 hours" },
                   { feature: "Best for", standard: "Regular maintenance", deep: "First clean, seasonal reset" },
                 ].map((row) => (

@@ -27,7 +27,7 @@ const faqs = [
   {
     question: "What is the difference between standard and deep cleaning?",
     answer:
-      "Standard cleaning covers the routine tasks needed to maintain a home that is already reasonably clean: surfaces, floors, bathrooms, and kitchen exteriors. Deep cleaning goes significantly further: inside the microwave, grout scrubbing, baseboards, window sills, ceiling fans, vents, and behind/underneath furniture. Standard cleaning keeps a clean home clean. Deep cleaning restores a home that has fallen behind or needs a true reset.",
+      "Standard cleaning covers the routine tasks needed to maintain a home that is already reasonably clean: surfaces, floors, bathrooms, and kitchen exteriors. Deep cleaning goes significantly further: grout scrubbing, baseboards, doors and door frames, light fixtures, inside window glass, and behind/underneath furniture. Standard cleaning keeps a clean home clean. Deep cleaning restores a home that has fallen behind or needs a true reset.",
   },
   {
     question: "Should my first clean be a deep clean?",
@@ -104,18 +104,26 @@ const comparisonRows = [
   { feature: "Dust furniture & surfaces", standard: "✓", deep: "✓" },
   { feature: "Empty trash", standard: "✓", deep: "✓" },
   { feature: "Cabinet fronts wiped", standard: "✓", deep: "✓" },
-  { feature: "Inside microwave", standard: "✗", deep: "✓" },
+  // The Standard column follows lib/standardChecklist.ts. The next four rows
+  // are on that checklist, so both columns get a check. Never mark them as
+  // deep cleaning only.
+  { feature: "Inside microwave", standard: "✓", deep: "✓" },
+  { feature: "Refrigerator exterior", standard: "✓", deep: "✓" },
+  { feature: "Window sills dusted", standard: "✓", deep: "✓" },
+  { feature: "Ceiling fans dusted", standard: "✓", deep: "✓" },
   { feature: "Inside oven", standard: "Add-on", deep: "Add-on" },
-  { feature: "Refrigerator exterior detail", standard: "✗", deep: "✓" },
-  { feature: "Baseboard scrubbing", standard: "Light wipe", deep: "Full scrub" },
-  { feature: "Window sills and inside glass", standard: "✗", deep: "✓" },
-  { feature: "Ceiling fans & light fixtures", standard: "✗", deep: "✓" },
+  // Not on the standard checklist: baseboards, inside window glass, light
+  // fixtures, grout, door frames.
+  { feature: "Baseboard scrubbing", standard: "✗", deep: "Full scrub" },
+  { feature: "Inside window glass", standard: "✗", deep: "✓" },
+  { feature: "Light fixtures", standard: "✗", deep: "✓" },
   { feature: "Grout scrubbing", standard: "✗", deep: "✓" },
   // Inside kitchen cabinets is an add-on for both. Only move-in and move-out
   // cleaning includes cabinet interiors.
   { feature: "Inside kitchen cabinets", standard: "Add-on", deep: "Add-on" },
   { feature: "Door frames detail", standard: "✗", deep: "✓" },
-  { feature: "Vents & registers", standard: "✗", deep: "✓" },
+  // A standard clean dusts the reachable vents in the kitchen and bathrooms.
+  { feature: "Vents & registers", standard: "Kitchen & bath vents", deep: "✓" },
   { feature: "Starting price (2 bed/1 bath)", standard: STANDARD_2_BED, deep: DEEP_2_BED },
   { feature: "Typical duration (2 bed/1 bath)", standard: "2–3 hrs", deep: "4–6 hrs" },
   { feature: "Recommended frequency", standard: "Weekly – monthly", deep: "Seasonally (2–4×/yr)" },
@@ -205,8 +213,8 @@ export default function StandardVsDeepCleaningPage() {
               <p className="text-white/80 leading-relaxed mb-4">
                 Deep cleaning is a detailed service that goes significantly beyond
                 routine maintenance. It covers everything in a standard clean plus the areas that
-                accumulate buildup over time: inside the microwave, grout lines, baseboards, window sills,
-                ceiling fans, vents, and more.
+                accumulate buildup over time: grout lines, baseboards, door frames, light fixtures,
+                inside window glass, and more.
               </p>
               <p className="text-white/80 leading-relaxed">
                 Deep cleaning is the right choice when your home needs a true reset: before starting

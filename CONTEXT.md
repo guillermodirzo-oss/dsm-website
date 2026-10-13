@@ -86,13 +86,16 @@ To renew or end an offer, change its last day in `lib/offers.ts`. To add one, ad
 To see the site as it will look after an offer ends, build locally with a fake clock: `NEXT_PUBLIC_OFFER_NOW=2026-12-01T12:00:00-06:00 npm run build`. Never set that variable in Vercel.
 
 ## Checklist Facts
+- `lib/standardChecklist.ts` is the source of truth for what a standard or recurring clean includes. Every sentence, list and comparison table that says what a standard, regular, recurring, routine or weekly clean does or skips has to agree with it.
+- A standard clean includes all of these, so never describe one as skipped by a standard clean or as a deep cleaning extra: inside the microwave, the refrigerator exterior, the stove and oven exterior, the hood, countertops, cabinet fronts, sinks and fixtures, the toilet and toilet area, soap scum and mildew in the shower and tub, mirrors and light switches, ceiling fans, window sills, blinds, and the reachable vents in the kitchen and bathrooms.
+- Deep cleaning only (on the deep checklist, not on the standard one): baseboards, doors and door frames, grout, vacuuming under and behind furniture, inside window glass, and light fixtures. These are the only things copy may name as skipped by a standard clean. Never write that a standard or recurring clean covers them.
 - Windows means sills and inside glass only. We never clean window tracks. (Shower door tracks are fine.)
 - Deep cleaning includes the refrigerator exterior only.
 - Move-out cleaning includes the refrigerator inside and out.
 - Every service (standard, recurring, deep, move-in/move-out) wipes cabinet FRONTS. Never list cabinet fronts among the things a standard or recurring clean skips.
 - Only move-in/move-out cleans the INSIDE of cabinets as part of the service. Never write "cabinet interiors", "inside cabinets" or "inside and out" as included in a deep or standard clean.
 - "Inside kitchen cabinets" is a real add-on customers can choose in the BookingKoala form for standard and deep cleans. It is kitchen cabinets only: bathroom vanities and drawers are not an add-on, so never mention them as one. Where a page lists add-ons, write "Inside kitchen cabinets (add-on)".
-- For a deep clean, "inside appliances" means inside the microwave only. Write "inside the microwave". Inside the oven and inside the refrigerator are add-ons.
+- For a deep clean, "inside appliances" means inside the microwave only. Write "inside the microwave". Inside the oven and inside the refrigerator are add-ons. A standard clean includes the inside of the microwave too, so it is never what sets a deep clean apart.
 - Deep cleaning does NOT include cleaning inside the oven. Inside oven cleaning is an add-on. Never write that a deep clean "gets inside the oven" or list the oven interior on a deep cleaning checklist. The oven exterior is fine.
 - During FALL75 (`lib/offers.ts`), inside oven cleaning is added free with a deep clean. That claim must only appear while FALL75 is active: put it inside `<Offer service="deep">`, and give it a fallback that does not mention the oven (or no fallback at all).
 - Move-in and move-out cleaning ALWAYS includes inside the oven (and inside the refrigerator). It is never an add-on there.

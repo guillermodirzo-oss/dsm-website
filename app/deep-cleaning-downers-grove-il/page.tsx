@@ -266,7 +266,7 @@ export default function DeepCleaningDownersGrovePage() {
             <div className="bg-gray-50 rounded-xl p-6">
               <h3 className="font-bold text-gray-800 mb-2">We Cover What Others Skip</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Grout lines, baseboards, ceiling fans, under furniture, window sills. Our deep clean gets into every corner that standard cleaning leaves behind.
+                Grout lines, baseboards, door frames, under furniture, light fixtures. Our deep clean gets into every corner that standard cleaning leaves behind.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">

@@ -326,7 +326,7 @@ export const blogPosts: BlogPost[] = [
     content: `<p>These two services sound similar but they're not the same thing. A <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> and a <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning</a> both go further than a regular visit, but they're built for different situations. Book the wrong one and you might end up short on what you actually need. This post breaks down exactly what each covers, where they differ, and how to pick the right one.</p>
 
 <h2>What Is a Deep Cleaning?</h2>
-<p>A deep cleaning is a thorough one-time clean for a home you're living in. It goes well beyond what a regular maintenance visit covers. Baseboards, ceiling fans, window sills, and grout lines in the bathroom all get addressed, not just the easy-to-reach surfaces. Cleaning inside the oven or inside the kitchen cabinets is an add-on.</p>
+<p>A deep cleaning is a thorough one-time clean for a home you're living in. It goes well beyond what a regular maintenance visit covers. Baseboards, door frames, light fixtures, and grout lines in the bathroom all get addressed, not just the easy-to-reach surfaces. Cleaning inside the oven or inside the kitchen cabinets is an add-on.</p>
 <p>People book deep cleans for a lot of different reasons. Moving into a new place and wanting it professionally cleaned before unpacking. The home hasn't had a real professional clean in six months or more. A seasonal reset before winter or spring. Hosting guests for a holiday or an event. Whatever the reason, a deep cleaning brings the home to a level that regular maintenance cleaning doesn't reach.</p>
 
 <h2>What Is a Move-Out Cleaning?</h2>
@@ -450,7 +450,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>What Type of Cleaning Do You Actually Need?</h2>
 <p>There are three main types of cleaning service, and figuring out which one fits your situation makes the rest of the process straightforward.</p>
-<p>A <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> is the right starting point for most first-time clients. If your home hasn't been professionally cleaned before, a deep clean gets everything to a solid baseline. It covers areas that routine cleaning skips: baseboards, grout lines, ceiling fans, and every surface in every room. It takes longer and costs more than a regular visit, but it sets the home up properly.</p>
+<p>A <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> is the right starting point for most first-time clients. If your home hasn't been professionally cleaned before, a deep clean gets everything to a solid baseline. It covers areas that routine cleaning skips: baseboards, grout lines, door frames, and the floor under the furniture. It takes longer and costs more than a regular visit, but it sets the home up properly.</p>
 <p><a href="/recurring-cleaning" class="text-brand-green font-semibold hover:underline">Recurring cleaning</a> is what most clients move to after that first deep clean. You pick a schedule (weekly, bi-weekly, or monthly) and the team keeps the home at the level the deep clean established. These visits are faster and less expensive per appointment because the home stays in better shape between them.</p>
 <p><a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">Move-out cleaning</a> is a separate service for people moving out of a home or apartment. It includes everything in a deep clean plus the refrigerator interior and other areas landlords check before returning a deposit. If that's your situation, that's the right service to book.</p>
 
@@ -508,7 +508,7 @@ export const blogPosts: BlogPost[] = [
 <p>Kitchen cabinet exteriors are right next to where you cook, so they collect cooking grease, steam, and fingerprints constantly. Over time the residue builds up into a film that doesn't come off with a quick wipe. If running your hand across a cabinet front feels tacky, or the finish looks dull and coated, it's past time for a proper clean. A deep cleaning visit scrubs cabinet exteriors to get them back to how they're supposed to feel.</p>
 
 <h2>5. There's Dust on Your Ceiling Fans and Baseboards</h2>
-<p>Ceiling fans and baseboards are skipped during most routine cleaning visits. They're easy to miss, easy to forget, and the dust that collects on them doesn't bother anyone until it does. If your ceiling fan throws dust when you switch it on, or you can see a visible layer along your baseboards, those are signs that the home needs more than maintenance. A deep clean gets into both specifically, by hand, so they're actually clean and not just quickly wiped.</p>
+<p>Baseboards are skipped during most routine cleaning visits, and ceiling fans are one of the first things people skip when they clean on their own. They're easy to miss, easy to forget, and the dust that collects on them doesn't bother anyone until it does. If your ceiling fan throws dust when you switch it on, or you can see a visible layer along your baseboards, those are signs that the home needs more than maintenance. A deep clean gets into both specifically, by hand, so they're actually clean and not just quickly wiped.</p>
 
 <h2>6. The Home Smells a Little Off Even After Cleaning</h2>
 <p>Lingering odors after a clean are a sign that the source hasn't been addressed. Regular cleaning freshens surfaces, but odors that stick around usually come from buildup in places that don't get cleaned on a routine schedule. Buildup around drains. Residue in trash areas. Grout that's holding mildew. A deep clean finds and addresses those sources instead of cleaning around them. If the smell comes back quickly after a regular visit, the underlying issue hasn't been touched.</p>
@@ -654,7 +654,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Eco-Friendly Doesn't Mean Less Effective</h2>
 <p>The most common objection we hear is: "Do green products actually clean as well?" The answer is yes, when properly formulated. The misconception comes from early-generation "natural" products that genuinely underperformed. Today's professional-grade eco-friendly cleaning formulas use enzyme-based chemistry, plant-derived surfactants, and concentrated active ingredients that cut through grease, soap scum, and bacteria just as effectively as conventional alternatives. The difference is what's left behind: clean surfaces without the chemical residue, and no harsh fumes during or after the clean.</p>
-<p>When you book a <a href="/recurring-cleaning" class="text-brand-green font-semibold hover:underline">recurring cleaning in Romeoville</a> or a <a href="/deep-cleaning-romeoville-il" class="text-brand-green font-semibold hover:underline">deep cleaning in Romeoville</a> with DSM, you're getting the same thorough clean (grout lines, baseboards, bathroom tile) with products that are safe to be around as soon as we leave.</p>
+<p>When you book a <a href="/recurring-cleaning" class="text-brand-green font-semibold hover:underline">recurring cleaning in Romeoville</a> with DSM, you're getting a thorough clean (countertops, sinks, showers and tubs, floors) with products that are safe to be around as soon as we leave. Grout scrubbing and baseboards are part of a <a href="/deep-cleaning-romeoville-il" class="text-brand-green font-semibold hover:underline">deep cleaning in Romeoville</a>, done with the same products.</p>
 
 <h2>Indoor Air Quality Is Part of the Story</h2>
 <p>Most Romeoville homeowners don't think of their cleaning service as something that affects indoor air quality, but it does. Conventional cleaning products release VOCs into the air during use, some of which persist for hours or even days after application. In tightly sealed Illinois homes during winter months, when windows stay shut for weeks at a time, VOC buildup from cleaning products can meaningfully degrade indoor air quality. Families with asthma, seasonal allergies, or anyone sensitive to strong smells will often notice the difference immediately when switching to a genuinely non-toxic service.</p>
@@ -743,7 +743,7 @@ export const blogPosts: BlogPost[] = [
     author: "DSM Cleaning Solutions",
     excerpt:
       "Scheduling a professional deep clean? A little preparation goes a long way. Follow these five simple steps to get the most out of your DSM Cleaning Solutions deep clean.",
-    content: `<p>Knowing <strong>how to prepare for deep cleaning</strong> before your professional team arrives is one of the simplest ways to get dramatically better results. A deep clean goes far beyond your regular routine: our team will be scrubbing grout lines, cleaning inside the microwave, wiping down baseboards, and reaching areas that standard cleaning skips entirely. But a few quick steps on your end before we arrive can help us work faster, clean more thoroughly, and focus on what matters most in your home.</p>
+    content: `<p>Knowing <strong>how to prepare for deep cleaning</strong> before your professional team arrives is one of the simplest ways to get dramatically better results. A deep clean goes far beyond your regular routine: our team will be scrubbing grout lines, wiping down baseboards and door frames, and reaching areas that standard cleaning skips entirely. But a few quick steps on your end before we arrive can help us work faster, clean more thoroughly, and focus on what matters most in your home.</p>
 
 <h2>Step 1: Declutter Before Cleaners Arrive</h2>
 <p>The single most impactful thing you can do is remove clutter from surfaces, floors, and countertops before your appointment. Our team is trained to clean, not sort through personal belongings. When floors are clear, we can vacuum and mop every inch. When shelves and surfaces are clear, we can actually wipe and disinfect them rather than just clean around your items. Pick up toys, shoes, stacks of mail, and anything else sitting on the floor or tabletops. Think of it as clearing the runway so we can move fast and clean deep.</p>
@@ -793,7 +793,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Standard Cleaning vs. Deep Cleaning: What's the Difference?</h2>
 <p>Before diving into frequency, it helps to understand what sets a deep clean apart from your regular routine. <a href="/recurring-cleaning" class="text-brand-green font-semibold hover:underline">Recurring cleaning</a> is maintenance: it covers the basics you do weekly or biweekly: vacuuming, mopping, wiping down counters, cleaning bathrooms, and taking out the trash. It keeps your home looking presentable on a day-to-day basis.</p>
-<p><a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">Our deep cleaning service</a> goes several layers further. It tackles everything standard cleaning skips: scrubbing grout lines, cleaning inside the microwave and behind appliances, wiping down baseboards and door frames, dusting ceiling fans and light fixtures, and washing window sills and inside glass. If standard cleaning is the upkeep, deep cleaning is the reset, and every home needs it periodically to stay truly clean and healthy.</p>
+<p><a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">Our deep cleaning service</a> goes several layers further. It tackles everything standard cleaning skips: scrubbing grout lines, cleaning behind appliances, wiping down baseboards and door frames, dusting light fixtures, and cleaning the inside window glass. If standard cleaning is the upkeep, deep cleaning is the reset, and every home needs it periodically to stay truly clean and healthy.</p>
 
 <h2>How Often Should You Deep Clean? A Seasonal Guide for Illinois Homes</h2>
 <p>Most professional cleaners and home care experts recommend deep cleaning your home two to four times per year. For Illinois homeowners specifically, aligning those deep cleans with the seasons makes the most sense given our climate.</p>
@@ -816,7 +816,7 @@ export const blogPosts: BlogPost[] = [
 </ul>
 
 <h2>What's Included in a Professional Deep Clean?</h2>
-<p>When DSM Cleaning Solutions performs a deep clean, we cover the areas that standard cleaning skips entirely. That means scrubbing grout in bathrooms and kitchens, cleaning inside the microwave, pulling out appliances to clean behind them, dusting and wiping all baseboards, cleaning ceiling fans and light fixtures, washing window sills and inside glass, and sanitizing all high-touch surfaces throughout the home. Cleaning inside the oven or inside the kitchen cabinets is an add-on. We bring everything needed and use non-toxic, eco-friendly products that are safe for children and pets. Learn more about what to expect from <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">our deep cleaning service</a>.</p>
+<p>When DSM Cleaning Solutions performs a deep clean, we cover the areas that standard cleaning skips entirely. That means scrubbing grout in bathrooms and kitchens, pulling out appliances to clean behind them, dusting and wiping all baseboards, wiping doors and door frames, cleaning light fixtures, and cleaning the inside window glass. Cleaning inside the oven or inside the kitchen cabinets is an add-on. We bring everything needed and use non-toxic, eco-friendly products that are safe for children and pets. Learn more about what to expect from <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">our deep cleaning service</a>.</p>
 
 <h2>Why Plainfield & Romeoville Homeowners Trust DSM Cleaning Solutions</h2>
 <p>DSM Cleaning Solutions is a family-owned cleaning company based in Romeoville, Illinois. We serve all Plainfield zip codes (60544 and 60585), as well as Romeoville (60446) and the surrounding southwest suburbs. Our team knows these communities personally, and we've cleaned homes in neighborhoods throughout the area including Settlers Ridge, Grande Park, and Lakewood Falls. We understand the specific challenges that come with Illinois winters, and our deep cleaning process is built around them.</p>
@@ -941,7 +941,7 @@ export const blogPosts: BlogPost[] = [
   <li>Scrub tile grout thoroughly: closed-up homes during winter create humidity conditions that accelerate mold and mildew growth in grout lines</li>
   <li>Clean the exhaust fan (remove the cover and vacuum dust from the motor): a dust-clogged fan runs less effectively and circulates allergens</li>
   <li>Check caulking around the tub and shower: cracking or discolored caulk should be replaced to prevent water damage</li>
-  <li>Deep scrub the toilet base and the area behind the toilet, which is frequently missed during regular cleaning</li>
+  <li>Deep scrub the toilet base and the area behind the toilet</li>
 </ul>
 
 <h3>Bedrooms &amp; Living Areas</h3>
@@ -1006,11 +1006,11 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Deep Cleaning vs. Standard Cleaning: The Key Difference</h2>
 <p>Before diving into the checklist, it's worth drawing a clear line. <a href="/recurring-cleaning" class="text-brand-green font-semibold hover:underline">Recurring cleaning</a> is maintenance: it keeps a clean home clean. Vacuuming, mopping, wiping counters, cleaning toilets and sinks, and dusting visible surfaces are all part of the routine. It's fast, efficient, and designed to be repeated weekly or biweekly.</p>
-<p>A <strong>deep clean</strong> is different. It's a reset: the kind of thorough cleaning that a home needs periodically to address the buildup that routine maintenance can't touch. Deep cleaning takes significantly more time, covers more surfaces, and involves detail work: scrubbing grout, cleaning inside the microwave, wiping down baseboards, removing calcium deposits, and reaching the spots that standard cleaning skips entirely.</p>
+<p>A <strong>deep clean</strong> is different. It's a reset: the kind of thorough cleaning that a home needs periodically to address the buildup that routine maintenance can't touch. Deep cleaning takes significantly more time, covers more surfaces, and involves detail work: scrubbing grout, wiping down baseboards and door frames, removing calcium deposits, and reaching the spots that standard cleaning skips entirely.</p>
 <p>Most cleaning professionals recommend a deep clean at least once or twice a year, with <a href="/recurring-cleaning" class="text-brand-green font-semibold hover:underline">recurring standard cleaning</a> in between to maintain results. It's especially important after a long Illinois winter, when months of closed windows, forced-air heat, and road salt tracked inside have left residue on nearly every surface.</p>
 
 <h2>Kitchen Deep Cleaning Checklist</h2>
-<p>The kitchen is typically the most labor-intensive room in a deep clean. Grease, food splatter, and buildup accumulate behind appliances and on the range hood in ways that routine cleaning never addresses.</p>
+<p>The kitchen is typically the most labor-intensive room in a deep clean. Grease, food splatter, and buildup accumulate behind appliances in ways that routine cleaning never addresses.</p>
 <ul>
   <li>Clean inside the microwave: walls, ceiling, turntable, and door seal</li>
   <li>Degrease the stovetop, burner grates, drip pans, and control knobs</li>
@@ -1027,7 +1027,7 @@ export const blogPosts: BlogPost[] = [
 </ul>
 
 <h2>Bathroom Deep Cleaning Checklist</h2>
-<p>Bathrooms accumulate soap scum, hard water deposits, and mildew that standard cleaning routines can't fully eliminate. A deep clean restores them to a level of cleanliness that's hard to achieve without professional products and technique.</p>
+<p>Bathrooms build up soap scum, hard water deposits, and mildew in the grout that standard cleaning routines can't fully eliminate. A deep clean restores them to a level of cleanliness that's hard to achieve without professional products and technique.</p>
 <ul>
   <li>Scrub tile walls and grout lines in the shower and tub area</li>
   <li>Remove soap scum and hard water deposits from shower doors and tracks</li>
@@ -1110,7 +1110,7 @@ export const blogPosts: BlogPost[] = [
 <p>Most deep house cleanings take between 4 and 8 hours, depending on the size of the home, number of bathrooms, and the current condition. A typical 3-bedroom, 2-bathroom home takes approximately 5 to 6 hours. Homes that haven't been professionally cleaned in over a year may require additional time.</p>
 
 <h3>How is a deep clean different from a standard cleaning?</h3>
-<p>Standard cleaning is routine maintenance: vacuuming, mopping, wiping counters, and cleaning bathrooms. A deep clean is a comprehensive reset that includes inside the microwave, grout scrubbing, baseboard and door frame wiping, ceiling fans, and all the areas that get skipped during weekly cleanings. Deep cleans are recommended once or twice a year.</p>
+<p>Standard cleaning is routine maintenance: vacuuming, mopping, wiping counters, and cleaning bathrooms. A deep clean is a comprehensive reset that adds grout scrubbing, baseboard and door frame wiping, light fixtures, and the other areas that get skipped during weekly cleanings. Deep cleans are recommended once or twice a year.</p>
 
 <h3>How much does a deep house cleaning cost?</h3>
 <p>DSM Cleaning Solutions uses flat-rate pricing based on home size. Deep cleaning starts at ${DEEP_FROM} for a 1-bedroom home and ranges up to ${DEEP_TOP} for a 5-bedroom home. All rates are all-inclusive, no hidden fees. Visit our <a href="/pricing" class="text-brand-green font-semibold hover:underline">pricing page</a> for the full breakdown.</p>

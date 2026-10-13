@@ -290,7 +290,7 @@ export default function DeepCleaningBolingbrookPage() {
             <div className="bg-gray-50 rounded-xl p-6">
               <h3 className="font-bold text-gray-800 mb-2">The Work a Quick Clean Skips</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Baseboards, door frames, grout lines, ceiling fans and window sills all get done by hand. Every item on the checklist below gets done on every deep clean.
+                Baseboards, door frames and grout lines all get done by hand, and we vacuum under and behind the furniture. Every item on the checklist below gets done on every deep clean.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">

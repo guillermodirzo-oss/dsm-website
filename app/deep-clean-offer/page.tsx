@@ -40,16 +40,20 @@ const trustBullets = [
   },
 ];
 
+// These cards say what a regular clean skips, so they may only name things
+// that are on the deep checklist and NOT on the standard checklist
+// (lib/standardChecklist.ts): baseboards, doors and door frames, grout, the
+// floor under and behind furniture, inside window glass, light fixtures.
 const problemCards = [
   {
     icon: "🍳",
     title: "Kitchen Grease Buildup",
-    desc: "Cabinet tops, oven exterior, hood vents, and countertop surfaces collect grease all year. Regular cleaning skips them every time, and it builds up fast.",
+    desc: "Kitchen baseboards, door frames and the doors themselves collect grease all year. Regular cleaning skips them every time, and it builds up fast.",
   },
   {
     icon: "🤧",
     title: "Hidden Allergens",
-    desc: "Baseboards, window sills, ceiling fans, and under furniture collect dust, pet dander, and mold that weekly visits don't reach.",
+    desc: "Baseboards, door frames, and the floor under furniture collect dust and pet dander that weekly visits don't reach.",
   },
   {
     icon: "🚿",
@@ -68,14 +72,17 @@ const regularItems: { text: string; included: boolean }[] = [
   { text: "Clean bathroom surfaces", included: true },
   { text: "Wipe counters", included: true },
   { text: "Cabinet faces wiped", included: true },
+  // The next five are on the standard checklist (lib/standardChecklist.ts),
+  // so they are never shown as skipped.
+  { text: "Interior microwave", included: true },
+  { text: "Hood & light switches cleaned", included: true },
+  { text: "Soap scum & mildew removal", included: true },
+  { text: "Toilet area sanitized", included: true },
+  { text: "Sink & fixtures polished", included: true },
+  // Deep cleaning only.
   { text: "Baseboards hand-scrubbed", included: false },
   { text: "Door & door frames wiped", included: false },
-  { text: "Interior microwave", included: false },
-  { text: "Hood & light switches cleaned", included: false },
   { text: "Bathroom grout scrubbed", included: false },
-  { text: "Soap scum & mildew removal", included: false },
-  { text: "Toilet area sanitized", included: false },
-  { text: "Sink & fixtures polished", included: false },
 ];
 
 

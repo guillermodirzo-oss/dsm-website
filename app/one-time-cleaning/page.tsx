@@ -149,7 +149,7 @@ export default function OneTimeCleaningPage() {
                 {[
                   "Vacuum all floors, carpets & rugs", "Mop all hard surface floors", "Scrub & disinfect all bathrooms", "Clean & wipe down kitchen counters",
                   "Clean sink & fixtures", "Wipe exterior of all appliances", "Dust furniture, shelves & blinds", "Empty all trash bins",
-                  "Clean mirrors & glass surfaces", "Wipe light switches & door handles", "Clean window sills & baseboards", "Optional add-ons available",
+                  "Clean mirrors & glass surfaces", "Wipe light switches & door handles", "Dust window sills & ledges", "Optional add-ons available",
                 ].map(item => (
                   <div key={item} className="flex items-center gap-3 text-sm text-gray-700 py-1.5 border-b border-gray-100">
                     <svg className="w-4 h-4 text-brand-green flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>{item}

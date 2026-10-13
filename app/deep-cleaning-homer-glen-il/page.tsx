@@ -228,7 +228,7 @@ export default function DeepCleaningHomerGlenPage() {
             Homer Glen is a quiet residential community in Will County with a lot of larger homes. We know that a big house means more ground to cover, and we do not rush. Every room gets the same level of attention whether you have two bedrooms or five.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Our deep cleaning covers the spots that standard cleaning skips. In the kitchen we clean inside the microwave, degrease the hood vent, and scrub the sink. In the bathrooms we get into the grout, polish the fixtures, and clean behind the toilet. In bedrooms and living areas we dust ceiling fans, clean window sills, and wipe down every baseboard.
+            Our deep cleaning covers everything in a standard clean plus the spots it skips: grout, baseboards and door frames. In the kitchen we clean inside the microwave, degrease the hood vent, and scrub the sink. In the bathrooms we get into the grout, polish the fixtures, and clean behind the toilet. In bedrooms and living areas we dust ceiling fans, clean window sills, and wipe down every baseboard.
           </p>
           <p className="text-gray-700 leading-relaxed">
             We use eco-friendly, non-toxic products on every job and stand behind our work with a 48-hour guarantee. If something is not right, let us know and we will come back to fix it at no charge.

@@ -22,17 +22,17 @@ const faqs = [
   {
     question: "What is included in a standard clean?",
     answer:
-      "Standard cleaning covers all the essential areas of your home: kitchen (countertops, appliance exteriors, sink, stovetop, cabinet fronts, floor), bathrooms (toilet, sink, tub/shower, mirror, floor), all bedrooms and living areas (dust, vacuum, mop, make beds), and general tasks like emptying trash, wiping light switches, and cleaning interior glass. It does not include inside appliances, cabinet interiors, or detail scrubbing of grout and baseboards.",
+      "Standard cleaning covers all the essential areas of your home: kitchen (countertops, appliance exteriors, sink, stovetop, cabinet fronts, floor), bathrooms (toilet, sink, tub/shower, mirror, floor), all bedrooms and living areas (dust, vacuum, mop, make beds), and general tasks like emptying trash, wiping light switches, and dusting window sills. It includes the inside of the microwave. It does not include the inside of the oven or refrigerator, cabinet interiors, or grout, baseboards and door frames.",
   },
   {
     question: "What extra items are in a deep clean?",
     answer:
-      "Deep cleaning adds everything that standard cleaning doesn't cover: inside the microwave and refrigerator exterior detail; full baseboard scrubbing; window sills and inside glass; ceiling fans and light fixtures; grout scrubbing in bathrooms; door frame detail; and vent cleaning. Cabinets are cleaned on the outside only. Cleaning inside the oven or inside the kitchen cabinets is an add-on. It catches up on buildup instead of just keeping things tidy.",
+      "Deep cleaning adds what standard cleaning doesn't cover: full baseboard scrubbing; inside window glass; light fixtures; grout scrubbing in bathrooms; doors and door frames; and vacuuming under and behind furniture. Cabinets are cleaned on the outside only. Cleaning inside the oven or inside the kitchen cabinets is an add-on. It catches up on buildup instead of just keeping things tidy.",
   },
   {
     question: "Do you clean inside appliances?",
     answer:
-      "Move-out cleaning includes the inside of the oven, the refrigerator and the microwave. Deep cleaning includes the inside of the microwave, and the inside of the oven and the refrigerator are add-ons. Standard cleaning covers appliance exteriors only. Any inside-appliance cleaning that isn't part of your service can be requested as an add-on, priced and agreed upon before the appointment.",
+      "Move-out cleaning includes the inside of the oven, the refrigerator and the microwave. Standard and deep cleaning both include the inside of the microwave. With either one, the inside of the oven and the refrigerator are add-ons. Any inside-appliance cleaning that isn't part of your service can be requested as an add-on, priced and agreed upon before the appointment.",
   },
   {
     question: "What is NOT included in cleaning?",
@@ -93,9 +93,9 @@ const standardChecklist = [
   {
     room: "Kitchen",
     items: [
-      "Wipe all countertops and backsplash",
+      "Wipe all countertops and surfaces",
       "Clean stovetop and drip pans (exterior)",
-      "Clean outside of microwave",
+      "Clean microwave inside and out",
       "Wipe all appliance exteriors",
       "Scrub sink and faucet",
       "Wipe cabinet fronts and handles",
@@ -131,7 +131,7 @@ const standardChecklist = [
       "Wipe down light switches and outlets",
       "Vacuum all upholstered surfaces and cushions",
       "Sweep and mop hard floors",
-      "Clean interior glass and mirrors",
+      "Wipe mirrors",
       "Empty trash",
     ],
   },
@@ -147,12 +147,15 @@ const standardChecklist = [
   },
 ];
 
+// What a deep clean adds on top of a standard clean. Nothing on the standard
+// checklist (lib/standardChecklist.ts) belongs here: the inside of the
+// microwave, the refrigerator exterior, soap scum in the shower, the toilet
+// area, kitchen and bathroom vents, ceiling fans and window sills are all done
+// on every standard visit.
 const deepExtras = [
   {
     room: "Kitchen Extras",
     items: [
-      "Inside microwave: walls, ceiling, turntable",
-      "Refrigerator exterior detail: top, sides, handles",
       "Behind and under appliances (accessible areas)",
       "Grease buildup on stovetop and hood",
     ],
@@ -161,9 +164,6 @@ const deepExtras = [
     room: "Bathroom Extras",
     items: [
       "Full grout scrubbing: tiles, floor",
-      "Soap scum removal from shower doors and tracks",
-      "Exhaust fan dusting",
-      "Behind and around toilet base",
       "Caulking detail",
       "Wipe all baseboards thoroughly",
     ],
@@ -172,10 +172,9 @@ const deepExtras = [
     room: "Whole-Home Extras",
     items: [
       "Full baseboard scrubbing (all rooms)",
-      "Window sills and inside glass cleaned",
-      "Ceiling fans: blades and motor housing",
+      "Inside window glass cleaned",
       "Light fixtures dusted",
-      "Vents and registers cleaned",
+      "Vents and registers in bedrooms and living areas",
       "Door frames detail-wiped",
       "Behind furniture (accessible areas)",
     ],

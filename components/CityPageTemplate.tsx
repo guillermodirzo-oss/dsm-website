@@ -312,7 +312,8 @@ export default function CityPageTemplate({ city }: { city: CityData }) {
               </div>
               <p className="text-xs text-brand-green font-bold uppercase tracking-widest mb-3">Everything in Standard, PLUS:</p>
               <ul className="space-y-2 text-sm text-gray-700">
-                {["Scrub grout lines in showers & tile","Clean inside the microwave","Degrease stovetop, hood vent & burners","Clean behind & under appliances","Detailed baseboard & door frame cleaning","Vacuum & wipe window sills and inside glass","Clean ceiling fans & light fixtures","Spot-clean walls & switch plates"].map(item => (
+                {/* Only things a standard clean does not do. Inside the microwave, window sills, ceiling fans and light switches are on the standard checklist (lib/standardChecklist.ts), so they never go in this list. */}
+                {["Scrub grout lines in showers & tile","Degrease stovetop, hood vent & burners","Clean behind & under appliances","Detailed baseboard & door frame cleaning","Clean inside window glass","Clean light fixtures","Vacuum under & behind furniture","Spot-clean walls"].map(item => (
                   <li key={item} className="flex items-start gap-2">
                     <svg className="w-4 h-4 text-brand-green mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     {item}

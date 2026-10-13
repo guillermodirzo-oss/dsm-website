@@ -208,7 +208,7 @@ export default function DeepCleaningPage() {
             Deep Cleaning in Romeoville That Gets the Spots a Regular Clean Skips.
           </h1>
           <p className="text-lg md:text-xl font-semibold mb-5 opacity-95 max-w-2xl mx-auto">
-            Grout lines, baseboards, ceiling fans. Deep cleaning in Romeoville, Plainfield, Naperville, Bolingbrook and the southwest suburbs.
+            Grout lines, baseboards, door frames. Deep cleaning in Romeoville, Plainfield, Naperville, Bolingbrook and the southwest suburbs.
           </p>
 
           {/* Rating. Counts come from lib/realReviews.ts, never hardcoded. */}
@@ -273,7 +273,7 @@ export default function DeepCleaningPage() {
             DSM Cleaning Solutions has been serving homeowners in Romeoville, Plainfield, Bolingbrook, and Naperville since 2020. These are our home communities. When you hire us for a deep clean, you get a team that knows the area, cares about the work, and shows up on time.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Our deep cleaning is built for homes that need more than a weekly maintenance clean. That means scrubbing bathroom grout, cleaning behind the stovetop grates, wiping every baseboard, and dusting ceiling fans in every room.
+            Our deep cleaning is built for homes that need more than a weekly maintenance clean. That means scrubbing bathroom grout, cleaning behind the stovetop grates, wiping every baseboard, and vacuuming under and behind the furniture in every room.
           </p>
           <p className="text-gray-700 leading-relaxed">
             We use eco-friendly, non-toxic products on every job. Safe for your whole family including pets. And if anything is not right after we leave, contact us within 48 hours and we will come back to fix it at no charge.
@@ -397,8 +397,9 @@ export default function DeepCleaningPage() {
               </div>
             </div>
 
-            {/* Bathrooms: checklist promises grout cleaning and polished
-                faucets and fixtures, both things a standard clean skips. */}
+            {/* Bathrooms: checklist promises grout cleaning, which a standard
+                clean skips, and polished faucets and fixtures, which a
+                standard clean also does (lib/standardChecklist.ts). */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
               <div className="bg-white rounded-xl p-5 shadow-sm">
                 <h3 className="font-bold text-gray-800 mb-3 border-b pb-2">{checklist[1].room}</h3>

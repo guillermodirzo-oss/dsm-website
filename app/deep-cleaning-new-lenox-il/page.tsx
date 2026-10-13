@@ -228,7 +228,7 @@ export default function DeepCleaningNewLenoxPage() {
             New Lenox is a family-friendly community in Will County and we have been glad to serve homeowners here for years. Whether you are in Spencer Pointe, near Hickory Creek, the Village Center area, or anywhere else in town, we can get your kitchen, bathrooms and floors looking the way they should.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Our deep cleaning is built for homes that need more than a regular weekly clean. That means scrubbing grout lines in the shower, cleaning behind the stovetop grates, wiping every baseboard, and dusting ceiling fans. We do not skip the spots that others miss.
+            Our deep cleaning is built for homes that need more than a regular weekly clean. That means scrubbing grout lines in the shower, cleaning behind the stovetop grates, wiping every baseboard, and vacuuming under the furniture. We do not skip the spots that others miss.
           </p>
           <p className="text-gray-700 leading-relaxed">
             We use eco-friendly, non-toxic products on every job. Safe for your whole family including pets. And if you are not satisfied with anything after we leave, contact us within 48 hours and we will come back to make it right.
@@ -266,7 +266,7 @@ export default function DeepCleaningNewLenoxPage() {
             <div className="bg-gray-50 rounded-xl p-6">
               <h3 className="font-bold text-gray-800 mb-2">We Cover What Others Skip</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Behind the toilet, grout lines, ceiling fan blades, baseboards, window sills. Our deep clean goes where standard cleaning does not.
+                Grout lines, baseboards, door frames, under the furniture, inside the window glass. Our deep clean goes where standard cleaning does not.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">
