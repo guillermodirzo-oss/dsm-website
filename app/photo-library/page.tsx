@@ -1832,7 +1832,7 @@ const CATEGORIES: Category[] = [
         height: 1080,
         kb: 215,
         evidence: "Moderate",
-        note: "Wide crop of the Plainfield living room (KL-01/KL-02's source room), 16:9. Was the homepage hero before it switched to the kitchen; not used anywhere now.",
+        note: "Wide crop of the living room in KL-01/KL-02 (the same source room), 16:9. Was the homepage hero before it switched to the kitchen; not used anywhere now.",
         heroReady: true,
         usedOn: [],
       },

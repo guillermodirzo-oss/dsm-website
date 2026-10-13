@@ -18,6 +18,7 @@ import {
 } from "@/lib/pricing";
 import { offerPrice } from "@/lib/offers";
 import { DEEP_OFFER } from "@/lib/offers";
+import { OG_IMAGE_ALT } from "@/lib/workPhotos";
 
 // Regenerate at most hourly so FALL75 drops out of the HTML on its own after
 // it ends. <Offer> also hides it in the browser at the deadline. See
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
         url: "/hero-image.png",
         width: 1200,
         height: 630,
-        alt: "DSM Cleaning Solutions: House Cleaning Prices in Romeoville & Plainfield IL",
+        alt: OG_IMAGE_ALT,
       },
     ],
   },

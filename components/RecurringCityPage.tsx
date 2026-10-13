@@ -22,7 +22,7 @@ import {
   reviewByName,
 } from "@/lib/realReviews";
 import { STANDARD_CHECKLIST } from "@/lib/standardChecklist";
-import { GOOGLE_REVIEWS_URL } from "@/lib/siteConstants";
+import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 
 /**
  * The recurring ("maid service") city page, /recurring-cleaning-{city}-il.
@@ -341,21 +341,25 @@ export default function RecurringCityPage({ city: cityKey }: { city: RecurringCi
             ))}
           </div>
           <div className="text-center mt-8">
-            <a href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener noreferrer" className="text-brand-green font-semibold hover:underline text-sm">
+            <a href={GOOGLE_PROFILE_URL} target="_blank" rel="noopener noreferrer" className="text-brand-green font-semibold hover:underline text-sm">
               Read all {REVIEW_COUNT} reviews on Google →
             </a>
           </div>
         </div>
       </section>
 
-      {/* LOCAL SECTION. Built only from the zip codes and neighborhoods on file for this city. */}
+      {/* LOCAL SECTION. Built only from the zip codes and neighborhoods on file
+          for this city. A city with no owner-confirmed neighborhoods gets the
+          zip codes alone. */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`grid grid-cols-1 gap-8 items-center ${city.photo ? "md:grid-cols-2" : ""}`}>
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">{`Maid Service Across ${city.name}`}</h2>
               <p className="text-gray-600 leading-relaxed">
-                {`We clean homes on a regular schedule all over ${city.name}, including ${listWithAnd(city.neighborhoods)}. That covers ${city.zips.length === 1 ? "zip code" : "zip codes"} ${listWithAnd(city.zips)}.`}
+                {city.neighborhoods.length > 0
+                  ? `We clean homes on a regular schedule all over ${city.name}, including ${listWithAnd(city.neighborhoods)}. That covers ${city.zips.length === 1 ? "zip code" : "zip codes"} ${listWithAnd(city.zips)}.`
+                  : `We clean homes on a regular schedule all over ${city.name}, in ${city.zips.length === 1 ? "zip code" : "zip codes"} ${listWithAnd(city.zips)}.`}
               </p>
               <h3 className="text-lg font-bold text-gray-900 mt-6 mb-2">{`A Recurring Client in ${city.name}`}</h3>
               <p className="text-gray-600 leading-relaxed">{city.clientStory}</p>

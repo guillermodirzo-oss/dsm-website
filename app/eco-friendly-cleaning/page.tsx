@@ -3,6 +3,7 @@ import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
 import { pickReviews, reviewAttribution } from "@/lib/realReviews";
+import { OG_IMAGE_ALT } from "@/lib/workPhotos";
 
 export const metadata: Metadata = {
   title: "Eco-Friendly Cleaning Romeoville IL",
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
         url: "/hero-image.png",
         width: 1200,
         height: 630,
-        alt: "DSM Cleaning Solutions: Eco-Friendly Green Cleaning in Plainfield IL",
+        alt: OG_IMAGE_ALT,
       },
     ],
   },

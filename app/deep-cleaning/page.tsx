@@ -13,7 +13,7 @@ import {
   tierLabel,
 } from "@/lib/pricing";
 import { offerPrice } from "@/lib/offers";
-import { REVIEW_COUNT, REVIEW_RATING, GOOGLE_REVIEWS_URL } from "@/lib/siteConstants";
+import { REVIEW_COUNT, REVIEW_RATING, GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 import { DEEP_OFFER } from "@/lib/offers";
 
 // Regenerate at most hourly so FALL75 drops out of the HTML on its own after
@@ -552,7 +552,7 @@ export default function DeepCleaningPage() {
           </div>
           <div className="text-center">
             <a
-              href={GOOGLE_REVIEWS_URL}
+              href={GOOGLE_PROFILE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="text-green-700 font-semibold hover:underline text-sm"

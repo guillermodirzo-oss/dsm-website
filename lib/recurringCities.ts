@@ -39,6 +39,7 @@ import {
 } from "./pricing";
 import { REVIEW_COUNT, REVIEW_RATING } from "./realReviews";
 import { recurringCityTitle } from "./seoTitles";
+import { WORK_PHOTOS } from "./workPhotos";
 
 const SITE = "https://www.dsmcleaningsolutions.com";
 
@@ -54,8 +55,15 @@ export interface RecurringCity {
   /** The city's deep cleaning page. */
   deepPath: string;
   zips: string[];
+  /**
+   * Neighborhoods the owner has confirmed DSM cleans in. Empty when none are
+   * confirmed (Bolingbrook), and the page then states the zip codes only.
+   */
   neighborhoods: string[];
-  /** A work photo labeled with this city, if public/work-photos has one. */
+  /**
+   * A work photo from lib/workPhotos.ts. Its alt text describes the photo and
+   * names no town: no photo is confirmed as taken in a specific town.
+   */
   photo?: { src: string; alt: string };
   /** Name of a reviewer who is a client in this city, shown under the anchor review. */
   localReviewer?: string;
@@ -86,10 +94,7 @@ export const RECURRING_CITIES: Record<RecurringCityKey, RecurringCity> = {
     hubPath: "/naperville-il",
     deepPath: "/deep-cleaning-naperville-il",
     ...hubFacts("naperville-il"),
-    photo: {
-      src: "/work-photos/double-vanity-bathroom-clean-naperville-il.jpg",
-      alt: "Double vanity bathroom cleaned by DSM in Naperville, IL",
-    },
+    photo: WORK_PHOTOS.doubleVanityBathroom,
     clientStory:
       "One of our longest-standing Naperville clients has a large space with high ceilings, 4 rooms including a home office, 3.5 baths and two kitchens. We've cleaned it every month for over two years. Every visit means dusting up high and a lot of floor, so we take our time in every room.",
     example: {
@@ -108,10 +113,7 @@ export const RECURRING_CITIES: Record<RecurringCityKey, RecurringCity> = {
     // in its "Do you serve all Plainfield neighborhoods?" answer.
     zips: ["60544", "60585"],
     neighborhoods: ["Settlers Ridge", "Lakewood Falls", "Grande Park", "Springbank", "Heritage Meadows", "River Run"],
-    photo: {
-      src: "/work-photos/living-room-hardwood-floors-plainfield-il.jpg",
-      alt: "Living room cleaned by DSM in Plainfield, IL",
-    },
+    photo: WORK_PHOTOS.emptyRoomGrayPlank,
     clientStory:
       "In Plainfield, we've cleaned a 3-bedroom, 2.5-bath home between 1,500 and 2,000 square feet every two weeks for over a year. Same team every visit, on the same schedule.",
     example: {
@@ -126,10 +128,7 @@ export const RECURRING_CITIES: Record<RecurringCityKey, RecurringCity> = {
     hubPath: "/bolingbrook-il",
     deepPath: "/deep-cleaning-bolingbrook-il",
     ...hubFacts("bolingbrook-il"),
-    photo: {
-      src: "/work-photos/bedroom-cleaning-service-bolingbrook-il.jpg",
-      alt: "Bedroom cleaned by DSM in Bolingbrook, IL",
-    },
+    photo: WORK_PHOTOS.emptyBedroomMirroredCloset,
     clientStory:
       "In Bolingbrook, we've cleaned a 4-bedroom, 2.5-bath two-story home every two weeks for two years. She's a busy mom, so along with the regular clean, we change the bed sheets at no extra charge. That's one less thing on her list, and that's what recurring service is for.",
     example: {

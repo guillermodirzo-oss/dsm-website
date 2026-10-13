@@ -3,6 +3,7 @@ import { hubCityTitle } from "@/lib/seoTitles";
 import Link from "next/link";
 import CityPageTemplate from "@/components/CityPageTemplate";
 import { cities } from "@/lib/cityData";
+import { OG_IMAGE_ALT } from "@/lib/workPhotos";
 
 const city = cities.find((c) => c.slug === "downers-grove-il")!;
 
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
       "Professional house cleaning in Downers Grove, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Free estimates.",
     url: "https://www.dsmcleaningsolutions.com/downers-grove-il",
     siteName: "DSM Cleaning Solutions",
-    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions: House Cleaning in Downers Grove IL" }],
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: OG_IMAGE_ALT }],
   },
   twitter: {
     card: "summary_large_image",

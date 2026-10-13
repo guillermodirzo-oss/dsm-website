@@ -4,6 +4,7 @@ import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
 import { pickReviews, reviewAttribution } from "@/lib/realReviews";
 import { STANDARD_CLEANING_TIERS, STANDARD_FROM, formatPrice, priceForBeds } from "@/lib/pricing";
+import { OG_IMAGE_ALT } from "@/lib/workPhotos";
 
 // One-time prices are the standard cleaning tiers, with no recurring discount.
 const standardFor = (beds: number) => formatPrice(priceForBeds(STANDARD_CLEANING_TIERS, beds));
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     description: "No-commitment one-time cleaning in Plainfield, IL. Great for events, moving, or seasonal resets. Eco-friendly & insured. Free estimate, no contract.",
     url: "https://www.dsmcleaningsolutions.com/one-time-cleaning",
     siteName: "DSM Cleaning Solutions",
-    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions: One-Time House Cleaning in Plainfield IL" }],
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: OG_IMAGE_ALT }],
   },
   twitter: {
     card: "summary_large_image",

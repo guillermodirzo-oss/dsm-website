@@ -9,7 +9,7 @@ import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 import { cities } from "@/lib/cityData";
 import { listWithAnd } from "@/lib/recurringCities";
-import { GOOGLE_REVIEWS_URL } from "@/lib/siteConstants";
+import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 
 export const metadata: Metadata = {
@@ -26,15 +26,16 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image", title: deepCityTitle("Bolingbrook"), images: ["/hero-image.png"] },
 };
 
-// LOCAL FACTS. The zip codes and neighborhoods are read from the Bolingbrook
-// entry in lib/cityData.ts, the same entry /bolingbrook-il and
+// LOCAL FACTS. The zip codes are read from the Bolingbrook entry in
+// lib/cityData.ts, the same entry /bolingbrook-il and
 // /recurring-cleaning-bolingbrook-il read, so the three pages can never list
-// different ones. Never type a zip code or a neighborhood into this page.
+// different ones. Never type a zip code into this page. The owner confirmed
+// clients in both zip codes but no neighborhood names (2026-10-12), so this
+// page names none. Don't add any until the owner confirms them.
 const hub = cities.find((c) => c.slug === "bolingbrook-il");
 if (!hub) throw new Error('No "bolingbrook-il" entry in lib/cityData.ts');
 const HUB_PATH = `/${hub.slug}`;
 const ZIPS = listWithAnd(hub.zips); // "60440 and 60490"
-const NEIGHBORHOODS = listWithAnd(hub.neighborhoods);
 
 // The visible FAQ and the FAQPage schema both read this array.
 const faqs = [
@@ -237,15 +238,15 @@ export default function DeepCleaningBolingbrookPage() {
       </section>
 
       {/* LOCAL SECTION. The intro and the paragraph under the heading are the
-          owner's copy. Zip codes and neighborhoods are printed from
-          lib/cityData.ts. The owner's draft of the second paragraph also
+          owner's copy. Zip codes are printed from lib/cityData.ts. The intro
+          names no neighborhoods: none are confirmed. The owner's draft of the second paragraph also
           listed cabinet fronts, light switches and vents among the things a
           regular clean doesn't reach. All three are on the standard checklist,
           so the owner approved dropping them (2026-10-12). Don't add them back. */}
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto prose prose-gray">
           <p className="text-gray-700 leading-relaxed mb-4">
-            Bolingbrook is right next door to our home base in Romeoville, so getting to you is a short drive. We deep clean homes in both Bolingbrook zip codes, {ZIPS}, including {NEIGHBORHOODS}.
+            Bolingbrook is right next door to our home base in Romeoville, so getting to you is a short drive. We deep clean homes in both Bolingbrook zip codes, {ZIPS}.
           </p>
           <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Deep Cleaning for Bolingbrook Homes</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
@@ -396,7 +397,7 @@ export default function DeepCleaningBolingbrookPage() {
           </div>
           <div className="text-center">
             <a
-              href={GOOGLE_REVIEWS_URL}
+              href={GOOGLE_PROFILE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="text-brand-green font-semibold hover:underline text-sm"

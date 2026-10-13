@@ -25,6 +25,7 @@ import {
   formatDiscount,
   formatPrice,
 } from "@/lib/pricing";
+import { OG_IMAGE_ALT } from "@/lib/workPhotos";
 
 // Regenerate at most hourly so an offer in the hero banner drops out of the
 // HTML on its own after it ends. <Offer> also hides it in the browser at the
@@ -57,7 +58,7 @@ export const metadata: Metadata = {
         url: "/hero-image.png",
         width: 1200,
         height: 630,
-        alt: "DSM Cleaning Solutions: Professional House Cleaning in Romeoville IL",
+        alt: OG_IMAGE_ALT,
       },
     ],
   },

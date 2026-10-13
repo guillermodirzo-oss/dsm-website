@@ -12,6 +12,7 @@ import {
   startingPrice,
   type PriceTier,
 } from "@/lib/pricing";
+import { OG_IMAGE_ALT } from "@/lib/workPhotos";
 
 // Unqualified "starting at" claims read the true minimum from the rate card.
 const MOVEOUT_FROM = formatPrice(startingPrice(MOVE_OUT_TIERS));
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
       "How much does house cleaning cost in Plainfield IL? See 2026 pricing for all services from DSM Cleaning Solutions. Free quotes.",
     url: "https://www.dsmcleaningsolutions.com/house-cleaning-cost-plainfield-il",
     siteName: "DSM Cleaning Solutions",
-    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "House Cleaning Cost Plainfield IL" }],
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: OG_IMAGE_ALT }],
   },
   twitter: {
     card: "summary_large_image",

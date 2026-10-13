@@ -123,7 +123,7 @@ export const cities: CityData[] = [
     distance: "just 5 miles from our Romeoville base",
     tagline: "Professional house cleaning just minutes away. Bolingbrook's trusted local cleaners.",
     localIntro: [
-      "Bolingbrook is right next door to our home base in Romeoville, which means faster response times, same-week availability, and a team that truly knows the community. DSM Cleaning Solutions serves neighborhoods like Naperville Acres, Americana Estates, Pheasant Chase, and Stillwater with the same professional care.",
+      "Bolingbrook is right next door to our home base in Romeoville, which means faster response times, same-week availability, and a team that truly knows the community. DSM Cleaning Solutions serves both Bolingbrook zip codes, 60440 and 60490, with the same professional care.",
       "Whether you're near the Promenade Bolingbrook shopping area, a family home near Hidden Lakes, or an established neighborhood off Weber Road, we service all of Bolingbrook with meticulous attention to detail. Our proximity means we can often accommodate last-minute requests that national companies can't.",
       "Bolingbrook families appreciate our eco-friendly approach (safe for kids and pets) and our straightforward, honest pricing. No hidden fees, no bait-and-switch. Just a consistently excellent clean, every time.",
     ],
@@ -137,8 +137,11 @@ export const cities: CityData[] = [
       "Background-checked, professional team",
       "Serving all of Bolingbrook: 60440 & 60490",
     ],
-    neighborhoods: ["Naperville Acres", "Americana Estates", "Pheasant Chase", "Stillwater", "Fox Run", "Lakewood Crossing"],
-    landmarks: ["Promenade Bolingbrook", "Hidden Lakes", "Pelican Harbor Aquatic Park"],
+    // No neighborhoods: the owner confirmed clients in both zip codes but could
+    // not confirm any neighborhood name (2026-10-12). Leave this empty until he
+    // does. The hub then shows the zip codes in place of a neighborhood list.
+    neighborhoods: [],
+    landmarks: ["Promenade Bolingbrook", "Hidden Lakes", "Pelican Harbor Aquatic Park", "Bolingbrook Golf Club", "Bolingbrook Recreation Center", "Route 53 Corridor"],
     services: [
       {
         icon: "🧹",
@@ -173,9 +176,9 @@ export const cities: CityData[] = [
     ],
     faqs: [
       {
-        question: "What neighborhoods in Bolingbrook does DSM Cleaning serve?",
+        question: "What parts of Bolingbrook does DSM Cleaning serve?",
         answer:
-          "We serve all of Bolingbrook including Naperville Acres, Americana Estates, Pheasant Chase, Stillwater, Fox Run, and Lakewood Crossing, across zip codes 60440 and 60490.",
+          "We clean homes in both Bolingbrook zip codes, 60440 and 60490.",
       },
       {
         question: "Do you offer same-day cleaning in Bolingbrook, IL?",

@@ -3,6 +3,7 @@ import { hubCityTitle } from "@/lib/seoTitles";
 import Link from "next/link";
 import CityPageTemplate from "@/components/CityPageTemplate";
 import { cities } from "@/lib/cityData";
+import { OG_IMAGE_ALT } from "@/lib/workPhotos";
 
 const city = cities.find((c) => c.slug === "lockport-il")!;
 
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
       "Reliable house cleaning in Lockport, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Free estimates.",
     url: "https://www.dsmcleaningsolutions.com/lockport-il",
     siteName: "DSM Cleaning Solutions",
-    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions: House Cleaning in Lockport IL" }],
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: OG_IMAGE_ALT }],
   },
   twitter: {
     card: "summary_large_image",

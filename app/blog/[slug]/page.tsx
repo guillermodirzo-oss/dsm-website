@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { blogPosts, faqSchemaFromContent } from "@/lib/blogData";
+import { OG_IMAGE_ALT } from "@/lib/workPhotos";
 import { notFound } from "next/navigation";
 
 export function generateStaticParams() {
@@ -32,7 +33,7 @@ export async function generateMetadata({
           url: "/hero-image.png",
           width: 1200,
           height: 630,
-          alt: `DSM Cleaning Solutions: ${post.title}`,
+          alt: OG_IMAGE_ALT,
         },
       ],
     },

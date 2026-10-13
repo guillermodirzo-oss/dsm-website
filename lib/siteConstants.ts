@@ -9,18 +9,19 @@
 export { REVIEW_COUNT, REVIEW_RATING } from "./realReviews";
 
 /**
- * Where every "Read all N reviews on Google" link goes. One constant, so the
- * destination is changed in one place.
+ * The only two Google links on the site. The owner supplied both and
+ * confirmed they work (2026-10-12). Never type a Google link into a page.
  *
- * This is a Google search for the business name and "Reviews", which shows
- * the DSM listing and its reviews. It is a stand-in. The profile link in the
- * LocalBusiness schema (https://g.co/kgs/KFkN2MX) no longer resolves: it
- * returns a "Dynamic Link Not Found" page (checked 2026-10-12), and the old
- * https://g.page/r/dsmcleaningsolutions/review link redirects to the Google
- * homepage. When the owner supplies the real Google Business Profile review
- * link, put it here and in the sameAs list in app/layout.tsx.
+ * GOOGLE_REVIEW_URL opens the "write a review" box. Every "leave a review"
+ * or "write a review" link uses it.
+ *
+ * GOOGLE_PROFILE_URL opens the Business Profile on Google Maps. Every "read
+ * our reviews", "Read all N reviews on Google" or "see us on Google" link
+ * uses it, and so does the sameAs list in the LocalBusiness schema in
+ * app/layout.tsx.
  */
-export const GOOGLE_REVIEWS_URL = "https://www.google.com/search?q=DSM+Cleaning+Solutions+Romeoville+IL+Reviews";
+export const GOOGLE_REVIEW_URL = "https://g.page/r/CX8eP54fxW4_EAE/review";
+export const GOOGLE_PROFILE_URL = "https://maps.app.goo.gl/T6UQsNQtBBoKbQXw9";
 
 /**
  * The 16 cities DSM serves. app/layout.tsx and /contact both build their

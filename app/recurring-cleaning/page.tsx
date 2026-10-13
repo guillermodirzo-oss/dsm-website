@@ -11,7 +11,7 @@ import {
   recurringDiscountedPrice,
   formatPrice,
 } from "@/lib/pricing";
-import { REVIEW_COUNT, REVIEW_RATING, GOOGLE_REVIEWS_URL } from "@/lib/siteConstants";
+import { REVIEW_COUNT, REVIEW_RATING, GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 import { DEEP_OFFER } from "@/lib/offers";
 import { STANDARD_CHECKLIST } from "@/lib/standardChecklist";
 import { PRICE_LOCK_FAQ, RECURRING_CITY_LIST, SAME_TEAM_FAQ } from "@/lib/recurringCities";
@@ -470,7 +470,7 @@ export default function RecurringCleaningPage() {
           </div>
           <div className="text-center">
             <a
-              href={GOOGLE_REVIEWS_URL}
+              href={GOOGLE_PROFILE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="text-green-700 font-semibold hover:underline text-sm"

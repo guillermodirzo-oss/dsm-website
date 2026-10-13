@@ -6,7 +6,7 @@ import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/li
 import Image from "next/image";
 import PlainfieldForm from "./PlainfieldForm";
 import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
-import { GOOGLE_REVIEWS_URL } from "@/lib/siteConstants";
+import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 
 export const metadata: Metadata = {
@@ -476,7 +476,7 @@ export default function DeepCleaningPlainfieldPage() {
 
           <div className="text-center mt-8">
             <a
-              href={GOOGLE_REVIEWS_URL}
+              href={GOOGLE_PROFILE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="text-brand-green font-semibold hover:underline text-sm"

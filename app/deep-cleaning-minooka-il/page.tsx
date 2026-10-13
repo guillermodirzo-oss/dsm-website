@@ -7,7 +7,7 @@ import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/li
 import Image from "next/image";
 import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
-import { GOOGLE_REVIEWS_URL } from "@/lib/siteConstants";
+import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 
 export const metadata: Metadata = {
@@ -236,14 +236,15 @@ export default function DeepCleaningMinookaPage() {
         </div>
       </section>
 
-      {/* ANCHOR REVIEW */}
+      {/* ANCHOR REVIEW. Julie Gaubatz, index 12 in REAL_REVIEWS. The text is
+          read from lib/realReviews.ts and never copied into this file. */}
       <section className="py-10 px-4" style={{ backgroundColor: "#FFF4EE" }}>
         <div className="max-w-2xl mx-auto text-center">
           <p style={{ color: "#E8622A" }} className="text-5xl font-serif leading-none mb-3">&ldquo;</p>
           <p className="text-gray-800 text-lg leading-relaxed italic mb-4">
-            I&apos;m so glad DSM Cleaning Services was recommended to us by our realtor! They are fantastic, and their website makes arranging cleanings so easy. I highly recommend them -- I will be using them many more times!
+            {REAL_REVIEWS[12].text}
           </p>
-          <p className="font-semibold text-gray-700">Julie Gaubatz</p>
+          <p className="font-semibold text-gray-700">{REAL_REVIEWS[12].name}</p>
           <div className="flex justify-center mt-2">
             <span style={{ color: "#FFA869" }}>★★★★★</span>
           </div>
@@ -371,7 +372,7 @@ export default function DeepCleaningMinookaPage() {
           </div>
           <div className="text-center">
             <a
-              href={GOOGLE_REVIEWS_URL}
+              href={GOOGLE_PROFILE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="text-brand-green font-semibold hover:underline text-sm"

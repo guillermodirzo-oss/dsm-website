@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { hubCityTitle } from "@/lib/seoTitles";
 import CityPageTemplate from "@/components/CityPageTemplate";
 import { cities } from "@/lib/cityData";
+import { OG_IMAGE_ALT } from "@/lib/workPhotos";
 
 const city = cities.find((c) => c.slug === "lemont-il")!;
 
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
       "Trusted house cleaning in Lemont, IL: deep cleaning, standard & recurring maid service. Eco-friendly, insured. Family-owned. Free estimate.",
     url: "https://www.dsmcleaningsolutions.com/lemont-il",
     siteName: "DSM Cleaning Solutions",
-    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions: House Cleaning in Lemont IL" }],
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: OG_IMAGE_ALT }],
   },
   twitter: {
     card: "summary_large_image",

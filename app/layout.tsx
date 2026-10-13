@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { REVIEW_COUNT, REVIEW_RATING } from "@/lib/realReviews";
-import { serviceAreaSchema } from "@/lib/siteConstants";
+import { GOOGLE_PROFILE_URL, serviceAreaSchema } from "@/lib/siteConstants";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
@@ -10,6 +10,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import Script from "next/script";
+import { OG_IMAGE_ALT } from "@/lib/workPhotos";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
         url: "/hero-image.png",
         width: 1200,
         height: 630,
-        alt: "DSM Cleaning Solutions: Professional House Cleaning in Romeoville IL",
+        alt: OG_IMAGE_ALT,
       },
     ],
   },
@@ -130,7 +131,7 @@ export default function RootLayout({
               },
               sameAs: [
                 "https://www.yelp.com/biz/dsm-cleaning-solutions",
-                "https://g.co/kgs/KFkN2MX",
+                GOOGLE_PROFILE_URL,
               ],
             }),
           }}

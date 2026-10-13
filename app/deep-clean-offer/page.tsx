@@ -5,6 +5,7 @@ import LeadForm from "@/components/LeadForm";
 import Offer from "@/components/Offer";
 import { DEEP_OFFER } from "@/lib/offers";
 import { DEEP_CLEANING_TIERS, formatPrice, startingPrice } from "@/lib/pricing";
+import { WORK_PHOTOS } from "@/lib/workPhotos";
 import StickyBar from "./StickyBar";
 import DeepCleanChecklist from "./DeepCleanChecklist";
 
@@ -86,37 +87,15 @@ const regularItems: { text: string; included: boolean }[] = [
 ];
 
 
+// Alt text comes from lib/workPhotos.ts and names no town. The captions name
+// no town either: no photo is confirmed as taken in a specific town.
 const workPhotos = [
-  {
-    src: "/work-photos/shower-deep-clean-romeoville-il.jpg",
-    alt: "Deep cleaned glass shower in Romeoville IL",
-    caption: "Shower deep clean, Romeoville",
-  },
-  {
-    src: "/work-photos/double-vanity-bathroom-clean-naperville-il.jpg",
-    alt: "Double vanity bathroom after deep cleaning in Naperville IL",
-    caption: "Master bath, Naperville",
-  },
-  {
-    src: "/work-photos/double-sink-bathroom-deep-clean-plainfield-il.jpg",
-    alt: "Double sink bathroom after deep cleaning in Plainfield IL",
-    caption: "Full bathroom, Plainfield",
-  },
-  {
-    src: "/work-photos/living-room-hardwood-floors-plainfield-il.jpg",
-    alt: "Gleaming hardwood floors after professional cleaning in Plainfield IL",
-    caption: "Hardwood floors, Plainfield",
-  },
-  {
-    src: "/work-photos/master-bedroom-airbnb-cleaning-bolingbrook-il.jpg",
-    alt: "Clean master bedroom in Bolingbrook IL",
-    caption: "Master bedroom, Bolingbrook",
-  },
-  {
-    src: "/work-photos/bathtub-shower-deep-clean-plainfield-il.jpg",
-    alt: "Full bathroom deep clean with tub and shower in Plainfield IL",
-    caption: "Bathroom deep clean, Plainfield",
-  },
+  { ...WORK_PHOTOS.glassShowerGrayTile, caption: "Shower deep clean" },
+  { ...WORK_PHOTOS.doubleVanityBathroom, caption: "Master bath" },
+  { ...WORK_PHOTOS.greenDoubleSinkBathroom, caption: "Full bathroom" },
+  { ...WORK_PHOTOS.emptyRoomGrayPlank, caption: "Hardwood floors" },
+  { ...WORK_PHOTOS.furnishedBedroomBalcony, caption: "Master bedroom" },
+  { ...WORK_PHOTOS.greenTubBathroom, caption: "Bathroom deep clean" },
 ];
 
 const reviews = pickReviews(3, 2);

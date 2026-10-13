@@ -15,8 +15,9 @@ import {
   type PriceTier,
 } from "@/lib/pricing";
 import { offerPrice } from "@/lib/offers";
-import { REVIEW_COUNT, REVIEW_RATING, GOOGLE_REVIEWS_URL } from "@/lib/siteConstants";
+import { REVIEW_COUNT, REVIEW_RATING, GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 import { MOVEOUT_OFFER } from "@/lib/offers";
+import { WORK_PHOTOS } from "@/lib/workPhotos";
 
 // Regenerate at most hourly so MOVE75 drops out of the HTML on its own after
 // it ends. <Offer> also hides it in the browser at the deadline. See
@@ -139,7 +140,7 @@ const checklist = [
       "Vacuum and mop floor",
     ],
     photos: [
-      { src: "/work-photos/laundry-room-move-out-clean-romeoville-il.jpg", alt: "Laundry room with a white front-load washer and dryer and a clean tile floor after a DSM Cleaning Solutions move-out clean in Romeoville" },
+      WORK_PHOTOS.laundryRoom,
     ],
   },
 ];
@@ -614,7 +615,7 @@ export default function MoveOutCleaningPage() {
             ))}
           </div>
           <div className="text-center">
-            <a href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener noreferrer" className="text-green-700 font-semibold hover:underline text-sm">
+            <a href={GOOGLE_PROFILE_URL} target="_blank" rel="noopener noreferrer" className="text-green-700 font-semibold hover:underline text-sm">
               Read all {REVIEW_COUNT} reviews on Google →
             </a>
           </div>

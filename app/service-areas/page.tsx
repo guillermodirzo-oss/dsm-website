@@ -101,7 +101,7 @@ const cities = [
     name: "Bolingbrook",
     zips: ["60440", "60490"],
     description:
-      "Serving Americana Estates, Pheasant Chase, Stillwater and all Bolingbrook neighborhoods.",
+      "Serving both Bolingbrook zip codes, 60440 and 60490.",
     links: [
       { label: "Deep Cleaning", href: "/deep-cleaning-bolingbrook-il" },
       { label: "Standard Cleaning", href: "/bolingbrook-il" },

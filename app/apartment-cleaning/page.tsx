@@ -5,6 +5,7 @@ import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
 import { pickReviews, reviewAttribution } from "@/lib/realReviews";
 import { STANDARD_CLEANING_TIERS, STANDARD_FROM, formatPrice, priceForBeds } from "@/lib/pricing";
+import { OG_IMAGE_ALT, WORK_PHOTOS } from "@/lib/workPhotos";
 
 // Apartment prices are the standard cleaning tiers. There is no studio tier,
 // so a studio is priced as a 1 bedroom.
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
     description: "Professional apartment cleaning in Plainfield, IL for renters, landlords & property managers. Eco-friendly, insured & reliable. Call for a free estimate.",
     url: "https://www.dsmcleaningsolutions.com/apartment-cleaning",
     siteName: "DSM Cleaning Solutions",
-    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "DSM Cleaning Solutions: Apartment Cleaning in Plainfield IL" }],
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: OG_IMAGE_ALT }],
   },
   twitter: {
     card: "summary_large_image",
@@ -189,7 +190,7 @@ export default function ApartmentCleaningPage() {
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
                 src="/work-photos/apartment-bathroom-cleaning-naperville-il.jpg"
-                alt="Clean apartment bathroom professionally cleaned by DSM Cleaning Solutions in Naperville IL"
+                alt={WORK_PHOTOS.grayCabinetBathroom.alt}
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -198,7 +199,7 @@ export default function ApartmentCleaningPage() {
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
                 src="/work-photos/apartment-move-out-cleaning-joliet-il.jpg"
-                alt="Clean apartment with parquet hardwood floors after professional cleaning service in Joliet IL"
+                alt={WORK_PHOTOS.emptyApartmentParquet.alt}
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -207,7 +208,7 @@ export default function ApartmentCleaningPage() {
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
                 src="/work-photos/bedroom-cleaning-service-bolingbrook-il.jpg"
-                alt="Clean bedroom maintained with recurring apartment cleaning service in Bolingbrook IL"
+                alt={WORK_PHOTOS.emptyBedroomMirroredCloset.alt}
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"

@@ -19,7 +19,7 @@ export default function Footer() {
             <div className="mb-5">
               <Image
                 src="/Logo.png"
-                alt="DSM Cleaning Solutions logo, house cleaning in Romeoville IL"
+                alt="DSM Cleaning Solutions logo"
                 width={180}
                 height={56}
                 className="h-14 w-auto object-contain brightness-0 invert"

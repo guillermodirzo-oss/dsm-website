@@ -2,6 +2,7 @@
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 import { DEEP_FROM, STANDARD_CLEANING_TIERS, STANDARD_FROM, formatPrice, priceForBeds } from "@/lib/pricing";
+import { OG_IMAGE_ALT } from "@/lib/workPhotos";
 
 const TWO_BED_STANDARD = formatPrice(priceForBeds(STANDARD_CLEANING_TIERS, 2));
 
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
       "Give the gift of a clean home. House cleaning gift cards in Romeoville and Plainfield IL from DSM Cleaning Solutions. Never expire.",
     url: "https://www.dsmcleaningsolutions.com/gift-cards",
     siteName: "DSM Cleaning Solutions",
-    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "House Cleaning Gift Cards Romeoville Plainfield" }],
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: OG_IMAGE_ALT }],
   },
   twitter: { card: "summary_large_image", images: ["/hero-image.png"] },
 };

@@ -2,6 +2,7 @@
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 import { DEEP_CLEANING_TIERS, STANDARD_CLEANING_TIERS, formatPrice, priceForBeds } from "@/lib/pricing";
+import { OG_IMAGE_ALT } from "@/lib/workPhotos";
 
 // Every price on this page comes from the rate card in lib/pricing.ts.
 // Each is the listed tier for that home size; 4 bed uses the larger of the
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
       "How much does deep cleaning cost in Naperville IL? See 2026 pricing and get a free quote from DSM Cleaning Solutions.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning-cost-naperville-il",
     siteName: "DSM Cleaning Solutions",
-    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "Deep Cleaning Cost Naperville IL" }],
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: OG_IMAGE_ALT }],
   },
   twitter: {
     card: "summary_large_image",

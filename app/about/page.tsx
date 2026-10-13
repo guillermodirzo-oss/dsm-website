@@ -5,6 +5,7 @@ import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
 import { pickReviews, reviewAttribution } from "@/lib/realReviews";
 import { REVIEW_COUNT, REVIEW_RATING, SERVICE_CITIES } from "@/lib/siteConstants";
+import { OG_IMAGE_ALT, WORK_PHOTOS } from "@/lib/workPhotos";
 
 export const metadata: Metadata = {
   title: "Meet the DSM Cleaning Team | Romeoville IL",
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
         url: "/hero-image.png",
         width: 1200,
         height: 630,
-        alt: "DSM Cleaning Solutions Team, Family-Owned House Cleaning in Plainfield IL",
+        alt: OG_IMAGE_ALT,
       },
     ],
   },
@@ -220,7 +221,7 @@ export default function AboutPage() {
             <div className="relative aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
                 src="/work-photos/google-post-image-cleaning-service-25.jpg"
-                alt="DSM Cleaning Solutions professional cleaner at work in a Plainfield IL home"
+                alt={WORK_PHOTOS.teamMemberLightFixture.alt}
                 fill
                 sizes="(max-width: 768px) 50vw, 25vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -229,7 +230,7 @@ export default function AboutPage() {
             <div className="relative aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
                 src="/work-photos/shower-deep-clean-romeoville-il.jpg"
-                alt="Glass shower deep cleaned to sparkling perfection by DSM Cleaning Solutions in Romeoville IL"
+                alt={WORK_PHOTOS.glassShowerGrayTile.alt}
                 fill
                 sizes="(max-width: 768px) 50vw, 25vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -238,7 +239,7 @@ export default function AboutPage() {
             <div className="relative aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
                 src="/work-photos/living-room-hardwood-floors-plainfield-il.jpg"
-                alt="Clean living room with hardwood floors after house cleaning by DSM Cleaning Solutions in Plainfield IL"
+                alt={WORK_PHOTOS.emptyRoomGrayPlank.alt}
                 fill
                 sizes="(max-width: 768px) 50vw, 25vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -247,7 +248,7 @@ export default function AboutPage() {
             <div className="relative aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
                 src="/work-photos/google-post-image-cleaning-service-1.jpg"
-                alt="Clean modern kitchen with granite island after professional cleaning in Plainfield IL"
+                alt={WORK_PHOTOS.woodCabinetKitchen.alt}
                 fill
                 sizes="(max-width: 768px) 50vw, 25vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"

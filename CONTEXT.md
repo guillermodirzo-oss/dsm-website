@@ -54,7 +54,8 @@ City pages carry one real, anonymized client story with an example price compute
 - Never invent a client story. Every story is the owner's own account of a real client, used word for word.
 - Never use client names.
 - Never type the example price. It is worked out from the home in the story (bedrooms, baths, square footage bracket, and the recurring discount if the client is on a plan) and rounded up to the whole dollar.
-- Never label a photo with a town unless the owner confirms it came from that town. None are confirmed yet. The five work photos shared across the deep cleaning and move-out city pages get their alt text from `lib/workPhotos.ts`, which describes what is in the photo and names no town and no service. A town in a file name ("...-naperville-il.jpg") is only a file name.
+- Never list a neighborhood or subdivision name unless the owner has confirmed DSM cleans there. Zip codes confirmed by bookings are fine.
+- Never label a photo with a town unless the owner confirms it came from that town. None are confirmed yet. That covers alt text, captions and the Open Graph image alt. Work photo alt text comes from `lib/workPhotos.ts`, which describes what is in the photo and names no town and no service. The social share photo (/hero-image.png) uses OG_IMAGE_ALT from the same file. A town in a file name ("...-naperville-il.jpg") is only a file name.
 
 Stories so far: Joliet (monthly), Plainfield (every two weeks), Bolingbrook (every two weeks), Lockport (monthly) and Lemont (move-in) hubs ("One of Our {City} Clients"), and the Lemont move-out page ("A Recent Lemont Move-In"). The Joliet, Plainfield and Bolingbrook clients are the same ones on the recurring city pages, so both read the same home from `lib/recurringCities.ts`.
 
@@ -123,14 +124,14 @@ Move-out customers are mostly home buyers and sellers, not renters. Write move-o
 | `app/layout.tsx` | Global metadata, title template, and the one LocalBusiness JSON-LD |
 | `lib/pricing.ts` | Every price tier, the BookingKoala rate formula and recurring discounts |
 | `lib/offers.ts` | Every promotion: code, service, description, dates, discounted price, and the helpers that decide whether it is running |
-| `lib/siteConstants.ts` | SERVICE_CITIES, the 16-city list the LocalBusiness schema is built from; re-exports the review count and rating |
+| `lib/siteConstants.ts` | SERVICE_CITIES, the 16-city list the LocalBusiness schema is built from; the two Google links (GOOGLE_REVIEW_URL, GOOGLE_PROFILE_URL); re-exports the review count and rating |
 | `lib/realReviews.ts` | Verbatim Google reviews, REVIEW_COUNT and REVIEW_RATING |
 | `lib/seoTitles.ts` | Title tag formats for every city page |
 | `lib/recurringCities.ts` | Data, FAQ, metadata and schema for the recurring city pages |
 | `components/RecurringCityPage.tsx` | The recurring city page itself |
 | `lib/localProof.ts` | The client story and computed example price for each city page that has one |
 | `components/ClientStory.tsx` | The "One of Our {City} Clients" section |
-| `lib/workPhotos.ts` | Alt text for the work photos shared across city pages. No town, no service |
+| `lib/workPhotos.ts` | Alt text for work photos and for the social share photo. No town, no service |
 | `lib/standardChecklist.ts` | The standard checklist, shared by /recurring-cleaning and the recurring city pages |
 | `components/Offer.tsx` | Wrapper that expires offer copy automatically |
 | `components/OfferBanner.tsx` | One line per running offer, for the homepage hero. Disappears when no offer is running |
@@ -172,8 +173,10 @@ Never change form payloads, guards or the Step 1 partial capture. Never send tes
 10. Never alter existing design, layout, colors, or content unless explicitly instructed.
 11. Service city pages use the pattern /{service}-{city}-il. Never create nested /service/city routes.
 12. City pages link to each other, never to the generic service page when a city page exists. On every city hub the deep cleaning, move-out and maid service cards go to that city's own page (/deep-cleaning-{city}-il, /move-out-cleaning-{city}-il, and /recurring-cleaning-{city}-il where that page exists, otherwise /recurring-cleaning). Every deep cleaning and move-out city page links back to its hub (/{city}-il, or / for Romeoville) with the anchor "house cleaning in {City}".
-13. Every "Read all N reviews on Google" link uses GOOGLE_REVIEWS_URL from `lib/siteConstants.ts`. Never type a Google link into a page. That constant is a Google search for the business for now: the profile link in the schema sameAs (https://g.co/kgs/KFkN2MX) is dead as of October 2026 and the owner still has to supply the real Google Business Profile review link. When it arrives, put it in the constant and in sameAs in `app/layout.tsx`.
-14. A city page's zip codes and neighborhoods come from that city's entry in `lib/cityData.ts`. /deep-cleaning-bolingbrook-il, /bolingbrook-il and /recurring-cleaning-bolingbrook-il all read the same entry. Never type a zip code or neighborhood into a city page.
+13. There are only two Google links, both owner-supplied and confirmed working (October 2026), and both live in `lib/siteConstants.ts`. Never type a Google link into a page, and never use any other Google URL (no g.co/kgs links, no Google search links).
+    - `GOOGLE_REVIEW_URL` = https://g.page/r/CX8eP54fxW4_EAE/review. It opens the "write a review" box. Every "leave a review" or "write a review" link uses it.
+    - `GOOGLE_PROFILE_URL` = https://maps.app.goo.gl/T6UQsNQtBBoKbQXw9. It opens the Business Profile on Google Maps. Every "read our reviews", "Read all N reviews on Google" or "see us on Google" link uses it, and so does sameAs in the LocalBusiness schema in `app/layout.tsx`.
+14. A city page's zip codes and neighborhoods come from that city's entry in `lib/cityData.ts`. /deep-cleaning-bolingbrook-il, /bolingbrook-il and /recurring-cleaning-bolingbrook-il all read the same entry. Never type a zip code or neighborhood into a city page. Bolingbrook's entry has no neighborhoods (none are confirmed), so its pages state the two zip codes, 60440 and 60490, and nothing more specific.
 15. Blog posts answer questions (cost, checklists, how to prepare, comparisons). A blog post must never target the same search as a service page or city page, for example "move-out cleaning {city}" or "maid service {city}". Those searches belong to the landing pages.
 
 ## Copy Rules

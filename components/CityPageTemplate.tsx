@@ -3,7 +3,7 @@ import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
 import { pickReviews, reviewAttribution } from "@/lib/realReviews";
 import type { CityData } from "@/lib/cityData";
-import { recurringPageForHub } from "@/lib/recurringCities";
+import { listWithAnd, recurringPageForHub } from "@/lib/recurringCities";
 import ClientStory from "@/components/ClientStory";
 import { clientStoryForHub } from "@/lib/localProof";
 
@@ -16,6 +16,14 @@ export default function CityPageTemplate({ city }: { city: CityData }) {
   const recurringPage = recurringPageForHub(`/${city.slug}`);
   // A real client story with an example price, for the cities that have one.
   const clientStory = clientStoryForHub(city.slug);
+  // "both Bolingbrook zip codes, 60440 and 60490". Shown in place of the
+  // neighborhood list when the city has no owner-confirmed neighborhoods.
+  const zipPhrase =
+    city.zips.length === 1
+      ? `${city.name} zip code ${city.zips[0]}`
+      : city.zips.length === 2
+        ? `both ${city.name} zip codes, ${listWithAnd(city.zips)}`
+        : `${city.name} zip codes ${listWithAnd(city.zips)}`;
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -192,6 +200,10 @@ export default function CityPageTemplate({ city }: { city: CityData }) {
       <section className="py-14 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            {/* A neighborhood is listed only after the owner confirms DSM
+                cleans there. A city with none confirmed (neighborhoods: [])
+                gets one line about its zip codes instead of a list. */}
+            {city.neighborhoods.length > 0 ? (
             <div>
               <h2 className="section-heading text-2xl mb-4">Neighborhoods We Serve in {city.name}</h2>
               <p className="text-gray-600 mb-5 leading-relaxed">
@@ -207,6 +219,12 @@ export default function CityPageTemplate({ city }: { city: CityData }) {
               </div>
               <p className="text-gray-500 text-sm mt-4">Zip codes served: {city.zips.join(", ")}</p>
             </div>
+            ) : (
+            <div>
+              <h2 className="section-heading text-2xl mb-4">{`Zip Codes We Serve in ${city.name}`}</h2>
+              <p className="text-gray-600 leading-relaxed">{`We clean homes in ${zipPhrase}.`}</p>
+            </div>
+            )}
             <div>
               <h3 className="font-bold text-xl text-gray-900 mb-4">Local Landmarks Near You</h3>
               <p className="text-gray-600 mb-4 leading-relaxed text-sm">We&apos;re proud to serve the community around these well-known {city.name} landmarks:</p>

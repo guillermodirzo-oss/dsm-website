@@ -8,7 +8,7 @@ import LeadForm from "@/components/LeadForm";
 import Offer from "@/components/Offer";
 import { MOVEOUT_OFFER } from "@/lib/offers";
 import { MOVE_OUT_PRICING_COPY } from "@/lib/pricingCopy";
-import { GOOGLE_REVIEWS_URL } from "@/lib/siteConstants";
+import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 
 // Regenerate at most hourly so MOVE75 drops out of the HTML on its own after
@@ -47,7 +47,7 @@ const faqs = [
   {
     question: "How long does a move-out clean take in Bolingbrook?",
     answer:
-      "A move-out clean in Bolingbrook typically takes 4-7 hours for an average-sized home. Larger homes in Stillwater or Lakewood Estates, or properties that haven't been professionally cleaned in a while, may take longer. We'll give you an accurate time estimate when you contact us.",
+      "A move-out clean in Bolingbrook typically takes 4-7 hours for an average-sized home. Larger homes, or properties that haven't been professionally cleaned in a while, may take longer. We'll give you an accurate time estimate when you contact us.",
   },
   {
     question: "Do you offer same-day move-out cleaning in Bolingbrook?",
@@ -232,8 +232,8 @@ export default function MoveOutCleaningBolingbrookPage() {
               <p className="text-xl font-semibold text-white/95 mb-4">Get Your Deposit Back. Guaranteed.</p>
               <p className="text-lg text-white/85 mb-8 leading-relaxed">
                 DSM Cleaning Solutions delivers a landlord-approved, deposit-back move-out clean for
-                Bolingbrook homes and apartments. We serve all of 60440 and 60490, from Naperville
-                Acres to Americana Estates, with a comprehensive clean built to pass any inspection.
+                Bolingbrook homes and apartments. We serve all of 60440 and 60490 with a
+                comprehensive clean built to pass any inspection.
               </p>
               <Offer service="moveout">
                 <div className="mb-6">
@@ -311,8 +311,8 @@ export default function MoveOutCleaningBolingbrookPage() {
           <h2 className="section-heading mb-6">Move-Out Cleaning in Bolingbrook, IL: Built to Get Your Deposit Back</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Move-out cleaning in Bolingbrook, IL is one of DSM Cleaning Solutions&rsquo; most requested
-            services, and for good reason. Bolingbrook renters in Naperville Acres, Americana
-            Estates, Pheasant Chase, and across zip codes 60440 and 60490 trust us to deliver the
+            services, and for good reason. Bolingbrook renters across zip codes 60440 and 60490
+            trust us to deliver the
             kind of deep, comprehensive clean that meets even the strictest landlord standards and
             maximizes the chance of getting their full security deposit back.
           </p>
@@ -427,7 +427,7 @@ export default function MoveOutCleaningBolingbrookPage() {
           </div>
           <div className="text-center">
             <a
-              href={GOOGLE_REVIEWS_URL}
+              href={GOOGLE_PROFILE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm font-semibold underline"

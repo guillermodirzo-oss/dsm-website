@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
+import { OG_IMAGE_ALT } from "@/lib/workPhotos";
 
 export const metadata: Metadata = {
   title: "Free House Cleaning Estimate Romeoville & Plainfield IL",
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
       "Get a free house cleaning estimate in Romeoville and Plainfield IL. No obligation. Same-week availability.",
     url: "https://www.dsmcleaningsolutions.com/free-estimate",
     siteName: "DSM Cleaning Solutions",
-    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "Free Cleaning Estimate Romeoville Plainfield IL" }],
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: OG_IMAGE_ALT }],
   },
   twitter: {
     card: "summary_large_image",

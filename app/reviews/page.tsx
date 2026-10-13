@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { REAL_REVIEWS, REVIEW_COUNT, reviewAttribution } from "@/lib/realReviews";
+import { GOOGLE_REVIEW_URL } from "@/lib/siteConstants";
 import Link from "next/link";
+import { OG_IMAGE_ALT } from "@/lib/workPhotos";
 
 export const metadata: Metadata = {
   title: "5-Star Reviews",
@@ -18,7 +20,7 @@ export const metadata: Metadata = {
         url: "/hero-image.png",
         width: 1200,
         height: 630,
-        alt: "DSM Cleaning Solutions: 5-Star Rated House Cleaning in Romeoville IL",
+        alt: OG_IMAGE_ALT,
       },
     ],
   },
@@ -30,9 +32,6 @@ export const metadata: Metadata = {
     images: ["/hero-image.png"],
   },
 };
-
-const GOOGLE_REVIEW_URL =
-  "https://www.google.com/search?q=DSM+Cleaning+Solutions+Romeoville+IL#lrd=0x880e614a12f4a4d5:0x1,1,,,,";
 
 const reviews = REAL_REVIEWS;
 
