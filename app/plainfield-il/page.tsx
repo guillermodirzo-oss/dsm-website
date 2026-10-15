@@ -8,11 +8,13 @@ import ClientStory from "@/components/ClientStory";
 import { CLIENT_STORIES } from "@/lib/localProof";
 import { STANDARD_HIGHLIGHTS } from "@/lib/standardChecklist";
 import { DEEP_ADDITIONS } from "@/lib/deepChecklist";
+import { CITY_ZIPS, zipLine } from "@/lib/cityData";
+import { zipList } from "@/lib/recurringCities";
 
 export const metadata: Metadata = {
   title: { absolute: hubCityTitle("Plainfield") },
   description:
-    "#1 rated house cleaning service in Plainfield IL. Deep cleaning, move-out, recurring & more. Serving Grande Park, Wallin Oaks & all Plainfield neighborhoods.",
+    `#1 rated house cleaning service in Plainfield IL. Deep cleaning, move-out, recurring & more. Serving Plainfield zip codes ${zipList(CITY_ZIPS.Plainfield)}.`,
   keywords: [
     "house cleaning Plainfield IL",
     "deep cleaning Plainfield IL",
@@ -29,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: hubCityTitle("Plainfield"),
     description:
-      "#1 rated house cleaning service in Plainfield IL. Deep cleaning, move-out, recurring & more. Serving Grande Park, Wallin Oaks & all Plainfield neighborhoods.",
+      `#1 rated house cleaning service in Plainfield IL. Deep cleaning, move-out, recurring & more. Serving Plainfield zip codes ${zipList(CITY_ZIPS.Plainfield)}.`,
     url: "https://www.dsmcleaningsolutions.com/plainfield-il",
     siteName: "DSM Cleaning Solutions",
   },
@@ -61,9 +63,9 @@ const localBusinessSchema = {
 
 const faqs = [
   {
-    question: "What neighborhoods in Plainfield, IL does DSM serve?",
+    question: "What parts of Plainfield, IL does DSM serve?",
     answer:
-      "We serve all Plainfield neighborhoods including Settlers Ridge, Lakewood Falls, Grande Park, Springbank, Heritage Meadows, and River Run, across both zip codes 60544 and 60585.",
+      zipLine("Plainfield"),
   },
   {
     question: "Are your cleaners background checked in Plainfield?",
@@ -227,10 +229,10 @@ export default function PlainfieldPage() {
             <div>
               <h2 className="section-heading">Your Local Cleaning Company in Plainfield, IL</h2>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                DSM Cleaning Solutions is based right in Romeoville, just minutes from Plainfield. We serve neighborhoods throughout Plainfield including Settlers Ridge, Lakewood Falls, Grande Park, and Springbank. We&apos;re not a national franchise; we&apos;re your local neighbors, and we treat every Plainfield home with the same care we&apos;d want for our own.
+                DSM Cleaning Solutions is based right in Romeoville, just minutes from Plainfield. We serve neighborhoods throughout Plainfield. We&apos;re not a national franchise; we&apos;re your local neighbors, and we treat every Plainfield home with the same care we&apos;d want for our own.
               </p>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                Plainfield is one of the fastest-growing communities in the southwest suburbs, and we&apos;re proud to serve its families across zip codes 60544 and 60585. From the Plainfield Historic District area to the Township Park neighborhood and the newest residential developments, we bring the same high standard of professional cleaning to every home.
+                Plainfield is one of the fastest-growing communities in the southwest suburbs, and we&apos;re proud to serve its families across zip codes 60544 and 60585. From the Plainfield Historic District area to the newest residential developments, we bring the same high standard of professional cleaning to every home.
               </p>
               <p className="text-gray-600 mb-6 leading-relaxed">
                 We use only eco-friendly, non-toxic cleaning products, because Plainfield families deserve a clean home that&apos;s also safe for their kids and pets. Whether you&apos;re in a classic home near Route 30 or a newer build in 60585, we show up prepared with everything we need.
@@ -280,27 +282,17 @@ export default function PlainfieldPage() {
         </div>
       </section>
 
-      {/* NEIGHBORHOODS & LANDMARKS */}
+      {/* ZIP CODES & LANDMARKS */}
       <section className="py-16 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <div>
-              <h2 className="section-heading text-3xl md:text-4xl mb-4">Plainfield Neighborhoods We Serve</h2>
+              <h2 className="section-heading text-3xl md:text-4xl mb-4">Plainfield Zip Codes We Serve</h2>
               <p className="text-gray-500 mb-5 leading-relaxed">
                 Based in the southwest Chicago suburbs, DSM Cleaning Solutions knows every corner of Plainfield. We clean homes throughout every neighborhood, from the newest developments to established subdivisions we&apos;ve served for years.
               </p>
-              <div className="grid grid-cols-2 gap-2 mb-5">
-                {["Settlers Ridge", "Lakewood Falls", "Grande Park", "Springbank", "Wallin Oaks", "Creekside Crossing", "Whispering Creek"].map((n) => (
-                  <div key={n} className="flex items-center gap-2 text-gray-700 text-sm">
-                    <svg className="w-4 h-4 text-brand-green flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                      <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                    </svg>
-                    {n}
-                  </div>
-                ))}
-              </div>
-              <p className="text-gray-400 text-sm">Zip codes served: 60544 &amp; 60585</p>
+              {/* Zip codes only: the owner cannot confirm any neighborhood names. */}
+              <p className="text-gray-700 leading-relaxed">{zipLine("Plainfield")}</p>
             </div>
             <div>
               <h3 className="font-bold text-xl text-gray-900 mb-4">Local Plainfield Landmarks</h3>
@@ -517,7 +509,7 @@ export default function PlainfieldPage() {
             <div className="text-white">
               <h2 className="text-4xl font-bold mb-4">Book House Cleaning in Plainfield, IL Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                Ready for a spotlessly clean home in Plainfield, IL? Whether you need a one-time deep clean in Settlers Ridge, recurring maid service in Grande Park, or a move-out cleaning in Lakewood Falls, DSM Cleaning Solutions is just a call away. We&apos;ll get back to you fast, and same-week appointments are usually available. Every clean is backed by our 48-hour satisfaction guarantee. Serving all of Plainfield, zip codes 60544 &amp; 60585.
+                Ready for a spotlessly clean home in Plainfield, IL? Whether you need a one-time deep clean, recurring maid service, or a move-out cleaning, DSM Cleaning Solutions is just a call away. We&apos;ll get back to you fast, and same-week appointments are usually available. Every clean is backed by our 48-hour satisfaction guarantee. Serving all of Plainfield, zip codes 60544 &amp; 60585.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-brand-green-50 transition-colors mb-6">
                 📞 (815) 246-2113

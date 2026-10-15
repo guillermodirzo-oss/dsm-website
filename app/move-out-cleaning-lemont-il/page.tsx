@@ -11,6 +11,7 @@ import { MOVE_OUT_PRICING_COPY } from "@/lib/pricingCopy";
 import ClientStory from "@/components/ClientStory";
 import { CLIENT_STORIES } from "@/lib/localProof";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
+import { zipCodesPhrase, zipLine } from "@/lib/cityData";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 
 // Regenerate at most hourly so MOVE75 drops out of the HTML on its own after
@@ -51,12 +52,12 @@ const faqs = [
   {
     question: "How long does a move-out clean take in Lemont, IL?",
     answer:
-      "A move-out clean in Lemont typically takes 4-7 hours for an average-sized home in zip code 60439. Larger homes in Covington Knolls, Burning Tree Estates, or Heritage Lake that haven't been professionally cleaned recently may take longer. We'll give you an accurate time estimate when you contact us.",
+      "A move-out clean in Lemont typically takes 4-7 hours for an average-sized home in zip code 60439. Larger homes that haven't been professionally cleaned recently may take longer. We'll give you an accurate time estimate when you contact us.",
   },
   {
     question: "Do you serve all of Lemont, IL 60439?",
     answer:
-      "Yes, we serve all of Lemont, including zip code 60439 and all neighborhoods: Historic Downtown Lemont, Centennial Crossing, Covington Knolls, Burning Tree Estates, and Heritage Lake. We're based in nearby Romeoville and serve Lemont regularly alongside our Bolingbrook and Joliet clients.",
+      `Yes. ${zipLine("Lemont")} We're based in nearby Romeoville and serve Lemont regularly alongside our Bolingbrook and Joliet clients.`,
   },
 ];
 
@@ -119,7 +120,7 @@ const checklist = [
       "Scrub sink",
       "Wipe all cabinet fronts and clean inside",
       "Clean countertops and backsplash",
-      "Clean dishwasher interior",
+      "Clean inside the dishwasher",
       "Mop and scrub floors",
     ],
   },
@@ -138,7 +139,7 @@ const checklist = [
   {
     room: "Bedrooms & Living Areas",
     items: [
-      "Clean inside all closets",
+      "Wipe closet shelves",
       "Wipe all baseboards and door frames",
       "Clean window sills and inside glass",
       "Wipe all light switches and outlet covers",
@@ -155,7 +156,7 @@ const checklist = [
       "Dust and wipe all light fixtures",
       "Clean vents and registers",
       "Remove all trash and debris",
-      "Final walkthrough inspection",
+      "Sweep the patio",
     ],
   },
 ];
@@ -238,9 +239,7 @@ export default function MoveOutCleaningLemontPage() {
               </p>
               <p className="text-lg text-white/85 mb-8 leading-relaxed">
                 Selling your Lemont home or moving out of a rental? DSM Cleaning Solutions
-                delivers a thorough, buyer-ready clean throughout Lemont, including Historic
-                Downtown, Centennial Crossing, Covington Knolls, Burning Tree Estates, and
-                Heritage Lake. Your home will be walkthrough-ready, or we come back and
+                delivers a thorough, buyer-ready clean throughout Lemont ({zipCodesPhrase("Lemont")}). Your home will be walkthrough-ready, or we come back and
                 re-clean at no charge.
               </p>
               <Offer service="moveout">
@@ -327,8 +326,7 @@ export default function MoveOutCleaningLemontPage() {
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
             We&rsquo;re a family-owned cleaning company based in Romeoville, just minutes from Lemont.
-            We&rsquo;ve cleaned homes across Historic Downtown Lemont, Centennial Crossing, Covington
-            Knolls, Burning Tree Estates, and Heritage Lake for sellers and renters who needed
+            We&rsquo;ve cleaned homes across Lemont for sellers and renters who needed
             a spotless result, not just a surface wipe-down. Our team follows a detailed,
             room-by-room checklist that covers every area a walkthrough will touch.
           </p>

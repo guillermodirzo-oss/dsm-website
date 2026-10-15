@@ -10,6 +10,7 @@ import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 import { DEEP_CHECKLIST } from "@/lib/deepChecklist";
+import { zipCodesPhrase, zipLine } from "@/lib/cityData";
 
 export const metadata: Metadata = {
   title: { absolute: deepCityTitle("New Lenox") },
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What does a deep cleaning include in New Lenox?",
-    a: "We degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. Cleaning inside the oven or inside the kitchen cabinets is an add-on. A full room-by-room clean.",
+    a: "We degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. Cleaning inside the oven or inside cabinets is an add-on. A full room-by-room clean.",
   },
   {
     q: "How long does a deep clean take in New Lenox?",
@@ -43,8 +44,8 @@ const faqs = [
     a: "The ranges listed cover typical homes in that bedroom count. If your home runs bigger, has more bathrooms, or needs extra attention, your quote might land higher. We always confirm your exact price before we book anything. No surprises.",
   },
   {
-    q: "Do you serve all neighborhoods in New Lenox?",
-    a: "Yes. We serve Spencer Pointe, the Hickory Creek area, Village Center, and all surrounding neighborhoods throughout New Lenox, IL 60451.",
+    q: "Do you serve all of New Lenox?",
+    a: `Yes. ${zipLine("New Lenox")}`,
   },
 ];
 
@@ -181,7 +182,7 @@ export default function DeepCleaningNewLenoxPage() {
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto prose prose-gray">
           <p className="text-gray-700 leading-relaxed mb-4">
-            New Lenox is a family-friendly community in Will County and we have been glad to serve homeowners here for years. Whether you are in Spencer Pointe, near Hickory Creek, the Village Center area, or anywhere else in town, we can get your kitchen, bathrooms and floors looking the way they should.
+            New Lenox is a family-friendly community in Will County and we have been glad to serve homeowners here for years. Wherever you are in {zipCodesPhrase("New Lenox")}, we can get your kitchen, bathrooms and floors looking the way they should.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
             Our deep cleaning is built for homes that need more than a regular weekly clean. That means scrubbing grout lines in the shower, cleaning behind the stovetop grates, wiping every baseboard, and vacuuming under the furniture. We do not skip the spots that others miss.

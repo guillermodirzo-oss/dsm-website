@@ -10,6 +10,7 @@ import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 import { DEEP_CHECKLIST } from "@/lib/deepChecklist";
+import { zipCodesPhrase, zipLine } from "@/lib/cityData";
 
 export const metadata: Metadata = {
   title: { absolute: deepCityTitle("Minooka") },
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What does a deep cleaning include in Minooka?",
-    a: "We degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. Cleaning inside the oven or inside the kitchen cabinets is an add-on. Every room gets full attention.",
+    a: "We degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. Cleaning inside the oven or inside cabinets is an add-on. Every room gets full attention.",
   },
   {
     q: "How long does a deep clean take in Minooka?",
@@ -44,7 +45,7 @@ const faqs = [
   },
   {
     q: "Which areas of Minooka do you clean?",
-    a: "We serve all of Minooka including the downtown area, Ridge Road area, and surrounding neighborhoods throughout Minooka, IL 60447.",
+    a: zipLine("Minooka"),
   },
 ];
 
@@ -181,7 +182,7 @@ export default function DeepCleaningMinookaPage() {
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto prose prose-gray">
           <p className="text-gray-700 leading-relaxed mb-4">
-            Finding a quality cleaning service willing to come to Minooka can be a challenge. DSM does. We serve homeowners throughout Minooka and make booking simple. Whether you are near downtown or along Ridge Road, we can get your home clean.
+            Finding a quality cleaning service willing to come to Minooka can be a challenge. DSM does. We serve homeowners throughout Minooka and make booking simple. Wherever you are in {zipCodesPhrase("Minooka")}, we can get your home clean.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
             Our deep cleaning goes room by room with no shortcuts. Kitchen cleaning means inside the microwave and degreasing the hood vent, not just wiping the counters. Bathroom cleaning means scrubbing grout lines and disinfecting every surface. Living areas get dusted ceiling fans, clean baseboards, and vacuumed under furniture.

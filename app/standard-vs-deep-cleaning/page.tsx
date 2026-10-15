@@ -115,17 +115,20 @@ const comparisonRows = [
   { feature: "Light switches & door handles", standard: "✓", deep: "✓" },
   { feature: "Kitchen & bathroom vents", standard: "✓", deep: "✓" },
   // The seven things a deep clean adds (lib/deepChecklist.ts). Exactly these.
-  { feature: "Baseboards", standard: "✗", deep: "✓" },
-  { feature: "Doors & door frames", standard: "✗", deep: "✓" },
+  // Standard cleans can add "Detail baseboards and doors" (lib/addOns.ts).
+  { feature: "Baseboards", standard: "Add-on", deep: "✓" },
+  { feature: "Doors & door frames", standard: "Add-on", deep: "✓" },
   { feature: "Grout scrubbing", standard: "✗", deep: "✓" },
   { feature: "Vacuum under & behind furniture", standard: "✗", deep: "✓" },
-  { feature: "Inside window glass", standard: "✗", deep: "✓" },
+  // Standard cleans can add "Interior windows" (lib/addOns.ts).
+  { feature: "Inside window glass", standard: "Add-on", deep: "✓" },
   { feature: "Light fixtures", standard: "✗", deep: "✓" },
   { feature: "Degrease stovetop, hood vent & burners", standard: "✗", deep: "✓" },
-  // Add-ons for both. Only move-in and move-out cleaning includes them.
+  // Add-ons for both (lib/addOns.ts). Move-in and move-out cleaning includes them.
   { feature: "Inside oven", standard: "Add-on", deep: "Add-on" },
-  { feature: "Inside refrigerator", standard: "Add-on", deep: "Add-on" },
-  { feature: "Inside kitchen cabinets", standard: "Add-on", deep: "Add-on" },
+  { feature: "Inside fridge", standard: "Add-on", deep: "Add-on" },
+  { feature: "Inside cabinets", standard: "Add-on", deep: "Add-on" },
+  { feature: "Inside dishwasher", standard: "Add-on", deep: "Add-on" },
   { feature: "Starting price (2 bed/1 bath)", standard: STANDARD_2_BED, deep: DEEP_2_BED },
   { feature: "Typical duration (2 bed/1 bath)", standard: "2–3 hrs", deep: "4–6 hrs" },
   { feature: "Recommended frequency", standard: "Weekly – monthly", deep: "Seasonally (2–4×/yr)" },

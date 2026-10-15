@@ -19,6 +19,7 @@ import {
 import { offerPrice } from "@/lib/offers";
 import { DEEP_OFFER } from "@/lib/offers";
 import { OG_IMAGE_ALT } from "@/lib/workPhotos";
+import { ADD_ONS, addOnServicesLabel } from "@/lib/addOns";
 
 // Regenerate at most hourly so FALL75 drops out of the HTML on its own after
 // it ends. <Offer> also hides it in the browser at the deadline. See
@@ -66,7 +67,7 @@ const faqs = [
     q: "How much does deep cleaning cost?",
     a: `Deep cleaning starts at ${formatPrice(
       startingPrice(DEEP_CLEANING_TIERS)
-    )}. It covers what a standard clean skips, like grout lines, baseboards, doors and door frames. Cleaning inside the oven or inside the kitchen cabinets is an add-on. Pricing varies with home size, and you get an exact quote online.`,
+    )}. It covers what a standard clean skips, like grout lines, baseboards, doors and door frames. Cleaning inside the oven or inside cabinets is an add-on. Pricing varies with home size, and you get an exact quote online.`,
   },
   {
     q: "How much does move-out cleaning cost?",
@@ -135,7 +136,7 @@ const serviceCards: ServiceCard[] = [
     // Internal pricing mechanics are not shown to customers. This says what
     // they actually get for the higher price instead.
     scope:
-      "Covers what standard skips: grout lines, baseboards, doors and door frames. Inside oven cleaning and inside kitchen cabinets are add-ons.",
+      "Covers what standard skips: grout lines, baseboards, doors and door frames. Inside oven cleaning and inside cabinets are add-ons.",
     badge: "Most Popular",
     color: "border-orange-200",
     headerBg: "bg-orange-50",
@@ -435,6 +436,47 @@ export default function PricingPage() {
             >
               Get My Instant Quote
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── ADD-ONS ───
+          Rendered from lib/addOns.ts, the only source for add-on names, prices
+          and services. While the deep cleaning offer runs, the oven line says
+          it is free on deep cleans; <Offer> drops that line when it ends. */}
+      <section className="py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="section-heading">Add-ons</h2>
+            <p className="section-subheading mx-auto">
+              Extras you can choose when you book. Move-in/move-out cleaning already includes the
+              inside of the oven, the fridge, every cabinet and drawer, and the dishwasher.
+            </p>
+          </div>
+          <div className="bg-gray-50 rounded-2xl border border-gray-100 p-6 sm:p-8">
+            <div className="space-y-3">
+              {ADD_ONS.map((a) => (
+                <div key={a.id} className="flex items-start justify-between gap-4 border-b border-gray-100 pb-3 last:border-0 last:pb-0">
+                  <div>
+                    <p className="text-sm font-semibold text-gray-800">{a.name}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">
+                      {addOnServicesLabel(a)}
+                      {a.note ? `. ${a.note}` : ""}
+                    </p>
+                    {a.id === "insideOven" && (
+                      <Offer service="deep">
+                        <p className="text-xs font-bold mt-0.5" style={{ color: "#E8622A" }}>
+                          Free on deep cleans with code {DEEP_OFFER.code} through {DEEP_OFFER.endDate}.
+                        </p>
+                      </Offer>
+                    )}
+                  </div>
+                  <span className="text-lg font-bold text-gray-900 whitespace-nowrap flex-shrink-0">
+                    {formatPrice(a.price)}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

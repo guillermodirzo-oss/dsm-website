@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { hubCityTitle } from "@/lib/seoTitles";
 import Link from "next/link";
 import CityPageTemplate from "@/components/CityPageTemplate";
-import { cities } from "@/lib/cityData";
+import { cities, zipLine } from "@/lib/cityData";
 import { OG_IMAGE_ALT } from "@/lib/workPhotos";
 
 const city = cities.find((c) => c.slug === "oak-brook-il")!;
@@ -41,27 +41,17 @@ export default function OakBrookPage() {
     <>
       <CityPageTemplate city={city} />
 
-      {/* NEIGHBORHOODS & LANDMARKS */}
+      {/* ZIP CODES & LANDMARKS */}
       <section className="py-16 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <div>
-              <h2 className="section-heading text-3xl md:text-4xl mb-4">Oak Brook Neighborhoods We Serve</h2>
+              <h2 className="section-heading text-3xl md:text-4xl mb-4">Oak Brook Zip Code We Serve</h2>
               <p className="text-gray-500 mb-5 leading-relaxed">
-                From the prestigious Ginger Creek and Oak Brook Club neighborhoods to executive homes throughout Oak Brook&apos;s premier residential areas, DSM Cleaning Solutions delivers professional, meticulous house cleaning throughout the village.
+                From executive homes to estates throughout Oak Brook&apos;s premier residential areas, DSM Cleaning Solutions delivers professional, meticulous house cleaning throughout the village.
               </p>
-              <div className="grid grid-cols-2 gap-2 mb-5">
-                {["Ginger Creek", "Oak Brook Club", "East Oak Brook", "York Woods", "Midwest Club", "York Center"].map((n) => (
-                  <div key={n} className="flex items-center gap-2 text-gray-700 text-sm">
-                    <svg className="w-4 h-4 text-brand-green flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                      <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                    </svg>
-                    {n}
-                  </div>
-                ))}
-              </div>
-              <p className="text-gray-400 text-sm">Zip code served: 60523</p>
+              {/* Zip codes only: the owner cannot confirm any neighborhood names. */}
+              <p className="text-gray-700 leading-relaxed">{zipLine("Oak Brook")}</p>
             </div>
             <div>
               <h3 className="font-bold text-xl text-gray-900 mb-4">Local Oak Brook Landmarks</h3>

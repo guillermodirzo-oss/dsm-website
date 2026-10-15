@@ -10,6 +10,7 @@ import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 import { DEEP_CHECKLIST } from "@/lib/deepChecklist";
+import { zipCodesPhrase, zipLine } from "@/lib/cityData";
 
 export const metadata: Metadata = {
   title: { absolute: deepCityTitle("Downers Grove") },
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What does a deep cleaning include in Downers Grove?",
-    a: "We degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. Cleaning inside the oven or inside the kitchen cabinets is an add-on. Every room gets thorough attention.",
+    a: "We degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. Cleaning inside the oven or inside cabinets is an add-on. Every room gets thorough attention.",
   },
   {
     q: "How long does a deep clean take in Downers Grove?",
@@ -44,7 +45,7 @@ const faqs = [
   },
   {
     q: "Do you serve all parts of Downers Grove?",
-    a: "Yes. We serve downtown Downers Grove, the Fairmount area, and all surrounding neighborhoods throughout Downers Grove, IL 60515 and 60516.",
+    a: `Yes. ${zipLine("Downers Grove")}`,
   },
 ];
 
@@ -181,7 +182,7 @@ export default function DeepCleaningDownersGrovePage() {
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto prose prose-gray">
           <p className="text-gray-700 leading-relaxed mb-4">
-            Downers Grove is a busy community in DuPage County with active families and homes that get a lot of use. We serve homeowners in downtown Downers Grove, the Fairmount area, and throughout the 60515 and 60516 zip codes. Whether life has gotten in the way of keeping up with cleaning or you just want a real deep clean, we can help.
+            Downers Grove is a busy community in DuPage County with active families and homes that get a lot of use. We serve homeowners throughout {zipCodesPhrase("Downers Grove")}. Whether life has gotten in the way of keeping up with cleaning or you just want a real deep clean, we can help.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
             Our deep cleaning is not a rush job. We spend real time in each room. In the kitchen we get inside the microwave, degrease the stovetop, and scrub the sink. In bathrooms we scrub grout lines and clean everything from fixtures to floors. In bedrooms and living areas we dust ceiling fans, wipe baseboards, clean window sills, and vacuum under furniture.

@@ -10,6 +10,7 @@ import { MOVEOUT_OFFER } from "@/lib/offers";
 import { MOVE_OUT_PRICING_COPY } from "@/lib/pricingCopy";
 import { MOVE_OUT_TIERS, formatPrice, startingPrice } from "@/lib/pricing";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
+import { zipLine } from "@/lib/cityData";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 
 // Regenerate at most hourly so MOVE75 drops out of the HTML on its own after
@@ -33,12 +34,12 @@ const faqs = [
   {
     question: "How long does move-out cleaning take in Naperville, IL?",
     answer:
-      "Move-out cleaning in Naperville typically takes 4-8 hours depending on the size of your home. A 2-bedroom apartment usually takes 4-5 hours; a larger home in Ashbury or White Eagle may take 6-8 hours. We work as a team so you're not waiting all day.",
+      "Move-out cleaning in Naperville typically takes 4-8 hours depending on the size of your home. A 2-bedroom apartment usually takes 4-5 hours; a larger home may take 6-8 hours. We work as a team so you're not waiting all day.",
   },
   {
-    question: "Do you serve all Naperville neighborhoods and zip codes?",
+    question: "Do you serve all of Naperville?",
     answer:
-      "Yes, we serve all of Naperville including zip codes 60540, 60563, 60564, and 60565. We clean in Cress Creek, Hobson West, Ashbury, White Eagle, and all surrounding neighborhoods. Just let us know your address when you request a quote.",
+      `Yes. ${zipLine("Naperville")} Just let us know your address when you request a quote.`,
   },
   {
     question: "What does move-out cleaning cost in Naperville?",
@@ -116,7 +117,7 @@ const checklist = [
       "Scrub sink",
       "Wipe all cabinet fronts and clean inside",
       "Clean countertops and backsplash",
-      "Clean dishwasher interior",
+      "Clean inside the dishwasher",
       "Mop and scrub floors",
     ],
   },
@@ -135,7 +136,7 @@ const checklist = [
   {
     room: "Bedrooms & Living Areas",
     items: [
-      "Clean inside all closets",
+      "Wipe closet shelves",
       "Wipe all baseboards and door frames",
       "Clean window sills and inside glass",
       "Wipe all light switches and outlet covers",
@@ -152,7 +153,7 @@ const checklist = [
       "Dust and wipe all light fixtures",
       "Clean vents and registers",
       "Remove all trash and debris",
-      "Final walkthrough inspection",
+      "Sweep the patio",
     ],
   },
 ];
@@ -235,7 +236,7 @@ export default function MoveOutCleaningNapervillePage() {
               </p>
               <p className="text-lg text-white/85 mb-8 leading-relaxed">
                 Whether you&rsquo;re a renter who wants every dollar of your deposit back, a landlord
-                preparing a unit for the next tenant, or a home seller in Cress Creek or Ashbury
+                preparing a unit for the next tenant, or a home seller
                 who needs a spotless property before the final walkthrough. DSM Cleaning Solutions
                 delivers a thorough, professional move-out clean across all of Naperville
                 (zip codes 60540, 60563, 60564, 60565).
@@ -318,8 +319,7 @@ export default function MoveOutCleaningNapervillePage() {
           <p className="text-gray-600 mb-4 leading-relaxed">
             Naperville is one of the most competitive real estate markets in the Chicago suburbs,
             and move-out cleaning here means higher stakes than in most markets. Renters throughout
-            Naperville face thorough property management inspections, and home sellers in White Eagle,
-            Hobson West, and Cress Creek know that buyers notice every missed detail during the
+            Naperville face thorough property management inspections, and home sellers know that buyers notice every missed detail during the
             final walkthrough.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">

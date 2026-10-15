@@ -54,7 +54,7 @@ const jsonLd = {
         name: "Do you offer commercial office cleaning in Naperville, IL?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes, DSM Cleaning Solutions provides professional office and commercial cleaning services throughout Naperville, IL (60540, 60563, 60564, 60565). We serve offices near Downtown Naperville, Route 59, and all major business corridors.",
+          text: "Yes, DSM Cleaning Solutions provides professional office and commercial cleaning services throughout Naperville, IL (60540, 60563, 60564, 60565). We serve offices along Route 59 and all major business corridors.",
         },
       },
       {

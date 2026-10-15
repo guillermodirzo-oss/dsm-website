@@ -9,6 +9,7 @@ import Offer from "@/components/Offer";
 import { MOVEOUT_OFFER } from "@/lib/offers";
 import { MOVE_OUT_PRICING_COPY } from "@/lib/pricingCopy";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
+import { zipCodesPhrase, zipLine } from "@/lib/cityData";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 
 // Regenerate at most hourly so MOVE75 drops out of the HTML on its own after
@@ -49,12 +50,12 @@ const faqs = [
   {
     question: "How long does a move-out clean take in Downers Grove, IL?",
     answer:
-      "A move-out clean in Downers Grove typically takes 4-7 hours for an average-sized home in zip codes 60515 or 60516. Larger homes in Downtown Downers Grove or the Fairmount area may take longer depending on condition and square footage. We'll give you an accurate estimate when you contact us.",
+      "A move-out clean in Downers Grove typically takes 4-7 hours for an average-sized home in zip codes 60515 or 60516. Larger homes may take longer depending on condition and square footage. We'll give you an accurate estimate when you contact us.",
   },
   {
     question: "Do you serve all of Downers Grove, IL?",
     answer:
-      "Yes, we serve all of Downers Grove, including zip codes 60515 and 60516 and all neighborhoods: Downtown Downers Grove and the Fairmount area. We serve Downers Grove as part of our DuPage County route and work regularly alongside our Oak Brook, Westmont, and Naperville clients.",
+      `Yes. ${zipLine("Downers Grove")} We serve Downers Grove as part of our DuPage County route and work regularly alongside our Oak Brook, Westmont, and Naperville clients.`,
   },
 ];
 
@@ -117,7 +118,7 @@ const checklist = [
       "Scrub sink",
       "Wipe all cabinet fronts and clean inside",
       "Clean countertops and backsplash",
-      "Clean dishwasher interior",
+      "Clean inside the dishwasher",
       "Mop and scrub floors",
     ],
   },
@@ -136,7 +137,7 @@ const checklist = [
   {
     room: "Bedrooms & Living Areas",
     items: [
-      "Clean inside all closets",
+      "Wipe closet shelves",
       "Wipe all baseboards and door frames",
       "Clean window sills and inside glass",
       "Wipe all light switches and outlet covers",
@@ -153,7 +154,7 @@ const checklist = [
       "Dust and wipe all light fixtures",
       "Clean vents and registers",
       "Remove all trash and debris",
-      "Final walkthrough inspection",
+      "Sweep the patio",
     ],
   },
 ];
@@ -236,8 +237,7 @@ export default function MoveOutCleaningDownersGrovePage() {
               </p>
               <p className="text-lg text-white/85 mb-8 leading-relaxed">
                 Selling your Downers Grove home or moving out of a rental? DSM Cleaning Solutions
-                delivers a thorough, buyer-ready clean throughout Downers Grove (zip codes 60515 and
-                60516), including Downtown Downers Grove and the Fairmount area. Your home will be
+                delivers a thorough, buyer-ready clean throughout Downers Grove ({zipCodesPhrase("Downers Grove")}). Your home will be
                 walkthrough-ready, or we come back and re-clean at no charge.
               </p>
               <Offer service="moveout">
@@ -318,7 +318,7 @@ export default function MoveOutCleaningDownersGrovePage() {
           <h2 className="section-heading mb-6">Professional Move-Out Cleaning in Downers Grove, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Downers Grove has one of the most active real estate markets in DuPage County, with
-            properties in Downtown Downers Grove and the Fairmount area consistently attracting
+            properties across town consistently attracting
             serious buyers. When you&rsquo;re selling your home here, the final walkthrough is the
             moment that confirms the deal or creates last-minute complications. Our Downers
             Grove move-out cleaning service is built to pass that inspection cleanly.

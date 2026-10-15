@@ -9,6 +9,7 @@ import Offer from "@/components/Offer";
 import { MOVEOUT_OFFER } from "@/lib/offers";
 import { MOVE_OUT_PRICING_COPY } from "@/lib/pricingCopy";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
+import { zipCodesPhrase, zipLine } from "@/lib/cityData";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 
 // Regenerate at most hourly so MOVE75 drops out of the HTML on its own after
@@ -54,7 +55,7 @@ const faqs = [
   {
     question: "Do you serve all of Westmont, IL 60559?",
     answer:
-      "Yes, we serve all of Westmont, including zip code 60559 and all neighborhoods: Westmont Downtown, Oakwood Estates, the Waterfall Glen area, the Cass Avenue Corridor, and the Williams Street District. We serve Westmont regularly as part of our DuPage and Will County route.",
+      `Yes. ${zipLine("Westmont")} We serve Westmont regularly as part of our DuPage and Will County route.`,
   },
 ];
 
@@ -117,7 +118,7 @@ const checklist = [
       "Scrub sink",
       "Wipe all cabinet fronts and clean inside",
       "Clean countertops and backsplash",
-      "Clean dishwasher interior",
+      "Clean inside the dishwasher",
       "Mop and scrub floors",
     ],
   },
@@ -136,7 +137,7 @@ const checklist = [
   {
     room: "Bedrooms & Living Areas",
     items: [
-      "Clean inside all closets",
+      "Wipe closet shelves",
       "Wipe all baseboards and door frames",
       "Clean window sills and inside glass",
       "Wipe all light switches and outlet covers",
@@ -153,7 +154,7 @@ const checklist = [
       "Dust and wipe all light fixtures",
       "Clean vents and registers",
       "Remove all trash and debris",
-      "Final walkthrough inspection",
+      "Sweep the patio",
     ],
   },
 ];
@@ -236,9 +237,7 @@ export default function MoveOutCleaningWestmontPage() {
               </p>
               <p className="text-lg text-white/85 mb-8 leading-relaxed">
                 Selling your Westmont home or moving out of a rental? DSM Cleaning Solutions
-                delivers a thorough, buyer-ready clean throughout Westmont, including Westmont
-                Downtown, Oakwood Estates, the Cass Avenue Corridor, and the Williams Street
-                District. Your home will be walkthrough-ready, or we come back and re-clean
+                delivers a thorough, buyer-ready clean throughout Westmont ({zipCodesPhrase("Westmont")}). Your home will be walkthrough-ready, or we come back and re-clean
                 at no charge.
               </p>
               <Offer service="moveout">
@@ -325,8 +324,7 @@ export default function MoveOutCleaningWestmontPage() {
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
             We&rsquo;re a family-owned cleaning company that serves Westmont (zip code 60559) and the
-            surrounding DuPage County communities. We&rsquo;ve cleaned homes across Westmont Downtown,
-            Oakwood Estates, and the Cass Avenue Corridor for sellers and renters who needed a
+            surrounding DuPage County communities. We&rsquo;ve cleaned homes across Westmont for sellers and renters who needed a
             spotless result, not just a surface wipe-down. Our team follows a detailed,
             room-by-room checklist that covers every area a walkthrough will touch.
           </p>

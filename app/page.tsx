@@ -26,6 +26,7 @@ import {
   formatPrice,
 } from "@/lib/pricing";
 import { OG_IMAGE_ALT } from "@/lib/workPhotos";
+import { zipLine } from "@/lib/cityData";
 
 // Regenerate at most hourly so an offer in the hero banner drops out of the
 // HTML on its own after it ends. <Offer> also hides it in the browser at the
@@ -428,8 +429,7 @@ export default function HomePage() {
                 a matter of trust, and we take that responsibility seriously.
               </p>
               <p className="text-gray-500 mb-5 leading-relaxed">
-                We serve families throughout Romeoville, from Lakewood Falls and Windstone to Hidden Lakes and
-                Grand Haven, and across the entire southwest Chicago suburbs. Whether you live near the Isle a
+                We serve families throughout Romeoville and across the entire southwest Chicago suburbs. Whether you live near the Isle a
                 la Cache Museum or along Romeo Lake, we&apos;re your true local neighbors.
               </p>
               <p className="text-gray-500 mb-8 leading-relaxed">
@@ -513,30 +513,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── ROMEOVILLE NEIGHBORHOODS ─── */}
+      {/* ─── ROMEOVILLE ZIP CODE & LANDMARKS ─── */}
       <section className="py-16 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <div>
               <p className="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">Our Home Base</p>
-              <h2 className="section-heading text-3xl md:text-4xl mb-4">Romeoville Neighborhoods We Serve</h2>
+              <h2 className="section-heading text-3xl md:text-4xl mb-4">Romeoville Zip Code We Serve</h2>
               <p className="text-gray-500 mb-5 leading-relaxed">
                 Based in Romeoville, IL (60446), DSM Cleaning Solutions knows every corner of this community.
                 We clean homes throughout every neighborhood, from the newest developments to established
                 subdivisions we&apos;ve served for years.
               </p>
-              <div className="grid grid-cols-2 gap-2 mb-5">
-                {["Lakewood Falls", "Windstone", "Hidden Lakes", "Grand Haven", "Fox Run", "Prairieview"].map((n) => (
-                  <div key={n} className="flex items-center gap-2 text-gray-700 text-sm">
-                    <svg className="w-4 h-4 text-brand-green flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                      <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                    </svg>
-                    {n}
-                  </div>
-                ))}
-              </div>
-              <p className="text-gray-400 text-sm">Zip code served: 60446</p>
+              {/* Zip code only: the owner cannot confirm any neighborhood names. */}
+              <p className="text-gray-700 leading-relaxed">{zipLine("Romeoville")}</p>
             </div>
             <div>
               <h3 className="font-bold text-xl text-gray-900 mb-4">Local Romeoville Landmarks</h3>

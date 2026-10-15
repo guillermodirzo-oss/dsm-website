@@ -6,6 +6,56 @@ import {
   formatPrice,
 } from "./pricing";
 
+/**
+ * Zip codes for every city DSM serves. This is the single source: city
+ * hubs, the deep cleaning, move-out and recurring city pages, the homepage
+ * and /service-areas read them from here. Romeoville (the homepage) and
+ * Plainfield (a custom hub page) have no entry in `cities` below, so their
+ * zip codes live only here.
+ *
+ * The owner cannot confirm any neighborhood or subdivision names (October
+ * 2026), so pages state zip codes instead. Never add a neighborhood name
+ * anywhere unless the owner confirms DSM cleans there.
+ */
+export const CITY_ZIPS = {
+  Romeoville: ["60446"],
+  Plainfield: ["60544", "60585"],
+  Naperville: ["60540", "60563", "60564", "60565"],
+  Bolingbrook: ["60440", "60490"],
+  Joliet: ["60431", "60432", "60433", "60435", "60436"],
+  Lockport: ["60441", "60491"],
+  Lemont: ["60439"],
+  "Homer Glen": ["60491"],
+  "New Lenox": ["60451"],
+  Shorewood: ["60404"],
+  Westmont: ["60559"],
+  Minooka: ["60447"],
+  Hinsdale: ["60521", "60522"],
+  "Oak Brook": ["60523"],
+  "Downers Grove": ["60515", "60516"],
+  "Burr Ridge": ["60527"],
+} satisfies Record<string, string[]>;
+
+export type ZipCity = keyof typeof CITY_ZIPS;
+
+/** "A and B" or "A, B, and C" */
+function joinWithAnd(items: string[]): string {
+  if (items.length <= 1) return items.join("");
+  if (items.length === 2) return `${items[0]} and ${items[1]}`;
+  return `${items.slice(0, -1).join(", ")}, and ${items[items.length - 1]}`;
+}
+
+/** "zip code 60439" or "zip codes 60440 and 60490" */
+export function zipCodesPhrase(city: ZipCity): string {
+  const zips = CITY_ZIPS[city];
+  return zips.length === 1 ? `zip code ${zips[0]}` : `zip codes ${joinWithAnd(zips)}`;
+}
+
+/** "We clean homes in Joliet zip codes 60431, 60432, 60433, 60435, and 60436." */
+export function zipLine(city: ZipCity): string {
+  return `We clean homes in ${city} ${zipCodesPhrase(city)}.`;
+}
+
 export interface CityData {
   name: string;
   slug: string;
@@ -27,11 +77,11 @@ export const cities: CityData[] = [
     name: "Naperville",
     slug: "naperville-il",
     state: "IL",
-    zips: ["60540", "60563", "60564", "60565"],
+    zips: CITY_ZIPS.Naperville,
     distance: "about 14 miles from our Romeoville base",
     tagline: "Trusted house cleaning for Naperville families. Local, eco-friendly, fully insured.",
     localIntro: [
-      "Naperville is consistently ranked as one of the best places to live in America, and its residents expect the best. DSM Cleaning Solutions brings professional, eco-friendly house cleaning to Naperville families in neighborhoods like Cress Creek, Hobson West, Ashbury, and White Eagle who want a spotless home without the hassle.",
+      "Naperville is consistently ranked as one of the best places to live in America, and its residents expect the best. DSM Cleaning Solutions brings professional, eco-friendly house cleaning to Naperville families who want a spotless home without the hassle.",
       "As a locally owned company based just 14 miles away in Romeoville, we understand the Naperville community. We're not a national franchise with a call center. We're your southwest suburban neighbors, and we treat your home with the care it deserves.",
       "From established neighborhoods near the Riverwalk and Centennial Beach area to newer developments in the 60563, 60564, and 60565 zip codes, we serve all of Naperville with the same high standard of professional cleaning.",
     ],
@@ -45,7 +95,7 @@ export const cities: CityData[] = [
       "Background-checked, professional cleaning team",
       "Serving all Naperville zip codes: 60540, 60563, 60564, 60565",
     ],
-    neighborhoods: ["Cress Creek", "Hobson West", "Ashbury", "White Eagle", "River Run", "Tall Grass"],
+    neighborhoods: [],
     landmarks: ["Riverwalk", "Centennial Beach", "Downtown Naperville"],
     services: [
       {
@@ -81,9 +131,9 @@ export const cities: CityData[] = [
     ],
     faqs: [
       {
-        question: "What neighborhoods in Naperville does DSM Cleaning serve?",
+        question: "What parts of Naperville does DSM Cleaning serve?",
         answer:
-          "We serve all of Naperville including Cress Creek, Hobson West, Ashbury, White Eagle, River Run, and Tall Grass, across zip codes 60540, 60563, 60564, and 60565. If you're near the Riverwalk or in the newer 60564/60565 areas, we cover you.",
+          zipLine("Naperville"),
       },
       {
         question: "How much does house cleaning cost in Naperville, IL?",
@@ -119,7 +169,7 @@ export const cities: CityData[] = [
     name: "Bolingbrook",
     slug: "bolingbrook-il",
     state: "IL",
-    zips: ["60440", "60490"],
+    zips: CITY_ZIPS.Bolingbrook,
     distance: "just 5 miles from our Romeoville base",
     tagline: "Professional house cleaning just minutes away. Bolingbrook's trusted local cleaners.",
     localIntro: [
@@ -214,12 +264,12 @@ export const cities: CityData[] = [
     name: "Joliet",
     slug: "joliet-il",
     state: "IL",
-    zips: ["60431", "60432", "60433", "60435", "60436"],
+    zips: CITY_ZIPS.Joliet,
     distance: "about 10 miles from our Romeoville base",
     tagline: "Trusted professional cleaning for Joliet families. Eco-friendly, insured, satisfaction guaranteed.",
     localIntro: [
       "Joliet is one of the largest and most diverse cities in the Chicago metro area, and DSM Cleaning Solutions is proud to serve its families with professional, eco-friendly house cleaning. Based just 10 miles away in Romeoville, we understand this community.",
-      "From the historic neighborhoods on the east side to growing residential areas like Ingalls Park and Rock Run in the southwest, we serve all of Joliet across its multiple zip codes. Our team is background-checked, professional, and brings all eco-friendly supplies to every job.",
+      "From the historic neighborhoods on the east side to growing residential areas in the southwest, we serve all of Joliet across its multiple zip codes. Our team is background-checked, professional, and brings all eco-friendly supplies to every job.",
       "Joliet homeowners choose DSM because we're local, accountable, and genuinely care about the quality of our work. We're not a faceless national franchise. We're your neighbors, and your satisfaction is personal to us.",
     ],
     whyChoose: [
@@ -232,7 +282,7 @@ export const cities: CityData[] = [
       "Professional, background-checked team",
       "Serving all Joliet zip codes: 60431, 60432, 60433, 60435, 60436",
     ],
-    neighborhoods: ["Ingalls Park", "Rock Run", "Cathedral Area", "Forest Park", "Woodgate", "White Oak Subdivision"],
+    neighborhoods: [],
     landmarks: ["Rialto Theatre", "Joliet Iron Works Historic Site", "Pilcher Park Nature Center", "Splash Station"],
     services: [
       {
@@ -268,9 +318,9 @@ export const cities: CityData[] = [
     ],
     faqs: [
       {
-        question: "What neighborhoods in Joliet does DSM Cleaning serve?",
+        question: "What parts of Joliet does DSM Cleaning serve?",
         answer:
-          "We serve all of Joliet including Ingalls Park, Rock Run, Cathedral Area, Forest Park, and Woodgate, across all zip codes: 60431, 60432, 60433, 60435, and 60436.",
+          zipLine("Joliet"),
       },
       {
         question: "Do you offer same-day cleaning in Joliet, IL?",
@@ -306,13 +356,13 @@ export const cities: CityData[] = [
     name: "Westmont",
     slug: "westmont-il",
     state: "IL",
-    zips: ["60559"],
+    zips: CITY_ZIPS.Westmont,
     distance: "about 20 miles from our Romeoville base",
     tagline: "Professional house cleaning in Westmont, IL. Family-owned, eco-friendly, fully insured.",
     localIntro: [
       "Westmont is a welcoming village in DuPage County, and its residents deserve professional cleaning they can trust. DSM Cleaning Solutions brings eco-friendly, family-owned house cleaning service to Westmont homeowners.",
       "We travel from our Romeoville base to serve Westmont because our clients here have come to rely on our consistency, professionalism, and genuine care for their homes. Every visit follows the same thorough checklist. No shortcuts.",
-      "From single-family homes along the Cass Avenue Corridor to Oakwood Estates and condos throughout the 60559 zip code, we handle all types of residences in Westmont with equal attention to detail.",
+      "From single-family homes to condos throughout the 60559 zip code, we handle all types of residences in Westmont with equal attention to detail.",
     ],
     whyChoose: [
       "Family-owned company based in the southwest suburbs",
@@ -324,7 +374,7 @@ export const cities: CityData[] = [
       "Background-checked, professional team",
       "Serving all of Westmont: 60559",
     ],
-    neighborhoods: ["Westmont Crossing", "Drummond Commons", "Oakwood Estates", "Village Center District", "Cass Avenue Corridor"],
+    neighborhoods: [],
     landmarks: ["Ty Warner Park", "St. Joseph Creek Trail", "Westmont Community Park"],
     services: [
       {
@@ -385,9 +435,9 @@ export const cities: CityData[] = [
           "Yes, we serve all of Westmont including the full 60559 zip code area.",
       },
       {
-        question: "What neighborhoods in Westmont do you clean?",
+        question: "What parts of Westmont do you clean?",
         answer:
-          "We serve the full 60559 zip code including Westmont Crossing, Drummond Commons, Oakwood Estates, and the Village Center area.",
+          zipLine("Westmont"),
       },
     ],
     nearbyAreas: [
@@ -403,13 +453,13 @@ export const cities: CityData[] = [
     name: "Lockport",
     slug: "lockport-il",
     state: "IL",
-    zips: ["60441", "60491"],
+    zips: CITY_ZIPS.Lockport,
     distance: "about 8 miles from our Romeoville base",
     tagline: "Professional house cleaning in Lockport, IL. Local, trusted, eco-friendly.",
     localIntro: [
       "Lockport is a growing Will County community with a mix of established neighborhoods and newer residential developments. DSM Cleaning Solutions is proud to serve Lockport homeowners with professional, eco-friendly house cleaning just 8 miles from our Romeoville base.",
       "Lockport families appreciate our local roots, transparent pricing, and the care we bring to every home. We're not a franchise. We're a family-owned business that takes every job personally.",
-      "From homes in the Heritage Fields subdivision near the I&M Canal corridor to newer developments in the 60491 area, we clean all types of residences in Lockport with the same meticulous attention to detail.",
+      "From homes near the I&M Canal corridor to newer developments in the 60491 area, we clean all types of residences in Lockport with the same meticulous attention to detail.",
     ],
     whyChoose: [
       "Local: just 8 miles from Lockport in Romeoville",
@@ -421,7 +471,7 @@ export const cities: CityData[] = [
       "Professional, background-checked team",
       "Serving all of Lockport: 60441 & 60491",
     ],
-    neighborhoods: ["Heritage Fields", "Division Street area", "Lockport Township", "Broken Arrow Subdivision", "Farrell Road area"],
+    neighborhoods: [],
     landmarks: ["Illinois & Michigan Canal National Heritage Corridor", "Dellwood Park", "Lockport Historic District", "Will County Courthouse"],
     services: [
       {
@@ -482,9 +532,9 @@ export const cities: CityData[] = [
           "Yes. Weekly, biweekly, and monthly plans available, often at a discount vs. one-time visits.",
       },
       {
-        question: "What neighborhoods in Lockport does DSM serve?",
+        question: "What parts of Lockport does DSM serve?",
         answer:
-          "We serve all of Lockport (60441 & 60491) including Heritage Fields, Division Street area, Lockport Township, and Broken Arrow Subdivision.",
+          zipLine("Lockport"),
       },
     ],
     nearbyAreas: [
@@ -500,13 +550,13 @@ export const cities: CityData[] = [
     name: "Lemont",
     slug: "lemont-il",
     state: "IL",
-    zips: ["60439"],
+    zips: CITY_ZIPS.Lemont,
     distance: "about 12 miles from our Romeoville base",
     tagline: "Professional house cleaning in Lemont, IL. Trusted by local families, eco-friendly, fully insured.",
     localIntro: [
       "Lemont is one of the most picturesque villages in the southwest suburbs, and its homeowners maintain high standards for their properties. DSM Cleaning Solutions brings professional, eco-friendly house cleaning to Lemont families who want a spotless home.",
       "Based just 12 miles away in Romeoville, we're a true neighbor to Lemont. We understand the community, the neighborhoods, and what local families expect from a professional cleaning service.",
-      "Whether your home overlooks the Des Plaines River Valley or sits in neighborhoods like Glenmoor or Lemont Hills, we bring the same thorough, detail-oriented approach to every clean in the 60439 zip code.",
+      "Whether your home overlooks the Des Plaines River Valley or sits anywhere else in town, we bring the same thorough, detail-oriented approach to every clean in the 60439 zip code.",
     ],
     whyChoose: [
       "Local company just 12 miles away in Romeoville",
@@ -518,7 +568,7 @@ export const cities: CityData[] = [
       "Professional, background-checked cleaners",
       "Serving all of Lemont: 60439",
     ],
-    neighborhoods: ["Lemont Main Street District", "Glenmoor", "Lemont Hills", "Keepataw Forest area", "Sagamore Hills"],
+    neighborhoods: [],
     landmarks: ["Des Plaines River Valley", "Centennial Park", "Lemont Quarries", "Sandhills Wildlife Area"],
     services: [
       {
@@ -579,9 +629,9 @@ export const cities: CityData[] = [
           "Absolutely. Weekly, biweekly, or monthly. Recurring clients often save vs. one-time rates.",
       },
       {
-        question: "What neighborhoods in Lemont does DSM serve?",
+        question: "What parts of Lemont does DSM serve?",
         answer:
-          "We serve all of Lemont (60439) including the Main Street District, Glenmoor, Lemont Hills, Sagamore Hills, and the Keepataw Forest area.",
+          zipLine("Lemont"),
       },
     ],
     nearbyAreas: [
@@ -597,12 +647,12 @@ export const cities: CityData[] = [
     name: "Homer Glen",
     slug: "homer-glen-il",
     state: "IL",
-    zips: ["60491"],
+    zips: CITY_ZIPS["Homer Glen"],
     distance: "about 9 miles from our Romeoville base",
     tagline: "Professional house cleaning in Homer Glen, IL. Family-owned, eco-friendly, fully insured.",
     localIntro: [
       "Homer Glen is a beautiful Will County village known for its spacious homes, wooded lots, and strong sense of community. DSM Cleaning Solutions is proud to serve Homer Glen families with professional, eco-friendly house cleaning.",
-      "Based just 9 miles away in Romeoville, we're a local company that understands Homer Glen's neighborhoods and the standards its residents expect. From large homes on wooded lots near the 143rd Street area to newer construction in Goodings Grove, we handle all property types.",
+      "Based just 9 miles away in Romeoville, we're a local company that understands Homer Glen's neighborhoods and the standards its residents expect. From large homes on wooded lots to newer construction, we handle all property types.",
       "Our Homer Glen clients especially appreciate our eco-friendly product line: non-toxic and biodegradable, safe for families with kids, pets, and everyone in between.",
     ],
     whyChoose: [
@@ -615,7 +665,7 @@ export const cities: CityData[] = [
       "Professional, background-checked team",
       "Serving all of Homer Glen: 60491",
     ],
-    neighborhoods: ["Goodings Grove", "Bell Road Corridor", "143rd Street area", "Broken Arrow", "Cedar Ridge"],
+    neighborhoods: [],
     landmarks: ["Homer Lake Forest Preserve", "Highland Lake", "Tampier Slough Nature Area", "Messenger Woods Nature Preserve"],
     services: [
       {
@@ -676,9 +726,9 @@ export const cities: CityData[] = [
           "Yes. Weekly, biweekly, and monthly plans available.",
       },
       {
-        question: "What neighborhoods in Homer Glen does DSM serve?",
+        question: "What parts of Homer Glen does DSM serve?",
         answer:
-          "We serve all of Homer Glen (60491) including Goodings Grove, Cedar Ridge, the 143rd Street corridor, Bell Road area, and Broken Arrow.",
+          zipLine("Homer Glen"),
       },
     ],
     nearbyAreas: [
@@ -694,13 +744,13 @@ export const cities: CityData[] = [
     name: "New Lenox",
     slug: "new-lenox-il",
     state: "IL",
-    zips: ["60451"],
+    zips: CITY_ZIPS["New Lenox"],
     distance: "about 14 miles from our Romeoville base",
     tagline: "Professional house cleaning in New Lenox, IL. Trusted, eco-friendly, fully insured.",
     localIntro: [
       "New Lenox is one of the fastest-growing communities in Will County, with beautiful residential neighborhoods and a strong family-oriented community. DSM Cleaning Solutions is proud to serve New Lenox homeowners with professional, eco-friendly cleaning.",
       "We travel from our Romeoville base to serve New Lenox because local families here have come to trust our consistency, professionalism, and genuine care. As a family-owned business, we treat every New Lenox home as if it were our own.",
-      "Whether you're in established neighborhoods like Sanctuary, White Oak, or Arbor Hills, or one of the newer developments throughout New Lenox, we deliver the same high-quality clean to every home in the 60451 zip code.",
+      "Whether you're in an established neighborhood or one of the newer developments throughout New Lenox, we deliver the same high-quality clean to every home in the 60451 zip code.",
     ],
     whyChoose: [
       "Family-owned company from neighboring Romeoville",
@@ -712,7 +762,7 @@ export const cities: CityData[] = [
       "Background-checked, professional team",
       "Serving all of New Lenox: 60451",
     ],
-    neighborhoods: ["Sanctuary", "White Oak", "Arbor Hills", "Spencer Crossing", "Founders Pointe"],
+    neighborhoods: [],
     landmarks: ["New Lenox Community Park", "Lincoln-Way Central High School area", "Hadley Valley Preserve", "Arbury Hills"],
     services: [
       {
@@ -773,9 +823,9 @@ export const cities: CityData[] = [
           "Yes, we bring all eco-friendly, non-toxic cleaning supplies. Nothing required from you.",
       },
       {
-        question: "What neighborhoods in New Lenox does DSM serve?",
+        question: "What parts of New Lenox does DSM serve?",
         answer:
-          "We serve all of New Lenox (60451) including Sanctuary, White Oak, Arbor Hills, Spencer Crossing, and Founders Pointe.",
+          zipLine("New Lenox"),
       },
     ],
     nearbyAreas: [
@@ -791,13 +841,13 @@ export const cities: CityData[] = [
     name: "Shorewood",
     slug: "shorewood-il",
     state: "IL",
-    zips: ["60404"],
+    zips: CITY_ZIPS.Shorewood,
     distance: "about 10 miles from our Romeoville base",
     tagline: "Professional house cleaning in Shorewood, IL. Local, eco-friendly, family-owned.",
     localIntro: [
       "Shorewood is a growing Will County village with a welcoming community and a mix of established and newer neighborhoods. DSM Cleaning Solutions serves Shorewood homeowners with professional, eco-friendly house cleaning from our base just 10 miles away.",
       "As a family-owned business, we bring a personal level of care to every Shorewood home we clean. Our team is professional, background-checked, and equipped with eco-friendly, non-toxic cleaning products safe for your whole family.",
-      "From homes in Brook Crossing and Shorewood Glen to neighborhoods throughout the 60404 zip code, we deliver consistent, thorough cleaning that Shorewood families can count on.",
+      "From established homes to newer builds throughout the 60404 zip code, we deliver consistent, thorough cleaning that Shorewood families can count on.",
     ],
     whyChoose: [
       "Local: based just 10 miles away in Romeoville",
@@ -809,7 +859,7 @@ export const cities: CityData[] = [
       "Professional, background-checked team",
       "Serving all of Shorewood: 60404",
     ],
-    neighborhoods: ["Brook Crossing", "Shorewood Glen", "Willowbend", "River Crossing", "Morningside Estates"],
+    neighborhoods: [],
     landmarks: ["Heritage Woods of Shorewood", "I&M Canal Trail", "Aux Sable Creek", "Rivervale Park"],
     services: [
       {
@@ -870,9 +920,9 @@ export const cities: CityData[] = [
           "Fully insured and bonded on every job.",
       },
       {
-        question: "What neighborhoods in Shorewood does DSM serve?",
+        question: "What parts of Shorewood does DSM serve?",
         answer:
-          "We serve all of Shorewood (60404) including Brook Crossing, Shorewood Glen, Willowbend, River Crossing, and Morningside Estates.",
+          zipLine("Shorewood"),
       },
     ],
     nearbyAreas: [
@@ -888,13 +938,13 @@ export const cities: CityData[] = [
     name: "Burr Ridge",
     slug: "burr-ridge",
     state: "IL",
-    zips: ["60527"],
+    zips: CITY_ZIPS["Burr Ridge"],
     distance: "about 22 miles from our Romeoville base",
     tagline: "White-glove deep cleaning for Burr Ridge's executive homes. Detail-oriented, eco-friendly, fully insured.",
     localIntro: [
       "Burr Ridge is one of the Chicago area's most prestigious residential communities: a village of executive estates, custom builds, and meticulous homeowners who hold every detail to a high standard. DSM Cleaning Solutions brings professional, white-glove deep cleaning to Burr Ridge homes that match those expectations.",
       "Located along the Route 83 corridor between Hinsdale and Willowbrook, Burr Ridge homes tend toward the larger end: spacious square footage, formal dining rooms, finished basements, and multiple full baths. Our deep cleaning process is designed for exactly this type of property: thorough, methodical, and never rushed.",
-      "Whether you're near Harveys Lake, the Burr Ridge Village Center, or one of the area's upscale residential enclaves, our team arrives fully equipped with professional-grade, eco-friendly products and a detailed checklist built for large, high-end homes.",
+      "Wherever you are in Burr Ridge, our team arrives fully equipped with professional-grade, eco-friendly products and a detailed checklist built for large, high-end homes.",
     ],
     whyChoose: [
       "Experienced cleaning team for large executive homes",
@@ -906,7 +956,7 @@ export const cities: CityData[] = [
       "Background-checked, professional cleaning team",
       "Serving all of Burr Ridge: 60527",
     ],
-    neighborhoods: ["Burr Ridge Village Center area", "Harveys Lake area", "County Line Road corridor", "Route 83 corridor", "Old Farm Road area"],
+    neighborhoods: [],
     landmarks: ["Burr Ridge Village Center", "Harveys Lake", "Route 83 corridor", "County Line Road"],
     services: [
       { icon: "🧹", title: "Deep Cleaning in Burr Ridge", desc: "Detailed deep cleaning for Burr Ridge executive homes, from the range hood to the last baseboard.", link: "/deep-cleaning-burr-ridge-il" },
@@ -922,7 +972,7 @@ export const cities: CityData[] = [
       },
       {
         question: "Do you serve all of Burr Ridge, IL?",
-        answer: "Yes, we serve all of Burr Ridge (60527), including homes near the Burr Ridge Village Center, Harveys Lake, the Route 83 corridor, and County Line Road. We also serve neighboring Hinsdale, Oak Brook, and Willowbrook.",
+        answer: `${zipLine("Burr Ridge")} We also serve neighboring Hinsdale, Oak Brook, and Willowbrook.`,
       },
       {
         question: "How long does a deep cleaning take in Burr Ridge?",
@@ -942,7 +992,7 @@ export const cities: CityData[] = [
     name: "Hinsdale",
     slug: "hinsdale",
     state: "IL",
-    zips: ["60521", "60522"],
+    zips: CITY_ZIPS.Hinsdale,
     distance: "about 23 miles from our Romeoville base",
     tagline: "White-glove deep cleaning for Hinsdale's historic and luxury homes. Fully insured, eco-friendly, satisfaction guaranteed.",
     localIntro: [
@@ -960,7 +1010,7 @@ export const cities: CityData[] = [
       "Background-checked, professional cleaning team",
       "Serving all of Hinsdale: 60521 & 60522",
     ],
-    neighborhoods: ["Downtown Hinsdale area", "Hinsdale Central area", "Surrey Ridge", "Katherine Avenue area", "Burns Woods area"],
+    neighborhoods: [],
     landmarks: ["Downtown Hinsdale", "Hinsdale Central High School area", "Metra BNSF station area", "Katherine Legge Memorial Park"],
     services: [
       { icon: "🧹", title: "Deep Cleaning in Hinsdale", desc: "Deep cleaning for every kind of Hinsdale home, from historic properties to modern builds.", link: "/deep-cleaning-hinsdale-il" },
@@ -976,7 +1026,7 @@ export const cities: CityData[] = [
       },
       {
         question: "Do you serve all of Hinsdale, IL?",
-        answer: "Yes, we serve all of Hinsdale across both zip codes (60521 and 60522), from downtown Hinsdale and the Hinsdale Central area to residential neighborhoods throughout the village. We also serve nearby Burr Ridge, Oak Brook, and Western Springs.",
+        answer: `${zipLine("Hinsdale")} We also serve nearby Burr Ridge, Oak Brook, and Western Springs.`,
       },
       {
         question: "How long does a deep cleaning take in Hinsdale?",
@@ -996,7 +1046,7 @@ export const cities: CityData[] = [
     name: "Oak Brook",
     slug: "oak-brook",
     state: "IL",
-    zips: ["60523"],
+    zips: CITY_ZIPS["Oak Brook"],
     distance: "about 24 miles from our Romeoville base",
     tagline: "Premium deep cleaning for Oak Brook's luxury homes. Thorough, eco-friendly, satisfaction guaranteed.",
     localIntro: [
@@ -1014,7 +1064,7 @@ export const cities: CityData[] = [
       "Background-checked, professional team",
       "Serving all of Oak Brook: 60523",
     ],
-    neighborhoods: ["Timber Trails", "Saddle Brook area", "Butler National Golf Club area", "Oak Brook Club area", "Brook Forest"],
+    neighborhoods: [],
     landmarks: ["Oakbrook Center", "Butler National Golf Club area", "McDonald's campus area", "Oak Brook Park District"],
     services: [
       { icon: "🧹", title: "Deep Cleaning in Oak Brook", desc: "Careful, eco-friendly deep cleaning for Oak Brook luxury homes, backed by our 48-hour guarantee.", link: "/deep-cleaning-oak-brook-il" },
@@ -1030,7 +1080,7 @@ export const cities: CityData[] = [
       },
       {
         question: "Do you serve all of Oak Brook, IL?",
-        answer: "Yes, we serve all of Oak Brook (60523), including areas near Oakbrook Center, Butler National Golf Club, and residential neighborhoods throughout the village. We also serve neighboring Hinsdale, Burr Ridge, Elmhurst, and Downers Grove.",
+        answer: `${zipLine("Oak Brook")} We also serve neighboring Hinsdale, Burr Ridge, Elmhurst, and Downers Grove.`,
       },
       {
         question: "How long does a deep cleaning take in Oak Brook?",
@@ -1050,7 +1100,7 @@ export const cities: CityData[] = [
     name: "Downers Grove",
     slug: "downers-grove",
     state: "IL",
-    zips: ["60515", "60516"],
+    zips: CITY_ZIPS["Downers Grove"],
     distance: "about 22 miles from our Romeoville base",
     tagline: "Reliable deep cleaning for Downers Grove families. Thorough, eco-friendly, fully insured.",
     localIntro: [
@@ -1068,7 +1118,7 @@ export const cities: CityData[] = [
       "Background-checked, professional team",
       "Serving all of Downers Grove: 60515 & 60516",
     ],
-    neighborhoods: ["Downtown Downers Grove area", "Lyman Woods area", "Belmont Prairie area", "Main Street corridor", "Gilbert area", "Fairmount neighborhoods"],
+    neighborhoods: [],
     landmarks: ["Downtown Downers Grove", "Metra BNSF commuter hub", "Lyman Woods Nature Preserve", "Belmont Prairie Nature Preserve"],
     services: [
       { icon: "🧹", title: "Deep Cleaning in Downers Grove", desc: "Deep cleaning for Downers Grove homes of every age, from bungalows to newer builds.", link: "/deep-cleaning-downers-grove-il" },
@@ -1084,7 +1134,7 @@ export const cities: CityData[] = [
       },
       {
         question: "Do you serve all of Downers Grove, IL?",
-        answer: "Yes, we serve all of Downers Grove across both zip codes: 60515 and 60516. From downtown Downers Grove and the Metra BNSF area to neighborhoods near Lyman Woods and Belmont Prairie, our team covers the full village. We also serve nearby Oak Brook, Westmont, Lisle, and Woodridge.",
+        answer: `${zipLine("Downers Grove")} We also serve nearby Oak Brook, Westmont, Lisle, and Woodridge.`,
       },
       {
         question: "How long does a deep cleaning take in Downers Grove?",
@@ -1104,13 +1154,13 @@ export const cities: CityData[] = [
     name: "Minooka",
     slug: "minooka-il",
     state: "IL",
-    zips: ["60447"],
+    zips: CITY_ZIPS.Minooka,
     distance: "about 18 miles from our Romeoville base",
     tagline: "Professional house cleaning in Minooka, IL. Trusted local service, eco-friendly, fully insured.",
     localIntro: [
       "Minooka is a growing Grundy and Kendall County community that has seen rapid residential growth in recent years. DSM Cleaning Solutions is proud to extend our professional, eco-friendly house cleaning services to Minooka homeowners.",
       "We travel from Romeoville to serve Minooka because local families here deserve professional, accountable cleaning service they can actually rely on. As a family-owned business, we're personally invested in the quality of every job.",
-      "From established homes near downtown Minooka to newer developments like Minooka Commons, Lakewood Trails, and Heritage Place throughout the 60447 zip code, we bring the same thorough, detailed cleaning approach to every property.",
+      "From established homes near downtown Minooka to newer developments throughout the 60447 zip code, we bring the same thorough, detailed cleaning approach to every property.",
     ],
     whyChoose: [
       "Family-owned company from the southwest suburbs",
@@ -1122,7 +1172,7 @@ export const cities: CityData[] = [
       "Background-checked, professional team",
       "Serving all of Minooka: 60447",
     ],
-    neighborhoods: ["Minooka Commons", "Heritage Place", "Lakewood Trails", "Indian Trails", "Rock Run Estates"],
+    neighborhoods: [],
     landmarks: ["Minooka Community High School area", "Aux Sable Creek corridor", "Heritage Prairie Farm", "DuPage River access"],
     services: [
       {
@@ -1183,9 +1233,9 @@ export const cities: CityData[] = [
           "Yes, we serve the full 60447 zip code area including newer residential neighborhoods.",
       },
       {
-        question: "What neighborhoods in Minooka does DSM serve?",
+        question: "What parts of Minooka does DSM serve?",
         answer:
-          "We serve all of Minooka (60447) including Minooka Commons, Heritage Place, Lakewood Trails, Indian Trails, and Rock Run Estates.",
+          zipLine("Minooka"),
       },
     ],
     nearbyAreas: [
@@ -1201,7 +1251,7 @@ export const cities: CityData[] = [
     name: "Downers Grove",
     slug: "downers-grove-il",
     state: "IL",
-    zips: ["60515", "60516"],
+    zips: CITY_ZIPS["Downers Grove"],
     distance: "about 20 miles from our Romeoville base",
     tagline: "Professional house cleaning in Downers Grove, IL. Local, eco-friendly, fully insured.",
     localIntro: [
@@ -1219,7 +1269,7 @@ export const cities: CityData[] = [
       "No contracts, no hidden fees, transparent flat-rate pricing",
       "Serving all of Downers Grove: 60515 & 60516",
     ],
-    neighborhoods: ["Highland Park", "Orchard Brook", "Dunham Place", "Middaugh", "Belmont Central", "Fairmount"],
+    neighborhoods: [],
     landmarks: ["Tivoli Theatre", "Lyman Woods", "Downtown Downers Grove", "Maple Avenue Arts Center"],
     services: [
       {
@@ -1280,9 +1330,9 @@ export const cities: CityData[] = [
           "Yes. Weekly, biweekly, and monthly plans available with no long-term contract required. Recurring clients often receive a discount vs. one-time rates.",
       },
       {
-        question: "What neighborhoods in Downers Grove does DSM serve?",
+        question: "What parts of Downers Grove does DSM serve?",
         answer:
-          "We serve all of Downers Grove including Highland Park, Orchard Brook, Dunham Place, Middaugh, Belmont Central, and Fairmount, across zip codes 60515 and 60516.",
+          zipLine("Downers Grove"),
       },
     ],
     nearbyAreas: [
@@ -1298,7 +1348,7 @@ export const cities: CityData[] = [
     name: "Hinsdale",
     slug: "hinsdale-il",
     state: "IL",
-    zips: ["60521", "60522"],
+    zips: CITY_ZIPS.Hinsdale,
     distance: "about 22 miles from our Romeoville base",
     tagline: "Premium house cleaning in Hinsdale, IL. Trusted, eco-friendly, satisfaction guaranteed.",
     localIntro: [
@@ -1316,7 +1366,7 @@ export const cities: CityData[] = [
       "Background-checked, professional, uniformed team",
       "Serving all of Hinsdale: 60521 & 60522",
     ],
-    neighborhoods: ["East Hinsdale", "West Hinsdale", "Fullersburg", "South Hinsdale", "The Village Center"],
+    neighborhoods: [],
     landmarks: ["Fullersburg Woods Nature Education Center", "Graue Mill", "Downtown Hinsdale", "Katherine Legge Memorial Park"],
     services: [
       {
@@ -1366,9 +1416,9 @@ export const cities: CityData[] = [
           "We do our best to send the same team every visit so they learn your home's specific preferences and layout. Consistency is especially important for our recurring Hinsdale clients.",
       },
       {
-        question: "What neighborhoods in Hinsdale does DSM serve?",
+        question: "What parts of Hinsdale does DSM serve?",
         answer:
-          "We serve all of Hinsdale including East Hinsdale, West Hinsdale, Fullersburg, South Hinsdale, and the Village Center area, across zip codes 60521 and 60522.",
+          zipLine("Hinsdale"),
       },
     ],
     nearbyAreas: [
@@ -1384,12 +1434,12 @@ export const cities: CityData[] = [
     name: "Oak Brook",
     slug: "oak-brook-il",
     state: "IL",
-    zips: ["60523"],
+    zips: CITY_ZIPS["Oak Brook"],
     distance: "about 20 miles from our Romeoville base",
     tagline: "Expert house cleaning in Oak Brook, IL. Professional, eco-friendly, satisfaction guaranteed.",
     localIntro: [
       "Oak Brook is one of Illinois's premier communities: home to beautiful executive neighborhoods, luxury homes, and the iconic Oak Brook Center. Residents here expect a high standard of service, and DSM Cleaning Solutions delivers exactly that with professional, eco-friendly house cleaning.",
-      "We serve Oak Brook from our southwest suburban base, understanding that every home here (from single-family residences in Ginger Creek to elegant homes near the Oak Brook Club) deserves meticulous, detail-oriented care.",
+      "We serve Oak Brook from our southwest suburban base, understanding that every home here deserves meticulous, detail-oriented care.",
       "As a family-owned cleaning company, we're accountable for every job in a way a franchise simply isn't. Our background-checked team brings all non-toxic supplies and is fully insured, ensuring your Oak Brook home receives the professional service it deserves.",
     ],
     whyChoose: [
@@ -1402,7 +1452,7 @@ export const cities: CityData[] = [
       "Background-checked, uniformed professional team",
       "Serving all of Oak Brook: 60523",
     ],
-    neighborhoods: ["Ginger Creek", "Oak Brook Club", "East Oak Brook", "York Woods", "Midwest Club"],
+    neighborhoods: [],
     landmarks: ["Oak Brook Center", "Graue Mill & Museum", "Butler National Golf Club area", "McDonald's Campus"],
     services: [
       {
@@ -1457,9 +1507,9 @@ export const cities: CityData[] = [
           "Yes. Weekly, biweekly, and monthly plans available, no contract required. Recurring clients often receive priority scheduling and a discount off one-time rates.",
       },
       {
-        question: "What neighborhoods in Oak Brook does DSM serve?",
+        question: "What parts of Oak Brook does DSM serve?",
         answer:
-          "We serve all of Oak Brook (60523) including Ginger Creek, Oak Brook Club, East Oak Brook, York Woods, and the Midwest Club neighborhood.",
+          zipLine("Oak Brook"),
       },
     ],
     nearbyAreas: [
@@ -1475,12 +1525,12 @@ export const cities: CityData[] = [
     name: "Burr Ridge",
     slug: "burr-ridge-il",
     state: "IL",
-    zips: ["60527"],
+    zips: CITY_ZIPS["Burr Ridge"],
     distance: "about 18 miles from our Romeoville base",
     tagline: "Professional house cleaning in Burr Ridge, IL. Trusted, eco-friendly, satisfaction guaranteed.",
     localIntro: [
       "Burr Ridge is one of the most sought-after residential communities in DuPage County, known for spacious custom homes, privacy, and a strong sense of community. DSM Cleaning Solutions delivers the professional, eco-friendly house cleaning that Burr Ridge homeowners expect.",
-      "From established neighborhoods like Braemoor and The Reserve to luxury homes along the Harveys Lake area, we understand that every Burr Ridge home is unique. Our team brings meticulous attention to detail and high-quality non-toxic products to every job.",
+      "From established neighborhoods to luxury homes, we understand that every Burr Ridge home is unique. Our team brings meticulous attention to detail and high-quality non-toxic products to every job.",
       "As a family-owned company based in the southwest suburbs, we're proud to serve Burr Ridge families with the same personal accountability that a franchise simply can't provide. Every job is backed by our 48-hour satisfaction guarantee.",
     ],
     whyChoose: [
@@ -1493,7 +1543,7 @@ export const cities: CityData[] = [
       "Background-checked, professional cleaning team",
       "Serving all of Burr Ridge: 60527",
     ],
-    neighborhoods: ["Braemoor", "The Reserve", "Harveys Lake", "Fieldstone", "Claridge Court"],
+    neighborhoods: [],
     landmarks: ["Waterfall Glen Forest Preserve", "Burr Ridge Village Center", "Salt Creek Greenway"],
     services: [
       {
@@ -1548,9 +1598,9 @@ export const cities: CityData[] = [
           "Yes. Weekly, biweekly, and monthly plans available with no contract required. Recurring clients receive consistent scheduling and priority availability.",
       },
       {
-        question: "What neighborhoods in Burr Ridge does DSM serve?",
+        question: "What parts of Burr Ridge does DSM serve?",
         answer:
-          "We serve all of Burr Ridge (60527) including Braemoor, The Reserve, Harveys Lake, Fieldstone, and Claridge Court neighborhoods.",
+          zipLine("Burr Ridge"),
       },
     ],
     nearbyAreas: [

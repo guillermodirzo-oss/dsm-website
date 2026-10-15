@@ -115,7 +115,7 @@ const checklist = [
       "Scrub sink",
       "Wipe all cabinet fronts and clean inside",
       "Clean countertops and backsplash",
-      "Clean dishwasher interior",
+      "Clean inside the dishwasher",
       "Mop and scrub floors",
     ],
   },
@@ -134,7 +134,7 @@ const checklist = [
   {
     room: "Bedrooms & Living Areas",
     items: [
-      "Clean inside all closets",
+      "Wipe closet shelves",
       "Wipe all baseboards and door frames",
       "Clean window sills and inside glass",
       "Wipe all light switches and outlet covers",
@@ -151,7 +151,7 @@ const checklist = [
       "Dust and wipe all light fixtures",
       "Clean vents and registers",
       "Remove all trash and debris",
-      "Final walkthrough inspection",
+      "Sweep the patio",
     ],
   },
 ];

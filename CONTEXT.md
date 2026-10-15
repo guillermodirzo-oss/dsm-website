@@ -25,6 +25,8 @@ Romeoville, Plainfield, Naperville, Bolingbrook, Joliet, Lockport, Shorewood, Ne
 
 Romeoville's hub is the homepage (/). Every other city has a hub at /{city}-il.
 
+Zip codes: `CITY_ZIPS` in `lib/cityData.ts` is the only source. Pages say "We clean homes in {City} zip codes {zips}." through `zipLine()`, or name the zips through `zipCodesPhrase()`. Never type a list of neighborhoods or subdivisions; the zip line replaces it. Three cities differ from the owner's reference list (October 2026) and are waiting on the owner: Plainfield (reference also has 60586), Lockport (the file also has 60491, which the reference gives only to Homer Glen) and Hinsdale (the file also has 60522; the reference has 60521 only).
+
 ## Core Services
 1. **Standard / Recurring Cleaning** (/recurring-cleaning)
 2. **Deep Cleaning** (/deep-cleaning)
@@ -54,7 +56,7 @@ City pages carry one real, anonymized client story with an example price compute
 - Never invent a client story. Every story is the owner's own account of a real client, used word for word.
 - Never use client names.
 - Never type the example price. It is worked out from the home in the story (bedrooms, baths, square footage bracket, and the recurring discount if the client is on a plan) and rounded up to the whole dollar.
-- Never list a neighborhood or subdivision name unless the owner has confirmed DSM cleans there. Zip codes confirmed by bookings are fine.
+- No neighborhood or subdivision names anywhere on the site (city pages, the homepage, /service-areas, cost and office pages, blog posts, FAQs, schema and `lib/cityData.ts`) unless the owner confirms them. None are confirmed, so every `neighborhoods` list is empty. Use the zip line instead. Landmarks (parks, roads, downtowns, golf courses) are not neighborhoods and can stay.
 - Never label a photo with a town unless the owner confirms it came from that town. None are confirmed yet. That covers alt text, captions and the Open Graph image alt. Work photo alt text comes from `lib/workPhotos.ts`, which describes what is in the photo and names no town and no service. The social share photo (/hero-image.png) uses OG_IMAGE_ALT from the same file. A town in a file name ("...-naperville-il.jpg") is only a file name.
 
 Stories so far: Joliet (monthly), Plainfield (every two weeks), Bolingbrook (every two weeks), Lockport (monthly) and Lemont (move-in) hubs ("One of Our {City} Clients"), and the Lemont move-out page ("A Recent Lemont Move-In"). The Joliet, Plainfield and Bolingbrook clients are the same ones on the recurring city pages, so both read the same home from `lib/recurringCities.ts`.
@@ -73,6 +75,8 @@ Recurring discounts: weekly 20%, biweekly 15%, monthly 10%.
 Recurring "from" prices are the smallest standard home with the discount applied, rounded up to the whole dollar so they are never lower than what BookingKoala charges: weekly from $116, every two weeks from $124, monthly from $131. Read them from WEEKLY_FROM, BIWEEKLY_FROM and MONTHLY_FROM in `lib/pricing.ts`.
 
 For a home size with no listed tier, `priceForHome()` in `lib/pricing.ts` works the price out with BookingKoala's rate formula: service base + bedroom add-on + bathroom add-on + square footage tier. The build fails if a listed tier and the formula ever disagree. The pricing cards on the recurring city pages use it through `recurringVisitPrice()`, which rounds up to the whole dollar.
+
+Add-on prices live in `lib/addOns.ts` and nowhere else. /pricing lists every add-on from it. The FALL75 "free oven cleaning" value (`DEEP_OFFER.bonusValue` in `lib/offers.ts`) is the inside oven add-on price read from that file.
 
 ## Current Offers
 | Code | Service | Deal | Runs through |
@@ -93,9 +97,9 @@ The owner confirmed exactly what each service includes (October 2026). The lists
 
 **Deep clean adds, on top of everything standard:** baseboards; doors and door frames; grout scrubbing; vacuuming under and behind furniture; inside window glass; light fixtures; degreasing the stovetop, hood vent and burners. Exactly these seven.
 
-**Move-in/move-out adds:** inside the oven, inside the refrigerator, inside all cabinets and drawers.
+**Move-in/move-out adds:** inside the oven, inside the refrigerator, inside all cabinets and drawers, inside the dishwasher ("Clean inside the dishwasher"), closet shelves ("Wipe closet shelves") and the patio ("Sweep the patio"). Sweeping inside the garage is not included: it is an add-on. There is no final walkthrough or inspection with the client (not confirmed by the owner), so never claim one. Sentences about a landlord's or buyer's walkthrough are fine.
 
-**Add-ons (standard and deep):** inside the oven, inside the refrigerator, inside kitchen cabinets.
+**Add-ons:** `lib/addOns.ts` is the only source, copied from the BookingKoala booking form: inside oven, inside fridge, inside cabinets (empty or full), inside dishwasher, interior windows (standard cleans only), detail baseboards and doors (standard cleans only), extra room (basement), sweep inside garage, homes with pets. The first five are for standard and deep cleans (move-out already includes them); the last three also apply to move-out. Nothing else is an add-on: no laundry, no exterior windows, no carpet cleaning, no organizing. Every page that names an add-on uses these names.
 
 **Not offered by any service. Never claim these:** spot-cleaning walls; pulling appliances out or cleaning behind or under appliances; caulking detail; removing calcium or hard water deposits (no "mineral deposits", "limescale" or "descaling" either).
 
@@ -109,7 +113,8 @@ Rules that follow from the lists:
 - Move-out cleaning includes the refrigerator inside and out.
 - Every service (standard, recurring, deep, move-in/move-out) wipes cabinet FRONTS. Never list cabinet fronts among the things a standard or recurring clean skips.
 - Only move-in/move-out cleans the INSIDE of cabinets as part of the service. Never write "cabinet interiors", "inside cabinets" or "inside and out" as included in a deep or standard clean.
-- "Inside kitchen cabinets" is a real add-on customers can choose in the BookingKoala form for standard and deep cleans. It is kitchen cabinets only: bathroom vanities and drawers are not an add-on, so never mention them as one. Where a page lists add-ons, write "Inside kitchen cabinets (add-on)".
+- The cabinet add-on is "inside cabinets" (empty or full). Write "inside cabinets", never "inside kitchen cabinets". Where a page lists add-ons, write "Inside cabinets (add-on)".
+- A deep clean never dusts cabinet tops or vacuums mattresses, and stairs are not a separate deep cleaning extra. Never list any of them as something a deep clean adds.
 - For a deep clean, "inside appliances" means inside the microwave only. Write "inside the microwave". Inside the oven and inside the refrigerator are add-ons. A standard clean includes the inside of the microwave too, so it is never what sets a deep clean apart.
 - Deep cleaning does NOT include cleaning inside the oven. Inside oven cleaning is an add-on. Never write that a deep clean "gets inside the oven" or list the oven interior on a deep cleaning checklist. The oven exterior is fine.
 - During FALL75 (`lib/offers.ts`), inside oven cleaning is added free with a deep clean. That claim must only appear while FALL75 is active: put it inside `<Offer service="deep">`, and give it a fallback that does not mention the oven (or no fallback at all).
@@ -148,13 +153,14 @@ Move-out customers are mostly home buyers and sellers, not renters. Write move-o
 | `lib/workPhotos.ts` | Alt text for work photos and for the social share photo. No town, no service |
 | `lib/standardChecklist.ts` | The owner-confirmed standard checklist (full and short versions). Every page that lists what a standard or recurring clean includes renders it |
 | `lib/deepChecklist.ts` | The owner-confirmed deep checklist: the seven additions and the room-by-room list every deep cleaning page renders |
+| `lib/addOns.ts` | Every add-on: name, price and the services it applies to, from the BookingKoala booking form. /pricing, the terms page and the FALL75 oven value read it |
 | `components/Offer.tsx` | Wrapper that expires offer copy automatically |
 | `components/OfferBanner.tsx` | One line per running offer, for the homepage hero. Disappears when no offer is running |
 | `components/HeroRating.tsx` | The star rating line for orange heroes. White on the darkest brand orange, which meets WCAG AA. Use it instead of coloring the text by hand |
 | `components/Navigation.tsx` | Site nav |
 | `components/Footer.tsx` | Footer with service and city links |
 | `components/CityPageTemplate.tsx` | Shared template for the city hub pages |
-| `lib/cityData.ts` | Data for the city hub pages |
+| `lib/cityData.ts` | Data for the city hub pages, and `CITY_ZIPS` with `zipLine()` and `zipCodesPhrase()`, the only source for every city's zip codes |
 | `lib/blogData.ts` | Blog post entries |
 | `next.config.mjs` | All redirects and www canonicalization |
 | `app/sitemap.ts` | XML sitemap |
@@ -191,7 +197,7 @@ Never change form payloads, guards or the Step 1 partial capture. Never send tes
 13. There are only two Google links, both owner-supplied and confirmed working (October 2026), and both live in `lib/siteConstants.ts`. Never type a Google link into a page, and never use any other Google URL (no g.co/kgs links, no Google search links).
     - `GOOGLE_REVIEW_URL` = https://g.page/r/CX8eP54fxW4_EAE/review. It opens the "write a review" box. Every "leave a review" or "write a review" link uses it.
     - `GOOGLE_PROFILE_URL` = https://maps.app.goo.gl/T6UQsNQtBBoKbQXw9. It opens the Business Profile on Google Maps. Every "read our reviews", "Read all N reviews on Google" or "see us on Google" link uses it, and so does sameAs in the LocalBusiness schema in `app/layout.tsx`.
-14. A city page's zip codes and neighborhoods come from that city's entry in `lib/cityData.ts`. /deep-cleaning-bolingbrook-il, /bolingbrook-il and /recurring-cleaning-bolingbrook-il all read the same entry. Never type a zip code or neighborhood into a city page. Bolingbrook's entry has no neighborhoods (none are confirmed), so its pages state the two zip codes, 60440 and 60490, and nothing more specific.
+14. A city page's zip codes come from `CITY_ZIPS` in `lib/cityData.ts`, through the city's entry, `zipLine()` or `zipCodesPhrase()`. No page names a neighborhood or subdivision. /deep-cleaning-bolingbrook-il, /bolingbrook-il and /recurring-cleaning-bolingbrook-il all read the same entry. Never type a zip code or neighborhood into a city page. Bolingbrook's entry has no neighborhoods (none are confirmed), so its pages state the two zip codes, 60440 and 60490, and nothing more specific.
 15. Blog posts answer questions (cost, checklists, how to prepare, comparisons). A blog post must never target the same search as a service page or city page, for example "move-out cleaning {city}" or "maid service {city}". Those searches belong to the landing pages.
 
 ## Copy Rules

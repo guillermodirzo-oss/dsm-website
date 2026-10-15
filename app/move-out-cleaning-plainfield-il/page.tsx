@@ -10,6 +10,7 @@ import { MOVEOUT_OFFER } from "@/lib/offers";
 import { MOVE_OUT_PRICING_COPY } from "@/lib/pricingCopy";
 import { MOVE_OUT_TIERS, formatPrice, startingPrice } from "@/lib/pricing";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
+import { zipCodesPhrase, zipLine } from "@/lib/cityData";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 
 // Regenerate at most hourly so MOVE75 drops out of the HTML on its own after
@@ -33,12 +34,12 @@ const faqs = [
   {
     question: "How long does a move-out cleaning take in Plainfield, IL?",
     answer:
-      "A move-out clean in Plainfield typically takes 4-7 hours for an average-sized home. Larger homes (like those in Grande Park or Lakewood Falls) may take longer. We'll give you an accurate time estimate when you contact us.",
+      "A move-out clean in Plainfield typically takes 4-7 hours for an average-sized home. Larger homes may take longer. We'll give you an accurate time estimate when you contact us.",
   },
   {
-    question: "Do you serve the Settlers Ridge and Springbank neighborhoods in Plainfield for move-out cleaning?",
+    question: "Do you serve all of Plainfield for move-out cleaning?",
     answer:
-      "Yes, we provide move-out cleaning throughout all of Plainfield, including Settlers Ridge, Springbank, Lakewood Falls, Grande Park, and all areas in zip codes 60544 and 60585.",
+      `Yes. ${zipLine("Plainfield")}`,
   },
   {
     question: "How much does move-out cleaning cost in Plainfield, IL?",
@@ -116,7 +117,7 @@ const checklist = [
       "Scrub sink",
       "Wipe all cabinet fronts and clean inside",
       "Clean countertops and backsplash",
-      "Clean dishwasher interior",
+      "Clean inside the dishwasher",
       "Mop and scrub floors",
     ],
   },
@@ -135,7 +136,7 @@ const checklist = [
   {
     room: "Bedrooms & Living Areas",
     items: [
-      "Clean inside all closets",
+      "Wipe closet shelves",
       "Wipe all baseboards and door frames",
       "Clean window sills and inside glass",
       "Wipe all light switches and outlet covers",
@@ -152,7 +153,7 @@ const checklist = [
       "Dust and wipe all light fixtures",
       "Clean vents and registers",
       "Remove all trash and debris",
-      "Final walkthrough inspection",
+      "Sweep the patio",
     ],
   },
 ];
@@ -233,8 +234,7 @@ export default function MoveOutCleaningPlainfieldPage() {
               <p className="text-xl font-semibold text-white/95 mb-4">Get Your Deposit Back. Guaranteed.</p>
               <p className="text-lg text-white/85 mb-8 leading-relaxed">
                 DSM Cleaning Solutions delivers a landlord-approved, deposit-back move-out clean for
-                Plainfield homes and apartments. We serve all of 60544 and 60585, from Settlers Ridge
-                to Grande Park, with a comprehensive clean built to pass any inspection.
+                Plainfield homes and apartments. We serve Plainfield {zipCodesPhrase("Plainfield")} with a comprehensive clean built to pass any inspection.
               </p>
               <Offer service="moveout">
                 <div className="mb-6">
@@ -313,8 +313,7 @@ export default function MoveOutCleaningPlainfieldPage() {
           <h2 className="section-heading mb-6">Move-Out Cleaning in Plainfield, IL: Built to Get Your Deposit Back</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Move-out cleaning in Plainfield, IL is one of DSM Cleaning Solutions&rsquo; most requested services,
-            and it&rsquo;s easy to understand why. Plainfield renters in Settlers Ridge, Lakewood Falls,
-            Springbank, and across zip codes 60544 and 60585 trust us to deliver the kind of deep,
+            and it&rsquo;s easy to understand why. Plainfield renters across {zipCodesPhrase("Plainfield")} trust us to deliver the kind of deep,
             comprehensive clean that meets even the strictest landlord standards and maximizes the
             chance of getting their full security deposit back.
           </p>

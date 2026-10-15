@@ -9,6 +9,7 @@ import Offer from "@/components/Offer";
 import { MOVEOUT_OFFER } from "@/lib/offers";
 import { MOVE_OUT_PRICING_COPY } from "@/lib/pricingCopy";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
+import { zipCodesPhrase, zipLine } from "@/lib/cityData";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 
 // Regenerate at most hourly so MOVE75 drops out of the HTML on its own after
@@ -49,12 +50,12 @@ const faqs = [
   {
     question: "How long does a move-out clean take in Shorewood?",
     answer:
-      "A move-out clean in Shorewood typically takes 4-7 hours for an average-sized home in zip code 60404. Larger homes or properties in Shorewood Glen or Shorewood Crossings that haven't been professionally cleaned recently may take longer. We'll give you an accurate time estimate when you contact us.",
+      "A move-out clean in Shorewood typically takes 4-7 hours for an average-sized home in zip code 60404. Larger homes or properties that haven't been professionally cleaned recently may take longer. We'll give you an accurate time estimate when you contact us.",
   },
   {
     question: "Do you serve zip code 60404 in Shorewood for move-out cleaning?",
     answer:
-      "Yes, we serve all of Shorewood, including zip code 60404 and all neighborhoods: Shorewood Glen, Shorewood Crossings, River Crossing, Fox Bend, and Shorewood Commons. We're based in nearby Romeoville and serve Shorewood regularly alongside our Joliet and Plainfield clients.",
+      `Yes. ${zipLine("Shorewood")} We're based in nearby Romeoville and serve Shorewood regularly alongside our Joliet and Plainfield clients.`,
   },
 ];
 
@@ -117,7 +118,7 @@ const checklist = [
       "Scrub sink",
       "Wipe all cabinet fronts and clean inside",
       "Clean countertops and backsplash",
-      "Clean dishwasher interior",
+      "Clean inside the dishwasher",
       "Mop and scrub floors",
     ],
   },
@@ -136,7 +137,7 @@ const checklist = [
   {
     room: "Bedrooms & Living Areas",
     items: [
-      "Clean inside all closets",
+      "Wipe closet shelves",
       "Wipe all baseboards and door frames",
       "Clean window sills and inside glass",
       "Wipe all light switches and outlet covers",
@@ -153,7 +154,7 @@ const checklist = [
       "Dust and wipe all light fixtures",
       "Clean vents and registers",
       "Remove all trash and debris",
-      "Final walkthrough inspection",
+      "Sweep the patio",
     ],
   },
 ];
@@ -234,8 +235,7 @@ export default function MoveOutCleaningShorewoodPage() {
               <p className="text-xl font-semibold text-white/95 mb-4">Get Your Deposit Back. Guaranteed.</p>
               <p className="text-lg text-white/85 mb-8 leading-relaxed">
                 Moving out of your Shorewood home or rental? DSM Cleaning Solutions delivers a thorough,
-                landlord-inspection-ready clean throughout Shorewood, including Shorewood Glen, Shorewood
-                Crossings, River Crossing, and Fox Bend. Get your full deposit back.
+                landlord-inspection-ready clean throughout Shorewood ({zipCodesPhrase("Shorewood")}). Get your full deposit back.
               </p>
               <Offer service="moveout">
                 <div className="mb-6">
@@ -320,8 +320,7 @@ export default function MoveOutCleaningShorewoodPage() {
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
             We&rsquo;re a family-owned cleaning company based in Romeoville, just minutes from Shorewood.
-            We&rsquo;ve helped renters across Shorewood Glen, Shorewood Crossings, River Crossing, Fox Bend,
-            and Shorewood Commons pass their move-out inspections and walk away with their full deposits.
+            We&rsquo;ve helped renters across Shorewood pass their move-out inspections and walk away with their full deposits.
             Our team follows a detailed, landlord-focused checklist that covers every room,
             not just the visible surfaces.
           </p>

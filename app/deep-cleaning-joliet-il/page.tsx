@@ -9,6 +9,7 @@ import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 import { DEEP_CHECKLIST } from "@/lib/deepChecklist";
+import { zipCodesPhrase, zipLine } from "@/lib/cityData";
 
 export const metadata: Metadata = {
   title: { absolute: deepCityTitle("Joliet") },
@@ -28,12 +29,12 @@ const faqs = [
   {
     question: "How long does a deep cleaning take in Joliet, IL?",
     answer:
-      "Most deep cleaning jobs in Joliet take 3-6 hours depending on the size and condition of your home. A 2-bedroom home may take around 3 hours while a larger 4-bedroom home in the Cathedral Area or Rock Run could take 5-6 hours.",
+      "Most deep cleaning jobs in Joliet take 3-6 hours depending on the size and condition of your home. A 2-bedroom home may take around 3 hours while a larger 4-bedroom home could take 5-6 hours.",
   },
   {
-    question: "Do you serve the Cathedral Area and Rock Run neighborhoods in Joliet?",
+    question: "Do you serve all of Joliet?",
     answer:
-      "Yes, we serve all Joliet neighborhoods including the Shorewood border area, Cathedral Area, Rock Run, and all areas within zip codes 60431, 60432, and 60435.",
+      `Yes. ${zipLine("Joliet")}`,
   },
   {
     question: "What if my quote comes in higher than the range listed?",
@@ -199,8 +200,7 @@ export default function DeepCleaningJolietPage() {
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Professional Deep Cleaning Services in Joliet, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Deep cleaning in Joliet, IL is what we do. DSM Cleaning Solutions brings the same
-            detail-focused approach to every home we serve. Whether you live near the Cathedral Area,
-            Rock Run, or the Shorewood border, our team covers zip codes 60431, 60432, and 60435 with
+            detail-focused approach to every home we serve. Our team covers {zipCodesPhrase("Joliet")} with
             a thorough clean that goes well beyond your regular maintenance routine.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">

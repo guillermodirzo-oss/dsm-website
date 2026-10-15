@@ -9,6 +9,7 @@ import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 import { DEEP_CHECKLIST } from "@/lib/deepChecklist";
+import { zipCodesPhrase, zipLine } from "@/lib/cityData";
 
 export const metadata: Metadata = {
   title: { absolute: deepCityTitle("Westmont") },
@@ -28,12 +29,12 @@ const faqs = [
   {
     question: "How long does a deep cleaning take in Westmont, IL?",
     answer:
-      "Most deep cleaning jobs in Westmont take 3-6 hours depending on the size and condition of your home. A 2-bedroom home may take around 3 hours while a larger 4-bedroom home in the Westmont downtown area or Cass Avenue corridor could take 5-6 hours.",
+      "Most deep cleaning jobs in Westmont take 3-6 hours depending on the size and condition of your home. A 2-bedroom home may take around 3 hours while a larger 4-bedroom home could take 5-6 hours.",
   },
   {
-    question: "Do you serve the Westmont downtown area and Cass Avenue corridor?",
+    question: "Do you serve all of Westmont?",
     answer:
-      "Yes, we serve all Westmont neighborhoods including the downtown area, Cass Avenue corridor, and all areas within zip code 60559.",
+      `Yes. ${zipLine("Westmont")}`,
   },
   {
     question: "What if my quote comes in higher than the range listed?",
@@ -199,8 +200,7 @@ export default function DeepCleaningWestmontPage() {
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Professional Deep Cleaning Services in Westmont, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Deep cleaning in Westmont, IL is what we do. DSM Cleaning Solutions brings the same
-            detail-focused approach to every home we serve. Whether you live near the Westmont
-            downtown area or the Cass Avenue corridor, our team covers zip code 60559 with a
+            detail-focused approach to every home we serve. Our team covers {zipCodesPhrase("Westmont")} with a
             thorough clean that goes well beyond your regular maintenance routine.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">

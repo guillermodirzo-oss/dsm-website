@@ -9,6 +9,7 @@ import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 import { DEEP_CHECKLIST } from "@/lib/deepChecklist";
+import { zipCodesPhrase, zipLine } from "@/lib/cityData";
 
 export const metadata: Metadata = {
   title: { absolute: deepCityTitle("Naperville") },
@@ -28,12 +29,12 @@ const faqs = [
   {
     question: "How long does a deep cleaning take in Naperville, IL?",
     answer:
-      "Most deep cleaning jobs in Naperville take 3-6 hours depending on the size and condition of your home. A 2-bedroom home may take around 3 hours while a larger 4-bedroom home in River Run or Ashbury could take 5-6 hours.",
+      "Most deep cleaning jobs in Naperville take 3-6 hours depending on the size and condition of your home. A 2-bedroom home may take around 3 hours while a larger 4-bedroom home could take 5-6 hours.",
   },
   {
-    question: "Do you serve River Run and Ashbury neighborhoods in Naperville?",
+    question: "Do you serve all of Naperville?",
     answer:
-      "Yes, we serve all Naperville neighborhoods including Naper Settlement area, River Run, Ashbury, and all areas within zip codes 60540, 60563, 60564, and 60565.",
+      `Yes. ${zipLine("Naperville")}`,
   },
   {
     question: "What if my quote comes in higher than the range listed?",
@@ -200,8 +201,7 @@ export default function DeepCleaningNapervillePage() {
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Professional Deep Cleaning Services in Naperville, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Deep cleaning in Naperville, IL is what we do. DSM Cleaning Solutions brings the same
-            detail-focused approach to every home we serve. Whether you live near Naper Settlement,
-            River Run, or Ashbury, our team covers zip codes 60540, 60563, 60564, and 60565 with a
+            detail-focused approach to every home we serve. Our team covers {zipCodesPhrase("Naperville")} with a
             thorough clean that goes well beyond your regular maintenance routine.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">

@@ -9,6 +9,7 @@ import Offer from "@/components/Offer";
 import { MOVEOUT_OFFER } from "@/lib/offers";
 import { MOVE_OUT_PRICING_COPY } from "@/lib/pricingCopy";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
+import { zipCodesPhrase, zipLine } from "@/lib/cityData";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 
 // Regenerate at most hourly so MOVE75 drops out of the HTML on its own after
@@ -49,12 +50,12 @@ const faqs = [
   {
     question: "How long does a Hinsdale move-out clean take?",
     answer:
-      "A move-out clean in Hinsdale typically takes 5-8 hours given the larger home sizes common in zip code 60521. Properties in Downtown Hinsdale or West Hinsdale with multiple bedrooms and bathrooms may require more time. We'll give you an accurate estimate when you contact us.",
+      "A move-out clean in Hinsdale typically takes 5-8 hours given the larger home sizes common in zip code 60521. Properties with multiple bedrooms and bathrooms may require more time. We'll give you an accurate estimate when you contact us.",
   },
   {
     question: "Do you serve all of Hinsdale, IL 60521?",
     answer:
-      "Yes, we serve all of Hinsdale, including zip code 60521 and all neighborhoods: Downtown Hinsdale and West Hinsdale. We serve Hinsdale as part of our DuPage County route and work regularly alongside our Westmont, Oak Brook, and Burr Ridge clients.",
+      `Yes. ${zipLine("Hinsdale")} We serve Hinsdale as part of our DuPage County route and work regularly alongside our Westmont, Oak Brook, and Burr Ridge clients.`,
   },
 ];
 
@@ -117,7 +118,7 @@ const checklist = [
       "Scrub sink",
       "Wipe all cabinet fronts and clean inside",
       "Clean countertops and backsplash",
-      "Clean dishwasher interior",
+      "Clean inside the dishwasher",
       "Mop and scrub floors",
     ],
   },
@@ -136,7 +137,7 @@ const checklist = [
   {
     room: "Bedrooms & Living Areas",
     items: [
-      "Clean inside all closets",
+      "Wipe closet shelves",
       "Wipe all baseboards and door frames",
       "Clean window sills and inside glass",
       "Wipe all light switches and outlet covers",
@@ -153,7 +154,7 @@ const checklist = [
       "Dust and wipe all light fixtures",
       "Clean vents and registers",
       "Remove all trash and debris",
-      "Final walkthrough inspection",
+      "Sweep the patio",
     ],
   },
 ];
@@ -236,8 +237,7 @@ export default function MoveOutCleaningHinsdalePage() {
               </p>
               <p className="text-lg text-white/85 mb-8 leading-relaxed">
                 Selling your Hinsdale home? DSM Cleaning Solutions delivers a thorough, buyer-ready
-                clean throughout Hinsdale (zip code 60521), including Downtown Hinsdale and West
-                Hinsdale. Your home will be walkthrough-ready, or we come back and re-clean at no charge.
+                clean throughout Hinsdale ({zipCodesPhrase("Hinsdale")}). Your home will be walkthrough-ready, or we come back and re-clean at no charge.
               </p>
               <Offer service="moveout">
                 <div className="mb-6">
@@ -323,8 +323,7 @@ export default function MoveOutCleaningHinsdalePage() {
             service is built to pass that inspection without exception.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            We&rsquo;re a family-owned cleaning company serving all of Hinsdale (zip code 60521),
-            including Downtown Hinsdale and West Hinsdale. Our team follows a detailed,
+            We&rsquo;re a family-owned cleaning company serving all of Hinsdale ({zipCodesPhrase("Hinsdale")}). Our team follows a detailed,
             room-by-room checklist that covers every surface a buyer&rsquo;s agent will look at,
             inside every appliance, inside every cabinet, every grout line, every baseboard.
             Nothing is skipped.

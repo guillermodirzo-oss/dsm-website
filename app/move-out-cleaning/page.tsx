@@ -85,6 +85,8 @@ const checklist = [
       "Wipe mirrors and light switches",
       "Vacuum carpet and hard floors",
       "Mop hard floors",
+      "Wipe closet shelves",
+      "Sweep the patio",
     ],
     photos: [
       { src: "/work-photos/empty-bedroom-gray-carpet-2-1200.jpg", alt: "Empty bedroom with fresh vacuum lines across the carpet after a DSM Cleaning Solutions move-out clean" },
@@ -102,6 +104,7 @@ const checklist = [
       "Wipe inside cabinets and cabinet faces",
       "Clean baseboards",
       "Clean microwave inside and out",
+      "Clean inside the dishwasher",
       "Clean and dry sink and faucet",
       "Scrub tile grout",
       "Vacuum and mop floors",
@@ -152,6 +155,8 @@ const checklist = [
 const comparison = [
   // deep: "Clean oven exterior" (inside is an add-on) | move-out: "Clean stove and inside the oven"
   { item: "Inside the oven", deep: "Add-on", moveOut: "Yes" },
+  // deep: not on the checklist (inside dishwasher is an add-on) | move-out: "Clean inside the dishwasher"
+  { item: "Inside the dishwasher", deep: "Add-on", moveOut: "Yes" },
   // deep: "Clean inside microwave" | move-out: "Clean microwave inside and out"
   { item: "Inside the microwave", deep: "Yes", moveOut: "Yes" },
   // deep: "Wipe refrigerator exterior" | move-out: "Clean refrigerator inside and out"
@@ -181,11 +186,11 @@ const faqs = [
   },
   {
     q: "What's included in a move-out clean?",
-    a: "Every room gets the full checklist above. That means inside the oven, inside the fridge, inside every cabinet and drawer, baseboards and doors, the bathrooms, the laundry room, and every floor vacuumed and mopped.",
+    a: "Every room gets the full checklist above. That means inside the oven, inside the fridge, inside the dishwasher, inside every cabinet and drawer, closet shelves, baseboards and doors, the bathrooms, the laundry room, the patio, and every floor vacuumed and mopped.",
   },
   {
     q: "What's the difference between move-out and deep cleaning?",
-    a: "Move-out cleaning is built for an empty house. It covers inside the oven, inside the fridge and inside every cabinet and drawer, which a deep clean doesn't. Deep cleaning is built for a home you're living in, so it vacuums under and behind furniture. Both clean inside the microwave, both scrub tile grout, and both do baseboards and doors. Inside oven and inside kitchen cabinet cleaning can be added to a deep clean.",
+    a: "Move-out cleaning is built for an empty house. It covers inside the oven, inside the fridge, inside the dishwasher and inside every cabinet and drawer, which a deep clean doesn't. Deep cleaning is built for a home you're living in, so it vacuums under and behind furniture. Both clean inside the microwave, both scrub tile grout, and both do baseboards and doors. Inside oven, inside fridge, inside cabinets and inside dishwasher are add-ons for a deep clean.",
   },
   {
     q: "Do I need to be home?",

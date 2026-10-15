@@ -26,7 +26,7 @@
  * and add the URL to app/sitemap.ts.
  */
 import type { Metadata } from "next";
-import { cities } from "./cityData";
+import { CITY_ZIPS, cities } from "./cityData";
 import {
   FREQUENCY_DISCOUNTS,
   WEEKLY_FROM,
@@ -108,11 +108,11 @@ export const RECURRING_CITIES: Record<RecurringCityKey, RecurringCity> = {
     path: "/recurring-cleaning-plainfield-il",
     hubPath: "/plainfield-il",
     deepPath: "/deep-cleaning-plainfield-il",
-    // Plainfield has no lib/cityData.ts entry; its hub is a custom page. These
-    // are the zip codes and neighborhoods that page (app/plainfield-il) lists
-    // in its "Do you serve all Plainfield neighborhoods?" answer.
-    zips: ["60544", "60585"],
-    neighborhoods: ["Settlers Ridge", "Lakewood Falls", "Grande Park", "Springbank", "Heritage Meadows", "River Run"],
+    // Plainfield has no city entry in lib/cityData.ts (its hub is a custom
+    // page), so its zip codes come from CITY_ZIPS there. No neighborhood names:
+    // the owner cannot confirm any.
+    zips: CITY_ZIPS.Plainfield,
+    neighborhoods: [],
     photo: WORK_PHOTOS.emptyRoomGrayPlank,
     clientStory:
       "In Plainfield, we've cleaned a 3-bedroom, 2.5-bath home between 1,500 and 2,000 square feet every two weeks for over a year. Same team every visit, on the same schedule.",

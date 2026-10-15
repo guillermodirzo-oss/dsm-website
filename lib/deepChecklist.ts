@@ -12,8 +12,9 @@
  * page types its own list.
  *
  * Never add:
- *  - inside the oven, inside the refrigerator or inside the kitchen cabinets.
- *    They are add-ons for a deep clean (and always included with move-out).
+ *  - inside the oven, inside the fridge, inside cabinets or inside the
+ *    dishwasher. They are add-ons for a deep clean (lib/addOns.ts) and always
+ *    included with move-out.
  *  - anything from the "not offered" list in CONTEXT.md: spot-cleaning walls,
  *    pulling appliances out or cleaning behind or under them, caulking,
  *    removing calcium or hard water deposits.

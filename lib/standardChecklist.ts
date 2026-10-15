@@ -14,9 +14,9 @@
  * walls, cleaning behind or under appliances, caulking, removing calcium or
  * hard water deposits).
  *
- * Inside the oven, inside the refrigerator and inside the kitchen cabinets
- * are never part of a standard clean. All three are add-ons, and all three
- * are always included with move-out cleaning.
+ * Inside the oven, inside the fridge, inside cabinets and inside the
+ * dishwasher are never part of a standard clean. All four are add-ons
+ * (lib/addOns.ts), and all four are always included with move-out cleaning.
  *
  * What a deep clean adds on top of this list is in lib/deepChecklist.ts.
  */

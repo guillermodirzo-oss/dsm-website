@@ -9,6 +9,7 @@ import Offer from "@/components/Offer";
 import { MOVEOUT_OFFER } from "@/lib/offers";
 import { MOVE_OUT_PRICING_COPY } from "@/lib/pricingCopy";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
+import { zipCodesPhrase, zipLine } from "@/lib/cityData";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 
 // Regenerate at most hourly so MOVE75 drops out of the HTML on its own after
@@ -49,12 +50,12 @@ const faqs = [
   {
     question: "How long does a move-out clean take in Oak Brook, IL?",
     answer:
-      "A move-out clean in Oak Brook typically takes 5-8 hours given the larger home sizes common in zip code 60523. Properties near Oak Brook Center or Butler National with multiple bedrooms and bathrooms may require more time. We'll give you an accurate estimate when you contact us.",
+      "A move-out clean in Oak Brook typically takes 5-8 hours given the larger home sizes common in zip code 60523. Properties with multiple bedrooms and bathrooms may require more time. We'll give you an accurate estimate when you contact us.",
   },
   {
     question: "Do you serve all of Oak Brook, IL 60523?",
     answer:
-      "Yes, we serve all of Oak Brook, including zip code 60523 and all neighborhoods: the Oak Brook Center area and the Butler National area. We serve Oak Brook as part of our DuPage County route and work regularly alongside our Hinsdale, Downers Grove, and Naperville clients.",
+      `Yes. ${zipLine("Oak Brook")} We serve Oak Brook as part of our DuPage County route and work regularly alongside our Hinsdale, Downers Grove, and Naperville clients.`,
   },
 ];
 
@@ -117,7 +118,7 @@ const checklist = [
       "Scrub sink",
       "Wipe all cabinet fronts and clean inside",
       "Clean countertops and backsplash",
-      "Clean dishwasher interior",
+      "Clean inside the dishwasher",
       "Mop and scrub floors",
     ],
   },
@@ -136,7 +137,7 @@ const checklist = [
   {
     room: "Bedrooms & Living Areas",
     items: [
-      "Clean inside all closets",
+      "Wipe closet shelves",
       "Wipe all baseboards and door frames",
       "Clean window sills and inside glass",
       "Wipe all light switches and outlet covers",
@@ -153,7 +154,7 @@ const checklist = [
       "Dust and wipe all light fixtures",
       "Clean vents and registers",
       "Remove all trash and debris",
-      "Final walkthrough inspection",
+      "Sweep the patio",
     ],
   },
 ];
@@ -236,8 +237,7 @@ export default function MoveOutCleaningOakBrookPage() {
               </p>
               <p className="text-lg text-white/85 mb-8 leading-relaxed">
                 Selling your Oak Brook home or moving out of a rental? DSM Cleaning Solutions
-                delivers a thorough, buyer-ready clean throughout Oak Brook (zip code 60523),
-                including the Oak Brook Center area and Butler National area. Your home will be
+                delivers a thorough, buyer-ready clean throughout Oak Brook ({zipCodesPhrase("Oak Brook")}). Your home will be
                 walkthrough-ready, or we come back and re-clean at no charge.
               </p>
               <Offer service="moveout">
@@ -323,8 +323,7 @@ export default function MoveOutCleaningOakBrookPage() {
             is built to pass that inspection at the level Oak Brook buyers expect.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            We&rsquo;re a family-owned cleaning company serving all of Oak Brook (zip code 60523),
-            including the Oak Brook Center area and Butler National area. Our team follows a
+            We&rsquo;re a family-owned cleaning company serving all of Oak Brook ({zipCodesPhrase("Oak Brook")}). Our team follows a
             detailed, room-by-room checklist that covers every surface a buyer&rsquo;s agent will look
             at, inside every appliance, inside every cabinet, every grout line, every baseboard.
             Nothing is skipped.

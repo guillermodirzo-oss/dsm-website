@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CITY_ZIPS, zipLine } from "@/lib/cityData";
 
 export const metadata: Metadata = {
   title: "Service Areas | Southwest Chicago Suburbs",
@@ -63,9 +64,9 @@ const breadcrumbSchema = {
 const cities = [
   {
     name: "Romeoville",
-    zips: ["60446"],
+    zips: CITY_ZIPS.Romeoville,
     description:
-      "Our home base. We serve every neighborhood in Romeoville including Windstone, Hidden Lakes and Grand Haven.",
+      `Our home base. ${zipLine("Romeoville")}`,
     links: [
       { label: "Deep Cleaning", href: "/deep-cleaning-romeoville-il" },
       { label: "Standard Cleaning", href: "/" },
@@ -75,9 +76,9 @@ const cities = [
   },
   {
     name: "Plainfield",
-    zips: ["60544", "60585"],
+    zips: CITY_ZIPS.Plainfield,
     description:
-      "Serving Settlers Ridge, Lakewood Falls, Grande Park, Springbank and all Plainfield neighborhoods.",
+      zipLine("Plainfield"),
     links: [
       { label: "Deep Cleaning", href: "/deep-cleaning-plainfield-il" },
       { label: "Standard Cleaning", href: "/plainfield-il" },
@@ -87,9 +88,9 @@ const cities = [
   },
   {
     name: "Naperville",
-    zips: ["60540", "60563", "60564", "60565"],
+    zips: CITY_ZIPS.Naperville,
     description:
-      "Serving Cress Creek, White Eagle, Ashbury, Hobson West and all Naperville neighborhoods.",
+      zipLine("Naperville"),
     links: [
       { label: "Deep Cleaning", href: "/deep-cleaning-naperville-il" },
       { label: "Standard Cleaning", href: "/naperville-il" },
@@ -99,9 +100,9 @@ const cities = [
   },
   {
     name: "Bolingbrook",
-    zips: ["60440", "60490"],
+    zips: CITY_ZIPS.Bolingbrook,
     description:
-      "Serving both Bolingbrook zip codes, 60440 and 60490.",
+      zipLine("Bolingbrook"),
     links: [
       { label: "Deep Cleaning", href: "/deep-cleaning-bolingbrook-il" },
       { label: "Standard Cleaning", href: "/bolingbrook-il" },
@@ -111,9 +112,9 @@ const cities = [
   },
   {
     name: "Joliet",
-    zips: ["60431", "60432", "60433", "60435", "60436"],
+    zips: CITY_ZIPS.Joliet,
     description:
-      "Serving Ingalls Park, Rock Run, Cathedral Area, Forest Park and all Joliet neighborhoods.",
+      zipLine("Joliet"),
     links: [
       { label: "Deep Cleaning", href: "/deep-cleaning-joliet-il" },
       { label: "Standard Cleaning", href: "/joliet-il" },
@@ -123,9 +124,9 @@ const cities = [
   },
   {
     name: "Lockport",
-    zips: ["60441"],
+    zips: CITY_ZIPS.Lockport,
     description:
-      "Serving Lockport Estates, Heritage Woods, Downtown Lockport and all Lockport neighborhoods.",
+      zipLine("Lockport"),
     links: [
       { label: "Deep Cleaning", href: "/deep-cleaning-lockport-il" },
       { label: "Standard Cleaning", href: "/lockport-il" },
@@ -135,9 +136,9 @@ const cities = [
   },
   {
     name: "Shorewood",
-    zips: ["60404"],
+    zips: CITY_ZIPS.Shorewood,
     description:
-      "Serving Shorewood Glenn, Shorewood Crossing, Towne Center and all Shorewood neighborhoods.",
+      zipLine("Shorewood"),
     links: [
       { label: "Deep Cleaning", href: "/deep-cleaning-shorewood-il" },
       { label: "Standard Cleaning", href: "/shorewood-il" },
@@ -147,9 +148,9 @@ const cities = [
   },
   {
     name: "New Lenox",
-    zips: ["60451"],
+    zips: CITY_ZIPS["New Lenox"],
     description:
-      "Serving Sanctuary, Spencer Pointe, Grand Crossing and all New Lenox neighborhoods.",
+      zipLine("New Lenox"),
     links: [
       { label: "Deep Cleaning", href: "/deep-cleaning-new-lenox-il" },
       { label: "Standard Cleaning", href: "/new-lenox-il" },
@@ -159,9 +160,9 @@ const cities = [
   },
   {
     name: "Lemont",
-    zips: ["60439"],
+    zips: CITY_ZIPS.Lemont,
     description:
-      "Serving Historic Downtown Lemont, Centennial Crossing, Covington Knolls and all Lemont neighborhoods.",
+      zipLine("Lemont"),
     links: [
       { label: "Deep Cleaning", href: "/deep-cleaning-lemont-il" },
       { label: "Standard Cleaning", href: "/lemont-il" },
@@ -171,9 +172,9 @@ const cities = [
   },
   {
     name: "Homer Glen",
-    zips: ["60491"],
+    zips: CITY_ZIPS["Homer Glen"],
     description:
-      "Serving Homer Lakes, Farmington Lakes, The Highlands and all Homer Glen neighborhoods.",
+      zipLine("Homer Glen"),
     links: [
       { label: "Deep Cleaning", href: "/deep-cleaning-homer-glen-il" },
       { label: "Standard Cleaning", href: "/homer-glen-il" },
@@ -183,9 +184,9 @@ const cities = [
   },
   {
     name: "Westmont",
-    zips: ["60559"],
+    zips: CITY_ZIPS.Westmont,
     description:
-      "Serving Westmont Downtown, Oakwood Estates, Waterfall Glen area and all Westmont neighborhoods.",
+      zipLine("Westmont"),
     links: [
       { label: "Deep Cleaning", href: "/deep-cleaning-westmont-il" },
       { label: "Standard Cleaning", href: "/westmont-il" },
@@ -195,9 +196,9 @@ const cities = [
   },
   {
     name: "Minooka",
-    zips: ["60447"],
+    zips: CITY_ZIPS.Minooka,
     description:
-      "Serving Minooka Acres, Heritage Fields, Fox Run and all Minooka neighborhoods.",
+      zipLine("Minooka"),
     links: [
       { label: "Deep Cleaning", href: "/deep-cleaning-minooka-il" },
       { label: "Standard Cleaning", href: "/minooka-il" },

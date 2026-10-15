@@ -9,6 +9,7 @@ import Offer from "@/components/Offer";
 import { MOVEOUT_OFFER } from "@/lib/offers";
 import { MOVE_OUT_PRICING_COPY } from "@/lib/pricingCopy";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
+import { zipCodesPhrase } from "@/lib/cityData";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 
 // Regenerate at most hourly so MOVE75 drops out of the HTML on its own after
@@ -49,7 +50,7 @@ const faqs = [
   {
     question: "How long does a move-out clean take in Joliet?",
     answer:
-      "A move-out clean in Joliet typically takes 4-7 hours for an average-sized home. Larger homes or properties in neighborhoods like Rock Run or White Oak Subdivision that haven't been professionally cleaned recently may take longer. We'll give you an accurate time estimate when you contact us.",
+      "A move-out clean in Joliet typically takes 4-7 hours for an average-sized home. Larger homes or properties that haven't been professionally cleaned recently may take longer. We'll give you an accurate time estimate when you contact us.",
   },
   {
     question: "Do you offer same-day move-out cleaning in Joliet?",
@@ -117,7 +118,7 @@ const checklist = [
       "Scrub sink",
       "Wipe all cabinet fronts and clean inside",
       "Clean countertops and backsplash",
-      "Clean dishwasher interior",
+      "Clean inside the dishwasher",
       "Mop and scrub floors",
     ],
   },
@@ -136,7 +137,7 @@ const checklist = [
   {
     room: "Bedrooms & Living Areas",
     items: [
-      "Clean inside all closets",
+      "Wipe closet shelves",
       "Wipe all baseboards and door frames",
       "Clean window sills and inside glass",
       "Wipe all light switches and outlet covers",
@@ -153,7 +154,7 @@ const checklist = [
       "Dust and wipe all light fixtures",
       "Clean vents and registers",
       "Remove all trash and debris",
-      "Final walkthrough inspection",
+      "Sweep the patio",
     ],
   },
 ];
@@ -313,8 +314,7 @@ export default function MoveOutCleaningJolietPage() {
           <h2 className="section-heading mb-6">Move-Out Cleaning in Joliet, IL: Built to Get Your Deposit Back</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Move-out cleaning in Joliet, IL is one of DSM Cleaning Solutions&rsquo; most requested services.
-            Joliet renters in Ingalls Park, Rock Run, Forest Park, Woodgate, and across zip codes
-            60431, 60432, 60433, 60435, and 60436 trust us to deliver the kind of deep, comprehensive
+            Joliet renters across {zipCodesPhrase("Joliet")} trust us to deliver the kind of deep, comprehensive
             clean that meets even the strictest landlord standards and maximizes the chance of getting
             their full security deposit back.
           </p>

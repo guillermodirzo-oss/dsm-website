@@ -10,6 +10,7 @@ import { MOVEOUT_OFFER } from "@/lib/offers";
 import { MOVE_OUT_PRICING_COPY } from "@/lib/pricingCopy";
 import { MOVE_OUT_TIERS, formatPrice, startingPrice } from "@/lib/pricing";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
+import { zipCodesPhrase } from "@/lib/cityData";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 
 // Regenerate at most hourly so MOVE75 drops out of the HTML on its own after
@@ -33,12 +34,12 @@ const faqs = [
   {
     question: "How long does a move-out cleaning take in Romeoville, IL?",
     answer:
-      "Most move-out cleanings in Romeoville take 4-7 hours depending on home size and condition. Smaller apartments may take around 4 hours, while larger homes in Grand Haven or Windstone can take 6-7 hours or more.",
+      "Most move-out cleanings in Romeoville take 4-7 hours depending on home size and condition. Smaller apartments may take around 4 hours, while larger homes can take 6-7 hours or more.",
   },
   {
     question: "Do you clean empty apartments and rental homes in Romeoville?",
     answer:
-      "Yes, we specialize in cleaning empty properties for both outgoing tenants and incoming renters throughout Romeoville (zip code 60446), including all neighborhoods like Windstone, Hidden Lakes, and Grand Haven.",
+      `Yes, we specialize in cleaning empty properties for both outgoing tenants and incoming renters throughout Romeoville (${zipCodesPhrase("Romeoville")}).`,
   },
   {
     question: "How much does move-out cleaning cost in Romeoville, IL?",
@@ -116,7 +117,7 @@ const checklist = [
       "Scrub sink",
       "Wipe all cabinet fronts and clean inside",
       "Clean countertops and backsplash",
-      "Clean dishwasher interior",
+      "Clean inside the dishwasher",
       "Mop and scrub floors",
     ],
   },
@@ -135,7 +136,7 @@ const checklist = [
   {
     room: "Bedrooms & Living Areas",
     items: [
-      "Clean inside all closets",
+      "Wipe closet shelves",
       "Wipe all baseboards and door frames",
       "Clean window sills and inside glass",
       "Wipe all light switches and outlet covers",
@@ -152,7 +153,7 @@ const checklist = [
       "Dust and wipe all light fixtures",
       "Clean vents and registers",
       "Remove all trash and debris",
-      "Final walkthrough inspection",
+      "Sweep the patio",
     ],
   },
 ];
@@ -234,8 +235,7 @@ export default function MoveOutCleaningRomeovillePage() {
               <p className="text-lg text-white/85 mb-8 leading-relaxed">
                 DSM Cleaning Solutions is Romeoville&rsquo;s local move-out cleaning expert. Based right here
                 in 60446, we deliver a thorough, deposit-back focused clean for renters, landlords,
-                and home sellers throughout Windstone, Hidden Lakes, Grand Haven, and every
-                neighborhood in Romeoville.
+                and home sellers throughout Romeoville.
               </p>
               <Offer service="moveout">
                 <div className="mb-6">
@@ -315,8 +315,7 @@ export default function MoveOutCleaningRomeovillePage() {
           <p className="text-gray-600 mb-4 leading-relaxed">
             Move-out and move-in cleaning in Romeoville, IL is at the heart of what DSM Cleaning
             Solutions does, and as a company based right here in 60446, we understand the local
-            rental market better than anyone. Romeoville renters in Windstone, Hidden Lakes, and
-            Grand Haven trust us to deliver the kind of comprehensive clean that satisfies
+            rental market better than anyone. Romeoville renters trust us to deliver the kind of comprehensive clean that satisfies
             landlord inspections and protects their security deposit.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">

@@ -39,6 +39,7 @@ import {
   type ServiceKey,
 } from "./pricing";
 import { endOfDayIn, monthDayLabel, offerNow, startOfDayIn } from "./offerTime";
+import { addOnPrice } from "./addOns";
 
 /** What gets written by hand for each offer. Everything else is computed. */
 interface OfferTerms {
@@ -118,7 +119,8 @@ export const DEEP_OFFER = defineOffer({
   servicePath: "/deep-cleaning",
   discount: 75,
   bonus: "free oven cleaning",
-  bonusValue: 40,
+  // The inside oven add-on price, from lib/addOns.ts.
+  bonusValue: addOnPrice("insideOven"),
   season: "fall",
   startDateISO: "2026-09-22",
   endDateISO: "2026-11-30",

@@ -36,12 +36,12 @@ const faqs = [
   {
     question: "What information do I need to get an estimate?",
     answer:
-      "To give you an accurate estimate, we need to know: (1) your home size (number of bedrooms and bathrooms), (2) the type of cleaning you need (standard, deep, or move-out), (3) your zip code or city, and (4) the general condition of your home and how recently it was professionally cleaned. Optional but helpful: whether you have pets, specific areas of concern, or add-on requests like inside oven or refrigerator.",
+      "To give you an accurate estimate, we need to know: (1) your home size (number of bedrooms and bathrooms), (2) the type of cleaning you need (standard, deep, or move-out), (3) your zip code or city, and (4) the general condition of your home and how recently it was professionally cleaned. Optional but helpful: whether you have pets, specific areas of concern, or add-on requests like inside oven or inside fridge.",
   },
   {
     question: "Does the estimate include all costs?",
     answer:
-      "Yes, our estimates are all-inclusive and flat-rate. The price you receive covers labor, eco-friendly cleaning products, and all standard cleaning supplies. There are no hidden fees, no hourly overruns, and no surprise charges when we arrive. Any optional add-ons (like inside refrigerator or laundry) are discussed and agreed upon before we schedule, never added without your knowledge.",
+      "Yes, our estimates are all-inclusive and flat-rate. The price you receive covers labor, eco-friendly cleaning products, and all standard cleaning supplies. There are no hidden fees, no hourly overruns, and no surprise charges when we arrive. Any optional add-ons (like inside fridge or inside cabinets) are discussed and agreed upon before we schedule, never added without your knowledge.",
   },
   {
     question: "How do I schedule after getting my estimate?",
@@ -116,7 +116,7 @@ const factors = [
   { icon: "🧹", label: "Service Type", desc: "Standard, deep, and move-out cleaning have different scopes and prices." },
   { icon: "🔄", label: "Frequency", desc: "Recurring customers receive a lower per-visit rate than one-time bookings." },
   { icon: "📋", label: "Current Condition", desc: "Homes not recently cleaned may require additional time, always disclosed upfront." },
-  { icon: "✨", label: "Add-On Services", desc: "Inside oven, inside refrigerator, inside kitchen cabinets, laundry: optional and always agreed upon first." },
+  { icon: "✨", label: "Add-On Services", desc: "Inside oven, inside fridge, inside cabinets, inside dishwasher and more: optional and always agreed upon first." },
 ];
 
 const serviceAreas = [
@@ -235,7 +235,7 @@ export default function FreeEstimatePage() {
               { icon: "🧹", title: "Scope of Work", desc: "Exactly which rooms and tasks are covered so there are no surprises on cleaning day." },
               { icon: "⏱️", title: "Estimated Duration", desc: "How long your cleaning will take so you can plan your day accordingly." },
               { icon: "🌿", title: "Products Used", desc: "Confirmation that we use eco-friendly, non-toxic products, always included." },
-              { icon: "✨", title: "Add-On Options", desc: "Any optional extras (oven, fridge, laundry) listed separately with pricing." },
+              { icon: "✨", title: "Add-On Options", desc: "Any optional add-ons (inside oven, inside fridge, inside cabinets) listed separately with pricing." },
               { icon: "📅", title: "Availability", desc: "We'll share our nearest available dates so you can plan your booking." },
             ].map((item) => (
               <div key={item.title} className="flex gap-4 bg-brand-green-50 border border-brand-green-100 rounded-xl p-5">

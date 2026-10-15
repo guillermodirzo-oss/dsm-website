@@ -284,7 +284,7 @@ export default function DeepCleaningBolingbrookPage() {
             What We Clean in Your Bolingbrook Home
           </h2>
           <p className="text-center text-gray-500 text-sm mb-10">
-            Every deep clean includes all of the following. Inside the oven and inside the kitchen cabinets are add-ons.
+            Every deep clean includes all of the following. Inside the oven and inside cabinets are add-ons.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
             {checklist.map((section) => (

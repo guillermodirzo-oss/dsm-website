@@ -10,6 +10,7 @@ import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 import { DEEP_CHECKLIST } from "@/lib/deepChecklist";
+import { zipLine } from "@/lib/cityData";
 
 export const metadata: Metadata = {
   title: { absolute: deepCityTitle("Oak Brook") },
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What does a deep cleaning include in Oak Brook?",
-    a: "We degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. Cleaning inside the oven or inside the kitchen cabinets is an add-on. We take care with premium surfaces and fixtures throughout.",
+    a: "We degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. Cleaning inside the oven or inside cabinets is an add-on. We take care with premium surfaces and fixtures throughout.",
   },
   {
     q: "How long does a deep clean take in Oak Brook?",
@@ -43,8 +44,8 @@ const faqs = [
     a: "The ranges listed cover typical homes in that bedroom count. If your home runs bigger, has more bathrooms, or needs extra attention, your quote might land higher. We always confirm your exact price before we book anything. No surprises.",
   },
   {
-    q: "Do you serve both Oak Brook Center area and Butler National area?",
-    a: "Yes. We cover all neighborhoods in Oak Brook including the Oak Brook Center area, Butler National area, and surrounding residential neighborhoods throughout Oak Brook, IL 60523.",
+    q: "Do you serve all of Oak Brook?",
+    a: `Yes. ${zipLine("Oak Brook")}`,
   },
 ];
 
@@ -184,7 +185,7 @@ export default function DeepCleaningOakBrookPage() {
             Oak Brook is known for its executive homes, manicured properties, and high standards. When homeowners here hire a cleaning service, they expect precision and professionalism. That is what DSM delivers on every job.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            We serve the Oak Brook Center area, Butler National area, and all surrounding Oak Brook neighborhoods. Our deep cleaning goes room by room with no shortcuts. In the kitchen that means inside the microwave and behind the stovetop grates. In the bathrooms it means grout scrubbing and polished fixtures. In bedrooms and living areas we cover baseboards, ceiling fans, window sills, and under furniture.
+            {zipLine("Oak Brook")} Our deep cleaning goes room by room with no shortcuts. In the kitchen that means inside the microwave and behind the stovetop grates. In the bathrooms it means grout scrubbing and polished fixtures. In bedrooms and living areas we cover baseboards, ceiling fans, window sills, and under furniture.
           </p>
           <p className="text-gray-700 leading-relaxed">
             We use eco-friendly, non-toxic products and are fully insured. Every job is backed by our 48-hour satisfaction guarantee. If anything is not right, we come back and fix it at no charge.

@@ -173,7 +173,7 @@ export const blogPosts: BlogPost[] = [
 <h2>What Affects the Cost of Move-Out Cleaning in Plainfield</h2>
 <p>Several things drive the price up or down. The biggest factor is the size of the home. A studio or one-bedroom apartment costs less to clean than a 3-bedroom house with two and a half bathrooms. More rooms means more time, and pricing reflects that directly.</p>
 <p>The number of bathrooms matters a lot too. Bathrooms take real time to clean properly when you're doing it right. Scrubbing grout, getting behind the toilet, and cleaning the tub thoroughly adds up. A home with three bathrooms costs more than one with a single full bath.</p>
-<p>Condition of the unit is the other major variable. If the home has been kept up during the lease, the move-out clean is faster. If it's been a few years since a real scrub, there's more work to do and the price reflects that. Some renters also need add-ons like carpet cleaning or exterior window washing. Those are typically priced separately and added to the base move-out clean.</p>
+<p>Condition of the unit is the other major variable. If the home has been kept up during the lease, the move-out clean is faster. If it's been a few years since a real scrub, there's more work to do and the price reflects that. Some renters also add an extra room, such as a finished basement, or a sweep of the garage. Those are typically priced separately and added to the base move-out clean.</p>
 
 <h2>What a Realistic Price Range Looks Like</h2>
 <p>Move-out cleans in Plainfield run more than a standard recurring cleaning visit because the level of detail required is different. A regular cleaning maintains a home that's already in decent shape. A move-out clean has to pass a landlord's inspection, which means getting into the oven, the refrigerator interior, grout lines, and cabinet shelves that may not have been touched in months or years.</p>
@@ -325,7 +325,7 @@ export const blogPosts: BlogPost[] = [
     content: `<p>These two services sound similar but they're not the same thing. A <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> and a <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning</a> both go further than a regular visit, but they're built for different situations. Book the wrong one and you might end up short on what you actually need. This post breaks down exactly what each covers, where they differ, and how to pick the right one.</p>
 
 <h2>What Is a Deep Cleaning?</h2>
-<p>A deep cleaning is a thorough one-time clean for a home you're living in. It goes well beyond what a regular maintenance visit covers. Baseboards, door frames, light fixtures, and grout lines in the bathroom all get addressed, not just the easy-to-reach surfaces. Cleaning inside the oven or inside the kitchen cabinets is an add-on.</p>
+<p>A deep cleaning is a thorough one-time clean for a home you're living in. It goes well beyond what a regular maintenance visit covers. Baseboards, door frames, light fixtures, and grout lines in the bathroom all get addressed, not just the easy-to-reach surfaces. Cleaning inside the oven or inside cabinets is an add-on.</p>
 <p>People book deep cleans for a lot of different reasons. Moving into a new place and wanting it professionally cleaned before unpacking. The home hasn't had a real professional clean in six months or more. A seasonal reset before winter or spring. Hosting guests for a holiday or an event. Whatever the reason, a deep cleaning brings the home to a level that regular maintenance cleaning doesn't reach.</p>
 
 <h2>What Is a Move-Out Cleaning?</h2>
@@ -449,15 +449,15 @@ export const blogPosts: BlogPost[] = [
 
 <h2>What Type of Cleaning Do You Actually Need?</h2>
 <p>There are three main types of cleaning service, and figuring out which one fits your situation makes the rest of the process straightforward.</p>
-<p>A <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> is the right starting point for most first-time clients. If your home hasn't been professionally cleaned before, a deep clean gets everything to a solid baseline. It covers areas that routine cleaning skips: baseboards, grout lines, door frames, and the floor under the furniture. It takes longer and costs more than a regular visit, but it sets the home up properly.</p>
-<p><a href="/recurring-cleaning" class="text-brand-green font-semibold hover:underline">Recurring cleaning</a> is what most clients move to after that first deep clean. You pick a schedule (weekly, bi-weekly, or monthly) and the team keeps the home at the level the deep clean established. These visits are faster and less expensive per appointment because the home stays in better shape between them.</p>
+<p>A <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> covers areas that routine cleaning skips: baseboards, grout lines, door frames, and the floor under the furniture. It takes longer and costs more than a regular visit. Many new clients start with a deep clean to get the house caught up, but it's not required. You can start with regular visits.</p>
+<p><a href="/recurring-cleaning" class="text-brand-green font-semibold hover:underline">Recurring cleaning</a> means regular visits on a schedule you pick (weekly, bi-weekly, or monthly) that keep the home clean from one visit to the next. These visits are faster and less expensive per appointment because the home stays in better shape between them.</p>
 <p><a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">Move-out cleaning</a> is a separate service for people moving out of a home or apartment. It includes everything in a deep clean plus the refrigerator interior and other areas landlords check before returning a deposit. If that's your situation, that's the right service to book.</p>
 
 <h2>How the Booking Process Works With DSM</h2>
 <p>There's no complicated intake. You call or book online, tell us the size of your home, what type of clean you're looking for, and when you'd like it done. We'll ask a few quick questions and give you a quote. If the number works for you, you pick a date and you're booked. The whole process takes a few minutes. You don't need to fill out forms or sit through a sales call.</p>
 
 <h2>What Happens on the First Visit</h2>
-<p>For most first-time clients the first appointment is a <a href="/deep-cleaning-bolingbrook-il" class="text-brand-green font-semibold hover:underline">deep clean in Bolingbrook</a>. When the team arrives, they do a quick walkthrough of the home with you or on their own if you're not there. They confirm any specific requests, note anything you mentioned when you booked, and get to work. Room by room, they work through the full scope of the clean. The kitchen, every bathroom, every bedroom, and the common areas all get addressed. For the complete room-by-room breakdown of what's included, visit the <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> page.</p>
+<p>Your first appointment can be a <a href="/deep-cleaning-bolingbrook-il" class="text-brand-green font-semibold hover:underline">deep clean in Bolingbrook</a> or a regular visit. When the team arrives, they do a quick walkthrough of the home with you or on their own if you're not there. They confirm any specific requests, note anything you mentioned when you booked, and get to work. Room by room, they work through the full scope of the clean. The kitchen, every bathroom, every bedroom, and the common areas all get addressed. For the complete room-by-room breakdown of what's included, visit the <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> page.</p>
 
 <h2>Do You Need to Be Home?</h2>
 <p>No. Many DSM clients aren't home when the team cleans. That's completely normal. You just need to make sure there's a way for the team to get in (a key, a lockbox code, or a garage code) and a phone number where you can be reached if a question comes up. Some clients stay home the first time to see how it goes, then leave a key after that. Either way works.</p>
@@ -503,8 +503,8 @@ export const blogPosts: BlogPost[] = [
 <h2>3. Your Oven Has Visible Buildup on the Interior</h2>
 <p>The inside of the oven is one of the most commonly neglected areas in any kitchen, and it's not touched during a regular cleaning visit. Burnt food and grease accumulate on the interior walls and the bottom of the oven over months of use. If yours has visible residue or smokes when you turn it on, it's time for a proper scrub. Inside oven cleaning is an add-on to DSM's deep cleaning. Ask for it when you book and we scrub the interior with the racks removed, so it's actually clean and not just wiped around.</p>
 
-<h2>4. Cabinet Fronts Feel Sticky or Look Greasy</h2>
-<p>Kitchen cabinet exteriors are right next to where you cook, so they collect cooking grease, steam, and fingerprints constantly. Over time the residue builds up into a film that doesn't come off with a quick wipe. If running your hand across a cabinet front feels tacky, or the finish looks dull and coated, it's past time for a proper clean. A deep cleaning visit scrubs cabinet exteriors to get them back to how they're supposed to feel.</p>
+<h2>4. Grease Has Built Up on the Stovetop, Burners and Hood Vent</h2>
+<p>The stovetop and the hood vent above it sit right where you cook, so they collect grease, steam, and splatter every day. A quick wipe keeps the surface looking fine, but over time the residue bakes into a film around the burners and on the hood vent that doesn't come off with a wipe. If the burners look caked on, or the hood vent feels tacky when you touch it, it's past time for a proper clean. A deep cleaning visit degreases the stovetop, burners and hood vent to get them back to how they're supposed to look.</p>
 
 <h2>5. There's Dust and Grime Along Your Baseboards and Door Frames</h2>
 <p>Baseboards and door frames are skipped during most routine cleaning visits. They're easy to miss, easy to forget, and the dust and scuffs that collect on them don't bother anyone until they do. If you can see a gray line along the top of your baseboards, or a door frame feels gritty when you run a finger across it, those are signs that the home needs more than maintenance. A deep clean gets into both specifically, by hand, so they're actually clean and not just passed over.</p>
@@ -527,7 +527,7 @@ export const blogPosts: BlogPost[] = [
   <li>Kitchen deep clean including stovetop, hood vent, and sink</li>
   <li>Light switches, outlet covers, and door frames wiped</li>
 </ul>
-<p>Inside oven cleaning and inside kitchen cabinets are add-ons. For the full scope and to see whether it's the right fit for your home, visit the <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> page. DSM also serves <a href="/naperville-il" class="text-brand-green font-semibold hover:underline">Naperville</a>, <a href="/" class="text-brand-green font-semibold hover:underline">Romeoville</a>, and the surrounding southwest suburbs.</p>
+<p>Inside oven cleaning and inside cabinets are add-ons. For the full scope and to see whether it's the right fit for your home, visit the <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> page. DSM also serves <a href="/naperville-il" class="text-brand-green font-semibold hover:underline">Naperville</a>, <a href="/" class="text-brand-green font-semibold hover:underline">Romeoville</a>, and the surrounding southwest suburbs.</p>
 
 <h2>Frequently Asked Questions</h2>
 
@@ -538,7 +538,7 @@ export const blogPosts: BlogPost[] = [
 <p>Not much. The most helpful thing you can do is pick up clutter from floors and surfaces so the team can spend their time actually cleaning rather than moving things around. You don't need to pre-clean anything before we arrive. That's what the deep clean is for. If there are specific areas you'd like prioritized or any rooms you'd prefer skipped, just let us know when you book and we'll make note of it for the team.</p>
 
 <h3>How often should I book a deep clean?</h3>
-<p>Most Plainfield homeowners who maintain a regular cleaning schedule book a deep clean once or twice a year as a reset. If you're starting from scratch with no cleaning history, start with a deep clean and then move to regular bi-weekly or monthly visits to maintain it. Some clients with pets, young kids, or higher-traffic homes prefer a deep clean every three to four months. When you book with DSM, we'll give you an honest recommendation based on what we see.</p>
+<p>Most Plainfield homeowners who maintain a regular cleaning schedule book a deep clean once or twice a year as a reset. Many new clients start with a deep clean to get the house caught up, but it's not required. You can start with regular visits. Some clients with pets, young kids, or higher-traffic homes prefer a deep clean every three to four months. When you book with DSM, we'll give you an honest recommendation based on what we see.</p>
 
 <p>If any of these signs sound familiar, it's time to do something about it. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/book" class="text-brand-green font-semibold hover:underline">book online</a>. Every deep clean is backed by DSM's 48-hour satisfaction guarantee. If anything is missed, we come back and fix it at no charge.</p>`,
   },
@@ -553,7 +553,7 @@ export const blogPosts: BlogPost[] = [
     author: "DSM Cleaning Solutions",
     excerpt:
       "Summer in Plainfield means open windows, more foot traffic, and a home that needs more than routine maintenance. Use this room-by-room checklist to get your Plainfield home summer-ready, and know when to call a pro.",
-    content: `<p>If you've been putting off a thorough cleaning until the weather got nicer, summer is your signal. <strong>Summer cleaning in Plainfield, IL</strong> is genuinely different from other seasons, and not just because the weather is better for opening windows. Illinois summers bring more foot traffic through the house, kids home from school, barbecue season grease, higher dust circulation from running AC systems, and a heat-driven acceleration of allergens and mold growth in bathrooms. For homeowners in Settlers Ridge, Grande Park, Lakewood Falls, and Springbank, a targeted summer cleaning routine makes a real difference in keeping your home comfortable and healthy through the hottest months of the year.</p>
+    content: `<p>If you've been putting off a thorough cleaning until the weather got nicer, summer is your signal. <strong>Summer cleaning in Plainfield, IL</strong> is genuinely different from other seasons, and not just because the weather is better for opening windows. Illinois summers bring more foot traffic through the house, kids home from school, barbecue season grease, higher dust circulation from running AC systems, and a heat-driven acceleration of allergens and mold growth in bathrooms. For Plainfield homeowners, a targeted summer cleaning routine makes a real difference in keeping your home comfortable and healthy through the hottest months of the year.</p>
 
 <h2>Room-by-Room Summer Cleaning Checklist</h2>
 
@@ -619,7 +619,7 @@ export const blogPosts: BlogPost[] = [
 <p>Summer cleaning tasks like decluttering, washing bedding, wiping cabinet fronts, and cleaning window screens are all straightforward DIY projects. But some tasks are faster, more thorough, and more cost-effective when handled by professionals: scrubbing bathroom grout, cleaning inside the microwave, degreasing the range hood, reaching ceiling fans in high-ceiling rooms, and giving the whole house a deep clean before or after summer guests stay. If your home hasn't had a professional clean since spring (or you're hosting guests this summer), a <a href="/deep-cleaning-plainfield-il" class="text-brand-green font-semibold hover:underline">professional deep cleaning in Plainfield</a> is worth the investment. For ongoing maintenance through the season, a <a href="/recurring-cleaning" class="text-brand-green font-semibold hover:underline">recurring cleaning plan</a> keeps your home consistently clean on a weekly or biweekly schedule without you having to think about it.</p>
 
 <h2>How DSM Cleaning Solutions Helps Plainfield Families All Summer Long</h2>
-<p>DSM Cleaning Solutions is a family-owned cleaning company serving all of Plainfield (zip codes 60544 and 60585), including Settlers Ridge, Grande Park, Lakewood Falls, and Springbank. We offer <a href="/recurring-cleaning" class="text-brand-green font-semibold hover:underline">recurring cleaning in Plainfield</a> for regular maintenance, <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> for a full seasonal reset, and flexible scheduling that works around summer schedules, vacations, and back-to-school timing. Every team member is background-checked and fully insured, and we use non-toxic, eco-friendly products safe for kids and pets. Every clean is backed by our 48-hour satisfaction guarantee. Learn more about everything we offer on our <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield, IL service page</a>.</p>
+<p>DSM Cleaning Solutions is a family-owned cleaning company serving all of Plainfield (zip codes 60544 and 60585). We offer <a href="/recurring-cleaning" class="text-brand-green font-semibold hover:underline">recurring cleaning in Plainfield</a> for regular maintenance, <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning</a> for a full seasonal reset, and flexible scheduling that works around summer schedules, vacations, and back-to-school timing. Every team member is background-checked and fully insured, and we use non-toxic, eco-friendly products safe for kids and pets. Every clean is backed by our 48-hour satisfaction guarantee. Learn more about everything we offer on our <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield, IL service page</a>.</p>
 
 <h3>Book Your Summer Clean in Plainfield Today</h3>
 <p>Don't let summer slip by with a home that never got its proper reset. DSM Cleaning Solutions serves Plainfield and the surrounding southwest Chicago suburbs, and summer slots fill fast. Call <a href="tel:+18152462113" class="text-brand-green font-semibold hover:underline">(815) 246-2113</a> or <a href="/contact" class="text-brand-green font-semibold hover:underline">request a free quote online</a>. Most quotes are returned same-day.</p>`,
@@ -635,7 +635,7 @@ export const blogPosts: BlogPost[] = [
     author: "DSM Cleaning Solutions",
     excerpt:
       "Conventional cleaning products fill your home with harsh chemicals, but eco-friendly cleaning in Romeoville, IL gives you a spotless home without the risks. Here's why more Romeoville families are making the switch.",
-    content: `<p>If you've been searching for <strong>eco-friendly cleaning in Romeoville, IL</strong>, you're asking a question that more families in zip code 60446 are asking every year: what exactly is being sprayed, scrubbed, and left behind in your home after a cleaning visit? The short answer with most conventional cleaning companies is: a lot of things you'd rather not know about. Synthetic fragrances, ammonia, bleach-based formulas, and chemical surfactants that linger on surfaces long after the cleaners have gone. For families in Windstone, Hidden Lakes, Grand Haven, and neighborhoods throughout Romeoville, switching to a genuinely eco-friendly cleaning service is one of the most impactful changes you can make for your family's health.</p>
+    content: `<p>If you've been searching for <strong>eco-friendly cleaning in Romeoville, IL</strong>, you're asking a question that more families in zip code 60446 are asking every year: what exactly is being sprayed, scrubbed, and left behind in your home after a cleaning visit? The short answer with most conventional cleaning companies is: a lot of things you'd rather not know about. Synthetic fragrances, ammonia, bleach-based formulas, and chemical surfactants that linger on surfaces long after the cleaners have gone. For families in neighborhoods throughout Romeoville, switching to a genuinely eco-friendly cleaning service is one of the most impactful changes you can make for your family's health.</p>
 
 <h2>What "Eco-Friendly Cleaning" Actually Means</h2>
 <p>The phrase gets used loosely, so it's worth being specific. A truly eco-friendly cleaning service uses products that are:</p>
@@ -657,10 +657,10 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Indoor Air Quality Is Part of the Story</h2>
 <p>Most Romeoville homeowners don't think of their cleaning service as something that affects indoor air quality, but it does. Conventional cleaning products release VOCs into the air during use, some of which persist for hours or even days after application. In tightly sealed Illinois homes during winter months, when windows stay shut for weeks at a time, VOC buildup from cleaning products can meaningfully degrade indoor air quality. Families with asthma, seasonal allergies, or anyone sensitive to strong smells will often notice the difference immediately when switching to a genuinely non-toxic service.</p>
-<p>Eco-friendly products produce no VOC off-gassing. After a DSM cleaning in neighborhoods like Hidden Lakes or Grand Haven, the home smells fresh and clean, not like a chemical plant.</p>
+<p>Eco-friendly products produce no VOC off-gassing. After a DSM cleaning, the home smells fresh and clean, not like a chemical plant.</p>
 
 <h2>Why Romeoville Families Trust DSM Cleaning Solutions</h2>
-<p>DSM Cleaning Solutions is a family-owned cleaning company based in Romeoville, IL (60446). We serve homes throughout Windstone, Hidden Lakes, Grand Haven, Lakewood Falls, and every neighborhood in the area. Our commitment to eco-friendly products isn't a marketing angle. It's how we've operated from the start, because our team members work with these products every single day and we wouldn't put anything in your home that we wouldn't be comfortable using in our own.</p>
+<p>DSM Cleaning Solutions is a family-owned cleaning company based in Romeoville, IL (60446). We serve homes in every neighborhood in the area. Our commitment to eco-friendly products isn't a marketing angle. It's how we've operated from the start, because our team members work with these products every single day and we wouldn't put anything in your home that we wouldn't be comfortable using in our own.</p>
 <p>Every member of our team is background-checked and fully insured. We bring all our own supplies. You don't need to purchase or provide anything. Every clean is backed by our 48-hour satisfaction guarantee: if anything isn't right after we leave, we come back and make it right at no charge. Visit our <a href="/" class="text-brand-green font-semibold hover:underline">Romeoville, IL service page</a> for everything we offer in your area.</p>
 
 <h3>Ready for an Eco-Friendly Clean in Romeoville?</h3>
@@ -684,7 +684,7 @@ export const blogPosts: BlogPost[] = [
 <ul>
   <li><strong>Home size</strong>: square footage and number of bedrooms and bathrooms is the primary driver of price. A studio takes two to three hours; a four-bedroom home can take eight or more.</li>
   <li><strong>Condition of the home</strong>: a well-maintained home that received regular cleanings throughout the tenancy will cost less than a home where cleaning was deferred for months. Heavy grease buildup in kitchens, soap scum in showers, and stained grout all add time.</li>
-  <li><strong>Optional add-ons</strong>: interior windows and garage cleaning are commonly added to move-out packages. These are priced separately. Inside the oven and inside the refrigerator are always included.</li>
+  <li><strong>Optional add-ons</strong>: an extra room such as a basement, sweeping inside the garage, and homes with pets are the add-ons for a move-out clean. These are priced separately. Inside the oven and inside the refrigerator are always included.</li>
   <li><strong>Move-out timeline</strong>: last-minute or same-day move-out cleans may carry a premium. Booking 5–7 days ahead secures the best pricing and availability.</li>
 </ul>
 
@@ -814,10 +814,10 @@ export const blogPosts: BlogPost[] = [
 </ul>
 
 <h2>What's Included in a Professional Deep Clean?</h2>
-<p>When DSM Cleaning Solutions performs a deep clean, we cover the areas that standard cleaning skips entirely. That means scrubbing grout in bathrooms and kitchens, degreasing the stovetop, hood vent and burners, dusting and wiping all baseboards, wiping doors and door frames, vacuuming under and behind furniture, cleaning light fixtures, and cleaning the inside window glass. Cleaning inside the oven or inside the kitchen cabinets is an add-on. We bring everything needed and use non-toxic, eco-friendly products that are safe for children and pets. Learn more about what to expect from <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">our deep cleaning service</a>.</p>
+<p>When DSM Cleaning Solutions performs a deep clean, we cover the areas that standard cleaning skips entirely. That means scrubbing grout in bathrooms and kitchens, degreasing the stovetop, hood vent and burners, dusting and wiping all baseboards, wiping doors and door frames, vacuuming under and behind furniture, cleaning light fixtures, and cleaning the inside window glass. Cleaning inside the oven or inside cabinets is an add-on. We bring everything needed and use non-toxic, eco-friendly products that are safe for children and pets. Learn more about what to expect from <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">our deep cleaning service</a>.</p>
 
 <h2>Why Plainfield & Romeoville Homeowners Trust DSM Cleaning Solutions</h2>
-<p>DSM Cleaning Solutions is a family-owned cleaning company based in Romeoville, Illinois. We serve all Plainfield zip codes (60544 and 60585), as well as Romeoville (60446) and the surrounding southwest suburbs. Our team knows these communities personally, and we've cleaned homes in neighborhoods throughout the area including Settlers Ridge, Grande Park, and Lakewood Falls. We understand the specific challenges that come with Illinois winters, and our deep cleaning process is built around them.</p>
+<p>DSM Cleaning Solutions is a family-owned cleaning company based in Romeoville, Illinois. We serve all Plainfield zip codes (60544 and 60585), as well as Romeoville (60446) and the surrounding southwest suburbs. Our team knows these communities personally, and we've cleaned homes in neighborhoods throughout the area. We understand the specific challenges that come with Illinois winters, and our deep cleaning process is built around them.</p>
 <p>We use eco-friendly, biodegradable cleaning products that are tough on grime but safe for your family. Every member of our team is background-checked and fully insured, and we back every clean with our 48-hour satisfaction guarantee: if something isn't right, we come back and make it right at no charge. Learn more about our service area on our <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield, IL page</a>, or see our <a href="/deep-cleaning-plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield deep cleaning service</a> for details specific to your zip code. View flat-rate costs on our <a href="/pricing" class="text-brand-green font-semibold hover:underline">pricing page</a>.</p>
 
 <h3>Ready for a Professional Deep Clean in Plainfield?</h3>
@@ -982,7 +982,7 @@ export const blogPosts: BlogPost[] = [
 <p><strong>Call a professional for:</strong> a full spring deep clean, scrubbing grout and tile, cleaning inside the microwave, wiping down all baseboards and ceiling fans, removing allergens and pet dander thoroughly, or simply if you want the entire home done properly in a single day without clearing your whole weekend. Our <a href="/deep-cleaning" class="text-brand-green font-semibold hover:underline">deep cleaning service</a> takes the scrubbing off this list: grout, baseboards, door frames, light fixtures and inside window glass.</p>
 
 <h2>DSM Cleaning Solutions: Your Spring Cleaning Partner in Romeoville &amp; Plainfield</h2>
-<p>We're a family-owned cleaning company based in Romeoville (60446), and we've built our reputation one clean home at a time across Will County. In Romeoville, we regularly clean homes in Lakewood Falls, Windstone, Hidden Lakes, and Grand Haven. In Plainfield (60544 and 60585), our customers include homeowners in Settlers Ridge, Grande Park, Lakewood Falls, and Springbank. We're also familiar with the homes near Isle a la Cache and Township Park areas throughout the region.</p>
+<p>We're a family-owned cleaning company based in Romeoville (60446), and we've built our reputation one clean home at a time across Will County. We regularly clean homes throughout Romeoville and in Plainfield (60544 and 60585). We're also familiar with the homes near Isle a la Cache and Township Park areas throughout the region.</p>
 <p>We're available seven days a week, fully insured, and every team member is background-checked. We bring all our own eco-friendly supplies, and every clean is backed by our satisfaction guarantee. Whether you need a full <a href="/deep-cleaning-romeoville-il" class="text-brand-green font-semibold hover:underline">spring deep clean in Romeoville</a> or just want to tackle those hard-to-reach areas, we're here to help. Visit our <a href="/plainfield-il" class="text-brand-green font-semibold hover:underline">Plainfield, IL page</a> or return to our <a href="/" class="text-brand-green font-semibold hover:underline">homepage</a> to learn more about everything we offer.</p>
 
 <h3>Ready for a Professional Spring Clean in Romeoville or Plainfield?</h3>
@@ -1014,7 +1014,7 @@ export const blogPosts: BlogPost[] = [
   <li>Degrease the stovetop, burner grates, drip pans, and control knobs</li>
   <li>Detail the refrigerator exterior: top, sides, and handles</li>
   <li>Wipe down the exterior of all appliances including the dishwasher, refrigerator, and microwave</li>
-  <li>Clean cabinet exteriors: fronts, handles, and tops of upper cabinets</li>
+  <li>Clean cabinet exteriors: fronts and handles</li>
   <li>Degrease the range hood and clean the filter</li>
   <li>Scrub the sink basin, faucet, and drain area</li>
   <li>Clean and disinfect countertops thoroughly</li>
@@ -1047,7 +1047,6 @@ export const blogPosts: BlogPost[] = [
   <li>Dust ceiling fans, light fixtures, and overhead surfaces</li>
   <li>Wipe down all furniture surfaces: nightstands, dressers, headboards, and frames</li>
   <li>Clean mirrors and glass surfaces</li>
-  <li>Vacuum the mattress top and sides</li>
   <li>Vacuum under the bed and along all baseboards</li>
   <li>Wipe down baseboards and window sills</li>
   <li>Clean light switches and door handles</li>
@@ -1077,7 +1076,6 @@ export const blogPosts: BlogPost[] = [
   <li>Entryway and mudroom: sweep, mop, wipe down shoe storage and coat hooks</li>
   <li>Hallways: dust, wipe baseboards, clean light switches and door handles</li>
   <li>Laundry room: wipe down washer and dryer exterior, clean lint trap area, mop floor</li>
-  <li>Stairs: vacuum treads and risers, dust banisters and railings</li>
   <li>Interior doors and frames throughout the home</li>
   <li>Wall switches and outlet covers on every floor</li>
 </ul>
@@ -1086,15 +1084,15 @@ export const blogPosts: BlogPost[] = [
 <p>Transparency matters. Here's what a typical deep clean does not cover, so there are no surprises on the day of service:</p>
 <ul>
   <li>Inside oven cleaning (add-on)</li>
-  <li>Inside kitchen cabinets (add-on)</li>
-  <li>Exterior windows (inside-only window cleaning is included; outside requires a separate add-on)</li>
-  <li>Carpet steam cleaning or stain removal (we vacuum thoroughly; steam cleaning is a separate service)</li>
-  <li>Garage cleaning</li>
-  <li>Attic or basement organization or cleaning</li>
+  <li>Inside cabinets (add-on)</li>
+  <li>Exterior windows (deep cleaning includes inside window glass only)</li>
+  <li>Carpet steam cleaning or stain removal (we vacuum thoroughly; steam cleaning is not part of a deep clean)</li>
+  <li>Garage cleaning (sweeping the inside of the garage is an add-on)</li>
+  <li>Attic or basement organization (a basement can be added as an extra room)</li>
   <li>Biohazard cleanup</li>
   <li>Dishes or laundry</li>
 </ul>
-<p>If you need any of these items addressed, just ask. We can often accommodate add-ons with advance notice. For homes preparing for a sale or lease, our <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning service</a> is designed specifically for that scenario and covers an even more detailed scope.</p>
+<p>Some of these, like the inside of the oven, inside cabinets, an extra room such as a basement, or a sweep of the garage, are add-ons you can choose when you book. For homes preparing for a sale or lease, our <a href="/move-out-cleaning" class="text-brand-green font-semibold hover:underline">move-out cleaning service</a> is designed specifically for that scenario and covers an even more detailed scope.</p>
 
 <h2>How Long Does a Deep House Cleaning Take?</h2>
 <p>Most deep cleans take between 4 and 8 hours depending on the size of the home, the number of bathrooms, and how long it's been since the last professional clean. A 3-bedroom, 2-bathroom home in typical condition typically takes 5–6 hours for our team. Homes that haven't been professionally deep cleaned in over a year may take longer due to built-up grease and soap scum.</p>
@@ -1102,7 +1100,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Frequently Asked Questions</h2>
 <h3>What is included in a professional deep house cleaning?</h3>
-<p>A professional deep house cleaning covers every room in the house, including cleaning inside the microwave, scrubbing tile grout and shower walls, removing soap scum and mildew, wiping down baseboards and door frames, cleaning ceiling fans and light fixtures, and vacuuming and mopping all floors. The refrigerator is cleaned on the outside only. Cleaning inside the oven or inside the kitchen cabinets is an add-on. It goes significantly further than a standard recurring clean.</p>
+<p>A professional deep house cleaning covers every room in the house, including cleaning inside the microwave, scrubbing tile grout and shower walls, removing soap scum and mildew, wiping down baseboards and door frames, cleaning ceiling fans and light fixtures, and vacuuming and mopping all floors. The refrigerator is cleaned on the outside only. Cleaning inside the oven or inside cabinets is an add-on. It goes significantly further than a standard recurring clean.</p>
 
 <h3>How long does a deep house cleaning take?</h3>
 <p>Most deep house cleanings take between 4 and 8 hours, depending on the size of the home, number of bathrooms, and the current condition. A typical 3-bedroom, 2-bathroom home takes approximately 5 to 6 hours. Homes that haven't been professionally cleaned in over a year may require additional time.</p>

@@ -223,7 +223,7 @@ export default function CityPageTemplate({ city }: { city: CityData }) {
             </div>
             ) : (
             <div>
-              <h2 className="section-heading text-2xl mb-4">{`Zip Codes We Serve in ${city.name}`}</h2>
+              <h2 className="section-heading text-2xl mb-4">{`Zip ${city.zips.length === 1 ? "Code" : "Codes"} We Serve in ${city.name}`}</h2>
               <p className="text-gray-600 leading-relaxed">{`We clean homes in ${zipPhrase}.`}</p>
             </div>
             )}

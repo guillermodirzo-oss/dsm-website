@@ -10,6 +10,7 @@ import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 import { DEEP_CHECKLIST } from "@/lib/deepChecklist";
+import { zipLine } from "@/lib/cityData";
 
 export const metadata: Metadata = {
   title: { absolute: deepCityTitle("Burr Ridge") },
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What does a deep cleaning include in Burr Ridge?",
-    a: "We degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. Cleaning inside the oven or inside the kitchen cabinets is an add-on. We handle premium finishes and surfaces with care throughout.",
+    a: "We degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. Cleaning inside the oven or inside cabinets is an add-on. We handle premium finishes and surfaces with care throughout.",
   },
   {
     q: "How long does a deep clean take in Burr Ridge?",
@@ -43,8 +44,8 @@ const faqs = [
     a: "The ranges listed cover typical homes in that bedroom count. If your home runs bigger, has more bathrooms, or needs extra attention, your quote might land higher. We always confirm your exact price before we book anything. No surprises.",
   },
   {
-    q: "Do you serve both Burr Ridge Village Center and County Line Road area?",
-    a: "Yes. We cover all of Burr Ridge including the Village Center area, County Line Road corridor, and all surrounding residential neighborhoods in Burr Ridge, IL 60527.",
+    q: "Do you serve all of Burr Ridge?",
+    a: `Yes. ${zipLine("Burr Ridge")}`,
   },
 ];
 
@@ -184,7 +185,7 @@ export default function DeepCleaningBurrRidgePage() {
             Burr Ridge is an upscale community in DuPage and Cook counties with executive homes that deserve professional-level care. DSM serves homeowners throughout Burr Ridge with a deep clean that is thorough, careful, and done right.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            We cover the Village Center area, the County Line Road corridor, and all surrounding Burr Ridge neighborhoods. Our deep cleaning is room by room with no shortcuts. Kitchen means inside the microwave and a degreased stovetop. Bathrooms mean scrubbed grout and polished fixtures. Living areas mean clean baseboards, dusted ceiling fans, and vacuumed under every piece of furniture.
+            {zipLine("Burr Ridge")} Our deep cleaning is room by room with no shortcuts. Kitchen means inside the microwave and a degreased stovetop. Bathrooms mean scrubbed grout and polished fixtures. Living areas mean clean baseboards, dusted ceiling fans, and vacuumed under every piece of furniture.
           </p>
           <p className="text-gray-700 leading-relaxed">
             We use eco-friendly, non-toxic products and are fully insured. Every job comes with a 48-hour satisfaction guarantee. If anything is not right, we come back and fix it at no charge.

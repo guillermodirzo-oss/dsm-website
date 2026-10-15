@@ -68,7 +68,7 @@ const faqs = [
   {
     question: "Are there any hidden fees?",
     answer:
-      "No. DSM Cleaning Solutions does not charge hidden fees in Plainfield or anywhere else we serve. The price you're quoted is the price you pay. There are no extra charges for eco-friendly products, travel within our service area, or routine supplies. Add-on services (like inside oven or inside refrigerator) are discussed and agreed upon before we arrive.",
+      "No. DSM Cleaning Solutions does not charge hidden fees in Plainfield or anywhere else we serve. The price you're quoted is the price you pay. There are no extra charges for eco-friendly products, travel within our service area, or routine supplies. Add-on services (like inside oven or inside fridge) are discussed and agreed upon before we arrive.",
   },
 ];
 
@@ -141,7 +141,7 @@ const factors = [
   { icon: "🧹", title: "Type of Clean", desc: "Standard, deep, and move-out cleaning are priced differently based on scope and time." },
   { icon: "📋", title: "Current Condition", desc: "A home that hasn't been cleaned professionally in months requires more time and effort." },
   { icon: "🔄", title: "Frequency", desc: "Recurring customers (weekly, bi-weekly, monthly) typically receive a lower rate than one-time cleans." },
-  { icon: "✨", title: "Add-On Services", desc: "Inside oven, inside refrigerator, inside kitchen cabinets, laundry, and window cleaning are available as add-ons." },
+  { icon: "✨", title: "Add-On Services", desc: "Inside oven, inside fridge, inside cabinets, inside dishwasher and interior windows (standard cleans only) are some of the add-ons." },
   { icon: "📍", title: "Location in Plainfield", desc: "DSM serves all of Plainfield including 60544 and 60585 with no travel surcharges." },
 ];
 
@@ -212,8 +212,7 @@ export default function HouseCleaningCostPlainfield() {
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
             We serve all of Plainfield, IL including zip codes <strong>60544</strong> and{" "}
-            <strong>60585</strong>, covering neighborhoods like Settlers Ridge, Grande Park, Brookside,
-            Whispering Creek, and more. Whether you need a recurring standard clean, a one-time deep
+            <strong>60585</strong>. Whether you need a recurring standard clean, a one-time deep
             clean before the holidays, or a thorough move-out clean before handing over your keys,
             this guide shows you exactly what to expect.
           </p>
@@ -314,8 +313,9 @@ export default function HouseCleaningCostPlainfield() {
                 Deep cleaning is the detailed scrub that routine upkeep skips. In
                 Plainfield homes, this includes scrubbing grout, wiping baseboards,
                 doors and door frames, and vacuuming under and behind furniture.
-                Recommended for first-time cleans, seasonal cleans, or homes that haven&apos;t been
-                professionally cleaned in 3+ months.
+                Many new clients start with a deep clean to get the house caught up, but it&apos;s
+                not required. You can start with regular visits. A deep clean is also a good fit for
+                seasonal cleans or homes that haven&apos;t been professionally cleaned in 3+ months.
               </p>
               <Link href="/deep-cleaning-plainfield-il" className="text-brand-green font-semibold text-sm hover:underline">
                 Learn more about deep cleaning in Plainfield →
@@ -330,8 +330,8 @@ export default function HouseCleaningCostPlainfield() {
               <p className="text-gray-600 leading-relaxed mb-3">
                 Move-out cleaning in Plainfield is our most comprehensive service, priced higher
                 because it covers everything a landlord or buyer expects: inside all appliances,
-                inside all cabinets and closets, all doors and door knobs, all window glass, and a
-                final walkthrough. Designed to help Plainfield renters recover their full security
+                inside all cabinets and drawers, closet shelves, all doors and door knobs, inside window
+                glass, and the patio. Designed to help Plainfield renters recover their full security
                 deposit and homeowners prepare for closing.
               </p>
               <Link href="/move-out-cleaning-plainfield-il" className="text-brand-green font-semibold text-sm hover:underline">
@@ -356,8 +356,8 @@ export default function HouseCleaningCostPlainfield() {
             From there, we generate a firm quote using our pricing formula, the same one used
             for all our Plainfield clients in 60544 and 60585. We do not charge extra for
             eco-friendly products, and there are no travel fees for Plainfield. Add-on services
-            like inside oven, inside refrigerator, laundry, or window cleaning are listed
-            separately and only added if you request them.
+            like inside oven, inside fridge, inside cabinets or interior windows (standard cleans
+            only) are listed separately and only added if you request them.
           </p>
           <p className="text-gray-600 leading-relaxed">
             Plainfield homeowners on recurring plans (bi-weekly is our most popular frequency

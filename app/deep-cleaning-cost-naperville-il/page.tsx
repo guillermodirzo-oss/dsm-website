@@ -42,7 +42,7 @@ const faqs = [
   {
     question: "What is included in deep cleaning in Naperville?",
     answer:
-      "Our Naperville deep cleaning covers everything in a standard clean plus: scrubbing grout and tile, wiping all baseboards, doors and door frames, cleaning light fixtures, cleaning inside window glass, vacuuming under and behind furniture, and detail-cleaning areas that are skipped in routine visits. Cleaning inside the oven or inside the kitchen cabinets is an add-on.",
+      "Our Naperville deep cleaning covers everything in a standard clean plus: scrubbing grout and tile, wiping all baseboards, doors and door frames, cleaning light fixtures, cleaning inside window glass, vacuuming under and behind furniture, and detail-cleaning areas that are skipped in routine visits. Cleaning inside the oven or inside cabinets is an add-on.",
   },
   {
     question: "How long does a deep clean take in Naperville?",
@@ -52,7 +52,7 @@ const faqs = [
   {
     question: "Is deep cleaning worth the cost in Naperville?",
     answer:
-      "Yes, deep cleaning is worth it for most Naperville homeowners who want a true reset. A standard clean maintains a home that's already clean; a deep clean adds the grout, the baseboards, the door frames and a degreased stovetop and hood vent. It's especially valuable before hosting guests, after a renovation, at the start of a new season, or as a first clean before starting a recurring service.",
+      "Yes, deep cleaning is worth it for most Naperville homeowners who want a true reset. A standard clean maintains a home that's already clean; a deep clean adds the grout, the baseboards, the door frames and a degreased stovetop and hood vent. It's especially valuable before hosting guests, after a renovation, or at the start of a new season. Many new clients start with a deep clean to get the house caught up, but it's not required. You can start with regular visits.",
   },
   {
     question: "How do I get a deep cleaning quote for my Naperville home?",
@@ -123,7 +123,7 @@ const included = DEEP_CHECKLIST;
 const factors = [
   { icon: "🏠", title: "Home Size", desc: "Bedrooms and bathrooms are the primary driver of deep cleaning cost in Naperville." },
   { icon: "📋", title: "Current Condition", desc: "Homes not professionally cleaned recently take more time and may incur a condition adjustment." },
-  { icon: "🔧", title: "Add-On Services", desc: "Inside refrigerator, inside oven, inside kitchen cabinets, laundry, and interior window cleaning are optional extras." },
+  { icon: "🔧", title: "Add-On Services", desc: "Inside the fridge, inside the oven, inside cabinets and inside the dishwasher are optional extras." },
   { icon: "🔄", title: "First-Time vs. Recurring", desc: "First-time deep cleans typically cost more; recurring deep clean customers receive better rates." },
 ];
 
@@ -192,11 +192,11 @@ export default function DeepCleaningCostNapervillePage() {
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
             We serve all of Naperville across zip codes <strong>60540</strong>,{" "}
-            <strong>60563</strong>, <strong>60564</strong>, and <strong>60565</strong>,
-            including neighborhoods like Hobson West, Ashbury, White Eagle, and Downtown
-            Naperville. Deep cleaning is recommended as a first clean before starting recurring
-            service, as a seasonal reset, after renovations, or when a home hasn&apos;t been
-            professionally cleaned in several months.
+            <strong>60563</strong>, <strong>60564</strong>, and <strong>60565</strong>.
+            Many new clients start with a deep clean to get the house caught up, but it&apos;s
+            not required. You can start with regular visits. Deep cleaning is also a good fit as a
+            seasonal reset, after renovations, or when a home hasn&apos;t been professionally
+            cleaned in several months.
           </p>
           <p className="text-gray-600 leading-relaxed">
             Unlike standard cleaning which maintains a home, deep cleaning adds the grout,
@@ -294,12 +294,12 @@ export default function DeepCleaningCostNapervillePage() {
                   // and inside window glass are not.
                   { feature: "Inside the microwave", standard: "✓", deep: "✓" },
                   { feature: "Grout scrubbing", standard: "✗", deep: "✓" },
-                  { feature: "Baseboard detail cleaning", standard: "✗", deep: "Full scrub" },
+                  { feature: "Baseboard detail cleaning", standard: "Add-on", deep: "Full scrub" },
                   { feature: "Light fixtures", standard: "✗", deep: "✓" },
                   { feature: "Cabinets", standard: "Fronts only", deep: "Fronts only" },
-                  { feature: "Inside window glass", standard: "✗", deep: "✓" },
+                  { feature: "Inside window glass", standard: "Add-on", deep: "✓" },
                   { feature: "Estimated time (2 bed / 1 bath)", standard: "2–3 hours", deep: "4–6 hours" },
-                  { feature: "Best for", standard: "Regular maintenance", deep: "First clean, seasonal reset" },
+                  { feature: "Best for", standard: "Regular maintenance", deep: "Catching up, seasonal reset" },
                 ].map((row) => (
                   <tr key={row.feature} className="hover:bg-gray-50">
                     <td className="px-6 py-3 font-medium text-gray-900">{row.feature}</td>
@@ -345,12 +345,12 @@ export default function DeepCleaningCostNapervillePage() {
             We do ask about the current condition of your home because a home that hasn&apos;t
             been professionally cleaned in over a year may require extra time. If that&apos;s
             the case, we&apos;ll note it in your quote upfront, never as an add-on after we
-            arrive. Add-on services like inside refrigerator, laundry, or interior window
-            cleaning are listed separately and only added if you request them.
+            arrive. Add-on services like inside the fridge, inside cabinets or inside the
+            dishwasher are listed separately and only added if you request them.
           </p>
           <p className="text-gray-600 leading-relaxed">
-            Many Naperville customers start with a deep clean and then move to bi-weekly or
-            monthly standard cleaning to maintain the results. Ask about our recurring
+            Bi-weekly or monthly standard cleaning keeps a home in shape after a deep clean,
+            and you can start regular visits without one. Ask about our recurring
             cleaning rates when you call. Recurring customers consistently pay less per
             visit than one-time clients.
           </p>

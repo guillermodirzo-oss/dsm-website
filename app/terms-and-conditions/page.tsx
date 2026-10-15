@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ADD_ONS, addOnServicesLabel } from "@/lib/addOns";
 
 export const metadata: Metadata = {
   title: "Terms and Conditions",
@@ -106,18 +107,8 @@ export default function TermsAndConditionsPage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Add-On Services</h2>
               <p className="text-gray-600 leading-relaxed mb-4">The following services are available for an additional charge:</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                {[
-                  "Clean Interior Windows & Slits",
-                  "Detail Blinds",
-                  "Detail Baseboards",
-                  "Dishes",
-                  "Clean Inside Kitchen Cabinets",
-                  "Clean Inside Oven",
-                  "Clean Inside Fridge",
-                  "Sweep Inside Garage",
-                  "Patio Cleaning",
-                  "Carpet Vacuuming",
-                ].map((item) => (
+                {/* From lib/addOns.ts, the booking form's add-on list. */}
+                {ADD_ONS.map((a) => `${a.name}: ${addOnServicesLabel(a).toLowerCase()}`).map((item) => (
                   <div key={item} className="flex items-center gap-2 text-gray-600 text-sm">
                     <svg className="w-4 h-4 text-orange-500 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />

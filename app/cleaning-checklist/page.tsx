@@ -3,6 +3,7 @@ import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 import { STANDARD_CHECKLIST } from "@/lib/standardChecklist";
 import { DEEP_ADDITIONS_BY_ROOM } from "@/lib/deepChecklist";
+import { addOnNamesSentence } from "@/lib/addOns";
 
 export const metadata: Metadata = {
   title: "House Cleaning Checklist | What We Clean",
@@ -29,22 +30,22 @@ const faqs = [
   {
     question: "What extra items are in a deep clean?",
     answer:
-      "Deep cleaning adds what standard cleaning doesn't cover: full baseboard scrubbing; inside window glass; light fixtures; grout scrubbing in bathrooms; doors and door frames; vacuuming under and behind furniture; and degreasing the stovetop, hood vent and burners. Cabinets are cleaned on the outside only. Cleaning inside the oven or inside the kitchen cabinets is an add-on. It catches up on buildup instead of just keeping things tidy.",
+      "Deep cleaning adds what standard cleaning doesn't cover: full baseboard scrubbing; inside window glass; light fixtures; grout scrubbing in bathrooms; doors and door frames; vacuuming under and behind furniture; and degreasing the stovetop, hood vent and burners. Cabinets are cleaned on the outside only. Cleaning inside the oven or inside cabinets is an add-on. It catches up on buildup instead of just keeping things tidy.",
   },
   {
     question: "Do you clean inside appliances?",
     answer:
-      "Move-out cleaning includes the inside of the oven, the refrigerator and the microwave. Standard and deep cleaning both include the inside of the microwave. With either one, the inside of the oven and the refrigerator are add-ons. Any inside-appliance cleaning that isn't part of your service can be requested as an add-on, priced and agreed upon before the appointment.",
+      "Move-out cleaning includes the inside of the oven, the refrigerator, the dishwasher and the microwave. Standard and deep cleaning both include the inside of the microwave. With either one, the inside of the oven, the fridge and the dishwasher are add-ons, priced and agreed upon before the appointment.",
   },
   {
     question: "What is NOT included in cleaning?",
     answer:
-      "Items not included in any service without a specific add-on agreement: laundry and folding, dish washing, exterior windows, garage cleaning, exterior pressure washing, organizing or decluttering, biohazard or hoarding situations, and areas not accessible due to clutter. We are happy to discuss add-ons if you have specific needs. Just mention them when you request your quote.",
+      "Items not included in any service: laundry and folding, dish washing, exterior windows, garage cleaning beyond sweeping the inside of the garage (an add-on), exterior pressure washing, organizing or decluttering, biohazard or hoarding situations, and areas not accessible due to clutter. The add-ons we offer are listed in the answer below.",
   },
   {
     question: "Can I add extra items to my clean?",
     answer:
-      "Yes, many customers add specific tasks to their booking. Common add-ons include inside oven, inside refrigerator, inside kitchen cabinets, interior window cleaning, laundry, and garage sweeping. Add-ons are always discussed and priced before your appointment. We never add scope or charge without your prior agreement.",
+      `Yes. The add-ons are ${addOnNamesSentence()}. Add-ons are always discussed and priced before your appointment. We never add scope or charge without your prior agreement.`,
   },
 ];
 
@@ -108,10 +109,10 @@ const moveOutExtras = [
       "Inside all cabinets and drawers, every room",
       "Inside refrigerator: full interior clean",
       "Inside oven: full interior scrub",
-      "Inside dishwasher",
+      "Clean inside the dishwasher",
       "All appliances inside and out",
-      "All closet interiors: shelves, rods, floors",
-      "Final walkthrough inspection",
+      "Wipe closet shelves",
+      "Sweep the patio",
     ],
   },
 ];
@@ -265,10 +266,10 @@ export default function CleaningChecklistPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
               "Inside oven cleaning (add-on, always included with move-out cleaning)",
-              "Inside kitchen cabinets (add-on, always included with move-out cleaning)",
+              "Inside cabinets (add-on, always included with move-out cleaning)",
               "Exterior window cleaning",
               "Laundry or dish washing",
-              "Garage cleaning",
+              "Garage cleaning (sweeping the inside of the garage is an add-on)",
               "Exterior pressure washing",
               "Organizing or decluttering",
               "Biohazard situations",
@@ -282,7 +283,7 @@ export default function CleaningChecklistPage() {
             ))}
           </div>
           <p className="text-gray-600 text-sm mt-4">
-            Some of these can be added as a custom add-on. Just mention it when you request your quote.
+            The add-ons we offer, with prices, are on our pricing page.
           </p>
         </div>
       </section>

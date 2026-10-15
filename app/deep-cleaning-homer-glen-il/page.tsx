@@ -10,6 +10,7 @@ import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 import { DEEP_CHECKLIST } from "@/lib/deepChecklist";
+import { zipLine } from "@/lib/cityData";
 
 export const metadata: Metadata = {
   title: { absolute: deepCityTitle("Homer Glen") },
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What is included in a deep cleaning in Homer Glen?",
-    a: "We degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. Cleaning inside the oven or inside the kitchen cabinets is an add-on. Every room gets full attention.",
+    a: "We degrease the stovetop and hood vent, scrub bathroom grout, wipe baseboards, clean window sills and inside glass, dust ceiling fans, vacuum under furniture, and more. Cleaning inside the oven or inside cabinets is an add-on. Every room gets full attention.",
   },
   {
     q: "How long does a deep clean take in Homer Glen?",
@@ -44,7 +45,7 @@ const faqs = [
   },
   {
     q: "Do you serve all of Homer Glen?",
-    a: "Yes. We cover the Homer Glen downtown area, the 143rd Street corridor, and all surrounding neighborhoods in Homer Glen, IL 60491.",
+    a: `Yes. ${zipLine("Homer Glen")}`,
   },
 ];
 

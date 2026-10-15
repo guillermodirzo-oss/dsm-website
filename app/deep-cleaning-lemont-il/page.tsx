@@ -9,6 +9,7 @@ import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 import { DEEP_CHECKLIST } from "@/lib/deepChecklist";
+import { zipCodesPhrase, zipLine } from "@/lib/cityData";
 
 export const metadata: Metadata = {
   title: { absolute: deepCityTitle("Lemont") },
@@ -28,12 +29,12 @@ const faqs = [
   {
     question: "How long does a deep cleaning take in Lemont, IL?",
     answer:
-      "Most deep cleaning jobs in Lemont take 3-6 hours depending on the size and condition of your home. A 2-bedroom home may take around 3 hours while a larger 4-bedroom home near Forge Park or the Old Quarry area could take 5-6 hours.",
+      "Most deep cleaning jobs in Lemont take 3-6 hours depending on the size and condition of your home. A 2-bedroom home may take around 3 hours while a larger 4-bedroom home could take 5-6 hours.",
   },
   {
-    question: "Do you serve the Old Quarry and Forge Park areas in Lemont?",
+    question: "Do you serve all of Lemont?",
     answer:
-      "Yes, we serve all Lemont neighborhoods including Old Quarry, Forge Park, the McCarthy Road area, and all areas within zip code 60439.",
+      `Yes. ${zipLine("Lemont")}`,
   },
   {
     question: "What if my quote comes in higher than the range listed?",
@@ -199,8 +200,7 @@ export default function DeepCleaningLemontPage() {
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Professional Deep Cleaning Services in Lemont, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Deep cleaning in Lemont, IL is what we do. DSM Cleaning Solutions brings the same
-            detail-focused approach to every home we serve. Whether you live near Old Quarry,
-            Forge Park, or the McCarthy Road area, our team covers zip code 60439 with a thorough
+            detail-focused approach to every home we serve. Our team covers {zipCodesPhrase("Lemont")} with a thorough
             clean that goes well beyond your regular maintenance routine.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">

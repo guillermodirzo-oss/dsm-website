@@ -9,6 +9,7 @@ import Offer from "@/components/Offer";
 import { MOVEOUT_OFFER } from "@/lib/offers";
 import { MOVE_OUT_PRICING_COPY } from "@/lib/pricingCopy";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
+import { zipCodesPhrase, zipLine } from "@/lib/cityData";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 
 // Regenerate at most hourly so MOVE75 drops out of the HTML on its own after
@@ -39,7 +40,7 @@ const faqs = [
   {
     question: "How far in advance should I book move-out cleaning in Homer Glen?",
     answer:
-      "We recommend booking at least 3-5 days before your move-out date to secure your preferred time slot in Homer Glen. For larger homes in The Highlands or Homer Glen Estates, booking a week out gives us the most flexibility. We also accommodate last-minute requests. Call (815) 246-2113 and we'll do our best.",
+      "We recommend booking at least 3-5 days before your move-out date to secure your preferred time slot in Homer Glen. For larger homes, booking a week out gives us the most flexibility. We also accommodate last-minute requests. Call (815) 246-2113 and we'll do our best.",
   },
   {
     question: "Do you clean inside appliances during Homer Glen move-out cleans?",
@@ -49,12 +50,12 @@ const faqs = [
   {
     question: "How long does a Homer Glen move-out clean take?",
     answer:
-      "A move-out clean in Homer Glen typically takes 5-8 hours given the larger home sizes common in zip code 60491. Properties in The Highlands, Tamarack Fairways, or Homer Glen Estates with 4+ bedrooms and multiple bathrooms may require more time. We'll give you an accurate estimate when you contact us.",
+      "A move-out clean in Homer Glen typically takes 5-8 hours given the larger home sizes common in zip code 60491. Properties with 4+ bedrooms and multiple bathrooms may require more time. We'll give you an accurate estimate when you contact us.",
   },
   {
     question: "Do you serve all of Homer Glen, IL 60491?",
     answer:
-      "Yes, we serve all of Homer Glen, including zip code 60491 and all neighborhoods: Homer Lakes, Farmington Lakes, The Highlands, Tamarack Fairways, and Homer Glen Estates, as well as homes near Lake Katherine Nature Center and Hadley Valley Preserve. We're based in nearby Romeoville and serve Homer Glen regularly.",
+      `Yes. ${zipLine("Homer Glen")} We're based in nearby Romeoville and serve Homer Glen regularly.`,
   },
 ];
 
@@ -117,7 +118,7 @@ const checklist = [
       "Scrub sink",
       "Wipe all cabinet fronts and clean inside",
       "Clean countertops and backsplash",
-      "Clean dishwasher interior",
+      "Clean inside the dishwasher",
       "Mop and scrub floors",
     ],
   },
@@ -136,7 +137,7 @@ const checklist = [
   {
     room: "Bedrooms & Living Areas",
     items: [
-      "Clean inside all closets",
+      "Wipe closet shelves",
       "Wipe all baseboards and door frames",
       "Clean window sills and inside glass",
       "Wipe all light switches and outlet covers",
@@ -153,7 +154,7 @@ const checklist = [
       "Dust and wipe all light fixtures",
       "Clean vents and registers",
       "Remove all trash and debris",
-      "Final walkthrough inspection",
+      "Sweep the patio",
     ],
   },
 ];
@@ -236,8 +237,7 @@ export default function MoveOutCleaningHomerGlenPage() {
               </p>
               <p className="text-lg text-white/85 mb-8 leading-relaxed">
                 Moving out of your Homer Glen home or rental? DSM Cleaning Solutions delivers a
-                thorough, landlord-inspection-ready clean throughout Homer Glen, including Homer Lakes,
-                Farmington Lakes, The Highlands, Tamarack Fairways, and Homer Glen Estates.
+                thorough, landlord-inspection-ready clean throughout Homer Glen ({zipCodesPhrase("Homer Glen")}).
                 Get your full deposit back, or get your home walkthrough-ready for the sale.
               </p>
               <Offer service="moveout">
@@ -317,14 +317,12 @@ export default function MoveOutCleaningHomerGlenPage() {
           <p className="text-gray-600 mb-4 leading-relaxed">
             Move-out cleaning in Homer Glen, IL serves two types of customers: renters who want
             their full security deposit returned, and homeowners who are selling and need every
-            room spotless for the buyer walkthrough. Homer Glen&rsquo;s larger homes, particularly
-            in The Highlands, Tamarack Fairways, and Homer Glen Estates, mean more rooms, more
+            room spotless for the buyer walkthrough. Homer Glen&rsquo;s larger homes mean more rooms, more
             square footage, and more areas a landlord or buyer&rsquo;s agent will scrutinize.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
             We&rsquo;re a family-owned cleaning company based in Romeoville, just minutes from Homer Glen.
-            We&rsquo;ve helped renters and homeowners across Homer Lakes, Farmington Lakes, The Highlands,
-            Tamarack Fairways, and Homer Glen Estates pass their move-out inspections and recover
+            We&rsquo;ve helped renters and homeowners across Homer Glen pass their move-out inspections and recover
             their full deposits. Our team follows a detailed checklist that covers every room,
             not just the visible surfaces.
           </p>

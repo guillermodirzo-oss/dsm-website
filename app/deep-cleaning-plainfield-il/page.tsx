@@ -9,6 +9,7 @@ import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 import { DEEP_CHECKLIST } from "@/lib/deepChecklist";
+import { zipCodesPhrase, zipLine } from "@/lib/cityData";
 
 export const metadata: Metadata = {
   title: { absolute: deepCityTitle("Plainfield") },
@@ -34,12 +35,12 @@ const faqs = [
   {
     question: "How long does a deep cleaning take in Plainfield, IL?",
     answer:
-      "Most deep cleaning jobs in Plainfield take 3–6 hours depending on the size and current condition of your home. A 2-bedroom home may take 3 hours while a larger 4-bedroom home in Grande Park or Lakewood Falls could take 5–6 hours.",
+      "Most deep cleaning jobs in Plainfield take 3–6 hours depending on the size and current condition of your home. A 2-bedroom home may take 3 hours while a larger 4-bedroom home could take 5–6 hours.",
   },
   {
-    question: "Do you serve the Settlers Ridge and Springbank neighborhoods in Plainfield?",
+    question: "Do you serve all of Plainfield?",
     answer:
-      "Yes, we serve all Plainfield neighborhoods including Settlers Ridge, Springbank, Lakewood Falls, Grande Park, and all areas within zip codes 60544 and 60585.",
+      `Yes. ${zipLine("Plainfield")}`,
   },
   {
     question: "What if my quote comes in higher than the range listed?",
@@ -250,8 +251,7 @@ export default function DeepCleaningPlainfieldPage() {
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Professional Deep Cleaning Services in Plainfield, IL</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Deep cleaning in Plainfield, IL is what we do. DSM Cleaning Solutions brings the same
-            detail-focused approach to every home we serve. Whether you live in Settlers Ridge,
-            Lakewood Falls, Springbank, or Grande Park, our team covers zip codes 60544 and 60585 with
+            detail-focused approach to every home we serve. Our team covers {zipCodesPhrase("Plainfield")} with
             a thorough clean that goes well beyond your regular maintenance routine.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">

@@ -9,6 +9,7 @@ import Offer from "@/components/Offer";
 import { MOVEOUT_OFFER } from "@/lib/offers";
 import { MOVE_OUT_PRICING_COPY } from "@/lib/pricingCopy";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
+import { zipCodesPhrase, zipLine } from "@/lib/cityData";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 
 // Regenerate at most hourly so MOVE75 drops out of the HTML on its own after
@@ -34,7 +35,7 @@ const faqs = [
   {
     question: "Can you help me get my security deposit back when moving out in Minooka, IL?",
     answer:
-      "Yes, our Minooka move-out cleaning is specifically designed to meet landlord and property manager inspection standards. Whether you're leaving a new construction home in Heritage Fields or an established rental in Old Town Minooka, we clean every surface, inside every appliance, and inside every cabinet so your property looks move-in ready and gives you the best possible chance of recovering your full security deposit.",
+      "Yes, our Minooka move-out cleaning is specifically designed to meet landlord and property manager inspection standards. Whether you're leaving a new construction home or an established rental, we clean every surface, inside every appliance, and inside every cabinet so your property looks move-in ready and gives you the best possible chance of recovering your full security deposit.",
   },
   {
     question: "How far in advance should I book move-out cleaning in Minooka?",
@@ -44,17 +45,17 @@ const faqs = [
   {
     question: "Do you clean inside appliances during Minooka move-out cleans?",
     answer:
-      "Yes, appliances are a central part of our move-out cleaning checklist. We clean inside and outside the oven, inside and outside the refrigerator (including all drawers and shelves), inside the microwave, and the dishwasher interior. These are the areas Minooka landlords and property managers inspect most closely, especially in newer construction homes along the Route 6 Corridor and in Fox Run.",
+      "Yes, appliances are a central part of our move-out cleaning checklist. We clean inside and outside the oven, inside and outside the refrigerator (including all drawers and shelves), inside the microwave, and the dishwasher interior. These are the areas Minooka landlords and property managers inspect most closely, especially in newer construction homes.",
   },
   {
     question: "How long does a Minooka move-out clean take?",
     answer:
-      "A move-out clean in Minooka typically takes 4-6 hours for an average-sized home in zip code 60447. Larger new construction homes (common in Heritage Fields and Fox Run) may take 5-7 hours. We'll give you an accurate time estimate when you contact us.",
+      "A move-out clean in Minooka typically takes 4-6 hours for an average-sized home in zip code 60447. Larger new construction homes may take 5-7 hours. We'll give you an accurate time estimate when you contact us.",
   },
   {
     question: "Do you serve all of Minooka, IL 60447?",
     answer:
-      "Yes, we serve all of Minooka, including zip code 60447 and all neighborhoods: Minooka Acres, Heritage Fields, Fox Run, Aux Sable Creek Estates, and Old Town Minooka. We serve Minooka regularly as part of our Grundy and Will County route.",
+      `Yes. ${zipLine("Minooka")} We serve Minooka regularly as part of our Grundy and Will County route.`,
   },
 ];
 
@@ -117,7 +118,7 @@ const checklist = [
       "Scrub sink",
       "Wipe all cabinet fronts and clean inside",
       "Clean countertops and backsplash",
-      "Clean dishwasher interior",
+      "Clean inside the dishwasher",
       "Mop and scrub floors",
     ],
   },
@@ -136,7 +137,7 @@ const checklist = [
   {
     room: "Bedrooms & Living Areas",
     items: [
-      "Clean inside all closets",
+      "Wipe closet shelves",
       "Wipe all baseboards and door frames",
       "Clean window sills and inside glass",
       "Wipe all light switches and outlet covers",
@@ -153,7 +154,7 @@ const checklist = [
       "Dust and wipe all light fixtures",
       "Clean vents and registers",
       "Remove all trash and debris",
-      "Final walkthrough inspection",
+      "Sweep the patio",
     ],
   },
 ];
@@ -234,8 +235,7 @@ export default function MoveOutCleaningMinookaPage() {
               <p className="text-xl font-semibold text-white/95 mb-4">Get Your Deposit Back. Guaranteed.</p>
               <p className="text-lg text-white/85 mb-8 leading-relaxed">
                 Moving out of your Minooka home or rental? DSM Cleaning Solutions delivers a thorough,
-                landlord-inspection-ready clean throughout Minooka, including Heritage Fields, Fox Run,
-                Aux Sable Creek Estates, and Old Town Minooka. Get your full deposit back.
+                landlord-inspection-ready clean throughout Minooka ({zipCodesPhrase("Minooka")}). Get your full deposit back.
               </p>
               <Offer service="moveout">
                 <div className="mb-6">
@@ -321,9 +321,7 @@ export default function MoveOutCleaningMinookaPage() {
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
             We&rsquo;re a family-owned cleaning company from the southwest Chicago suburbs, and we&rsquo;ve
-            helped renters across Heritage Fields, Fox Run, Minooka Acres, and Old Town Minooka
-            pass their move-out inspections and recover their full deposits. New construction homes
-            near the Route 6 Corridor and Aux Sable Creek Estates often have builder-grade finishes
+            helped renters across Minooka pass their move-out inspections and recover their full deposits. New construction homes often have builder-grade finishes
             that need careful attention. We know exactly what to look for.
           </p>
           <p className="text-gray-600 leading-relaxed">
