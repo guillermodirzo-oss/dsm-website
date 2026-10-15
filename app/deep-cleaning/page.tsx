@@ -62,7 +62,7 @@ const faqs = [
   },
   {
     q: "Is your deep cleaning eco-friendly?",
-    a: "Yes. We use plant-based, non-toxic products on every job. Safe for your family and pets. No harsh chemical smell when we leave.",
+    a: "Yes, as an option. If you'd like eco-friendly, non-toxic products for your clean, just add them when you book. You'll see the price before you confirm.",
   },
 ];
 
@@ -216,7 +216,7 @@ export default function DeepCleaningPage() {
       <section className="bg-white border-b py-5 px-4">
         <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-6 text-sm text-gray-700 font-medium">
           <span>✅ Family Owned &amp; Operated</span>
-          <span>✅ Eco-Friendly Products</span>
+          <span>✅ Background-Checked Team</span>
           <span>✅ Insured &amp; Bonded</span>
           <span>✅ 48-Hour Satisfaction Guarantee</span>
         </div>
@@ -232,7 +232,7 @@ export default function DeepCleaningPage() {
             Our deep cleaning is built for homes that need more than a weekly maintenance clean. That means scrubbing bathroom grout, cleaning behind the stovetop grates, wiping every baseboard, and vacuuming under and behind the furniture in every room.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            We use eco-friendly, non-toxic products on every job. Safe for your whole family including pets. And if anything is not right after we leave, contact us within 48 hours and we will come back to fix it at no charge.
+            If anything is not right after we leave, contact us within 48 hours and we will come back to fix it at no charge.
           </p>
         </div>
       </section>
@@ -273,9 +273,9 @@ export default function DeepCleaningPage() {
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="font-bold text-gray-800 mb-2">Eco-Friendly Products</h3>
+              <h3 className="font-bold text-gray-800 mb-2">Eco-Friendly Option</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                We use plant-based, non-toxic cleaning products on every job. Safe for kids, pets, and sensitive surfaces. You will not come home to a harsh chemical smell.
+                Prefer eco-friendly products? Add them when you book.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">

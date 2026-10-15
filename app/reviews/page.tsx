@@ -268,7 +268,7 @@ export default function ReviewsPage() {
             {[
               { icon: "🏠", title: "Family Owned & Operated", desc: "A local business you can trust." },
               { icon: "🛡️", title: "Insured & Bonded", desc: "Every job fully covered." },
-              { icon: "🌿", title: "Eco-Friendly Products", desc: "Safe for kids, pets & the environment." },
+              { icon: "🔍", title: "Background-Checked Team", desc: "Every cleaner verified before entering your home." },
             ].map((badge) => (
               <div key={badge.title} className="flex flex-col items-center gap-2">
                 <span className="text-4xl">{badge.icon}</span>

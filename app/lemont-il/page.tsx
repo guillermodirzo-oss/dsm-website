@@ -9,7 +9,7 @@ const city = cities.find((c) => c.slug === "lemont-il")!;
 export const metadata: Metadata = {
   title: { absolute: hubCityTitle("Lemont") },
   description:
-    "Trusted house cleaning in Lemont, IL: deep cleaning, standard & recurring maid service. Eco-friendly, insured. Family-owned. Free estimate.",
+    "Trusted house cleaning in Lemont, IL: deep cleaning, standard & recurring maid service. Insured & bonded. Family-owned. Free estimate.",
   keywords: [
     "house cleaning Lemont IL",
     "cleaning service Lemont",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: hubCityTitle("Lemont"),
     description:
-      "Trusted house cleaning in Lemont, IL: deep cleaning, standard & recurring maid service. Eco-friendly, insured. Family-owned. Free estimate.",
+      "Trusted house cleaning in Lemont, IL: deep cleaning, standard & recurring maid service. Insured & bonded. Family-owned. Free estimate.",
     url: "https://www.dsmcleaningsolutions.com/lemont-il",
     siteName: "DSM Cleaning Solutions",
     images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: OG_IMAGE_ALT }],
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: hubCityTitle("Lemont"),
-    description: "Trusted house cleaning in Lemont, IL: deep cleaning, standard & recurring maid service. Eco-friendly, insured. Family-owned.",
+    description: "Trusted house cleaning in Lemont, IL: deep cleaning, standard & recurring maid service. Insured & bonded. Family-owned.",
     images: ["/hero-image.png"],
   },
 };

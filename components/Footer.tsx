@@ -25,7 +25,7 @@ export default function Footer() {
                 className="h-14 w-auto object-contain brightness-0 invert"
               />
             </div>
-            <p className="text-sm leading-relaxed mb-4">Family-owned, eco-friendly house cleaning serving the southwest Chicago suburbs.</p>
+            <p className="text-sm leading-relaxed mb-4">Family-owned house cleaning serving the southwest Chicago suburbs.</p>
             <p className="text-sm mb-1 text-gray-500">402 Tallman Ave, Romeoville, IL 60446</p>
             <a href="tel:+18152462113" className="text-brand-green font-bold text-lg hover:text-orange-400 transition-colors block mt-3">
               (815) 246-2113
@@ -52,7 +52,7 @@ export default function Footer() {
             <h3 className="text-white font-bold text-sm uppercase tracking-widest mb-5 mt-6">More Services</h3>
             <ul className="space-y-2.5 text-sm">
               {[
-                { label: "Eco-Friendly Green Cleaning", href: "/eco-friendly-cleaning" },
+                { label: "Eco-Friendly Add-On", href: "/eco-friendly-cleaning" },
                 { label: "Apartment Cleaning", href: "/apartment-cleaning" },
                 { label: "One-Time Cleaning", href: "/one-time-cleaning" },
                 { label: "Pet-Friendly Cleaning", href: "/pet-friendly-cleaning" },
@@ -109,7 +109,7 @@ export default function Footer() {
               ))}
             </ul>
             <div className="flex flex-wrap gap-2">
-              {["Insured & Bonded", "Eco-Friendly", "Family Owned"].map((badge) => (
+              {["Insured & Bonded", "Background-Checked", "Family Owned"].map((badge) => (
                 <span key={badge} className="bg-gray-900 border border-gray-800 text-gray-400 text-xs px-3 py-1.5 rounded-full">{badge}</span>
               ))}
             </div>

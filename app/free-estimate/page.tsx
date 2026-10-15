@@ -41,7 +41,7 @@ const faqs = [
   {
     question: "Does the estimate include all costs?",
     answer:
-      "Yes, our estimates are all-inclusive and flat-rate. The price you receive covers labor, eco-friendly cleaning products, and all standard cleaning supplies. There are no hidden fees, no hourly overruns, and no surprise charges when we arrive. Any optional add-ons (like inside fridge or inside cabinets) are discussed and agreed upon before we schedule, never added without your knowledge.",
+      "Yes, our estimates are all-inclusive and flat-rate. The price you receive covers labor and all standard cleaning supplies. There are no hidden fees, no hourly overruns, and no surprise charges when we arrive. Any optional add-ons (like inside fridge or inside cabinets) are discussed and agreed upon before we schedule, never added without your knowledge.",
   },
   {
     question: "How do I schedule after getting my estimate?",
@@ -234,7 +234,7 @@ export default function FreeEstimatePage() {
               { icon: "💰", title: "Flat-Rate Price", desc: "One number, no ranges. The price we quote is the price you pay." },
               { icon: "🧹", title: "Scope of Work", desc: "Exactly which rooms and tasks are covered so there are no surprises on cleaning day." },
               { icon: "⏱️", title: "Estimated Duration", desc: "How long your cleaning will take so you can plan your day accordingly." },
-              { icon: "🌿", title: "Products Used", desc: "Confirmation that we use eco-friendly, non-toxic products, always included." },
+              { icon: "🌿", title: "Eco-Friendly Option", desc: "Prefer eco-friendly products? Add them when you book." },
               { icon: "✨", title: "Add-On Options", desc: "Any optional add-ons (inside oven, inside fridge, inside cabinets) listed separately with pricing." },
               { icon: "📅", title: "Availability", desc: "We'll share our nearest available dates so you can plan your booking." },
             ].map((item) => (

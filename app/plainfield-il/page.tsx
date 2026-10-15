@@ -47,7 +47,7 @@ const localBusinessSchema = {
   "@type": "LocalBusiness",
   name: "DSM Cleaning Solutions in Plainfield, IL",
   description:
-    "Professional house cleaning service serving Plainfield, IL and surrounding southwest Chicago suburbs. Family-owned, eco-friendly, fully insured.",
+    "Professional house cleaning service serving Plainfield, IL and surrounding southwest Chicago suburbs. Family-owned, fully insured.",
   url: "https://www.dsmcleaningsolutions.com/plainfield-il",
   telephone: "+18152462113",
   address: {
@@ -85,7 +85,7 @@ const faqs = [
   {
     question: "What cleaning services are available in Plainfield, IL?",
     answer:
-      "We offer standard house cleaning, deep cleaning, move-out and move-in cleaning, weekly/biweekly/monthly recurring maid service, apartment cleaning, and eco-friendly green cleaning.",
+      "We offer standard house cleaning, deep cleaning, move-out and move-in cleaning, weekly/biweekly/monthly recurring maid service, and apartment cleaning.",
   },
   {
     question: "How much does house cleaning cost in Plainfield, IL?",
@@ -138,8 +138,8 @@ const services = [
   },
   {
     icon: "🌿",
-    title: "Eco-Friendly Cleaning Plainfield",
-    desc: "Green cleaning using non-toxic, biodegradable products, safe for your family and the environment.",
+    title: "Eco-Friendly Add-On",
+    desc: "Prefer eco-friendly products? Add them when you book.",
     link: "/eco-friendly-cleaning",
   },
   {
@@ -188,7 +188,7 @@ export default function PlainfieldPage() {
               Professional House Cleaning Services in Plainfield, IL
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              Trusted by Plainfield families. DSM Cleaning Solutions brings family-owned, eco-friendly
+              Trusted by Plainfield families. DSM Cleaning Solutions brings family-owned
               house cleaning right to your door. Fully insured. Satisfaction guaranteed.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -215,7 +215,7 @@ export default function PlainfieldPage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["📍 Serving All of Plainfield, IL", "👨‍👩‍👧 Family Owned", "🌿 Eco-Friendly", "🛡️ Insured & Bonded", "✅ Satisfaction Guaranteed"].map(
+            {["📍 Serving All of Plainfield, IL", "👨‍👩‍👧 Family Owned", "🔍 Background-Checked", "🛡️ Insured & Bonded", "✅ Satisfaction Guaranteed"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -235,7 +235,7 @@ export default function PlainfieldPage() {
                 Plainfield is one of the fastest-growing communities in the southwest suburbs, and we&apos;re proud to serve its families across zip codes 60544 and 60585. From the Plainfield Historic District area to the newest residential developments, we bring the same high standard of professional cleaning to every home.
               </p>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                We use only eco-friendly, non-toxic cleaning products, because Plainfield families deserve a clean home that&apos;s also safe for their kids and pets. Whether you&apos;re in a classic home near Route 30 or a newer build in 60585, we show up prepared with everything we need.
+                Whether you&apos;re in a classic home near Route 30 or a newer build in 60585, we show up prepared with everything we need.
               </p>
               <Link href="/book" className="btn-primary">
                 Book Cleaning in Plainfield
@@ -247,7 +247,7 @@ export default function PlainfieldPage() {
                 {[
                   { icon: "👨‍👩‍👧", label: "Family Owned & Operated" },
                   { icon: "🛡️", label: "Insured & Bonded" },
-                  { icon: "🌿", label: "Eco-Friendly Products" },
+                  { icon: "⭐", label: "5-Star Rated" },
                   { icon: "✅", label: "48-Hour Satisfaction Guarantee" },
                   { icon: "📅", label: "Available 7 Days a Week" },
                   { icon: "🔒", label: "Background-Checked Team" },
@@ -262,7 +262,7 @@ export default function PlainfieldPage() {
                 {[
                   "Local company based in neighboring Romeoville",
                   "Fully insured and bonded, so your home is protected",
-                  "Eco-friendly, non-toxic cleaning products",
+                  "The same team on every recurring visit",
                   "Family-owned with a personal touch",
                   "Satisfaction guarantee on every clean",
                   "Flexible scheduling: weekly, biweekly, monthly",
@@ -514,7 +514,7 @@ export default function PlainfieldPage() {
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-brand-green-50 transition-colors mb-6">
                 📞 (815) 246-2113
               </a>
-              <p className="text-white/80">Local · Family-owned · Eco-friendly · Insured &amp; bonded · Satisfaction guaranteed</p>
+              <p className="text-white/80">Local · Family-owned · Background-checked · Insured &amp; bonded · Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <LeadForm />

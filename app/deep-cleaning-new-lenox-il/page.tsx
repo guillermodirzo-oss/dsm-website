@@ -15,12 +15,12 @@ import { zipCodesPhrase, zipLine } from "@/lib/cityData";
 export const metadata: Metadata = {
   title: { absolute: deepCityTitle("New Lenox") },
   description:
-    "Professional deep cleaning in New Lenox, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
+    "Professional deep cleaning in New Lenox, IL. DSM Cleaning Solutions: family owned and fully insured. 48-hr satisfaction guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-new-lenox-il" },
   openGraph: {
     title: deepCityTitle("New Lenox"),
     description:
-      "Professional deep cleaning in New Lenox, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
+      "Professional deep cleaning in New Lenox, IL. DSM Cleaning Solutions: family owned and fully insured. 48-hr satisfaction guarantee. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning-new-lenox-il",
   },
   twitter: { card: "summary_large_image", title: deepCityTitle("New Lenox"), images: ["/hero-image.png"] },
@@ -135,7 +135,7 @@ export default function DeepCleaningNewLenoxPage() {
                 A thorough deep clean for New Lenox homes. Every room done right.
               </p>
               <p className="opacity-90 mb-6 leading-relaxed">
-                DSM Cleaning Solutions serves New Lenox, IL with professional deep cleaning that covers every room. Grout, baseboards, ceiling fans, and more. Family owned, eco-friendly products, and a 48-hour satisfaction guarantee on every job.
+                DSM Cleaning Solutions serves New Lenox, IL with professional deep cleaning that covers every room. Grout, baseboards, ceiling fans, and more. Family owned, insured and bonded, and a 48-hour satisfaction guarantee on every job.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
@@ -172,7 +172,7 @@ export default function DeepCleaningNewLenoxPage() {
       <section className="bg-white border-b py-5 px-4">
         <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-6 text-sm text-gray-700 font-medium">
           <span>✅ Family Owned &amp; Operated</span>
-          <span>✅ Eco-Friendly Products</span>
+          <span>✅ Background-Checked Team</span>
           <span>✅ Insured &amp; Bonded</span>
           <span>✅ 48-Hour Satisfaction Guarantee</span>
         </div>
@@ -188,7 +188,7 @@ export default function DeepCleaningNewLenoxPage() {
             Our deep cleaning is built for homes that need more than a regular weekly clean. That means scrubbing grout lines in the shower, cleaning behind the stovetop grates, wiping every baseboard, and vacuuming under the furniture. We do not skip the spots that others miss.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            We use eco-friendly, non-toxic products on every job. Safe for your whole family including pets. And if you are not satisfied with anything after we leave, contact us within 48 hours and we will come back to make it right.
+            If you are not satisfied with anything after we leave, contact us within 48 hours and we will come back to make it right.
           </p>
         </div>
       </section>
@@ -227,9 +227,9 @@ export default function DeepCleaningNewLenoxPage() {
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="font-bold text-gray-800 mb-2">Eco-Friendly Products</h3>
+              <h3 className="font-bold text-gray-800 mb-2">Eco-Friendly Option</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                We use plant-based, non-toxic cleaning products on every job. Safe for your kids and pets. You will not come home to a harsh chemical smell.
+                Prefer eco-friendly products? Add them when you book.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">

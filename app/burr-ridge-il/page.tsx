@@ -10,7 +10,7 @@ const city = cities.find((c) => c.slug === "burr-ridge-il")!;
 export const metadata: Metadata = {
   title: { absolute: hubCityTitle("Burr Ridge") },
   description:
-    "Professional house cleaning in Burr Ridge, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Free estimates.",
+    "Professional house cleaning in Burr Ridge, IL: deep cleaning, standard & recurring maid service. Family-owned & fully insured. Free estimates.",
   keywords: [
     "house cleaning Burr Ridge IL",
     "cleaning service Burr Ridge",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: hubCityTitle("Burr Ridge"),
     description:
-      "Professional house cleaning in Burr Ridge, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Free estimates.",
+      "Professional house cleaning in Burr Ridge, IL: deep cleaning, standard & recurring maid service. Family-owned & fully insured. Free estimates.",
     url: "https://www.dsmcleaningsolutions.com/burr-ridge-il",
     siteName: "DSM Cleaning Solutions",
     images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: OG_IMAGE_ALT }],
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: hubCityTitle("Burr Ridge"),
-    description: "Professional house cleaning in Burr Ridge, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured.",
+    description: "Professional house cleaning in Burr Ridge, IL: deep cleaning, standard & recurring maid service. Family-owned & fully insured.",
     images: ["/hero-image.png"],
   },
 };

@@ -12,7 +12,7 @@
 - **Rating:** 5.0 from 46 Google reviews
 - **Insurance:** Insured and bonded. Not licensed. Never claim a license. No insurance claim since 2020. The label on badges, pills, trust bars and card titles is "Insured & Bonded", never "Fully Insured".
 - **Team:** Recurring clients get the SAME TEAM every visit (a team, not one cleaner). Never write "same cleaner" or "your cleaner". Cleaners are background-checked and drug tested. Cleaners are trained. There is NO certification: never call them "certified".
-- **Products:** Eco-friendly, non-toxic products. They are NOT certified by anyone: never say "certified safe". Say "safe for kids and pets".
+- **Products:** Regular cleans use DSM's standard products. Eco-friendly, non-toxic products are used only when the customer adds the "Eco-Friendly Green Products" add-on (owner, October 2026): $30 per clean on one-time standard, deep and move-in/move-out cleans, $15 per visit on recurring plans (weekly, every two weeks, monthly). Both prices live in `lib/addOns.ts`. The eco products are NOT certified by anyone: never say "certified safe". Never claim DSM's products are safe for kids and pets.
 - **Same-day service:** available.
 - **Since:** Locally owned in Romeoville since 2020.
 - **Growth focus:** DSM is not investing in new pages or content for Minooka or areas south of Joliet. Existing pages for those cities stay live and Minooka stays in the service area, but new work targets Romeoville and cities north and east: Bolingbrook, Lemont, Homer Glen, Lockport, Plainfield, Naperville, Westmont, Downers Grove, Hinsdale, Oak Brook, Burr Ridge, and Joliet.
@@ -99,7 +99,7 @@ The owner confirmed exactly what each service includes (October 2026). The lists
 
 **Move-in/move-out adds:** inside the oven, inside the refrigerator, inside all cabinets and drawers, inside the dishwasher ("Clean inside the dishwasher"), closet shelves ("Wipe closet shelves") and the patio ("Sweep the patio"). Sweeping inside the garage is not included: it is an add-on. There is no final walkthrough or inspection with the client (not confirmed by the owner), so never claim one. Sentences about a landlord's or buyer's walkthrough are fine.
 
-**Add-ons:** `lib/addOns.ts` is the only source, copied from the BookingKoala booking form: inside oven, inside fridge, inside cabinets (empty or full), inside dishwasher, interior windows (standard cleans only), detail baseboards and doors (standard cleans only), extra room (basement), sweep inside garage, homes with pets. The first five are for standard and deep cleans (move-out already includes them); the last three also apply to move-out. Nothing else is an add-on: no laundry, no exterior windows, no carpet cleaning, no organizing. Every page that names an add-on uses these names.
+**Add-ons:** `lib/addOns.ts` is the only source, copied from the BookingKoala booking form: inside oven, inside fridge, inside cabinets (empty or full), inside dishwasher, interior windows (standard cleans only), detail baseboards and doors (standard cleans only), extra room (basement), sweep inside garage, homes with pets, eco-friendly green products. The first five are for standard and deep cleans (move-out already includes them); the last four also apply to move-out. Eco-friendly green products is the only add-on with two prices: one-time and recurring (`recurringPrice`). Nothing else is an add-on: no laundry, no exterior windows, no carpet cleaning, no organizing. Every page that names an add-on uses these names.
 
 **Not offered by any service. Never claim these:** spot-cleaning walls; pulling appliances out or cleaning behind or under appliances; caulking detail; removing calcium or hard water deposits (no "mineral deposits", "limescale" or "descaling" either).
 
@@ -153,7 +153,7 @@ Move-out customers are mostly home buyers and sellers, not renters. Write move-o
 | `lib/workPhotos.ts` | Alt text for work photos and for the social share photo. No town, no service |
 | `lib/standardChecklist.ts` | The owner-confirmed standard checklist (full and short versions). Every page that lists what a standard or recurring clean includes renders it |
 | `lib/deepChecklist.ts` | The owner-confirmed deep checklist: the seven additions and the room-by-room list every deep cleaning page renders |
-| `lib/addOns.ts` | Every add-on: name, price and the services it applies to, from the BookingKoala booking form. /pricing, the terms page and the FALL75 oven value read it |
+| `lib/addOns.ts` | Every add-on: name, price (and recurring price for eco products) and the services it applies to, from the BookingKoala booking form. /pricing, /eco-friendly-cleaning, the terms page and the FALL75 oven value read it |
 | `components/Offer.tsx` | Wrapper that expires offer copy automatically |
 | `components/OfferBanner.tsx` | One line per running offer, for the homepage hero. Disappears when no offer is running |
 | `components/HeroRating.tsx` | The star rating line for orange heroes. White on the darkest brand orange, which meets WCAG AA. Use it instead of coloring the text by hand |
@@ -205,6 +205,8 @@ Never change form payloads, guards or the Step 1 partial capture. Never send tes
 - Banned phrases: "top-to-bottom reset", "incredibly thorough", "delivering exceptional results", "we take pride in", "look no further".
 - Write like a local business owner: short, plain sentences.
 - Reviews are verbatim from Google, stored in `lib/realReviews.ts`. Never write or edit a review.
+- Eco-friendly products are an add-on, not standard. Never claim eco-friendly, green or non-toxic products on every clean. Mention the option as "Prefer eco-friendly products? Add them when you book." Show the price only on /pricing and /eco-friendly-cleaning.
+- Use the "Prefer eco-friendly products?" line at most once per page; anywhere else on that page, just leave the claim out. FAQs that ask whether DSM uses eco-friendly or safe products answer: "Yes, as an option. If you'd like eco-friendly, non-toxic products for your clean, just add them when you book. You'll see the price before you confirm." Trust bars and badges never list "Eco-Friendly".
 - Review attributions use the format "Name, City IL". Google doesn't publish reviewer cities, so when the city isn't known, show the name alone. Never guess a city. The owner has confirmed three: Thomas Cheng (Shorewood), Donna Slas (Romeoville) and Jae Mac (Joliet). They are kept in OWNER_CONFIRMED_CITIES in `lib/realReviews.ts` and shown on the recurring city pages.
 
 ## Overall Goal

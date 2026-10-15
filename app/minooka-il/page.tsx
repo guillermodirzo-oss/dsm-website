@@ -9,7 +9,7 @@ const city = cities.find((c) => c.slug === "minooka-il")!;
 export const metadata: Metadata = {
   title: { absolute: hubCityTitle("Minooka") },
   description:
-    "Dependable house cleaning in Minooka, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Free estimates.",
+    "Dependable house cleaning in Minooka, IL: deep cleaning, standard & recurring maid service. Family-owned & fully insured. Free estimates.",
   keywords: [
     "house cleaning Minooka IL",
     "cleaning service Minooka",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: hubCityTitle("Minooka"),
     description:
-      "Dependable house cleaning in Minooka, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Free estimates.",
+      "Dependable house cleaning in Minooka, IL: deep cleaning, standard & recurring maid service. Family-owned & fully insured. Free estimates.",
     url: "https://www.dsmcleaningsolutions.com/minooka-il",
     siteName: "DSM Cleaning Solutions",
     images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: OG_IMAGE_ALT }],
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: hubCityTitle("Minooka"),
-    description: "Dependable house cleaning in Minooka, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured.",
+    description: "Dependable house cleaning in Minooka, IL: deep cleaning, standard & recurring maid service. Family-owned & fully insured.",
     images: ["/hero-image.png"],
   },
 };

@@ -126,7 +126,7 @@ export default function CityPageTemplate({ city }: { city: CityData }) {
             {[
               `📍 Serving All of ${city.name}, IL`,
               "👨‍👩‍👧 Family Owned",
-              "🌿 Eco-Friendly",
+              "🔍 Background-Checked",
               "🛡️ Insured & Bonded",
               "✅ Satisfaction Guaranteed",
             ].map((item) => (
@@ -168,7 +168,7 @@ export default function CityPageTemplate({ city }: { city: CityData }) {
                 {[
                   { icon: "👨‍👩‍👧", label: "Family Owned & Operated" },
                   { icon: "🛡️", label: "Insured & Bonded" },
-                  { icon: "🌿", label: "Eco-Friendly Products" },
+                  { icon: "⭐", label: "5-Star Rated" },
                   { icon: "✅", label: "48-Hour Satisfaction Guarantee" },
                   { icon: "📅", label: "Available 7 Days a Week" },
                   { icon: "🔍", label: "Background-Checked Team" },
@@ -460,7 +460,7 @@ export default function CityPageTemplate({ city }: { city: CityData }) {
                 📞 (815) 246-2113
               </a>
               <p className="text-white/80">
-                Local · Family-owned · Eco-friendly · Insured &amp; bonded · Satisfaction
+                Local · Family-owned · Background-checked · Insured &amp; bonded · Satisfaction
                 guaranteed
               </p>
             </div>

@@ -112,8 +112,8 @@ const differentiators = [
   },
   {
     icon: "🌿",
-    title: "Eco-Friendly Products",
-    desc: "We use professional-grade, non-toxic, biodegradable products on every job, safe for your children, pets, and the environment at no extra cost.",
+    title: "Eco-Friendly Option",
+    desc: "Prefer eco-friendly products? Add them when you book.",
   },
   {
     icon: "✅",
@@ -171,7 +171,7 @@ export default function WhyChooseDSMPage() {
               Why Romeoville Families Choose DSM Cleaning Solutions
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              Family-owned. Fully insured. Background-checked team. Eco-friendly products.
+              Family-owned. Fully insured. Background-checked team.
               48-hour satisfaction guarantee. 5-star rated by {REVIEW_COUNT} families across Romeoville,
               Plainfield, Naperville, and the southwest Chicago suburbs.
             </p>
@@ -187,7 +187,7 @@ export default function WhyChooseDSMPage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["⭐ 5-Star Google Rating", "🛡️ Insured & Bonded", "✔️ Background-Checked", "🌿 Eco-Friendly", "👨‍👩‍👧 Family Owned"].map(
+            {["⭐ 5-Star Google Rating", "🛡️ Insured & Bonded", "✔️ Background-Checked", "✅ 48-Hour Guarantee", "👨‍👩‍👧 Family Owned"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -265,8 +265,8 @@ export default function WhyChooseDSMPage() {
                 <div className="text-white/80 text-sm">Google rating from {REVIEW_COUNT} verified reviews across our service area</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-brand-green mb-1">100%</div>
-                <div className="text-white/80 text-sm">Non-toxic, eco-friendly products on every single job, no exceptions</div>
+                <div className="text-4xl font-bold text-brand-green mb-1">2020</div>
+                <div className="text-white/80 text-sm">Locally owned in Romeoville since 2020</div>
               </div>
             </div>
           </div>
@@ -352,8 +352,8 @@ export default function WhyChooseDSMPage() {
               <p className="text-sm text-gray-600">Read every 5-star review from our southwest suburb customers.</p>
             </Link>
             <Link href="/eco-friendly-cleaning" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Eco-Friendly Cleaning</h3>
-              <p className="text-sm text-gray-600">Learn about the non-toxic products we use in every home.</p>
+              <h3 className="font-bold text-gray-900 mb-1">Eco-Friendly Add-On</h3>
+              <p className="text-sm text-gray-600">How to add eco-friendly products to any clean.</p>
             </Link>
             <Link href="/pricing" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Pricing</h3>
@@ -381,7 +381,7 @@ export default function WhyChooseDSMPage() {
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
                 📞 (815) 246-2113
               </a>
-              <p className="text-white/80">👨‍👩‍👧 Family owned · 🛡️ Insured &amp; bonded · 🌿 Eco-friendly · ✅ 48-hr guarantee</p>
+              <p className="text-white/80">👨‍👩‍👧 Family owned · 🛡️ Insured &amp; bonded · 🔍 Background-checked · ✅ 48-hr guarantee</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <LeadForm />

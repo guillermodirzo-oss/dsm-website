@@ -16,6 +16,11 @@
  *  - Move-in/move-out cleaning already includes the inside of the oven, the
  *    fridge, every cabinet and drawer, and the dishwasher, so those are not
  *    add-ons for it.
+ *  - Eco-friendly products are an add-on, not standard (owner, October 2026).
+ *    Regular cleans use DSM's standard products. Its two prices show only on
+ *    /pricing and /eco-friendly-cleaning, both read from here. Everywhere else
+ *    the option is "Prefer eco-friendly products? Add them when you book."
+ *    with no price.
  */
 export type AddOnService = "standard" | "deep" | "moveout";
 
@@ -29,7 +34,8 @@ export type AddOnId =
   | "detailBaseboards"
   | "extraRoom"
   | "garageSweep"
-  | "pets";
+  | "pets"
+  | "ecoProducts";
 
 export interface AddOn {
   id: AddOnId;
@@ -40,6 +46,11 @@ export interface AddOn {
   services: AddOnService[];
   /** One short line shown under the name on /pricing. */
   note?: string;
+  /**
+   * Per-visit price on recurring plans (weekly, every two weeks, monthly)
+   * when it differs from `price`, which is then the one-time price.
+   */
+  recurringPrice?: number;
 }
 
 export const ADD_ONS: AddOn[] = [
@@ -53,6 +64,7 @@ export const ADD_ONS: AddOn[] = [
   { id: "extraRoom", name: "Extra room (basement)", price: 40, services: ["standard", "deep", "moveout"] },
   { id: "garageSweep", name: "Sweep inside garage", price: 25, services: ["standard", "deep", "moveout"] },
   { id: "pets", name: "Homes with pets", price: 15, services: ["standard", "deep", "moveout"] },
+  { id: "ecoProducts", name: "Eco-friendly green products", price: 30, recurringPrice: 15, services: ["standard", "deep", "moveout"], note: "Eco-friendly, non-toxic products for the whole clean." },
 ];
 
 /** One add-on by id. */

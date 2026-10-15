@@ -16,12 +16,12 @@ import { DEEP_CHECKLIST } from "@/lib/deepChecklist";
 export const metadata: Metadata = {
   title: { absolute: deepCityTitle("Bolingbrook") },
   description:
-    "Professional deep cleaning in Bolingbrook, IL. Thorough service for every home. Eco-friendly, fully insured, 48-hour satisfaction guarantee. Free quote.",
+    "Professional deep cleaning in Bolingbrook, IL. Thorough service for every home. Fully insured, 48-hour satisfaction guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-bolingbrook-il" },
   openGraph: {
     title: deepCityTitle("Bolingbrook"),
     description:
-      "Professional deep cleaning in Bolingbrook, IL. Thorough service for every home. Eco-friendly, fully insured, 48-hour satisfaction guarantee. Free quote.",
+      "Professional deep cleaning in Bolingbrook, IL. Thorough service for every home. Fully insured, 48-hour satisfaction guarantee. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning-bolingbrook-il",
   },
   twitter: { card: "summary_large_image", title: deepCityTitle("Bolingbrook"), images: ["/hero-image.png"] },
@@ -149,7 +149,7 @@ export default function DeepCleaningBolingbrookPage() {
                 A deep clean from the team next door in Romeoville.
               </p>
               <p className="opacity-90 mb-6 leading-relaxed">
-                We go room by room through your Bolingbrook home and take care of the buildup a quick clean leaves behind. Family owned since 2020, with eco-friendly products and a 48-hour satisfaction guarantee.
+                We go room by room through your Bolingbrook home and take care of the buildup a quick clean leaves behind. Family owned since 2020, with a 48-hour satisfaction guarantee.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
@@ -187,7 +187,7 @@ export default function DeepCleaningBolingbrookPage() {
       <section className="bg-white border-b py-5 px-4">
         <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-6 text-sm text-gray-700 font-medium">
           <span>✅ Family Owned &amp; Operated</span>
-          <span>✅ Eco-Friendly Products</span>
+          <span>✅ Background-Checked Team</span>
           <span>✅ Insured &amp; Bonded</span>
           <span>✅ 48-Hour Satisfaction Guarantee</span>
         </div>
@@ -210,7 +210,7 @@ export default function DeepCleaningBolingbrookPage() {
             <Link href="/recurring-cleaning-bolingbrook-il" className="text-brand-green font-semibold hover:underline">clean homes in Bolingbrook every week, every two weeks or every month</Link>.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            Every product we bring is eco-friendly and non-toxic, safe for kids and pets. If something isn&apos;t right, tell us within 48 hours and we&apos;ll come back and fix it free. For regular visits and everything else we do in town, see our{" "}
+            If something isn&apos;t right, tell us within 48 hours and we&apos;ll come back and fix it free. For regular visits and everything else we do in town, see our{" "}
             <Link href={HUB_PATH} className="text-brand-green font-semibold hover:underline">house cleaning in Bolingbrook</Link> page.
           </p>
         </div>
@@ -251,9 +251,9 @@ export default function DeepCleaningBolingbrookPage() {
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="font-bold text-gray-800 mb-2">Safe for Kids and Pets</h3>
+              <h3 className="font-bold text-gray-800 mb-2">Eco-Friendly Option</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Every product we use is eco-friendly and non-toxic. You won&apos;t walk back in to a harsh chemical smell.
+                Prefer eco-friendly products? Add them when you book.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">

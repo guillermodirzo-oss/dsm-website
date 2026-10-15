@@ -14,12 +14,12 @@ import { zipCodesPhrase, zipLine } from "@/lib/cityData";
 export const metadata: Metadata = {
   title: { absolute: deepCityTitle("Naperville") },
   description:
-    "Professional deep cleaning in Naperville, IL. Serving 60540, 60563, 60564 and 60565. Eco-friendly, fully insured, 48-hour satisfaction guarantee. Free quote.",
+    "Professional deep cleaning in Naperville, IL. Serving 60540, 60563, 60564 and 60565. Fully insured, 48-hour satisfaction guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-naperville-il" },
   openGraph: {
     title: deepCityTitle("Naperville"),
     description:
-      "Professional deep cleaning in Naperville, IL. Serving 60540, 60563, 60564 and 60565. Eco-friendly, fully insured, 48-hour satisfaction guarantee. Free quote.",
+      "Professional deep cleaning in Naperville, IL. Serving 60540, 60563, 60564 and 60565. Fully insured, 48-hour satisfaction guarantee. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning-naperville-il",
   },
   twitter: { card: "summary_large_image", title: deepCityTitle("Naperville"), images: ["/hero-image.png"] },
@@ -212,8 +212,7 @@ export default function DeepCleaningNapervillePage() {
           </p>
           <p className="text-gray-600 leading-relaxed">
             Getting ready for spring, cleaning up before guests arrive, or just want a real clean after
-            months of normal use? Our Naperville deep cleaning service gets it done. We use eco-friendly,
-            non-toxic products. Safe for your kids and pets.
+            months of normal use? Our Naperville deep cleaning service gets it done.
           </p>
         </div>
       </section>
@@ -247,8 +246,8 @@ export default function DeepCleaningNapervillePage() {
               <div className="w-12 h-12 rounded-xl bg-brand-green-50 flex items-center justify-center mb-4 text-brand-green">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
               </div>
-              <h3 className="font-bold text-gray-900 text-base mb-2">Safe for Your Kids &amp; Pets</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">We use non-toxic, biodegradable products on every job. No harsh chemicals, no fumes. Your family can be back in the house right after we leave.</p>
+              <h3 className="font-bold text-gray-900 text-base mb-2">Eco-Friendly Option</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Prefer eco-friendly products? Add them when you book.</p>
             </div>
             <div className="rounded-xl border border-gray-100 p-6 bg-gray-50 flex flex-col">
               <div className="w-12 h-12 rounded-xl bg-brand-green-50 flex items-center justify-center mb-4 text-brand-green">
@@ -389,7 +388,7 @@ export default function DeepCleaningNapervillePage() {
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
                 (815) 246-2113
               </a>
-              <p className="text-white/80 text-sm">Family-owned · Eco-friendly · Insured &amp; bonded · Satisfaction guaranteed</p>
+              <p className="text-white/80 text-sm">Family-owned · Background-checked · Insured &amp; bonded · Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl p-6 md:p-8">
               <CityDeepCleanForm />

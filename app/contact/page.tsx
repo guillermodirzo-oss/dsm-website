@@ -240,7 +240,7 @@ export default function ContactPage() {
                   { icon: "✅", text: "Free estimates, no obligation" },
                   { icon: "🛡️", text: "Insured & bonded" },
                   { icon: "👨‍👩‍👧", text: "Family-owned local business" },
-                  { icon: "🌿", text: "Eco-friendly products" },
+                  { icon: "🔍", text: "Background-checked team" },
                   { icon: "✔️", text: "48-hour satisfaction guarantee" },
                 ].map((item) => (
                   <div key={item.text} className="flex items-center gap-3 text-gray-700">
@@ -259,7 +259,7 @@ export default function ContactPage() {
                     { label: "Move-Out Cleaning", href: "/move-out-cleaning" },
                     { label: "Standard Cleaning", href: "/recurring-cleaning" },
                     { label: "Recurring Service", href: "/recurring-cleaning" },
-                    { label: "Eco-Friendly", href: "/eco-friendly-cleaning" },
+                    { label: "Eco-Friendly Add-On", href: "/eco-friendly-cleaning" },
                   ].map((s) => (
                     <Link
                       key={s.href}

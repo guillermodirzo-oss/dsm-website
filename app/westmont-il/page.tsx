@@ -9,7 +9,7 @@ const city = cities.find((c) => c.slug === "westmont-il")!;
 export const metadata: Metadata = {
   title: { absolute: hubCityTitle("Westmont") },
   description:
-    "Expert house cleaning in Westmont, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly, fully insured. Get a free estimate.",
+    "Expert house cleaning in Westmont, IL: deep cleaning, standard & recurring maid service. Family-owned, fully insured. Get a free estimate.",
   keywords: [
     "house cleaning Westmont IL",
     "cleaning service Westmont",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: hubCityTitle("Westmont"),
     description:
-      "Expert house cleaning in Westmont, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly, fully insured. Get a free estimate.",
+      "Expert house cleaning in Westmont, IL: deep cleaning, standard & recurring maid service. Family-owned, fully insured. Get a free estimate.",
     url: "https://www.dsmcleaningsolutions.com/westmont-il",
     siteName: "DSM Cleaning Solutions",
     images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: OG_IMAGE_ALT }],
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: hubCityTitle("Westmont"),
-    description: "Expert house cleaning in Westmont, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly, fully insured.",
+    description: "Expert house cleaning in Westmont, IL: deep cleaning, standard & recurring maid service. Family-owned, fully insured.",
     images: ["/hero-image.png"],
   },
 };

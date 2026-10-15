@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/apartment-cleaning" },
   openGraph: {
     title: "Apartment Cleaning Plainfield IL | DSM Cleaning Solutions",
-    description: "Professional apartment cleaning in Plainfield, IL for renters, landlords & property managers. Eco-friendly, insured & reliable. Call for a free estimate.",
+    description: "Professional apartment cleaning in Plainfield, IL for renters, landlords & property managers. Insured & reliable. Call for a free estimate.",
     url: "https://www.dsmcleaningsolutions.com/apartment-cleaning",
     siteName: "DSM Cleaning Solutions",
     images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: OG_IMAGE_ALT }],
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Apartment Cleaning Plainfield IL | DSM Cleaning Solutions",
-    description: "Professional apartment cleaning in Plainfield, IL for renters, landlords & property managers. Eco-friendly, insured & reliable.",
+    description: "Professional apartment cleaning in Plainfield, IL for renters, landlords & property managers. Insured & reliable.",
     images: ["/hero-image.png"],
   },
 };
@@ -112,7 +112,7 @@ export default function ApartmentCleaningPage() {
       <section className="bg-white border-b border-gray-100 py-5 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-500">
-            {["🏢 All Apartment Sizes", "🌿 Eco-Friendly", "🛡️ Insured & Bonded", "🔑 Key-Holder Service", "✅ Satisfaction Guaranteed"].map(item => <span key={item} className="whitespace-nowrap">{item}</span>)}
+            {["🏢 All Apartment Sizes", "🔍 Background-Checked", "🛡️ Insured & Bonded", "🔑 Key-Holder Service", "✅ Satisfaction Guaranteed"].map(item => <span key={item} className="whitespace-nowrap">{item}</span>)}
           </div>
         </div>
       </section>

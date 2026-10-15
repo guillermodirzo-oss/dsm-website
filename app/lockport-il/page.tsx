@@ -10,7 +10,7 @@ const city = cities.find((c) => c.slug === "lockport-il")!;
 export const metadata: Metadata = {
   title: { absolute: hubCityTitle("Lockport") },
   description:
-    "Reliable house cleaning in Lockport, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Free estimates.",
+    "Reliable house cleaning in Lockport, IL: deep cleaning, standard & recurring maid service. Family-owned & fully insured. Free estimates.",
   keywords: [
     "house cleaning Lockport IL",
     "cleaning service Lockport",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: hubCityTitle("Lockport"),
     description:
-      "Reliable house cleaning in Lockport, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Free estimates.",
+      "Reliable house cleaning in Lockport, IL: deep cleaning, standard & recurring maid service. Family-owned & fully insured. Free estimates.",
     url: "https://www.dsmcleaningsolutions.com/lockport-il",
     siteName: "DSM Cleaning Solutions",
     images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: OG_IMAGE_ALT }],
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: hubCityTitle("Lockport"),
-    description: "Reliable house cleaning in Lockport, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured.",
+    description: "Reliable house cleaning in Lockport, IL: deep cleaning, standard & recurring maid service. Family-owned & fully insured.",
     images: ["/hero-image.png"],
   },
 };

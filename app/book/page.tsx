@@ -28,7 +28,7 @@ const SOCIAL_DESCRIPTION =
 export const metadata: Metadata = {
   title: "Book a Cleaning Online",
   description:
-    "Book your house cleaning with DSM Cleaning Solutions online. See real dates and your exact price. Family-owned, eco-friendly, and fully insured.",
+    "Book your house cleaning with DSM Cleaning Solutions online. See real dates and your exact price. Family-owned and fully insured.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/book" },
   openGraph: {
     title: SOCIAL_TITLE,
@@ -67,7 +67,7 @@ const valueStack = [
   { item: "Kitchen Counters, Cabinet Fronts & Inside Microwave", value: "Included" },
   { item: "Window Sills, Door Frames, Vents & Light Switches", value: "Included" },
   { item: "Toilets, Tubs, Sinks & Bathroom Floors Sanitized", value: "Included" },
-  { item: "Eco-Friendly Products (Safe for Kids & Pets)", value: "Included" },
+  { item: "All Cleaning Supplies & Equipment", value: "Included" },
   { item: "Trained, Background-Checked Cleaners", value: "Included" },
   { item: "48-Hour Re-Clean Guarantee", value: "Included" },
 ];
@@ -135,7 +135,7 @@ const faqs = [
   },
   {
     q: "Are your products safe for my kids and pets?",
-    a: "Always. We exclusively use eco-friendly, non-toxic products on every clean. Safe for the whole family.",
+    a: "Yes, as an option. If you'd like eco-friendly, non-toxic products for your clean, just add them when you book. You'll see the price before you confirm.",
   },
   {
     q: "Do you serve my area?",
@@ -199,7 +199,7 @@ export default function BookPage() {
             </Offer>
           </p>
           <p className="text-gray-500 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-            Family-owned · Insured &amp; bonded · Eco-friendly products · {SERVICE_AREA_LINE}
+            Family-owned · Insured &amp; bonded · Background-checked team · {SERVICE_AREA_LINE}
           </p>
 
           {/* Trust bar */}
@@ -207,7 +207,7 @@ export default function BookPage() {
             <span>⭐ 5.0 Stars · {REVIEW_COUNT} Reviews</span>
             <span>✅ 48-Hour Guarantee</span>
             <span>🔒 Insured &amp; Bonded</span>
-            <span>🌿 Eco-Friendly</span>
+            <span>👨‍👩‍👧 Family Owned</span>
           </div>
 
           {/* Primary CTA */}
@@ -597,7 +597,7 @@ export default function BookPage() {
           <div className="flex flex-wrap justify-center gap-4 mt-7 text-sm text-gray-500 font-medium">
             <span>🔒 Your info is secure. No spam.</span>
             <span>✅ 48-Hour Guarantee</span>
-            <span>🌿 Eco-Friendly Products</span>
+            <span>🔍 Background-Checked Team</span>
             <span>🛡️ Insured &amp; Bonded</span>
             <span>👨‍👩‍👧 Family Owned</span>
           </div>

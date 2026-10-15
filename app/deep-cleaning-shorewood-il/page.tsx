@@ -15,12 +15,12 @@ import { zipCodesPhrase, zipLine } from "@/lib/cityData";
 export const metadata: Metadata = {
   title: { absolute: deepCityTitle("Shorewood") },
   description:
-    "Professional deep cleaning in Shorewood, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
+    "Professional deep cleaning in Shorewood, IL. DSM Cleaning Solutions: family owned and fully insured. 48-hr satisfaction guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-shorewood-il" },
   openGraph: {
     title: deepCityTitle("Shorewood"),
     description:
-      "Professional deep cleaning in Shorewood, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
+      "Professional deep cleaning in Shorewood, IL. DSM Cleaning Solutions: family owned and fully insured. 48-hr satisfaction guarantee. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning-shorewood-il",
   },
   twitter: { card: "summary_large_image", title: deepCityTitle("Shorewood"), images: ["/hero-image.png"] },
@@ -135,7 +135,7 @@ export default function DeepCleaningShorewoodPage() {
                 A real deep clean for Shorewood homes. Every room, every detail.
               </p>
               <p className="opacity-90 mb-6 leading-relaxed">
-                DSM Cleaning Solutions serves Shorewood, IL with thorough, professional deep cleaning. We cover everything from grout lines to baseboards to ceiling fans. Family owned, eco-friendly products, and a 48-hour satisfaction guarantee on every job.
+                DSM Cleaning Solutions serves Shorewood, IL with thorough, professional deep cleaning. We cover everything from grout lines to baseboards to ceiling fans. Family owned, insured and bonded, and a 48-hour satisfaction guarantee on every job.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
@@ -172,7 +172,7 @@ export default function DeepCleaningShorewoodPage() {
       <section className="bg-white border-b py-5 px-4">
         <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-6 text-sm text-gray-700 font-medium">
           <span>✅ Family Owned &amp; Operated</span>
-          <span>✅ Eco-Friendly Products</span>
+          <span>✅ Background-Checked Team</span>
           <span>✅ Insured &amp; Bonded</span>
           <span>✅ 48-Hour Satisfaction Guarantee</span>
         </div>
@@ -188,7 +188,7 @@ export default function DeepCleaningShorewoodPage() {
             Our deep cleaning service is built for homes that need more than a quick pass. We spend real time in each room. In the kitchen that means behind the stovetop grates and inside the microwave. In the bathrooms we scrub grout, disinfect toilets, and polish fixtures. In living areas we dust ceiling fans, wipe baseboards, and clean window sills.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            We use eco-friendly, non-toxic products on every job. Your family and pets are safe. And if anything is not right after we leave, let us know within 48 hours and we will come back to fix it at no charge.
+            If anything is not right after we leave, let us know within 48 hours and we will come back to fix it at no charge.
           </p>
         </div>
       </section>
@@ -227,9 +227,9 @@ export default function DeepCleaningShorewoodPage() {
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="font-bold text-gray-800 mb-2">Eco-Friendly Products</h3>
+              <h3 className="font-bold text-gray-800 mb-2">Eco-Friendly Option</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                We use plant-based, non-toxic cleaning products on every job. Safe for kids, pets, and sensitive surfaces. You will not come home to a chemical smell.
+                Prefer eco-friendly products? Add them when you book.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">

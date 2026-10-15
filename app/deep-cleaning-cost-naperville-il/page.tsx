@@ -173,7 +173,7 @@ export default function DeepCleaningCostNapervillePage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["✅ Flat-Rate Pricing", "🚫 No Hidden Fees", "🌿 Eco-Friendly", "👨‍👩‍👧 Family Owned", "⭐ 5-Star Rated"].map(
+            {["✅ Flat-Rate Pricing", "🚫 No Hidden Fees", "🛡️ Insured & Bonded", "👨‍👩‍👧 Family Owned", "⭐ 5-Star Rated"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>

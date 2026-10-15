@@ -15,12 +15,12 @@ import { zipLine } from "@/lib/cityData";
 export const metadata: Metadata = {
   title: { absolute: deepCityTitle("Oak Brook") },
   description:
-    "Professional deep cleaning in Oak Brook, IL. Premium service for luxury homes. Eco-friendly, fully insured, 48-hour satisfaction guarantee. Free quote.",
+    "Professional deep cleaning in Oak Brook, IL. Premium service for luxury homes. Fully insured, 48-hour satisfaction guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-oak-brook-il" },
   openGraph: {
     title: deepCityTitle("Oak Brook"),
     description:
-      "Professional deep cleaning in Oak Brook, IL. Premium service for luxury homes. Eco-friendly, fully insured, 48-hour satisfaction guarantee. Free quote.",
+      "Professional deep cleaning in Oak Brook, IL. Premium service for luxury homes. Fully insured, 48-hour satisfaction guarantee. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning-oak-brook-il",
   },
   twitter: { card: "summary_large_image", title: deepCityTitle("Oak Brook"), images: ["/hero-image.png"] },
@@ -61,7 +61,7 @@ const serviceSchema = {
   },
   provider: { "@id": "https://www.dsmcleaningsolutions.com/#business" },
   description:
-    "Professional deep cleaning for luxury homes in Oak Brook, IL. Careful, detail-oriented service with eco-friendly products.",
+    "Professional deep cleaning for luxury homes in Oak Brook, IL. Careful, detail-oriented service.",
   offers: {
     "@type": "Offer",
     priceCurrency: "USD",
@@ -135,7 +135,7 @@ export default function DeepCleaningOakBrookPage() {
                 Premium deep cleaning for Oak Brook homes. Careful and thorough.
               </p>
               <p className="opacity-90 mb-6 leading-relaxed">
-                DSM Cleaning Solutions brings professional, detail-oriented deep cleaning to Oak Brook, IL. We cover every room with care, using eco-friendly products suited for premium finishes. Fully insured with a 48-hour satisfaction guarantee on every job.
+                DSM Cleaning Solutions brings professional, detail-oriented deep cleaning to Oak Brook, IL. We cover every room with care, using products suited for premium finishes. Fully insured with a 48-hour satisfaction guarantee on every job.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
@@ -172,7 +172,7 @@ export default function DeepCleaningOakBrookPage() {
       <section className="bg-white border-b py-5 px-4">
         <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-6 text-sm text-gray-700 font-medium">
           <span>✅ Family Owned &amp; Operated</span>
-          <span>✅ Eco-Friendly Products</span>
+          <span>✅ Background-Checked Team</span>
           <span>✅ Insured &amp; Bonded</span>
           <span>✅ 48-Hour Satisfaction Guarantee</span>
         </div>
@@ -188,7 +188,7 @@ export default function DeepCleaningOakBrookPage() {
             {zipLine("Oak Brook")} Our deep cleaning goes room by room with no shortcuts. In the kitchen that means inside the microwave and behind the stovetop grates. In the bathrooms it means grout scrubbing and polished fixtures. In bedrooms and living areas we cover baseboards, ceiling fans, window sills, and under furniture.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            We use eco-friendly, non-toxic products and are fully insured. Every job is backed by our 48-hour satisfaction guarantee. If anything is not right, we come back and fix it at no charge.
+            We are fully insured. Every job is backed by our 48-hour satisfaction guarantee. If anything is not right, we come back and fix it at no charge.
           </p>
         </div>
       </section>
@@ -227,9 +227,9 @@ export default function DeepCleaningOakBrookPage() {
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="font-bold text-gray-800 mb-2">Eco-Friendly Products</h3>
+              <h3 className="font-bold text-gray-800 mb-2">Eco-Friendly Option</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                We use plant-based, non-toxic products safe for your family and your home&apos;s finishes. No harsh chemical residue when we leave.
+                Prefer eco-friendly products? Add them when you book.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">

@@ -10,7 +10,7 @@ const city = cities.find((c) => c.slug === "downers-grove-il")!;
 export const metadata: Metadata = {
   title: { absolute: hubCityTitle("Downers Grove") },
   description:
-    "Professional house cleaning in Downers Grove, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Free estimates.",
+    "Professional house cleaning in Downers Grove, IL: deep cleaning, standard & recurring maid service. Family-owned & fully insured. Free estimates.",
   keywords: [
     "house cleaning Downers Grove IL",
     "cleaning service Downers Grove",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: hubCityTitle("Downers Grove"),
     description:
-      "Professional house cleaning in Downers Grove, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Free estimates.",
+      "Professional house cleaning in Downers Grove, IL: deep cleaning, standard & recurring maid service. Family-owned & fully insured. Free estimates.",
     url: "https://www.dsmcleaningsolutions.com/downers-grove-il",
     siteName: "DSM Cleaning Solutions",
     images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: OG_IMAGE_ALT }],
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: hubCityTitle("Downers Grove"),
-    description: "Professional house cleaning in Downers Grove, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured.",
+    description: "Professional house cleaning in Downers Grove, IL: deep cleaning, standard & recurring maid service. Family-owned & fully insured.",
     images: ["/hero-image.png"],
   },
 };
@@ -48,7 +48,7 @@ export default function DownersGrovePage() {
             <div>
               <h2 className="section-heading text-3xl md:text-4xl mb-4">Downers Grove Zip Codes We Serve</h2>
               <p className="text-gray-500 mb-5 leading-relaxed">
-                From the walkable streets near downtown to newer developments in the 60516 zip code, DSM Cleaning Solutions serves every corner of Downers Grove with professional, eco-friendly house cleaning.
+                From the walkable streets near downtown to newer developments in the 60516 zip code, DSM Cleaning Solutions serves every corner of Downers Grove with professional house cleaning.
               </p>
               {/* Zip codes only: the owner cannot confirm any neighborhood names. */}
               <p className="text-gray-700 leading-relaxed">{zipLine("Downers Grove")}</p>

@@ -443,7 +443,8 @@ export default function PricingPage() {
       {/* ─── ADD-ONS ───
           Rendered from lib/addOns.ts, the only source for add-on names, prices
           and services. While the deep cleaning offer runs, the oven line says
-          it is free on deep cleans; <Offer> drops that line when it ends. */}
+          it is free on deep cleans; <Offer> drops that line when it ends. The
+          eco products add-on shows both of its prices: one-time and recurring. */}
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
@@ -463,6 +464,12 @@ export default function PricingPage() {
                       {addOnServicesLabel(a)}
                       {a.note ? `. ${a.note}` : ""}
                     </p>
+                    {a.recurringPrice !== undefined && (
+                      <p className="text-xs text-gray-500 mt-0.5">
+                        {formatPrice(a.price)} per clean for one-time standard, deep and move-in/move-out cleans.{" "}
+                        {formatPrice(a.recurringPrice)} per visit on recurring plans (weekly, every two weeks or monthly).
+                      </p>
+                    )}
                     {a.id === "insideOven" && (
                       <Offer service="deep">
                         <p className="text-xs font-bold mt-0.5" style={{ color: "#E8622A" }}>

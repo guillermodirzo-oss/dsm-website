@@ -170,7 +170,7 @@ export default function BlogPostPage({
                 icon: "📦",
               },
               {
-                label: "Eco-Friendly Cleaning",
+                label: "Eco-Friendly Add-On",
                 href: "/eco-friendly-cleaning",
                 icon: "🌿",
               },

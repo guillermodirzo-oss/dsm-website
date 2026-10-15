@@ -51,8 +51,8 @@ const stats = [
 const values = [
   {
     icon: "🌿",
-    title: "Eco-Friendly Always",
-    desc: "We use non-toxic, biodegradable cleaning products on every job. Safe for your children, safe for your pets, safe for the environment. No exceptions.",
+    title: "Eco-Friendly Option",
+    desc: "Prefer eco-friendly products? Add them when you book.",
   },
   {
     icon: "🛡️",
@@ -109,7 +109,7 @@ export default function AboutPage() {
             name: "DSM Cleaning Solutions",
             url: "https://www.dsmcleaningsolutions.com",
             telephone: "+18152462113",
-            description: "Family-owned, eco-friendly house cleaning service based in Romeoville, IL. Serving Plainfield, Naperville, Bolingbrook, and surrounding Chicago suburbs.",
+            description: "Family-owned house cleaning service based in Romeoville, IL. Serving Plainfield, Naperville, Bolingbrook, and surrounding Chicago suburbs.",
             foundingDate: "2020",
             address: {
               "@type": "PostalAddress",

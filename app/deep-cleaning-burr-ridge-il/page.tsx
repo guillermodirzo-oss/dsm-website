@@ -15,12 +15,12 @@ import { zipLine } from "@/lib/cityData";
 export const metadata: Metadata = {
   title: { absolute: deepCityTitle("Burr Ridge") },
   description:
-    "Professional deep cleaning in Burr Ridge, IL. White-glove service for executive homes. Eco-friendly, fully insured, 48-hour satisfaction guarantee. Free quote.",
+    "Professional deep cleaning in Burr Ridge, IL. White-glove service for executive homes. Fully insured, 48-hour satisfaction guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-burr-ridge-il" },
   openGraph: {
     title: deepCityTitle("Burr Ridge"),
     description:
-      "Professional deep cleaning in Burr Ridge, IL. White-glove service for executive homes. Eco-friendly, fully insured, 48-hour satisfaction guarantee. Free quote.",
+      "Professional deep cleaning in Burr Ridge, IL. White-glove service for executive homes. Fully insured, 48-hour satisfaction guarantee. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning-burr-ridge-il",
   },
   twitter: { card: "summary_large_image", title: deepCityTitle("Burr Ridge"), images: ["/hero-image.png"] },
@@ -61,7 +61,7 @@ const serviceSchema = {
   },
   provider: { "@id": "https://www.dsmcleaningsolutions.com/#business" },
   description:
-    "Professional deep cleaning for executive and luxury homes in Burr Ridge, IL. Detail-oriented service with eco-friendly products.",
+    "Professional deep cleaning for executive and luxury homes in Burr Ridge, IL. Detail-oriented service.",
   offers: {
     "@type": "Offer",
     priceCurrency: "USD",
@@ -135,7 +135,7 @@ export default function DeepCleaningBurrRidgePage() {
                 Professional deep cleaning for Burr Ridge executive homes.
               </p>
               <p className="opacity-90 mb-6 leading-relaxed">
-                DSM Cleaning Solutions brings careful, detail-oriented deep cleaning to Burr Ridge, IL. We treat every home with respect and cover every room thoroughly. Family owned, eco-friendly products, and a 48-hour satisfaction guarantee on every job.
+                DSM Cleaning Solutions brings careful, detail-oriented deep cleaning to Burr Ridge, IL. We treat every home with respect and cover every room thoroughly. Family owned, insured and bonded, and a 48-hour satisfaction guarantee on every job.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
@@ -172,7 +172,7 @@ export default function DeepCleaningBurrRidgePage() {
       <section className="bg-white border-b py-5 px-4">
         <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-6 text-sm text-gray-700 font-medium">
           <span>✅ Family Owned &amp; Operated</span>
-          <span>✅ Eco-Friendly Products</span>
+          <span>✅ Background-Checked Team</span>
           <span>✅ Insured &amp; Bonded</span>
           <span>✅ 48-Hour Satisfaction Guarantee</span>
         </div>
@@ -188,7 +188,7 @@ export default function DeepCleaningBurrRidgePage() {
             {zipLine("Burr Ridge")} Our deep cleaning is room by room with no shortcuts. Kitchen means inside the microwave and a degreased stovetop. Bathrooms mean scrubbed grout and polished fixtures. Living areas mean clean baseboards, dusted ceiling fans, and vacuumed under every piece of furniture.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            We use eco-friendly, non-toxic products and are fully insured. Every job comes with a 48-hour satisfaction guarantee. If anything is not right, we come back and fix it at no charge.
+            We are fully insured. Every job comes with a 48-hour satisfaction guarantee. If anything is not right, we come back and fix it at no charge.
           </p>
         </div>
       </section>
@@ -227,9 +227,9 @@ export default function DeepCleaningBurrRidgePage() {
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="font-bold text-gray-800 mb-2">Eco-Friendly Products</h3>
+              <h3 className="font-bold text-gray-800 mb-2">Eco-Friendly Option</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                We use plant-based, non-toxic products on every job. Safe for your family and gentle on premium finishes. No harsh chemical residue when we leave.
+                Prefer eco-friendly products? Add them when you book.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">

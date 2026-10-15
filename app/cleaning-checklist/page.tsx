@@ -186,7 +186,7 @@ export default function CleaningChecklistPage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["✅ Transparent Checklist", "🌿 Eco-Friendly Products", "🛡️ Insured & Bonded", "✔️ 48-Hr Guarantee", "👨‍👩‍👧 Family Owned"].map(
+            {["✅ Transparent Checklist", "🔍 Background-Checked", "🛡️ Insured & Bonded", "✔️ 48-Hr Guarantee", "👨‍👩‍👧 Family Owned"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -204,7 +204,7 @@ export default function CleaningChecklistPage() {
             you&apos;re paying for.
           </p>
           <p className="text-gray-600 leading-relaxed">
-            Every clean uses professional-grade, non-toxic, eco-friendly products. Every job
+            Prefer eco-friendly products? Add them when you book. Every job
             is backed by our 48-hour satisfaction guarantee.
           </p>
         </div>
@@ -349,7 +349,7 @@ export default function CleaningChecklistPage() {
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
                 📞 (815) 246-2113
               </a>
-              <p className="text-white/80">Flat-rate · Eco-friendly · Insured &amp; bonded · 48-hr guarantee</p>
+              <p className="text-white/80">Flat-rate · Background-checked · Insured &amp; bonded · 48-hr guarantee</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <LeadForm />

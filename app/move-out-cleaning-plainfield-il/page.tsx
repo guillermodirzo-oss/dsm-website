@@ -83,7 +83,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Move-out cleaning in Plainfield, IL built to get your deposit back. DSM Cleaning Solutions serves 60544 & 60585. Landlord-approved, eco-friendly.",
+    "Move-out cleaning in Plainfield, IL built to get your deposit back. DSM Cleaning Solutions serves 60544 & 60585. Landlord-approved.",
 };
 
 const faqSchema = {
@@ -504,7 +504,7 @@ export default function MoveOutCleaningPlainfieldPage() {
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
                 (815) 246-2113
               </a>
-              <p className="text-white/80">Family-owned · Eco-friendly · Insured &amp; bonded · Deposit-back focused</p>
+              <p className="text-white/80">Family-owned · Background-checked · Insured &amp; bonded · Deposit-back focused</p>
             </div>
             <div className="bg-white rounded-2xl p-8 shadow-xl">
               <LeadForm defaultService="Move-In / Move-Out Cleaning" />

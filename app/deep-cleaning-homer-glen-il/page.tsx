@@ -15,12 +15,12 @@ import { zipLine } from "@/lib/cityData";
 export const metadata: Metadata = {
   title: { absolute: deepCityTitle("Homer Glen") },
   description:
-    "Professional deep cleaning in Homer Glen, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
+    "Professional deep cleaning in Homer Glen, IL. DSM Cleaning Solutions: family owned and fully insured. 48-hr satisfaction guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-homer-glen-il" },
   openGraph: {
     title: deepCityTitle("Homer Glen"),
     description:
-      "Professional deep cleaning in Homer Glen, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
+      "Professional deep cleaning in Homer Glen, IL. DSM Cleaning Solutions: family owned and fully insured. 48-hr satisfaction guarantee. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning-homer-glen-il",
   },
   twitter: { card: "summary_large_image", title: deepCityTitle("Homer Glen"), images: ["/hero-image.png"] },
@@ -135,7 +135,7 @@ export default function DeepCleaningHomerGlenPage() {
                 Deep cleaning for Homer Glen homes. We take the time to do it right.
               </p>
               <p className="opacity-90 mb-6 leading-relaxed">
-                DSM Cleaning Solutions serves Homer Glen, IL with thorough, professional deep cleaning. From the grout to the baseboards, we cover every room. Family owned, eco-friendly products, and a 48-hour satisfaction guarantee on every job.
+                DSM Cleaning Solutions serves Homer Glen, IL with thorough, professional deep cleaning. From the grout to the baseboards, we cover every room. Family owned, insured and bonded, and a 48-hour satisfaction guarantee on every job.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
@@ -172,7 +172,7 @@ export default function DeepCleaningHomerGlenPage() {
       <section className="bg-white border-b py-5 px-4">
         <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-6 text-sm text-gray-700 font-medium">
           <span>✅ Family Owned &amp; Operated</span>
-          <span>✅ Eco-Friendly Products</span>
+          <span>✅ Background-Checked Team</span>
           <span>✅ Insured &amp; Bonded</span>
           <span>✅ 48-Hour Satisfaction Guarantee</span>
         </div>
@@ -188,7 +188,7 @@ export default function DeepCleaningHomerGlenPage() {
             Our deep cleaning covers everything in a standard clean plus the spots it skips: grout, baseboards and door frames. In the kitchen we clean inside the microwave, degrease the hood vent, and scrub the sink. In the bathrooms we get into the grout, polish the fixtures, and clean behind the toilet. In bedrooms and living areas we dust ceiling fans, clean window sills, and wipe down every baseboard.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            We use eco-friendly, non-toxic products on every job and stand behind our work with a 48-hour guarantee. If something is not right, let us know and we will come back to fix it at no charge.
+            We stand behind our work with a 48-hour guarantee. If something is not right, let us know and we will come back to fix it at no charge.
           </p>
         </div>
       </section>
@@ -227,9 +227,9 @@ export default function DeepCleaningHomerGlenPage() {
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="font-bold text-gray-800 mb-2">Eco-Friendly Products</h3>
+              <h3 className="font-bold text-gray-800 mb-2">Eco-Friendly Option</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                We use plant-based, non-toxic cleaning products on every job. Safe for your family, your kids, and your pets. No harsh chemical smell when we leave.
+                Prefer eco-friendly products? Add them when you book.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">

@@ -20,12 +20,12 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: { absolute: moveOutCityTitle("Minooka") },
   description:
-    "Move-out cleaning in Minooka, IL. DSM Cleaning Solutions helps you get your deposit back. Eco-friendly, fully insured, 48-hr guarantee. Free estimate.",
+    "Move-out cleaning in Minooka, IL. DSM Cleaning Solutions helps you get your deposit back. Fully insured, 48-hr guarantee. Free estimate.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-minooka-il" },
   openGraph: {
     title: moveOutCityTitle("Minooka"),
     description:
-      "Move-out cleaning in Minooka, IL. DSM Cleaning Solutions helps you get your deposit back. Eco-friendly, fully insured, 48-hr guarantee. Free estimate.",
+      "Move-out cleaning in Minooka, IL. DSM Cleaning Solutions helps you get your deposit back. Fully insured, 48-hr guarantee. Free estimate.",
     url: "https://www.dsmcleaningsolutions.com/move-out-cleaning-minooka-il",
   },
   twitter: { card: "summary_large_image", title: moveOutCityTitle("Minooka"), images: ["/hero-image.png"] },
@@ -84,7 +84,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Move-out cleaning in Minooka, IL. DSM Cleaning Solutions helps you get your deposit back. Eco-friendly, fully insured. Free estimate.",
+    "Move-out cleaning in Minooka, IL. DSM Cleaning Solutions helps you get your deposit back. Fully insured. Free estimate.",
 };
 
 const faqSchema = {
@@ -509,7 +509,7 @@ export default function MoveOutCleaningMinookaPage() {
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
                 (815) 246-2113
               </a>
-              <p className="text-white/80">Family-owned · Eco-friendly · Insured &amp; bonded · Satisfaction guaranteed</p>
+              <p className="text-white/80">Family-owned · Background-checked · Insured &amp; bonded · Satisfaction guaranteed</p>
             </div>
             <div className="bg-white rounded-2xl p-8 shadow-xl">
               <LeadForm defaultService="Move-In / Move-Out Cleaning" />

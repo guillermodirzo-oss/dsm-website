@@ -68,7 +68,7 @@ const faqs = [
   {
     question: "Are there any hidden fees?",
     answer:
-      "No. DSM Cleaning Solutions does not charge hidden fees in Plainfield or anywhere else we serve. The price you're quoted is the price you pay. There are no extra charges for eco-friendly products, travel within our service area, or routine supplies. Add-on services (like inside oven or inside fridge) are discussed and agreed upon before we arrive.",
+      "No. DSM Cleaning Solutions does not charge hidden fees in Plainfield or anywhere else we serve. The price you're quoted is the price you pay. There are no extra charges for travel within our service area or routine supplies. Add-on services (like inside oven or inside fridge) are discussed and agreed upon before we arrive.",
   },
 ];
 
@@ -192,7 +192,7 @@ export default function HouseCleaningCostPlainfield() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["✅ Flat-Rate Pricing", "🚫 No Hidden Fees", "🌿 Eco-Friendly Products", "👨‍👩‍👧 Family Owned", "⭐ 5-Star Rated"].map(
+            {["✅ Flat-Rate Pricing", "🚫 No Hidden Fees", "🛡️ Insured & Bonded", "👨‍👩‍👧 Family Owned", "⭐ 5-Star Rated"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -354,8 +354,7 @@ export default function HouseCleaningCostPlainfield() {
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
             From there, we generate a firm quote using our pricing formula, the same one used
-            for all our Plainfield clients in 60544 and 60585. We do not charge extra for
-            eco-friendly products, and there are no travel fees for Plainfield. Add-on services
+            for all our Plainfield clients in 60544 and 60585. There are no travel fees for Plainfield. Add-on services
             like inside oven, inside fridge, inside cabinets or interior windows (standard cleans
             only) are listed separately and only added if you request them.
           </p>

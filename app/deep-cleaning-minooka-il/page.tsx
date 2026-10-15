@@ -15,12 +15,12 @@ import { zipCodesPhrase, zipLine } from "@/lib/cityData";
 export const metadata: Metadata = {
   title: { absolute: deepCityTitle("Minooka") },
   description:
-    "Professional deep cleaning in Minooka, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
+    "Professional deep cleaning in Minooka, IL. DSM Cleaning Solutions: family owned and fully insured. 48-hr satisfaction guarantee. Free quote.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/deep-cleaning-minooka-il" },
   openGraph: {
     title: deepCityTitle("Minooka"),
     description:
-      "Professional deep cleaning in Minooka, IL. DSM Cleaning Solutions - family owned, eco-friendly, fully insured. 48-hr satisfaction guarantee. Free quote.",
+      "Professional deep cleaning in Minooka, IL. DSM Cleaning Solutions: family owned and fully insured. 48-hr satisfaction guarantee. Free quote.",
     url: "https://www.dsmcleaningsolutions.com/deep-cleaning-minooka-il",
   },
   twitter: { card: "summary_large_image", title: deepCityTitle("Minooka"), images: ["/hero-image.png"] },
@@ -135,7 +135,7 @@ export default function DeepCleaningMinookaPage() {
                 Professional deep cleaning that comes to you in Minooka.
               </p>
               <p className="opacity-90 mb-6 leading-relaxed">
-                DSM Cleaning Solutions serves Minooka, IL with thorough, professional deep cleaning for every room in your home. Family owned, eco-friendly products, and a 48-hour satisfaction guarantee on every job.
+                DSM Cleaning Solutions serves Minooka, IL with thorough, professional deep cleaning for every room in your home. Family owned, insured and bonded, and a 48-hour satisfaction guarantee on every job.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
@@ -172,7 +172,7 @@ export default function DeepCleaningMinookaPage() {
       <section className="bg-white border-b py-5 px-4">
         <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-6 text-sm text-gray-700 font-medium">
           <span>✅ Family Owned &amp; Operated</span>
-          <span>✅ Eco-Friendly Products</span>
+          <span>✅ Background-Checked Team</span>
           <span>✅ Insured &amp; Bonded</span>
           <span>✅ 48-Hour Satisfaction Guarantee</span>
         </div>
@@ -188,7 +188,7 @@ export default function DeepCleaningMinookaPage() {
             Our deep cleaning goes room by room with no shortcuts. Kitchen cleaning means inside the microwave and degreasing the hood vent, not just wiping the counters. Bathroom cleaning means scrubbing grout lines and disinfecting every surface. Living areas get dusted ceiling fans, clean baseboards, and vacuumed under furniture.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            We use eco-friendly, non-toxic products on every job and back every clean with a 48-hour satisfaction guarantee. If anything is not right, we come back and fix it at no charge.
+            We back every clean with a 48-hour satisfaction guarantee. If anything is not right, we come back and fix it at no charge.
           </p>
         </div>
       </section>
@@ -228,9 +228,9 @@ export default function DeepCleaningMinookaPage() {
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="font-bold text-gray-800 mb-2">Eco-Friendly Products</h3>
+              <h3 className="font-bold text-gray-800 mb-2">Eco-Friendly Option</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                We use plant-based, non-toxic products on every job. Safe for your family and pets. No harsh chemical smell left behind when we are done.
+                Prefer eco-friendly products? Add them when you book.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">

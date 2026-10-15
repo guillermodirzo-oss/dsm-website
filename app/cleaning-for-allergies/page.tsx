@@ -6,12 +6,12 @@ import { OG_IMAGE_ALT } from "@/lib/workPhotos";
 export const metadata: Metadata = {
   title: "Allergy Friendly Cleaning Service Romeoville & Plainfield IL",
   description:
-    "Allergy-friendly house cleaning in Romeoville and Plainfield IL. Non-toxic products, trained cleaners. DSM Cleaning Solutions.",
+    "Allergy-friendly house cleaning in Romeoville and Plainfield IL. Trained cleaners, eco-friendly products available as an add-on. DSM Cleaning Solutions.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/cleaning-for-allergies" },
   openGraph: {
     title: "Allergy Friendly Cleaning Service Romeoville & Plainfield IL | DSM Cleaning Solutions",
     description:
-      "Allergy-friendly house cleaning in Romeoville and Plainfield IL. Non-toxic products, trained cleaners. DSM Cleaning Solutions.",
+      "Allergy-friendly house cleaning in Romeoville and Plainfield IL. Trained cleaners, eco-friendly products available as an add-on. DSM Cleaning Solutions.",
     url: "https://www.dsmcleaningsolutions.com/cleaning-for-allergies",
     siteName: "DSM Cleaning Solutions",
     images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: OG_IMAGE_ALT }],
@@ -26,17 +26,17 @@ const faqs = [
   {
     question: "Do you offer allergy-friendly cleaning?",
     answer:
-      "Yes, allergy-friendly cleaning is built into every service DSM Cleaning Solutions provides. We use non-toxic, biodegradable, fragrance-free compatible products that reduce indoor allergens rather than adding new chemical irritants to your home. We serve allergy sufferers throughout Romeoville, Plainfield, Naperville, Bolingbrook, and the southwest Chicago suburbs.",
+      "Yes. Every clean goes after the dust, pet dander and other allergens that build up between visits. We serve allergy sufferers throughout Romeoville, Plainfield, Naperville, Bolingbrook, and the southwest Chicago suburbs.",
   },
   {
     question: "What products do you use that are safe for allergy sufferers?",
     answer:
-      "We use professional-grade, non-toxic cleaning products that are free from synthetic fragrances, ammonia, bleach, VOCs (volatile organic compounds), and other common chemical irritants. These products clean and disinfect effectively without triggering fragrance sensitivities, respiratory reactions, or skin irritation. For clients with severe allergies, we can discuss fragrance-free options specifically.",
+      "Yes, as an option. If you'd like eco-friendly, non-toxic products for your clean, just add them when you book. You'll see the price before you confirm.",
   },
   {
     question: "Can professional cleaning help with asthma?",
     answer:
-      "Yes, professional allergy-friendly cleaning can meaningfully reduce asthma triggers in Illinois homes. Dust mites, pet dander, mold spores, and pollen that accumulates on surfaces are all common asthma triggers that build up between cleanings. Regular professional cleaning using non-toxic, low-VOC products removes these triggers without introducing new chemical irritants from harsh conventional cleaners.",
+      "Yes, professional allergy-friendly cleaning can meaningfully reduce asthma triggers in Illinois homes. Dust mites, pet dander, mold spores, and pollen that accumulates on surfaces are all common asthma triggers that build up between cleanings. Regular professional cleaning removes these triggers before they build up.",
   },
   {
     question: "How often should allergy sufferers get their home cleaned?",
@@ -46,7 +46,7 @@ const faqs = [
   {
     question: "Do you serve allergy sufferers in Romeoville and Naperville?",
     answer:
-      "Yes, DSM Cleaning Solutions serves allergy-sensitive households throughout Romeoville, Naperville, Plainfield, Bolingbrook, Joliet, Lockport, Homer Glen, Lemont, New Lenox, Shorewood, Minooka, and Westmont. Our entire service area receives the same non-toxic, allergy-conscious cleaning standard at the same pricing.",
+      "Yes, DSM Cleaning Solutions serves allergy-sensitive households throughout Romeoville, Naperville, Plainfield, Bolingbrook, Joliet, Lockport, Homer Glen, Lemont, New Lenox, Shorewood, Minooka, and Westmont. Our entire service area receives the same cleaning standard at the same pricing.",
   },
 ];
 
@@ -71,7 +71,7 @@ const serviceSchema = {
   },
   areaServed: ["Romeoville, IL", "Plainfield, IL", "Naperville, IL", "Bolingbrook, IL", "Joliet, IL"],
   description:
-    "Allergy-friendly house cleaning for families with asthma and sensitivities. Non-toxic products, allergen-reduction techniques. Southwest Chicago suburbs.",
+    "Allergy-friendly house cleaning for families with asthma and sensitivities. Allergen-reduction techniques. Southwest Chicago suburbs.",
 };
 
 const faqSchema = {
@@ -103,18 +103,16 @@ const allergens = [
 const techniques = [
   { title: "Top-Down Dusting", desc: "We always dust from ceiling to floor: ceiling fans first, then furniture, before vacuuming. This prevents displaced allergens from resettling. Light fixtures are part of a deep clean." },
   { title: "HEPA-Friendly Vacuuming", desc: "Thorough vacuuming of all carpets, rugs, and upholstery. Baseboards and the floor under and behind furniture, where allergens accumulate most, are part of a deep clean." },
-  { title: "Non-Toxic Disinfection", desc: "We disinfect bathrooms and kitchens using products that eliminate mold, bacteria, and viruses without VOCs or synthetic fragrances that can trigger reactions." },
+  { title: "Bathroom & Kitchen Cleaning", desc: "Bathrooms and kitchens cleaned on every visit, including the soap scum and mildew in showers and tubs." },
   { title: "Mold-Risk Area Focus", desc: "Bathrooms, window sills and basement areas receive specific attention for mold prevention, a key allergy trigger in midwest homes. Inside window glass is part of a deep clean." },
-  { title: "Fragrance-Free Options", desc: "Many cleaning products contain synthetic fragrances that trigger migraines and fragrance sensitivities. We can work entirely fragrance-free on request." },
+  { title: "Vents and Cobwebs", desc: "Kitchen and bathroom vents wiped and cobwebs removed, so less dust circulates through the house." },
   { title: "Dander Removal Technique", desc: "Special attention to pet dander areas in multi-pet homes, with allergen-reduction focused cleaning in bedrooms and living areas." },
 ];
 
 const whoBenefits = [
   { condition: "Seasonal Allergies (Hay Fever)", desc: "Regular cleaning reduces pollen and outdoor allergens tracked inside, providing relief during Illinois spring and fall seasons." },
-  { condition: "Asthma", desc: "Reduces dust mites, pet dander, and mold (the three most common household asthma triggers) while avoiding chemical cleaners that irritate airways." },
+  { condition: "Asthma", desc: "Reduces dust mites, pet dander, and mold, the three most common household asthma triggers." },
   { condition: "Pet Allergies", desc: "For families who love their pets but struggle with dander, consistent professional cleaning reduces the allergen load throughout the home." },
-  { condition: "Chemical Sensitivities (MCS)", desc: "Our non-toxic, fragrance-free options are ideal for individuals with multiple chemical sensitivities who react to standard cleaning product fumes." },
-  { condition: "Eczema & Skin Irritation", desc: "No harsh chemical residue on floors and surfaces, important for individuals whose skin is sensitive to conventional cleaning product contact." },
 ];
 
 const citiesServed = [
@@ -153,8 +151,7 @@ export default function CleaningForAllergiesPage() {
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               Allergy-friendly cleaning service that reduces dust mites, pet dander, mold spores,
-              and pollen, using non-toxic, hypoallergenic products that don&apos;t trade one irritant
-              for another. DSM Cleaning Solutions serves allergy and asthma sufferers across the
+              and pollen. DSM Cleaning Solutions serves allergy and asthma sufferers across the
               southwest Chicago suburbs. Fully insured and family-owned.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -169,7 +166,7 @@ export default function CleaningForAllergiesPage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["🌿 Hypoallergenic Products", "🚫 No Harsh Fumes", "🛡️ Insured & Bonded", "👨‍👩‍👧 Family Owned", "⭐ 5-Star Rated"].map(
+            {["🔍 Background-Checked Team", "✅ 48-Hour Guarantee", "🛡️ Insured & Bonded", "👨‍👩‍👧 Family Owned", "⭐ 5-Star Rated"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -198,7 +195,7 @@ export default function CleaningForAllergiesPage() {
           </p>
           <p className="text-gray-600 leading-relaxed">
             The solution isn&apos;t just cleaning more frequently. It&apos;s cleaning with the
-            right products and the right techniques. DSM Cleaning Solutions specializes in both.
+            right techniques, the ones that target allergens. That&apos;s what DSM Cleaning Solutions does.
           </p>
         </div>
       </section>
@@ -264,26 +261,12 @@ export default function CleaningForAllergiesPage() {
         </div>
       </section>
 
-      {/* NON-TOXIC PRODUCTS */}
+      {/* ECO-FRIENDLY PRODUCTS: an add-on, not standard (owner, October 2026) */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading mb-6">Non-Toxic Hypoallergenic Products We Use</h2>
-          <p className="text-gray-600 mb-4 leading-relaxed">
-            Every product DSM Cleaning Solutions uses is selected to minimize allergen exposure,
-            not just clean surfaces. Our products are free from:
-          </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
-            {["Synthetic fragrances", "Ammonia", "Chlorine bleach", "Formaldehyde", "VOCs", "Phosphates", "Triclosan", "Parabens", "Phthalates"].map((item) => (
-              <div key={item} className="flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2">
-                <span className="text-red-500 font-bold text-lg">✗</span>
-                <span className="text-sm text-gray-700">{item}</span>
-              </div>
-            ))}
-          </div>
+          <h2 className="section-heading mb-6">Eco-Friendly Products, If You Want Them</h2>
           <p className="text-gray-600 leading-relaxed">
-            Instead, we use plant-derived, biodegradable formulas that disinfect and clean
-            without irritating airways, skin, or eyes. For clients with the most severe
-            sensitivities, we offer fully fragrance-free service upon request at no extra charge.
+            Our regular cleans use our standard products. Prefer eco-friendly products? Add them when you book.
           </p>
         </div>
       </section>
@@ -294,8 +277,7 @@ export default function CleaningForAllergiesPage() {
           <h2 className="section-heading mb-6">Allergy-Friendly Cleaning Across the Southwest Suburbs</h2>
           <p className="text-gray-600 mb-6 leading-relaxed">
             DSM Cleaning Solutions provides allergy-friendly cleaning throughout the southwest
-            Chicago suburbs. Every home we clean receives the same non-toxic, allergen-reducing
-            standard, no matter which city you live in:
+            Chicago suburbs. Every home we clean receives the same allergen-reducing standard, no matter which city you live in:
           </p>
           <div className="flex flex-wrap gap-3 mb-6">
             {citiesServed.map((city) => (
@@ -341,8 +323,8 @@ export default function CleaningForAllergiesPage() {
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Cleaning Services</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <Link href="/eco-friendly-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Eco-Friendly Cleaning</h3>
-              <p className="text-sm text-gray-600">Our full green cleaning service across the southwest suburbs.</p>
+              <h3 className="font-bold text-gray-900 mb-1">Eco-Friendly Add-On</h3>
+              <p className="text-sm text-gray-600">How to add eco-friendly products to any clean.</p>
             </Link>
             <Link href="/deep-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning</h3>
@@ -350,7 +332,7 @@ export default function CleaningForAllergiesPage() {
             </Link>
             <Link href="/pet-friendly-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Pet-Friendly Cleaning</h3>
-              <p className="text-sm text-gray-600">Safe cleaning for homes with dogs and cats, from pet dander specialists.</p>
+              <p className="text-sm text-gray-600">Cleaning for homes with dogs and cats, from pet dander specialists.</p>
             </Link>
             <Link href="/contact" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Get a Free Quote</h3>
@@ -367,14 +349,14 @@ export default function CleaningForAllergiesPage() {
             <div className="text-white">
               <h2 className="text-4xl font-bold mb-4">Book Allergy-Friendly Cleaning Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                Breathe easier in your own home. Non-toxic, hypoallergenic cleaning that reduces
-                dust mites, pet dander, mold, and pollen, without chemical fumes. Serving
+                Breathe easier in your own home. Cleaning that reduces dust mites, pet dander, mold,
+                and pollen. Serving
                 Romeoville, Plainfield, Naperville, and all southwest suburbs.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
                 📞 (815) 246-2113
               </a>
-              <p className="text-white/80">🌿 Hypoallergenic · 🚫 No harsh fumes · 🛡️ Insured &amp; bonded · 👨‍👩‍👧 Family owned</p>
+              <p className="text-white/80">🔍 Background-checked · ✅ 48-hour guarantee · 🛡️ Insured &amp; bonded · 👨‍👩‍👧 Family owned</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <LeadForm />

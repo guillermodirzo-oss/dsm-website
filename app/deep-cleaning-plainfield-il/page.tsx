@@ -262,8 +262,7 @@ export default function DeepCleaningPlainfieldPage() {
           </p>
           <p className="text-gray-600 leading-relaxed">
             Getting ready for spring, cleaning up before guests arrive, or just want a real clean after
-            months of normal use? Our Plainfield deep cleaning service gets it done. We use eco-friendly,
-            non-toxic products. Safe for your kids and pets.
+            months of normal use? Our Plainfield deep cleaning service gets it done.
           </p>
         </div>
       </section>
@@ -302,8 +301,8 @@ export default function DeepCleaningPlainfieldPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
               </div>
-              <h3 className="font-bold text-gray-900 text-base mb-2">Safe for Your Kids &amp; Pets</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">We use non-toxic, biodegradable products on every job. No harsh chemicals, no fumes. Your family can be back in the house right after we leave.</p>
+              <h3 className="font-bold text-gray-900 text-base mb-2">Eco-Friendly Option</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Prefer eco-friendly products? Add them when you book.</p>
             </div>
 
             {/* Benefit 2 */}
@@ -487,7 +486,7 @@ export default function DeepCleaningPlainfieldPage() {
               >
                 (815) 246-2113
               </a>
-              <p className="text-white/80 text-sm">Family-owned · Eco-friendly · Insured &amp; bonded · Satisfaction guaranteed</p>
+              <p className="text-white/80 text-sm">Family-owned · Background-checked · Insured &amp; bonded · Satisfaction guaranteed</p>
             </div>
 
             {/* Right column — custom form */}

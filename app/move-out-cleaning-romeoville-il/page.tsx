@@ -20,11 +20,11 @@ export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: { absolute: moveOutCityTitle("Romeoville") },
-  description: `Trusted move-out cleaning in Romeoville by DSM Cleaning Solutions. 5-star rated, ${REVIEW_COUNT} reviews, 48-hr guarantee. Eco-friendly, fully insured. Free quote.`,
+  description: `Trusted move-out cleaning in Romeoville by DSM Cleaning Solutions. 5-star rated, ${REVIEW_COUNT} reviews, 48-hr guarantee. Fully insured. Free quote.`,
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/move-out-cleaning-romeoville-il" },
   openGraph: {
     title: moveOutCityTitle("Romeoville"),
-    description: `Trusted move-out cleaning in Romeoville by DSM Cleaning Solutions. 5-star rated, ${REVIEW_COUNT} reviews, 48-hr guarantee. Eco-friendly, fully insured. Free quote.`,
+    description: `Trusted move-out cleaning in Romeoville by DSM Cleaning Solutions. 5-star rated, ${REVIEW_COUNT} reviews, 48-hr guarantee. Fully insured. Free quote.`,
     url: "https://www.dsmcleaningsolutions.com/move-out-cleaning-romeoville-il",
   },
   twitter: { card: "summary_large_image", title: moveOutCityTitle("Romeoville"), images: ["/hero-image.png"] },
@@ -83,7 +83,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Move-out & move-in cleaning in Romeoville, IL (60446). DSM Cleaning Solutions, locally owned, deposit-back guarantee, eco-friendly products.",
+    "Move-out & move-in cleaning in Romeoville, IL (60446). DSM Cleaning Solutions, locally owned, deposit-back guarantee.",
 };
 
 const faqSchema = {
@@ -327,7 +327,7 @@ export default function MoveOutCleaningRomeovillePage() {
           </p>
           <p className="text-gray-600 leading-relaxed">
             We also serve Romeoville landlords preparing units for new tenants and homeowners getting
-            ready to sell. Every job uses eco-friendly, non-toxic products and is backed by our
+            ready to sell. Every job is backed by our
             48-hour satisfaction guarantee, because your Romeoville deposit matters, and so does
             our reputation in this community.
           </p>
@@ -505,7 +505,7 @@ export default function MoveOutCleaningRomeovillePage() {
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
                 (815) 246-2113
               </a>
-              <p className="text-white/80">Locally based · Eco-friendly · Insured &amp; bonded · Deposit-back focused</p>
+              <p className="text-white/80">Locally based · Background-checked · Insured &amp; bonded · Deposit-back focused</p>
             </div>
             <div className="bg-white rounded-2xl p-8 shadow-xl">
               <LeadForm defaultService="Move-In / Move-Out Cleaning" />

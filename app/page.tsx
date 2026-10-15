@@ -67,14 +67,14 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "DSM Cleaning Solutions | House Cleaning Romeoville & Plainfield IL",
     description:
-      "Professional house cleaning in Romeoville, Plainfield, Naperville & Bolingbrook IL. Family owned, eco-friendly & insured. Free estimate.",
+      "Professional house cleaning in Romeoville, Plainfield, Naperville & Bolingbrook IL. Family owned & insured. Free estimate.",
     images: ["/hero-image.png"],
   },
 };
 
 // Three services, not nine. Standard, recurring and one-time are the same
-// service at different frequencies, and eco-friendly products are used on
-// every job, so neither earned its own card. The six pages dropped from here
+// service at different frequencies, and eco-friendly products are an add-on
+// for any of them, so neither earned its own card. The six pages dropped from here
 // keep their internal links in the footer.
 //
 // Each card closes with a line from a real review. reviewExcerpt() throws at
@@ -128,7 +128,7 @@ const services = [
 const faqs = [
   { question: "How much does house cleaning cost in Romeoville, IL?", answer: `Standard cleaning starts at ${STANDARD_FROM} for a 1-bedroom home. Deep cleans start at ${DEEP_FROM} and move-out cleans start at ${MOVEOUT_FROM}. Your price depends on bedrooms, bathrooms and square footage, and we confirm the exact total with you before anything is booked.` },
   { question: "Are you insured and bonded?", answer: "Yes. DSM Cleaning Solutions is fully insured and bonded. You can have complete peace of mind knowing your home and belongings are protected every time we clean." },
-  { question: "Do you use eco-friendly cleaning products?", answer: "Absolutely. We use non-toxic, eco-friendly cleaning products that are safe for children, pets, and the environment. Our green cleaning approach delivers a deep clean without harsh chemicals." },
+  { question: "Do you use eco-friendly cleaning products?", answer: "Yes, as an option. If you'd like eco-friendly, non-toxic products for your clean, just add them when you book. You'll see the price before you confirm." },
   { question: "Can I book cleaning online?", answer: "Yes. You can book online and see real available dates instantly, or call us at (815) 246-2113. We often have same-week availability." },
   { question: "What areas do you serve?", answer: "We're based in Romeoville and clean homes across the southwest and west suburbs: Romeoville, Plainfield, Naperville, Bolingbrook, Joliet, Lockport, Shorewood, New Lenox, Lemont, Homer Glen, Westmont, Hinsdale, Oak Brook, Downers Grove, Burr Ridge, and Minooka. Not sure if we come to you? Give us a call at (815) 246-2113." },
   { question: "What is your satisfaction guarantee?", answer: "Your satisfaction is our top priority. If you're not completely happy with our cleaning, let us know within 48 hours and we'll return to re-clean the area at no additional charge." },
@@ -250,7 +250,7 @@ export default function HomePage() {
             {[
               { icon: "👨‍👩‍👧", label: "Family Owned", desc: "Local & personal service" },
               { icon: "🛡️", label: "Insured & Bonded", desc: "Background-checked, drug-tested team" },
-              { icon: "🌿", label: "Eco-Friendly", desc: "Safe for kids & pets" },
+              { icon: "🔍", label: "Background-Checked Team", desc: "Every cleaner verified before entering your home" },
               { icon: "✅", label: "Satisfaction Guaranteed", desc: "Tell us within 48 hours, we fix it free" },
             ].map((item) => (
               <div key={item.label} className="flex flex-col items-center gap-2 p-4">
@@ -319,7 +319,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 relative">
             {[
               { step: "01", title: "Book Online", desc: "Fill out our quick form or call us. Tell us about your home and we'll confirm fast.", icon: "📋" },
-              { step: "02", title: "We Show Up", desc: "Our professional, background-checked team arrives on time with all eco-friendly supplies.", icon: "🚗" },
+              { step: "02", title: "We Show Up", desc: "Our professional, background-checked team arrives on time with all the supplies.", icon: "🚗" },
               { step: "03", title: "You Relax", desc: "Come home to a spotlessly clean house. Satisfaction guaranteed. We'll make it right.", icon: "😊" },
             ].map((item, i) => (
               <div key={item.step} className="relative text-center group">
@@ -433,9 +433,7 @@ export default function HomePage() {
                 la Cache Museum or along Romeo Lake, we&apos;re your true local neighbors.
               </p>
               <p className="text-gray-500 mb-8 leading-relaxed">
-                Our commitment to eco-friendly cleaning means we use non-toxic, biodegradable products that are
-                safe for children, pets, and the environment, because Romeoville families deserve a clean home
-                they can feel good about.
+                Prefer eco-friendly products? Add them when you book.
               </p>
 
               <div className="grid grid-cols-2 gap-4 mb-8">
@@ -650,7 +648,7 @@ export default function HomePage() {
 
           {/* Trust badges */}
           <div className="flex flex-wrap justify-center gap-3 mb-10">
-            {["✓ Free Estimates", "✓ 48-Hour Satisfaction Guarantee", "✓ Insured & Bonded", "✓ Eco-Friendly", "✓ Family-Owned"].map((item) => (
+            {["✓ Free Estimates", "✓ 48-Hour Satisfaction Guarantee", "✓ Insured & Bonded", "✓ Background-Checked Team", "✓ Family-Owned"].map((item) => (
               <span key={item} className="bg-white/15 backdrop-blur-sm border border-white/20 text-white text-sm font-medium px-4 py-1.5 rounded-full">
                 {item}
               </span>

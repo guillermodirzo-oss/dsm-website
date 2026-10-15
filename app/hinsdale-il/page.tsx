@@ -10,7 +10,7 @@ const city = cities.find((c) => c.slug === "hinsdale-il")!;
 export const metadata: Metadata = {
   title: { absolute: hubCityTitle("Hinsdale") },
   description:
-    "Premium house cleaning in Hinsdale, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Free estimates.",
+    "Premium house cleaning in Hinsdale, IL: deep cleaning, standard & recurring maid service. Family-owned & fully insured. Free estimates.",
   keywords: [
     "house cleaning Hinsdale IL",
     "cleaning service Hinsdale",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: hubCityTitle("Hinsdale"),
     description:
-      "Premium house cleaning in Hinsdale, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured. Free estimates.",
+      "Premium house cleaning in Hinsdale, IL: deep cleaning, standard & recurring maid service. Family-owned & fully insured. Free estimates.",
     url: "https://www.dsmcleaningsolutions.com/hinsdale-il",
     siteName: "DSM Cleaning Solutions",
     images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: OG_IMAGE_ALT }],
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: hubCityTitle("Hinsdale"),
-    description: "Premium house cleaning in Hinsdale, IL: deep cleaning, standard & recurring maid service. Family-owned, eco-friendly & fully insured.",
+    description: "Premium house cleaning in Hinsdale, IL: deep cleaning, standard & recurring maid service. Family-owned & fully insured.",
     images: ["/hero-image.png"],
   },
 };
@@ -48,7 +48,7 @@ export default function HinsdalePage() {
             <div>
               <h2 className="section-heading text-3xl md:text-4xl mb-4">Hinsdale Zip Codes We Serve</h2>
               <p className="text-gray-500 mb-5 leading-relaxed">
-                From historic homes to wooded estates, DSM Cleaning Solutions provides professional, eco-friendly cleaning throughout every neighborhood in this prestigious DuPage County community.
+                From historic homes to wooded estates, DSM Cleaning Solutions provides professional cleaning throughout every neighborhood in this prestigious DuPage County community.
               </p>
               {/* Zip codes only: the owner cannot confirm any neighborhood names. */}
               <p className="text-gray-700 leading-relaxed">{zipLine("Hinsdale")}</p>

@@ -79,16 +79,16 @@ export const cities: CityData[] = [
     state: "IL",
     zips: CITY_ZIPS.Naperville,
     distance: "about 14 miles from our Romeoville base",
-    tagline: "Trusted house cleaning for Naperville families. Local, eco-friendly, fully insured.",
+    tagline: "Trusted house cleaning for Naperville families. Local, family-owned, fully insured.",
     localIntro: [
-      "Naperville is consistently ranked as one of the best places to live in America, and its residents expect the best. DSM Cleaning Solutions brings professional, eco-friendly house cleaning to Naperville families who want a spotless home without the hassle.",
+      "Naperville is consistently ranked as one of the best places to live in America, and its residents expect the best. DSM Cleaning Solutions brings professional house cleaning to Naperville families who want a spotless home without the hassle.",
       "As a locally owned company based just 14 miles away in Romeoville, we understand the Naperville community. We're not a national franchise with a call center. We're your southwest suburban neighbors, and we treat your home with the care it deserves.",
       "From established neighborhoods near the Riverwalk and Centennial Beach area to newer developments in the 60563, 60564, and 60565 zip codes, we serve all of Naperville with the same high standard of professional cleaning.",
     ],
     whyChoose: [
       "Local company based just 14 miles away in Romeoville",
       "Fully insured and bonded, so your Naperville home is protected",
-      "Eco-friendly, non-toxic products safe for kids and pets",
+      "The same team on every recurring visit",
       "Family-owned with a personal, attentive touch",
       "48-hour satisfaction guarantee on every clean",
       "Flexible weekly, biweekly, or monthly scheduling",
@@ -118,8 +118,8 @@ export const cities: CityData[] = [
       },
       {
         icon: "🌿",
-        title: "Eco-Friendly Cleaning Naperville",
-        desc: "Green cleaning using non-toxic, biodegradable products, safe for your Naperville family and the environment.",
+        title: "Eco-Friendly Add-On",
+        desc: "Prefer eco-friendly products? Add them when you book.",
         link: "/eco-friendly-cleaning",
       },
       {
@@ -153,7 +153,7 @@ export const cities: CityData[] = [
       {
         question: "Do you use eco-friendly cleaning products in Naperville homes?",
         answer:
-          "Absolutely. We use non-toxic, biodegradable cleaning products on every job. Safe for children, pets, and the environment. Perfect for Naperville families.",
+          "Yes, as an option. If you'd like eco-friendly, non-toxic products for your clean, just add them when you book. You'll see the price before you confirm.",
       },
     ],
     nearbyAreas: [
@@ -175,12 +175,12 @@ export const cities: CityData[] = [
     localIntro: [
       "Bolingbrook is right next door to our home base in Romeoville, which means faster response times, same-week availability, and a team that truly knows the community. DSM Cleaning Solutions serves both Bolingbrook zip codes, 60440 and 60490, with the same professional care.",
       "Whether you're near the Promenade Bolingbrook shopping area, a family home near Hidden Lakes, or an established neighborhood off Weber Road, we service all of Bolingbrook with meticulous attention to detail. Our proximity means we can often accommodate last-minute requests that national companies can't.",
-      "Bolingbrook families appreciate our eco-friendly approach (safe for kids and pets) and our straightforward, honest pricing. No hidden fees, no bait-and-switch. Just a consistently excellent clean, every time.",
+      "Bolingbrook families appreciate our straightforward, honest pricing. No hidden fees, no bait-and-switch. Just a consistently excellent clean, every time.",
     ],
     whyChoose: [
       "Based just 5 miles away, with the fastest response times in the area",
       "Fully insured and bonded, so your home is protected",
-      "Eco-friendly products safe for families and pets",
+      "The same team on every recurring visit",
       "Family-owned with a genuine personal touch",
       "Satisfaction guarantee: we'll make it right",
       "Same-week and last-minute availability",
@@ -213,8 +213,8 @@ export const cities: CityData[] = [
       },
       {
         icon: "🌿",
-        title: "Eco-Friendly Cleaning Bolingbrook",
-        desc: "Green cleaning using non-toxic, biodegradable products, safe for your Bolingbrook family and the environment.",
+        title: "Eco-Friendly Add-On",
+        desc: "Prefer eco-friendly products? Add them when you book.",
         link: "/eco-friendly-cleaning",
       },
       {
@@ -248,7 +248,7 @@ export const cities: CityData[] = [
       {
         question: "Do you bring your own cleaning supplies to Bolingbrook?",
         answer:
-          "Yes, we bring all eco-friendly, non-toxic cleaning supplies to every job. Nothing required from you.",
+          "Yes, we bring all cleaning supplies to every job. Nothing required from you.",
       },
     ],
     nearbyAreas: [
@@ -266,16 +266,16 @@ export const cities: CityData[] = [
     state: "IL",
     zips: CITY_ZIPS.Joliet,
     distance: "about 10 miles from our Romeoville base",
-    tagline: "Trusted professional cleaning for Joliet families. Eco-friendly, insured, satisfaction guaranteed.",
+    tagline: "Trusted professional cleaning for Joliet families. Family-owned, insured, satisfaction guaranteed.",
     localIntro: [
-      "Joliet is one of the largest and most diverse cities in the Chicago metro area, and DSM Cleaning Solutions is proud to serve its families with professional, eco-friendly house cleaning. Based just 10 miles away in Romeoville, we understand this community.",
-      "From the historic neighborhoods on the east side to growing residential areas in the southwest, we serve all of Joliet across its multiple zip codes. Our team is background-checked, professional, and brings all eco-friendly supplies to every job.",
+      "Joliet is one of the largest and most diverse cities in the Chicago metro area, and DSM Cleaning Solutions is proud to serve its families with professional house cleaning. Based just 10 miles away in Romeoville, we understand this community.",
+      "From the historic neighborhoods on the east side to growing residential areas in the southwest, we serve all of Joliet across its multiple zip codes. Our team is background-checked, professional, and brings all supplies to every job.",
       "Joliet homeowners choose DSM because we're local, accountable, and genuinely care about the quality of our work. We're not a faceless national franchise. We're your neighbors, and your satisfaction is personal to us.",
     ],
     whyChoose: [
       "Local company just 10 miles from Joliet in Romeoville",
       "Fully insured and bonded for complete protection",
-      "Eco-friendly, non-toxic cleaning products",
+      "The same team on every recurring visit",
       "Family-owned business with personal accountability",
       "Satisfaction guarantee on every single visit",
       "Flexible scheduling: weekly, biweekly, monthly",
@@ -305,8 +305,8 @@ export const cities: CityData[] = [
       },
       {
         icon: "🌿",
-        title: "Eco-Friendly Cleaning Joliet",
-        desc: "Green cleaning using non-toxic, biodegradable products, safe for your Joliet family and the environment.",
+        title: "Eco-Friendly Add-On",
+        desc: "Prefer eco-friendly products? Add them when you book.",
         link: "/eco-friendly-cleaning",
       },
       {
@@ -330,7 +330,7 @@ export const cities: CityData[] = [
       {
         question: "What cleaning services are available in Joliet, IL?",
         answer:
-          "Full range: standard, deep, move-out/in, recurring, apartment, eco-friendly.",
+          "Full range: standard, deep, move-out/in, recurring, and apartment.",
       },
       {
         question: "How much does house cleaning cost in Joliet?",
@@ -340,7 +340,7 @@ export const cities: CityData[] = [
       {
         question: "Do you bring your own cleaning supplies to Joliet?",
         answer:
-          "Yes, we bring all eco-friendly, non-toxic supplies to every job. Nothing required from you.",
+          "Yes, we bring all supplies to every job. Nothing required from you.",
       },
     ],
     nearbyAreas: [
@@ -358,16 +358,16 @@ export const cities: CityData[] = [
     state: "IL",
     zips: CITY_ZIPS.Westmont,
     distance: "about 20 miles from our Romeoville base",
-    tagline: "Professional house cleaning in Westmont, IL. Family-owned, eco-friendly, fully insured.",
+    tagline: "Professional house cleaning in Westmont, IL. Family-owned and fully insured.",
     localIntro: [
-      "Westmont is a welcoming village in DuPage County, and its residents deserve professional cleaning they can trust. DSM Cleaning Solutions brings eco-friendly, family-owned house cleaning service to Westmont homeowners.",
+      "Westmont is a welcoming village in DuPage County, and its residents deserve professional cleaning they can trust. DSM Cleaning Solutions brings family-owned house cleaning service to Westmont homeowners.",
       "We travel from our Romeoville base to serve Westmont because our clients here have come to rely on our consistency, professionalism, and genuine care for their homes. Every visit follows the same thorough checklist. No shortcuts.",
       "From single-family homes to condos throughout the 60559 zip code, we handle all types of residences in Westmont with equal attention to detail.",
     ],
     whyChoose: [
       "Family-owned company based in the southwest suburbs",
       "Fully insured and bonded, so your home is protected",
-      "Non-toxic, eco-friendly cleaning products",
+      "The same team on every recurring visit",
       "Consistent results on every visit, no shortcuts",
       "Satisfaction guaranteed or we return at no charge",
       "Flexible scheduling to fit your lifestyle",
@@ -397,8 +397,8 @@ export const cities: CityData[] = [
       },
       {
         icon: "🌿",
-        title: "Eco-Friendly Cleaning Westmont",
-        desc: "Green cleaning using non-toxic, biodegradable products, safe for your Westmont family and the environment.",
+        title: "Eco-Friendly Add-On",
+        desc: "Prefer eco-friendly products? Add them when you book.",
         link: "/eco-friendly-cleaning",
       },
       {
@@ -422,7 +422,7 @@ export const cities: CityData[] = [
       {
         question: "What services do you offer in Westmont?",
         answer:
-          "Standard, deep, move-out/in, recurring maid service, apartment cleaning, eco-friendly cleaning.",
+          "Standard, deep, move-out/in, recurring maid service, and apartment cleaning.",
       },
       {
         question: "How much does house cleaning cost in Westmont, IL?",
@@ -455,16 +455,16 @@ export const cities: CityData[] = [
     state: "IL",
     zips: CITY_ZIPS.Lockport,
     distance: "about 8 miles from our Romeoville base",
-    tagline: "Professional house cleaning in Lockport, IL. Local, trusted, eco-friendly.",
+    tagline: "Professional house cleaning in Lockport, IL. Local, trusted, family-owned.",
     localIntro: [
-      "Lockport is a growing Will County community with a mix of established neighborhoods and newer residential developments. DSM Cleaning Solutions is proud to serve Lockport homeowners with professional, eco-friendly house cleaning just 8 miles from our Romeoville base.",
+      "Lockport is a growing Will County community with a mix of established neighborhoods and newer residential developments. DSM Cleaning Solutions is proud to serve Lockport homeowners with professional house cleaning just 8 miles from our Romeoville base.",
       "Lockport families appreciate our local roots, transparent pricing, and the care we bring to every home. We're not a franchise. We're a family-owned business that takes every job personally.",
       "From homes near the I&M Canal corridor to newer developments in the 60491 area, we clean all types of residences in Lockport with the same meticulous attention to detail.",
     ],
     whyChoose: [
       "Local: just 8 miles from Lockport in Romeoville",
       "Fully insured and bonded",
-      "Eco-friendly, non-toxic products",
+      "The same team on every recurring visit",
       "Family-owned, personally accountable",
       "48-hour satisfaction guarantee",
       "Flexible recurring or one-time service",
@@ -494,8 +494,8 @@ export const cities: CityData[] = [
       },
       {
         icon: "🌿",
-        title: "Eco-Friendly Cleaning Lockport",
-        desc: "Green cleaning using non-toxic, biodegradable products, safe for your Lockport family and the environment.",
+        title: "Eco-Friendly Add-On",
+        desc: "Prefer eco-friendly products? Add them when you book.",
         link: "/eco-friendly-cleaning",
       },
       {
@@ -514,7 +514,7 @@ export const cities: CityData[] = [
       {
         question: "What cleaning services are available in Lockport?",
         answer:
-          "Standard, deep, move-out/in, recurring, and eco-friendly.",
+          "Standard, deep, move-out/in, and recurring.",
       },
       {
         question: "Are you insured to clean in Lockport?",
@@ -552,16 +552,16 @@ export const cities: CityData[] = [
     state: "IL",
     zips: CITY_ZIPS.Lemont,
     distance: "about 12 miles from our Romeoville base",
-    tagline: "Professional house cleaning in Lemont, IL. Trusted by local families, eco-friendly, fully insured.",
+    tagline: "Professional house cleaning in Lemont, IL. Trusted by local families, fully insured.",
     localIntro: [
-      "Lemont is one of the most picturesque villages in the southwest suburbs, and its homeowners maintain high standards for their properties. DSM Cleaning Solutions brings professional, eco-friendly house cleaning to Lemont families who want a spotless home.",
+      "Lemont is one of the most picturesque villages in the southwest suburbs, and its homeowners maintain high standards for their properties. DSM Cleaning Solutions brings professional house cleaning to Lemont families who want a spotless home.",
       "Based just 12 miles away in Romeoville, we're a true neighbor to Lemont. We understand the community, the neighborhoods, and what local families expect from a professional cleaning service.",
       "Whether your home overlooks the Des Plaines River Valley or sits anywhere else in town, we bring the same thorough, detail-oriented approach to every clean in the 60439 zip code.",
     ],
     whyChoose: [
       "Local company just 12 miles away in Romeoville",
       "Fully insured and bonded",
-      "Eco-friendly, non-toxic cleaning products",
+      "The same team on every recurring visit",
       "Family-owned with a personal touch",
       "Satisfaction guaranteed on every visit",
       "Flexible scheduling options",
@@ -591,8 +591,8 @@ export const cities: CityData[] = [
       },
       {
         icon: "🌿",
-        title: "Eco-Friendly Cleaning Lemont",
-        desc: "Green cleaning using non-toxic, biodegradable products, safe for your Lemont family and the environment.",
+        title: "Eco-Friendly Add-On",
+        desc: "Prefer eco-friendly products? Add them when you book.",
         link: "/eco-friendly-cleaning",
       },
       {
@@ -611,12 +611,12 @@ export const cities: CityData[] = [
       {
         question: "What services are available in Lemont?",
         answer:
-          "Standard, deep, move-out/in, recurring, and eco-friendly.",
+          "Standard, deep, move-out/in, and recurring.",
       },
       {
         question: "Are your products safe for children and pets?",
         answer:
-          "Yes, all products are eco-friendly, non-toxic, and biodegradable. Safe for the whole family.",
+          "Yes, as an option. If you'd like eco-friendly, non-toxic products for your clean, just add them when you book. You'll see the price before you confirm.",
       },
       {
         question: "How much does cleaning cost in Lemont, IL?",
@@ -649,16 +649,15 @@ export const cities: CityData[] = [
     state: "IL",
     zips: CITY_ZIPS["Homer Glen"],
     distance: "about 9 miles from our Romeoville base",
-    tagline: "Professional house cleaning in Homer Glen, IL. Family-owned, eco-friendly, fully insured.",
+    tagline: "Professional house cleaning in Homer Glen, IL. Family-owned and fully insured.",
     localIntro: [
-      "Homer Glen is a beautiful Will County village known for its spacious homes, wooded lots, and strong sense of community. DSM Cleaning Solutions is proud to serve Homer Glen families with professional, eco-friendly house cleaning.",
+      "Homer Glen is a beautiful Will County village known for its spacious homes, wooded lots, and strong sense of community. DSM Cleaning Solutions is proud to serve Homer Glen families with professional house cleaning.",
       "Based just 9 miles away in Romeoville, we're a local company that understands Homer Glen's neighborhoods and the standards its residents expect. From large homes on wooded lots to newer construction, we handle all property types.",
-      "Our Homer Glen clients especially appreciate our eco-friendly product line: non-toxic and biodegradable, safe for families with kids, pets, and everyone in between.",
     ],
     whyChoose: [
       "Local: just 9 miles from Homer Glen in Romeoville",
       "Fully insured and bonded",
-      "Eco-friendly products safe for families with kids & pets",
+      "The same team on every recurring visit",
       "Family-owned with personal accountability",
       "Satisfaction guaranteed every visit",
       "Flexible one-time or recurring scheduling",
@@ -688,8 +687,8 @@ export const cities: CityData[] = [
       },
       {
         icon: "🌿",
-        title: "Eco-Friendly Cleaning Homer Glen",
-        desc: "Green cleaning using non-toxic, biodegradable products, safe for your Homer Glen family and the environment.",
+        title: "Eco-Friendly Add-On",
+        desc: "Prefer eco-friendly products? Add them when you book.",
         link: "/eco-friendly-cleaning",
       },
       {
@@ -713,7 +712,7 @@ export const cities: CityData[] = [
       {
         question: "What services are available in Homer Glen?",
         answer:
-          "Standard, deep, move-out/in, recurring, eco-friendly.",
+          "Standard, deep, move-out/in, and recurring.",
       },
       {
         question: "How do I get a cleaning quote in Homer Glen?",
@@ -746,16 +745,16 @@ export const cities: CityData[] = [
     state: "IL",
     zips: CITY_ZIPS["New Lenox"],
     distance: "about 14 miles from our Romeoville base",
-    tagline: "Professional house cleaning in New Lenox, IL. Trusted, eco-friendly, fully insured.",
+    tagline: "Professional house cleaning in New Lenox, IL. Trusted, family-owned, fully insured.",
     localIntro: [
-      "New Lenox is one of the fastest-growing communities in Will County, with beautiful residential neighborhoods and a strong family-oriented community. DSM Cleaning Solutions is proud to serve New Lenox homeowners with professional, eco-friendly cleaning.",
+      "New Lenox is one of the fastest-growing communities in Will County, with beautiful residential neighborhoods and a strong family-oriented community. DSM Cleaning Solutions is proud to serve New Lenox homeowners with professional cleaning.",
       "We travel from our Romeoville base to serve New Lenox because local families here have come to trust our consistency, professionalism, and genuine care. As a family-owned business, we treat every New Lenox home as if it were our own.",
       "Whether you're in an established neighborhood or one of the newer developments throughout New Lenox, we deliver the same high-quality clean to every home in the 60451 zip code.",
     ],
     whyChoose: [
       "Family-owned company from neighboring Romeoville",
       "Fully insured and bonded for full protection",
-      "Eco-friendly, non-toxic cleaning products",
+      "The same team on every recurring visit",
       "Consistent results every visit, guaranteed",
       "Flexible scheduling: weekly, biweekly, monthly",
       "One-time or recurring, no contract required",
@@ -785,8 +784,8 @@ export const cities: CityData[] = [
       },
       {
         icon: "🌿",
-        title: "Eco-Friendly Cleaning New Lenox",
-        desc: "Green cleaning using non-toxic, biodegradable products, safe for your New Lenox family and the environment.",
+        title: "Eco-Friendly Add-On",
+        desc: "Prefer eco-friendly products? Add them when you book.",
         link: "/eco-friendly-cleaning",
       },
       {
@@ -805,7 +804,7 @@ export const cities: CityData[] = [
       {
         question: "What services are available in New Lenox?",
         answer:
-          "Standard, deep, move-out/in, recurring, eco-friendly, apartment.",
+          "Standard, deep, move-out/in, recurring, and apartment.",
       },
       {
         question: "Is there a contract for recurring service in New Lenox?",
@@ -820,7 +819,7 @@ export const cities: CityData[] = [
       {
         question: "Do you bring supplies to New Lenox?",
         answer:
-          "Yes, we bring all eco-friendly, non-toxic cleaning supplies. Nothing required from you.",
+          "Yes, we bring all cleaning supplies. Nothing required from you.",
       },
       {
         question: "What parts of New Lenox does DSM serve?",
@@ -843,16 +842,16 @@ export const cities: CityData[] = [
     state: "IL",
     zips: CITY_ZIPS.Shorewood,
     distance: "about 10 miles from our Romeoville base",
-    tagline: "Professional house cleaning in Shorewood, IL. Local, eco-friendly, family-owned.",
+    tagline: "Professional house cleaning in Shorewood, IL. Local and family-owned.",
     localIntro: [
-      "Shorewood is a growing Will County village with a welcoming community and a mix of established and newer neighborhoods. DSM Cleaning Solutions serves Shorewood homeowners with professional, eco-friendly house cleaning from our base just 10 miles away.",
-      "As a family-owned business, we bring a personal level of care to every Shorewood home we clean. Our team is professional, background-checked, and equipped with eco-friendly, non-toxic cleaning products safe for your whole family.",
+      "Shorewood is a growing Will County village with a welcoming community and a mix of established and newer neighborhoods. DSM Cleaning Solutions serves Shorewood homeowners with professional house cleaning from our base just 10 miles away.",
+      "As a family-owned business, we bring a personal level of care to every Shorewood home we clean. Our team is professional and background-checked.",
       "From established homes to newer builds throughout the 60404 zip code, we deliver consistent, thorough cleaning that Shorewood families can count on.",
     ],
     whyChoose: [
       "Local: based just 10 miles away in Romeoville",
       "Fully insured and bonded",
-      "Non-toxic, eco-friendly cleaning products",
+      "The same team on every recurring visit",
       "Family-owned business with a personal touch",
       "Satisfaction guaranteed on every clean",
       "Flexible recurring or one-time options",
@@ -882,8 +881,8 @@ export const cities: CityData[] = [
       },
       {
         icon: "🌿",
-        title: "Eco-Friendly Cleaning Shorewood",
-        desc: "Green cleaning using non-toxic, biodegradable products, safe for your Shorewood family and the environment.",
+        title: "Eco-Friendly Add-On",
+        desc: "Prefer eco-friendly products? Add them when you book.",
         link: "/eco-friendly-cleaning",
       },
       {
@@ -902,7 +901,7 @@ export const cities: CityData[] = [
       {
         question: "What services are available in Shorewood?",
         answer:
-          "Standard, deep, move-out/in, recurring, eco-friendly.",
+          "Standard, deep, move-out/in, and recurring.",
       },
       {
         question: "How often can you clean my Shorewood home?",
@@ -940,16 +939,16 @@ export const cities: CityData[] = [
     state: "IL",
     zips: CITY_ZIPS["Burr Ridge"],
     distance: "about 22 miles from our Romeoville base",
-    tagline: "White-glove deep cleaning for Burr Ridge's executive homes. Detail-oriented, eco-friendly, fully insured.",
+    tagline: "White-glove deep cleaning for Burr Ridge's executive homes. Detail-oriented and fully insured.",
     localIntro: [
       "Burr Ridge is one of the Chicago area's most prestigious residential communities: a village of executive estates, custom builds, and meticulous homeowners who hold every detail to a high standard. DSM Cleaning Solutions brings professional, white-glove deep cleaning to Burr Ridge homes that match those expectations.",
       "Located along the Route 83 corridor between Hinsdale and Willowbrook, Burr Ridge homes tend toward the larger end: spacious square footage, formal dining rooms, finished basements, and multiple full baths. Our deep cleaning process is designed for exactly this type of property: thorough, methodical, and never rushed.",
-      "Wherever you are in Burr Ridge, our team arrives fully equipped with professional-grade, eco-friendly products and a detailed checklist built for large, high-end homes.",
+      "Wherever you are in Burr Ridge, our team arrives fully equipped with professional-grade products and a detailed checklist built for large, high-end homes.",
     ],
     whyChoose: [
       "Experienced cleaning team for large executive homes",
       "Fully insured and bonded, so your luxury home is protected",
-      "Eco-friendly, non-toxic products safe for the whole family",
+      "The same team on every recurring visit",
       "Detail-oriented approach built for high-end properties",
       "48-hour satisfaction guarantee on every deep clean",
       "Flexible scheduling, Mon to Sun, 7am to 9pm",
@@ -962,7 +961,7 @@ export const cities: CityData[] = [
       { icon: "🧹", title: "Deep Cleaning in Burr Ridge", desc: "Detailed deep cleaning for Burr Ridge executive homes, from the range hood to the last baseboard.", link: "/deep-cleaning-burr-ridge-il" },
       { icon: "📦", title: "Move-Out Cleaning Burr Ridge", desc: "Comprehensive move-out cleaning designed to satisfy even the most detail-oriented buyers and landlords.", link: "/move-out-cleaning-burr-ridge-il" },
       { icon: "📅", title: "Recurring Maid Service Burr Ridge", desc: "Consistent, scheduled cleaning plans for Burr Ridge homes. Your team, your schedule.", link: "/recurring-cleaning" },
-      { icon: "🌿", title: "Eco-Friendly Cleaning Burr Ridge", desc: "Green cleaning using non-toxic products, safe for your Burr Ridge family and the environment.", link: "/eco-friendly-cleaning" },
+      { icon: "🌿", title: "Eco-Friendly Add-On", desc: "Prefer eco-friendly products? Add them when you book.", link: "/eco-friendly-cleaning" },
       { icon: "🏢", title: "Apartment Cleaning Burr Ridge", desc: "Professional apartment and condo cleaning for Burr Ridge properties.", link: "/apartment-cleaning" },
     ],
     faqs: [
@@ -994,16 +993,16 @@ export const cities: CityData[] = [
     state: "IL",
     zips: CITY_ZIPS.Hinsdale,
     distance: "about 23 miles from our Romeoville base",
-    tagline: "White-glove deep cleaning for Hinsdale's historic and luxury homes. Fully insured, eco-friendly, satisfaction guaranteed.",
+    tagline: "White-glove deep cleaning for Hinsdale's historic and luxury homes. Fully insured, satisfaction guaranteed.",
     localIntro: [
       "Hinsdale is one of the most storied and affluent villages in the Chicago suburbs: a community where classic architecture meets modern renovation, and where homeowners genuinely expect white-glove service. DSM Cleaning Solutions brings that level of care to every deep cleaning job in Hinsdale.",
       "The village's housing stock ranges from century-old frame homes near downtown Hinsdale to sprawling newer construction properties, and our deep cleaning approach is tailored to both. We understand the standards Hinsdale homeowners hold, and we take them personally.",
-      "Whether you're a few blocks from the Metra BNSF commuter line, near Hinsdale Central, or in one of the village's established residential enclaves, DSM arrives fully prepared with eco-friendly, professional-grade products and a room-by-room checklist that leaves nothing behind.",
+      "Whether you're a few blocks from the Metra BNSF commuter line, near Hinsdale Central, or in one of the village's established residential enclaves, DSM arrives fully prepared with professional-grade products and a room-by-room checklist that leaves nothing behind.",
     ],
     whyChoose: [
       "Trusted by Hinsdale homeowners for high-standard deep cleans",
       "Fully insured and bonded, so your Hinsdale home is protected",
-      "Eco-friendly, non-toxic products safe for families",
+      "The same team on every recurring visit",
       "Experienced with both historic and newer construction homes",
       "48-hour satisfaction guarantee on every job",
       "Flexible scheduling, Mon to Sun, 7am to 9pm",
@@ -1016,7 +1015,7 @@ export const cities: CityData[] = [
       { icon: "🧹", title: "Deep Cleaning in Hinsdale", desc: "Deep cleaning for every kind of Hinsdale home, from historic properties to modern builds.", link: "/deep-cleaning-hinsdale-il" },
       { icon: "📦", title: "Move-Out Cleaning Hinsdale", desc: "Detailed move-out cleaning that meets the standards of Hinsdale's buyers, landlords, and agents.", link: "/move-out-cleaning-hinsdale-il" },
       { icon: "📅", title: "Recurring Maid Service Hinsdale", desc: "Consistent, scheduled cleaning plans for Hinsdale homeowners.", link: "/recurring-cleaning" },
-      { icon: "🌿", title: "Eco-Friendly Cleaning Hinsdale", desc: "Non-toxic, biodegradable cleaning products safe for your Hinsdale family.", link: "/eco-friendly-cleaning" },
+      { icon: "🌿", title: "Eco-Friendly Add-On", desc: "Prefer eco-friendly products? Add them when you book.", link: "/eco-friendly-cleaning" },
       { icon: "🏢", title: "Apartment Cleaning Hinsdale", desc: "Professional apartment and condo cleaning throughout Hinsdale.", link: "/apartment-cleaning" },
     ],
     faqs: [
@@ -1048,16 +1047,16 @@ export const cities: CityData[] = [
     state: "IL",
     zips: CITY_ZIPS["Oak Brook"],
     distance: "about 24 miles from our Romeoville base",
-    tagline: "Premium deep cleaning for Oak Brook's luxury homes. Thorough, eco-friendly, satisfaction guaranteed.",
+    tagline: "Premium deep cleaning for Oak Brook's luxury homes. Thorough work, satisfaction guaranteed.",
     localIntro: [
       "Oak Brook is widely regarded as one of the Midwest's most prestigious residential communities: a DuPage County village known for luxury homes, the iconic Oakbrook Center, and homeowners who hold their properties to an exceptional standard. DSM Cleaning Solutions delivers the premium, detail-first deep cleaning that Oak Brook homes deserve.",
-      "From estates near Butler National Golf Club to elegant homes throughout the 60523 zip code, our team approaches every Oak Brook deep cleaning with the same discipline: a methodical room-by-room process, professional-grade eco-friendly products, and zero shortcuts. Premium results, every visit.",
+      "From estates near Butler National Golf Club to elegant homes throughout the 60523 zip code, our team approaches every Oak Brook deep cleaning with the same discipline: a methodical room-by-room process, professional-grade products, and zero shortcuts. Premium results, every visit.",
       "As a family-owned business with roots in the southwest suburbs, we've built our reputation on delivering consistent, high-quality cleaning for demanding homeowners. We're not a franchise with a high turnover rate. We're a dedicated team that values your trust and earns it on every job.",
     ],
     whyChoose: [
       "Premium cleaning for Oak Brook's luxury homes",
       "Fully insured and bonded for complete protection",
-      "Eco-friendly, professional-grade products",
+      "The same team on every recurring visit",
       "Methodical, no-shortcuts deep cleaning process",
       "48-hour satisfaction guarantee",
       "Flexible scheduling, Mon to Sun, 7am to 9pm",
@@ -1067,10 +1066,10 @@ export const cities: CityData[] = [
     neighborhoods: [],
     landmarks: ["Oakbrook Center", "Butler National Golf Club area", "McDonald's campus area", "Oak Brook Park District"],
     services: [
-      { icon: "🧹", title: "Deep Cleaning in Oak Brook", desc: "Careful, eco-friendly deep cleaning for Oak Brook luxury homes, backed by our 48-hour guarantee.", link: "/deep-cleaning-oak-brook-il" },
+      { icon: "🧹", title: "Deep Cleaning in Oak Brook", desc: "Careful deep cleaning for Oak Brook luxury homes, backed by our 48-hour guarantee.", link: "/deep-cleaning-oak-brook-il" },
       { icon: "📦", title: "Move-Out Cleaning Oak Brook", desc: "Comprehensive move-out cleaning for Oak Brook properties, built to satisfy exacting buyer and landlord standards.", link: "/move-out-cleaning-oak-brook-il" },
       { icon: "📅", title: "Recurring Maid Service Oak Brook", desc: "Reliable, scheduled cleaning service for Oak Brook homeowners.", link: "/recurring-cleaning" },
-      { icon: "🌿", title: "Eco-Friendly Cleaning Oak Brook", desc: "Non-toxic, biodegradable cleaning products safe for Oak Brook families.", link: "/eco-friendly-cleaning" },
+      { icon: "🌿", title: "Eco-Friendly Add-On", desc: "Prefer eco-friendly products? Add them when you book.", link: "/eco-friendly-cleaning" },
       { icon: "🏢", title: "Apartment Cleaning Oak Brook", desc: "Professional apartment and condo cleaning throughout Oak Brook.", link: "/apartment-cleaning" },
     ],
     faqs: [
@@ -1102,7 +1101,7 @@ export const cities: CityData[] = [
     state: "IL",
     zips: CITY_ZIPS["Downers Grove"],
     distance: "about 22 miles from our Romeoville base",
-    tagline: "Reliable deep cleaning for Downers Grove families. Thorough, eco-friendly, fully insured.",
+    tagline: "Reliable deep cleaning for Downers Grove families. Thorough and fully insured.",
     localIntro: [
       "Downers Grove is a well-established DuPage County suburb: a community of tree-lined streets, historic homes, newer builds, and busy families who value reliability as much as quality. DSM Cleaning Solutions has become the trusted deep cleaning partner for Downers Grove homeowners who want a thorough clean they can actually count on.",
       "From homes near downtown Downers Grove and the Metra BNSF commuter hub to neighborhoods surrounding Lyman Woods and Belmont Prairie, we serve all of Downers Grove across both zip codes. Our team understands the mix of property types here (everything from classic 1940s bungalows to newer construction in the 60516 area) and adapts our approach accordingly.",
@@ -1111,7 +1110,7 @@ export const cities: CityData[] = [
     whyChoose: [
       "Reliable, detail-oriented cleaning for Downers Grove families",
       "Fully insured and bonded, so your home is fully protected",
-      "Eco-friendly products safe for kids and pets",
+      "The same team on every recurring visit",
       "Experience with both historic and newer builds",
       "48-hour satisfaction guarantee",
       "Flexible scheduling, Mon to Sun, 7am to 9pm",
@@ -1124,7 +1123,7 @@ export const cities: CityData[] = [
       { icon: "🧹", title: "Deep Cleaning in Downers Grove", desc: "Deep cleaning for Downers Grove homes of every age, from bungalows to newer builds.", link: "/deep-cleaning-downers-grove-il" },
       { icon: "📦", title: "Move-Out Cleaning Downers Grove", desc: "Thorough move-out cleaning to help Downers Grove renters and homeowners get their full security deposit back.", link: "/move-out-cleaning-downers-grove-il" },
       { icon: "📅", title: "Recurring Maid Service Downers Grove", desc: "Consistent scheduled cleaning service tailored to your Downers Grove home and schedule.", link: "/recurring-cleaning" },
-      { icon: "🌿", title: "Eco-Friendly Cleaning Downers Grove", desc: "Non-toxic, biodegradable products safe for your Downers Grove family and pets.", link: "/eco-friendly-cleaning" },
+      { icon: "🌿", title: "Eco-Friendly Add-On", desc: "Prefer eco-friendly products? Add them when you book.", link: "/eco-friendly-cleaning" },
       { icon: "🏢", title: "Apartment Cleaning Downers Grove", desc: "Professional apartment and condo cleaning for Downers Grove renters and property managers.", link: "/apartment-cleaning" },
     ],
     faqs: [
@@ -1156,16 +1155,16 @@ export const cities: CityData[] = [
     state: "IL",
     zips: CITY_ZIPS.Minooka,
     distance: "about 18 miles from our Romeoville base",
-    tagline: "Professional house cleaning in Minooka, IL. Trusted local service, eco-friendly, fully insured.",
+    tagline: "Professional house cleaning in Minooka, IL. Trusted local service, fully insured.",
     localIntro: [
-      "Minooka is a growing Grundy and Kendall County community that has seen rapid residential growth in recent years. DSM Cleaning Solutions is proud to extend our professional, eco-friendly house cleaning services to Minooka homeowners.",
+      "Minooka is a growing Grundy and Kendall County community that has seen rapid residential growth in recent years. DSM Cleaning Solutions is proud to extend our professional house cleaning services to Minooka homeowners.",
       "We travel from Romeoville to serve Minooka because local families here deserve professional, accountable cleaning service they can actually rely on. As a family-owned business, we're personally invested in the quality of every job.",
       "From established homes near downtown Minooka to newer developments throughout the 60447 zip code, we bring the same thorough, detailed cleaning approach to every property.",
     ],
     whyChoose: [
       "Family-owned company from the southwest suburbs",
       "Fully insured and bonded",
-      "Eco-friendly, non-toxic cleaning products",
+      "The same team on every recurring visit",
       "Personal accountability on every job",
       "48-hour satisfaction guarantee",
       "Flexible one-time or recurring scheduling",
@@ -1195,8 +1194,8 @@ export const cities: CityData[] = [
       },
       {
         icon: "🌿",
-        title: "Eco-Friendly Cleaning Minooka",
-        desc: "Green cleaning using non-toxic, biodegradable products, safe for your Minooka family and the environment.",
+        title: "Eco-Friendly Add-On",
+        desc: "Prefer eco-friendly products? Add them when you book.",
         link: "/eco-friendly-cleaning",
       },
       {
@@ -1220,7 +1219,7 @@ export const cities: CityData[] = [
       {
         question: "What cleaning services are available in Minooka?",
         answer:
-          "Standard, deep, move-out/in, recurring, eco-friendly.",
+          "Standard, deep, move-out/in, and recurring.",
       },
       {
         question: "How do I book cleaning in Minooka?",
@@ -1253,16 +1252,16 @@ export const cities: CityData[] = [
     state: "IL",
     zips: CITY_ZIPS["Downers Grove"],
     distance: "about 20 miles from our Romeoville base",
-    tagline: "Professional house cleaning in Downers Grove, IL. Local, eco-friendly, fully insured.",
+    tagline: "Professional house cleaning in Downers Grove, IL. Local, family-owned, fully insured.",
     localIntro: [
-      "Downers Grove is one of DuPage County's most desirable communities, known for its walkable downtown, top-rated schools, and beautiful single-family neighborhoods. DSM Cleaning Solutions is proud to bring professional, eco-friendly house cleaning to Downers Grove families who expect the best for their homes.",
+      "Downers Grove is one of DuPage County's most desirable communities, known for its walkable downtown, top-rated schools, and beautiful single-family neighborhoods. DSM Cleaning Solutions is proud to bring professional house cleaning to Downers Grove families who expect the best for their homes.",
       "Based in the southwest suburbs and traveling about 20 miles to serve Downers Grove, our team understands the high standards of this community. From established neighborhoods along Ogden Avenue to newer developments near the 60516 zip code, we deliver consistent, meticulous results every visit.",
-      "Downers Grove homeowners choose DSM because we're a local, family-owned business, not a national franchise. We bring our own non-toxic, biodegradable cleaning supplies, and every job is backed by our 48-hour satisfaction guarantee.",
+      "Downers Grove homeowners choose DSM because we're a local, family-owned business, not a national franchise. We bring our own cleaning supplies, and every job is backed by our 48-hour satisfaction guarantee.",
     ],
     whyChoose: [
       "Family-owned local company, not a faceless franchise",
       "Fully insured and bonded, so your DuPage County home is protected",
-      "Eco-friendly, non-toxic products safe for kids and pets",
+      "The same team on every recurring visit",
       "48-hour satisfaction guarantee on every clean",
       "Flexible scheduling: weekly, biweekly, or monthly",
       "Background-checked, professional cleaning team",
@@ -1292,8 +1291,8 @@ export const cities: CityData[] = [
       },
       {
         icon: "🌿",
-        title: "Eco-Friendly Cleaning Downers Grove",
-        desc: "Green, non-toxic cleaning products safe for your family, pets, and the environment.",
+        title: "Eco-Friendly Add-On",
+        desc: "Prefer eco-friendly products? Add them when you book.",
         link: "/eco-friendly-cleaning",
       },
       {
@@ -1307,7 +1306,7 @@ export const cities: CityData[] = [
       {
         question: "Do you offer house cleaning in Downers Grove, IL?",
         answer:
-          "Yes, we serve all of Downers Grove (60515 & 60516) from our Romeoville base, approximately 20 miles away. Standard, deep, move-out, recurring, and eco-friendly cleaning available.",
+          "Yes, we serve all of Downers Grove (60515 & 60516) from our Romeoville base, approximately 20 miles away. Standard, deep, move-out, and recurring cleaning available.",
       },
       {
         question: "How much does house cleaning cost in Downers Grove?",
@@ -1317,7 +1316,7 @@ export const cities: CityData[] = [
       {
         question: "Do you use eco-friendly products in Downers Grove homes?",
         answer:
-          "Absolutely. All of our cleaning products are non-toxic, biodegradable, and safe for children and pets. No harsh chemicals, no strong fumes.",
+          "Yes, as an option. If you'd like eco-friendly, non-toxic products for your clean, just add them when you book. You'll see the price before you confirm.",
       },
       {
         question: "Are you insured to clean homes in Downers Grove?",
@@ -1350,16 +1349,16 @@ export const cities: CityData[] = [
     state: "IL",
     zips: CITY_ZIPS.Hinsdale,
     distance: "about 22 miles from our Romeoville base",
-    tagline: "Premium house cleaning in Hinsdale, IL. Trusted, eco-friendly, satisfaction guaranteed.",
+    tagline: "Premium house cleaning in Hinsdale, IL. Trusted, family-owned, satisfaction guaranteed.",
     localIntro: [
       "Hinsdale is one of the most prestigious communities in the Chicago suburbs: a village defined by beautiful estates, tree-lined streets, and a close-knit community that values quality above all else. DSM Cleaning Solutions brings that same level of excellence to Hinsdale homeowners who demand nothing but the best.",
-      "We serve Hinsdale's historic neighborhoods and newer luxury homes alike, understanding that a premium home requires premium care. Our eco-friendly, non-toxic cleaning products protect your surfaces and finishes while leaving every room spotless.",
+      "We serve Hinsdale's historic neighborhoods and newer luxury homes alike, understanding that a premium home requires premium care.",
       "As a family-owned business, we treat every Hinsdale home as if it were our own. Our background-checked team arrives on time, brings all supplies, and delivers results that meet the high standards of this exceptional community.",
     ],
     whyChoose: [
       "White-glove service standards matching Hinsdale's expectations",
       "Fully insured and bonded, so premium homes are fully protected",
-      "Eco-friendly, non-toxic products safe for children, pets, and fine finishes",
+      "The same team on every recurring visit",
       "Family-owned business with personal accountability on every job",
       "48-hour satisfaction guarantee: we make it right, period",
       "Flexible scheduling around your Hinsdale lifestyle",
@@ -1389,8 +1388,8 @@ export const cities: CityData[] = [
       },
       {
         icon: "🌿",
-        title: "Eco-Friendly Cleaning Hinsdale",
-        desc: "Non-toxic, biodegradable cleaning products, safe for your family and protective of your home's premium finishes.",
+        title: "Eco-Friendly Add-On",
+        desc: "Prefer eco-friendly products? Add them when you book.",
         link: "/eco-friendly-cleaning",
       },
     ],
@@ -1408,7 +1407,7 @@ export const cities: CityData[] = [
       {
         question: "Are your products safe for premium surfaces and finishes?",
         answer:
-          "Yes, we use non-toxic, biodegradable products specifically chosen to be safe on hardwood floors, natural stone countertops, and other high-end surfaces common in Hinsdale homes.",
+          "Yes, we use products specifically chosen to be safe on hardwood floors, natural stone countertops, and other high-end surfaces common in Hinsdale homes.",
       },
       {
         question: "Will you always send the same team to my Hinsdale home?",
@@ -1436,16 +1435,16 @@ export const cities: CityData[] = [
     state: "IL",
     zips: CITY_ZIPS["Oak Brook"],
     distance: "about 20 miles from our Romeoville base",
-    tagline: "Expert house cleaning in Oak Brook, IL. Professional, eco-friendly, satisfaction guaranteed.",
+    tagline: "Expert house cleaning in Oak Brook, IL. Professional, family-owned, satisfaction guaranteed.",
     localIntro: [
-      "Oak Brook is one of Illinois's premier communities: home to beautiful executive neighborhoods, luxury homes, and the iconic Oak Brook Center. Residents here expect a high standard of service, and DSM Cleaning Solutions delivers exactly that with professional, eco-friendly house cleaning.",
+      "Oak Brook is one of Illinois's premier communities: home to beautiful executive neighborhoods, luxury homes, and the iconic Oak Brook Center. Residents here expect a high standard of service, and DSM Cleaning Solutions delivers exactly that with professional house cleaning.",
       "We serve Oak Brook from our southwest suburban base, understanding that every home here deserves meticulous, detail-oriented care.",
-      "As a family-owned cleaning company, we're accountable for every job in a way a franchise simply isn't. Our background-checked team brings all non-toxic supplies and is fully insured, ensuring your Oak Brook home receives the professional service it deserves.",
+      "As a family-owned cleaning company, we're accountable for every job in a way a franchise simply isn't. Our background-checked team brings all supplies and is fully insured, ensuring your Oak Brook home receives the professional service it deserves.",
     ],
     whyChoose: [
       "Professional service standards suited to Oak Brook's premium homes",
       "Fully insured and bonded for complete protection on every visit",
-      "Eco-friendly, non-toxic products safe for children and pets",
+      "The same team on every recurring visit",
       "Family-owned accountability, not a call-center franchise",
       "48-hour satisfaction guarantee on every clean",
       "Flexible scheduling around your Oak Brook schedule",
@@ -1475,8 +1474,8 @@ export const cities: CityData[] = [
       },
       {
         icon: "🌿",
-        title: "Eco-Friendly Cleaning Oak Brook",
-        desc: "Non-toxic, biodegradable cleaning products, safe for your family and your home's premium finishes.",
+        title: "Eco-Friendly Add-On",
+        desc: "Prefer eco-friendly products? Add them when you book.",
         link: "/eco-friendly-cleaning",
       },
     ],
@@ -1484,7 +1483,7 @@ export const cities: CityData[] = [
       {
         question: "Do you offer house cleaning in Oak Brook, IL?",
         answer:
-          "Yes, we serve all of Oak Brook (60523). Our team is fully insured, brings all eco-friendly supplies, and delivers professional results on every visit.",
+          "Yes, we serve all of Oak Brook (60523). Our team is fully insured, brings all supplies, and delivers professional results on every visit.",
       },
       {
         question: "How much does house cleaning cost in Oak Brook?",
@@ -1494,7 +1493,7 @@ export const cities: CityData[] = [
       {
         question: "Do you clean luxury homes in Oak Brook?",
         answer:
-          "Yes, we have experience with larger executive homes. We use non-toxic products safe on hardwood, natural stone, and other premium surfaces throughout Oak Brook properties.",
+          "Yes, we have experience with larger executive homes. We use products safe on hardwood, natural stone, and other premium surfaces throughout Oak Brook properties.",
       },
       {
         question: "Are you insured to clean in Oak Brook, IL?",
@@ -1527,16 +1526,16 @@ export const cities: CityData[] = [
     state: "IL",
     zips: CITY_ZIPS["Burr Ridge"],
     distance: "about 18 miles from our Romeoville base",
-    tagline: "Professional house cleaning in Burr Ridge, IL. Trusted, eco-friendly, satisfaction guaranteed.",
+    tagline: "Professional house cleaning in Burr Ridge, IL. Trusted, family-owned, satisfaction guaranteed.",
     localIntro: [
-      "Burr Ridge is one of the most sought-after residential communities in DuPage County, known for spacious custom homes, privacy, and a strong sense of community. DSM Cleaning Solutions delivers the professional, eco-friendly house cleaning that Burr Ridge homeowners expect.",
-      "From established neighborhoods to luxury homes, we understand that every Burr Ridge home is unique. Our team brings meticulous attention to detail and high-quality non-toxic products to every job.",
+      "Burr Ridge is one of the most sought-after residential communities in DuPage County, known for spacious custom homes, privacy, and a strong sense of community. DSM Cleaning Solutions delivers the professional house cleaning that Burr Ridge homeowners expect.",
+      "From established neighborhoods to luxury homes, we understand that every Burr Ridge home is unique. Our team brings meticulous attention to detail to every job.",
       "As a family-owned company based in the southwest suburbs, we're proud to serve Burr Ridge families with the same personal accountability that a franchise simply can't provide. Every job is backed by our 48-hour satisfaction guarantee.",
     ],
     whyChoose: [
       "Professional standards matched to Burr Ridge's luxury homes",
       "Fully insured and bonded, so your home is protected on every visit",
-      "Eco-friendly, non-toxic products safe for children, pets, and fine surfaces",
+      "The same team on every recurring visit",
       "Family-owned: personal accountability on every job",
       "48-hour satisfaction guarantee: we make it right",
       "Flexible scheduling: weekly, biweekly, or monthly",
@@ -1566,8 +1565,8 @@ export const cities: CityData[] = [
       },
       {
         icon: "🌿",
-        title: "Eco-Friendly Cleaning Burr Ridge",
-        desc: "Non-toxic, biodegradable products, safe for your family and protective of your home's premium finishes.",
+        title: "Eco-Friendly Add-On",
+        desc: "Prefer eco-friendly products? Add them when you book.",
         link: "/eco-friendly-cleaning",
       },
     ],
@@ -1575,7 +1574,7 @@ export const cities: CityData[] = [
       {
         question: "Do you offer house cleaning in Burr Ridge, IL?",
         answer:
-          "Yes, we serve all of Burr Ridge (60527) from our southwest suburban base. Fully insured, bring all eco-friendly supplies, and offer a satisfaction guarantee on every job.",
+          "Yes, we serve all of Burr Ridge (60527) from our southwest suburban base. Fully insured, bring all supplies, and offer a satisfaction guarantee on every job.",
       },
       {
         question: "How much does house cleaning cost in Burr Ridge?",
@@ -1585,7 +1584,7 @@ export const cities: CityData[] = [
       {
         question: "Are your cleaning products safe for high-end surfaces?",
         answer:
-          "Yes, we use non-toxic, biodegradable products that are safe on hardwood floors, natural stone, and premium finishes throughout Burr Ridge homes.",
+          "Yes, we use products that are safe on hardwood floors, natural stone, and premium finishes throughout Burr Ridge homes.",
       },
       {
         question: "Are you insured to clean homes in Burr Ridge?",

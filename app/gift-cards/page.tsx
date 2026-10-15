@@ -174,7 +174,7 @@ export default function GiftCardsPage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["🎁 Never Expire", "✅ Any Service", "🌿 Eco-Friendly Cleaning", "🛡️ Insured & Bonded", "👨‍👩‍👧 Family Owned"].map(
+            {["🎁 Never Expire", "✅ Any Service", "⭐ 5-Star Rated", "🛡️ Insured & Bonded", "👨‍👩‍👧 Family Owned"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -361,7 +361,7 @@ export default function GiftCardsPage() {
                 📞 (815) 246-2113
               </a>
               <p className="text-white/80 text-sm mb-6">Call to order, same-day processing available</p>
-              <p className="text-white/80">🎁 Never expire · ✅ Any service · 🌿 Eco-friendly cleaning · 🛡️ Insured &amp; bonded</p>
+              <p className="text-white/80">🎁 Never expire · ✅ Any service · ⭐ 5-star rated · 🛡️ Insured &amp; bonded</p>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
               <LeadForm />

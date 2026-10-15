@@ -135,7 +135,7 @@ export default function DeepCleaningDownersGrovePage() {
                 Reliable, thorough deep cleaning for Downers Grove families.
               </p>
               <p className="opacity-90 mb-6 leading-relaxed">
-                DSM Cleaning Solutions serves Downers Grove, IL with professional deep cleaning that covers every room. Eco-friendly products, fully insured, and a 48-hour satisfaction guarantee on every job.
+                DSM Cleaning Solutions serves Downers Grove, IL with professional deep cleaning that covers every room. Family owned, fully insured, and a 48-hour satisfaction guarantee on every job.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
@@ -172,7 +172,7 @@ export default function DeepCleaningDownersGrovePage() {
       <section className="bg-white border-b py-5 px-4">
         <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-6 text-sm text-gray-700 font-medium">
           <span>✅ Family Owned &amp; Operated</span>
-          <span>✅ Eco-Friendly Products</span>
+          <span>✅ Background-Checked Team</span>
           <span>✅ Insured &amp; Bonded</span>
           <span>✅ 48-Hour Satisfaction Guarantee</span>
         </div>
@@ -188,7 +188,7 @@ export default function DeepCleaningDownersGrovePage() {
             Our deep cleaning is not a rush job. We spend real time in each room. In the kitchen we get inside the microwave, degrease the stovetop, and scrub the sink. In bathrooms we scrub grout lines and clean everything from fixtures to floors. In bedrooms and living areas we dust ceiling fans, wipe baseboards, clean window sills, and vacuum under furniture.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            We use eco-friendly, non-toxic products on every job and back our work with a 48-hour satisfaction guarantee. If something is not right, contact us and we will come back to fix it at no charge.
+            We back our work with a 48-hour satisfaction guarantee. If something is not right, contact us and we will come back to fix it at no charge.
           </p>
         </div>
       </section>
@@ -227,9 +227,9 @@ export default function DeepCleaningDownersGrovePage() {
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="font-bold text-gray-800 mb-2">Eco-Friendly Products</h3>
+              <h3 className="font-bold text-gray-800 mb-2">Eco-Friendly Option</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                We use plant-based, non-toxic products on every job. Safe for your family, kids, and pets. No harsh chemical smell when we are done.
+                Prefer eco-friendly products? Add them when you book.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">

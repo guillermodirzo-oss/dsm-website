@@ -10,7 +10,7 @@ const city = cities.find((c) => c.slug === "shorewood-il")!;
 export const metadata: Metadata = {
   title: { absolute: hubCityTitle("Shorewood") },
   description:
-    "Quality house cleaning in Shorewood, IL: deep cleaning, standard & recurring service. Family-owned, eco-friendly & insured. Free estimate.",
+    "Quality house cleaning in Shorewood, IL: deep cleaning, standard & recurring service. Family-owned & insured. Free estimate.",
   keywords: [
     "house cleaning Shorewood IL",
     "cleaning service Shorewood",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: hubCityTitle("Shorewood"),
     description:
-      "Quality house cleaning in Shorewood, IL: deep cleaning, standard & recurring service. Family-owned, eco-friendly & insured. Free estimate.",
+      "Quality house cleaning in Shorewood, IL: deep cleaning, standard & recurring service. Family-owned & insured. Free estimate.",
     url: "https://www.dsmcleaningsolutions.com/shorewood-il",
     siteName: "DSM Cleaning Solutions",
     images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: OG_IMAGE_ALT }],
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: hubCityTitle("Shorewood"),
-    description: "Quality house cleaning in Shorewood, IL: deep cleaning, standard & recurring service. Family-owned, eco-friendly & insured.",
+    description: "Quality house cleaning in Shorewood, IL: deep cleaning, standard & recurring service. Family-owned & insured.",
     images: ["/hero-image.png"],
   },
 };

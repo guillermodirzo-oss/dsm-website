@@ -30,7 +30,7 @@ const faqs = [
   {
     question: "What do your cleaners bring?",
     answer:
-      "Our team brings all cleaning products, microfiber cloths, mops, buckets, and standard cleaning equipment. We use professional-grade, non-toxic, eco-friendly products. You don't need to supply anything. The only thing we ask you to supply is a working vacuum if you prefer we use yours, though we bring our own equipment for most jobs.",
+      "Our team brings all cleaning products, microfiber cloths, mops, buckets, and standard cleaning equipment. You don't need to supply anything. The only thing we ask you to supply is a working vacuum if you prefer we use yours, though we bring our own equipment for most jobs.",
   },
   {
     question: "How do I prepare for my first clean?",
@@ -134,7 +134,7 @@ const processSteps = [
       },
       {
         heading: "What Our Team Brings",
-        body: "Everything. Our team arrives with all cleaning products, microfiber cloths, mops, and equipment. You don't need to provide anything. Our products are professional-grade, non-toxic, and eco-friendly, safe for your family and pets.",
+        body: "Everything. Our team arrives with all cleaning products, microfiber cloths, mops, and equipment. You don't need to provide anything.",
       },
       {
         heading: "How Long It Takes",
@@ -184,7 +184,7 @@ const processSteps = [
 
 const weVsYou = {
   weBring: [
-    "All eco-friendly cleaning products",
+    "All cleaning products",
     "Microfiber cloths and mop heads",
     "Mop, bucket, and cleaning equipment",
     "Trash bags and liner replacements",
@@ -245,7 +245,7 @@ export default function OurCleaningProcessPage() {
       <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["✅ Simple 5-Step Process", "⚡ Same-Day Quotes", "🌿 Eco-Friendly Products", "✔️ 48-Hr Guarantee", "👨‍👩‍👧 Family Owned"].map(
+            {["✅ Simple 5-Step Process", "⚡ Same-Day Quotes", "🛡️ Insured & Bonded", "✔️ 48-Hr Guarantee", "👨‍👩‍👧 Family Owned"].map(
               (item) => <span key={item} className="whitespace-nowrap">{item}</span>
             )}
           </div>
@@ -348,10 +348,9 @@ export default function OurCleaningProcessPage() {
             <div className="bg-brand-green-50 border border-brand-green-100 rounded-xl p-6">
               <h3 className="font-bold text-lg text-gray-900 mb-3">🐾 What to Do With Pets During Cleaning</h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-3">
-                Our products are non-toxic and pet-safe, so your animals do not need to leave
-                the home during cleaning. However, if your pet is anxious around strangers or
-                tends to follow the cleaning team, it helps to have them in a separate room or
-                crate, mainly for their comfort and to make the cleaning process more efficient.
+                If your pet is anxious around strangers or tends to follow the cleaning team, it helps
+                to have them in a separate room or crate, mainly for their comfort and to make the
+                cleaning process more efficient. Prefer eco-friendly products? Add them when you book.
               </p>
               <p className="text-gray-600 text-sm leading-relaxed">
                 Let us know in advance about pets so our team can be prepared, especially if
