@@ -13,24 +13,27 @@ import {
  * Plainfield (a custom hub page) have no entry in `cities` below, so their
  * zip codes live only here.
  *
+ * The owner confirmed every city's zip codes (October 2026): Plainfield has
+ * three, Lockport only 60441 (60491 is Homer Glen's) and Hinsdale only 60521.
+ *
  * The owner cannot confirm any neighborhood or subdivision names (October
  * 2026), so pages state zip codes instead. Never add a neighborhood name
  * anywhere unless the owner confirms DSM cleans there.
  */
 export const CITY_ZIPS = {
   Romeoville: ["60446"],
-  Plainfield: ["60544", "60585"],
+  Plainfield: ["60544", "60585", "60586"],
   Naperville: ["60540", "60563", "60564", "60565"],
   Bolingbrook: ["60440", "60490"],
   Joliet: ["60431", "60432", "60433", "60435", "60436"],
-  Lockport: ["60441", "60491"],
+  Lockport: ["60441"],
   Lemont: ["60439"],
   "Homer Glen": ["60491"],
   "New Lenox": ["60451"],
   Shorewood: ["60404"],
   Westmont: ["60559"],
   Minooka: ["60447"],
-  Hinsdale: ["60521", "60522"],
+  Hinsdale: ["60521"],
   "Oak Brook": ["60523"],
   "Downers Grove": ["60515", "60516"],
   "Burr Ridge": ["60527"],
@@ -52,6 +55,13 @@ export function zipCodesPhrase(city: ZipCity): string {
 }
 
 /** "We clean homes in Joliet zip codes 60431, 60432, 60433, 60435, and 60436." */
+/** "60544, 60585 & 60586", or with last = "and" / "or": "60544, 60585 and 60586". */
+export function zipCodesShort(city: ZipCity, last: "&" | "and" | "or" = "&"): string {
+  const zips = CITY_ZIPS[city];
+  if (zips.length === 1) return zips[0];
+  return `${zips.slice(0, -1).join(", ")} ${last} ${zips[zips.length - 1]}`;
+}
+
 export function zipLine(city: ZipCity): string {
   return `We clean homes in ${city} ${zipCodesPhrase(city)}.`;
 }
@@ -459,7 +469,7 @@ export const cities: CityData[] = [
     localIntro: [
       "Lockport is a growing Will County community with a mix of established neighborhoods and newer residential developments. DSM Cleaning Solutions is proud to serve Lockport homeowners with professional house cleaning just 8 miles from our Romeoville base.",
       "Lockport families appreciate our local roots, transparent pricing, and the care we bring to every home. We're not a franchise. We're a family-owned business that takes every job personally.",
-      "From homes near the I&M Canal corridor to newer developments in the 60491 area, we clean all types of residences in Lockport with the same meticulous attention to detail.",
+      "From homes near the I&M Canal corridor to newer developments across town, we clean all types of residences in Lockport with the same meticulous attention to detail.",
     ],
     whyChoose: [
       "Local: just 8 miles from Lockport in Romeoville",
@@ -469,7 +479,7 @@ export const cities: CityData[] = [
       "48-hour satisfaction guarantee",
       "Flexible recurring or one-time service",
       "Professional, background-checked team",
-      "Serving all of Lockport: 60441 & 60491",
+      `Serving all of Lockport: ${zipCodesShort("Lockport")}`,
     ],
     neighborhoods: [],
     landmarks: ["Illinois & Michigan Canal National Heritage Corridor", "Dellwood Park", "Lockport Historic District", "Will County Courthouse"],
@@ -509,7 +519,7 @@ export const cities: CityData[] = [
       {
         question: "Do you clean homes in Lockport, IL?",
         answer:
-          "Yes, we serve Lockport (60441 & 60491) from our base just 8 miles away in Romeoville.",
+          `Yes, we serve Lockport (${zipCodesShort("Lockport")}) from our base just 8 miles away in Romeoville.`,
       },
       {
         question: "What cleaning services are available in Lockport?",
@@ -1007,7 +1017,7 @@ export const cities: CityData[] = [
       "48-hour satisfaction guarantee on every job",
       "Flexible scheduling, Mon to Sun, 7am to 9pm",
       "Background-checked, professional cleaning team",
-      "Serving all of Hinsdale: 60521 & 60522",
+      `Serving all of Hinsdale: ${zipCodesShort("Hinsdale")}`,
     ],
     neighborhoods: [],
     landmarks: ["Downtown Hinsdale", "Hinsdale Central High School area", "Metra BNSF station area", "Katherine Legge Memorial Park"],
@@ -1363,7 +1373,7 @@ export const cities: CityData[] = [
       "48-hour satisfaction guarantee: we make it right, period",
       "Flexible scheduling around your Hinsdale lifestyle",
       "Background-checked, professional, uniformed team",
-      "Serving all of Hinsdale: 60521 & 60522",
+      `Serving all of Hinsdale: ${zipCodesShort("Hinsdale")}`,
     ],
     neighborhoods: [],
     landmarks: ["Fullersburg Woods Nature Education Center", "Graue Mill", "Downtown Hinsdale", "Katherine Legge Memorial Park"],
@@ -1397,7 +1407,7 @@ export const cities: CityData[] = [
       {
         question: "Do you offer house cleaning in Hinsdale, IL?",
         answer:
-          "Yes, we serve all of Hinsdale (60521 & 60522) from our southwest suburban base. We bring all supplies and are fully insured for every Hinsdale home we clean.",
+          `Yes, we serve all of Hinsdale (${zipCodesShort("Hinsdale")}) from our southwest suburban base. We bring all supplies and are fully insured for every Hinsdale home we clean.`,
       },
       {
         question: "How much does house cleaning cost in Hinsdale?",

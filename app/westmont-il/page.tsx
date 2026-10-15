@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 export default function WestmontPage() {
   return (
     <>
-      <CityPageTemplate city={city} />
+      <CityPageTemplate city={city} ownZipSection />
 
       {/* ZIP CODES & LANDMARKS */}
       <section className="py-16 bg-white border-t border-gray-100">

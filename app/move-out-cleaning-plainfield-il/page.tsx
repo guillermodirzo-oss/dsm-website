@@ -10,7 +10,7 @@ import { MOVEOUT_OFFER } from "@/lib/offers";
 import { MOVE_OUT_PRICING_COPY } from "@/lib/pricingCopy";
 import { MOVE_OUT_TIERS, formatPrice, startingPrice } from "@/lib/pricing";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
-import { zipCodesPhrase, zipLine } from "@/lib/cityData";
+import { zipCodesPhrase, zipCodesShort, zipLine } from "@/lib/cityData";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 
 // Regenerate at most hourly so MOVE75 drops out of the HTML on its own after
@@ -83,7 +83,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Move-out cleaning in Plainfield, IL built to get your deposit back. DSM Cleaning Solutions serves 60544 & 60585. Landlord-approved.",
+    `Move-out cleaning in Plainfield, IL built to get your deposit back. DSM Cleaning Solutions serves ${zipCodesShort("Plainfield")}. Landlord-approved.`,
 };
 
 const faqSchema = {
@@ -497,7 +497,7 @@ export default function MoveOutCleaningPlainfieldPage() {
             <div className="text-white">
               <h2 className="text-4xl font-bold mb-4">Book Your Move-Out Cleaning in Plainfield Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                Moving out in Plainfield, IL? Get your free quote today. We serve all of 60544 and 60585
+                Moving out in Plainfield, IL? Get your free quote today. We serve all of {zipCodesShort("Plainfield", "and")}{" "}
                 and back every move-out job with our satisfaction guarantee. Deposit back, or
                 we re-clean at no charge.
               </p>

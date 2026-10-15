@@ -110,7 +110,7 @@ const moveOutExtras = [
       "Inside refrigerator: full interior clean",
       "Inside oven: full interior scrub",
       "Clean inside the dishwasher",
-      "All appliances inside and out",
+      "Inside the oven, refrigerator, dishwasher and microwave",
       "Wipe closet shelves",
       "Sweep the patio",
     ],

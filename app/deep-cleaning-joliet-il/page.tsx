@@ -9,7 +9,7 @@ import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 import { DEEP_CHECKLIST } from "@/lib/deepChecklist";
-import { zipCodesPhrase, zipLine } from "@/lib/cityData";
+import { zipCodesPhrase, zipCodesShort, zipLine } from "@/lib/cityData";
 
 export const metadata: Metadata = {
   title: { absolute: deepCityTitle("Joliet") },
@@ -402,11 +402,11 @@ export default function DeepCleaningJolietPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <Link href="/deep-cleaning-plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Plainfield</h3>
-              <p className="text-sm text-gray-600">Serving 60544 &amp; 60585.</p>
+              <p className="text-sm text-gray-600">Serving {zipCodesShort("Plainfield")}.</p>
             </Link>
             <Link href="/deep-cleaning-lockport-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Lockport</h3>
-              <p className="text-sm text-gray-600">Serving 60441 &amp; 60491.</p>
+              <p className="text-sm text-gray-600">Serving {zipCodesShort("Lockport")}.</p>
             </Link>
             <Link href="/deep-cleaning-romeoville-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Romeoville</h3>

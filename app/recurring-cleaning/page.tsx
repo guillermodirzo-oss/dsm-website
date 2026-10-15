@@ -89,7 +89,7 @@ const faqs = [
   },
   {
     q: "What's the difference between recurring and deep cleaning?",
-    a: "Recurring cleaning follows the checklist above every visit. It's built to keep a clean home clean. Deep cleaning goes further: it scrubs bathroom grout, wipes baseboards and door frames, and vacuums under and behind furniture. If your home hasn't had that kind of attention in a while, deep cleaning is the better starting point.",
+    a: "Recurring cleaning follows the checklist above every visit. It's built to keep a clean home clean. Deep cleaning goes further: it scrubs bathroom grout, wipes baseboards and door frames, and vacuums under and behind furniture. Many new clients start with a deep clean to get the house caught up, but it's not required. You can start with regular visits.",
   },
   {
     q: "Can I skip or reschedule a visit?",

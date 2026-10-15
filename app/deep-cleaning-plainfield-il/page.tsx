@@ -9,7 +9,7 @@ import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 import { DEEP_CHECKLIST } from "@/lib/deepChecklist";
-import { zipCodesPhrase, zipLine } from "@/lib/cityData";
+import { zipCodesPhrase, zipCodesShort, zipLine } from "@/lib/cityData";
 
 export const metadata: Metadata = {
   title: { absolute: deepCityTitle("Plainfield") },
@@ -86,7 +86,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Professional deep cleaning in Plainfield, IL (60544 & 60585). DSM Cleaning Solutions scrubs every surface, grout line & appliance. Free estimate. (815) 246-2113.",
+    `Professional deep cleaning in Plainfield, IL (${zipCodesShort("Plainfield")}). DSM Cleaning Solutions scrubs every surface, grout line & appliance. Free estimate. (815) 246-2113.`,
 };
 
 const faqSchema = {

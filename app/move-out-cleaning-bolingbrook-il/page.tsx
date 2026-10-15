@@ -10,6 +10,7 @@ import { MOVEOUT_OFFER } from "@/lib/offers";
 import { MOVE_OUT_PRICING_COPY } from "@/lib/pricingCopy";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
+import { zipCodesShort } from "@/lib/cityData";
 
 // Regenerate at most hourly so MOVE75 drops out of the HTML on its own after
 // it ends. <Offer> also hides it in the browser at the deadline. See
@@ -474,7 +475,7 @@ export default function MoveOutCleaningBolingbrookPage() {
             </Link>
             <Link href="/move-out-cleaning-plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning in Plainfield</h3>
-              <p className="text-sm text-gray-600">Serving zip codes 60544 & 60585.</p>
+              <p className="text-sm text-gray-600">Serving zip codes {zipCodesShort("Plainfield")}.</p>
             </Link>
             <Link href="/move-out-cleaning-romeoville-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning in Romeoville</h3>

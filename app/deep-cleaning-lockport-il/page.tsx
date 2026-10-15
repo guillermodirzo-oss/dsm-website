@@ -9,7 +9,7 @@ import { DEEP_CLEANING_PRICING_COPY } from "@/lib/pricingCopy";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 import { DEEP_CHECKLIST } from "@/lib/deepChecklist";
-import { zipCodesPhrase, zipLine } from "@/lib/cityData";
+import { zipCodesPhrase, zipCodesShort, zipLine } from "@/lib/cityData";
 
 export const metadata: Metadata = {
   title: { absolute: deepCityTitle("Lockport") },
@@ -78,7 +78,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "Professional deep cleaning in Lockport, IL (60441 & 60491). DSM Cleaning Solutions scrubs every surface, grout line & appliance. Free estimate. (815) 246-2113.",
+    `Professional deep cleaning in Lockport, IL (${zipCodesShort("Lockport")}). DSM Cleaning Solutions scrubs every surface, grout line & appliance. Free estimate. (815) 246-2113.`,
 };
 
 const faqSchema = {
@@ -406,7 +406,7 @@ export default function DeepCleaningLockportPage() {
             </Link>
             <Link href="/deep-cleaning-plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Plainfield</h3>
-              <p className="text-sm text-gray-600">Serving 60544 &amp; 60585.</p>
+              <p className="text-sm text-gray-600">Serving {zipCodesShort("Plainfield")}.</p>
             </Link>
             <Link href="/deep-cleaning-homer-glen-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Homer Glen</h3>

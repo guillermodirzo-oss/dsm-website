@@ -8,7 +8,7 @@ import ClientStory from "@/components/ClientStory";
 import { CLIENT_STORIES } from "@/lib/localProof";
 import { STANDARD_HIGHLIGHTS } from "@/lib/standardChecklist";
 import { DEEP_ADDITIONS } from "@/lib/deepChecklist";
-import { CITY_ZIPS, zipLine } from "@/lib/cityData";
+import { CITY_ZIPS, zipCodesPhrase, zipCodesShort, zipLine } from "@/lib/cityData";
 import { zipList } from "@/lib/recurringCities";
 
 export const metadata: Metadata = {
@@ -95,7 +95,7 @@ const faqs = [
   {
     question: "Do you serve all of Plainfield, including the newer subdivisions?",
     answer:
-      "Yes, we serve all of Plainfield, IL including newer developments and subdivisions throughout the 60544 and 60585 zip code areas.",
+      `Yes, we serve all of Plainfield, IL including newer developments and subdivisions throughout the ${zipCodesShort("Plainfield", "and")} zip code areas.`,
   },
 ];
 
@@ -232,7 +232,7 @@ export default function PlainfieldPage() {
                 DSM Cleaning Solutions is based right in Romeoville, just minutes from Plainfield. We serve neighborhoods throughout Plainfield. We&apos;re not a national franchise; we&apos;re your local neighbors, and we treat every Plainfield home with the same care we&apos;d want for our own.
               </p>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                Plainfield is one of the fastest-growing communities in the southwest suburbs, and we&apos;re proud to serve its families across zip codes 60544 and 60585. From the Plainfield Historic District area to the newest residential developments, we bring the same high standard of professional cleaning to every home.
+                Plainfield is one of the fastest-growing communities in the southwest suburbs, and we&apos;re proud to serve its families across {zipCodesPhrase("Plainfield")}. From the Plainfield Historic District area to the newest residential developments, we bring the same high standard of professional cleaning to every home.
               </p>
               <p className="text-gray-600 mb-6 leading-relaxed">
                 Whether you&apos;re in a classic home near Route 30 or a newer build in 60585, we show up prepared with everything we need.
@@ -267,7 +267,7 @@ export default function PlainfieldPage() {
                   "Satisfaction guarantee on every clean",
                   "Flexible scheduling: weekly, biweekly, monthly",
                   "Background-checked, professional team",
-                  "Serving all of Plainfield: 60544 &amp; 60585 zip codes",
+                  `Serving all of Plainfield: ${zipCodesShort("Plainfield")} zip codes`,
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <svg className="w-5 h-5 text-brand-green mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
@@ -452,7 +452,7 @@ export default function PlainfieldPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <Link href="/deep-cleaning-plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Plainfield</h3>
-              <p className="text-sm text-gray-600">Deep cleaning for Plainfield homes in 60544 & 60585, grout and baseboards included.</p>
+              <p className="text-sm text-gray-600">Deep cleaning for Plainfield homes in {zipCodesShort("Plainfield")}, grout and baseboards included.</p>
             </Link>
             <Link href="/recurring-cleaning-plainfield-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Recurring Cleaning in Plainfield</h3>
@@ -509,7 +509,7 @@ export default function PlainfieldPage() {
             <div className="text-white">
               <h2 className="text-4xl font-bold mb-4">Book House Cleaning in Plainfield, IL Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                Ready for a spotlessly clean home in Plainfield, IL? Whether you need a one-time deep clean, recurring maid service, or a move-out cleaning, DSM Cleaning Solutions is just a call away. We&apos;ll get back to you fast, and same-week appointments are usually available. Every clean is backed by our 48-hour satisfaction guarantee. Serving all of Plainfield, zip codes 60544 &amp; 60585.
+                Ready for a spotlessly clean home in Plainfield, IL? Whether you need a one-time deep clean, recurring maid service, or a move-out cleaning, DSM Cleaning Solutions is just a call away. We&apos;ll get back to you fast, and same-week appointments are usually available. Every clean is backed by our 48-hour satisfaction guarantee. Serving all of Plainfield, zip codes {zipCodesShort("Plainfield")}.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-brand-green-50 transition-colors mb-6">
                 📞 (815) 246-2113

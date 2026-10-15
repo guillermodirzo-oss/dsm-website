@@ -25,7 +25,9 @@ Romeoville, Plainfield, Naperville, Bolingbrook, Joliet, Lockport, Shorewood, Ne
 
 Romeoville's hub is the homepage (/). Every other city has a hub at /{city}-il.
 
-Zip codes: `CITY_ZIPS` in `lib/cityData.ts` is the only source. Pages say "We clean homes in {City} zip codes {zips}." through `zipLine()`, or name the zips through `zipCodesPhrase()`. Never type a list of neighborhoods or subdivisions; the zip line replaces it. Three cities differ from the owner's reference list (October 2026) and are waiting on the owner: Plainfield (reference also has 60586), Lockport (the file also has 60491, which the reference gives only to Homer Glen) and Hinsdale (the file also has 60522; the reference has 60521 only).
+Zip codes: `CITY_ZIPS` in `lib/cityData.ts` is the only source. Pages say "We clean homes in {City} zip codes {zips}." through `zipLine()`, or name the zips through `zipCodesPhrase()`. Short lists ("60544, 60585 & 60586", or with "and"/"or") come from `zipCodesShort()`. Never type a list of neighborhoods or subdivisions; the zip line replaces it. The owner confirmed every city's zip codes (October 2026): Plainfield 60544, 60585, 60586; Lockport 60441 only (60491 is Homer Glen's); Hinsdale 60521 only.
+
+Each city page shows its zip line once outside the FAQ. The 13 hubs with their own "Zip Codes We Serve" and landmarks section pass `ownZipSection` to `CityPageTemplate`, which then leaves its own zip block out; Bolingbrook has no section of its own, so the template shows its zip line.
 
 ## Core Services
 1. **Standard / Recurring Cleaning** (/recurring-cleaning)
@@ -97,7 +99,7 @@ The owner confirmed exactly what each service includes (October 2026). The lists
 
 **Deep clean adds, on top of everything standard:** baseboards; doors and door frames; grout scrubbing; vacuuming under and behind furniture; inside window glass; light fixtures; degreasing the stovetop, hood vent and burners. Exactly these seven.
 
-**Move-in/move-out adds:** inside the oven, inside the refrigerator, inside all cabinets and drawers, inside the dishwasher ("Clean inside the dishwasher"), closet shelves ("Wipe closet shelves") and the patio ("Sweep the patio"). Sweeping inside the garage is not included: it is an add-on. There is no final walkthrough or inspection with the client (not confirmed by the owner), so never claim one. Sentences about a landlord's or buyer's walkthrough are fine.
+**Move-in/move-out adds:** inside the oven, inside the refrigerator, inside all cabinets and drawers, inside the dishwasher ("Clean inside the dishwasher"), closet shelves ("Wipe closet shelves") and the patio ("Sweep the patio"). Sweeping inside the garage is not included: it is an add-on. There is no final walkthrough or inspection with the client (not confirmed by the owner), so never claim one. Sentences about a landlord's or buyer's walkthrough are fine. For appliances, write "inside the oven, refrigerator, dishwasher and microwave" for move-in/move-out and "inside the microwave" for standard or deep, never "all appliances".
 
 **Add-ons:** `lib/addOns.ts` is the only source, copied from the BookingKoala booking form: inside oven, inside fridge, inside cabinets (empty or full), inside dishwasher, interior windows (standard cleans only), detail baseboards and doors (standard cleans only), extra room (basement), sweep inside garage, homes with pets, eco-friendly green products. The first five are for standard and deep cleans (move-out already includes them); the last four also apply to move-out. Eco-friendly green products is the only add-on with two prices: one-time and recurring (`recurringPrice`). Nothing else is an add-on: no laundry, no exterior windows, no carpet cleaning, no organizing. Every page that names an add-on uses these names.
 

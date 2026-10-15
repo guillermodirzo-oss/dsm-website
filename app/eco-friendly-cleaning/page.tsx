@@ -18,7 +18,7 @@ const RECURRING_PRICE = formatPrice(ECO.recurringPrice ?? ECO.price);
 export const metadata: Metadata = {
   title: "Eco-Friendly Cleaning Romeoville IL",
   description: "Add eco-friendly, non-toxic products to any standard, deep or move-in/move-out clean in Romeoville, IL. Choose the add-on when you book. Insured & bonded.",
-  keywords: ["eco-friendly cleaning Romeoville IL", "green cleaning service Romeoville", "non-toxic house cleaning Romeoville", "natural cleaning service Romeoville IL", "safe cleaning products Romeoville", "organic cleaning Romeoville IL"],
+  keywords: ["eco-friendly cleaning Romeoville IL", "green cleaning service Romeoville", "non-toxic house cleaning Romeoville"],
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/eco-friendly-cleaning" },
   openGraph: {
     title: "Eco-Friendly Cleaning Romeoville IL | DSM Cleaning Solutions",

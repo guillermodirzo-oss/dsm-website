@@ -13,6 +13,7 @@ import {
   type PriceTier,
 } from "@/lib/pricing";
 import { OG_IMAGE_ALT } from "@/lib/workPhotos";
+import { zipCodesPhrase, zipCodesShort } from "@/lib/cityData";
 
 // Unqualified "starting at" claims read the true minimum from the rate card.
 const MOVEOUT_FROM = formatPrice(startingPrice(MOVE_OUT_TIERS));
@@ -63,7 +64,7 @@ const faqs = [
   {
     question: "How do I get an exact quote for Plainfield cleaning?",
     answer:
-      "The fastest way to get an exact quote for your Plainfield home is to fill out our contact form or call (815) 246-2113. We'll ask about your home size (beds and baths), the type of cleaning you need, your zip code (60544 or 60585), and the current condition of your home. Most quotes are provided same-day.",
+      `The fastest way to get an exact quote for your Plainfield home is to fill out our contact form or call (815) 246-2113. We'll ask about your home size (beds and baths), the type of cleaning you need, your zip code (${zipCodesShort("Plainfield", "or")}), and the current condition of your home. Most quotes are provided same-day.`,
   },
   {
     question: "Are there any hidden fees?",
@@ -97,7 +98,7 @@ const serviceSchema = {
     containedInPlace: { "@type": "State", name: "Illinois" },
   },
   description:
-    "House cleaning pricing guide for Plainfield, IL. Standard, deep, and move-out cleaning in 60544 and 60585. Flat-rate pricing, no hidden fees. Free estimate.",
+    `House cleaning pricing guide for Plainfield, IL. Standard, deep, and move-out cleaning in ${zipCodesShort("Plainfield", "and")}. Flat-rate pricing, no hidden fees. Free estimate.`,
 };
 
 const faqSchema = {
@@ -142,7 +143,7 @@ const factors = [
   { icon: "📋", title: "Current Condition", desc: "A home that hasn't been cleaned professionally in months requires more time and effort." },
   { icon: "🔄", title: "Frequency", desc: "Recurring customers (weekly, bi-weekly, monthly) typically receive a lower rate than one-time cleans." },
   { icon: "✨", title: "Add-On Services", desc: "Inside oven, inside fridge, inside cabinets, inside dishwasher and interior windows (standard cleans only) are some of the add-ons." },
-  { icon: "📍", title: "Location in Plainfield", desc: "DSM serves all of Plainfield including 60544 and 60585 with no travel surcharges." },
+  { icon: "📍", title: "Location in Plainfield", desc: `DSM serves all of Plainfield including ${zipCodesShort("Plainfield", "and")} with no travel surcharges.` },
 ];
 
 export default function HouseCleaningCostPlainfield() {
@@ -176,8 +177,8 @@ export default function HouseCleaningCostPlainfield() {
               How Much Does House Cleaning Cost in Plainfield, IL? (2026 Guide)
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              Transparent 2026 pricing for standard, deep, and move-out cleaning across Plainfield
-              zip codes 60544 and 60585. Flat-rate quotes, no hourly surprises. Family-owned and
+              Transparent 2026 pricing for standard, deep, and move-out cleaning across Plainfield{" "}
+              {zipCodesPhrase("Plainfield")}. Flat-rate quotes, no hourly surprises. Family-owned and
               fully insured.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -211,8 +212,8 @@ export default function HouseCleaningCostPlainfield() {
             number of bedrooms and bathrooms, plus the type of clean you need.
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            We serve all of Plainfield, IL including zip codes <strong>60544</strong> and{" "}
-            <strong>60585</strong>. Whether you need a recurring standard clean, a one-time deep
+            We serve all of Plainfield, IL including zip codes{" "}
+            <strong>{zipCodesShort("Plainfield", "and")}</strong>. Whether you need a recurring standard clean, a one-time deep
             clean before the holidays, or a thorough move-out clean before handing over your keys,
             this guide shows you exactly what to expect.
           </p>
@@ -329,7 +330,7 @@ export default function HouseCleaningCostPlainfield() {
               </div>
               <p className="text-gray-600 leading-relaxed mb-3">
                 Move-out cleaning in Plainfield is our most comprehensive service, priced higher
-                because it covers everything a landlord or buyer expects: inside all appliances,
+                because it covers everything a landlord or buyer expects: inside the oven, refrigerator, dishwasher and microwave,
                 inside all cabinets and drawers, closet shelves, all doors and door knobs, inside window
                 glass, and the patio. Designed to help Plainfield renters recover their full security
                 deposit and homeowners prepare for closing.
@@ -354,7 +355,7 @@ export default function HouseCleaningCostPlainfield() {
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
             From there, we generate a firm quote using our pricing formula, the same one used
-            for all our Plainfield clients in 60544 and 60585. There are no travel fees for Plainfield. Add-on services
+            for all our Plainfield clients in {zipCodesShort("Plainfield", "and")}. There are no travel fees for Plainfield. Add-on services
             like inside oven, inside fridge, inside cabinets or interior windows (standard cleans
             only) are listed separately and only added if you request them.
           </p>
@@ -372,7 +373,7 @@ export default function HouseCleaningCostPlainfield() {
           <h2 className="text-2xl font-bold text-gray-900 mb-3">Ready for Your Exact Plainfield Quote?</h2>
           <p className="text-gray-600 mb-6">
             Tell us your home size and the service you need, and we&apos;ll reply with a firm price, usually same-day.
-            Serving Plainfield zip codes <strong>60544</strong> and <strong>60585</strong>.
+            Serving Plainfield zip codes <strong>{zipCodesShort("Plainfield", "and")}</strong>.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="btn-primary btn-lg">Get My Free Plainfield Quote</Link>
@@ -438,7 +439,7 @@ export default function HouseCleaningCostPlainfield() {
               <h2 className="text-4xl font-bold mb-4">Get a Free Plainfield Cleaning Quote Today</h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 No hourly rates, no hidden fees. Tell us about your Plainfield home and we&apos;ll send
-                you a firm flat-rate quote, usually same-day. Serving 60544 and 60585.
+                you a firm flat-rate quote, usually same-day. Serving {zipCodesShort("Plainfield", "and")}.
               </p>
               <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-6">
                 📞 (815) 246-2113

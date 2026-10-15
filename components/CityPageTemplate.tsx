@@ -9,7 +9,9 @@ import { clientStoryForHub } from "@/lib/localProof";
 import { STANDARD_HIGHLIGHTS } from "@/lib/standardChecklist";
 import { DEEP_ADDITIONS } from "@/lib/deepChecklist";
 
-export default function CityPageTemplate({ city }: { city: CityData }) {
+// ownZipSection: the hub page renders its own zip codes and landmarks section,
+// so the template leaves its zip block out instead of repeating the zip line.
+export default function CityPageTemplate({ city, ownZipSection = false }: { city: CityData; ownZipSection?: boolean }) {
   // Real Google reviews only. Reviewer cities are unknown, so nothing here
   // claims a reviewer lives in this city. The offset varies which review each
   // city leads with; pickReviews clamps so a review never repeats on one page.
@@ -204,7 +206,8 @@ export default function CityPageTemplate({ city }: { city: CityData }) {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             {/* A neighborhood is listed only after the owner confirms DSM
                 cleans there. A city with none confirmed (neighborhoods: [])
-                gets one line about its zip codes instead of a list. */}
+                gets one line about its zip codes instead of a list, unless
+                the hub page already shows its own zip codes section. */}
             {city.neighborhoods.length > 0 ? (
             <div>
               <h2 className="section-heading text-2xl mb-4">Neighborhoods We Serve in {city.name}</h2>
@@ -221,13 +224,13 @@ export default function CityPageTemplate({ city }: { city: CityData }) {
               </div>
               <p className="text-gray-500 text-sm mt-4">Zip codes served: {city.zips.join(", ")}</p>
             </div>
-            ) : (
+            ) : !ownZipSection ? (
             <div>
               <h2 className="section-heading text-2xl mb-4">{`Zip ${city.zips.length === 1 ? "Code" : "Codes"} We Serve in ${city.name}`}</h2>
               <p className="text-gray-600 leading-relaxed">{`We clean homes in ${zipPhrase}.`}</p>
             </div>
-            )}
-            <div>
+            ) : null}
+            <div className={ownZipSection && city.neighborhoods.length === 0 ? "lg:col-span-2 max-w-3xl" : undefined}>
               <h3 className="font-bold text-xl text-gray-900 mb-4">Local Landmarks Near You</h3>
               <p className="text-gray-600 mb-4 leading-relaxed text-sm">We&apos;re proud to serve the community around these well-known {city.name} landmarks:</p>
               <div className="space-y-2">
@@ -451,7 +454,7 @@ export default function CityPageTemplate({ city }: { city: CityData }) {
                 {`Book House Cleaning in ${city.name}, IL Today`}
               </h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                Ready for a spotlessly clean home in {city.name}? Whether you need a one-time deep clean, a recurring maid service, or a move-out cleaning, DSM Cleaning Solutions is just a call away. We&apos;ll get back to you fast, offer flexible scheduling with same-week appointments usually available, and back every clean with our 48-hour satisfaction guarantee. Proudly serving all of {city.name}, IL, zip codes {city.zips.join(" & ")}.
+                Ready for a spotlessly clean home in {city.name}? Whether you need a one-time deep clean, a recurring maid service, or a move-out cleaning, DSM Cleaning Solutions is just a call away. We&apos;ll get back to you fast, offer flexible scheduling with same-week appointments usually available, and back every clean with our 48-hour satisfaction guarantee. Proudly serving all of {city.name}, IL, {city.zips.length === 1 ? "zip code" : "zip codes"} {listWithAnd(city.zips)}.
               </p>
               <a
                 href="tel:+18152462113"

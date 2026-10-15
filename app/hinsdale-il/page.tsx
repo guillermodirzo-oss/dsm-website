@@ -39,14 +39,14 @@ export const metadata: Metadata = {
 export default function HinsdalePage() {
   return (
     <>
-      <CityPageTemplate city={city} />
+      <CityPageTemplate city={city} ownZipSection />
 
       {/* ZIP CODES & LANDMARKS */}
       <section className="py-16 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <div>
-              <h2 className="section-heading text-3xl md:text-4xl mb-4">Hinsdale Zip Codes We Serve</h2>
+              <h2 className="section-heading text-3xl md:text-4xl mb-4">Hinsdale Zip Code We Serve</h2>
               <p className="text-gray-500 mb-5 leading-relaxed">
                 From historic homes to wooded estates, DSM Cleaning Solutions provides professional cleaning throughout every neighborhood in this prestigious DuPage County community.
               </p>

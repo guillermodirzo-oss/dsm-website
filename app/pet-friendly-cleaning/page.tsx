@@ -4,12 +4,12 @@ import LeadForm from "@/components/LeadForm";
 import { OG_IMAGE_ALT } from "@/lib/workPhotos";
 
 export const metadata: Metadata = {
-  title: "Pet Safe House Cleaning Service Romeoville & Plainfield IL",
+  title: "Pet-Friendly House Cleaning Romeoville & Plainfield IL",
   description:
     "Pet-friendly house cleaning in Romeoville and Plainfield IL. Eco-friendly products available as an add-on. DSM Cleaning Solutions.",
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/pet-friendly-cleaning" },
   openGraph: {
-    title: "Pet Safe House Cleaning Service Romeoville & Plainfield IL | DSM Cleaning Solutions",
+    title: "Pet-Friendly House Cleaning Romeoville & Plainfield IL | DSM Cleaning Solutions",
     description:
       "Pet-friendly house cleaning in Romeoville and Plainfield IL. Eco-friendly products available as an add-on. DSM Cleaning Solutions.",
     url: "https://www.dsmcleaningsolutions.com/pet-friendly-cleaning",
@@ -127,7 +127,7 @@ export default function PetFriendlyCleaningPage() {
               <span className="text-white">Pet-Friendly Cleaning</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-6">
-              Pet-Safe House Cleaning Services in Romeoville &amp; Plainfield, IL
+              Pet-Friendly House Cleaning Services in Romeoville &amp; Plainfield, IL
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               House cleaning for homes with dogs, cats and other pets. DSM Cleaning Solutions serves
