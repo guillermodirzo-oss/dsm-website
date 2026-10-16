@@ -6,6 +6,16 @@ import Link from "next/link";
 
 export default function ThankYouClient() {
   useEffect(() => {
+    // One conversion per browser session for this page, so a reload or a
+    // back-button visit is not counted again. If sessionStorage is not
+    // available, fire as before.
+    try {
+      if (sessionStorage.getItem("dsm_conversion_thank_you")) return;
+      sessionStorage.setItem("dsm_conversion_thank_you", "1");
+    } catch {
+      // Storage blocked: fire once, as before.
+    }
+
     // Single event_id shared by browser pixel + server CAPI for deduplication
     const eventId = crypto.randomUUID();
 

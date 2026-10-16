@@ -133,6 +133,14 @@ export default function OfficeLeadForm() {
         preferredTime: step3.preferredTime,
         additionalNotes: step3.additionalNotes,
       });
+      // GA4 lead event, sent only after HubSpot accepted the submit. Its own
+      // try/catch so a tracking problem can never show the error message.
+      try {
+        const gtag = (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag;
+        if (typeof gtag === "function") gtag("event", "generate_lead", { lead_type: "commercial", form: "office" });
+      } catch {
+        // Ignore.
+      }
       setSuccess(true);
     } catch {
       setError(true);

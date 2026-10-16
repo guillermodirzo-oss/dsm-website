@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     absolute: "Deep Cleaning From a Local Family Team | DSM Cleaning Solutions",
   },
   description:
-    "Deep cleaning from a family-owned team in Romeoville. The grout, the baseboards and the spots a regular clean skips. Serving Plainfield, Bolingbrook, Crest Hill, Shorewood and Lockport too.",
+    "Deep cleaning from a family-owned team in Romeoville. The grout, the baseboards and the spots a regular clean skips. Serving Plainfield, Bolingbrook, Shorewood and Lockport too.",
   robots: { index: false, follow: false },
 };
 
@@ -37,7 +37,7 @@ const trustBullets = [
   { icon: "✅", text: "48-Hour Satisfaction Guarantee" },
   {
     icon: "📍",
-    text: "Romeoville · Plainfield · Bolingbrook · Crest Hill · Shorewood · Lockport",
+    text: "Romeoville · Plainfield · Bolingbrook · Shorewood · Lockport",
   },
 ];
 
@@ -454,7 +454,7 @@ export default function DeepCleanOfferPage() {
             </h2>
             <p className="text-gray-500 leading-relaxed">
               We personally handle every job and only take on 6 deep cleans per
-              week across Romeoville, Plainfield, Bolingbrook, Crest Hill,
+              week across Romeoville, Plainfield, Bolingbrook,
               Shorewood, and Lockport. We limit bookings to maintain quality.
               Request yours to check availability for your area.
             </p>
@@ -577,7 +577,7 @@ export default function DeepCleanOfferPage() {
             questions asked. That&apos;s the DSM guarantee.
           </p>
           <p className="text-sm text-gray-400">
-            Proudly serving Romeoville, Plainfield, Bolingbrook, Crest Hill,
+            Proudly serving Romeoville, Plainfield, Bolingbrook,
             Shorewood, and Lockport, IL
           </p>
         </div>

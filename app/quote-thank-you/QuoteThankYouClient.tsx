@@ -13,6 +13,16 @@ import {
 
 export default function QuoteThankYouClient() {
   useEffect(() => {
+    // One conversion per browser session for this page, so a reload or a
+    // back-button visit is not counted again. If sessionStorage is not
+    // available, fire as before.
+    try {
+      if (sessionStorage.getItem("dsm_conversion_quote_thank_you")) return;
+      sessionStorage.setItem("dsm_conversion_quote_thank_you", "1");
+    } catch {
+      // Storage blocked: fire once, as before.
+    }
+
     // Single event_id shared by browser pixel + server CAPI for deduplication
     const eventId = crypto.randomUUID();
 
@@ -60,6 +70,7 @@ export default function QuoteThankYouClient() {
     // ── Browser-side: GA4 generate_lead ─────────────────────────────────────
     if (typeof (window as any).gtag === "function") {
       (window as any).gtag("event", "generate_lead", {
+        lead_type: "residential",
         event_category: "quote_form",
         event_label: "quote_submitted",
         value: 0,

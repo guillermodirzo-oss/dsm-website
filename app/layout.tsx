@@ -6,6 +6,7 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FacebookPixel from "@/components/FacebookPixel";
+import ConversionClicks from "@/components/ConversionClicks";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
@@ -145,6 +146,8 @@ export default function RootLayout({
         <Analytics />
         <SpeedInsights />
         <GoogleAnalytics gaId="G-ZNH3HYZHQN" />
+        {/* GA4 click_to_call and book_click events (components/ConversionClicks.tsx). */}
+        <ConversionClicks />
         {/* Microsoft Clarity — session recordings & heatmaps.
             lazyOnload: this is passive observability, nothing on the page depends
             on it, so it has no business competing for the main thread during load. */}

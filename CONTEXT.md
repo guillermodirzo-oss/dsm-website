@@ -167,6 +167,14 @@ Move-out customers are mostly home buyers and sellers, not renters. Write move-o
 | `next.config.mjs` | All redirects and www canonicalization |
 | `app/sitemap.ts` | XML sitemap |
 | `app/robots.ts` | Crawl rules (the only robots source; there is no public/robots.txt) |
+| `components/ConversionClicks.tsx` | GA4 `click_to_call` (any tel: link) and `book_click` (any internal link to /book, not counted on /book) events, from one click listener mounted in `app/layout.tsx` |
+
+## Tracking
+- GA4 G-ZNH3HYZHQN loads through `<GoogleAnalytics>` in `app/layout.tsx`; the Facebook Pixel 604766394322878 (`components/FacebookPixel.tsx`) and HubSpot load with `lazyOnload`. Each loads exactly once per page. Don't change how they load.
+- Conversion events: `click_to_call`, `book_click`; `generate_lead` with `lead_type: "residential"` on /quote-thank-you (after LeadForm or CityDeepCleanForm) and `lead_type: "commercial", form: "office"` in OfficeLeadForm's success step; `purchase` (value 200 USD) on /thank-you, where BookingKoala lands customers after a booking.
+- /thank-you and /quote-thank-you fire their conversion (GA4, Pixel and the server-side CAPI call) once per browser session, guarded by a sessionStorage flag.
+- Known (October 2026): on a full page load of /thank-you, `gtag` and `fbq` are not defined yet when the page's effect runs, so the browser-side `purchase` and Pixel Purchase do not fire; the server-side CAPI Purchase does. GA4 still records bookings through a `booking_completed` event that the GA4 tag settings create from /thank-you page views. Decide which one is the key event before making `purchase` wait for gtag, or bookings get counted twice.
+- Never send test traffic to GA4, Meta or HubSpot: block or fake those requests in tests.
 
 ## Code Rules
 - CSS inside a `<style>` tag must go in through `dangerouslySetInnerHTML`, never as a text child. React escapes `>` and quotes in text, a `<style>` tag does not unescape them, and the mismatch makes the whole page fail hydration and re-render in the browser. This broke /deep-clean-offer and every blog post until October 2026.

@@ -42,17 +42,17 @@ const nextConfig = {
       },
       {
         source: "/onlinequote",
-        destination: "https://dsmcleaningsolutions.bookingkoala.com/login",
+        destination: "/book",
         permanent: true,
       },
       {
         source: "/quote",
-        destination: "https://dsmcleaningsolutions.bookingkoala.com/login",
+        destination: "/book",
         permanent: true,
       },
       {
         source: "/get-a-quote",
-        destination: "https://dsmcleaningsolutions.bookingkoala.com/login",
+        destination: "/book",
         permanent: true,
       },
       {
@@ -257,10 +257,10 @@ const nextConfig = {
         permanent: true,
       },
 
-      // Estimate / pricing variants → contact form
+      // Estimate / pricing variants → the booking page
       {
         source: "/estimate",
-        destination: "https://dsmcleaningsolutions.bookingkoala.com/login",
+        destination: "/book",
         permanent: true,
       },
       // /free-estimate is now a real page — redirect removed
