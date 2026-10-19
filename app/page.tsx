@@ -13,6 +13,7 @@ import {
 } from "@/lib/realReviews";
 import { ScrollIndicator } from "@/components/HomepageScrollWidgets";
 import StickyBookBar from "@/components/StickyBookBar";
+import HomeVideo from "@/components/HomeVideo";
 import HeroRating from "@/components/HeroRating";
 import OfferBanner from "@/components/OfferBanner";
 import { REVIEW_COUNT, REVIEW_RATING, SERVICE_CITIES } from "@/lib/siteConstants";
@@ -157,6 +158,23 @@ const serviceAreas = [
   { city: "Downers Grove", slug: "/downers-grove-il" }, { city: "Burr Ridge", slug: "/burr-ridge-il" },
 ];
 
+// The intro video in the section under the hero. Lets Google show it as a
+// video result. If the video is re-rendered, update uploadDate and duration.
+const videoSchema = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  name: "Meet DSM Cleaning Solutions: House Cleaning in Romeoville, IL",
+  description:
+    "Guillermo and Rocío, the husband and wife team behind DSM Cleaning Solutions in Romeoville, IL, explain their deep cleaning, move-out cleaning and recurring maid service, and how booking works: no deposit, no contracts, and your exact price before you book.",
+  thumbnailUrl: [
+    "https://www.dsmcleaningsolutions.com/videos/dsm-intro-wide-poster.jpg",
+    "https://www.dsmcleaningsolutions.com/videos/dsm-intro-vertical-poster.jpg",
+  ],
+  uploadDate: "2026-10-19T14:30:00-05:00",
+  duration: "PT59S",
+  contentUrl: "https://www.dsmcleaningsolutions.com/videos/dsm-intro-wide.mp4",
+};
+
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: faqs.map((faq) => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })),
@@ -177,6 +195,7 @@ export default function HomePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} />
 
       {/* ─── HERO ─── */}
       <section id="hero" className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
@@ -245,6 +264,13 @@ export default function HomePage() {
             No deposit. No contracts. Free to reschedule. <span className="whitespace-nowrap">48-hour guarantee.</span>
           </p>
 
+          <a href="#video" className="inline-flex items-center gap-2 mt-3 text-white font-semibold text-sm hover:underline underline-offset-4">
+            <span className="flex items-center justify-center w-6 h-6 rounded-full bg-white/20">
+              <svg className="w-3.5 h-3.5 ml-0.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
+            </span>
+            Meet Guillermo &amp; Rocío in 60 seconds
+          </a>
+
           {/* Price anchor. Numbers come from lib/pricing.ts. */}
           <p className="mt-3 text-white/70 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
             House cleaning from {STANDARD_FROM}. Deep cleans from {DEEP_FROM}. Move-out from {MOVEOUT_FROM}. We confirm your exact price before anything is booked.
@@ -253,6 +279,34 @@ export default function HomePage() {
 
         {/* Scroll indicator, clickable, scrolls to #services */}
         <ScrollIndicator />
+      </section>
+
+      {/* ─── INTRO VIDEO ─── */}
+      {/* Straight after the hero: the face behind the business, the services,
+          real reviews and the no-risk list in one minute, ending on the same
+          booking button as the hero. See components/HomeVideo.tsx. */}
+      <section id="video" className="py-10 md:py-20 bg-gray-900 scroll-mt-16">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Kept short on phones so the heading and the whole vertical video fit on one screen. */}
+          <div className="text-center mb-6 md:mb-10">
+            <p className="text-orange-400 font-semibold text-sm uppercase tracking-widest mb-2 md:mb-3">Meet the Owners</p>
+            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">60 Seconds With the Family Behind DSM</h2>
+            <p className="hidden sm:block text-white/70 mt-3 text-base md:text-lg">Captions are on, so you can watch it on mute.</p>
+          </div>
+          <HomeVideo />
+          <div className="text-center mt-8 md:mt-10">
+            <Link
+              href="/book"
+              className="inline-block font-extrabold text-base text-white py-4 px-9 rounded-full active:scale-95 transition-all duration-200 shadow-2xl"
+              style={{ backgroundColor: "#E8622A", boxShadow: "0 8px 30px rgba(232,98,42,0.45)" }}
+            >
+              See My Price &amp; Book
+            </Link>
+            <p className="text-white/60 text-sm mt-3">
+              or call <a href="tel:+18152462113" className="text-white font-semibold hover:underline">(815) 246-2113</a>
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* ─── REVIEWS ─── */}

@@ -169,8 +169,13 @@ Move-out customers are mostly home buyers and sellers, not renters. Write move-o
 | `app/robots.ts` | Crawl rules (the only robots source; there is no public/robots.txt) |
 | `components/ConversionClicks.tsx` | GA4 `click_to_call` (any tel: link) and `book_click` (any internal link to /book, not counted on /book) events, from one click listener mounted in `app/layout.tsx` |
 
+## Homepage Video
+- A 59-second intro video sits in the section right under the homepage hero (`components/HomeVideo.tsx`, files in `public/videos/`, VideoObject schema in `app/page.tsx`). Phones get the vertical cut, tablets and desktops the wide one. It starts muted when half of it is on screen (captions are burned in), "Tap for sound" restarts it with sound, and it ends on a "See My Price & Book" button.
+- It states 46 five-star reviews and 2,000+ cleanings since 2020. When those numbers move, re-render from `video/homepage-vsl/` (see its README). The narrator is an ElevenLabs AI voice. Never claim it is Guillermo or Rocío speaking.
+
 ## Tracking
 - GA4 G-ZNH3HYZHQN loads through `<GoogleAnalytics>` in `app/layout.tsx`; the Facebook Pixel 604766394322878 (`components/FacebookPixel.tsx`) and HubSpot load with `lazyOnload`. Each loads exactly once per page. Don't change how they load.
+- Homepage video events: `vsl_autoplay`, `vsl_sound_on`, `vsl_progress` (percent 25/50/75), `vsl_complete`, all with `video: "homepage_intro"` and `layout`.
 - Conversion events: `click_to_call`, `book_click`; `generate_lead` with `lead_type: "residential"` on /quote-thank-you (after LeadForm or CityDeepCleanForm) and `lead_type: "commercial", form: "office"` in OfficeLeadForm's success step; `purchase` (value 200 USD) on /thank-you, where BookingKoala lands customers after a booking.
 - /thank-you and /quote-thank-you fire their conversion (GA4, Pixel and the server-side CAPI call) once per browser session, guarded by a sessionStorage flag.
 - Known (October 2026): on a full page load of /thank-you, `gtag` and `fbq` are not defined yet when the page's effect runs, so the browser-side `purchase` and Pixel Purchase do not fire; the server-side CAPI Purchase does. GA4 still records bookings through a `booking_completed` event that the GA4 tag settings create from /thank-you page views. Decide which one is the key event before making `purchase` wait for gtag, or bookings get counted twice.

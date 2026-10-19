@@ -11,13 +11,13 @@ import { useState, useEffect } from "react";
  * getting interactive scroll behaviour.
  *
  * Exports:
- *   ScrollIndicator   animated bouncing chevron; clicking scrolls to #services
+ *   ScrollIndicator   animated bouncing chevron; clicking scrolls to #video
  *   StickyMobileBar   fixed bottom bar on mobile, fades in after 300px scroll
  */
 
 export function ScrollIndicator() {
   const handleClick = () => {
-    const el = document.getElementById("services");
+    const el = document.getElementById("video");
     if (el) {
       el.scrollIntoView({ behavior: "smooth" });
     }
@@ -26,7 +26,7 @@ export function ScrollIndicator() {
   return (
     <button
       onClick={handleClick}
-      aria-label="Scroll to services"
+      aria-label="Scroll to the intro video"
       className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce bg-transparent border-none cursor-pointer p-3 rounded-full hover:bg-white/10 transition-colors"
       style={{ minWidth: "44px", minHeight: "44px" }}
     >
