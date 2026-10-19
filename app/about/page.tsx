@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
@@ -38,7 +38,8 @@ export const metadata: Metadata = {
 
 const stats = [
   { value: "Since 2020", label: "Serving the Southwest Suburbs" },
-  { value: "500+", label: "Happy Clients" },
+  // 2,203 BookingKoala bookings since 2020 (owner, Oct 2026); bookings count visits, so "cleanings".
+  { value: "2,000+", label: "Cleanings Since 2020" },
   // The real count, from the same list the service-area schema is built from.
   { value: String(SERVICE_CITIES.length), label: "Cities Served" },
   // Replaces an unverifiable "100% Satisfaction Rate" with the Google rating.

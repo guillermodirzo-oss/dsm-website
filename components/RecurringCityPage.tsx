@@ -23,6 +23,8 @@ import {
 } from "@/lib/realReviews";
 import { STANDARD_CHECKLIST } from "@/lib/standardChecklist";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
+import ServiceVideoSection from "@/components/ServiceVideoSection";
+import { RECURRING_VIDEO } from "@/lib/serviceVideos";
 
 /**
  * The recurring ("maid service") city page, /recurring-cleaning-{city}-il.
@@ -188,6 +190,9 @@ export default function RecurringCityPage({ city: cityKey }: { city: RecurringCi
           </div>
         </div>
       </section>
+
+      {/* VIDEO: the recurring sales video, shared by every recurring page. */}
+      <ServiceVideoSection video={RECURRING_VIDEO} kicker={`${city.name} Maid Service`} heading="How Recurring Cleaning Works, in Under a Minute" />
 
       {/* ANCHOR REVIEW */}
       <section className="py-10 bg-gray-50">

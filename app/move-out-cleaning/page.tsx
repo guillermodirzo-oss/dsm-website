@@ -386,7 +386,7 @@ export default function MoveOutCleaningPage() {
       <section className="bg-white border-b py-5 px-4">
         <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-6 text-sm text-gray-700 font-medium">
           <span>✅ Family Owned Since 2020</span>
-          <span>✅ 500+ Local Clients</span>
+          <span>✅ 2,000+ Cleanings Since 2020</span>
           <span>✅ Insured &amp; Bonded</span>
           <span>✅ {REVIEW_RATING} Stars</span>
           <span>✅ 48-Hour Satisfaction Guarantee</span>

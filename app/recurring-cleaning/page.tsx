@@ -15,6 +15,8 @@ import { REVIEW_COUNT, REVIEW_RATING, GOOGLE_PROFILE_URL } from "@/lib/siteConst
 import { DEEP_OFFER } from "@/lib/offers";
 import { STANDARD_CHECKLIST } from "@/lib/standardChecklist";
 import { PRICE_LOCK_FAQ, RECURRING_CITY_LIST, SAME_TEAM_FAQ } from "@/lib/recurringCities";
+import ServiceVideoSection from "@/components/ServiceVideoSection";
+import { RECURRING_VIDEO } from "@/lib/serviceVideos";
 
 // Regenerate at most hourly so the FALL75 line in section 7 drops out of the
 // HTML on its own after it ends. <Offer> also hides it in the browser at the
@@ -241,14 +243,14 @@ export default function RecurringCleaningPage() {
       </section>
 
       {/* 2. TRUST BAR. Every claim here is made elsewhere on the site already:
-          since 2020 and 500+ clients on /about and the homepage, insured and
+          since 2020 and 2,000+ cleanings (2,203 BookingKoala bookings, owner, Oct 2026) on /about and the homepage, insured and
           the satisfaction guarantee on every service page, 5.0 from
           REVIEW_RATING, same team and the price lock on the recurring city
           pages. */}
       <section className="bg-white border-b py-5 px-4">
         <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-6 text-sm text-gray-700 font-medium">
           <span>✅ Family Owned Since 2020</span>
-          <span>✅ 500+ Local Clients</span>
+          <span>✅ 2,000+ Cleanings Since 2020</span>
           <span>✅ Insured &amp; Bonded</span>
           <span>✅ {REVIEW_RATING} Stars</span>
           <span>✅ 48-Hour Satisfaction Guarantee</span>
@@ -256,6 +258,9 @@ export default function RecurringCleaningPage() {
           <span>✅ Price Locked 12 Months</span>
         </div>
       </section>
+
+      {/* VIDEO: the recurring sales video, right after the trust bar. */}
+      <ServiceVideoSection video={RECURRING_VIDEO} kicker="Recurring Maid Service" heading="How Recurring Cleaning Works, in Under a Minute" />
 
       {/* 3. ANCHOR REVIEW. Text-only, matching /deep-cleaning's own anchor
           review treatment. Verbatim from lib/realReviews.ts. */}
