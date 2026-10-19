@@ -12,7 +12,7 @@ narration, captions (list; *stars* = orange), tag (pill), overlay:
   "reviews"    reviews=[(text, name)]
   "cta"        uses the module's CTA dict
 """
-import importlib.util, json, math, os, subprocess, sys
+import importlib.util, json, math, os, re, subprocess, sys
 from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont
 
 ENGINE = os.path.dirname(os.path.abspath(__file__))
@@ -48,12 +48,13 @@ def paste(canvas, layer, x, y, f=1.0):
     if f > 0.001: canvas.alpha_composite(fade_alpha(layer, f), (int(x), int(y)))
 
 def parse_stars(text):
+    """'a *b c*, d' -> [(word, highlighted)]. A closing * may sit before punctuation."""
     out, hi = [], False
     for tok in text.split(" "):
         if not tok: continue
         if tok.startswith("*"): hi = True
-        out.append((tok.strip("*"), hi))
-        if tok.endswith("*"): hi = False
+        out.append((tok.replace("*", ""), hi))
+        if re.search(r"\*[^\w*]*$", tok) and not (tok.startswith("*") and tok.count("*") == 1): hi = False
     return out
 
 def soft_shadow(layer, blur=10, a=0.85, dy=3):
