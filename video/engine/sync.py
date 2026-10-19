@@ -21,21 +21,40 @@ se = [float(x) for x in re.findall(r"silence_end: ([\d.]+)", log)]
 sil = [(s, e) for s, e in zip(ss, se) if s > 0.05 and e < dur - 0.05]
 
 words = [len(s["narration"].split()) for s in SHOTS]; tot = sum(words)
-T = [0.05 + sum(words[: k + 1]) / tot * (dur - 0.05) for k in range(len(words) - 1)]
-n, m = len(T), len(sil)
-if m < n: sys.exit(f"Found {m} pauses, need {n}. Check the blank lines between paragraphs.")
-INF = float("inf"); cost = [[INF] * (m + 1) for _ in range(n + 1)]; back = [[0] * (m + 1) for _ in range(n + 1)]
-for j in range(m + 1): cost[0][j] = 0
-for k in range(1, n + 1):
-    for j in range(k, m + 1):
-        s, e = sil[j - 1]; here = (e - T[k - 1]) ** 2 - 2.0 * (e - s)
-        if k == 1: cost[k][j], back[k][j] = here, 0
-        else:
-            i = min(range(k - 1, j), key=lambda i: cost[k - 1][i]); cost[k][j], back[k][j] = cost[k - 1][i] + here, i
-j = min(range(n, m + 1), key=lambda j: cost[n][j]); chosen = []
-for k in range(n, 0, -1): chosen.append(j); j = back[k][j]
+# Segment the voiceover so every paragraph is read at about the same pace.
+# Each boundary is the end of a pause; a paragraph's rate is its word count over
+# its speaking time. Minimise the spread of rates (dynamic programming over
+# paragraph -> pause), with a small reward for cutting at longer pauses.
+speech_end = dur
+for s, e in zip(ss, se + [dur]):
+    if e >= dur - 0.05 and s > 0.05: speech_end = s
+R = tot / max(speech_end - 0.05 - 0.4 * (len(SHOTS) - 1), 1.0)
+cand = [(0.0, 0.0)] + sil                     # candidate starts: 0, or the end of any pause
+ends = [e for _, e in cand]; m = len(cand)
+def seg_cost(k, a, b):
+    start = ends[a]
+    stop = (sil[b - 1][0] if b < m and b > 0 else speech_end) if b != -1 else speech_end
+    if b != -1: stop = cand[b][0] if b > 0 else 0.0
+    d = stop - start
+    if d <= 0.3: return float("inf")
+    r = words[k] / d
+    return ((r - R) / R) ** 2 * 10
+n = len(SHOTS); INF = float("inf")
+cost = [[INF] * m for _ in range(n)]; back = [[0] * m for _ in range(n)]
+cost[0][0] = 0.0
+for k in range(1, n):
+    for b in range(1, m):
+        best, arg = INF, 0
+        for a in range(0, b):
+            if cost[k - 1][a] == INF: continue
+            c = cost[k - 1][a] + seg_cost(k - 1, a, b) - 0.8 * (cand[b][1] - cand[b][0])
+            if c < best: best, arg = c, a
+        cost[k][b], back[k][b] = best, arg
+final = min(range(1, m), key=lambda b: cost[n - 1][b] + seg_cost(n - 1, b, -1))
+chosen = [final]
+for k in range(n - 1, 1, -1): chosen.append(back[k][chosen[-1]])
 chosen.reverse()
-bounds = [0.0] + [sil[j - 1][1] - 0.12 for j in chosen] + [dur + 0.6]
+bounds = [0.0] + [ends[j] - 0.12 for j in chosen] + [dur + 0.6]
 timings = {SHOTS[i]["id"]: round(bounds[i + 1] - bounds[i], 3) for i in range(len(SHOTS))}
 
 for si, shot in enumerate(SHOTS):
