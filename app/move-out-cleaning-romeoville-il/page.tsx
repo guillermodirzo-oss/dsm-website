@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { moveOutCityTitle } from "@/lib/seoTitles";
 import Link from "next/link";
 import HeroRating from "@/components/HeroRating";
@@ -12,6 +12,8 @@ import { MOVE_OUT_TIERS, formatPrice, startingPrice } from "@/lib/pricing";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 import { zipCodesPhrase, zipCodesShort } from "@/lib/cityData";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
+import ServiceVideoSection from "@/components/ServiceVideoSection";
+import { MOVEOUT_VIDEO } from "@/lib/serviceVideos";
 
 // Regenerate at most hourly so MOVE75 drops out of the HTML on its own after
 // it ends. <Offer> also hides it in the browser at the deadline. See
@@ -289,6 +291,9 @@ export default function MoveOutCleaningRomeovillePage() {
           </div>
         </div>
       </section>
+
+      {/* VIDEO: the move-out sales video (lib/serviceVideos.tsx), shared by every move-out page. */}
+      <ServiceVideoSection video={MOVEOUT_VIDEO} kicker="Romeoville Move-Out Cleaning" heading="What a Move-Out Clean Includes, in Under a Minute" />
 
       {/* ANCHOR REVIEW */}
       <section className="py-10 bg-white">

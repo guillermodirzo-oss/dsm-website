@@ -42,3 +42,22 @@ export const DEEP_VIDEO: ServiceVideo = {
     duration: "PT47S",
   },
 };
+
+export const MOVEOUT_VIDEO: ServiceVideo = {
+  id: "move_out",
+  vertical: { src: "/videos/dsm-moveout-vertical.mp4", poster: "/videos/dsm-moveout-vertical-poster.jpg" },
+  wide: { src: "/videos/dsm-moveout-wide.mp4", poster: "/videos/dsm-moveout-wide-poster.jpg" },
+  label: "What a DSM move-in and move-out clean includes, a short video with captions",
+  endLine: (
+    <>
+      Hand over the keys <span className="text-orange-400">with confidence.</span>
+    </>
+  ),
+  schema: {
+    name: "Move-In and Move-Out Cleaning With DSM Cleaning Solutions",
+    description:
+      "What a move-in or move-out clean from DSM Cleaning Solutions in Romeoville, IL includes: inside the oven and refrigerator, inside every cabinet and drawer, inside the dishwasher, closet shelves, baseboards, doors and grout. Ready for listing photos, closing day or move-in day. Exact price before you book, no deposit, 48-hour re-clean guarantee.",
+    uploadDate: "2026-10-19T19:00:00-05:00",
+    duration: "PT45S",
+  },
+};

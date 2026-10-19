@@ -18,6 +18,8 @@ import { offerPrice } from "@/lib/offers";
 import { REVIEW_COUNT, REVIEW_RATING, GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 import { MOVEOUT_OFFER } from "@/lib/offers";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
+import ServiceVideoSection from "@/components/ServiceVideoSection";
+import { MOVEOUT_VIDEO } from "@/lib/serviceVideos";
 
 // Regenerate at most hourly so MOVE75 drops out of the HTML on its own after
 // it ends. <Offer> also hides it in the browser at the deadline. See
@@ -392,6 +394,9 @@ export default function MoveOutCleaningPage() {
           <span>✅ 48-Hour Satisfaction Guarantee</span>
         </div>
       </section>
+
+      {/* VIDEO: the move-out sales video (lib/serviceVideos.tsx), shared by every move-out page. */}
+      <ServiceVideoSection video={MOVEOUT_VIDEO} kicker="Move-In & Move-Out Cleaning" heading="What a Move-Out Clean Includes, in Under a Minute" />
 
       {/* 3. ANCHOR REVIEW. Word-for-word excerpt, cuts marked. */}
       <section className="py-10 px-4" style={{ backgroundColor: "#FFF4EE" }}>
