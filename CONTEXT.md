@@ -173,6 +173,11 @@ Move-out customers are mostly home buyers and sellers, not renters. Write move-o
 - A 59-second intro video sits in the section right under the homepage hero (`components/HomeVideo.tsx`, files in `public/videos/`, VideoObject schema in `app/page.tsx`). Phones get the vertical cut, tablets and desktops the wide one. It starts muted when half of it is on screen (captions are burned in), "Tap for sound" restarts it with sound, and it ends on a "See My Price & Book" button.
 - It states 46 five-star reviews and 2,000+ cleanings since 2020. When those numbers move, re-render from `video/homepage-vsl/` (see its README). The narrator is an ElevenLabs AI voice. Never claim it is Guillermo or Rocío speaking.
 
+## Service Videos
+- Each service has its own short video, set in `lib/serviceVideos.tsx` and shown through `components/ServiceVideoSection.tsx` right after the trust bar: recurring on /recurring-cleaning and the 4 recurring city pages; deep cleaning on /deep-cleaning, the 16 deep cleaning city pages and /deep-cleaning-cost-naperville-il; move-out on /move-out-cleaning and the 16 move-out city pages. GA4 `video` values: `recurring`, `deep_cleaning`, `move_out`.
+- Source for each video is in `video/<name>-vsl/` (script, photos with GPS removed, voiceover, timings), built with `video/engine/` (render.py, sync.py, finish.sh). The deep cleaning video never shows an oven interior (inside oven is an add-on for a deep clean). No video mentions a promo code.
+- Photo library: the owner's sorted job photos live on his PC in Desktop/Website Data/Work Picture and Video (folders by service, "best-" prefix for the strongest, `_photo-index.csv`). Every original has GPS location in it: strip EXIF before any photo goes on the site.
+
 ## Tracking
 - GA4 G-ZNH3HYZHQN loads through `<GoogleAnalytics>` in `app/layout.tsx`; the Facebook Pixel 604766394322878 (`components/FacebookPixel.tsx`) and HubSpot load with `lazyOnload`. Each loads exactly once per page. Don't change how they load.
 - Homepage video events: `vsl_autoplay`, `vsl_sound_on`, `vsl_progress` (percent 25/50/75), `vsl_complete`, all with `video: "homepage_intro"` and `layout`.
