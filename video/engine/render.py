@@ -218,9 +218,16 @@ def overlay(canvas, i, t):
                 f = ease((t - cu + 0.1) / 0.35); paste(canvas, c, x, y + int(50 * (1 - f)), f); x += cw + gap
             paste(canvas, fine, (W - fine.width) // 2, y + cards[0][0].height + 10, ease((t - cues[-1] - 0.6) / 0.4))
     elif kind == "reviews":
-        cw = 940 if V else 1240
-        cards = cached(("rev", i), lambda: [build_review(tx, nm, cw, (54 if k == 0 else 46) if V else (46 if k == 0 else 38)) for k, (tx, nm) in enumerate(shot["reviews"])])
-        gap = -20 if V else -34; total_h = sum(c[0].height for c in cards) + gap * (len(cards) - 1); y = (H - total_h) // 2 - (40 if V else 0)
+        cw = 940 if V else 1240; gap = -20 if V else -34
+        def fit():
+            # Shrink the type until the stack clears the logo and the bottom edge.
+            room = H - (480 if V else 170)
+            for scale in (1.0, 0.92, 0.85, 0.78, 0.72, 0.66):
+                cs = [build_review(tx, nm, cw, int(((54 if k == 0 else 46) if V else (46 if k == 0 else 38)) * scale)) for k, (tx, nm) in enumerate(shot["reviews"])]
+                if sum(c[0].height for c in cs) + gap * (len(cs) - 1) <= room: break
+            return cs
+        cards = cached(("rev", i), fit)
+        total_h = sum(c[0].height for c in cards) + gap * (len(cards) - 1); y = (H - total_h) // 2 + (20 if V else 0)
         for (c, pad), ta in zip(cards, [0.0, d * 0.5, d * 0.68]):
             f = ease((t - ta) / 0.35); paste(canvas, c, (W - c.width) // 2, y + int(40 * (1 - f)), f); y += c.height + gap
     elif kind == "cta":

@@ -18,7 +18,7 @@ SHOTS = [
     dict(id="guide", photo=os.path.join(HERE, "owners.jpg"), focus=(0.5, 0.5), mood="card",
          narration="DSM Cleaning Solutions is Guillermo and Rocío, a husband and wife team from Romeoville. We've been cleaning homes across the southwest suburbs since 2020.",
          captions=["Meet *Guillermo & Rocío*", "a *husband and wife* team from Romeoville", "cleaning homes across the suburbs", "since *2020*"]),
-    dict(id="deep", photo=P+"oven-interior-deep-cleaning.jpg", focus=(0.5, 0.55),
+    dict(id="deep", photo=P+"cooktop-grates-deep-cleaning.jpg", focus=(0.5, 0.5),
          narration="Deep cleans that catch up on everything.",
          captions=["*Deep cleans* that catch up", "on everything"], tag="Deep Cleaning"),
     dict(id="move", photo=P+"empty-room-move-out-cleaning.jpg", focus=(0.5, 0.6),
