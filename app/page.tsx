@@ -1,8 +1,9 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
+import WorkPhotoGrid, { type WorkPhoto } from "@/components/WorkPhotoGrid";
 import {
   pickReviews,
   reviewAttribution,
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
     siteName: "DSM Cleaning Solutions",
     title: "DSM Cleaning Solutions | House Cleaning Romeoville & Plainfield IL",
     description:
-      "Professional house cleaning in Romeoville, Plainfield, Naperville & Bolingbrook IL. Family owned, fully insured, 5-star rated. Free estimates.",
+      "Professional house cleaning in Romeoville, Plainfield, Naperville & Bolingbrook IL. Family owned, insured and bonded, 5-star rated. Book online in minutes.",
     images: [
       {
         url: "/hero-image.png",
@@ -125,13 +126,24 @@ const services = [
   },
 ];
 
+// Six tiles, two per service. Captions without a city are the new drops,
+// whose location is unknown; do not invent one.
+const WORK_PHOTOS: WorkPhoto[] = [
+  { src: "/work-photos/oven-interior-deep-cleaning.jpg", alt: "Oven interior cleaned down to bare enamel by DSM Cleaning Solutions", caption: "Oven Cleaning" },
+  { src: "/work-photos/marble-bathroom-deep-cleaning.jpg", alt: "Marble tiled bathroom with a scrubbed tub surround and floor tile catching the light after a DSM Cleaning Solutions deep clean", caption: "Bathroom Deep Clean" },
+  { src: "/work-photos/empty-room-move-out-cleaning.jpg", alt: "Empty bedroom with fresh vacuum lines in the carpet after a DSM Cleaning Solutions move-out cleaning", caption: "Move-Out Clean" },
+  { src: "/work-photos/closet-move-out-cleaning.jpg", alt: "Empty walk-in closet with white built-in drawers and shelving and a polished hardwood floor after a DSM Cleaning Solutions move-out cleaning", caption: "Move-Out Clean" },
+  { src: "/work-photos/walk-in-shower-glass-house-cleaning.jpg", alt: "Shower with a sliding glass door, tiled walls, built-in bench and a spotless white pan after house cleaning by DSM Cleaning Solutions", caption: "Bathroom · House Cleaning" },
+  { src: "/work-photos/google-post-image-cleaning-service-1.jpg", alt: "Full kitchen with dark wood cabinets, granite countertops and stainless appliances after house cleaning by DSM Cleaning Solutions", caption: "Kitchen · House Cleaning" },
+];
+
 const faqs = [
   { question: "How much does house cleaning cost in Romeoville, IL?", answer: `Standard cleaning starts at ${STANDARD_FROM} for a 1-bedroom home. Deep cleans start at ${DEEP_FROM} and move-out cleans start at ${MOVEOUT_FROM}. Your price depends on bedrooms, bathrooms and square footage, and we confirm the exact total with you before anything is booked.` },
-  { question: "Are you insured and bonded?", answer: "Yes. DSM Cleaning Solutions is fully insured and bonded. You can have complete peace of mind knowing your home and belongings are protected every time we clean." },
+  { question: "Are you insured and bonded?", answer: "Yes. We're insured and bonded, and every cleaner on our team is background-checked and drug tested before they ever walk into your home." },
   { question: "Do you use eco-friendly cleaning products?", answer: "Yes, as an option. If you'd like eco-friendly, non-toxic products for your clean, just add them when you book. You'll see the price before you confirm." },
   { question: "Can I book cleaning online?", answer: "Yes. You can book online and see real available dates instantly, or call us at (815) 246-2113. We often have same-week availability." },
   { question: "What areas do you serve?", answer: "We're based in Romeoville and clean homes across the southwest and west suburbs: Romeoville, Plainfield, Naperville, Bolingbrook, Joliet, Lockport, Shorewood, New Lenox, Lemont, Homer Glen, Westmont, Hinsdale, Oak Brook, Downers Grove, Burr Ridge, and Minooka. Not sure if we come to you? Give us a call at (815) 246-2113." },
-  { question: "What is your satisfaction guarantee?", answer: "Your satisfaction is our top priority. If you're not completely happy with our cleaning, let us know within 48 hours and we'll return to re-clean the area at no additional charge." },
+  { question: "What is your satisfaction guarantee?", answer: "If we missed something, tell us within 48 hours and we'll come back and re-clean that area for free." },
 ];
 
 const serviceAreas = [
@@ -203,7 +215,7 @@ export default function HomePage() {
           </p>
 
           <p className="text-base sm:text-lg md:text-xl text-white/85 mb-3 max-w-2xl mx-auto leading-relaxed">
-            {`Deep cleaning, move-in and move-out cleaning, and recurring maid service across ${SERVICE_CITIES.length} towns from Naperville to Joliet. Locally owned in Romeoville since 2020.`}
+            {`Deep cleaning, move-out cleaning and recurring maid service from a local Romeoville family business. See your exact price online, pick your day, and we handle the rest.`}
           </p>
 
           {/* Rating: the shared component from the city pages. Counts come from
@@ -220,9 +232,9 @@ export default function HomePage() {
             <Link
               href="/book"
               className="w-full md:w-auto inline-block font-extrabold text-base text-white text-center py-4 px-9 rounded-full active:scale-95 transition-all duration-200 shadow-2xl"
-              style={{ backgroundColor: "#E8721C", boxShadow: "0 8px 30px rgba(232,114,28,0.5)" }}
+              style={{ backgroundColor: "#E8622A", boxShadow: "0 8px 30px rgba(232,98,42,0.5)" }}
             >
-              Book Your Clean
+              See My Price &amp; Book
             </Link>
             <a href="tel:+18152462113" className="btn-outline-white text-base md:py-4 md:px-9 w-full md:w-auto">
               📞 (815) 246-2113
@@ -243,22 +255,33 @@ export default function HomePage() {
         <ScrollIndicator />
       </section>
 
-      {/* ─── TRUST BAR ─── */}
-      <section className="bg-white border-b border-gray-100 py-8">
+      {/* ─── REVIEWS ─── */}
+      {/* Straight after the hero. Most homepage visits come from the Google
+          Business Profile, so these people already saw the star rating and
+          want to hear from real customers before anything else. */}
+      <section id="reviews" className="py-14 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            {[
-              { icon: "👨‍👩‍👧", label: "Family Owned", desc: "Local & personal service" },
-              { icon: "🛡️", label: "Insured & Bonded", desc: "Background-checked, drug-tested team" },
-              { icon: "🔍", label: "Background-Checked Team", desc: "Every cleaner verified before entering your home" },
-              { icon: "✅", label: "Satisfaction Guaranteed", desc: "Tell us within 48 hours, we fix it free" },
-            ].map((item) => (
-              <div key={item.label} className="flex flex-col items-center gap-2 p-4">
-                <span className="text-3xl">{item.icon}</span>
-                <p className="font-bold text-gray-900 text-sm">{item.label}</p>
-                <p className="text-xs text-gray-400">{item.desc}</p>
-              </div>
+          <div className="text-center mb-8 md:mb-12">
+            <p className="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">Real Google Reviews</p>
+            <h2 className="section-heading text-3xl md:text-5xl">What Our Customers Say</h2>
+            <Link href="/reviews" className="inline-flex items-center justify-center gap-2 mt-3 hover:opacity-80 transition-opacity">
+              <span className="text-yellow-400 text-2xl">★★★★★</span>
+              <span className="text-gray-500 font-medium">{REVIEW_RATING} average from {REVIEW_COUNT} Google reviews</span>
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+            {pickReviews(3, 0).map((review) => (
+              <ReviewCard
+                key={review.name}
+                name={reviewAttribution(review)}
+                text={review.text}
+              />
             ))}
+          </div>
+          <div className="text-center mt-8">
+            <Link href="/reviews" className="text-brand-green font-semibold hover:underline">
+              Read all {REVIEW_COUNT} reviews →
+            </Link>
           </div>
         </div>
       </section>
@@ -308,6 +331,59 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ─── TRUST BAR ─── */}
+      {/* Every reason it's safe to book, in one place instead of scattered
+          down the page. Each line is a confirmed business fact (CONTEXT.md). */}
+      <section className="py-16 md:py-20 bg-white border-y border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">Zero Risk</p>
+            <h2 className="section-heading text-3xl md:text-5xl">Booking Us Is the Easy Part</h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
+            {[
+              { icon: "💵", label: "No Deposit", desc: "Pay on cleaning day by cash, check or card." },
+              { icon: "📝", label: "No Contracts", desc: "Skip, reschedule or cancel for free. Just give us a heads up." },
+              { icon: "🏷️", label: "Price Before You Book", desc: "You see your exact price before anything is booked." },
+              { icon: "👥", label: "Same Team Every Visit", desc: "Recurring clients get the same team, every time." },
+              { icon: "🛡️", label: "Insured & Bonded", desc: "Background-checked, drug-tested team." },
+              { icon: "✅", label: "48-Hour Guarantee", desc: "Something missed? Tell us within 48 hours and we come back free." },
+            ].map((item) => (
+              <div key={item.label} className="bg-orange-50/60 border border-orange-100 rounded-2xl p-4 md:p-6 text-center">
+                <span className="text-3xl block mb-2">{item.icon}</span>
+                <p className="font-bold text-gray-900 text-sm md:text-base">{item.label}</p>
+                <p className="text-xs md:text-sm text-gray-500 mt-1 leading-snug">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link href="/book" className="btn-primary btn-lg">
+              See My Price &amp; Book
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── OUR WORK ─── */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">Real Results</p>
+            <h2 className="section-heading text-4xl md:text-5xl">Our Work Speaks for Itself</h2>
+            <p className="section-subheading mx-auto text-lg">
+              Photos from real DSM jobs. Tap any photo to see it up close.
+            </p>
+          </div>
+
+          <WorkPhotoGrid photos={WORK_PHOTOS} />
+          <div className="text-center mt-12">
+            <Link href="/book" className="btn-primary btn-lg">
+              See My Price &amp; Book
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ─── HOW IT WORKS ─── */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -344,78 +420,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── OUR WORK ─── */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">Real Results</p>
-            <h2 className="section-heading text-4xl md:text-5xl">Our Work Speaks for Itself</h2>
-            <p className="section-subheading mx-auto text-lg">
-              Real results from real homes across Plainfield, Romeoville, Naperville &amp; Bolingbrook
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5">
-            {[
-              // Six tiles, two per service. Captions without a city are the new drops,
-              // whose location is unknown; do not invent one.
-              { src: "/work-photos/oven-interior-deep-cleaning.jpg", alt: "Oven interior cleaned down to bare enamel by DSM Cleaning Solutions", caption: "Oven Cleaning" },
-              { src: "/work-photos/marble-bathroom-deep-cleaning.jpg", alt: "Marble tiled bathroom with a scrubbed tub surround and floor tile catching the light after a DSM Cleaning Solutions deep clean", caption: "Bathroom Deep Clean" },
-              { src: "/work-photos/empty-room-move-out-cleaning.jpg", alt: "Empty bedroom with fresh vacuum lines in the carpet after a DSM Cleaning Solutions move-out cleaning", caption: "Move-Out Clean" },
-              { src: "/work-photos/closet-move-out-cleaning.jpg", alt: "Empty walk-in closet with white built-in drawers and shelving and a polished hardwood floor after a DSM Cleaning Solutions move-out cleaning", caption: "Move-Out Clean" },
-              { src: "/work-photos/walk-in-shower-glass-house-cleaning.jpg", alt: "Shower with a sliding glass door, tiled walls, built-in bench and a spotless white pan after house cleaning by DSM Cleaning Solutions", caption: "Bathroom · House Cleaning" },
-              { src: "/work-photos/google-post-image-cleaning-service-1.jpg", alt: "Full kitchen with dark wood cabinets, granite countertops and stainless appliances after house cleaning by DSM Cleaning Solutions", caption: "Kitchen · House Cleaning" },
-            // Static imagery. The lift-and-zoom hover this used to have made
-            // every photo look clickable when it goes nowhere, so the
-            // affordance is removed rather than faked.
-            ].map((photo) => (
-              <div key={photo.src}>
-                <div className="relative aspect-[4/3] rounded-xl md:rounded-2xl overflow-hidden shadow-md">
-                  <Image
-                    src={photo.src}
-                    alt={photo.alt}
-                    fill
-                    sizes="(max-width: 1024px) 50vw, 33vw"
-                    className="object-cover"
-                  />
-                </div>
-                <p className="text-[11px] md:text-xs text-gray-400 font-medium text-center mt-1.5 md:mt-2.5 md:tracking-wide">{photo.caption}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link href="/book" className="btn-primary btn-lg">
-              Book Your Clean
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── REVIEWS ─── */}
-      <section id="reviews" className="py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">Reviews</p>
-            <h2 className="section-heading text-4xl md:text-5xl">What Romeoville Families Are Saying</h2>
-            <Link href="/reviews" className="inline-flex items-center justify-center gap-2 mt-3 hover:opacity-80 transition-opacity">
-              <span className="text-yellow-400 text-2xl">★★★★★</span>
-              <span className="text-gray-400 font-medium">{REVIEW_RATING} average · {REVIEW_COUNT} reviews</span>
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {pickReviews(3, 0).map((review) => (
-              <ReviewCard
-                key={review.name}
-                name={reviewAttribution(review)}
-                text={review.text}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ─── ABOUT ─── */}
       <section id="about" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -439,7 +443,9 @@ export default function HomePage() {
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {[
                   { label: "Serving the Southwest Suburbs", value: "Since 2020" },
-                  { label: "Happy Clients", value: "500+" },
+                  // From BookingKoala: 2,203 bookings since 2020 (owner, Oct 2026). Bookings
+                  // count every visit, so this says cleanings, not clients.
+                  { label: "Cleanings Since 2020", value: "2,000+" },
                   // The real count, from the same list the service-area schema is built from.
                   { label: "Cities Served", value: String(SERVICE_CITIES.length) },
                   // Replaces an unverifiable "100% Satisfaction Rate" with a
@@ -453,8 +459,8 @@ export default function HomePage() {
                 ))}
               </div>
 
-              <Link href="/contact" className="btn-primary">
-                Get Your Free Estimate
+              <Link href="/book" className="btn-primary">
+                See My Price &amp; Book
               </Link>
             </div>
 
@@ -484,6 +490,101 @@ export default function HomePage() {
                 <p className="text-xs text-white/80 font-medium">Serving<br/>Romeoville</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── FAQ ─── */}
+      <section id="faq" className="py-24 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <p className="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">FAQs</p>
+            <h2 className="section-heading text-4xl md:text-5xl">Common Questions</h2>
+          </div>
+          <div className="space-y-3">
+            {faqs.map((faq, i) => (
+              <details key={i} className="bg-gray-50 border border-gray-200 rounded-2xl group overflow-hidden">
+                <summary className="flex items-center justify-between p-5 cursor-pointer font-semibold text-gray-900 hover:text-brand-green">
+                  <h3 className="text-left pr-4 text-sm md:text-base">{faq.question}</h3>
+                  <svg className="w-5 h-5 text-brand-green flex-shrink-0 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-5 pb-5 pt-1">
+                  <p className="text-gray-500 leading-relaxed text-sm">{renderFaqAnswer(faq.answer)}</p>
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── CONTACT / CTA ─── */}
+      <section id="contact" className="py-20 scroll-mt-20 bg-gradient-to-br from-orange-500 via-orange-500 to-orange-600 relative overflow-hidden">
+        <div className="hidden sm:block absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: "radial-gradient(circle at 20% 25%, rgba(255,255,255,0.55), rgba(255,255,255,0) 45%), radial-gradient(circle at 80% 75%, rgba(255,255,255,0.35), rgba(255,255,255,0) 50%), linear-gradient(135deg, rgba(255,255,255,0.18), rgba(0,0,0,0.12))",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }} />
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Header */}
+          <div className="text-center mb-10">
+            <p className="text-white/70 font-semibold text-sm uppercase tracking-widest mb-3">Get in Touch</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight tracking-tight">
+              Ready for a Spotlessly Clean Home?
+            </h2>
+            <p className="text-white/80 text-lg max-w-2xl mx-auto leading-relaxed mb-6">
+              Fill out the form below or call us directly. Serving Romeoville, Plainfield, Naperville,
+              Bolingbrook, and all surrounding southwest suburbs.
+            </p>
+            <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-xl px-6 py-3 rounded-2xl hover:bg-orange-50 transition-colors shadow-xl">
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+              </svg>
+              (815) 246-2113
+            </a>
+          </div>
+
+          {/* Trust badges */}
+          <div className="flex flex-wrap justify-center gap-3 mb-10">
+            {["✓ Free Estimates", "✓ 48-Hour Satisfaction Guarantee", "✓ Insured & Bonded", "✓ Background-Checked Team", "✓ Family-Owned"].map((item) => (
+              <span key={item} className="bg-white/15 backdrop-blur-sm border border-white/20 text-white text-sm font-medium px-4 py-1.5 rounded-full">
+                {item}
+              </span>
+            ))}
+          </div>
+
+          {/* BookingKoala Embedded Form */}
+          <div className="bg-white rounded-3xl shadow-2xl shadow-black/20 p-6 md:p-8">
+            {/* Matches the trust line style used on the deep cleaning page.
+                No defaultService here: this is the general homepage form, so
+                the Service Type dropdown inside LeadForm stays unselected
+                rather than locking to one service. */}
+            <div className="text-center mb-6">
+              <div className="flex justify-center mb-1">
+                <span style={{ color: "#E8622A" }} className="text-2xl">★★★★★</span>
+              </div>
+              <p className="text-sm text-gray-500">
+                Trusted by homeowners across the southwest suburbs, {REVIEW_COUNT} five-star reviews
+              </p>
+            </div>
+            <LeadForm />
+          </div>
+
+          {/* Book Now direct option */}
+          <div className="text-center mt-8">
+            <p className="text-white/70 text-sm mb-4">Prefer to book online right now?</p>
+            <Link
+              href="/book"
+              className="inline-flex items-center gap-2 bg-white text-orange-600 font-bold text-lg px-8 py-4 rounded-2xl hover:bg-orange-50 active:scale-95 transition-all duration-200 shadow-xl"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              Book Now Online
+            </Link>
           </div>
         </div>
       </section>
@@ -588,103 +689,6 @@ export default function HomePage() {
             <Link href="/move-out-cleaning-naperville-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
               <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning in Naperville</h3>
               <p className="text-sm text-gray-600">Deposit-back move-out cleaning for Naperville rentals & home sales.</p>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── FAQ ─── */}
-      <section id="faq" className="py-24 bg-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">FAQs</p>
-            <h2 className="section-heading text-4xl md:text-5xl">Common Questions</h2>
-          </div>
-          <div className="space-y-3">
-            {faqs.map((faq, i) => (
-              <details key={i} className="bg-gray-50 border border-gray-200 rounded-2xl group overflow-hidden">
-                <summary className="flex items-center justify-between p-5 cursor-pointer font-semibold text-gray-900 hover:text-brand-green">
-                  <h3 className="text-left pr-4 text-sm md:text-base">{faq.question}</h3>
-                  <svg className="w-5 h-5 text-brand-green flex-shrink-0 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </summary>
-                <div className="px-5 pb-5 pt-1">
-                  <p className="text-gray-500 leading-relaxed text-sm">{renderFaqAnswer(faq.answer)}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ─── CONTACT / CTA ─── */}
-      <section id="contact" className="py-20 scroll-mt-20 bg-gradient-to-br from-orange-500 via-orange-500 to-orange-600 relative overflow-hidden">
-        <div className="hidden sm:block absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: "radial-gradient(circle at 20% 25%, rgba(255,255,255,0.55), rgba(255,255,255,0) 45%), radial-gradient(circle at 80% 75%, rgba(255,255,255,0.35), rgba(255,255,255,0) 50%), linear-gradient(135deg, rgba(255,255,255,0.18), rgba(0,0,0,0.12))",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }} />
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-
-          {/* Header */}
-          <div className="text-center mb-10">
-            <p className="text-white/70 font-semibold text-sm uppercase tracking-widest mb-3">Get in Touch</p>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight tracking-tight">
-              Ready for a Spotlessly Clean Home?
-            </h2>
-            <p className="text-white/80 text-lg max-w-2xl mx-auto leading-relaxed mb-6">
-              Fill out the form below or call us directly. Serving Romeoville, Plainfield, Naperville,
-              Bolingbrook, and all surrounding southwest suburbs.
-            </p>
-            <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-xl px-6 py-3 rounded-2xl hover:bg-orange-50 transition-colors shadow-xl">
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-              </svg>
-              (815) 246-2113
-            </a>
-          </div>
-
-          {/* Trust badges */}
-          <div className="flex flex-wrap justify-center gap-3 mb-10">
-            {["✓ Free Estimates", "✓ 48-Hour Satisfaction Guarantee", "✓ Insured & Bonded", "✓ Background-Checked Team", "✓ Family-Owned"].map((item) => (
-              <span key={item} className="bg-white/15 backdrop-blur-sm border border-white/20 text-white text-sm font-medium px-4 py-1.5 rounded-full">
-                {item}
-              </span>
-            ))}
-          </div>
-
-          {/* BookingKoala Embedded Form */}
-          <div className="bg-white rounded-3xl shadow-2xl shadow-black/20 p-6 md:p-8">
-            {/* Matches the trust line style used on the deep cleaning page.
-                No defaultService here: this is the general homepage form, so
-                the Service Type dropdown inside LeadForm stays unselected
-                rather than locking to one service. */}
-            <div className="text-center mb-6">
-              <div className="flex justify-center mb-1">
-                <span style={{ color: "#E8622A" }} className="text-2xl">★★★★★</span>
-              </div>
-              <p className="text-sm text-gray-500">
-                Trusted by homeowners across the southwest suburbs, {REVIEW_COUNT} five-star reviews
-              </p>
-            </div>
-            <LeadForm />
-          </div>
-
-          {/* Book Now direct option */}
-          <div className="text-center mt-8">
-            <p className="text-white/70 text-sm mb-4">Prefer to book online right now?</p>
-            <Link
-              href="/book"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white text-orange-600 font-bold text-lg px-8 py-4 rounded-2xl hover:bg-orange-50 active:scale-95 transition-all duration-200 shadow-xl"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              Book Now Online
             </Link>
           </div>
         </div>
