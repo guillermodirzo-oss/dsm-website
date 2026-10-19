@@ -1,9 +1,11 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 import { DEEP_CLEANING_TIERS, STANDARD_CLEANING_TIERS, formatPrice, priceForBeds } from "@/lib/pricing";
 import { OG_IMAGE_ALT } from "@/lib/workPhotos";
 import { DEEP_CHECKLIST } from "@/lib/deepChecklist";
+import ServiceVideoSection from "@/components/ServiceVideoSection";
+import { DEEP_VIDEO } from "@/lib/serviceVideos";
 
 // Every price on this page comes from the rate card in lib/pricing.ts.
 // Each is the listed tier for that home size; 4 bed uses the larger of the
@@ -179,6 +181,9 @@ export default function DeepCleaningCostNapervillePage() {
           </div>
         </div>
       </section>
+
+      {/* VIDEO: the deep cleaning sales video (lib/serviceVideos.tsx), shared by every deep cleaning page. */}
+      <ServiceVideoSection video={DEEP_VIDEO} kicker="Naperville Deep Cleaning" heading="What a Deep Clean Adds, in Under a Minute" />
 
       {/* INTRO */}
       <section className="py-16 bg-white">

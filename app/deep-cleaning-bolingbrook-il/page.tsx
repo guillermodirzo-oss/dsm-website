@@ -12,6 +12,8 @@ import { listWithAnd } from "@/lib/recurringCities";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 import { DEEP_CHECKLIST } from "@/lib/deepChecklist";
+import ServiceVideoSection from "@/components/ServiceVideoSection";
+import { DEEP_VIDEO } from "@/lib/serviceVideos";
 
 export const metadata: Metadata = {
   title: { absolute: deepCityTitle("Bolingbrook") },
@@ -192,6 +194,9 @@ export default function DeepCleaningBolingbrookPage() {
           <span>✅ 48-Hour Satisfaction Guarantee</span>
         </div>
       </section>
+
+      {/* VIDEO: the deep cleaning sales video (lib/serviceVideos.tsx), shared by every deep cleaning page. */}
+      <ServiceVideoSection video={DEEP_VIDEO} kicker="Bolingbrook Deep Cleaning" heading="What a Deep Clean Adds, in Under a Minute" />
 
       {/* LOCAL SECTION. The intro and the paragraph under the heading are the
           owner's copy. Zip codes are printed from lib/cityData.ts. The intro

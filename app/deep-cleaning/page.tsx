@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { REAL_REVIEWS, pickReviews, reviewAttribution } from "@/lib/realReviews";
 import Image from "next/image";
@@ -16,6 +16,8 @@ import { offerPrice } from "@/lib/offers";
 import { REVIEW_COUNT, REVIEW_RATING, GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 import { DEEP_OFFER } from "@/lib/offers";
 import { DEEP_CHECKLIST } from "@/lib/deepChecklist";
+import ServiceVideoSection from "@/components/ServiceVideoSection";
+import { DEEP_VIDEO } from "@/lib/serviceVideos";
 
 // Regenerate at most hourly so FALL75 drops out of the HTML on its own after
 // it ends. <Offer> also hides it in the browser at the deadline. See
@@ -221,6 +223,9 @@ export default function DeepCleaningPage() {
           <span>✅ 48-Hour Satisfaction Guarantee</span>
         </div>
       </section>
+
+      {/* VIDEO: the deep cleaning sales video (lib/serviceVideos.tsx), shared by every deep cleaning page. */}
+      <ServiceVideoSection video={DEEP_VIDEO} kicker="Deep Cleaning" heading="What a Deep Clean Adds, in Under a Minute" />
 
       {/* SEO CONTENT */}
       <section className="py-12 px-4 bg-gray-50">

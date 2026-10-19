@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { deepCityTitle } from "@/lib/seoTitles";
 import Link from "next/link";
 import HeroRating from "@/components/HeroRating";
@@ -10,6 +10,8 @@ import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 import { DEEP_CHECKLIST } from "@/lib/deepChecklist";
 import { zipCodesPhrase, zipLine } from "@/lib/cityData";
+import ServiceVideoSection from "@/components/ServiceVideoSection";
+import { DEEP_VIDEO } from "@/lib/serviceVideos";
 
 export const metadata: Metadata = {
   title: { absolute: deepCityTitle("Westmont") },
@@ -193,6 +195,9 @@ export default function DeepCleaningWestmontPage() {
           </div>
         </div>
       </section>
+
+      {/* VIDEO: the deep cleaning sales video (lib/serviceVideos.tsx), shared by every deep cleaning page. */}
+      <ServiceVideoSection video={DEEP_VIDEO} kicker="Westmont Deep Cleaning" heading="What a Deep Clean Adds, in Under a Minute" />
 
       {/* SEO CONTENT */}
       <section className="py-14 bg-white">

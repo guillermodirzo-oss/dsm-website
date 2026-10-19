@@ -23,3 +23,22 @@ export const RECURRING_VIDEO: ServiceVideo = {
     duration: "PT43S",
   },
 };
+
+export const DEEP_VIDEO: ServiceVideo = {
+  id: "deep_cleaning",
+  vertical: { src: "/videos/dsm-deep-vertical.mp4", poster: "/videos/dsm-deep-vertical-poster.jpg" },
+  wide: { src: "/videos/dsm-deep-wide.mp4", poster: "/videos/dsm-deep-wide-poster.jpg" },
+  label: "What a DSM deep clean includes, a short video with captions",
+  endLine: (
+    <>
+      Get your whole house <span className="text-orange-400">caught up.</span>
+    </>
+  ),
+  schema: {
+    name: "Deep House Cleaning With DSM Cleaning Solutions",
+    description:
+      "What a deep clean from DSM Cleaning Solutions in Romeoville, IL adds on top of a regular clean: grout scrubbing, baseboards, doors and door frames, degreasing the stovetop, hood and burners, vacuuming under and behind furniture, light fixtures and inside window glass. Exact price before you book, no deposit, 48-hour re-clean guarantee.",
+    uploadDate: "2026-10-19T18:30:00-05:00",
+    duration: "PT46S",
+  },
+};
