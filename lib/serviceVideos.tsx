@@ -39,6 +39,6 @@ export const DEEP_VIDEO: ServiceVideo = {
     description:
       "What a deep clean from DSM Cleaning Solutions in Romeoville, IL adds on top of a regular clean: grout scrubbing, baseboards, doors and door frames, degreasing the stovetop, hood and burners, vacuuming under and behind furniture, light fixtures and inside window glass. Exact price before you book, no deposit, 48-hour re-clean guarantee.",
     uploadDate: "2026-10-19T18:30:00-05:00",
-    duration: "PT46S",
+    duration: "PT47S",
   },
 };
