@@ -20,6 +20,6 @@ export const RECURRING_VIDEO: ServiceVideo = {
     description:
       "How recurring house cleaning works with DSM Cleaning Solutions in Romeoville, IL: the same team every visit, weekly, every two weeks or monthly, save up to 20% per visit, price locked for 12 months, no contracts and no deep clean needed to start.",
     uploadDate: "2026-10-19T18:00:00-05:00",
-    duration: "PT45S",
+    duration: "PT43S",
   },
 };
