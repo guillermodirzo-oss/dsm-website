@@ -134,7 +134,7 @@ export const MOVEOUT_OFFER = defineOffer({
   servicePath: "/move-out-cleaning",
   discount: 75,
   startDateISO: "2026-08-14",
-  endDateISO: "2026-10-31",
+  endDateISO: "2026-12-31",
 });
 
 /** Every offer, in the order banners list them. */

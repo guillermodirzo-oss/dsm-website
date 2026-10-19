@@ -84,7 +84,7 @@ Add-on prices live in `lib/addOns.ts` and nowhere else. /pricing lists every add
 | Code | Service | Deal | Runs through |
 |---|---|---|---|
 | FALL75 | Deep cleaning | $75 off plus free oven cleaning | November 30, 2026 |
-| MOVE75 | Move-out cleaning | $75 off | October 31, 2026 |
+| MOVE75 | Move-out cleaning | $75 off | December 31, 2026 (extended Oct 2026: winter is slow for move-outs; new move-out offer planned for spring) |
 
 All promotions live in `lib/offers.ts`. Never type a promo code or promo price into a page directly.
 
