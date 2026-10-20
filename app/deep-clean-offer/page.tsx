@@ -7,6 +7,8 @@ import { DEEP_OFFER } from "@/lib/offers";
 import { DEEP_CLEANING_TIERS, formatPrice, startingPrice } from "@/lib/pricing";
 import { WORK_PHOTOS } from "@/lib/workPhotos";
 import StickyBar from "./StickyBar";
+import ServiceVideoSection from "@/components/ServiceVideoSection";
+import { DEEP_VIDEO } from "@/lib/serviceVideos";
 import DeepCleanChecklist from "./DeepCleanChecklist";
 
 // Regenerate at most hourly so FALL75 drops out of the HTML on its own after
@@ -222,6 +224,21 @@ export default function DeepCleanOfferPage() {
 
         </div>
       </section>
+
+      {/* Deep cleaning video, under the hero so the form stays first on phones */}
+      <ServiceVideoSection
+        video={DEEP_VIDEO}
+        kicker="Deep Cleaning"
+        heading="What a Deep Clean Adds, in Under a Minute"
+        cta={{
+          href: "#quote-form-bottom",
+          label: (
+            <Offer service="deep" fallback="Get My Free Quote">
+              Claim My {OFF} Off
+            </Offer>
+          ),
+        }}
+      />
 
       {/* ══════════════════════════════════════════════════════════════════════
           SECTION 2 — Reveal The Problem

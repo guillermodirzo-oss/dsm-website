@@ -25,10 +25,13 @@ export default function ServiceVideoSection({
   video,
   kicker,
   heading,
+  cta,
 }: {
   video: ServiceVideo;
   kicker: string;
   heading: string;
+  /** Button under the video. Defaults to /book; ad landing pages point it at their own form. */
+  cta?: { href: string; label: ReactNode };
 }) {
   const schema = {
     "@context": "https://schema.org",
@@ -53,11 +56,11 @@ export default function ServiceVideoSection({
         <VslVideo video={video.id} vertical={video.vertical} wide={video.wide} label={video.label} endLine={video.endLine} />
         <div className="text-center mt-8 md:mt-10">
           <Link
-            href="/book"
+            href={cta?.href ?? "/book"}
             className="inline-block font-extrabold text-base text-white py-4 px-9 rounded-full active:scale-95 transition-all duration-200 shadow-2xl"
             style={{ backgroundColor: "#E8622A", boxShadow: "0 8px 30px rgba(232,98,42,0.45)" }}
           >
-            See My Price &amp; Book
+            {cta?.label ?? <>See My Price &amp; Book</>}
           </Link>
           <p className="text-white/60 text-sm mt-3">
             or call <a href="tel:+18152462113" className="text-white font-semibold hover:underline">(815) 246-2113</a>
