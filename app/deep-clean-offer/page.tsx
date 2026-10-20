@@ -123,27 +123,27 @@ export default function DeepCleanOfferPage() {
       {/* ══════════════════════════════════════════════════════════════════════
           SECTION 1 — Hero (above the fold)
       ══════════════════════════════════════════════════════════════════════ */}
-      <section className="bg-gradient-to-br from-gray-900 to-slate-800 py-10 md:py-16">
+      <section className="bg-gradient-to-br from-gray-900 to-slate-800 py-4 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 lg:gap-12 items-start">
 
             {/* Left column — headline + trust bullets */}
             <div className="text-white">
               {/* Pill tag — clickable anchor to first form */}
               <a
                 href="#quote-form-top"
-                className="inline-flex items-center gap-1.5 bg-amber-500/20 border border-amber-400/30 text-amber-300 text-xs font-semibold px-3 py-1.5 rounded-full mb-5 cursor-pointer hover:opacity-90 transition-opacity"
+                className="inline-flex items-center gap-1.5 bg-amber-500/20 border border-amber-400/30 text-amber-300 text-xs font-semibold px-3 py-1 md:py-1.5 rounded-full mb-2 md:mb-5 cursor-pointer hover:opacity-90 transition-opacity"
               >
                 ⚡ Limited Weekly Spots. Book Now
               </a>
 
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
+              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-2 md:mb-4">
                 <Offer service="deep" fallback="Deep Cleaning From a Local Family Team">
                   {OFF} Off Your First Deep Clean
                 </Offer>
               </h1>
 
-              <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-4">
+              <p className="text-gray-300 text-sm md:text-lg leading-snug md:leading-relaxed md:mb-4">
                 <Offer
                   service="deep"
                   fallback={
@@ -158,8 +158,9 @@ export default function DeepCleanOfferPage() {
                 </Offer>
               </p>
 
-              {/* Trust bullets — 2-col compact grid on mobile, single col on md+ */}
-              <ul className="grid grid-cols-2 gap-2 md:flex md:flex-col md:gap-3">
+              {/* Trust bullets. Desktop only here; on phones they sit under the form so the
+                  form shows without scrolling (the form card chips cover the same trust). */}
+              <ul className="hidden md:flex md:flex-col md:gap-3">
                 {trustBullets.map((b) => (
                   <li
                     key={b.text}
@@ -175,9 +176,9 @@ export default function DeepCleanOfferPage() {
             {/* Right column — form card */}
             <div
               id="quote-form-top"
-              className="bg-white rounded-3xl shadow-2xl p-6 md:p-8"
+              className="bg-white rounded-3xl shadow-2xl p-5 md:p-8"
             >
-              <div className="mb-4">
+              <div className="mb-3 md:mb-4">
                 <h2 className="text-xl font-bold text-gray-900 mb-1">
                   <Offer service="deep" fallback="Get Your Free Deep Cleaning Quote">
                     Claim Your{" "}
@@ -200,13 +201,23 @@ export default function DeepCleanOfferPage() {
                 </p>
               </div>
               {/* Trust badges */}
-              <div className="grid grid-cols-3 gap-1 w-full mb-4">
+              <div className="grid grid-cols-3 gap-1 w-full mb-3 md:mb-4">
                 <span className="bg-gray-100 text-xs text-gray-600 px-1 py-1 rounded-full flex justify-center items-center text-center">⭐ Google 5.0</span>
                 <span className="bg-gray-100 text-xs text-gray-600 px-1 py-1 rounded-full flex justify-center items-center text-center">🛡️ Insured &amp; Bonded</span>
                 <span className="bg-gray-100 text-xs text-gray-600 px-1 py-1 rounded-full flex justify-center items-center text-center">🏠 Family-Owned</span>
               </div>
               <LeadForm defaultService="Deep Cleaning" step1Label="Free quote in 60 seconds" />
             </div>
+
+            {/* Phone copy of the trust bullets, below the form */}
+            <ul className="grid grid-cols-2 gap-2 md:hidden">
+              {trustBullets.map((b) => (
+                <li key={b.text} className="flex items-start gap-1.5 text-xs text-gray-300">
+                  <span className="flex-shrink-0">{b.icon}</span>
+                  <span>{b.text}</span>
+                </li>
+              ))}
+            </ul>
           </div>
 
         </div>
