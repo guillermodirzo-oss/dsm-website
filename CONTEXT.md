@@ -175,6 +175,7 @@ Move-out customers are mostly home buyers and sellers, not renters. Write move-o
 
 ## Service Videos
 - Each service has its own short video, set in `lib/serviceVideos.tsx` and shown through `components/ServiceVideoSection.tsx` right after the trust bar: recurring on /recurring-cleaning and the 4 recurring city pages; deep cleaning on /deep-cleaning, the 16 deep cleaning city pages and /deep-cleaning-cost-naperville-il; move-out on /move-out-cleaning and the 16 move-out city pages. GA4 `video` values: `recurring`, `deep_cleaning`, `move_out`.
+- The ad landing page /deep-clean-offer also shows the deep cleaning video, under the hero (never above the form: on phones the form must show without scrolling). Its button uses the `cta` prop to jump to `#quote-form-bottom` instead of /book.
 - Source for each video is in `video/<name>-vsl/` (script, photos with GPS removed, voiceover, timings), built with `video/engine/` (render.py, sync.py, finish.sh). The deep cleaning video never shows an oven interior (inside oven is an add-on for a deep clean). No video mentions a promo code.
 - Photo library: the owner's sorted job photos live on his PC in Desktop/Website Data/Work Picture and Video (folders by service, "best-" prefix for the strongest, `_photo-index.csv`). Every original has GPS location in it: strip EXIF before any photo goes on the site.
 
