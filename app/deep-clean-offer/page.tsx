@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution } from "@/lib/realReviews";
+import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution, reviewByName } from "@/lib/realReviews";
+import { SERVICE_CITIES } from "@/lib/siteConstants";
 import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
 import Offer from "@/components/Offer";
@@ -28,18 +29,25 @@ export const metadata: Metadata = {
     absolute: "Deep Cleaning From a Local Family Team | DSM Cleaning Solutions",
   },
   description:
-    "Deep cleaning from a family-owned team in Romeoville. The grout, the baseboards and the spots a regular clean skips. Serving Plainfield, Bolingbrook, Shorewood and Lockport too.",
+    "Deep cleaning from a family-owned team in Romeoville. The grout, the baseboards and the spots a regular clean skips. Serving Joliet, Naperville, Plainfield, Bolingbrook and nearby towns too.",
   robots: { index: false, follow: false },
 };
 
 // ─── Static data ─────────────────────────────────────────────────────────────
+// Towns named on this page. Joliet and Naperville are the biggest follower
+// cities on Facebook after Chicago. The "more nearby towns" count is the rest
+// of SERVICE_CITIES, so it stays right when the service area changes.
+const NAMED_TOWNS = ["Romeoville", "Joliet", "Naperville", "Plainfield", "Bolingbrook", "Shorewood", "Lockport"];
+const MORE_TOWNS = SERVICE_CITIES.length - NAMED_TOWNS.length;
+const TOWNS_LINE = `${NAMED_TOWNS.slice(0, -1).join(", ")} and ${NAMED_TOWNS[NAMED_TOWNS.length - 1]}, plus ${MORE_TOWNS} more nearby towns`;
+
 const trustBullets = [
   { icon: "★", text: "5.0 Stars on Google" },
   { icon: "🏠", text: "Family-owned & based in Romeoville" },
   { icon: "✅", text: "48-Hour Satisfaction Guarantee" },
   {
     icon: "📍",
-    text: "Romeoville · Plainfield · Bolingbrook · Shorewood · Lockport",
+    text: `${NAMED_TOWNS.join(" · ")} + ${MORE_TOWNS} more nearby towns`,
   },
 ];
 
@@ -103,7 +111,10 @@ const workPhotos = [
   { ...WORK_PHOTOS.greenTubBathroom, caption: "Bathroom deep clean" },
 ];
 
-const reviews = pickReviews(3, 2);
+// Courtney Horne leads: her review is Facebook post 10 (Nov 23), so ad and post
+// visitors see the same words here. Then Thomas Cheng and Julie Gilligan. None of
+// them is the featured review above the second form (Jan Forster, index 1).
+const reviews = [reviewByName("Courtney Horne"), ...pickReviews(2, 2)];
 
 // ─── Page ────────────────────────────────────────────────────────────────────
 export default function DeepCleanOfferPage() {
@@ -141,7 +152,7 @@ export default function DeepCleanOfferPage() {
 
               <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-2 md:mb-4">
                 <Offer service="deep" fallback="Deep Cleaning From a Local Family Team">
-                  {OFF} Off Your First Deep Clean
+                  {OFF} Off Your Deep Clean
                 </Offer>
               </h1>
 
@@ -155,7 +166,8 @@ export default function DeepCleanOfferPage() {
                     </>
                   }
                 >
-                  Book by {DEEP_OFFER.endDate} with code {DEEP_OFFER.code} and get{" "}
+                  Get the house caught up before the holidays. Book by{" "}
+                  {DEEP_OFFER.endDate} with code {DEEP_OFFER.code} and get{" "}
                   {OFF} off plus {DEEP_OFFER.bonus}, a ${DEEP_OFFER.bonusValue} value.
                 </Offer>
               </p>
@@ -478,16 +490,12 @@ export default function DeepCleanOfferPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mx-auto text-center mb-10">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              We Limit Deep Clean Bookings to Keep Quality High
+              Deep Clean Spots Fill Up Every Week
             </h2>
             <p className="text-gray-500 leading-relaxed">
-              We personally handle every job and only take on 6 deep cleans per
-              week across Romeoville, Plainfield, Bolingbrook,
-              Shorewood, and Lockport. We limit bookings to maintain quality.
-              Request yours to check availability for your area.
-            </p>
-            <p className="text-sm text-gray-400 mt-3">
-              📅 Most homes are scheduled within 3–5 days of requesting.
+              We personally handle every job, so there are only so many deep
+              clean spots each week across {TOWNS_LINE}. Request yours to check
+              availability for your area.
             </p>
           </div>
 
@@ -562,23 +570,23 @@ export default function DeepCleanOfferPage() {
             {[
               {
                 q: "Do I need to be home during the cleaning?",
-                a: "No. Many of our clients give us access and come home to a spotless house. We are fully insured and background-checked for your peace of mind.",
+                a: "No. Many of our clients give us access and come home to a spotless house. We're insured and bonded, and every cleaner is background-checked.",
               },
               {
                 q: "How long does a deep clean take?",
-                a: "Most homes take between 3–5 hours depending on size and condition. We'll give you a better estimate when you request your quote.",
+                a: "Most homes take 3 to 5 hours depending on size and condition. We'll give you a better estimate when you request your quote.",
               },
               {
                 q: "Are you insured?",
-                a: "Yes, DSM Cleaning Solutions is fully insured. You're covered from the moment we walk in the door.",
+                a: "Yes. DSM Cleaning Solutions is insured and bonded, and our cleaners are background-checked and drug tested.",
               },
               {
-                q: "What if I'm not 100% happy?",
-                a: "Call us within 48 hours and we'll come back and make it right, completely free. That's our guarantee, no questions asked.",
+                q: "What if you miss something?",
+                a: "Tell us within 48 hours and we'll come back and re-clean it for free. That's our guarantee.",
               },
               {
                 q: "How fast can I get scheduled?",
-                a: "Most homes are scheduled within 3–5 days of your request. Spots fill weekly. The sooner you request, the better.",
+                a: "It depends on the week, since our spots fill up. Send your request and we'll tell you the first open date for your area.",
               },
             ].map((item) => (
               <div key={item.q} className="py-4">
@@ -605,8 +613,7 @@ export default function DeepCleanOfferPage() {
             questions asked. That&apos;s the DSM guarantee.
           </p>
           <p className="text-sm text-gray-400">
-            Proudly serving Romeoville, Plainfield, Bolingbrook,
-            Shorewood, and Lockport, IL
+            Proudly serving {TOWNS_LINE}
           </p>
         </div>
       </section>

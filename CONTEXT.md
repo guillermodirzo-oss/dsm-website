@@ -14,6 +14,7 @@
 - **Team:** Recurring clients get the SAME TEAM every visit (a team, not one cleaner). Never write "same cleaner" or "your cleaner". Cleaners are background-checked and drug tested. Cleaners are trained. There is NO certification: never call them "certified".
 - **Products:** Regular cleans use DSM's standard products. Eco-friendly, non-toxic products are used only when the customer adds the "Eco-Friendly Green Products" add-on (owner, October 2026): $30 per clean on one-time standard, deep and move-in/move-out cleans, $15 per visit on recurring plans (weekly, every two weeks, monthly). Both prices live in `lib/addOns.ts`. The eco products are NOT certified by anyone: never say "certified safe". Never claim DSM's products are safe for kids and pets.
 - **Same-day service:** available.
+- **Capacity and scheduling claims (owner, Oct 19 2026):** True: the owners personally handle every job, and weekly spots really do fill up ("Limited Weekly Spots" is fine). Never claim a weekly cap ("only 6 deep cleans per week") or a scheduling window ("scheduled within 3 to 5 days").
 - **Since:** Locally owned in Romeoville since 2020.
 - **Growth focus:** DSM is not investing in new pages or content for Minooka or areas south of Joliet. Existing pages for those cities stay live and Minooka stays in the service area, but new work targets Romeoville and cities north and east: Bolingbrook, Lemont, Homer Glen, Lockport, Plainfield, Naperville, Westmont, Downers Grove, Hinsdale, Oak Brook, Burr Ridge, and Joliet.
 - **Cancellations:** No fee to cancel, skip or reschedule (the old $70 late-cancellation fee was retired Oct 2026). We ask customers to let us know as early as they can so we can adjust the schedule.
@@ -83,7 +84,7 @@ Add-on prices live in `lib/addOns.ts` and nowhere else. /pricing lists every add
 ## Current Offers
 | Code | Service | Deal | Runs through |
 |---|---|---|---|
-| FALL75 | Deep cleaning | $75 off plus free oven cleaning | November 30, 2026 |
+| FALL75 | Deep cleaning | $75 off plus free oven cleaning, open to anyone (not new clients only: write "your deep clean", never "your first") | November 30, 2026 |
 | MOVE75 | Move-out cleaning | $75 off | December 31, 2026 (extended Oct 2026: winter is slow for move-outs; new move-out offer planned for spring) |
 
 All promotions live in `lib/offers.ts`. Never type a promo code or promo price into a page directly.
