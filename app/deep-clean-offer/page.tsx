@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { REAL_REVIEWS, REVIEW_COUNT, pickReviews, reviewAttribution, reviewByName } from "@/lib/realReviews";
 import { SERVICE_CITIES } from "@/lib/siteConstants";
 import Image from "next/image";
-import LeadForm from "@/components/LeadForm";
 import Offer from "@/components/Offer";
 import { DEEP_OFFER } from "@/lib/offers";
 import { DEEP_CLEANING_TIERS, formatPrice, startingPrice } from "@/lib/pricing";
@@ -134,23 +133,19 @@ export default function DeepCleanOfferPage() {
       </header>
 
       {/* ══════════════════════════════════════════════════════════════════════
-          SECTION 1 — Hero (above the fold)
+          SECTION 1 — Hero, then the booking form right under it
+          On phones the top of the booking form must show without scrolling.
       ══════════════════════════════════════════════════════════════════════ */}
-      <section className="bg-gradient-to-br from-gray-900 to-slate-800 py-4 md:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 lg:gap-12 items-start">
+      <section className="bg-gradient-to-br from-gray-900 to-slate-800 pt-4 pb-5 md:pt-14 md:pb-12">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-white md:text-center">
+          <a
+            href="#book"
+            className="inline-flex items-center gap-1.5 bg-amber-500/20 border border-amber-400/30 text-amber-300 text-xs font-semibold px-3 py-1 md:py-1.5 rounded-full mb-2 md:mb-5 cursor-pointer hover:opacity-90 transition-opacity"
+          >
+            ⚡ Limited Weekly Spots. Book Now
+          </a>
 
-            {/* Left column — headline + trust bullets */}
-            <div className="text-white">
-              {/* Pill tag — clickable anchor to first form */}
-              <a
-                href="#quote-form-top"
-                className="inline-flex items-center gap-1.5 bg-amber-500/20 border border-amber-400/30 text-amber-300 text-xs font-semibold px-3 py-1 md:py-1.5 rounded-full mb-2 md:mb-5 cursor-pointer hover:opacity-90 transition-opacity"
-              >
-                ⚡ Limited Weekly Spots. Book Now
-              </a>
-
-              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-2 md:mb-4">
+          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-2 md:mb-4">
                 <Offer service="deep" fallback="Deep Cleaning From a Local Family Team">
                   {OFF} Off Your Deep Clean
                 </Offer>
@@ -162,7 +157,7 @@ export default function DeepCleanOfferPage() {
                   fallback={
                     <>
                       The grout, the baseboards and the spots a regular clean skips. Deep cleaning
-                      starts at {ENTRY_PRICE}, and we confirm your price before we book.
+                      starts at {ENTRY_PRICE}, and you see your exact price before you book.
                     </>
                   }
                 >
@@ -172,68 +167,87 @@ export default function DeepCleanOfferPage() {
                 </Offer>
               </p>
 
-              {/* Trust bullets. Desktop only here; on phones they sit under the form so the
-                  form shows without scrolling (the form card chips cover the same trust). */}
-              <ul className="hidden md:flex md:flex-col md:gap-3">
-                {trustBullets.map((b) => (
-                  <li
-                    key={b.text}
-                    className="flex items-start gap-1.5 text-xs md:text-sm text-gray-300"
-                  >
-                    <span className="flex-shrink-0">{b.icon}</span>
-                    <span>{b.text}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          {/* Trust bullets. Desktop here; on phones they sit under the booking form. */}
+          <ul className="hidden md:flex md:flex-wrap md:justify-center md:gap-x-6 md:gap-y-2 md:mt-6">
+            {trustBullets.map((b) => (
+              <li key={b.text} className="flex items-start gap-1.5 text-sm text-gray-300">
+                <span className="flex-shrink-0">{b.icon}</span>
+                <span>{b.text}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
 
-            {/* Right column — form card */}
-            <div
-              id="quote-form-top"
-              className="bg-white rounded-3xl shadow-2xl p-5 md:p-8"
-            >
-              <div className="mb-3 md:mb-4">
-                <h2 className="text-xl font-bold text-gray-900 mb-1">
-                  <Offer service="deep" fallback="Get Your Free Deep Cleaning Quote">
-                    Claim Your{" "}
-                    <a
-                      href="#quote-form-top"
-                      className="text-orange-600 hover:underline"
-                    >
-                      {OFF} Discount
-                    </a>
-                  </Offer>
-                </h2>
-                <p className="text-sm text-gray-500">
-                  <Offer
-                    service="deep"
-                    fallback={<>Deep cleaning starts at {ENTRY_PRICE}. Limited spots each week.</>}
-                  >
-                    {OFF} off + {DEEP_OFFER.bonus} with code {DEEP_OFFER.code} through{" "}
-                    {DEEP_OFFER.endDate}. Limited spots.
-                  </Offer>
-                </p>
-              </div>
-              {/* Trust badges */}
-              <div className="grid grid-cols-3 gap-1 w-full mb-3 md:mb-4">
-                <span className="bg-gray-100 text-xs text-gray-600 px-1 py-1 rounded-full flex justify-center items-center text-center">⭐ Google 5.0</span>
-                <span className="bg-gray-100 text-xs text-gray-600 px-1 py-1 rounded-full flex justify-center items-center text-center">🛡️ Insured &amp; Bonded</span>
-                <span className="bg-gray-100 text-xs text-gray-600 px-1 py-1 rounded-full flex justify-center items-center text-center">🏠 Family-Owned</span>
-              </div>
-              <LeadForm defaultService="Deep Cleaning" step1Label="Free quote in 60 seconds" />
-            </div>
-
-            {/* Phone copy of the trust bullets, below the form */}
-            <ul className="grid grid-cols-2 gap-2 md:hidden">
-              {trustBullets.map((b) => (
-                <li key={b.text} className="flex items-start gap-1.5 text-xs text-gray-300">
-                  <span className="flex-shrink-0">{b.icon}</span>
-                  <span>{b.text}</span>
-                </li>
-              ))}
-            </ul>
+      {/* Booking form: the same BookingKoala embed as /book, unchanged. A
+          finished booking lands on /thank-you, which records the booking. */}
+      <section id="book" className="bg-white pt-4 pb-10 md:pt-10 md:pb-16 scroll-mt-2">
+        <div className="max-w-3xl mx-auto px-3 sm:px-6">
+          <div className="flex flex-wrap items-center justify-center gap-x-2 text-sm mb-1.5">
+            <span className="text-amber-400 tracking-wide">★★★★★</span>
+            <span className="font-bold text-gray-900">5.0 · {REVIEW_COUNT} Google Reviews</span>
+            <span className="hidden sm:inline text-gray-500">· Insured &amp; Bonded · Family-Owned</span>
+          </div>
+          {/* Widget hints. It won't show dates until a ZIP is entered, and its
+              total is the pre-coupon price. */}
+          <div className="text-center mb-3 md:mb-5 space-y-0.5 text-xs md:text-sm text-gray-500 leading-snug">
+            <p>Enter your ZIP code first. The calendar won&apos;t show dates until you do.</p>
+            <Offer service="deep">
+              <p>
+                The total shows before your discount. Enter{" "}
+                <strong className="text-gray-700">{DEEP_OFFER.code}</strong> at checkout and {OFF} comes
+                off. Your oven is included free.
+              </p>
+            </Offer>
           </div>
 
+          <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100 bg-white relative">
+            <div
+              id="bk-skeleton"
+              className="absolute inset-0 bg-white z-10 pointer-events-none"
+              style={{ minHeight: "1800px" }}
+            >
+              <div className="p-6 space-y-4 animate-pulse">
+                <div className="h-6 bg-gray-100 rounded-full w-1/2 mx-auto" />
+                <div className="h-4 bg-gray-100 rounded-full w-3/4 mx-auto" />
+                <div className="h-10 bg-gray-100 rounded-xl w-full mt-4" />
+                <div className="h-10 bg-gray-100 rounded-xl w-full" />
+                <div className="h-10 bg-gray-100 rounded-xl w-3/4" />
+                <div className="h-12 bg-orange-100 rounded-xl w-full mt-6" />
+                <p className="text-center text-sm text-gray-400 pt-2">Loading booking form…</p>
+              </div>
+            </div>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: `<iframe
+                  src="https://dsmcleaningsolutions.bookingkoala.com/booknow?embed=true"
+                  title="Book your deep clean with DSM Cleaning Solutions"
+                  style="border:none;height:1800px;display:block"
+                  width="100%"
+                  scrolling="auto"
+                  onload="var s=document.getElementById('bk-skeleton');if(s)s.style.display='none';"
+                ></iframe>`,
+              }}
+            />
+          </div>
+
+          {/* Phone copy of the trust bullets */}
+          <ul className="grid grid-cols-2 gap-2 mt-5 md:hidden">
+            {trustBullets.map((b) => (
+              <li key={b.text} className="flex items-start gap-1.5 text-xs text-gray-600">
+                <span className="flex-shrink-0">{b.icon}</span>
+                <span>{b.text}</span>
+              </li>
+            ))}
+          </ul>
+
+          <p className="text-sm text-gray-500 text-center mt-6">
+            📞 Rather talk to a real person?{" "}
+            <a href="tel:8152462113" className="text-gray-800 font-semibold hover:underline">
+              (815) 246-2113
+            </a>{" "}
+            · Mon to Sun, 7am to 9pm
+          </p>
         </div>
       </section>
 
@@ -243,9 +257,9 @@ export default function DeepCleanOfferPage() {
         kicker="Deep Cleaning"
         heading="What a Deep Clean Adds, in Under a Minute"
         cta={{
-          href: "#quote-form-bottom",
+          href: "#book",
           label: (
-            <Offer service="deep" fallback="Get My Free Quote">
+            <Offer service="deep" fallback="Book My Deep Clean">
               Claim My {OFF} Off
             </Offer>
           ),
@@ -293,14 +307,14 @@ export default function DeepCleanOfferPage() {
               </Offer>
             </p>
             <a
-              href="#quote-form-bottom"
+              href="#book"
               className="inline-flex items-center justify-center font-bold text-white rounded-full py-3.5 px-8 text-base transition-all hover:opacity-90 active:scale-95"
               style={{
                 backgroundColor: "#E8721C",
                 boxShadow: "0 4px 15px rgba(232,114,28,0.35)",
               }}
             >
-              <Offer service="deep" fallback="Get My Deep Clean Quote →">
+              <Offer service="deep" fallback="Book My Deep Clean →">
                 Fix It for{" "}
                 <span className="mx-1 underline underline-offset-2">{OFF} Less</span>{" "}
                 →
@@ -378,10 +392,10 @@ export default function DeepCleanOfferPage() {
 
           <div className="text-center mt-8">
             <a
-              href="#quote-form-bottom"
+              href="#book"
               className="text-orange-600 font-semibold hover:underline text-sm"
             >
-              <Offer service="deep" fallback="Ready? Get your free quote →">
+              <Offer service="deep" fallback="Ready? Book your deep clean →">
                 Ready? Claim your{" "}
                 <span className="underline underline-offset-2">{OFF} off</span> →
               </Offer>
@@ -468,14 +482,14 @@ export default function DeepCleanOfferPage() {
 
           <div className="text-center mt-10">
             <a
-              href="#quote-form-bottom"
+              href="#book"
               className="inline-flex items-center justify-center font-bold text-white rounded-full py-3.5 px-8 text-base transition-all hover:opacity-90 active:scale-95"
               style={{
                 backgroundColor: "#E8721C",
                 boxShadow: "0 4px 15px rgba(232,114,28,0.35)",
               }}
             >
-              <Offer service="deep" fallback="Get My Free Quote →">
+              <Offer service="deep" fallback="Book My Deep Clean →">
                 Claim Your {OFF} Off →
               </Offer>
             </a>
@@ -484,7 +498,7 @@ export default function DeepCleanOfferPage() {
       </section>
 
       {/* ══════════════════════════════════════════════════════════════════════
-          SECTION 6 — Scarcity + Second Form
+          SECTION 6 — Scarcity + button back to the booking form
       ══════════════════════════════════════════════════════════════════════ */}
       <section className="py-16 pb-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -494,8 +508,8 @@ export default function DeepCleanOfferPage() {
             </h2>
             <p className="text-gray-500 leading-relaxed">
               We personally handle every job, so there are only so many deep
-              clean spots each week across {TOWNS_LINE}. Request yours to check
-              availability for your area.
+              clean spots each week across {TOWNS_LINE}. Pick your
+              day in the booking form while there&apos;s still room this week.
             </p>
           </div>
 
@@ -512,44 +526,19 @@ export default function DeepCleanOfferPage() {
             </footer>
           </blockquote>
 
-          <div className="max-w-xl mx-auto">
-            <div
-              id="quote-form-bottom"
-              className="bg-white rounded-3xl shadow-xl p-6 md:p-8 border border-gray-100"
+          <div className="max-w-xl mx-auto text-center">
+            <a
+              href="#book"
+              className="inline-flex items-center justify-center font-bold text-white rounded-full py-4 px-9 text-base transition-all hover:opacity-90 active:scale-95"
+              style={{ backgroundColor: "#E8622A", boxShadow: "0 8px 30px rgba(232,98,42,0.35)" }}
             >
-              <h3 className="text-xl font-bold text-gray-900 mb-1">
-                <Offer service="deep" fallback="Request Your Deep Clean">
-                  Lock In Your{" "}
-                  <a
-                    href="#quote-form-bottom"
-                    className="text-orange-600 hover:underline"
-                  >
-                    {OFF} Discount
-                  </a>
-                </Offer>{" "}
-                Before Spots Fill Up
-              </h3>
-              <p className="text-sm text-gray-500 mb-3">
-                <Offer service="deep" fallback={<>Starting at {ENTRY_PRICE}</>}>
-                  {OFF} Off + Free Oven Cleaning through {DEEP_OFFER.endDate}
-                </Offer>{" "}
-                · 48-Hour Guarantee · Family-Owned
-              </p>
-              {/* Trust badges */}
-              <div className="grid grid-cols-3 gap-1 w-full mb-4">
-                <span className="bg-gray-100 text-xs text-gray-600 px-1 py-1 rounded-full flex justify-center items-center text-center">⭐ Google 5.0</span>
-                <span className="bg-gray-100 text-xs text-gray-600 px-1 py-1 rounded-full flex justify-center items-center text-center">🛡️ Insured &amp; Bonded</span>
-                <span className="bg-gray-100 text-xs text-gray-600 px-1 py-1 rounded-full flex justify-center items-center text-center">🏠 Family-Owned</span>
-              </div>
-              <LeadForm defaultService="Deep Cleaning" step1Label="Free quote in 60 seconds" />
-            </div>
-            {/* Phone CTA — below second form only */}
-            <p className="text-sm text-gray-400 text-center mt-3">
+              <Offer service="deep" fallback="Book My Deep Clean →">
+                Book Now and Save {OFF} →
+              </Offer>
+            </a>
+            <p className="text-sm text-gray-400 mt-4">
               📞 Prefer to call?{" "}
-              <a
-                href="tel:8152462113"
-                className="text-gray-500 hover:text-gray-700 font-medium"
-              >
+              <a href="tel:8152462113" className="text-gray-500 hover:text-gray-700 font-medium">
                 (815) 246-2113
               </a>{" "}
               · Mon to Sun, 7am to 9pm
@@ -574,7 +563,7 @@ export default function DeepCleanOfferPage() {
               },
               {
                 q: "How long does a deep clean take?",
-                a: "Most homes take 3 to 5 hours depending on size and condition. We'll give you a better estimate when you request your quote.",
+                a: "Most homes take 3 to 5 hours depending on size and condition.",
               },
               {
                 q: "Are you insured?",
@@ -586,7 +575,7 @@ export default function DeepCleanOfferPage() {
               },
               {
                 q: "How fast can I get scheduled?",
-                a: "It depends on the week, since our spots fill up. Send your request and we'll tell you the first open date for your area.",
+                a: "It depends on the week, since our spots fill up. Enter your ZIP code in the booking form to see the open dates.",
               },
             ].map((item) => (
               <div key={item.q} className="py-4">

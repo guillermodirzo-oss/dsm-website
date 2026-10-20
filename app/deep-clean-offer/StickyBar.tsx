@@ -20,7 +20,7 @@ export default function StickyBar({ label }: { label: ReactNode }) {
       }`}
       style={{ backgroundColor: "#0f172a", height: 56 }}
     >
-      <a href="#quote-form-bottom" className="flex items-center justify-between h-full px-4 gap-3">
+      <a href="#book" className="flex items-center justify-between h-full px-4 gap-3">
         <span className="text-white text-sm font-semibold truncate">
           {label}
         </span>
@@ -28,7 +28,7 @@ export default function StickyBar({ label }: { label: ReactNode }) {
           className="flex-shrink-0 text-white text-sm font-bold px-4 py-2 rounded-full"
           style={{ backgroundColor: "#E8721C" }}
         >
-          Claim Your Spot
+          Book Now
         </span>
       </a>
     </div>
