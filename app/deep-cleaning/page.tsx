@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { REAL_REVIEWS, pickReviews, reviewAttribution } from "@/lib/realReviews";
+import { reviewAttribution, reviewByName } from "@/lib/realReviews";
 import Image from "next/image";
 import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 import { StickyMobileBar } from "@/components/HomepageScrollWidgets";
@@ -16,6 +16,9 @@ import { offerPrice } from "@/lib/offers";
 import { REVIEW_COUNT, REVIEW_RATING, GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
 import { DEEP_OFFER } from "@/lib/offers";
 import { DEEP_CHECKLIST } from "@/lib/deepChecklist";
+import HeroRating from "@/components/HeroRating";
+import ReviewCard from "@/components/ReviewCard";
+import { FREQUENCY_DISCOUNTS, formatDiscount } from "@/lib/pricing";
 import ServiceVideoSection from "@/components/ServiceVideoSection";
 import { DEEP_VIDEO } from "@/lib/serviceVideos";
 
@@ -27,7 +30,8 @@ export const revalidate = 3600;
 // "From" price and review figures come from the rate card and siteConstants,
 // so the snippet can't drift from the page.
 const DEEP_FROM = formatPrice(startingPrice(DEEP_CLEANING_TIERS));
-const PAGE_TITLE = `Deep Cleaning Romeoville IL | From ${DEEP_FROM} | DSM Cleaning`;
+const PAGE_TITLE = `Deep Cleaning Romeoville IL | From ${DEEP_FROM} | ${REVIEW_RATING} Stars`;
+const WEEKLY_OFF = formatDiscount(FREQUENCY_DISCOUNTS.weekly);
 const PAGE_DESCRIPTION = `Deep house cleaning in Romeoville and the southwest suburbs, from ${DEEP_FROM}. Every room done in detail. Rated ${REVIEW_RATING} by ${REVIEW_COUNT} neighbors. Book online today.`;
 
 export const metadata: Metadata = {
@@ -59,12 +63,16 @@ const faqs = [
     a: "You do not need to be home. Many of our clients leave a key or lockbox code. We take care of everything and lock up when we are done.",
   },
   {
-    q: "What if my quote comes in higher than the range listed?",
-    a: "The ranges listed cover typical homes in that bedroom count. If your home runs bigger, has more bathrooms, or needs extra attention, your quote might land higher. We always confirm your exact price before we book anything. No surprises.",
+    q: "How much does a deep clean cost?",
+    a: `Deep cleaning starts at ${DEEP_FROM}. Your price depends on bedrooms, bathrooms and square footage. Enter your home's details in the booking form and you see your exact price before you book. There's no deposit.`,
   },
   {
-    q: "Is your deep cleaning eco-friendly?",
-    a: "Yes, as an option. If you'd like eco-friendly, non-toxic products for your clean, just add them when you book. You'll see the price before you confirm.",
+    q: "Is cleaning inside the oven included?",
+    a: "Inside the oven is an add-on you can pick when you book, and so are inside kitchen cabinets and eco-friendly products. Every deep clean degreases the stovetop, burners and hood.",
+  },
+  {
+    q: "Do I need a deep clean before recurring cleaning?",
+    a: "No. Many new clients start with a deep clean to get the house caught up, but it's not required. You can start with regular visits.",
   },
 ];
 
@@ -114,6 +122,13 @@ const breadcrumbSchema = {
   ],
 };
 
+// Reviews from people who booked a deep clean. Text comes from lib/realReviews.ts.
+const DEEP_REVIEWS = [
+  reviewByName("Courtney Horne"),
+  reviewByName("Julie Gilligan"),
+  reviewByName("Claire Farnsworth"),
+];
+
 // The deep cleaning checklist is shared by every deep cleaning page. See
 // lib/deepChecklist.ts. Never type a checklist into this page.
 const checklist = DEEP_CHECKLIST;
@@ -153,153 +168,159 @@ export default function DeepCleaningPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-black/65 via-black/45 to-black/35" />
         <div className="absolute inset-0 bg-gradient-to-t from-orange-900/20 via-transparent to-transparent" />
 
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <nav className="text-sm mb-6 opacity-80 flex items-center justify-center gap-2">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white pt-6 pb-16 sm:py-0">
+          <nav className="text-xs sm:text-sm mb-3 sm:mb-5 opacity-80 flex items-center justify-center gap-2">
             <Link href="/" className="hover:underline">Home</Link>
             <span>/</span>
             <span>Deep Cleaning</span>
           </nav>
 
-          {/* Order is H1, subheading, rating, offer, CTAs: the same sequence
-              as the homepage hero, verified to clear the fold at 390px. */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
-            Deep Cleaning in Romeoville That Gets the Spots a Regular Clean Skips.
+          {/* Same order as the homepage hero: keyword H1 in small type, the
+              outcome headline, what's included, rating, offer, booking button.
+              Spacing is tight on phones so the button clears the fold at 390px. */}
+          <h1 className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-orange-200 mb-2 sm:mb-3">
+            Deep House Cleaning in Romeoville and the Southwest Suburbs
           </h1>
-          <p className="text-lg md:text-xl font-semibold mb-5 opacity-95 max-w-2xl mx-auto">
-            Grout lines, baseboards, door frames. Deep cleaning in Romeoville, Plainfield, Naperville, Bolingbrook and the southwest suburbs.
+          <p className="text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.08] tracking-tight mb-4">
+            Get Your Whole House{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-orange-400">
+              Caught Up.
+            </span>
+          </p>
+          <p className="text-base sm:text-lg md:text-xl text-white/85 mb-3 max-w-2xl mx-auto leading-relaxed">
+            Grout, baseboards, door frames, the stovetop and the floor under the furniture. The spots a regular clean skips, done in one visit by a local family team.
           </p>
 
-          {/* Rating. Counts come from lib/realReviews.ts, never hardcoded. */}
-          <Link href="/reviews" className="inline-flex items-center justify-center gap-2 mb-5 hover:underline">
-            <span style={{ color: "#FFA869" }} className="text-xl">★★★★★</span>
-            <span className="text-sm opacity-90">{REVIEW_RATING} · {REVIEW_COUNT} Google Reviews</span>
-          </Link>
+          <HeroRating href="/reviews" className="mb-3 sm:mb-4">{`${REVIEW_RATING} · ${REVIEW_COUNT} Google Reviews`}</HeroRating>
 
-          {/* Offer. Solid DSM orange now that the backdrop is a dark photo
-              overlay, matching the homepage badge exactly rather than the
-              cream variant needed against the old flat gradient. Terms mirror
-              /book and the homepage, including the $40 oven cleaning value.
-              Gated by <Offer> so the block disappears on its own once
-              FALL75 ends. */}
+          {/* FALL75, gated by <Offer> so it comes down on its own when it ends. */}
           <Offer service="deep">
-            <div className="mb-6">
-              <a
-                href="#quote-form"
-                className="inline-block rounded-full px-5 py-2.5 text-sm sm:text-base font-bold text-white shadow-lg hover:brightness-110 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-95 transition-all duration-200"
-                style={{ backgroundColor: "#E8622A" }}
+            <div className="mb-4 sm:mb-6">
+              <Link
+                href="/book"
+                className="inline-block rounded-2xl bg-brand-green-darker px-4 py-2 text-xs sm:text-sm font-semibold text-white shadow-lg hover:underline"
               >
-                ${DEEP_OFFER.discount} off your first deep clean, plus {DEEP_OFFER.bonus}, a ${DEEP_OFFER.bonusValue} value.
-              </a>
-              <p className="mt-2 text-sm text-white/70">
-                Use code <span className="font-bold text-white">{DEEP_OFFER.code}</span> through {DEEP_OFFER.endDate}.
-              </p>
+                {`Before the holidays: $${DEEP_OFFER.discount} off plus ${DEEP_OFFER.bonus}, a $${DEEP_OFFER.bonusValue} value. Use code `}
+                <span className="font-extrabold tracking-wide">{DEEP_OFFER.code}</span>
+                {` through ${DEEP_OFFER.endDate}.`}
+              </Link>
             </div>
           </Offer>
 
-          <div className="flex flex-wrap gap-3 justify-center">
-            <a
-              href="#quote-form"
-              style={{ backgroundColor: "#E8721C" }}
-              className="text-white font-bold px-6 py-3 rounded-lg hover:opacity-90 transition"
+          <div className="flex flex-col md:flex-row gap-3 justify-center">
+            <Link
+              href="/book"
+              className="w-full md:w-auto inline-block font-extrabold text-base text-white text-center py-4 px-9 rounded-full active:scale-95 transition-all duration-200 shadow-2xl"
+              style={{ backgroundColor: "#E8622A", boxShadow: "0 8px 30px rgba(232,98,42,0.5)" }}
             >
-              Get a Free Quote
+              See My Price &amp; Book
+            </Link>
+            <a href="tel:+18152462113" className="btn-outline-white text-base md:py-4 md:px-9 w-full md:w-auto">
+              📞 (815) 246-2113
             </a>
-            <a
-              href="tel:+18152462113"
-              className="border-2 border-white text-white font-bold px-6 py-3 rounded-lg hover:bg-white hover:text-green-900 transition"
-            >
-              Call (815) 246-2113
+          </div>
+
+          <p className="mt-4 text-white/90 text-sm font-medium">
+            No deposit. Exact price before you book. <span className="whitespace-nowrap">48-hour guarantee.</span>
+          </p>
+
+          <a href="#video" className="inline-flex items-center gap-2 mt-3 text-white font-semibold text-sm hover:underline underline-offset-4">
+            <span className="flex items-center justify-center w-6 h-6 rounded-full bg-white/20">
+              <svg className="w-3.5 h-3.5 ml-0.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
+            </span>
+            See what a deep clean adds in 47 seconds
+          </a>
+        </div>
+      </section>
+
+      {/* REVIEWS UP TOP. Deep cleaning reviews only, so visitors hear from
+          people who booked this exact service. No review appears twice on the
+          page. */}
+      <section id="reviews" className="py-14 md:py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 md:mb-12">
+            <p className="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">Real Google Reviews</p>
+            <h2 className="section-heading text-3xl md:text-5xl">What Deep Clean Customers Say</h2>
+            <Link href="/reviews" className="inline-flex items-center justify-center gap-2 mt-3 hover:opacity-80 transition-opacity">
+              <span className="text-yellow-400 text-2xl">★★★★★</span>
+              <span className="text-gray-500 font-medium">{REVIEW_RATING} average from {REVIEW_COUNT} Google reviews</span>
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+            {DEEP_REVIEWS.map((review) => (
+              <ReviewCard key={review.name} name={reviewAttribution(review)} text={review.text} />
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <a href={GOOGLE_PROFILE_URL} target="_blank" rel="noopener noreferrer" className="text-brand-green font-semibold hover:underline">
+              Read all {REVIEW_COUNT} reviews on Google →
             </a>
           </div>
         </div>
       </section>
 
-      {/* TRUST BAR */}
-      <section className="bg-white border-b py-5 px-4">
-        <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-6 text-sm text-gray-700 font-medium">
-          <span>✅ Family Owned &amp; Operated</span>
-          <span>✅ Background-Checked Team</span>
-          <span>✅ Insured &amp; Bonded</span>
-          <span>✅ 48-Hour Satisfaction Guarantee</span>
+      {/* QUICK ANSWERS. The three questions people ask before they book:
+          what's included, what it costs, and whether they need to be home. */}
+      <section className="py-14 md:py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="section-heading text-3xl md:text-4xl text-center mb-8 md:mb-10">Quick Answers</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+            <div className="rounded-2xl border border-gray-100 bg-gray-50 p-6">
+              <h3 className="font-bold text-gray-900 text-lg mb-2">What&apos;s included?</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Everything in a regular clean, plus scrubbed grout, baseboards, doors and door frames, a degreased stovetop, burners and hood, light fixtures, inside window glass, and vacuuming under and behind the furniture.
+              </p>
+              <a href="#checklist" className="inline-block mt-3 text-sm font-semibold text-brand-green hover:underline">See the room-by-room list →</a>
+            </div>
+            <div className="rounded-2xl border border-gray-100 bg-gray-50 p-6">
+              <h3 className="font-bold text-gray-900 text-lg mb-2">What does it cost?</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Deep cleans start at {DEEP_FROM}. Your price depends on bedrooms, bathrooms and square footage, and you see the exact total in the booking form before you book. No deposit.
+              </p>
+              <a href="#pricing" className="inline-block mt-3 text-sm font-semibold text-brand-green hover:underline">See example prices →</a>
+            </div>
+            <div className="rounded-2xl border border-gray-100 bg-gray-50 p-6">
+              <h3 className="font-bold text-gray-900 text-lg mb-2">Do I need to be home?</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                No. Plenty of our clients leave a key or a lockbox code and come home to a clean house. We lock up when we&apos;re done.
+              </p>
+              <a href="/book" className="inline-block mt-3 text-sm font-semibold text-brand-green hover:underline">See my price &amp; book →</a>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* VIDEO: the deep cleaning sales video (lib/serviceVideos.tsx), shared by every deep cleaning page. */}
       <ServiceVideoSection video={DEEP_VIDEO} kicker="Deep Cleaning" heading="What a Deep Clean Adds, in Under a Minute" />
 
-      {/* SEO CONTENT */}
-      <section className="py-12 px-4 bg-gray-50">
-        <div className="max-w-3xl mx-auto prose prose-gray">
-          <p className="text-gray-700 leading-relaxed mb-4">
-            DSM Cleaning Solutions has been serving homeowners in Romeoville, Plainfield, Bolingbrook, and Naperville since 2020. These are our home communities. When you hire us for a deep clean, you get a team that knows the area, cares about the work, and shows up on time.
-          </p>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Our deep cleaning is built for homes that need more than a weekly maintenance clean. That means scrubbing bathroom grout, cleaning behind the stovetop grates, wiping every baseboard, and vacuuming under and behind the furniture in every room.
-          </p>
-          <p className="text-gray-700 leading-relaxed">
-            If anything is not right after we leave, contact us within 48 hours and we will come back to fix it at no charge.
-          </p>
-        </div>
-      </section>
-
-      {/* ANCHOR REVIEW. Text-only: its previous paired photo,
-          marble-bathroom-deep-cleaning.jpg, is also used on the homepage, and
-          every image on this page now has to be unique to it. */}
-      <section className="py-10 px-4" style={{ backgroundColor: "#FFF4EE" }}>
-        <div className="max-w-2xl mx-auto text-center">
-          <p style={{ color: "#E8622A" }} className="text-5xl font-serif leading-none mb-3">&ldquo;</p>
-          <p className="text-gray-800 text-lg leading-relaxed italic mb-4">
-            {REAL_REVIEWS[5].text}
-          </p>
-          <p className="font-semibold text-gray-700">{REAL_REVIEWS[5].name}</p>
-          <div className="flex justify-center mt-2">
-            <span style={{ color: "#FFA869" }}>★★★★★</span>
+      {/* ZERO RISK. Every reason it's safe to book, in one place. Each line is
+          a confirmed business fact (CONTEXT.md). */}
+      <section className="py-16 md:py-20 bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">Zero Risk</p>
+            <h2 className="section-heading text-3xl md:text-5xl">Booking Us Is the Easy Part</h2>
           </div>
-        </div>
-      </section>
-
-      {/* WHY DSM */}
-      <section className="py-14 px-4 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl font-bold text-gray-800 text-center mb-10">
-            Why Homeowners in Our Area Choose DSM
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="font-bold text-gray-800 mb-2">We Are Local</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                DSM is a small, family-run business based in the southwest suburbs, not a franchise. Romeoville, Plainfield, Bolingbrook, and Naperville are our home communities. Memo answers his own phone. Call or text him directly.
-              </p>
-            </div>
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="font-bold text-gray-800 mb-2">We Get Every Detail</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Our deep clean is not a surface wipe-down. We get into the spots that usually get skipped: grout lines, baseboards, door frames, light fixtures, and the floor under the furniture. Every room gets real attention.
-              </p>
-            </div>
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="font-bold text-gray-800 mb-2">Eco-Friendly Option</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Prefer eco-friendly products? Add them when you book.
-              </p>
-            </div>
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="font-bold text-gray-800 mb-2">48-Hour Guarantee</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                If something is not right, contact us within 48 hours and we will come back to make it right. No hassle, no charge. We stand behind every job we do.
-              </p>
-            </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
+            {[
+              { icon: "💵", label: "No Deposit", desc: "Pay on cleaning day by cash, check or card." },
+              { icon: "🏷️", label: "Price Before You Book", desc: "You see your exact price before anything is booked." },
+              { icon: "🔑", label: "No Need to Be Home", desc: "Leave a key or lockbox code. We lock up when we're done." },
+              { icon: "📅", label: "Free to Reschedule", desc: "Plans change. Move your clean at no charge." },
+              { icon: "🛡️", label: "Insured & Bonded", desc: "Background-checked, drug-tested team." },
+              { icon: "✅", label: "48-Hour Guarantee", desc: "Something missed? Tell us within 48 hours and we come back free." },
+            ].map((item) => (
+              <div key={item.label} className="bg-orange-50/60 border border-orange-100 rounded-2xl p-4 md:p-6 text-center">
+                <span className="text-3xl block mb-2">{item.icon}</span>
+                <p className="font-bold text-gray-900 text-sm md:text-base">{item.label}</p>
+                <p className="text-xs md:text-sm text-gray-500 mt-1 leading-snug">{item.desc}</p>
+              </div>
+            ))}
           </div>
-          <div className="text-center">
-            <Image
-              src="/work-photos/google-post-image-cleaning-service-25.jpg"
-              alt="DSM Cleaning Solutions team member cleaning a light fixture during a deep clean visit"
-              width={940}
-              height={788}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className="rounded-xl shadow-md mx-auto"
-              style={{ maxWidth: "560px", width: "100%" }}
-            />
+          <div className="text-center mt-10">
+            <Link href="/book" className="btn-primary btn-lg">
+              See My Price &amp; Book
+            </Link>
           </div>
         </div>
       </section>
@@ -309,7 +330,7 @@ export default function DeepCleaningPage() {
           microwave shots, the Bathrooms card gets the grout and fixture
           shots. Bedrooms/Living Areas and Whole Home have no candidate
           photos and stay text-only. */}
-      <section className="py-14 px-4 bg-gray-50">
+      <section id="checklist" className="py-14 px-4 bg-gray-50 scroll-mt-16">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl font-bold text-gray-800 text-center mb-2">
             What We Clean in Your Home
@@ -425,19 +446,19 @@ export default function DeepCleaningPage() {
           </div>
 
           <div className="text-center">
-            <a
-              href="#quote-form"
-              style={{ backgroundColor: "#E8721C" }}
-              className="text-white font-bold px-8 py-3 rounded-lg hover:opacity-90 transition inline-block"
+            <Link
+              href="/book"
+              style={{ backgroundColor: "#E8622A" }}
+              className="text-white font-bold px-8 py-3 rounded-full hover:opacity-90 transition inline-block"
             >
-              Book Your Deep Clean
-            </a>
+              See My Price &amp; Book
+            </Link>
           </div>
         </div>
       </section>
 
       {/* PRICING */}
-      <section className="py-14 px-4 bg-white">
+      <section id="pricing" className="py-14 px-4 bg-white scroll-mt-16">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-800 mb-2">
@@ -483,43 +504,46 @@ export default function DeepCleaningPage() {
           </div>
 
           <p className="text-gray-600 leading-relaxed text-sm mt-6 text-center">
-            Your price depends on bedrooms, bathrooms and square footage. We confirm your exact price before booking anything. No surprises.
+            Your price depends on bedrooms, bathrooms and square footage. Enter your home in the booking form and you see the exact total before you book.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center mt-6">
-            <Link href="/book" className="text-white font-bold px-8 py-3 rounded-lg hover:opacity-90 transition inline-block text-center" style={{ backgroundColor: "#E8622A" }}>See Your Exact Price</Link>
-            <a href="#quote-form" className="font-bold px-8 py-3 rounded-lg border-2 transition inline-block text-center hover:bg-orange-50" style={{ borderColor: "#E8622A", color: "#E8622A" }}>Get a Free Quote</a>
+            <Link href="/book" className="text-white font-bold px-8 py-3 rounded-full hover:opacity-90 transition inline-block text-center" style={{ backgroundColor: "#E8622A" }}>See My Price &amp; Book</Link>
+            <a href="#quote-form" className="font-bold px-8 py-3 rounded-full border-2 transition inline-block text-center hover:bg-orange-50" style={{ borderColor: "#E8622A", color: "#E8622A" }}>Rather Get a Quote?</a>
           </div>
         </div>
       </section>
 
-      {/* 3-REVIEW BLOCK */}
+      {/* WHY DSM. A local family business, and how to keep the house caught up afterward. */}
       <section className="py-14 px-4 bg-gray-50">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl font-bold text-gray-800 text-center mb-10">
-            What Our Clients Are Saying
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 text-center mb-10">
+            Why Homeowners Around Here Choose DSM
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            {pickReviews(3, 0).map((review) => (
-              <div key={review.name} className="bg-white rounded-xl p-6 shadow-sm">
-                <div className="flex mb-3">
-                  <span style={{ color: "#FFA869" }}>★★★★★</span>
-                </div>
-                <p className="text-gray-700 text-sm leading-relaxed mb-3 italic">
-                  &ldquo;{review.text}&rdquo;
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div className="space-y-5">
+              <div className="bg-white rounded-xl p-6 shadow-sm">
+                <h3 className="font-bold text-gray-800 mb-2">A Local Family Business</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  DSM is run by Guillermo and Rocío from Romeoville, not a franchise. We&apos;ve cleaned homes across Romeoville, Plainfield, Bolingbrook, Naperville and the southwest suburbs since 2020. Memo answers his own phone, so call or text him directly.
                 </p>
-                <p className="text-sm font-semibold text-gray-600">{reviewAttribution(review)}</p>
               </div>
-            ))}
-          </div>
-          <div className="text-center">
-            <a
-              href={GOOGLE_PROFILE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-green-700 font-semibold hover:underline text-sm"
-            >
-              Read all {REVIEW_COUNT} reviews on Google →
-            </a>
+              <div className="bg-white rounded-xl p-6 shadow-sm">
+                <h3 className="font-bold text-gray-800 mb-2">Keep It That Way</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  After a deep clean, most of the hard work is done. Recurring visits every week, every two weeks or once a month keep it there, at up to {WEEKLY_OFF} off each visit.{" "}
+                  <Link href="/recurring-cleaning" className="text-brand-green font-semibold hover:underline">See recurring cleaning</Link>
+                </p>
+              </div>
+            </div>
+            <Image
+              src="/work-photos/google-post-image-cleaning-service-25.jpg"
+              alt="DSM Cleaning Solutions team member cleaning a light fixture during a deep clean visit"
+              width={940}
+              height={788}
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="rounded-xl shadow-md mx-auto w-full"
+              style={{ maxWidth: "560px" }}
+            />
           </div>
         </div>
       </section>
@@ -557,10 +581,17 @@ export default function DeepCleaningPage() {
         className="py-16 px-4"
       >
         <div className="max-w-2xl mx-auto text-center text-white mb-8">
-          <h2 className="text-2xl font-bold mb-2">Get a Free Deep Cleaning Quote</h2>
-          <p className="opacity-90">
-            Serving Romeoville, Plainfield, Bolingbrook, Naperville, and surrounding communities. Fill out the form and we will get back to you fast.
+          <h2 className="text-2xl md:text-3xl font-bold mb-2">Ready to Get the House Caught Up?</h2>
+          <p className="opacity-90 mb-5">
+            See your exact price and pick your day online. Rather talk it through first? Send the form below and we&apos;ll get back to you fast.
           </p>
+          <Link
+            href="/book"
+            className="inline-block font-extrabold text-base py-4 px-9 rounded-full bg-white shadow-xl active:scale-95 transition-all duration-200"
+            style={{ color: "#C2410C" }}
+          >
+            See My Price &amp; Book
+          </Link>
         </div>
         <div className="max-w-xl mx-auto bg-white rounded-2xl shadow-xl p-8">
           <div className="text-center mb-6">
@@ -598,11 +629,9 @@ export default function DeepCleaningPage() {
         </div>
       </section>
 
-      {/* Sticky mobile "Book Now" bar, fades in after 300px scroll. Points at
-          this page's own quote form instead of /book, matching the two
-          above-fold CTAs which also go to #quote-form rather than a
-          different page. */}
-      <StickyMobileBar bookHref="#quote-form" />
+      {/* Sticky mobile "Book Now" bar, fades in after 300px scroll, pointing at
+          /book like every other booking button on the page. */}
+      <StickyMobileBar />
     </>
   );
 }
