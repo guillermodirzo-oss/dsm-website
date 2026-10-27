@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/blogData";
+import { WATCH_VIDEOS } from "@/lib/serviceVideos";
 
 // No lastModified on any entry, on purpose. Every page used to report the
 // build time (or a hand-typed date), which tells Google nothing. Nothing in
@@ -21,6 +22,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.9,
     },
+    // Video watch pages (app/videos), so Google can list the videos.
+    { url: `${baseUrl}/videos`, changeFrequency: "monthly", priority: 0.5 },
+    ...WATCH_VIDEOS.map((v) => ({
+      url: `${baseUrl}/videos/${v.slug}`,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    })),
     {
       url: `${baseUrl}/move-out-cleaning`,
       changeFrequency: "monthly",

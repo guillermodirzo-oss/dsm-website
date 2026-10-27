@@ -14,6 +14,7 @@ import {
 import { ScrollIndicator } from "@/components/HomepageScrollWidgets";
 import StickyBookBar from "@/components/StickyBookBar";
 import HomeVideo from "@/components/HomeVideo";
+import { HOME_VIDEO } from "@/lib/serviceVideos";
 import HeroRating from "@/components/HeroRating";
 import OfferBanner from "@/components/OfferBanner";
 import { REVIEW_COUNT, REVIEW_RATING, SERVICE_CITIES } from "@/lib/siteConstants";
@@ -159,19 +160,18 @@ const serviceAreas = [
 ];
 
 // The intro video in the section under the hero. Lets Google show it as a
-// video result. If the video is re-rendered, update uploadDate and duration.
+// video result. uploadDate and duration live in HOME_VIDEO (lib/serviceVideos.tsx).
 const videoSchema = {
   "@context": "https://schema.org",
   "@type": "VideoObject",
-  name: "Meet DSM Cleaning Solutions: House Cleaning in Romeoville, IL",
-  description:
-    "Guillermo and Rocío, the husband and wife team behind DSM Cleaning Solutions in Romeoville, IL, explain their deep cleaning, move-out cleaning and recurring maid service, and how booking works: no deposit, no contracts, and your exact price before you book.",
+  name: HOME_VIDEO.schema.name,
+  description: HOME_VIDEO.schema.description,
   thumbnailUrl: [
     "https://www.dsmcleaningsolutions.com/videos/dsm-intro-wide-poster.jpg",
     "https://www.dsmcleaningsolutions.com/videos/dsm-intro-vertical-poster.jpg",
   ],
-  uploadDate: "2026-10-19T14:30:00-05:00",
-  duration: "PT59S",
+  uploadDate: HOME_VIDEO.schema.uploadDate,
+  duration: HOME_VIDEO.schema.duration,
   contentUrl: "https://www.dsmcleaningsolutions.com/videos/dsm-intro-wide.mp4",
 };
 
@@ -305,6 +305,7 @@ export default function HomePage() {
             <p className="text-white/60 text-sm mt-3">
               or call <a href="tel:+18152462113" className="text-white font-semibold hover:underline">(815) 246-2113</a>
             </p>
+            <p className="text-sm mt-2"><Link href="/videos" className="text-white/60 hover:text-white hover:underline">More videos →</Link></p>
           </div>
         </div>
       </section>

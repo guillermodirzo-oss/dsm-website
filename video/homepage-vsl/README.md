@@ -3,7 +3,11 @@
 Source for the 59-second video in the section under the homepage hero
 (`components/HomeVideo.tsx`, files in `public/videos/`). Made October 2026
 from real job photos, the owners' photo, verbatim Google reviews, an
-ElevenLabs narrator ("Hope", v4) and an ElevenLabs Music track.
+ElevenLabs Music track. Voiced since Oct 27 2026 with an ElevenLabs clone of
+the owner's voice; the script never says the owners' names (owner decision).
+Shot timings were set from a word alignment (pocketsphinx) because sync.py
+misplaced the guide boundary on this voiceover; check timings.json against
+the pauses before re-rendering.
 
 Not part of the Next.js build. Nothing here is imported by the site.
 

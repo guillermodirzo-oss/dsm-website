@@ -10,31 +10,31 @@ P = os.path.join(HERE, "..", "..", "public", "work-photos") + "/"
 
 SHOTS = [
     dict(id="hook", photo=P+"hero-kitchen-home.jpg", focus=(0.55, 0.5),
-         narration="Tired of losing your weekends to cleaning?",
-         captions=["Tired of losing your *weekends*", "to cleaning?"]),
+         narration="Tired of spending your weekends cleaning?",
+         captions=["Tired of spending your *weekends*", "cleaning?"]),
     dict(id="problem", photo=P+"shower-tile-cleaning-romeoville-il.jpg", focus=(0.5, 0.45), mood="gray",
-         narration="Or paying someone who rushes through it and leaves the details behind?",
-         captions=["Or paying someone who *rushes* through it", "and leaves the *details* behind?"]),
+         narration="Or paying someone who rushes through and misses the details?",
+         captions=["Or paying someone who *rushes* through", "and misses the *details?*"]),
     dict(id="guide", photo=os.path.join(HERE, "owners.jpg"), focus=(0.5, 0.5), mood="card",
-         narration="DSM Cleaning Solutions is Guillermo and Rocío, a husband and wife team from Romeoville. We've been cleaning homes across the southwest suburbs since 2020.",
-         captions=["Meet *Guillermo & Rocío*", "a *husband and wife* team from Romeoville", "cleaning homes across the suburbs", "since *2020*"]),
+         narration="DSM Cleaning Solutions is a husband and wife business from Romeoville. We've been cleaning homes across the southwest suburbs since 2020, and one of us is on every job.",
+         captions=["A *husband and wife* team", "from *Romeoville*", "cleaning homes since *2020*", "one of us on *every job*"]),
     dict(id="deep", photo=P+"cooktop-grates-deep-cleaning.jpg", focus=(0.5, 0.5),
-         narration="Deep cleans that catch up on everything.",
-         captions=["*Deep cleans* that catch up", "on everything"], tag="Deep Cleaning"),
+         narration="When the house needs a full catch-up, we deep clean it.",
+         captions=["Need a *full catch-up?*", "We *deep clean* it"], tag="Deep Cleaning"),
     dict(id="move", photo=P+"empty-room-move-out-cleaning.jpg", focus=(0.5, 0.6),
-         narration="Move-out cleans that get you ready for the walkthrough.",
-         captions=["*Move-out cleans* that get you ready", "for the walkthrough"], tag="Move-In & Move-Out"),
+         narration="When you're buying or selling, we get the house ready for closing day.",
+         captions=["*Buying or selling?*", "Ready for *closing day*"], tag="Move-In & Move-Out"),
     dict(id="recurring", photo=P+"kitchen-standard-cleaning.jpg", focus=(0.5, 0.5),
-         narration="And recurring service with the same team every visit.",
-         captions=["Recurring service with", "the *same team* every visit"], tag="Recurring Maid Service"),
+         narration="And if you just want it to stay clean, the same team comes back every visit.",
+         captions=["Want it to *stay* clean?", "The *same team* every visit"], tag="Recurring Maid Service"),
     dict(id="proof", photo=P+"living-room-fireplace-hardwood.jpg", focus=(0.5, 0.5), mood="blur",
-         narration="More than two thousand cleanings later, families across the suburbs rate us five stars on Google.",
+         narration="We've done more than two thousand cleanings since then, and families around here give us five stars on Google.",
          captions=[], overlay="rating"),
     dict(id="review", photo=P+"living-room-fireplace-hardwood.jpg", focus=(0.5, 0.5), mood="blur",
-         narration="One customer said it best. They were courteous, efficient, friendly, and went above and beyond.",
+         narration="One customer said we were courteous, efficient, friendly, and went above and beyond. That's what we aim for every time.",
          captions=[], overlay="reviews"),
     dict(id="risk", photo=P+"team-member-vacuuming.jpg", focus=(0.45, 0.5), mood="dim",
-         narration="Booking us is the easy part. No deposit. No contracts. You see your exact price before you book. Our team is insured, bonded, and background-checked. And if we miss something, tell us within 48 hours and we'll come back and re-clean it for free.",
+         narration="Booking us is the easy part. There's no deposit and no contract. You see your exact price before you book. Our team is insured, bonded and background-checked. And if we miss anything, tell us within 48 hours and we'll come back and re-clean it for free.",
          captions=[], overlay="risk"),
     dict(id="cta", photo=P+"hero-home.jpg", focus=(0.5, 0.5), mood="dim",
          narration="Tap See My Price and Book, pick your day, and come home to a house that's actually clean.",
@@ -50,7 +50,7 @@ REVIEWS = [
 ]
 RISK = ["No deposit", "No contracts", "Exact price before you book", "Insured, bonded & background-checked", "48-hour re-clean guarantee"]
 # Which narration word index (0-based, within the risk narration) each risk item appears at.
-RISK_CUES = ["deposit.", "contracts.", "price", "insured,", "48"]
+RISK_CUES = ["deposit", "contract.", "exact", "insured,", "48"]
 CTA = dict(button="See My Price & Book", url="dsmcleaningsolutions.com", phone="(815) 246-2113",
            line1="Come home to a house", line2="that's *actually clean.*")
 

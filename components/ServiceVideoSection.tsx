@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import VslVideo, { type VideoFiles } from "@/components/VslVideo";
+import { watchPathFor } from "@/lib/serviceVideos";
 
 /**
  * A service's short sales video in a dark band, with the booking button and
@@ -65,6 +66,11 @@ export default function ServiceVideoSection({
           <p className="text-white/60 text-sm mt-3">
             or call <a href="tel:+18152462113" className="text-white font-semibold hover:underline">(815) 246-2113</a>
           </p>
+          {watchPathFor(video.id) && (
+            <p className="text-sm mt-2">
+              <Link href={watchPathFor(video.id)!} className="text-white/60 hover:text-white hover:underline">Open this video on its own page →</Link>
+            </p>
+          )}
         </div>
       </div>
     </section>

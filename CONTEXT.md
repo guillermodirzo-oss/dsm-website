@@ -172,7 +172,7 @@ Move-out customers are mostly home buyers and sellers, not renters. Write move-o
 
 ## Homepage Video
 - A 59-second intro video sits in the section right under the homepage hero (`components/HomeVideo.tsx`, files in `public/videos/`, VideoObject schema in `app/page.tsx`). Phones get the vertical cut, tablets and desktops the wide one. It starts muted when half of it is on screen (captions are burned in), "Tap for sound" restarts it with sound, and it ends on a "See My Price & Book" button.
-- It states 46 five-star reviews and 2,000+ cleanings since 2020. When those numbers move, re-render from `video/homepage-vsl/` (see its README). The narrator is an ElevenLabs AI voice. Never claim it is Guillermo or Rocío speaking.
+- It states 46 five-star reviews and 2,000+ cleanings since 2020. When those numbers move, re-render from `video/homepage-vsl/` (see its README). Since Oct 27 2026 all four videos are voiced with an ElevenLabs clone of the owner's own voice (owner decision). The scripts speak as "we", a husband and wife business, and never say the owners' names: the owner found names in an AI voice sounded off.
 
 ## Service Videos
 - Each service has its own short video, set in `lib/serviceVideos.tsx` and shown through `components/ServiceVideoSection.tsx` right after the trust bar: recurring on /recurring-cleaning and the 4 recurring city pages; deep cleaning on /deep-cleaning, the 16 deep cleaning city pages and /deep-cleaning-cost-naperville-il; move-out on /move-out-cleaning and the 16 move-out city pages. GA4 `video` values: `recurring`, `deep_cleaning`, `move_out`.
