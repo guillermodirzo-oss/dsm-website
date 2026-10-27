@@ -31,7 +31,7 @@ export const RECURRING_VIDEO: ServiceVideo = {
     name: "Recurring House Cleaning With DSM Cleaning Solutions",
     description:
       "How recurring house cleaning works with DSM Cleaning Solutions in Romeoville, IL: the same team every visit, weekly, every two weeks or monthly, save up to 20% per visit, price locked for 12 months, no contracts and no deep clean needed to start.",
-    uploadDate: "2026-10-19T18:00:00-05:00",
+    uploadDate: "2026-10-27T18:30:00-05:00",
     duration: "PT43S",
   },
 };
@@ -50,7 +50,7 @@ export const DEEP_VIDEO: ServiceVideo = {
     name: "Deep House Cleaning With DSM Cleaning Solutions",
     description:
       "What a deep clean from DSM Cleaning Solutions in Romeoville, IL adds on top of a regular clean: grout scrubbing, baseboards, doors and door frames, degreasing the stovetop, hood and burners, vacuuming under and behind furniture, light fixtures and inside window glass. Exact price before you book, no deposit, 48-hour re-clean guarantee.",
-    uploadDate: "2026-10-19T18:30:00-05:00",
+    uploadDate: "2026-10-27T18:30:00-05:00",
     duration: "PT47S",
   },
 };
@@ -69,7 +69,7 @@ export const MOVEOUT_VIDEO: ServiceVideo = {
     name: "Move-In and Move-Out Cleaning With DSM Cleaning Solutions",
     description:
       "What a move-in or move-out clean from DSM Cleaning Solutions in Romeoville, IL includes: inside the oven and refrigerator, inside every cabinet and drawer, inside the dishwasher, closet shelves, baseboards, doors and grout. Ready for listing photos, closing day or move-in day. Exact price before you book, no deposit, 48-hour re-clean guarantee.",
-    uploadDate: "2026-10-19T19:00:00-05:00",
+    uploadDate: "2026-10-27T18:30:00-05:00",
     duration: "PT45S",
   },
 };
@@ -82,15 +82,15 @@ export const HOME_VIDEO: ServiceVideo = {
   label: "Meet the husband and wife team behind DSM Cleaning Solutions, a one-minute video with captions",
   endLine: (
     <>
-      Ready for a house that&apos;s <span className="text-orange-400">actually clean?</span>
+      Come home to a house that&apos;s <span className="text-orange-400">actually clean.</span>
     </>
   ),
   schema: {
     name: "Meet DSM Cleaning Solutions: House Cleaning in Romeoville, IL",
     description:
       "A one-minute look at DSM Cleaning Solutions, the husband and wife house cleaning business in Romeoville, IL: deep cleaning, move-out cleaning and recurring maid service, and how booking works. No deposit, no contracts, and your exact price before you book.",
-    uploadDate: "2026-10-27T19:00:00-05:00",
-    duration: "PT60S",
+    uploadDate: "2026-10-27T18:30:00-05:00",
+    duration: "PT61S",
   },
 };
 
