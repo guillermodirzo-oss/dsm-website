@@ -34,10 +34,13 @@ export default function Footer() {
           </div>
 
           {/* Services. Core 3, matching the nav: Recurring, Deep, Move-Out/
-              Move-In. Standard cleaning merged into Recurring Cleaning, so
-              it's gone from here too. The niche pages below aren't in the
-              nav or the homepage anymore, so this list is their only
-              internal link — removing one here would strand that page. */}
+              Move-In. "Before You Book" links the pages that answer what
+              customers ask before booking (price, what's included, how we
+              work). Owner decision Oct 26 2026: the niche pages (eco-friendly,
+              apartment, one-time, pet-friendly) left the footer so every page
+              points at the core services; each is still linked from at least
+              one other page (plainfield-il, why-choose-dsm, commercial-cleaning,
+              cleaning-for-allergies, the blog). */}
           <div>
             <h3 className="text-white font-bold text-sm uppercase tracking-widest mb-5">Services</h3>
             <ul className="space-y-2.5 text-sm">
@@ -49,13 +52,13 @@ export default function Footer() {
                 <li key={item.label}><Link href={item.href} className="hover:text-white transition-colors">{item.label}</Link></li>
               ))}
             </ul>
-            <h3 className="text-white font-bold text-sm uppercase tracking-widest mb-5 mt-6">More Services</h3>
+            <h3 className="text-white font-bold text-sm uppercase tracking-widest mb-5 mt-6">Before You Book</h3>
             <ul className="space-y-2.5 text-sm">
               {[
-                { label: "Eco-Friendly Add-On", href: "/eco-friendly-cleaning" },
-                { label: "Apartment Cleaning", href: "/apartment-cleaning" },
-                { label: "One-Time Cleaning", href: "/one-time-cleaning" },
-                { label: "Pet-Friendly Cleaning", href: "/pet-friendly-cleaning" },
+                { label: "Pricing", href: "/pricing" },
+                { label: "What's Included (Checklist)", href: "/cleaning-checklist" },
+                { label: "How We Clean", href: "/our-cleaning-process" },
+                { label: "Why Choose DSM", href: "/why-choose-dsm" },
               ].map((item) => (
                 <li key={item.label}><Link href={item.href} className="hover:text-white transition-colors">{item.label}</Link></li>
               ))}
