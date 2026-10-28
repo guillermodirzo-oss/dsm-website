@@ -56,6 +56,12 @@ export default function CityHubPage({ city, hub }: { city: CityData; hub: CityHu
   const n = hub.name;
   const reviews = hub.reviewers.map(reviewByName);
   const story = clientStoryForHub(hub.slug);
+  // A hub only gets this layout with real local proof. Without a client story
+  // and its own intro, the page would be the template with a city name swapped
+  // in, which is what Google treats as a doorway page. Fail the build instead.
+  if (!story || hub.intro.length === 0) {
+    throw new Error(`CityHubPage: ${hub.slug} needs a client story in lib/localProof.ts and an intro in lib/cityHubs.ts`);
+  }
   const faqs = cityHubFaqs(hub);
   const pageUrl = `https://www.dsmcleaningsolutions.com/${hub.slug}`;
 
@@ -254,25 +260,35 @@ export default function CityHubPage({ city, hub }: { city: CityData; hub: CityHu
         </div>
       </section>
 
-      {/* QUICK ANSWERS */}
+      {/* LOCAL INTRO. Written for this city only (lib/cityHubs.ts). */}
       <section className="py-14 md:py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="section-heading text-3xl md:text-4xl text-center mb-6">{`Your Local House Cleaners for ${n}`}</h2>
+          {hub.intro.map((para) => (
+            <p key={para} className="text-gray-600 leading-relaxed mb-4">{para}</p>
+          ))}
+        </div>
+      </section>
+
+      {/* QUICK ANSWERS */}
+      <section className="py-14 md:py-16 bg-gray-50 border-t border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading text-3xl md:text-4xl text-center mb-8 md:mb-10">Quick Answers</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-            <div className="rounded-2xl border border-gray-100 bg-gray-50 p-6">
+            <div className="rounded-2xl border border-gray-100 bg-white p-6">
               <h3 className="font-bold text-gray-900 text-lg mb-2">What does it cost?</h3>
               <p className="text-sm text-gray-600 leading-relaxed">
                 {`Standard cleans start at ${STANDARD_FROM}, deep cleans at ${DEEP_FROM} and move-out cleans at ${MOVE_OUT_FROM}. The booking form shows your exact total before you book. No deposit.`}
               </p>
               <Link href="/pricing" className="inline-block mt-3 text-sm font-semibold text-brand-green hover:underline">See all prices →</Link>
             </div>
-            <div className="rounded-2xl border border-gray-100 bg-gray-50 p-6">
+            <div className="rounded-2xl border border-gray-100 bg-white p-6">
               <h3 className="font-bold text-gray-900 text-lg mb-2">{`Which parts of ${n}?`}</h3>
               <p className="text-sm text-gray-600 leading-relaxed">
                 {`All of it. ${zipLine(n)} We're based in Romeoville, ${hub.distance} away.`}
               </p>
             </div>
-            <div className="rounded-2xl border border-gray-100 bg-gray-50 p-6">
+            <div className="rounded-2xl border border-gray-100 bg-white p-6">
               <h3 className="font-bold text-gray-900 text-lg mb-2">Do I need to be home?</h3>
               <p className="text-sm text-gray-600 leading-relaxed">
                 No. Plenty of our clients leave a key or a lockbox code and come home to a clean house. We lock up when we&apos;re done.
@@ -319,7 +335,7 @@ export default function CityHubPage({ city, hub }: { city: CityData; hub: CityHu
       <section className="py-14 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <h2 className="section-heading text-3xl md:text-4xl">What&apos;s Included</h2>
+            <h2 className="section-heading text-3xl md:text-4xl">{`What We Clean in ${n} Homes`}</h2>
             <p className="text-gray-500 mt-2">
               Every room, every visit. The{" "}
               <Link href="/cleaning-checklist" className="text-brand-green font-semibold hover:underline">full checklist</Link>{" "}
@@ -328,7 +344,8 @@ export default function CityHubPage({ city, hub }: { city: CityData; hub: CityHu
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white rounded-2xl p-6 border border-gray-200">
-              <h3 className="font-bold text-lg text-gray-900 mb-4">Every Clean</h3>
+              <h3 className="font-bold text-lg text-gray-900">Every Clean</h3>
+              <Link href="/recurring-cleaning" className="inline-block text-sm font-semibold text-brand-green hover:underline mb-4">See recurring cleaning →</Link>
               <ul className="space-y-2 text-sm text-gray-700">
                 {STANDARD_HIGHLIGHTS.map((item) => (
                   <li key={item} className="flex items-start gap-2"><span className="text-green-600 mt-0.5">✓</span><span>{item}</span></li>
@@ -337,7 +354,8 @@ export default function CityHubPage({ city, hub }: { city: CityData; hub: CityHu
             </div>
             <div className="bg-white rounded-2xl p-6 border border-orange-200">
               <h3 className="font-bold text-lg text-gray-900 mb-1">A Deep Clean Adds</h3>
-              <p className="text-xs text-gray-500 mb-4">On top of everything in a regular clean.</p>
+              <p className="text-xs text-gray-500">On top of everything in a regular clean.</p>
+              <Link href="/deep-cleaning" className="inline-block text-sm font-semibold text-brand-green hover:underline mb-4">See deep cleaning →</Link>
               <ul className="space-y-2 text-sm text-gray-700">
                 {DEEP_ADDITIONS.map((item) => (
                   <li key={item} className="flex items-start gap-2"><span className="text-green-600 mt-0.5">✓</span><span>{item}</span></li>

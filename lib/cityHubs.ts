@@ -19,6 +19,12 @@ export interface CityHub {
   /** "about 10 miles" from the Romeoville base. */
   distance: string;
   hero: { src: string; position: string };
+  /**
+   * The city's own "local cleaners" section, in the owner's voice. Required,
+   * and must be written for this city: it's what keeps two hubs from reading
+   * as the same page with the name swapped. Confirmed facts only.
+   */
+  intro: string[];
   /** Real Google reviewers, first one leads. */
   reviewers: string[];
   /** City-specific service pages. */
@@ -37,6 +43,11 @@ export const CITY_HUBS: Record<string, CityHub> = {
     name: "Joliet",
     distance: "about 10 miles",
     hero: { src: "/work-photos/living-room-fireplace-hardwood.jpg", position: "center 55%" },
+    intro: [
+      "We're DSM Cleaning Solutions, a husband and wife business based in Romeoville, about 10 miles from Joliet. We clean houses, townhomes and apartments in all five Joliet zip codes, and one of us is at every job.",
+      "In Joliet we do deep cleans when the house needs a full catch-up, move-out cleans before a closing or the end of a lease, and recurring visits every week, every two weeks or once a month for Joliet families who want it to stay clean. One Joliet client has had us every month for two years.",
+      "You book online, see your exact price first and pay on cleaning day. No deposit and no contract, whether you're in Joliet or one of the towns next to it.",
+    ],
     // Jae Mac is an owner-confirmed Joliet client. Michelle names both owners.
     // Alina started with a one-time clean and stayed for regular visits.
     reviewers: ["Jae Mac", "Michelle Gillespie", "Alina"],
