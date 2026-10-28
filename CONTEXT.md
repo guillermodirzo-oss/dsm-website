@@ -162,7 +162,8 @@ Move-out customers are mostly home buyers and sellers, not renters. Write move-o
 | `components/HeroRating.tsx` | The star rating line for orange heroes. White on the darkest brand orange, which meets WCAG AA. Use it instead of coloring the text by hand |
 | `components/Navigation.tsx` | Site nav |
 | `components/Footer.tsx` | Footer with service and city links |
-| `components/CityPageTemplate.tsx` | Shared template for the city hub pages |
+| `components/CityPageTemplate.tsx` | Older shared template for the city hub pages not yet converted |
+| `components/CityHubPage.tsx` + `lib/cityHubs.ts` | Homepage-style city hub (Oct 2026): outcome hero, a confirmed local reviewer first, the local client story, the 3 city service pages with prices, quick answers, intro video, zero risk, checklist, FAQ, form. Joliet first; convert other hubs by adding an entry to `lib/cityHubs.ts` |
 | `lib/cityData.ts` | Data for the city hub pages, and `CITY_ZIPS` with `zipLine()` and `zipCodesPhrase()`, the only source for every city's zip codes |
 | `lib/blogData.ts` | Blog post entries |
 | `next.config.mjs` | All redirects and www canonicalization |

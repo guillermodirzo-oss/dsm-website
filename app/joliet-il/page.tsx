@@ -1,95 +1,39 @@
 import type { Metadata } from "next";
 import { hubCityTitle } from "@/lib/seoTitles";
-import Link from "next/link";
-import CityPageTemplate from "@/components/CityPageTemplate";
-import { cities, zipLine } from "@/lib/cityData";
+import CityHubPage from "@/components/CityHubPage";
+import { cities } from "@/lib/cityData";
+import { CITY_HUBS } from "@/lib/cityHubs";
 import { OG_IMAGE_ALT } from "@/lib/workPhotos";
+import { REVIEW_COUNT, REVIEW_RATING } from "@/lib/siteConstants";
+
+// The hero shows FALL75 through <Offer>; regenerate hourly so it drops out on its own.
+export const revalidate = 3600;
 
 const city = cities.find((c) => c.slug === "joliet-il")!;
+const hub = CITY_HUBS["joliet-il"];
+
+const TITLE = hubCityTitle("Joliet");
+const DESCRIPTION = `House cleaning in Joliet from a local husband and wife team. Deep, move-out and recurring cleaning. Rated ${REVIEW_RATING} by ${REVIEW_COUNT} neighbors. Book online.`;
 
 export const metadata: Metadata = {
-  title: { absolute: hubCityTitle("Joliet") },
-  description:
-    "Professional house cleaning in Joliet, IL. Deep cleaning, move-out & recurring maid service. Family-owned & insured. Free estimates today.",
-  keywords: [
-    "house cleaning Joliet IL",
-    "cleaning service Joliet",
-    "maid service Joliet IL",
-    "deep cleaning Joliet",
-    "recurring cleaning Joliet IL",
-  ],
+  title: { absolute: TITLE },
+  description: DESCRIPTION,
   alternates: { canonical: "https://www.dsmcleaningsolutions.com/joliet-il" },
   openGraph: {
-    title: hubCityTitle("Joliet"),
-    description:
-      "Professional house cleaning in Joliet, IL. Deep cleaning, move-out & recurring maid service. Family-owned & insured. Free estimates today.",
+    title: TITLE,
+    description: DESCRIPTION,
     url: "https://www.dsmcleaningsolutions.com/joliet-il",
     siteName: "DSM Cleaning Solutions",
     images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: OG_IMAGE_ALT }],
   },
   twitter: {
     card: "summary_large_image",
-    title: hubCityTitle("Joliet"),
-    description: "Professional house cleaning in Joliet, IL. Deep cleaning, move-out & recurring maid service. Family-owned & insured.",
+    title: TITLE,
+    description: DESCRIPTION,
     images: ["/hero-image.png"],
   },
 };
 
 export default function JolietPage() {
-  return (
-    <>
-      <CityPageTemplate city={city} ownZipSection />
-
-      {/* ZIP CODES & LANDMARKS */}
-      <section className="py-16 bg-white border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            <div>
-              <h2 className="section-heading text-3xl md:text-4xl mb-4">Joliet Zip Codes We Serve</h2>
-              <p className="text-gray-500 mb-5 leading-relaxed">
-                Based in the southwest Chicago suburbs, DSM Cleaning Solutions knows every corner of Joliet. We clean homes throughout every neighborhood, from the newest developments to established subdivisions we&apos;ve served for years.
-              </p>
-              {/* Zip codes only: the owner cannot confirm any neighborhood names. */}
-              <p className="text-gray-700 leading-relaxed">{zipLine("Joliet")}</p>
-            </div>
-            <div>
-              <h3 className="font-bold text-xl text-gray-900 mb-4">Local Joliet Landmarks</h3>
-              <p className="text-gray-500 mb-4 text-sm leading-relaxed">
-                We&apos;re proud to serve the families who live near these well-known local landmarks:
-              </p>
-              <div className="space-y-2">
-                {["Rialto Theatre", "Joliet Iron Works Historic Site", "Pilcher Park", "Splash Station", "Route 30 Corridor"].map((l) => (
-                  <div key={l} className="flex items-center gap-3 bg-gray-50 rounded-xl p-3 border border-gray-100">
-                    <span className="text-xl">📍</span>
-                    <span className="text-gray-700 font-medium text-sm">{l}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* POPULAR SERVICES IN JOLIET */}
-      <section className="py-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Popular Services in Joliet, IL</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <Link href="/deep-cleaning-joliet-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning in Joliet</h3>
-              <p className="text-sm text-gray-600">We scrub grout, degrease the range hood and wipe every baseboard in homes across Joliet.</p>
-            </Link>
-            <Link href="/recurring-cleaning-joliet-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Recurring Cleaning in Joliet</h3>
-              <p className="text-sm text-gray-600">Weekly, biweekly & monthly recurring cleaning for Joliet homes.</p>
-            </Link>
-            <Link href="/move-out-cleaning-joliet-il" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Move-Out Cleaning in Joliet</h3>
-              <p className="text-sm text-gray-600">Deposit-back focused move-out cleaning throughout Joliet, IL.</p>
-            </Link>
-          </div>
-        </div>
-      </section>
-    </>
-  );
+  return <CityHubPage city={city} hub={hub} />;
 }
