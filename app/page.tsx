@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
+import Image, { getImageProps } from "next/image";
 import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
 import WorkPhotoGrid, { type WorkPhoto } from "@/components/WorkPhotoGrid";
@@ -38,6 +38,26 @@ export const revalidate = 3600;
 
 // "From" prices for the hero line and the pricing FAQ, read from the rate card
 // so they match every other page.
+// Hero photos (see the HERO section). Mobile is the <img> fallback and loads
+// with high priority; desktop swaps in through <source> from 768px.
+const { props: { srcSet: HERO_DESKTOP_SRCSET } } = getImageProps({
+  src: "/work-photos/kitchen-white-cabinets-wide-1.jpg",
+  alt: "",
+  width: 1920,
+  height: 1440,
+  sizes: "100vw",
+  quality: 75,
+});
+const { props: HERO_MOBILE_PROPS } = getImageProps({
+  src: "/work-photos/kitchen-white-island-pendant.jpg",
+  alt: "",
+  width: 1440,
+  height: 1920,
+  sizes: "100vw",
+  quality: 72,
+  priority: true,
+});
+
 const STANDARD_FROM = formatPrice(startingPrice(STANDARD_CLEANING_TIERS));
 const DEEP_FROM = formatPrice(startingPrice(DEEP_CLEANING_TIERS));
 const MOVEOUT_FROM = formatPrice(startingPrice(MOVE_OUT_TIERS));
@@ -199,81 +219,61 @@ export default function HomePage() {
 
       {/* ─── HERO ─── */}
       <section id="hero" className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
-        {/* LCP element. Rendered through next/image with priority so it is
-            preloaded and served as AVIF/WebP; as a CSS background it was
-            discovered late and downloaded at full size. */}
-        <Image
-          src="/work-photos/hero-kitchen-home.jpg"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-          style={{ objectPosition: "center 50%" }}
-        />
-        {/* Dark overlay, lightened so image shows clearly */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/30" />
-        {/* Orange tint */}
-        <div className="absolute inset-0 bg-gradient-to-t from-orange-900/20 via-transparent to-transparent" />
+        {/* LCP element. Art-directed: a portrait photo on phones and a
+            landscape one from md up, so neither gets cropped to a small slice
+            and blown up (the old 1200x675 landscape photo turned to mush on
+            phones). getImageProps keeps next/image's AVIF/WebP and srcset. */}
+        <picture>
+          <source media="(min-width: 768px)" srcSet={HERO_DESKTOP_SRCSET} sizes="100vw" />
+          {/* eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text */}
+          <img
+            {...HERO_MOBILE_PROPS}
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ objectPosition: "center 55%" }}
+          />
+        </picture>
+        {/* One even scrim, strongest behind the text column, so the kitchen
+            stays visible around it and every line still reads. */}
+        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.45)_0%,rgba(0,0,0,0.1)_75%)]" />
 
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-6 pb-20 sm:py-0">
-          {/* Spacing is deliberately tight on mobile so the rating, the offers
-              and the Book button all clear the fold at 390px. 69% of traffic
-              is mobile. Widen the rhythm at sm and above, not below. */}
-          {/* The one H1 on the page: what we do and where, in small type. The
-              big line under it is the headline visitors read, kept as a plain
-              paragraph so the page has a single H1. */}
-          <h1 className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-orange-200 mb-2 sm:mb-3">
-            House Cleaning in Romeoville and the Southwest Suburbs
+        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-6 pb-20 sm:py-0">
+          {/* Hero carries five things only (Hormozi): the outcome, one line of
+              who we are, proof, the offer, and one button with the risk
+              removed under it. Everything else lives in the sections below.
+              The one H1 on the page is the small keyword line. */}
+          <h1 className="text-[11px] sm:text-sm font-semibold uppercase tracking-wider text-orange-200 mb-3 drop-shadow">
+            House Cleaning in Romeoville &amp; the Southwest Suburbs
           </h1>
-          <p className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-[1.08] tracking-tight mb-4">
+          <p className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-[1.08] tracking-tight mb-4 drop-shadow-lg">
             Come Home to a House That&apos;s{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-orange-400">
-              Actually Clean.
-            </span>
+            <span className="text-orange-300">Actually Clean.</span>
           </p>
 
-          <p className="text-base sm:text-lg md:text-xl text-white/85 mb-3 max-w-2xl mx-auto leading-relaxed">
-            {`Deep cleaning, move-out cleaning and recurring maid service from a local Romeoville family business. See your exact price online, pick your day, and we handle the rest.`}
+          <p className="text-base sm:text-lg md:text-xl text-white mb-4 max-w-xl mx-auto leading-relaxed drop-shadow">
+            A local husband and wife team. See your exact price online and pick your day.
           </p>
 
-          {/* Rating: the shared component from the city pages. Counts come from
-              lib/realReviews.ts, never hardcoded. */}
-          <HeroRating href="/reviews" className="mb-3 sm:mb-4">{`${REVIEW_RATING} · ${REVIEW_COUNT} Google Reviews`}</HeroRating>
+          {/* Rating: counts come from lib/realReviews.ts, never hardcoded. */}
+          <HeroRating href="/reviews" className="mb-3">{`${REVIEW_RATING} · ${REVIEW_COUNT} Google Reviews`}</HeroRating>
 
-          {/* Every offer running right now, from lib/offers.ts. Each line comes
-              down on its own when its offer ends; with none left this takes no
-              space. */}
-          <OfferBanner className="mb-4 sm:mb-6" />
+          {/* Every running offer as one small chip, from lib/offers.ts. Each
+              chip comes down on its own when its offer ends. */}
+          <OfferBanner compact className="mb-5" />
 
-          {/* Two jobs: book online now, or call. */}
-          <div className="flex flex-col md:flex-row gap-3 justify-center">
-            <Link
-              href="/book"
-              className="w-full md:w-auto inline-block font-extrabold text-base text-white text-center py-4 px-9 rounded-full active:scale-95 transition-all duration-200 shadow-2xl"
-              style={{ backgroundColor: "#E8622A", boxShadow: "0 8px 30px rgba(232,98,42,0.5)" }}
-            >
-              See My Price &amp; Book
-            </Link>
-            <a href="tel:+18152462113" className="btn-outline-white text-base md:py-4 md:px-9 w-full md:w-auto">
-              📞 (815) 246-2113
-            </a>
-          </div>
+          <Link
+            href="/book"
+            className="w-full sm:w-auto inline-block font-extrabold text-lg text-white text-center py-4 px-10 rounded-full active:scale-95 transition-all duration-200 shadow-2xl"
+            style={{ backgroundColor: "#E8622A", boxShadow: "0 8px 30px rgba(232,98,42,0.5)" }}
+          >
+            See My Price &amp; Book
+          </Link>
 
-          <p className="mt-4 text-white/90 text-sm font-medium">
-            No deposit. No contracts. Free to reschedule. <span className="whitespace-nowrap">48-hour guarantee.</span>
+          <p className="mt-3 text-white text-sm font-medium drop-shadow">
+            No deposit · No contracts · <span className="whitespace-nowrap">48-hour guarantee</span>
           </p>
-
-          <a href="#video" className="inline-flex items-center gap-2 mt-3 text-white font-semibold text-sm hover:underline underline-offset-4">
-            <span className="flex items-center justify-center w-6 h-6 rounded-full bg-white/20">
-              <svg className="w-3.5 h-3.5 ml-0.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
-            </span>
-            Meet Guillermo &amp; Rocío in 60 seconds
-          </a>
-
-          {/* Price anchor. Numbers come from lib/pricing.ts. */}
-          <p className="mt-3 text-white/70 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
-            House cleaning from {STANDARD_FROM}. Deep cleans from {DEEP_FROM}. Move-out from {MOVEOUT_FROM}. We confirm your exact price before anything is booked.
+          <p className="mt-2 text-white/85 text-sm">
+            or call <a href="tel:+18152462113" className="font-semibold text-white underline underline-offset-2">(815) 246-2113</a>
           </p>
         </div>
 
