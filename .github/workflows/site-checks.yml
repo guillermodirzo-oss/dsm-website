@@ -44,7 +44,10 @@ jobs:
 
       - name: Build (includes the source check)
         id: build
-        run: npm run build
+        # One retry: GitHub's machines sometimes fail to download the Inter
+        # font from Google Fonts mid-build. A real build error fails twice.
+        run: |
+          npm run build || { echo "::warning::Build failed once, retrying (usually a Google Fonts download hiccup)"; sleep 20; npm run build; }
 
       - name: Start the built site
         run: |
