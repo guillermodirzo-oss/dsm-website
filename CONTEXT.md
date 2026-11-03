@@ -234,3 +234,14 @@ Never change form payloads, guards or the Step 1 partial capture. Never send tes
 
 ## Overall Goal
 Dominate local SEO for house cleaning keywords across all 16 service area cities in the Will County and DuPage County suburbs of Chicago.
+
+## Build Checks
+Every build and every push is checked automatically (`scripts/guard/`, set up Nov 2026).
+
+- **Source check** (`source-check.mjs`) runs as `prebuild`, so it runs inside every Vercel build too. It stops the deploy if a HubSpot form GUID, the /book BookingKoala embed, or the LocalBusiness address and map pin changed. The locked values live in `scripts/guard/rules.mjs`; a change that is on purpose updates that file in the same commit.
+- **Site check** (`site-check.mjs`) crawls a built copy of the site. It fails on: a sitemap page that isn't a 200, is noindex, or has no title, meta description or correct canonical; JSON-LD that doesn't parse; a schema address, map pin, review count or rating that doesn't match; visible text that states a different review count; em dashes, double hyphens or banned phrases; a live indexable page missing from `app/sitemap.ts`; a sitemap entry for a noindex page; a noindex page that lost its noindex; an internal link that redirects or 404s; the /book embed missing; robots.txt blocking the site. It also lists warnings that don't block: long titles and meta descriptions, duplicate titles, en dashes, "fully insured". It reads HTML only and never runs page JavaScript, so no tracking fires.
+- **Screenshots** (`screenshots.mjs`): first screen and full page, at phone (390px) and desktop (1440px) size, of the homepage, the three service pages, /joliet-il and /book. `EXTRA_PAGES="/naperville-il"` adds pages. All tracking is blocked.
+- **Lighthouse** (`lighthouse.mjs`): phone scores for the money pages. Report only; tracking blocked.
+- **GitHub Actions** (`.github/workflows/site-checks.yml`) runs all four on every push to every branch. Results are on the run's Summary page; screenshots and Lighthouse reports are in its "site-check-output" download. Before saying a branch is ready to ship, check that its run passed.
+- **Locally:** `npm run build && npm run check` (add `-- --lighthouse` for scores). Screenshots and Lighthouse need `npm i --no-save playwright@1.63.0 lighthouse@13.5.0` first. Output goes to `guard-output/` (git-ignored). With no access to Google Fonts, build with `NEXT_FONT_GOOGLE_MOCKED_RESPONSES` pointing at a local font mock.
+- **Dependabot** (`.github/dependabot.yml`) opens at most 3 update branches a week (Monday 6am Central), grouped minor and patch updates, never a major Next.js, React, ESLint or Tailwind jump. Nothing merges on its own: each gets a preview and the checks, then a person decides.

@@ -1,0 +1,82 @@
+# Runs on every push to any branch. Builds the site the same way Vercel does,
+# then checks it before anyone says "ship it":
+#   1. Source check (locked values) runs inside `npm run build` as prebuild
+#   2. Site check: every sitemap page indexable, titles, canonicals, schema,
+#      review count, copy rules, internal links, /book embed
+#   3. Phone and desktop screenshots of key pages
+#   4. Lighthouse scores (report only)
+# Results show on the run's Summary page; screenshots and Lighthouse reports
+# are in the "site-check-output" download at the bottom of that page.
+name: Site checks
+
+on:
+  push:
+  workflow_dispatch:
+    inputs:
+      pages:
+        description: "Extra pages to screenshot, comma separated (e.g. /naperville-il,/pricing)"
+        required: false
+        default: ""
+
+concurrency:
+  group: site-checks-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Build (includes the source check)
+        id: build
+        run: npm run build
+
+      - name: Start the built site
+        run: |
+          npx next start -p 3100 > /tmp/server.log 2>&1 &
+          for i in $(seq 1 60); do curl -sf -o /dev/null http://localhost:3100/robots.txt && exit 0; sleep 1; done
+          cat /tmp/server.log; exit 1
+
+      - name: Site check
+        id: site
+        run: node scripts/guard/site-check.mjs http://localhost:3100
+
+      - name: Install screenshot and Lighthouse tools
+        if: ${{ !cancelled() && steps.build.outcome == 'success' }}
+        run: |
+          npm i --no-save --no-audit --no-fund playwright@1.63.0 lighthouse@13.5.0
+          npx playwright install --with-deps chromium
+
+      - name: Screenshots (phone and desktop)
+        if: ${{ !cancelled() && steps.build.outcome == 'success' }}
+        env:
+          EXTRA_PAGES: ${{ github.event.inputs.pages }}
+        run: node scripts/guard/screenshots.mjs http://localhost:3100
+
+      - name: Lighthouse (report only)
+        if: ${{ !cancelled() && steps.build.outcome == 'success' }}
+        continue-on-error: true
+        run: node scripts/guard/lighthouse.mjs http://localhost:3100
+
+      - name: Save screenshots and reports
+        if: ${{ !cancelled() && steps.build.outcome == 'success' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-check-output
+          path: guard-output/
+          retention-days: 14

@@ -42,3 +42,6 @@ next-env.d.ts
 # photo drop folder, never commit or deploy raw originals
 _incoming/
 **/_incoming/
+
+# build check output (screenshots, Lighthouse reports)
+guard-output/

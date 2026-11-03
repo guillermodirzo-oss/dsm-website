@@ -4,9 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/guard/source-check.mjs",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check": "node scripts/guard/check-all.mjs",
+    "check:source": "node scripts/guard/source-check.mjs",
+    "check:site": "node scripts/guard/site-check.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^16.2.4",
