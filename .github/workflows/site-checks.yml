@@ -71,6 +71,10 @@ jobs:
           EXTRA_PAGES: ${{ github.event.inputs.pages }}
         run: node scripts/guard/screenshots.mjs http://localhost:3100
 
+      - name: /book phone tap test
+        if: ${{ !cancelled() && steps.build.outcome == 'success' }}
+        run: node scripts/guard/book-test.mjs http://localhost:3100
+
       - name: Lighthouse (report only)
         if: ${{ !cancelled() && steps.build.outcome == 'success' }}
         continue-on-error: true

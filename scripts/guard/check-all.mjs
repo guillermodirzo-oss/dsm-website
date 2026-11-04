@@ -40,7 +40,8 @@ const run = (script) =>
   });
 
 const siteCode = await run("site-check.mjs");
+const bookCode = await run("book-test.mjs");
 await run("screenshots.mjs");
 if (withLighthouse) await run("lighthouse.mjs");
 stop();
-process.exit(siteCode);
+process.exit(siteCode || bookCode);
