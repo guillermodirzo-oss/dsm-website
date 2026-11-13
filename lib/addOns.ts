@@ -10,8 +10,8 @@
  *    no carpet cleaning, no organizing).
  *  - Never type an add-on price into a page. /pricing renders the full list
  *    from this file; anywhere else that shows a price reads it from here.
- *  - Inside the oven on a deep clean follows lib/offers.ts: free while the
- *    deep cleaning offer (FALL75) runs, otherwise the price below. Pages show
+ * *  - Inside the oven and fridge on a deep clean follow lib/offers.ts: free while the
+ *    deep cleaning offer (Holiday Reset, lib/offers.ts) runs, otherwise the price below. Pages show
  *    that through <Offer service="deep">, never by changing the price here.
  *  - Move-in/move-out cleaning already includes the inside of the oven, the
  *    fridge, every cabinet and drawer, and the dishwasher, so those are not

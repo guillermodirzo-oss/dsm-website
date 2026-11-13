@@ -6,7 +6,7 @@ import { CITY_HUBS } from "@/lib/cityHubs";
 import { OG_IMAGE_ALT } from "@/lib/workPhotos";
 import { REVIEW_COUNT, REVIEW_RATING } from "@/lib/siteConstants";
 
-// The hero shows FALL75 through <Offer>; regenerate hourly so it drops out on its own.
+// The hero shows the holiday offer through <Offer>; regenerate hourly so it drops out on its own.
 export const revalidate = 3600;
 
 const city = cities.find((c) => c.slug === "joliet-il")!;

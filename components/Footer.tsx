@@ -59,6 +59,7 @@ export default function Footer() {
                 { label: "What's Included (Checklist)", href: "/cleaning-checklist" },
                 { label: "How We Clean", href: "/our-cleaning-process" },
                 { label: "Why Choose DSM", href: "/why-choose-dsm" },
+                { label: "Gift Cards", href: "/gift-cards" },
               ].map((item) => (
                 <li key={item.label}><Link href={item.href} className="hover:text-white transition-colors">{item.label}</Link></li>
               ))}

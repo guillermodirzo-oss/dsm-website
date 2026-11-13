@@ -1,371 +1,315 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
-import LeadForm from "@/components/LeadForm";
-import { DEEP_FROM, STANDARD_CLEANING_TIERS, STANDARD_FROM, formatPrice, priceForBeds } from "@/lib/pricing";
-import { OG_IMAGE_ALT } from "@/lib/workPhotos";
-
-const TWO_BED_STANDARD = formatPrice(priceForBeds(STANDARD_CLEANING_TIERS, 2));
+import Script from "next/script";
+import ReviewCard from "@/components/ReviewCard";
+import { REVIEW_COUNT, REVIEW_RATING, reviewAttributionWithCity, reviewByName } from "@/lib/realReviews";
+import { formatPrice } from "@/lib/pricing";
+import { DEFAULT_GIFT_SIZE, GIFT_CARD_MIN, GIFT_SIZES, giftAmount } from "@/lib/giftCards";
+import { DEEP_OFFER } from "@/lib/offers";
 
 /**
- * The home sizes a gift card pays for in full: every standard tier priced at
- * or under the card's value. "a 1 or 2 bedroom home" for the $200 card.
+ * /gift-cards: "Gift a Clean" (CEO brief, Nov 10 2026).
+ *
+ * A gift buyer doesn't know the home's size, so the page sells by Small,
+ * Medium and Large. Every amount comes from lib/giftCards.ts, which runs the
+ * BookingKoala rate formula in lib/pricing.ts for the top of each size. The
+ * buyer types the amount from the table into BookingKoala's gift card form.
+ *
+ * The form embed below is exactly what BookingKoala gave us, and the build
+ * checks it (scripts/guard/rules.mjs GIFT_EMBED). Never edit it.
+ *
+ * Nothing on this page expires with an offer, so it needs no revalidate.
  */
-function homesCoveredBy(cardValue: number): string {
-  const beds = STANDARD_CLEANING_TIERS.filter((t) => t.price <= cardValue).map((t) => parseInt(t.beds, 10));
-  if (beds.length === 0) throw new Error(`A $${cardValue} gift card covers no standard tier in lib/pricing.ts`);
-  const list = beds.length === 1 ? `${beds[0]}` : `${beds.slice(0, -1).join(", ")} or ${beds[beds.length - 1]}`;
-  return `a ${list} bedroom home`;
-}
+
+// Keeps the old page's "Romeoville" keyword, which it ranked on.
+const TITLE = "House Cleaning Gift Cards Romeoville IL | Gift a Clean Home";
+const DESCRIPTION =
+  "Give a house cleaning gift card from a local family team in Romeoville. Pick a home size, pick a standard or deep clean, and they book the day.";
+const URL = "https://www.dsmcleaningsolutions.com/gift-cards";
 
 export const metadata: Metadata = {
-  title: "House Cleaning Gift Cards Romeoville & Plainfield IL",
-  description:
-    "Give the gift of a clean home. House cleaning gift cards in Romeoville and Plainfield IL from DSM Cleaning Solutions. Never expire.",
-  alternates: { canonical: "https://www.dsmcleaningsolutions.com/gift-cards" },
+  title: { absolute: TITLE },
+  description: DESCRIPTION,
+  alternates: { canonical: URL },
   openGraph: {
-    title: "House Cleaning Gift Cards Romeoville & Plainfield IL | DSM Cleaning Solutions",
-    description:
-      "Give the gift of a clean home. House cleaning gift cards in Romeoville and Plainfield IL from DSM Cleaning Solutions. Never expire.",
-    url: "https://www.dsmcleaningsolutions.com/gift-cards",
+    title: "Gift a Clean Home | DSM Cleaning Solutions",
+    description: DESCRIPTION,
+    url: URL,
     siteName: "DSM Cleaning Solutions",
-    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: OG_IMAGE_ALT }],
+    images: [{ url: "/hero-image.png", width: 1200, height: 630, alt: "House cleaning gift cards from DSM Cleaning Solutions" }],
   },
-  twitter: { card: "summary_large_image", images: ["/hero-image.png"] },
+  twitter: {
+    card: "summary_large_image",
+    title: "Gift a Clean Home | DSM Cleaning Solutions",
+    description: DESCRIPTION,
+    images: ["/hero-image.png"],
+  },
 };
 
-const faqs = [
+const ORANGE = "#E8622A";
+const FORM_ANCHOR = "gift-form";
+const PHONE = "(815) 246-2113";
+const SMS_HREF = "sms:+18152462113";
+
+const DEFAULT_SIZE = GIFT_SIZES.find((s) => s.id === DEFAULT_GIFT_SIZE)!;
+const RECURRING_OFF = DEEP_OFFER.recurringOffLabel ?? "25%";
+
+const FAQS: { q: string; a: string }[] = [
   {
-    question: "Do you offer house cleaning gift cards?",
-    answer:
-      "Yes, DSM Cleaning Solutions offers house cleaning gift cards for any occasion. Gift cards can be purchased by calling us directly at (815) 246-2113 or by submitting a request through our contact form. We'll confirm the value, process your gift card, and provide instructions for the recipient.",
+    q: "What if their home is bigger than the size I picked?",
+    a: "No problem. The card comes off their total when they book, and they pay the difference. Nobody gets turned away.",
   },
   {
-    question: "What values are available?",
-    answer:
-      `We offer gift cards in standard denominations of $100, $150, and $200, as well as custom amounts. Popular gift card amounts correspond to specific service types: ${STANDARD_FROM} covers a standard clean for a smaller home, ${DEEP_FROM} covers a deep clean, and $200 is a great partial gift toward a larger service. Call us at (815) 246-2113 to discuss the best value for your situation.`,
+    q: "What if their home is smaller?",
+    a: "Whatever's left on the card stays on it as credit for their next cleaning.",
   },
   {
-    question: "How does the recipient redeem it?",
-    answer:
-      "The recipient simply contacts DSM Cleaning Solutions to book their cleaning and mentions they have a gift card. We'll apply the gift card value to their service. Gift cards can be applied to any service (standard, deep, or move-out cleaning) anywhere in our southwest suburb service area.",
+    q: "Does the gift card expire?",
+    a: "It's good for at least 5 years from the day you buy it.",
   },
   {
-    question: "Do gift cards expire?",
-    answer:
-      "DSM Cleaning Solutions gift cards do not expire. The recipient can redeem their gift card at any time with no expiration date or usage deadline. We want gift recipients to use their cleaning at the right moment for them, whether that's immediately or months from now.",
+    q: "How do they book?",
+    a: `They get an email with their gift card code. They book online, pick their day and enter the code at checkout. Or they can text us at ${PHONE} and we'll book it for them.`,
   },
   {
-    question: "Can I use a gift card for any service?",
-    answer:
-      "Yes, gift cards can be applied to any DSM Cleaning Solutions service: standard cleaning, deep cleaning, move-out cleaning, or any specialty service we offer. If the gift card value is less than the total service cost, the recipient simply pays the difference. If the gift card value exceeds the service cost, the balance remains on the card for future use.",
+    q: "Can it cover extras like inside the oven or fridge?",
+    a: "Yes. The card works on the whole booking, extras included. They just come out of the balance.",
+  },
+  {
+    q: "Can I gift a recurring plan?",
+    a: `Gift a clean. If they love it and start recurring cleaning, their first recurring clean is ${RECURRING_OFF} off, and their rate is locked for 12 months.`,
   },
 ];
 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: faqs.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: { "@type": "Answer", text: faq.answer },
-  })),
+  mainEntity: FAQS.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
 };
-
-const serviceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  serviceType: "House Cleaning Gift Card",
-  name: "House Cleaning Gift Cards from DSM Cleaning Solutions",
-  provider: {
-    "@type": "LocalBusiness",
-    "@id": "https://www.dsmcleaningsolutions.com/#business",
-    name: "DSM Cleaning Solutions",
-    telephone: "+18152462113",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "402 Tallman Ave",
-      addressLocality: "Romeoville",
-      addressRegion: "IL",
-      postalCode: "60446",
-      addressCountry: "US",
-    },
-  },
-  areaServed: ["Romeoville, IL", "Plainfield, IL", "Naperville, IL", "Bolingbrook, IL"],
-  description:
-    "House cleaning gift cards for Romeoville, Plainfield, Naperville, and the southwest Chicago suburbs. Available in $100, $150, $200, and custom amounts.",
-};
-
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dsmcleaningsolutions.com" },
-    { "@type": "ListItem", position: 2, name: "Gift Cards", item: "https://www.dsmcleaningsolutions.com/gift-cards" },
+    { "@type": "ListItem", position: 2, name: "Gift Cards", item: URL },
   ],
 };
 
-const giftRecipients = [
-  { icon: "🏠", title: "New Homeowners", desc: "Help them start fresh in their new home with a professional deep clean, the perfect housewarming gift." },
-  { icon: "👶", title: "New Parents", desc: "A clean home is one less thing to worry about. Give new moms and dads the gift of a spotless house." },
-  { icon: "👴", title: "Elderly Family", desc: "Help elderly parents or relatives keep their home clean and safe without the physical strain of doing it themselves." },
-  { icon: "💼", title: "Busy Professionals", desc: "For the person who has everything: give them their time back with regular professional cleaning." },
-  { icon: "🎓", title: "Recent Graduates", desc: "Moving into their first place? A cleaning gift card gives them a clean start." },
-  { icon: "💒", title: "Newlyweds", desc: "A practical and thoughtful wedding gift that helps them focus on what matters most." },
-];
-
-const occasions = [
-  { occasion: "Mother's Day", emoji: "🌷" },
-  { occasion: "Christmas & Holidays", emoji: "🎄" },
-  { occasion: "Birthday", emoji: "🎂" },
-  { occasion: "Housewarming", emoji: "🏠" },
-  { occasion: "Baby Shower", emoji: "👶" },
-  { occasion: "Wedding / Bridal Shower", emoji: "💒" },
-  { occasion: "Father's Day", emoji: "👨‍👧" },
-  { occasion: "Graduation", emoji: "🎓" },
-  { occasion: "Thank You Gift", emoji: "💝" },
-  { occasion: "Get Well Soon", emoji: "💐" },
-  { occasion: "Corporate Gift", emoji: "💼" },
-  { occasion: "Any Occasion", emoji: "🎁" },
-];
-
-// The most popular card. Its description is worked out from this value.
-const POPULAR_CARD_VALUE = 200;
-
-const cardValues = [
-  { amount: "$100", desc: "Great starter gift or contribution toward any service.", highlight: false },
-  { amount: "$150", desc: `Goes toward a standard cleaning. A 2-bedroom home is ${TWO_BED_STANDARD}.`, highlight: false },
-  { amount: `$${POPULAR_CARD_VALUE}`, desc: `Most popular gift value. Covers a standard cleaning for ${homesCoveredBy(POPULAR_CARD_VALUE)}.`, highlight: true },
-  { amount: "Custom", desc: "Any amount, perfect for specific services or larger homes.", highlight: false },
-];
-
 export default function GiftCardsPage() {
+  const reviews = ["Courtney Horne", "Michelle Gillespie", "Jan Forster"].map(reviewByName);
+
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* HERO */}
-      <section className="bg-gradient-to-br from-brand-green-dark via-brand-green to-brand-green-light text-white py-16 md:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-2 text-sm text-white/70 mb-4">
-              <Link href="/" className="hover:text-white">Home</Link>
-              <span>/</span>
-              <span className="text-white">Gift Cards</span>
-            </div>
-            <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-6">
-              House Cleaning Gift Cards in Romeoville &amp; Plainfield, IL
-            </h1>
-            <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              Give the gift of a spotless home. DSM Cleaning Solutions gift cards are available
-              in $100, $150, $200, and custom amounts, perfect for any occasion. Never expire.
-              Redeemable for any cleaning service across the southwest Chicago suburbs.
+      <section
+        className="px-4 pt-10 pb-12 md:pt-16 md:pb-16 text-white text-center"
+        style={{ background: "linear-gradient(135deg, #E8721C 0%, #c45a10 100%)" }}
+      >
+        <div className="max-w-3xl mx-auto">
+          <nav className="text-xs sm:text-sm mb-4 opacity-80 flex items-center justify-center gap-2">
+            <Link href="/" className="hover:underline">Home</Link>
+            <span>/</span>
+            <span>Gift Cards</span>
+          </nav>
+          <h1 className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-orange-100 mb-3">
+            House Cleaning Gift Cards
+          </h1>
+          <p className="text-4xl sm:text-5xl font-bold leading-[1.08] tracking-tight mb-4">
+            Give the Gift of a Clean Home.
+          </p>
+          <p className="text-base sm:text-lg text-white/90 max-w-xl mx-auto leading-relaxed mb-5">
+            For new parents, busy families, or the parent who has everything. They pick the day, and our family team does the cleaning.
+          </p>
+          <Link
+            href="/reviews"
+            className="inline-flex items-center gap-2 rounded-full bg-black/15 px-4 py-1.5 text-sm font-semibold mb-6 hover:bg-black/25 transition"
+          >
+            <span className="text-yellow-300">★★★★★</span>
+            {REVIEW_RATING} · {REVIEW_COUNT} Google Reviews
+          </Link>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <a
+              href="#sizes"
+              className="inline-block font-extrabold text-base py-4 px-9 rounded-full bg-white shadow-xl active:scale-95 transition"
+              style={{ color: "#C2410C" }}
+            >
+              Pick a Size
+            </a>
+            <a
+              href={`#${FORM_ANCHOR}`}
+              className="inline-block font-bold text-base py-4 px-9 rounded-full border-2 border-white/80 text-white hover:bg-white/10 transition"
+            >
+              Buy a Gift Card
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* PICK A SIZE, PICK A CLEAN */}
+      <section id="sizes" className="py-12 md:py-16 px-4 bg-white scroll-mt-16">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="section-heading text-3xl md:text-4xl text-center mb-2">Pick a Size, Pick a Clean</h2>
+          <p className="text-center text-gray-500 mb-8">
+            Each amount covers a clean for a home of that size. Type it into the gift card form below.
+          </p>
+
+          <div className="overflow-hidden rounded-2xl border border-gray-200">
+            <table className="w-full text-left">
+              <thead className="bg-gray-50 text-xs uppercase tracking-wide text-gray-500">
+                <tr>
+                  <th scope="col" className="px-3 sm:px-5 py-3 font-bold">Home size</th>
+                  <th scope="col" className="px-3 sm:px-5 py-3 font-bold text-right">Standard clean</th>
+                  <th scope="col" className="px-3 sm:px-5 py-3 font-bold text-right">Deep clean</th>
+                </tr>
+              </thead>
+              <tbody>
+                {GIFT_SIZES.map((size) => (
+                  <tr key={size.id} className={`border-t border-gray-100 ${size.id === DEFAULT_GIFT_SIZE ? "bg-orange-50/60" : ""}`}>
+                    <th scope="row" className="px-3 sm:px-5 py-4 align-top font-normal">
+                      <span className="flex flex-col sm:block items-start font-bold text-gray-900">
+                        {size.label}
+                        {size.id === DEFAULT_GIFT_SIZE && (
+                          <span className="sm:ml-2 mt-1 sm:mt-0 inline-block whitespace-nowrap align-middle rounded-full bg-orange-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-orange-700">
+                            Safe pick
+                          </span>
+                        )}
+                      </span>
+                      <span className="block text-xs sm:text-sm text-gray-500 leading-snug mt-0.5">{size.counts}</span>
+                    </th>
+                    <td className="px-3 sm:px-5 py-4 align-top text-right text-lg font-bold text-gray-900 whitespace-nowrap">
+                      {formatPrice(giftAmount(size, "standard"))}
+                    </td>
+                    <td className="px-3 sm:px-5 py-4 align-top text-right text-lg font-bold whitespace-nowrap" style={{ color: ORANGE }}>
+                      {formatPrice(giftAmount(size, "deep"))}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="mt-6 rounded-2xl bg-gray-50 border border-gray-100 p-5 text-center">
+            <p className="font-bold text-gray-900">Not sure of the size? Pick {DEFAULT_SIZE.label}.</p>
+            <p className="text-sm text-gray-600 mt-1 leading-relaxed">
+              It's the middle size and the safest guess. If their home turns out bigger, they pay the difference when they book. If it&apos;s
+              smaller, the rest stays on the card for next time.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a href="tel:+18152462113" className="btn-white btn-lg">📞 Call to Purchase</a>
-              <Link href="/contact" className="btn-outline-white btn-lg">Request via Form</Link>
+          </div>
+
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+            <div className="rounded-2xl border border-gray-100 p-5">
+              <p className="font-bold text-gray-900 mb-1">Standard clean</p>
+              <p className="text-gray-600 leading-relaxed">
+                Kitchen, bathrooms, floors and dusting in every room. Good for a home that&apos;s kept up and just needs a break.{" "}
+                <Link href="/cleaning-checklist" className="font-semibold hover:underline" style={{ color: "#C2410C" }}>What&apos;s included</Link>
+              </p>
+            </div>
+            <div className="rounded-2xl border border-orange-200 p-5">
+              <p className="font-bold text-gray-900 mb-1">Deep clean</p>
+              <p className="text-gray-600 leading-relaxed">
+                Everything in a standard clean, plus grout, baseboards, door frames, the stovetop and under the furniture. The best
+                gift for new parents or a home that&apos;s fallen behind.{" "}
+                <Link href="/deep-cleaning" className="font-semibold hover:underline" style={{ color: "#C2410C" }}>See deep cleaning</Link>
+              </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* TRUST BAR */}
-      <section className="bg-white border-b border-gray-100 py-6 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
-            {["🎁 Never Expire", "✅ Any Service", "⭐ 5-Star Rated", "🛡️ Insured & Bonded", "👨‍👩‍👧 Family Owned"].map(
-              (item) => <span key={item} className="whitespace-nowrap">{item}</span>
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* WHY CLEANING GIFT CARDS */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading mb-6">Why Cleaning Gift Cards Make Perfect Gifts</h2>
-          <p className="text-gray-600 mb-4 leading-relaxed">
-            A house cleaning gift card is one of the most practical and genuinely appreciated
-            gifts you can give. Unlike physical gifts that sit unused or get returned, a cleaning
-            gift card gives someone something they actually need: time back, a clean home, and
-            one less thing on their to-do list.
-          </p>
-          <p className="text-gray-600 mb-4 leading-relaxed">
-            For most recipients, professional house cleaning is something they want but don&apos;t
-            treat themselves to. A gift card from DSM Cleaning Solutions removes that barrier and
-            gives them the experience of a professionally cleaned home in Romeoville, Plainfield,
-            Naperville, or anywhere in our southwest suburb service area.
-          </p>
-          <p className="text-gray-600 leading-relaxed">
-            And because our gift cards never expire, the recipient can use it whenever the time
-            is right for them, whether that&apos;s this week or six months from now.
+          <p className="text-xs text-gray-400 mt-4 text-center">
+            Amounts are priced on the largest home each size covers ({GIFT_SIZES.map((s) => `${s.label}: ${s.coversLine}`).join("; ")}). Gift cards start at {formatPrice(GIFT_CARD_MIN)}.
           </p>
         </div>
       </section>
 
-      {/* PURCHASE CTA */}
-      <section className="py-12 bg-brand-green-50 border-y border-brand-green-100">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-3">How to Purchase a Gift Card</h2>
-          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Gift cards are purchased by calling us or submitting a request through our contact form.
-            We&apos;ll confirm the amount, process your gift card, and provide you with a gift card
-            number or certificate for the recipient. Same-day processing available when you call.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+18152462113" className="btn-primary btn-lg">📞 Call (815) 246-2113 to Order</a>
-            <Link href="/contact" className="btn-secondary btn-lg">Request via Contact Form</Link>
-          </div>
-        </div>
-      </section>
-
-      {/* GIFT CARD VALUES */}
-      <section className="py-16 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="section-heading">Gift Card Values Available</h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {cardValues.map((card) => (
-              <div key={card.amount} className={`rounded-2xl border-2 p-6 text-center ${card.highlight ? "border-brand-green bg-brand-green-50 shadow-lg" : "border-gray-200 bg-white"}`}>
-                {card.highlight && <div className="text-xs font-bold text-brand-green uppercase tracking-widest mb-2">Most Popular</div>}
-                <div className={`text-4xl font-bold mb-3 ${card.highlight ? "text-brand-green" : "text-gray-900"}`}>{card.amount}</div>
-                <p className="text-gray-600 text-sm leading-relaxed">{card.desc}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-center text-sm text-gray-500 mt-4">
-            Custom amounts available for any value.{" "}
-            <a href="tel:+18152462113" className="text-brand-green font-semibold hover:underline">Call to order →</a>
-          </p>
-        </div>
-      </section>
-
-      {/* WHO GIFT CARDS ARE FOR */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="section-heading">Who Cleaning Gift Cards Are For</h2>
-            <p className="section-subheading mx-auto">The right gift for almost anyone on your list.</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {giftRecipients.map((r) => (
-              <div key={r.title} className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
-                <span className="text-4xl block mb-3">{r.icon}</span>
-                <h3 className="font-bold text-lg text-gray-900 mb-2">{r.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{r.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* OCCASIONS */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="section-heading">Perfect for Every Occasion</h2>
-          </div>
-          <div className="flex flex-wrap gap-3 justify-center">
-            {occasions.map((o) => (
-              <span key={o.occasion} className="bg-brand-green-50 border border-brand-green-100 text-gray-800 font-medium px-4 py-2 rounded-full text-sm">
-                {o.emoji} {o.occasion}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* HOW TO REDEEM */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading mb-8">How to Redeem a Gift Card</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {/* HOW IT WORKS */}
+      <section className="py-12 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="section-heading text-2xl md:text-3xl text-center mb-8">How It Works</h2>
+          <ol className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
-              { step: "01", title: "Receive Your Gift Card", desc: "The gift giver provides you with a gift card number or certificate from DSM Cleaning Solutions." },
-              { step: "02", title: "Book Your Cleaning", desc: "Call (815) 246-2113 or use our contact form to schedule your cleaning. Mention your gift card during booking." },
-              { step: "03", title: "Enjoy Your Clean Home", desc: "Your gift card value is applied to your service total. Any remaining balance stays on the card for future use." },
-            ].map((s) => (
-              <div key={s.step} className="text-center bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
-                <div className="w-12 h-12 rounded-full bg-brand-green text-white text-xl font-bold flex items-center justify-center mx-auto mb-4">
-                  {s.step}
-                </div>
-                <h3 className="font-bold text-gray-900 mb-2">{s.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{s.desc}</p>
-              </div>
+              { n: "1", t: "Pick the amount", d: "Use the table above. Not sure? Pick Medium." },
+              { n: "2", t: "Fill in the form", d: "Type the amount, their name and email, and a note if you want. Pay online." },
+              { n: "3", t: "They book their day", d: "They get an email with the code, pick a day online, and come home to a clean house." },
+            ].map((step) => (
+              <li key={step.n} className="bg-white rounded-2xl border border-gray-100 p-5">
+                <span className="flex items-center justify-center w-8 h-8 rounded-full text-white font-bold mb-3" style={{ backgroundColor: ORANGE }}>
+                  {step.n}
+                </span>
+                <p className="font-bold text-gray-900">{step.t}</p>
+                <p className="text-sm text-gray-600 mt-1 leading-relaxed">{step.d}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* THE GIFT CARD FORM. Every "Buy a Gift Card" button lands on the line
+          right above it, so the form's first field is on a phone screen. */}
+      <section className="py-12 px-4 bg-white">
+        <div className="max-w-2xl mx-auto">
+          <div id={FORM_ANCHOR} className="scroll-mt-20 text-center mb-4">
+            <h2 className="section-heading text-2xl md:text-3xl mb-2">Buy a Gift Card</h2>
+            <p className="text-sm text-gray-600">
+              Type the amount from the table: {formatPrice(giftAmount(DEFAULT_SIZE, "standard"))} for a standard clean or{" "}
+              {formatPrice(giftAmount(DEFAULT_SIZE, "deep"))} for a deep clean in a {DEFAULT_SIZE.label.toLowerCase()} home.
+            </p>
+            <p className="text-sm text-gray-600 mt-1">
+              Questions? Text us at{" "}
+              <a href={SMS_HREF} className="font-bold underline underline-offset-2" style={{ color: "#C2410C" }}>{PHONE}</a>
+            </p>
+          </div>
+          <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100 bg-white">
+            <div
+              dangerouslySetInnerHTML={{
+                __html: `<iframe src="https://dsmcleaningsolutions.bookingkoala.com/gift-cards/send?embed=true" style="border:none;height:1000px;" width="100%" scrolling="no"></iframe>`,
+              }}
+            />
+          </div>
+          <Script src="https://dsmcleaningsolutions.bookingkoala.com/resources/embed.js" strategy="afterInteractive" />
+          <div className="flex flex-wrap justify-center gap-4 mt-6 text-sm text-gray-500 font-medium">
+            <span>🛡️ Insured &amp; Bonded</span>
+            <span>✅ 48-Hour Guarantee</span>
+            <span>👨‍👩‍👧 Family Owned</span>
+          </div>
+        </div>
+      </section>
+
+      {/* REVIEWS */}
+      <section className="py-12 md:py-16 px-4 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="section-heading text-2xl md:text-3xl text-center mb-8">What They&apos;ll Come Home To</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+            {reviews.map((r) => (
+              <ReviewCard key={r.name} name={reviewAttributionWithCity(r)} text={r.text} />
             ))}
           </div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="section-heading">Gift Card FAQs</h2>
-          </div>
-          <div className="space-y-4">
-            {faqs.map((faq, i) => (
-              <details key={i} className="bg-gray-50 border border-gray-200 rounded-xl group">
-                <summary className="flex items-center justify-between p-5 cursor-pointer font-semibold text-gray-900 hover:text-brand-green">
-                  <h3 className="text-left pr-4">{faq.question}</h3>
-                  <svg className="w-5 h-5 text-brand-green flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
+      <section className="py-12 px-4 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 text-center mb-8">Gift Card Questions</h2>
+          <div className="space-y-3">
+            {FAQS.map((f) => (
+              <details key={f.q} className="border border-gray-200 rounded-lg">
+                <summary className="px-5 py-4 font-semibold text-gray-800 cursor-pointer hover:bg-gray-50 list-none flex justify-between items-center">
+                  {f.q}
+                  <span className="text-gray-400 ml-4">+</span>
                 </summary>
-                <div className="px-5 pb-5"><p className="text-gray-600 leading-relaxed">{faq.answer}</p></div>
+                <div className="px-5 pb-4 text-gray-600 text-sm leading-relaxed">{f.a}</div>
               </details>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* RELATED */}
-      <section className="py-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Our Cleaning Services</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Link href="/recurring-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Recurring Cleaning</h3>
-              <p className="text-sm text-gray-600">Starting at {STANDARD_FROM}, an ideal recurring gift.</p>
-            </Link>
-            <Link href="/deep-cleaning" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Deep Cleaning</h3>
-              <p className="text-sm text-gray-600">Starting at {DEEP_FROM}, the ultimate home reset gift.</p>
-            </Link>
-            <Link href="/pricing" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Pricing</h3>
-              <p className="text-sm text-gray-600">Full pricing guide to help you choose the right gift card value.</p>
-            </Link>
-            <Link href="/contact" className="bg-white rounded-xl p-5 border border-gray-200 hover:border-brand-green hover:shadow-md transition-all">
-              <h3 className="font-bold text-gray-900 mb-1">Contact Us</h3>
-              <p className="text-sm text-gray-600">Questions about gift cards? We&apos;re happy to help.</p>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section id="contact" className="py-16 bg-gradient-to-br from-orange-500 to-orange-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div className="text-white">
-              <h2 className="text-4xl font-bold mb-4">Order a Cleaning Gift Card Today</h2>
-              <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                Call us to purchase your gift card. Same-day processing available. Gift cards
-                never expire and can be used for any service anywhere in our southwest suburb
-                service area.
-              </p>
-              <a href="tel:+18152462113" className="inline-flex items-center gap-3 bg-white text-brand-green font-bold text-2xl px-6 py-4 rounded-xl hover:bg-orange-50 transition-colors mb-4">
-                📞 (815) 246-2113
-              </a>
-              <p className="text-white/80 text-sm mb-6">Call to order, same-day processing available</p>
-              <p className="text-white/80">🎁 Never expire · ✅ Any service · ⭐ 5-star rated · 🛡️ Insured &amp; bonded</p>
-            </div>
-            <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
-              <LeadForm />
-            </div>
+          <div className="text-center mt-8">
+            <a
+              href={`#${FORM_ANCHOR}`}
+              className="inline-block font-extrabold text-base text-white py-4 px-9 rounded-full shadow-xl active:scale-95 transition"
+              style={{ backgroundColor: ORANGE }}
+            >
+              Buy a Gift Card
+            </a>
           </div>
         </div>
       </section>

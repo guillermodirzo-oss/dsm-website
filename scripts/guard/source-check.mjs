@@ -2,14 +2,14 @@
  * Fast source checks. Runs before every build (npm "prebuild"), so Vercel
  * refuses to deploy if one of the locked pieces was changed by mistake:
  *  - both HubSpot form GUIDs
- *  - the BookingKoala embed on /book
+ *  - the BookingKoala embed on /book and the gift card embed on /gift-cards
  *  - the business address and map pin in the LocalBusiness schema
  *
  * No network, no build needed. Takes well under a second.
  */
 import { readFileSync } from "node:fs";
 import path from "node:path";
-import { ROOT, BUSINESS, FORMS, BOOK_EMBED } from "./rules.mjs";
+import { ROOT, BUSINESS, FORMS, BOOK_EMBED, GIFT_EMBED } from "./rules.mjs";
 
 const errors = [];
 const read = (f) => readFileSync(path.join(ROOT, f), "utf8");
@@ -32,6 +32,22 @@ for (const form of FORMS) {
     errors.push(
       `${BOOK_EMBED.file}: the BookingKoala embed was changed. It must stay exactly:\n    ${BOOK_EMBED.html}\n  Found:\n    ${squash(m[1])}`
     );
+  }
+}
+
+// 2b. BookingKoala gift card embed on /gift-cards
+{
+  const src = read(GIFT_EMBED.file);
+  const m = src.match(/__html:\s*`(<iframe[\s\S]*?<\/iframe>)`/);
+  if (!m) {
+    errors.push(`${GIFT_EMBED.file}: the BookingKoala gift card embed is missing.`);
+  } else if (squash(m[1]) !== squash(GIFT_EMBED.html)) {
+    errors.push(
+      `${GIFT_EMBED.file}: the BookingKoala gift card embed was changed. It must stay exactly:\n    ${GIFT_EMBED.html}\n  Found:\n    ${squash(m[1])}`
+    );
+  }
+  if (!src.includes(`"${GIFT_EMBED.script}"`)) {
+    errors.push(`${GIFT_EMBED.file}: the BookingKoala embed.js script (${GIFT_EMBED.script}) is missing.`);
   }
 }
 

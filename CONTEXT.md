@@ -79,15 +79,17 @@ Recurring "from" prices are the smallest standard home with the discount applied
 
 For a home size with no listed tier, `priceForHome()` in `lib/pricing.ts` works the price out with BookingKoala's rate formula: service base + bedroom add-on + bathroom add-on + square footage tier. The build fails if a listed tier and the formula ever disagree. The pricing cards on the recurring city pages use it through `recurringVisitPrice()`, which rounds up to the whole dollar.
 
-Add-on prices live in `lib/addOns.ts` and nowhere else. /pricing lists every add-on from it. The FALL75 "free oven cleaning" value (`DEEP_OFFER.bonusValue` in `lib/offers.ts`) is the inside oven add-on price read from that file.
+Add-on prices live in `lib/addOns.ts` and nowhere else. /pricing lists every add-on from it. The holiday offer's "free inside fridge and oven" value (`DEEP_OFFER.bonusValue` in `lib/offers.ts`) is the inside fridge plus inside oven add-on prices read from that file.
+
+Gift card amounts on /gift-cards come from `lib/giftCards.ts`: BookingKoala's rate formula for the top of each home size (Small, Medium, Large), rounded up to the next $5, never under BookingKoala's $150 gift card minimum (the build fails if one would be). The gift card form embed on /gift-cards is locked like the /book embed (`GIFT_EMBED` in `scripts/guard/rules.mjs`).
 
 ## Current Offers
 | Code | Service | Deal | Runs through |
 |---|---|---|---|
-| FALL75 | Deep cleaning | $75 off plus free oven cleaning, open to anyone (not new clients only: write "your deep clean", never "your first") | November 30, 2026 |
+| (no code) Holiday Reset + January Lock-In | Deep cleaning | Regular price, with inside fridge and inside oven free. Pick a January start for recurring cleaning (booking notes or text) and the first recurring clean is 25% off, plus the 12-month rate lock. "Only 10 holiday spots" is fixed text, never a counter: the owner ends it early if it fills. Replaced FALL75 (CEO brief, Nov 10 2026). Open to anyone. | December 18, 2026 |
 | MOVE75 | Move-out cleaning | $75 off | December 31, 2026 (extended Oct 2026: winter is slow for move-outs; new move-out offer planned for spring) |
 
-All promotions live in `lib/offers.ts`. Never type a promo code or promo price into a page directly.
+All promotions live in `lib/offers.ts`. Never type a promo code or promo price into a page directly. The deep cleaning offer's wording lives in `components/DeepOfferLine.tsx` (pill, text and note versions); use it instead of writing new offer sentences. An offer with no code shows no code anywhere. /book shows the deep offer only as one plain line above the form, never as a button, and never shows a code or a dollar amount.
 
 To renew or end an offer, change its last day in `lib/offers.ts`. To add one, add an entry to OFFER_LIST there (one offer per service). Each offer carries its code, service, description, start and end dates, and its discounted "from" price worked out from `lib/pricing.ts`. Every offer line on a page is wrapped in `<Offer>` (components/Offer.tsx) with a fallback that reads naturally once the offer is over, so it comes down on its own at 11:59:59 PM Central on the last day, with no deploy. The homepage hero lists every running offer through `components/OfferBanner.tsx`. Any page that shows an offer must export `revalidate = 3600`. Offers never go in page titles, meta descriptions, Open Graph or JSON-LD, because those get cached long after an offer ends.
 
@@ -120,7 +122,7 @@ Rules that follow from the lists:
 - A deep clean never dusts cabinet tops or vacuums mattresses, and stairs are not a separate deep cleaning extra. Never list any of them as something a deep clean adds.
 - For a deep clean, "inside appliances" means inside the microwave only. Write "inside the microwave". Inside the oven and inside the refrigerator are add-ons. A standard clean includes the inside of the microwave too, so it is never what sets a deep clean apart.
 - Deep cleaning does NOT include cleaning inside the oven. Inside oven cleaning is an add-on. Never write that a deep clean "gets inside the oven" or list the oven interior on a deep cleaning checklist. The oven exterior is fine.
-- During FALL75 (`lib/offers.ts`), inside oven cleaning is added free with a deep clean. That claim must only appear while FALL75 is active: put it inside `<Offer service="deep">`, and give it a fallback that does not mention the oven (or no fallback at all).
+- During the holiday offer (`lib/offers.ts`, through Dec 18 2026), inside fridge and inside oven cleaning are added free with a deep clean. That claim must only appear while the offer is active: put it inside `<Offer service="deep">`, and give it a fallback that does not mention the fridge or oven (or no fallback at all). Outside the offer, a deep clean still includes the refrigerator exterior only.
 - Move-in and move-out cleaning ALWAYS includes inside the oven (and inside the refrigerator). It is never an add-on there.
 
 ## Customers
@@ -156,7 +158,7 @@ Move-out customers are mostly home buyers and sellers, not renters. Write move-o
 | `lib/workPhotos.ts` | Alt text for work photos and for the social share photo. No town, no service |
 | `lib/standardChecklist.ts` | The owner-confirmed standard checklist (full and short versions). Every page that lists what a standard or recurring clean includes renders it |
 | `lib/deepChecklist.ts` | The owner-confirmed deep checklist: the seven additions and the room-by-room list every deep cleaning page renders |
-| `lib/addOns.ts` | Every add-on: name, price (and recurring price for eco products) and the services it applies to, from the BookingKoala booking form. /pricing, /eco-friendly-cleaning, the terms page and the FALL75 oven value read it |
+| `lib/addOns.ts` | Every add-on: name, price (and recurring price for eco products) and the services it applies to, from the BookingKoala booking form. /pricing, /eco-friendly-cleaning, the terms page and the holiday offer fridge and oven value read it |
 | `components/Offer.tsx` | Wrapper that expires offer copy automatically |
 | `components/OfferBanner.tsx` | One line per running offer, for the homepage hero. Disappears when no offer is running |
 | `components/HeroRating.tsx` | The star rating line for orange heroes. White on the darkest brand orange, which meets WCAG AA. Use it instead of coloring the text by hand |
@@ -177,7 +179,7 @@ Move-out customers are mostly home buyers and sellers, not renters. Write move-o
 
 ## Service Videos
 - Each service has its own short video, set in `lib/serviceVideos.tsx` and shown through `components/ServiceVideoSection.tsx` right after the trust bar: recurring on /recurring-cleaning and the 4 recurring city pages; deep cleaning on /deep-cleaning, the 16 deep cleaning city pages and /deep-cleaning-cost-naperville-il; move-out on /move-out-cleaning and the 16 move-out city pages. GA4 `video` values: `recurring`, `deep_cleaning`, `move_out`.
-- The ad landing page /deep-clean-offer is a booking page (owner, Oct 19 2026): the same BookingKoala embed as /book sits right under the hero at `#book`, with no quote form. The deep cleaning video comes right after the booking form (never above it: on phones the form must show without scrolling), and its button uses the `cta` prop to jump back to `#book`. Facebook's page button and the FALL75 posts link here.
+- The ad landing page /deep-clean-offer is a booking page (owner, Oct 19 2026): the same BookingKoala embed as /book sits right under the hero at `#book`, with no quote form. The deep cleaning video comes right after the booking form (never above it: on phones the form must show without scrolling), and its button uses the `cta` prop to jump back to `#book`. Facebook's page button and the holiday offer posts link here.
 - Source for each video is in `video/<name>-vsl/` (script, photos with GPS removed, voiceover, timings), built with `video/engine/` (render.py, sync.py, finish.sh). The deep cleaning video never shows an oven interior (inside oven is an add-on for a deep clean). No video mentions a promo code.
 - Photo library: the owner's sorted job photos live on his PC in Desktop/Website Data/Work Picture and Video (folders by service, "best-" prefix for the strongest, `_photo-index.csv`). Every original has GPS location in it: strip EXIF before any photo goes on the site.
 

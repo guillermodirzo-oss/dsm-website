@@ -43,21 +43,45 @@ import { addOnPrice } from "./addOns";
 
 /** What gets written by hand for each offer. Everything else is computed. */
 interface OfferTerms {
-  /** The code a customer enters at checkout. */
-  code: string;
+  /** Unique id, used as a React key. The code itself when there is one. */
+  id: string;
+  /**
+   * The code a customer enters at checkout. Leave it out for an offer that
+   * needs no code (a bonus we add ourselves): pages then show no code at all.
+   */
+  code?: string;
+  /** The offer's own name, when it has one: "Holiday Reset + January Lock-In". */
+  name?: string;
+  /**
+   * The short homepage chip, for an offer with no code. Offers with a code
+   * get "Move-outs: $75 off · MOVE75" built for them.
+   */
+  chipText?: string;
   /** The service it applies to. */
   service: ServiceKey;
   /** How the service reads mid-sentence: "deep cleaning". */
   serviceName: string;
   /** The service's own page, where a banner line for this offer links. */
   servicePath: string;
-  /** Dollars off. */
+  /** Dollars off. 0 for a bonus-only offer, which shows regular prices. */
   discount: number;
   /** A free extra that comes with it, and what that extra normally costs. */
   bonus?: string;
   bonusValue?: number;
   /** "fall", for copy like "this fall". */
   season?: string;
+  /**
+   * Share off the first recurring clean for a customer who also picks a
+   * recurring start date: 0.25 for 25%. Applied by the owner, no code.
+   */
+  recurringFirstCleanOff?: number;
+  /** "January", the month that recurring start has to fall in. */
+  recurringStartMonth?: string;
+  /**
+   * Fixed number of spots, shown as plain text. Never a live counter: the
+   * owner ends the offer early (endDateISO = yesterday) if it fills.
+   */
+  spots?: number;
   /** First day it runs, Central Time. */
   startDateISO: string;
   /** Last day it runs, Central Time. The one line to change to renew. */
@@ -66,8 +90,13 @@ interface OfferTerms {
 
 /** What every offer ends up with. */
 export interface Offer extends OfferTerms {
-  /** "$75 off plus free oven cleaning (a $40 value)" */
+  /**
+   * "$75 off plus free oven cleaning (a $40 value)", or for a bonus-only
+   * offer "free inside fridge and oven cleaning (a $90 value)".
+   */
   description: string;
+  /** "25%" when there is a recurring first-clean discount, else undefined. */
+  recurringOffLabel?: string;
   /** "November 30", for "through November 30". */
   endDate: string;
   /** 12:00:00 AM Central on the first day, as a UTC instant. */
@@ -91,17 +120,24 @@ function defineOffer<T extends OfferTerms>(terms: T): T & Offer {
   const tiers = TIERS[terms.service];
   if (!tiers) throw new Error(`lib/offers.ts: no price tiers for an offer on "${terms.service}"`);
   if (terms.startDateISO > terms.endDateISO) {
-    throw new Error(`lib/offers.ts: ${terms.code} ends (${terms.endDateISO}) before it starts (${terms.startDateISO})`);
+    throw new Error(`lib/offers.ts: ${terms.id} ends (${terms.endDateISO}) before it starts (${terms.startDateISO})`);
   }
   const regularFromPrice = startingPrice(tiers);
   const fromPrice = regularFromPrice - terms.discount;
+  if (terms.discount === 0 && !(terms.bonus && terms.bonusValue)) {
+    throw new Error(`lib/offers.ts: ${terms.id} has no discount and no bonus, so it offers nothing`);
+  }
+  const bonusPart = terms.bonus && terms.bonusValue ? `${terms.bonus} (a ${formatPrice(terms.bonusValue)} value)` : "";
   const description =
-    terms.bonus && terms.bonusValue
-      ? `${formatPrice(terms.discount)} off plus ${terms.bonus} (a ${formatPrice(terms.bonusValue)} value)`
-      : `${formatPrice(terms.discount)} off`;
+    terms.discount === 0
+      ? `free ${bonusPart}`
+      : bonusPart
+        ? `${formatPrice(terms.discount)} off plus ${bonusPart}`
+        : `${formatPrice(terms.discount)} off`;
   return {
     ...terms,
     description,
+    recurringOffLabel: terms.recurringFirstCleanOff ? `${Math.round(terms.recurringFirstCleanOff * 100)}%` : undefined,
     endDate: monthDayLabel(terms.endDateISO),
     startsAt: startOfDayIn(terms.startDateISO).toISOString(),
     expiresAt: endOfDayIn(terms.endDateISO).toISOString(),
@@ -111,23 +147,38 @@ function defineOffer<T extends OfferTerms>(terms: T): T & Offer {
   };
 }
 
-/** FALL75: deep cleaning. Start date is the day the code went live on the site. */
+/**
+ * HOLIDAY RESET + JANUARY LOCK-IN: deep cleaning (CEO brief, Nov 10 2026).
+ * Replaced FALL75. No code and no dollars off: the deep clean is at the
+ * regular price with inside fridge and inside oven added free, and a
+ * customer who picks a January start for recurring cleaning gets 25% off
+ * their first recurring clean (the owner applies it, no code). 10 spots, as
+ * fixed text. Ends Dec 18 so the last cleans land before Christmas.
+ * Inside fridge is NOT part of a normal deep clean (exterior only): it may
+ * only be promised inside <Offer service="deep">.
+ */
 export const DEEP_OFFER = defineOffer({
-  code: "FALL75",
+  id: "HOLIDAY-RESET",
+  name: "Holiday Reset + January Lock-In",
   service: "deep",
   serviceName: "deep cleaning",
   servicePath: "/deep-cleaning",
-  discount: 75,
-  bonus: "free oven cleaning",
-  // The inside oven add-on price, from lib/addOns.ts.
-  bonusValue: addOnPrice("insideOven"),
-  season: "fall",
-  startDateISO: "2026-09-22",
-  endDateISO: "2026-11-30",
+  discount: 0,
+  bonus: "inside fridge and oven cleaning",
+  // The inside fridge and inside oven add-on prices, from lib/addOns.ts.
+  bonusValue: addOnPrice("insideFridge") + addOnPrice("insideOven"),
+  season: "holiday",
+  recurringFirstCleanOff: 0.25,
+  recurringStartMonth: "January",
+  spots: 10,
+  chipText: "Holiday deep clean: fridge + oven free · only 10 spots",
+  startDateISO: "2026-11-12",
+  endDateISO: "2026-12-18",
 });
 
 /** MOVE75: move-in and move-out cleaning. Start date is the day the code went live on the site. */
 export const MOVEOUT_OFFER = defineOffer({
+  id: "MOVE75",
   code: "MOVE75",
   service: "moveout",
   serviceName: "move-in and move-out cleaning",

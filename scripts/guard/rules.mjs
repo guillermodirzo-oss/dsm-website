@@ -35,6 +35,17 @@ export const BOOK_EMBED = {
   html: `<iframe src="https://dsmcleaningsolutions.bookingkoala.com/booknow?embed=true" style="border:none;height:1800px;display:block" width="100%" scrolling="auto" loading="lazy" onload="var s=document.getElementById('bk-skeleton');if(s)s.style.display='none';" ></iframe>`,
 };
 
+/**
+ * The BookingKoala gift card form on /gift-cards, exactly as BookingKoala
+ * gave it (CEO brief, Nov 10 2026). Its embed.js loads through next/script on
+ * the same page. Same rule as /book: never modify it.
+ */
+export const GIFT_EMBED = {
+  file: "app/gift-cards/page.tsx",
+  html: `<iframe src="https://dsmcleaningsolutions.bookingkoala.com/gift-cards/send?embed=true" style="border:none;height:1000px;" width="100%" scrolling="no"></iframe>`,
+  script: "https://dsmcleaningsolutions.bookingkoala.com/resources/embed.js",
+};
+
 /** Pages that must stay out of Google (and out of the sitemap). */
 export const NOINDEX_PAGES = ["/thank-you", "/quote-thank-you", "/deep-clean-offer", "/photo-library", "/pixel-test"];
 

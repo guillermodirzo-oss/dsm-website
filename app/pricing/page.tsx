@@ -16,12 +16,12 @@ import {
   type PriceTier,
   type ServiceKey,
 } from "@/lib/pricing";
-import { offerPrice } from "@/lib/offers";
+import DeepOfferLine from "@/components/DeepOfferLine";
 import { DEEP_OFFER } from "@/lib/offers";
 import { OG_IMAGE_ALT } from "@/lib/workPhotos";
 import { ADD_ONS, addOnServicesLabel } from "@/lib/addOns";
 
-// Regenerate at most hourly so FALL75 drops out of the HTML on its own after
+// Regenerate at most hourly so the holiday offer drops out of the HTML on its own after
 // it ends. <Offer> also hides it in the browser at the deadline. See
 // components/Offer.tsx.
 export const revalidate = 3600;
@@ -226,6 +226,13 @@ export default function PricingPage() {
                 📞 (815) 246-2113
               </a>
             </div>
+            <p className="mt-5 text-sm text-white/90">
+              Buying for someone else?{" "}
+              <Link href="/gift-cards" className="font-bold underline underline-offset-2 text-white">
+                Gift a clean with a gift card
+              </Link>
+              . Priced by home size, so you don&apos;t need to know theirs.
+            </p>
           </div>
         </div>
       </section>
@@ -287,14 +294,7 @@ export default function PricingPage() {
                   {/* Offer context sits once per card, not on every price row.
                       Deep cleaning only: the move-out offer never appears on this page. */}
                   {svc.service === "deep" && (
-                    <Offer service="deep">
-                      <p
-                        className="mt-3 text-xs font-bold"
-                        style={{ color: "#E8622A" }}
-                      >
-                        ${DEEP_OFFER.discount} off every deep clean with code {DEEP_OFFER.code}, through {DEEP_OFFER.endDate}.
-                      </p>
-                    </Offer>
+                    <DeepOfferLine variant="text" className="mt-3 text-xs" />
                   )}
                 </div>
 
@@ -335,20 +335,9 @@ export default function PricingPage() {
                             {/* Deep cleaning only. Move-out has its own offer,
                                 but it must never render here, only on
                                 /move-out-cleaning and its city pages. */}
-                            {svc.service === "deep" ? (
-                              <Offer service="deep" fallback={regular}>
-                                <s className="text-sm font-medium text-gray-400">
-                                  <span className="sr-only">Regular price </span>
-                                  {formatPrice(tier.price)}
-                                </s>
-                                <span style={{ color: "#E8622A" }}>
-                                  <span className="sr-only">Sale price </span>
-                                  {formatPrice(offerPrice(tier.price, "deep"))}
-                                </span>
-                              </Offer>
-                            ) : (
-                              regular
-                            )}
+                            {/* The holiday offer adds free extras, not dollars
+                                off, so every row shows the regular price. */}
+                            {regular}
                           </span>
                         </div>
                       );
@@ -470,10 +459,10 @@ export default function PricingPage() {
                         {formatPrice(a.recurringPrice)} per visit on recurring plans (weekly, every two weeks or monthly).
                       </p>
                     )}
-                    {a.id === "insideOven" && (
+                    {(a.id === "insideOven" || a.id === "insideFridge") && (
                       <Offer service="deep">
                         <p className="text-xs font-bold mt-0.5" style={{ color: "#E8622A" }}>
-                          Free on deep cleans with code {DEEP_OFFER.code} through {DEEP_OFFER.endDate}.
+                          Free on deep cleans booked by {DEEP_OFFER.endDate} (Holiday Reset).
                         </p>
                       </Offer>
                     )}

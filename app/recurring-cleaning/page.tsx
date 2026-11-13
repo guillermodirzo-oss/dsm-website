@@ -4,7 +4,6 @@ import Image from "next/image";
 import { REAL_REVIEWS, reviewAttribution } from "@/lib/realReviews";
 import LeadForm from "@/components/LeadForm";
 import { StickyMobileBar } from "@/components/HomepageScrollWidgets";
-import Offer from "@/components/Offer";
 import {
   STANDARD_CLEANING_TIERS,
   FREQUENCY_DISCOUNTS,
@@ -12,13 +11,13 @@ import {
   formatPrice,
 } from "@/lib/pricing";
 import { REVIEW_COUNT, REVIEW_RATING, GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
-import { DEEP_OFFER } from "@/lib/offers";
+import DeepOfferLine from "@/components/DeepOfferLine";
 import { STANDARD_CHECKLIST } from "@/lib/standardChecklist";
 import { PRICE_LOCK_FAQ, RECURRING_CITY_LIST, SAME_TEAM_FAQ } from "@/lib/recurringCities";
 import ServiceVideoSection from "@/components/ServiceVideoSection";
 import { RECURRING_VIDEO } from "@/lib/serviceVideos";
 
-// Regenerate at most hourly so the FALL75 line in section 7 drops out of the
+// Regenerate at most hourly so the holiday offer line in section 7 drops out of the
 // HTML on its own after it ends. <Offer> also hides it in the browser at the
 // deadline. See components/Offer.tsx.
 export const revalidate = 3600;
@@ -430,20 +429,16 @@ export default function RecurringCleaningPage() {
         </div>
       </section>
 
-      {/* 7. START WITH A DEEP CLEAN? Gated on isOfferActive() so the offer
-          mention disappears with no code change once OFFERS.deep.endDate
-          passes, same pattern as /deep-cleaning. */}
+      {/* 7. START WITH A DEEP CLEAN? The holiday offer line (lib/offers.ts)
+          disappears with no code change once the offer ends, same pattern as
+          /deep-cleaning. */}
       <section className="py-14 px-4 bg-white">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Start With a Deep Clean?</h2>
           <p className="text-gray-600 leading-relaxed mb-4">
             You don&apos;t need a deep clean to start. But if it&apos;s been a while, a lot of our clients start with one, then we keep it that way.
           </p>
-          <Offer service="deep">
-            <p className="text-sm font-bold mb-4" style={{ color: "#E8622A" }}>
-              ${DEEP_OFFER.discount} off your first deep clean, plus {DEEP_OFFER.bonus}, through {DEEP_OFFER.endDate}.
-            </p>
-          </Offer>
+          <DeepOfferLine variant="text" showRecurring className="mb-4" />
           <Link
             href="/deep-cleaning"
             className="inline-block font-bold px-6 py-3 rounded-lg hover:opacity-90 transition text-white"

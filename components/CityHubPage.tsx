@@ -3,7 +3,6 @@ import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
 import ReviewCard from "@/components/ReviewCard";
 import HeroRating from "@/components/HeroRating";
-import Offer from "@/components/Offer";
 import ClientStory from "@/components/ClientStory";
 import ServiceVideoSection from "@/components/ServiceVideoSection";
 import { StickyMobileBar } from "@/components/HomepageScrollWidgets";
@@ -14,7 +13,7 @@ import type { CityHub } from "@/lib/cityHubs";
 import { listWithAnd } from "@/lib/recurringCities";
 import { STANDARD_HIGHLIGHTS } from "@/lib/standardChecklist";
 import { DEEP_ADDITIONS } from "@/lib/deepChecklist";
-import { DEEP_OFFER } from "@/lib/offers";
+import DeepOfferLine from "@/components/DeepOfferLine";
 import { HOME_VIDEO } from "@/lib/serviceVideos";
 import { DEEP_FROM, MOVE_OUT_FROM, STANDARD_FROM, WEEKLY_FROM } from "@/lib/pricing";
 import { REVIEW_COUNT, REVIEW_RATING, GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
@@ -165,18 +164,7 @@ export default function CityHubPage({ city, hub }: { city: CityData; hub: CityHu
 
           <HeroRating href="/reviews" className="mb-3 sm:mb-4">{`${REVIEW_RATING} · ${REVIEW_COUNT} Google Reviews`}</HeroRating>
 
-          <Offer service="deep">
-            <div className="mb-4 sm:mb-6">
-              <Link
-                href="/book"
-                className="inline-block rounded-2xl bg-brand-green-darker px-4 py-2 text-xs sm:text-sm font-semibold text-white shadow-lg hover:underline"
-              >
-                {`Before the holidays: $${DEEP_OFFER.discount} off a deep clean plus ${DEEP_OFFER.bonus}. Use code `}
-                <span className="font-extrabold tracking-wide">{DEEP_OFFER.code}</span>
-                {` through ${DEEP_OFFER.endDate}.`}
-              </Link>
-            </div>
-          </Offer>
+          <DeepOfferLine variant="pill" className="mb-4 sm:mb-6" />
 
           <div className="flex flex-col md:flex-row gap-3 justify-center">
             <Link

@@ -11,11 +11,16 @@ import {
 import Image from "next/image";
 import StickyBookBar from "@/components/StickyBookBar";
 import { GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
+import Offer from "@/components/Offer";
+import { DEEP_OFFER } from "@/lib/offers";
 
-// No promotions on /book (owner decision, Nov 3 2026: coupons are being
-// retired and the holiday offer isn't decided). A "Claim $75 Off" button that
-// applied nothing was the top dead click on this page. If an offer comes back,
-// put it in the BookingKoala form itself first, then decide what this page says.
+// No coupon codes, dollar amounts or offer buttons on /book (owner decision,
+// Nov 3 2026). A "Claim $75 Off" button that applied nothing was the top dead
+// click on this page. The one exception is the deep cleaning offer as a
+// single plain line right above the form (CEO brief, Nov 10 2026: Holiday
+// Reset), from lib/offers.ts inside <Offer>, never as a button.
+// Regenerate at most hourly so that line drops out on its own when it ends.
+export const revalidate = 3600;
 
 // Matches the booking widget's default (1 bed / 1 bath / 1,000-1,499 sq ft),
 // the lowest total a customer can see there.
@@ -464,6 +469,12 @@ export default function BookPage() {
 
           {/* Every button on the page lands here, so the form's first field is on screen. */}
           <div id={FORM_ANCHOR} className="scroll-mt-20 text-center mb-3 space-y-1 text-sm">
+            <Offer service="deep">
+              <p className="text-gray-800">
+                <strong>Holiday Reset:</strong> deep cleans booked by {DEEP_OFFER.endDate} get inside the fridge
+                and oven free. No need to add them in the form.
+              </p>
+            </Offer>
             <p className="text-gray-700">
               Enter your ZIP code first. The calendar won&apos;t show dates until you do.
             </p>

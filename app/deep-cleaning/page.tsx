@@ -4,7 +4,6 @@ import { reviewAttribution, reviewByName } from "@/lib/realReviews";
 import Image from "next/image";
 import CityDeepCleanForm from "@/components/CityDeepCleanForm";
 import { StickyMobileBar } from "@/components/HomepageScrollWidgets";
-import Offer from "@/components/Offer";
 import {
   DEEP_CLEANING_TIERS,
   formatPrice,
@@ -12,9 +11,8 @@ import {
   topPrice,
   tierLabel,
 } from "@/lib/pricing";
-import { offerPrice } from "@/lib/offers";
 import { REVIEW_COUNT, REVIEW_RATING, GOOGLE_PROFILE_URL } from "@/lib/siteConstants";
-import { DEEP_OFFER } from "@/lib/offers";
+import DeepOfferLine from "@/components/DeepOfferLine";
 import { DEEP_CHECKLIST } from "@/lib/deepChecklist";
 import HeroRating from "@/components/HeroRating";
 import ReviewCard from "@/components/ReviewCard";
@@ -22,7 +20,7 @@ import { FREQUENCY_DISCOUNTS, formatDiscount } from "@/lib/pricing";
 import ServiceVideoSection from "@/components/ServiceVideoSection";
 import { DEEP_VIDEO } from "@/lib/serviceVideos";
 
-// Regenerate at most hourly so FALL75 drops out of the HTML on its own after
+// Regenerate at most hourly so the holiday offer drops out of the HTML on its own after
 // it ends. <Offer> also hides it in the browser at the deadline. See
 // components/Offer.tsx.
 export const revalidate = 3600;
@@ -193,19 +191,8 @@ export default function DeepCleaningPage() {
 
           <HeroRating href="/reviews" className="mb-3 sm:mb-4">{`${REVIEW_RATING} · ${REVIEW_COUNT} Google Reviews`}</HeroRating>
 
-          {/* FALL75, gated by <Offer> so it comes down on its own when it ends. */}
-          <Offer service="deep">
-            <div className="mb-4 sm:mb-6">
-              <Link
-                href="/book"
-                className="inline-block rounded-2xl bg-brand-green-darker px-4 py-2 text-xs sm:text-sm font-semibold text-white shadow-lg hover:underline"
-              >
-                {`Before the holidays: $${DEEP_OFFER.discount} off plus ${DEEP_OFFER.bonus}, a $${DEEP_OFFER.bonusValue} value. Use code `}
-                <span className="font-extrabold tracking-wide">{DEEP_OFFER.code}</span>
-                {` through ${DEEP_OFFER.endDate}.`}
-              </Link>
-            </div>
-          </Offer>
+          {/* Holiday Reset (lib/offers.ts), gated so it comes down on its own when it ends. */}
+          <DeepOfferLine variant="pill" className="mb-4 sm:mb-6" />
 
           <div className="flex flex-col md:flex-row gap-3 justify-center">
             <Link
@@ -464,15 +451,12 @@ export default function DeepCleaningPage() {
             <h2 className="text-2xl font-bold text-gray-800 mb-2">
               Deep Cleaning Pricing
             </h2>
-            <Offer service="deep">
-              <p className="text-sm font-bold" style={{ color: "#E8622A" }}>
-                ${DEEP_OFFER.discount} off every deep clean with code {DEEP_OFFER.code}, through {DEEP_OFFER.endDate}.
-              </p>
-            </Offer>
+            <DeepOfferLine variant="text" showRecurring />
           </div>
 
-          {/* Same tier ladder and struck-price treatment as /pricing, so a
-              visitor never sees two different numbers for the same job. */}
+          {/* Same tier ladder as /pricing, so a visitor never sees two
+              different numbers for the same job. The holiday offer adds free
+              extras, not dollars off, so these are the prices people pay. */}
           <div className="bg-gray-50 rounded-2xl border border-gray-100 p-6 sm:p-8">
             <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">
               Example Prices
@@ -486,16 +470,7 @@ export default function DeepCleaningPage() {
                     {/* min-h keeps the row the same height whether or not a
                         struck price is present, so CLS stays at 0. */}
                     <span className="text-lg font-bold text-gray-900 whitespace-nowrap flex-shrink-0 min-h-[1.75rem] flex items-center gap-2">
-                      <Offer service="deep" fallback={<>Starting at {formatPrice(tier.price)}</>}>
-                        <s className="text-sm font-medium text-gray-400">
-                          <span className="sr-only">Regular price </span>
-                          {formatPrice(tier.price)}
-                        </s>
-                        <span style={{ color: "#E8622A" }}>
-                          <span className="sr-only">Sale price </span>
-                          {formatPrice(offerPrice(tier.price, "deep"))}
-                        </span>
-                      </Offer>
+                      Starting at {formatPrice(tier.price)}
                     </span>
                   </div>
                 );

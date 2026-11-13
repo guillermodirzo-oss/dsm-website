@@ -11,13 +11,15 @@ import ServiceVideoSection from "@/components/ServiceVideoSection";
 import { DEEP_VIDEO } from "@/lib/serviceVideos";
 import DeepCleanChecklist from "./DeepCleanChecklist";
 
-// Regenerate at most hourly so FALL75 drops out of the HTML on its own after
-// it ends. <Offer> also hides it in the browser at the deadline. See
+// Regenerate at most hourly so the holiday offer (lib/offers.ts) drops out of
+// the HTML on its own after it ends. <Offer> also hides it in the browser at the deadline. See
 // components/Offer.tsx. Every offer line below has a fallback, so after the
 // offer ends this reads as a plain deep cleaning page with regular prices.
 export const revalidate = 3600;
 
-const OFF = `$${DEEP_OFFER.discount}`;
+// Holiday Reset values, all from lib/offers.ts.
+const FREE_VALUE = formatPrice(DEEP_OFFER.bonusValue ?? 0);
+const SPOTS = DEEP_OFFER.spots;
 const ENTRY_PRICE = formatPrice(startingPrice(DEEP_CLEANING_TIERS));
 
 // ─── Metadata ────────────────────────────────────────────────────────────────
@@ -142,12 +144,14 @@ export default function DeepCleanOfferPage() {
             href="#book"
             className="inline-flex items-center gap-1.5 bg-amber-500/20 border border-amber-400/30 text-amber-300 text-xs font-semibold px-3 py-1 md:py-1.5 rounded-full mb-2 md:mb-5 cursor-pointer hover:opacity-90 transition-opacity"
           >
-            ⚡ Limited Weekly Spots. Book Now
+            <Offer service="deep" fallback="⚡ Limited Weekly Spots. Book Now">
+              🎄 Only {SPOTS} holiday spots. Book by {DEEP_OFFER.endDate}
+            </Offer>
           </a>
 
           <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-2 md:mb-4">
                 <Offer service="deep" fallback="Deep Cleaning From a Local Family Team">
-                  {OFF} Off Your Deep Clean
+                  Your Holiday Deep Clean, Fridge and Oven Included
                 </Offer>
               </h1>
 
@@ -162,8 +166,9 @@ export default function DeepCleanOfferPage() {
                   }
                 >
                   Get the house caught up before the holidays. Book by{" "}
-                  {DEEP_OFFER.endDate} with code {DEEP_OFFER.code} and get{" "}
-                  {OFF} off plus {DEEP_OFFER.bonus}, a ${DEEP_OFFER.bonusValue} value.
+                  {DEEP_OFFER.endDate} and we clean inside the fridge and inside the oven
+                  free, a {FREE_VALUE} value. Deep cleaning starts at {ENTRY_PRICE}, and you
+                  see your exact price before you book.
                 </Offer>
               </p>
 
@@ -189,14 +194,15 @@ export default function DeepCleanOfferPage() {
             <span className="hidden sm:inline text-gray-500">· Insured &amp; Bonded · Family-Owned</span>
           </div>
           {/* Widget hints. It won't show dates until a ZIP is entered, and its
-              total is the pre-coupon price. */}
+              total is the regular price. */}
           <div className="text-center mb-3 md:mb-5 space-y-0.5 text-xs md:text-sm text-gray-500 leading-snug">
             <p>Enter your ZIP code first. The calendar won&apos;t show dates until you do.</p>
             <Offer service="deep">
               <p>
-                The total shows before your discount. Enter{" "}
-                <strong className="text-gray-700">{DEEP_OFFER.code}</strong> at checkout and {OFF} comes
-                off. Your oven is included free.
+                The inside of your fridge and oven are free on holiday deep cleans. You
+                don&apos;t need to add them in the form. Want recurring cleaning in{" "}
+                {DEEP_OFFER.recurringStartMonth}? Put your start date in the booking notes and
+                your first recurring clean is {DEEP_OFFER.recurringOffLabel} off.
               </p>
             </Offer>
           </div>
@@ -260,7 +266,7 @@ export default function DeepCleanOfferPage() {
           href: "#book",
           label: (
             <Offer service="deep" fallback="Book My Deep Clean">
-              Claim My {OFF} Off
+              Book My Holiday Deep Clean
             </Offer>
           ),
         }}
@@ -302,8 +308,8 @@ export default function DeepCleanOfferPage() {
             <p className="text-gray-600 mb-6">
               Sound familiar? That&apos;s what a deep clean fixes.
               <Offer service="deep">
-                {" "}And through {DEEP_OFFER.endDate}, you can get one for{" "}
-                <strong>{OFF} less plus {DEEP_OFFER.bonus}</strong>.
+                {" "}And through {DEEP_OFFER.endDate},{" "}
+                <strong>the inside of your fridge and oven come free</strong>.
               </Offer>
             </p>
             <a
@@ -315,9 +321,7 @@ export default function DeepCleanOfferPage() {
               }}
             >
               <Offer service="deep" fallback="Book My Deep Clean →">
-                Fix It for{" "}
-                <span className="mx-1 underline underline-offset-2">{OFF} Less</span>{" "}
-                →
+                Book My Holiday Deep Clean →
               </Offer>
             </a>
           </div>
@@ -370,7 +374,7 @@ export default function DeepCleanOfferPage() {
                   DSM Deep Clean ⭐
                 </h3>
               </div>
-              {/* Inside the oven is an add-on, free only while the offer runs.
+              {/* Inside the fridge and oven are add-ons, free only while the offer runs.
                   The whole row is inside <Offer> with no fallback, so it is
                   gone once the offer ends. */}
               <DeepCleanChecklist
@@ -381,7 +385,7 @@ export default function DeepCleanOfferPage() {
                         ✓
                       </span>
                       <span className="text-orange-600 font-semibold">
-                        Inside oven cleaning, FREE through {DEEP_OFFER.endDate}
+                        Inside fridge and oven, FREE through {DEEP_OFFER.endDate}
                       </span>
                     </li>
                   </Offer>
@@ -396,8 +400,7 @@ export default function DeepCleanOfferPage() {
               className="text-orange-600 font-semibold hover:underline text-sm"
             >
               <Offer service="deep" fallback="Ready? Book your deep clean →">
-                Ready? Claim your{" "}
-                <span className="underline underline-offset-2">{OFF} off</span> →
+                Ready? Grab one of the {SPOTS} holiday spots →
               </Offer>
             </a>
           </div>
@@ -490,7 +493,7 @@ export default function DeepCleanOfferPage() {
               }}
             >
               <Offer service="deep" fallback="Book My Deep Clean →">
-                Claim Your {OFF} Off →
+                Book My Holiday Deep Clean →
               </Offer>
             </a>
           </div>
@@ -533,7 +536,7 @@ export default function DeepCleanOfferPage() {
               style={{ backgroundColor: "#E8622A", boxShadow: "0 8px 30px rgba(232,98,42,0.35)" }}
             >
               <Offer service="deep" fallback="Book My Deep Clean →">
-                Book Now and Save {OFF} →
+                Book Before {DEEP_OFFER.endDate} →
               </Offer>
             </a>
             <p className="text-sm text-gray-400 mt-4">
@@ -626,7 +629,7 @@ export default function DeepCleanOfferPage() {
       <StickyBar
         label={
           <Offer service="deep" fallback="Deep Cleaning · Limited Spots Each Week">
-            💥 {OFF} OFF Deep Cleaning · Limited Spots
+            🎄 Holiday Deep Clean · Fridge + Oven Free
           </Offer>
         }
       />
