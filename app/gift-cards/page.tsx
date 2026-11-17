@@ -194,7 +194,7 @@ export default function GiftCardsPage() {
           <div className="mt-6 rounded-2xl bg-gray-50 border border-gray-100 p-5 text-center">
             <p className="font-bold text-gray-900">Not sure of the size? Pick {DEFAULT_SIZE.label}.</p>
             <p className="text-sm text-gray-600 mt-1 leading-relaxed">
-              It's the middle size and the safest guess. If their home turns out bigger, they pay the difference when they book. If it&apos;s
+              It&apos;s the middle size and the safest guess. If their home turns out bigger, they pay the difference when they book. If it&apos;s
               smaller, the rest stays on the card for next time.
             </p>
           </div>
