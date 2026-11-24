@@ -19,14 +19,24 @@ import { GIFT_PROMO_WINDOW } from "@/lib/giftCards";
 /** Short names for the compact hero chips. */
 const SHORT_NAME: Record<string, string> = { deep: "Deep cleans", moveout: "Move-outs" };
 
-export default function OfferBanner({ className = "", compact = false }: { className?: string; compact?: boolean }) {
+export default function OfferBanner({
+  className = "",
+  compact = false,
+  services,
+}: {
+  className?: string;
+  compact?: boolean;
+  /** Only show offers for these services (e.g. ["deep"]). Default: all. */
+  services?: string[];
+}) {
+  const offers = services ? OFFER_LIST.filter((o) => services.includes(o.service)) : OFFER_LIST;
   if (compact) {
     // One row of small chips: "Move-outs: $75 off · MOVE75", or the offer's
     // own chipText when it has no code.
     // Same per-offer gates, so each chip comes down on its own deadline.
     return (
       <div className={`flex flex-wrap items-center justify-center gap-2 empty:hidden ${className}`}>
-        {OFFER_LIST.map((offer) => (
+        {offers.map((offer) => (
           <Offer key={offer.id} service={offer.service}>
             <Link
               href={offer.servicePath}
@@ -58,7 +68,7 @@ export default function OfferBanner({ className = "", compact = false }: { class
   }
   return (
     <div className={`flex flex-col items-center gap-2 empty:hidden ${className}`}>
-      {OFFER_LIST.map((offer) => (
+      {offers.map((offer) => (
         <Offer key={offer.id} service={offer.service}>
           <Link
             href={offer.servicePath}

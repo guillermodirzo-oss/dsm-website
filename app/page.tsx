@@ -257,9 +257,11 @@ export default function HomePage() {
           {/* Rating: counts come from lib/realReviews.ts, never hardcoded. */}
           <HeroRating href="/reviews" className="mb-3">{`${REVIEW_RATING} · ${REVIEW_COUNT} Google Reviews`}</HeroRating>
 
-          {/* Every running offer as one small chip, from lib/offers.ts. Each
-              chip comes down on its own when its offer ends. */}
-          <OfferBanner compact className="mb-5" />
+          {/* The deep cleaning offer as one small chip, from lib/offers.ts,
+              plus the gift card chip (Nov 15 to Dec 24). Each comes down on
+              its own when it ends. MOVE75 stays off the homepage and shows
+              only on the move-out pages (Memo, Nov 23 2026). */}
+          <OfferBanner compact services={["deep"]} className="mb-5" />
 
           <Link
             href="/book"
