@@ -2,6 +2,9 @@
 const nextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
+    // Next.js 16 only serves image qualities listed here. 75 is the default;
+    // 72 is the homepage phone hero (app/page.tsx getImageProps).
+    qualities: [72, 75],
   },
 
   async redirects() {

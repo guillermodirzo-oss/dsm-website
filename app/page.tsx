@@ -225,7 +225,7 @@ export default function HomePage() {
             phones). getImageProps keeps next/image's AVIF/WebP and srcset. */}
         <picture>
           <source media="(min-width: 768px)" srcSet={HERO_DESKTOP_SRCSET} sizes="100vw" />
-          {/* eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text */}
+          {/* eslint-disable-next-line jsx-a11y/alt-text */}
           <img
             {...HERO_MOBILE_PROPS}
             className="absolute inset-0 w-full h-full object-cover"

@@ -8,12 +8,14 @@ export function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
 }
 
+// Next.js 16: params is a Promise and must be awaited.
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const post = blogPosts.find((p) => p.slug === params.slug);
+  const { slug } = await params;
+  const post = blogPosts.find((p) => p.slug === slug);
   if (!post) return {};
   return {
     // absolute: metaTitle is the full title tag, with no brand suffix added.
@@ -46,12 +48,13 @@ export async function generateMetadata({
   };
 }
 
-export default function BlogPostPage({
+export default async function BlogPostPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const post = blogPosts.find((p) => p.slug === params.slug);
+  const { slug } = await params;
+  const post = blogPosts.find((p) => p.slug === slug);
   if (!post) notFound();
 
   // IMPORTANT: This schema must NOT include aggregateRating, a LocalBusiness type, or a publisher field.

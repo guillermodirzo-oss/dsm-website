@@ -35,8 +35,9 @@ export function generateStaticParams() {
   return WATCH_VIDEOS.map((v) => ({ slug: v.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const v = watchVideoBySlug(params.slug);
+// Next.js 16: params is a Promise and must be awaited.
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const v = watchVideoBySlug((await params).slug);
   if (!v) return {};
   const url = `${SITE}/videos/${v.slug}`;
   const title = TITLES[v.slug] ?? `${v.schema.name} | DSM Cleaning Solutions`;
@@ -55,8 +56,8 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function VideoWatchPage({ params }: { params: { slug: string } }) {
-  const v = watchVideoBySlug(params.slug);
+export default async function VideoWatchPage({ params }: { params: Promise<{ slug: string }> }) {
+  const v = watchVideoBySlug((await params).slug);
   if (!v) notFound();
   const url = `${SITE}/videos/${v.slug}`;
 
